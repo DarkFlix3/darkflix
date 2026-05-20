@@ -394,6 +394,7 @@
     showLoadingSkeletons(DOM.homeContent);
 
     try {
+      // Categorias por gênero (cada uma puxa 20 filmes da API)
       const homeCategories = [
         { title: 'Terror e Suspense', id: '27,53' },
         { title: 'Comédias', id: '35' },
@@ -402,28 +403,54 @@
         { title: 'Para Toda a Família', id: '10751' },
         { title: 'Dramas', id: '18' },
         { title: 'Animação', id: '16' },
-        { title: 'Ficção Científica', id: '878' }
+        { title: 'Ficção Científica', id: '878' },
+        { title: 'Infantil', id: '16,10751' },
+        { title: 'Filmes de Guerra', id: '10752' },
+        { title: 'Faroeste', id: '37' },
+        { title: 'Música e Musicais', id: '10402' },
+        { title: 'Mistérios', id: '9648' },
+        { title: 'Históricos', id: '36' },
+        { title: 'Documentários', id: '99' },
+        { title: 'Crime', id: '80' },
+        { title: 'Fantasia', id: '14' }
       ];
 
-      // Requests base + Requests de categorias
+      // Requests base
       const requests = [
         tmdbFetch('/movie/now_playing').catch(() => ({ results: [] })),
+        tmdbFetch('/movie/now_playing', { page: 2 }).catch(() => ({ results: [] })),
         tmdbFetch('/trending/movie/week').catch(() => ({ results: [] })),
         tmdbFetch('/trending/tv/week').catch(() => ({ results: [] })),
+        tmdbFetch('/movie/top_rated').catch(() => ({ results: [] })),
+        tmdbFetch('/movie/upcoming').catch(() => ({ results: [] })),
+        tmdbFetch('/movie/popular').catch(() => ({ results: [] })),
+        tmdbFetch('/movie/popular', { page: 2 }).catch(() => ({ results: [] })),
+        tmdbFetch('/trending/tv/day').catch(() => ({ results: [] })),
         fetchFeaturedItem().catch(() => null)
       ];
 
+      // Requests das categorias por gênero
       homeCategories.forEach(cat => {
-        requests.push(tmdbFetch('/discover/movie', { with_genres: cat.id }).catch(() => ({ results: [] })));
+        requests.push(tmdbFetch('/discover/movie', { with_genres: cat.id, sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
       });
 
       const responses = await Promise.all(requests);
 
-      const nowPlayingMovies = responses[0];
-      const trendingMovies = responses[1];
-      const trendingSeries = responses[2];
-      const featuredDetails = responses[3];
-      const categoryResults = responses.slice(4);
+      const nowPlaying1 = responses[0];
+      const nowPlaying2 = responses[1];
+      const trendingMovies = responses[2];
+      const trendingSeries = responses[3];
+      const topRated = responses[4];
+      const upcoming = responses[5];
+      const popular1 = responses[6];
+      const popular2 = responses[7];
+      const trendingSeriesDay = responses[8];
+      const featuredDetails = responses[9];
+      const categoryResults = responses.slice(10);
+
+      // Combinar páginas
+      const nowPlayingAll = [...(nowPlaying1.results || []), ...(nowPlaying2.results || [])];
+      const popularAll = [...(popular1.results || []), ...(popular2.results || [])];
 
       // Set featured on banner
       const heroItem = featuredDetails || trendingMovies.results[0];
@@ -431,77 +458,51 @@
 
       let html = '';
 
-      // Section: Lançamentos no Cinema
-      if (nowPlayingMovies.results && nowPlayingMovies.results.length > 0) {
-        html += `
+      // Helper para gerar seção
+      function buildSection(title, items, mediaType) {
+        if (!items || items.length === 0) return '';
+        return `
           <section class="section">
             <div class="section-header">
-              <h2 class="section-title">Lançamentos no Cinema</h2>
+              <h2 class="section-title">${title}</h2>
             </div>
             <div class="movies-row">
-              ${nowPlayingMovies.results.slice(0, 15).map((item, i) => createCardHTML(item, i, 'movie')).join('')}
+              ${items.map((item, i) => createCardHTML(item, i, mediaType)).join('')}
             </div>
           </section>
         `;
       }
 
-      // Section: Favorites / Watchlist
+      // 1. Lançamentos no Cinema (40 filmes)
+      html += buildSection('🎬 Lançamentos no Cinema', nowPlayingAll, 'movie');
+
+      // 2. Minha Lista
       if (STATE.favorites.length > 0) {
-        html += `
-          <section class="section">
-            <div class="section-header">
-              <h2 class="section-title">Minha Lista</h2>
-            </div>
-            <div class="movies-row">
-              ${STATE.favorites.map((item, i) => createCardHTML(item, i)).join('')}
-            </div>
-          </section>
-        `;
+        html += buildSection('❤️ Minha Lista', STATE.favorites, 'movie');
       }
 
-      // Section: Trending Movies
-      if (trendingMovies.results.length > 0) {
-        html += `
-          <section class="section">
-            <div class="section-header">
-              <h2 class="section-title">Filmes em Destaque</h2>
-            </div>
-            <div class="movies-row">
-              ${trendingMovies.results.slice(0, 15).map((item, i) => createCardHTML(item, i, 'movie')).join('')}
-            </div>
-          </section>
-        `;
-      }
+      // 3. Filmes em Destaque (trending semana)
+      html += buildSection('🔥 Filmes em Destaque', trendingMovies.results, 'movie');
 
-      // Section: Trending TV Shows
-      if (trendingSeries.results.length > 0) {
-        html += `
-          <section class="section">
-            <div class="section-header">
-              <h2 class="section-title">Séries Populares</h2>
-            </div>
-            <div class="movies-row">
-              ${trendingSeries.results.slice(0, 15).map((item, i) => createCardHTML(item, i, 'tv')).join('')}
-            </div>
-          </section>
-        `;
-      }
+      // 4. Séries Populares (trending semana)
+      html += buildSection('📺 Séries Populares', trendingSeries.results, 'tv');
 
-      // Section: Custom Categories
+      // 5. Mais Bem Avaliados de Todos os Tempos
+      html += buildSection('⭐ Mais Bem Avaliados', topRated.results, 'movie');
+
+      // 6. Em Breve nos Cinemas
+      html += buildSection('🎥 Em Breve nos Cinemas', upcoming.results, 'movie');
+
+      // 7. Populares Agora (40 filmes)
+      html += buildSection('📈 Populares Agora', popularAll, 'movie');
+
+      // 8. Séries em Alta Hoje
+      html += buildSection('🌟 Séries em Alta Hoje', trendingSeriesDay.results, 'tv');
+
+      // 9. Todas as categorias por gênero
       homeCategories.forEach((cat, index) => {
         const results = categoryResults[index].results || [];
-        if (results.length > 0) {
-          html += `
-            <section class="section">
-              <div class="section-header">
-                <h2 class="section-title">${cat.title}</h2>
-              </div>
-              <div class="movies-row">
-                ${results.slice(0, 15).map((item, i) => createCardHTML(item, i, 'movie')).join('')}
-              </div>
-            </section>
-          `;
-        }
+        html += buildSection(cat.title, results, 'movie');
       });
 
       DOM.homeContent.innerHTML = html || `
