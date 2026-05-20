@@ -1866,7 +1866,6 @@
     // Set poster required status by default for new movie
     DOM.formPosterFile.required = true;
     DOM.formBackdropFile.required = true;
-    DOM.formVideoFile.required = true;
 
     // Scroll
     window.addEventListener('scroll', handleScroll, { passive: true });
