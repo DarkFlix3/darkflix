@@ -11,7 +11,7 @@
     favorites: JSON.parse(localStorage.getItem('darkflix_favorites') || '[]'),
     currentMovieDetail: null,
     searchDebounce: null,
-    tmdbApiKey: localStorage.getItem('darkflix_tmdb_api_key') || '',
+    tmdbApiKey: '1084015975402c8b0a0b81e807d2f7c8',
     featuredId: localStorage.getItem('darkflix_featured_id') || '157336', // Interstellar default
     featuredType: localStorage.getItem('darkflix_featured_type') || 'movie',
     heroTrailerTimeout: null,
@@ -135,6 +135,7 @@
     cinemaVideo: $('#cinema-video'),
     cinemaTitle: $('#cinema-title'),
     cinemaCloseBtn: $('#cinema-close-btn'),
+    cinemaExternalBtn: $('#cinema-external-btn'),
     
     // Admin config inputs & stats
     tmdbConfigForm: $('#tmdb-config-form'),
@@ -900,6 +901,8 @@
     
     DOM.cinemaIframe.src = embedUrl;
     DOM.cinemaIframe.style.display = 'block';
+
+    DOM.cinemaExternalBtn.href = embedUrl;
 
     DOM.cinemaMode.classList.add('active');
     document.body.style.overflow = 'hidden';
