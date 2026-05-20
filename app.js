@@ -571,19 +571,24 @@
 
       // ======= CONTINUAR ASSISTINDO =======
       const inProgressList = JSON.parse(localStorage.getItem('darkflix_in_progress') || '[]');
-      if (inProgressList.length > 0) {
-        html += `
-          <section class="section section-continue-watching">
-            <div class="section-header">
-              <h2 class="section-title">▶ Continuar Assistindo</h2>
-              <button class="btn-clear-history" id="btn-clear-history">Limpar Histórico</button>
-            </div>
-            <div class="movies-row">
-              ${inProgressList.map((item, i) => createCardHTML(item, i, item.media_type || 'movie')).join('')}
-            </div>
-          </section>
-        `;
-      }
+      html += `
+        <section class="section section-continue-watching">
+          <div class="section-header">
+            <h2 class="section-title">▶ Continuar Assistindo</h2>
+            ${inProgressList.length > 0 ? '<button class="btn-clear-history" id="btn-clear-history">Limpar Histórico</button>' : ''}
+          </div>
+          <div class="movies-row">
+            ${inProgressList.length > 0 ? 
+              inProgressList.map((item, i) => createCardHTML(item, i, item.media_type || 'movie')).join('') :
+              `<div class="empty-continue-watching" style="grid-column: 1 / -1; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; background: rgba(255, 255, 255, 0.02); border: 1px dashed rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); text-align: center; gap: 12px; min-height: 150px; margin-bottom: 20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 4px;"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Nenhum título em andamento</div>
+                <div style="font-size: 0.82rem; color: var(--text-secondary); max-width: 320px;">Os filmes e séries que você começar a assistir aparecerão aqui para você continuar de onde parou.</div>
+              </div>`
+            }
+          </div>
+        </section>
+      `;
 
       // 1. Lançamentos no Cinema
       html += buildSection('Lançamentos no Cinema', nowPlayingAll, 'movie');

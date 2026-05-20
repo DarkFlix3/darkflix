@@ -1885,3 +1885,22 @@ ul, ol {
   border-color: rgba(229, 9, 20, 0.3);
   background: var(--accent-soft);
 }
+
+.empty-continue-watching {
+  transition: border-color var(--transition-smooth), background-color var(--transition-smooth), transform var(--transition-smooth) !important;
+}
+
+.empty-continue-watching:hover {
+  border-color: rgba(229, 9, 20, 0.25) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  transform: translateY(-2px);
+}
+
+.empty-continue-watching svg {
+  transition: transform var(--transition-spring), stroke var(--transition-smooth) !important;
+}
+
+.empty-continue-watching:hover svg {
+  transform: scale(1.1) rotate(5deg);
+  stroke: var(--accent) !important;
+}
