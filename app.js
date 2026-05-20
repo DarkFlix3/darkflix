@@ -149,22 +149,7 @@
     cinemaRewindBtn: $('#cinema-rewind-btn'),
     cinemaForwardBtn: $('#cinema-forward-btn'),
     
-    // Admin config inputs & stats
-    tmdbConfigForm: $('#tmdb-config-form'),
-    tmdbApiKey: $('#tmdb-api-key'),
-    btnSaveKey: $('#btn-save-key'),
-    tmdbStatusWrapper: $('#tmdb-status-wrapper'),
-    tmdbStatusIcon: $('#tmdb-status-icon'),
-    tmdbStatusText: $('#tmdb-status-text'),
-    
-    featuredConfigForm: $('#featured-config-form'),
-    featuredId: $('#featured-id'),
-    featuredType: $('#featured-type'),
-    
-    adminFavoritesContainer: $('#admin-favorites-container'),
-    statFavorites: $('#stat-favorites'),
-    statCached: $('#stat-cached'),
-    btnClearCache: $('#btn-clear-cache'),
+
     
     toastContainer: $('#toast-container'),
     footer: $('#main-footer')
@@ -287,7 +272,6 @@
     if (page === 'home') renderHome();
     else if (page === 'movies') renderMoviesPage();
     else if (page === 'series') renderSeriesPage();
-    else if (page === 'admin') renderAdmin();
   }
 
   // ---------- Toast Notifications ----------
