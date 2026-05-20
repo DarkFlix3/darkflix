@@ -569,12 +569,39 @@
         `;
       }
 
-      // ======= CONTINUAR ASSISTINDO =======
-      const inProgressList = JSON.parse(localStorage.getItem('darkflix_in_progress') || '[]');
+      // ======= CONTINUE ASSISTINDO =======
+      let inProgressList = JSON.parse(localStorage.getItem('darkflix_in_progress') || '[]');
+      
+      // Asynchronously repair missing metadata in history
+      let repairedAny = false;
+      for (let i = 0; i < inProgressList.length; i++) {
+        const item = inProgressList[i];
+        if (!item.poster_path && item.id) {
+          try {
+            const details = await tmdbFetch(`/${item.media_type || 'movie'}/${item.id}`);
+            if (details && details.poster_path) {
+              item.poster_path = details.poster_path;
+              item.backdrop_path = item.backdrop_path || details.backdrop_path;
+              item.title = details.title || details.name || item.title;
+              item.name = details.name || details.title || item.name;
+              item.vote_average = details.vote_average || item.vote_average;
+              item.release_date = details.release_date || details.first_air_date || item.release_date;
+              item.first_air_date = details.first_air_date || details.release_date || item.first_air_date;
+              repairedAny = true;
+            }
+          } catch (e) {
+            console.warn(`Erro reparando metadados do item ${item.id}`, e);
+          }
+        }
+      }
+      if (repairedAny) {
+        localStorage.setItem('darkflix_in_progress', JSON.stringify(inProgressList));
+      }
+
       html += `
         <section class="section section-continue-watching">
           <div class="section-header">
-            <h2 class="section-title">▶ Continuar Assistindo</h2>
+            <h2 class="section-title">▶ Continue Assistindo</h2>
             ${inProgressList.length > 0 ? '<button class="btn-clear-history" id="btn-clear-history">Limpar Histórico</button>' : ''}
           </div>
           <div class="movies-row">
@@ -656,7 +683,7 @@
             localStorage.removeItem(`darkflix_progress_${item.id}`);
           });
           localStorage.removeItem('darkflix_in_progress');
-          showToast('Histórico de "Continuar Assistindo" limpo!', 'info');
+          showToast('Histórico de "Continue Assistindo" limpo!', 'info');
           renderHome();
         };
       }
@@ -998,17 +1025,37 @@
       <option value="${s.season_number}">${s.name || `Temporada ${s.season_number}`} (${s.episode_count} eps)</option>
     `).join('');
 
+    const progressKey = `darkflix_progress_${movie.id}`;
+    const progressData = localStorage.getItem(progressKey);
+    let savedSeason = null;
+    let savedEpisode = null;
+
+    if (progressData) {
+      try {
+        const prog = JSON.parse(progressData);
+        if (prog && prog.season) {
+          savedSeason = parseInt(prog.season);
+          savedEpisode = parseInt(prog.episode);
+        }
+      } catch (e) {}
+    }
+
     DOM.modalSeasonSelect.onchange = (e) => {
       const seasonNum = parseInt(e.target.value);
-      loadEpisodesList(movie.id, seasonNum);
+      const highlightEp = (savedSeason === seasonNum) ? savedEpisode : null;
+      loadEpisodesList(movie.id, seasonNum, highlightEp);
     };
 
-    // Load first season by default
-    const firstSeasonNum = displaySeasons[0].season_number;
-    loadEpisodesList(movie.id, firstSeasonNum);
+    if (savedSeason && displaySeasons.some(s => parseInt(s.season_number) === savedSeason)) {
+      DOM.modalSeasonSelect.value = savedSeason;
+      loadEpisodesList(movie.id, savedSeason, savedEpisode);
+    } else {
+      const firstSeasonNum = displaySeasons[0].season_number;
+      loadEpisodesList(movie.id, firstSeasonNum);
+    }
   }
 
-  async function loadEpisodesList(seriesId, seasonNumber) {
+  async function loadEpisodesList(seriesId, seasonNumber, lastWatchedEpisode = null) {
     DOM.modalEpisodesList.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-secondary);">
         <div style="margin: 0 auto 12px; width: 30px; height: 30px; border: 3px solid var(--accent-soft); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite;"></div>
@@ -1034,8 +1081,11 @@
         const epOverview = ep.overview || 'Descrição indisponível.';
         const airDate = ep.air_date ? new Date(ep.air_date).toLocaleDateString('pt-BR') : '';
 
+        const isLastWatched = lastWatchedEpisode && parseInt(ep.episode_number) === parseInt(lastWatchedEpisode);
+        const extraClass = isLastWatched ? ' last-watched' : '';
+
         return `
-          <div class="episode-item" data-episode="${ep.episode_number}" data-season="${seasonNumber}">
+          <div class="episode-item${extraClass}" data-episode="${ep.episode_number}" data-season="${seasonNumber}">
             <div class="episode-thumb-wrapper">
               <img class="episode-thumb" src="${stillPath}" alt="${epTitle}" loading="lazy">
               <div class="episode-play-overlay">
@@ -1070,6 +1120,15 @@
         };
       });
 
+      if (lastWatchedEpisode) {
+        setTimeout(() => {
+          const activeEp = DOM.modalEpisodesList.querySelector('.episode-item.last-watched');
+          if (activeEp) {
+            activeEp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 400);
+      }
+
     } catch (err) {
       console.error("Erro carregando episódios:", err);
       DOM.modalEpisodesList.innerHTML = '<div class="no-results" style="grid-column:1/-1;">Erro ao carregar episódios do TMDB.</div>';
@@ -1078,8 +1137,24 @@
 
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
+    // Salvar progresso com metadados completos de STATE.currentMovieDetail antes de fechar o modal
+    if (type === 'movie') {
+      saveWatchProgress(tmdbId, title, 'movie', {
+        timestamp: Date.now(),
+        type: 'movie',
+        percent: 60 // Mock progress bar representation
+      });
+    } else {
+      saveWatchProgress(tmdbId, title, 'tv', {
+        timestamp: Date.now(),
+        type: 'tv',
+        season: parseInt(season),
+        episode: parseInt(episode)
+      });
+    }
+
     stopMainHeroTrailer();
-    closeDetail();
+    closeDetail(); // closeDetail limpa com segurança STATE.currentMovieDetail agora!
 
     DOM.cinemaTitle.textContent = title;
     
@@ -1087,19 +1162,8 @@
 
     if (type === 'movie') {
       embedUrl = `https://myembed.biz/filme/${tmdbId}`;
-      saveWatchProgress(tmdbId, title, 'movie', {
-        timestamp: Date.now(),
-        type: 'movie',
-        percent: 60 // Mock progress bar representation
-      });
     } else {
       embedUrl = `https://myembed.biz/serie/${tmdbId}/${season}/${episode}`;
-      saveWatchProgress(tmdbId, title, 'tv', {
-        timestamp: Date.now(),
-        type: 'tv',
-        season: parseInt(season),
-        episode: parseInt(episode)
-      });
     }
 
     DOM.cinemaVideo.style.display = 'none';

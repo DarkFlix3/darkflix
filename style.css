@@ -1479,6 +1479,10 @@ ul, ol {
     gap: 14px;
   }
 
+  .movies-row .movie-card {
+    width: 130px;
+  }
+
   .modal-body {
     padding: 20px;
     margin-top: 0;
@@ -1540,6 +1544,10 @@ ul, ol {
   .movies-grid {
     grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
     gap: 10px;
+  }
+
+  .movies-row .movie-card {
+    width: 115px;
   }
 
   .movie-card-info {
@@ -1854,7 +1862,7 @@ ul, ol {
 
 /* ---------- CONTINUAR ASSISTINDO (Continue Watching) ---------- */
 .section-continue-watching .section-title {
-  color: var(--accent);
+  color: var(--text-primary);
 }
 
 .section-continue-watching .section-title::before {
@@ -1903,4 +1911,35 @@ ul, ol {
 .empty-continue-watching:hover svg {
   transform: scale(1.1) rotate(5deg);
   stroke: var(--accent) !important;
+}
+
+/* Destaque premium para último episódio assistido */
+.episode-item.last-watched {
+  border: 1.5px solid var(--accent) !important;
+  background: rgba(229, 9, 20, 0.04) !important;
+  position: relative;
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.15);
+}
+
+.episode-item.last-watched::after {
+  content: 'Último Visto';
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-accent);
+}
+
+@media (max-width: 600px) {
+  .episode-item.last-watched::after {
+    top: 12px;
+    right: 12px;
+  }
 }
