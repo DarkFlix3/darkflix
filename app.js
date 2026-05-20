@@ -517,7 +517,7 @@
       html += buildSection('Mais Bem Avaliados', topRated.results, 'movie');
 
       // 6. Em Breve nos Cinemas
-      html += buildSection('Em Breve nos Cinemas', upcoming.results, 'movie');
+      html += buildSection('Nos Cinemas', upcoming.results, 'movie');
 
       // 7. Populares Agora (40 filmes)
       html += buildSection('Populares Agora', popularAll, 'movie');
