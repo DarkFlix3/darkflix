@@ -898,11 +898,13 @@
 
       // Click event
       DOM.modalEpisodesList.querySelectorAll('.episode-item').forEach(item => {
-        item.onclick = () => {
+        item.onclick = (e) => {
+          e.preventDefault();
+          e.stopPropagation();
           const epNum = item.dataset.episode;
           const sNum = item.dataset.season;
           const seriesName = STATE.currentMovieDetail ? (STATE.currentMovieDetail.name || STATE.currentMovieDetail.title) : 'Série';
-          closeDetail();
+          
           setTimeout(() => {
             openCinema(seriesId, `${seriesName} — T${sNum}:E${epNum}`, 'tv', sNum, epNum);
           }, 300);
