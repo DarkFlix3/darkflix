@@ -242,6 +242,42 @@
     }
   }
 
+  function saveWatchProgress(id, title, type, details = {}) {
+    let inProgress = JSON.parse(localStorage.getItem('darkflix_in_progress') || '[]');
+    
+    // Obter metadados do item de STATE.currentMovieDetail ou criar fallback
+    const movie = STATE.currentMovieDetail || {};
+    
+    // Remover item anterior com mesmo ID se existir para colocar no topo (mais recente)
+    inProgress = inProgress.filter(x => Number(x.id) !== Number(id));
+    
+    const progressItem = {
+      id: Number(id),
+      title: movie.title || movie.name || title,
+      name: movie.name || movie.title || title,
+      poster_path: movie.poster_path || '',
+      backdrop_path: movie.backdrop_path || '',
+      vote_average: movie.vote_average || 0,
+      release_date: movie.release_date || movie.first_air_date || '',
+      first_air_date: movie.first_air_date || movie.release_date || '',
+      media_type: type,
+      timestamp: Date.now(),
+      ...details
+    };
+    
+    inProgress.unshift(progressItem);
+    
+    // Limitar para os últimos 12 itens
+    if (inProgress.length > 12) {
+      inProgress.pop();
+    }
+    
+    localStorage.setItem('darkflix_in_progress', JSON.stringify(inProgress));
+    
+    // Também manter compatibilidade com o progresso individual
+    localStorage.setItem(`darkflix_progress_${id}`, JSON.stringify(details));
+  }
+
   // ---------- Navigation ----------
   function navigateTo(page) {
     STATE.currentPage = page;
@@ -420,7 +456,7 @@
     showLoadingSkeletons(DOM.homeContent);
 
     try {
-      // Categorias por gênero (cada uma puxa 20 filmes da API)
+      // Categorias por gênero de FILMES
       const homeCategories = [
         { title: 'Terror e Suspense', id: '27,53' },
         { title: 'Comédias', id: '35' },
@@ -438,26 +474,56 @@
         { title: 'Históricos', id: '36' },
         { title: 'Documentários', id: '99' },
         { title: 'Crime', id: '80' },
-        { title: 'Fantasia', id: '14' }
+        { title: 'Fantasia', id: '14' },
+        { title: 'Thrillers Psicológicos', id: '53,9648' },
+        { title: 'Cinema Independente', id: '18,10770' }
       ];
 
-      // Requests base
+      // Categorias por gênero de SÉRIES
+      const seriesCategories = [
+        { title: 'Séries de Drama', id: '18' },
+        { title: 'Séries de Comédia', id: '35' },
+        { title: 'Séries de Ação e Aventura', id: '10759' },
+        { title: 'Séries de Crime', id: '80' },
+        { title: 'Séries de Ficção Científica e Fantasia', id: '10765' },
+        { title: 'Séries de Mistério', id: '9648' },
+        { title: 'Séries de Animação', id: '16' },
+        { title: 'Séries Documentários', id: '99' },
+        { title: 'Séries de Romance', id: '10749' },
+        { title: 'Séries de Terror', id: '27' },
+        { title: 'Reality Shows', id: '10764' },
+        { title: 'Séries de Guerra e Política', id: '10768' }
+      ];
+
+      // Requests base (índices 0-12)
       const requests = [
-        tmdbFetch('/movie/now_playing').catch(() => ({ results: [] })),
-        tmdbFetch('/movie/now_playing', { page: 2 }).catch(() => ({ results: [] })),
-        tmdbFetch('/trending/movie/week').catch(() => ({ results: [] })),
-        tmdbFetch('/trending/tv/week').catch(() => ({ results: [] })),
-        tmdbFetch('/movie/top_rated').catch(() => ({ results: [] })),
-        tmdbFetch('/movie/upcoming').catch(() => ({ results: [] })),
-        tmdbFetch('/movie/popular').catch(() => ({ results: [] })),
-        tmdbFetch('/movie/popular', { page: 2 }).catch(() => ({ results: [] })),
-        tmdbFetch('/trending/tv/day').catch(() => ({ results: [] })),
-        fetchFeaturedItem().catch(() => null)
+        tmdbFetch('/movie/now_playing').catch(() => ({ results: [] })),                   // 0
+        tmdbFetch('/movie/now_playing', { page: 2 }).catch(() => ({ results: [] })),       // 1
+        tmdbFetch('/trending/movie/week').catch(() => ({ results: [] })),                  // 2
+        tmdbFetch('/trending/tv/week').catch(() => ({ results: [] })),                     // 3
+        tmdbFetch('/movie/top_rated').catch(() => ({ results: [] })),                      // 4
+        tmdbFetch('/movie/upcoming').catch(() => ({ results: [] })),                       // 5
+        tmdbFetch('/movie/popular').catch(() => ({ results: [] })),                        // 6
+        tmdbFetch('/movie/popular', { page: 2 }).catch(() => ({ results: [] })),           // 7
+        tmdbFetch('/trending/tv/day').catch(() => ({ results: [] })),                      // 8
+        fetchFeaturedItem().catch(() => null),                                             // 9
+        tmdbFetch('/tv/top_rated').catch(() => ({ results: [] })),                         // 10
+        tmdbFetch('/tv/on_the_air').catch(() => ({ results: [] })),                        // 11
+        tmdbFetch('/tv/popular').catch(() => ({ results: [] }))                            // 12
       ];
 
-      // Requests das categorias por gênero
+      const baseRequestCount = requests.length; // 13
+
+      // Requests das categorias por gênero de FILMES
       homeCategories.forEach(cat => {
         requests.push(tmdbFetch('/discover/movie', { with_genres: cat.id, sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
+      });
+
+      const afterMovieCats = requests.length;
+
+      // Requests das categorias por gênero de SÉRIES
+      seriesCategories.forEach(cat => {
+        requests.push(tmdbFetch('/discover/tv', { with_genres: cat.id, sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
       });
 
       const responses = await Promise.all(requests);
@@ -472,7 +538,11 @@
       const popular2 = responses[7];
       const trendingSeriesDay = responses[8];
       const featuredDetails = responses[9];
-      const categoryResults = responses.slice(10);
+      const tvTopRated = responses[10];
+      const tvOnTheAir = responses[11];
+      const tvPopular = responses[12];
+      const movieCategoryResults = responses.slice(baseRequestCount, afterMovieCats);
+      const seriesCategoryResults = responses.slice(afterMovieCats);
 
       // Combinar páginas
       const nowPlayingAll = [...(nowPlaying1.results || []), ...(nowPlaying2.results || [])];
@@ -499,7 +569,23 @@
         `;
       }
 
-      // 1. Lançamentos no Cinema (40 filmes)
+      // ======= CONTINUAR ASSISTINDO =======
+      const inProgressList = JSON.parse(localStorage.getItem('darkflix_in_progress') || '[]');
+      if (inProgressList.length > 0) {
+        html += `
+          <section class="section section-continue-watching">
+            <div class="section-header">
+              <h2 class="section-title">▶ Continuar Assistindo</h2>
+              <button class="btn-clear-history" id="btn-clear-history">Limpar Histórico</button>
+            </div>
+            <div class="movies-row">
+              ${inProgressList.map((item, i) => createCardHTML(item, i, item.media_type || 'movie')).join('')}
+            </div>
+          </section>
+        `;
+      }
+
+      // 1. Lançamentos no Cinema
       html += buildSection('Lançamentos no Cinema', nowPlayingAll, 'movie');
 
       // 2. Minha Lista
@@ -513,21 +599,36 @@
       // 4. Séries Populares (trending semana)
       html += buildSection('Séries Populares', trendingSeries.results, 'tv');
 
-      // 5. Mais Bem Avaliados de Todos os Tempos
+      // 5. Séries no Ar Agora
+      html += buildSection('Séries no Ar Agora', tvOnTheAir.results, 'tv');
+
+      // 6. Mais Bem Avaliados de Todos os Tempos
       html += buildSection('Mais Bem Avaliados', topRated.results, 'movie');
 
-      // 6. Em Breve nos Cinemas
+      // 7. Séries Mais Bem Avaliadas
+      html += buildSection('Séries Mais Bem Avaliadas', tvTopRated.results, 'tv');
+
+      // 8. Nos Cinemas
       html += buildSection('Nos Cinemas', upcoming.results, 'movie');
 
-      // 7. Populares Agora (40 filmes)
+      // 9. Populares Agora
       html += buildSection('Populares Agora', popularAll, 'movie');
 
-      // 8. Séries em Alta Hoje
+      // 10. Séries Populares Agora
+      html += buildSection('Séries Populares Agora', tvPopular.results, 'tv');
+
+      // 11. Séries em Alta Hoje
       html += buildSection('Séries em Alta Hoje', trendingSeriesDay.results, 'tv');
 
-      // 9. Todas as categorias por gênero
+      // 12. Categorias de séries por gênero
+      seriesCategories.forEach((cat, index) => {
+        const results = seriesCategoryResults[index].results || [];
+        html += buildSection(cat.title, results, 'tv');
+      });
+
+      // 13. Categorias de filmes por gênero
       homeCategories.forEach((cat, index) => {
-        const results = categoryResults[index].results || [];
+        const results = movieCategoryResults[index].results || [];
         html += buildSection(cat.title, results, 'movie');
       });
 
@@ -539,6 +640,21 @@
       `;
 
       attachCardEvents(DOM.homeContent);
+
+      // Bind "Limpar Histórico" button
+      const clearBtn = document.getElementById('btn-clear-history');
+      if (clearBtn) {
+        clearBtn.onclick = () => {
+          // Remover lista global
+          const oldList = JSON.parse(localStorage.getItem('darkflix_in_progress') || '[]');
+          oldList.forEach(item => {
+            localStorage.removeItem(`darkflix_progress_${item.id}`);
+          });
+          localStorage.removeItem('darkflix_in_progress');
+          showToast('Histórico de "Continuar Assistindo" limpo!', 'info');
+          renderHome();
+        };
+      }
 
     } catch (err) {
       console.error("Erro renderizando home:", err);
@@ -591,6 +707,7 @@
 
     DOM.heroWatchBtn.onclick = () => {
       if (type === 'movie') {
+        STATE.currentMovieDetail = item;
         openCinema(item.id, title, type);
       } else {
         showToast('Escolha uma temporada e episódio na seção de detalhes!', 'info');
@@ -962,23 +1079,22 @@
     DOM.cinemaTitle.textContent = title;
     
     let embedUrl = '';
-    const progressKey = `darkflix_progress_${tmdbId}`;
 
     if (type === 'movie') {
       embedUrl = `https://myembed.biz/filme/${tmdbId}`;
-      localStorage.setItem(progressKey, JSON.stringify({
+      saveWatchProgress(tmdbId, title, 'movie', {
         timestamp: Date.now(),
         type: 'movie',
         percent: 60 // Mock progress bar representation
-      }));
+      });
     } else {
       embedUrl = `https://myembed.biz/serie/${tmdbId}/${season}/${episode}`;
-      localStorage.setItem(progressKey, JSON.stringify({
+      saveWatchProgress(tmdbId, title, 'tv', {
         timestamp: Date.now(),
         type: 'tv',
         season: parseInt(season),
         episode: parseInt(episode)
-      }));
+      });
     }
 
     DOM.cinemaVideo.style.display = 'none';
