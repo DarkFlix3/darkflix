@@ -1292,6 +1292,7 @@
           playerVars: {
             autoplay: 1,
             controls: 1,
+            playsinline: 1,
             start: Math.floor(startSeconds)
           },
           events: {
