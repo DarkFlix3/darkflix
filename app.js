@@ -66,6 +66,20 @@
     "Thriller": 53
   };
 
+  // Anime-specific genre map (TMDB TV genre IDs relevant to anime)
+  const ANIME_GENRES = {
+    "Ação & Aventura": 10759,
+    "Comédia": 35,
+    "Drama": 18,
+    "Fantasia": 14,
+    "Ficção Científica": 10765,
+    "Romance": 10749,
+    "Terror": 27,
+    "Mistério": 9648,
+    "Slice of Life": 18,
+    "Animação": 16
+  };
+
   // ---------- DOM Elements Cache ----------
   const $ = (sel) => document.querySelector(sel);
   const $$ = (sel) => document.querySelectorAll(sel);
@@ -101,6 +115,7 @@
       home: $('#page-home'),
       movies: $('#page-movies'),
       series: $('#page-series'),
+      animes: $('#page-animes'),
       search: $('#page-search')
     },
     
@@ -109,6 +124,8 @@
     seriesGridAll: $('#series-grid-all'),
     moviesFilterBar: $('#movies-filter-bar'),
     seriesFilterBar: $('#series-filter-bar'),
+    animesGridAll: $('#animes-grid-all'),
+    animesFilterBar: $('#animes-filter-bar'),
     
     // Search page
     searchResultsTitle: $('#search-results-title'),
@@ -153,6 +170,8 @@
     mobileMoviesList: $('#mobile-movies-list'),
     mobileSeriesTrigger: $('#mobile-series-trigger'),
     mobileSeriesList: $('#mobile-series-list'),
+    mobileAnimesTrigger: $('#mobile-animes-trigger'),
+    mobileAnimesList: $('#mobile-animes-list'),
     
     toastContainer: $('#toast-container'),
     footer: $('#main-footer')
@@ -311,10 +330,11 @@
     if (page === 'home') renderHome();
     else if (page === 'movies') renderMoviesPage();
     else if (page === 'series') renderSeriesPage();
+    else if (page === 'animes') renderAnimesPage();
   }
 
   function navigateToGenre(type, genreName) {
-    const genreId = PORTUGUESE_GENRES[genreName] || null;
+    const genreId = type === 'animes' ? (ANIME_GENRES[genreName] || null) : (PORTUGUESE_GENRES[genreName] || null);
     STATE.currentPage = type;
     
     // Reset page visibility
@@ -355,6 +375,16 @@
       // Wait for rendering to complete, then update filter bar active button
       setTimeout(() => {
         const filterBar = DOM.seriesFilterBar;
+        if (filterBar) {
+          filterBar.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.genre === (genreName || 'all'));
+          });
+        }
+      }, 50);
+    } else if (type === 'animes') {
+      renderAnimesPage(genreId);
+      setTimeout(() => {
+        const filterBar = DOM.animesFilterBar;
         if (filterBar) {
           filterBar.querySelectorAll('.filter-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.genre === (genreName || 'all'));
@@ -581,6 +611,9 @@
         requests.push(tmdbFetch('/discover/tv', { with_genres: cat.id, sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
       });
 
+      // Request especial para Animes (Animações com idioma original Japonês 'ja')
+      requests.push(tmdbFetch('/discover/tv', { with_genres: '16', with_original_language: 'ja', sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
+
       const responses = await Promise.all(requests);
 
       const nowPlaying1 = responses[0];
@@ -597,7 +630,8 @@
       const tvOnTheAir = responses[11];
       const tvPopular = responses[12];
       const movieCategoryResults = responses.slice(baseRequestCount, afterMovieCats);
-      const seriesCategoryResults = responses.slice(afterMovieCats);
+      const seriesCategoryResults = responses.slice(afterMovieCats, responses.length - 1);
+      const animeResults = responses[responses.length - 1];
 
       // Combinar páginas
       const nowPlayingAll = [...(nowPlaying1.results || []), ...(nowPlaying2.results || [])];
@@ -703,6 +737,10 @@
 
       // 11. Séries em Alta Hoje
       html += buildSection('Séries em Alta Hoje', trendingSeriesDay.results, 'tv');
+
+      // 11.5 Animes
+      const animeShows = animeResults.results || [];
+      html += buildSection('Animes de Sucesso', animeShows, 'tv');
 
       // 12. Categorias de séries por gênero
       seriesCategories.forEach((cat, index) => {
@@ -930,6 +968,92 @@
     } catch (err) {
       console.error("Erro ao carregar séries:", err);
       showErrorState(DOM.seriesGridAll, "Erro ao conectar com o TMDB e carregar as séries.");
+    }
+  }
+
+  // ---------- Render Animes Page ----------
+  async function renderAnimesPage(genreId = null) {
+    if (!STATE.tmdbApiKey) {
+      showTMDBSetupMessage();
+      return;
+    }
+
+    showLoadingSkeletons(DOM.animesGridAll);
+
+    // Refresh filter bar buttons
+    const activeBtn = DOM.animesFilterBar.querySelector('.filter-btn.active');
+    const currentGenre = activeBtn ? activeBtn.dataset.genre : 'all';
+
+    DOM.animesFilterBar.innerHTML = `
+      <button class="filter-btn ${currentGenre === 'all' ? 'active' : ''}" data-genre="all">Todos</button>
+      ${Object.keys(ANIME_GENRES).map(name => `
+        <button class="filter-btn ${currentGenre === name ? 'active' : ''}" data-genre="${name}">${name}</button>
+      `).join('')}
+    `;
+
+    DOM.animesFilterBar.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.onclick = () => {
+        DOM.animesFilterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const genre = btn.dataset.genre;
+        const id = ANIME_GENRES[genre] || null;
+        renderAnimesPage(id);
+      };
+    });
+
+    try {
+      // Mapeamento de gêneros de filmes para equivalentes de TV em caso de gêneros não nativos de TV no TMDB
+      let tvGenreId = genreId;
+      if (genreId === 10749) { // Romance (filme) -> Drama (TV 18)
+        tvGenreId = 18;
+      } else if (genreId === 27) { // Terror (filme) -> Mistério (TV 9648)
+        tvGenreId = 9648;
+      }
+
+      const tvParams = {
+        with_genres: tvGenreId ? `16,${tvGenreId}` : '16',
+        with_original_language: 'ja',
+        sort_by: 'popularity.desc'
+      };
+
+      const movieParams = {
+        with_genres: genreId ? `16,${genreId}` : '16',
+        with_original_language: 'ja',
+        sort_by: 'popularity.desc'
+      };
+
+      // Fazer buscas paralelas de séries de TV e filmes para juntar tudo na mesma página
+      const [tvPage1, tvPage2, moviePage1, moviePage2] = await Promise.all([
+        tmdbFetch('/discover/tv', { ...tvParams, page: 1 }),
+        tmdbFetch('/discover/tv', { ...tvParams, page: 2 }),
+        tmdbFetch('/discover/movie', { ...movieParams, page: 1 }),
+        tmdbFetch('/discover/movie', { ...movieParams, page: 2 })
+      ]);
+
+      const tvResults = [
+        ...(tvPage1.results || []),
+        ...(tvPage2.results || [])
+      ].map(item => ({ ...item, media_type: 'tv' }));
+
+      const movieResults = [
+        ...(moviePage1.results || []),
+        ...(moviePage2.results || [])
+      ].map(item => ({ ...item, media_type: 'movie' }));
+
+      // Mesclar e ordenar os animes por popularidade (garante os mais famosos no início)
+      const results = [...tvResults, ...movieResults].sort((a, b) => b.popularity - a.popularity);
+
+      if (results.length === 0) {
+        DOM.animesGridAll.innerHTML = `<div class="no-results">Nenhum anime encontrado para essa categoria.</div>`;
+        return;
+      }
+
+      DOM.animesGridAll.innerHTML = results.map((item, i) => createCardHTML(item, i)).join('');
+      attachCardEvents(DOM.animesGridAll);
+
+    } catch (err) {
+      console.error("Erro ao carregar animes:", err);
+      showErrorState(DOM.animesGridAll, "Erro ao conectar com o TMDB e carregar os animes.");
     }
   }
 
@@ -1342,6 +1466,57 @@
           e.preventDefault();
           const genre = item.dataset.genre;
           navigateToGenre('series', genre);
+        };
+      });
+    }
+
+    // Render and bind Mobile Animes categories accordion
+    if (DOM.mobileAnimesList && DOM.mobileAnimesTrigger) {
+      const animeGenresList = Object.keys(ANIME_GENRES);
+      
+      DOM.mobileAnimesList.innerHTML = animeGenresList.map(name => `
+        <button class="mobile-category-item" data-genre="${name}">${name}</button>
+      `).join('');
+
+      DOM.mobileAnimesTrigger.onclick = (e) => {
+        e.preventDefault();
+        DOM.mobileAnimesTrigger.classList.toggle('active');
+        DOM.mobileAnimesList.classList.toggle('open');
+        
+        // Auto-close other accordions
+        DOM.mobileMoviesTrigger.classList.remove('active');
+        DOM.mobileMoviesList.classList.remove('open');
+        DOM.mobileSeriesTrigger.classList.remove('active');
+        DOM.mobileSeriesList.classList.remove('open');
+      };
+
+      // Also close anime accordion when opening movies or series
+      const origMoviesTrigger = DOM.mobileMoviesTrigger.onclick;
+      DOM.mobileMoviesTrigger.onclick = (e) => {
+        e.preventDefault();
+        DOM.mobileMoviesTrigger.classList.toggle('active');
+        DOM.mobileMoviesList.classList.toggle('open');
+        DOM.mobileSeriesTrigger.classList.remove('active');
+        DOM.mobileSeriesList.classList.remove('open');
+        DOM.mobileAnimesTrigger.classList.remove('active');
+        DOM.mobileAnimesList.classList.remove('open');
+      };
+
+      DOM.mobileSeriesTrigger.onclick = (e) => {
+        e.preventDefault();
+        DOM.mobileSeriesTrigger.classList.toggle('active');
+        DOM.mobileSeriesList.classList.toggle('open');
+        DOM.mobileMoviesTrigger.classList.remove('active');
+        DOM.mobileMoviesList.classList.remove('open');
+        DOM.mobileAnimesTrigger.classList.remove('active');
+        DOM.mobileAnimesList.classList.remove('open');
+      };
+
+      DOM.mobileAnimesList.querySelectorAll('.mobile-category-item').forEach(item => {
+        item.onclick = (e) => {
+          e.preventDefault();
+          const genre = item.dataset.genre;
+          navigateToGenre('animes', genre);
         };
       });
     }
