@@ -611,6 +611,12 @@ ul, ol {
   margin-top: -40px;
 }
 
+/* Clear fixed header and reset margins for all pages except home */
+.page-view:not(#page-home) .main-content {
+  margin-top: 0 !important;
+  padding-top: calc(var(--header-height) + 40px) !important;
+}
+
 /* ---------- SECTION / CATEGORY ---------- */
 .section {
   margin-bottom: 56px;
