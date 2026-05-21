@@ -695,9 +695,6 @@
       // 7. Séries Mais Bem Avaliadas
       html += buildSection('Séries Mais Bem Avaliadas', tvTopRated.results, 'tv');
 
-      // 8. Nos Cinemas
-      html += buildSection('Nos Cinemas', upcoming.results, 'movie');
-
       // 9. Populares Agora
       html += buildSection('Populares Agora', popularAll, 'movie');
 
