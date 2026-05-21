@@ -856,15 +856,34 @@
 
     if (uniqueCandidates.length === 0) return null;
 
-    // Sort candidates by ID to ensure deterministic order regardless of TMDB response order
-    uniqueCandidates.sort((a, b) => a.id - b.id);
-
-    // Use current date to pick a deterministic index
+    // Use UTC date to ensure PC and mobile devices are perfectly synchronized globally
     const today = new Date();
-    // Deterministic hash based on year, month, and day
-    const dateHash = today.getFullYear() * 1000 + (today.getMonth() + 1) * 31 + today.getDate();
-    const index = dateHash % uniqueCandidates.length;
-    const selected = uniqueCandidates[index];
+    const dateStr = `${today.getUTCFullYear()}-${today.getUTCMonth() + 1}-${today.getUTCDate()}`;
+
+    // Simple hash function to score candidates independently
+    function hashString(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        hash = hash & hash; // Convert to 32bit integer
+      }
+      return hash;
+    }
+
+    // Find the candidate with the highest hash value for today
+    let selected = null;
+    let maxHash = -Infinity;
+
+    uniqueCandidates.forEach(c => {
+      const hashKey = `${dateStr}_${c.media_type}_${c.id}`;
+      const hashVal = hashString(hashKey);
+      if (hashVal > maxHash) {
+        maxHash = hashVal;
+        selected = c;
+      }
+    });
+
+    if (!selected) return null;
 
     // If we already have the full data object, return it
     if (selected.data) {
