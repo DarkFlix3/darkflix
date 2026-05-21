@@ -758,8 +758,8 @@
         DOM.heroTrailerIframe.style.display = 'block';
         DOM.heroTrailer.classList.add('active');
         STATE.heroTrailerPlaying = true;
-        STATE.heroTrailerMuted = false;
-        updateTrailerControlsUI('hero', true, false);
+        STATE.heroTrailerMuted = true;
+        updateTrailerControlsUI('hero', true, true);
         if (DOM.heroTrailerControls) DOM.heroTrailerControls.style.display = 'flex';
       }
     }, 5000);
@@ -980,8 +980,8 @@
         DOM.modalTrailerIframe.style.display = 'block';
         DOM.modalHeroTrailer.classList.add('active');
         STATE.modalTrailerPlaying = true;
-        STATE.modalTrailerMuted = false;
-        updateTrailerControlsUI('modal', true, false);
+        STATE.modalTrailerMuted = true;
+        updateTrailerControlsUI('modal', true, true);
         if (DOM.modalTrailerControls) DOM.modalTrailerControls.style.display = 'flex';
       }
     }, 5000);
