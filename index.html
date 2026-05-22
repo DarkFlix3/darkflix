@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="DarkFlix - Sua plataforma de streaming premium. Assista filmes e séries sem cadastro, com qualidade cinematográfica.">
-  <meta name="referrer" content="no-referrer">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>DarkFlix — Filmes & Séries</title>
-  <link rel="stylesheet" href="style.css?v=2.3.0">
+  <link rel="stylesheet" href="style.css?v=2.3.1">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
 </head>
 <body>
@@ -163,7 +163,7 @@
     <section class="hero" id="hero-section">
       <div class="hero-backdrop" id="hero-backdrop"></div>
       <div class="hero-trailer" id="hero-trailer">
-        <iframe id="hero-trailer-iframe" src="" allow="autoplay; encrypted-media" style="width:100%; height:100%; border:none; display:none; transform: scale(1.5); transform-origin: center;"></iframe>
+        <iframe id="hero-trailer-iframe" src="" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="no-referrer-when-downgrade" style="width:100%; height:100%; border:none; display:none; transform: scale(1.5); transform-origin: center;"></iframe>
         <video id="hero-trailer-video" loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:none;"></video>
         <div class="trailer-touch-cover" style="position: absolute; inset: 0; z-index: 2; background: transparent;"></div>
       </div>
@@ -268,7 +268,7 @@
       <div class="modal-hero" id="modal-hero">
         <div class="modal-hero-gradient"></div>
         <div class="modal-hero-trailer" id="modal-hero-trailer">
-          <iframe id="modal-trailer-iframe" src="" allow="autoplay; encrypted-media" style="width:100%; height:100%; border:none; display:none; transform: scale(1.5); transform-origin: center;"></iframe>
+          <iframe id="modal-trailer-iframe" src="" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="no-referrer-when-downgrade" style="width:100%; height:100%; border:none; display:none; transform: scale(1.5); transform-origin: center;"></iframe>
           <video id="modal-trailer-video" loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:none;"></video>
           <div class="trailer-touch-cover" style="position: absolute; inset: 0; z-index: 2; background: transparent;"></div>
         </div>
@@ -324,7 +324,7 @@
       Fechar Player
     </button>
     <div class="cinema-player" style="position: relative;">
-      <iframe id="cinema-iframe" src="" allow="autoplay; encrypted-media; picture-in-picture" width="100%" height="100%" frameborder="0" allowfullscreen loading="lazy" style="display: none;"></iframe>
+      <iframe id="cinema-iframe" src="" allow="autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" frameborder="0" allowfullscreen loading="lazy" style="display: none;"></iframe>
       <video id="cinema-video" controls autoplay playsinline style="width: 100%; height: 100%; display: none; object-fit: contain; background: #000;"></video>
       <div id="cinema-blocker-top" class="cinema-player-blocker-top" style="display: none;"></div>
     </div>
@@ -448,6 +448,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script type="module" src="app.js?v=2.3.0"></script>
+  <script type="module" src="app.js?v=2.3.1"></script>
 </body>
 </html>

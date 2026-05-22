@@ -405,9 +405,14 @@ const STATE = {
     try {
       const data = await tmdbFetch(`/${type}/${id}/videos`);
       const videos = data.results || [];
-      const trailer = videos.find(v => v.type === 'Trailer' && v.site === 'YouTube') || videos.find(v => v.site === 'YouTube');
+      // Prefer official Trailer, then any Teaser, then any YouTube video
+      const trailer = videos.find(v => v.type === 'Trailer' && v.site === 'YouTube')
+        || videos.find(v => v.type === 'Teaser' && v.site === 'YouTube')
+        || videos.find(v => v.site === 'YouTube');
       if (trailer) {
-        return `https://www.youtube.com/embed/${trailer.key}?autoplay=1&mute=1&controls=0&loop=1&playlist=${trailer.key}&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0&enablejsapi=1&playsinline=1`;
+        // Use youtube-nocookie.com to avoid Error 153 (player configuration error)
+        // This domain is YouTube's official solution for privacy-safe embeds and avoids referrer blocks
+        return `https://www.youtube-nocookie.com/embed/${trailer.key}?autoplay=1&mute=1&controls=0&loop=1&playlist=${trailer.key}&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0&enablejsapi=1&playsinline=1&origin=${encodeURIComponent(window.location.origin)}`;
       }
     } catch (e) {
       console.warn("Falha ao buscar trailer do vídeo", e);
