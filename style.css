@@ -1050,6 +1050,30 @@ ul, ol {
   border: none;
 }
 
+/* Blocker to cover embedmovies.org watermarks / redirects */
+.cinema-player-blocker-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire top edge of the iframe player */
+  height: 55px; /* Height to completely cover the watermark */
+  background-color: #000;
+  z-index: 10;
+  pointer-events: auto; /* Absorb clicks so user doesn't click on the logo underneath */
+}
+
+@media (max-width: 768px) {
+  .cinema-player-blocker-top {
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cinema-player-blocker-top {
+    height: 38px;
+  }
+}
+
 .cinema-title {
   margin-top: 20px;
   font-size: 1.1rem;
