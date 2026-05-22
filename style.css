@@ -2421,13 +2421,13 @@ ul, ol {
   border-radius: var(--radius-sm);
   overflow: hidden;
   transition: transform var(--transition-fast);
-  background: #333;
+  background: transparent;
 }
 
 .profile-avatar-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -2571,8 +2571,9 @@ ul, ol {
   width: 32px;
   height: 32px;
   border-radius: var(--radius-sm);
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  background: transparent;
 }
 
 .profile-menu-btn .chevron-icon {
@@ -2626,8 +2627,9 @@ ul, ol {
   width: 26px;
   height: 26px;
   border-radius: var(--radius-sm);
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  background: transparent;
 }
 
 .dropdown-profile-item:hover {
@@ -2719,13 +2721,13 @@ ul, ol {
   height: 100px;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  background: #333;
+  background: transparent;
 }
 
 .profile-edit-avatar-section img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -2865,14 +2867,14 @@ ul, ol {
   border-radius: var(--radius-sm);
   overflow: hidden;
   cursor: pointer;
-  background: #333;
+  background: transparent;
   transition: transform var(--transition-fast);
 }
 
 .avatar-picker-grid .avatar-pick-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
