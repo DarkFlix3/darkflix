@@ -33,27 +33,27 @@ const AVATAR_CATEGORIES = [
       { id: 'cameron', name: 'Cameron', url: 'assets/avatars/cameron.jpg' },
       { id: 'bruce', name: 'Bruce', url: 'assets/avatars/bruce.jpg' },
       { id: 'alicia_sierra', name: 'Alicia Sierra', url: 'assets/avatars/alicia_sierra.jpg' },
-      { id: 'money_heist', name: 'Dali', url: 'https://image.tmdb.org/t/p/w154/reKs8RjV4PBi426t7J6tU7Xn6fK.jpg' }
+      { id: 'money_heist', name: 'Dali', url: 'https://image.tmdb.org/t/p/w500/reKs8RjV4PBi426t7J6tU7Xn6fK.jpg' }
     ]
   },
   {
     title: 'Destaques e Clássicos',
     avatars: [
-      { id: 'wednesday', name: 'Wandinha', url: 'https://image.tmdb.org/t/p/w154/9PF47oJ2wqggnn565Y99n9e78Iv.jpg' },
-      { id: 'breaking_bad', name: 'Walter White', url: 'https://image.tmdb.org/t/p/w154/ztkUQvmg16736wb9t451Hvv5ClC.jpg' },
-      { id: 'stranger_things', name: 'Eleven', url: 'https://image.tmdb.org/t/p/w154/49W0oz4cvmHM2oXjHn5K5alfsfg.jpg' },
-      { id: 'interstellar', name: 'Cooper', url: 'https://image.tmdb.org/t/p/w154/gEU2QvHOm5tJ708vj123vll4aCI.jpg' },
-      { id: 'avengers', name: 'Homem de Ferro', url: 'https://image.tmdb.org/t/p/w154/or0650h61tg3JydypCgGL2p2qah.jpg' },
-      { id: 'matrix', name: 'Neo', url: 'https://image.tmdb.org/t/p/w154/f89U3w7n2etmq58STj1asR46xNC.jpg' }
+      { id: 'wednesday', name: 'Wandinha', url: 'https://image.tmdb.org/t/p/w500/9PF47oJ2wqggnn565Y99n9e78Iv.jpg' },
+      { id: 'breaking_bad', name: 'Walter White', url: 'https://image.tmdb.org/t/p/w500/ztkUQvmg16736wb9t451Hvv5ClC.jpg' },
+      { id: 'stranger_things', name: 'Eleven', url: 'https://image.tmdb.org/t/p/w500/49W0oz4cvmHM2oXjHn5K5alfsfg.jpg' },
+      { id: 'interstellar', name: 'Cooper', url: 'https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ708vj123vll4aCI.jpg' },
+      { id: 'avengers', name: 'Homem de Ferro', url: 'https://image.tmdb.org/t/p/w500/or0650h61tg3JydypCgGL2p2qah.jpg' },
+      { id: 'matrix', name: 'Neo', url: 'https://image.tmdb.org/t/p/w500/f89U3w7n2etmq58STj1asR46xNC.jpg' }
     ]
   },
   {
     title: 'Animes',
     avatars: [
-      { id: 'naruto', name: 'Naruto', url: 'https://image.tmdb.org/t/p/w154/ch7S63o296s8m3tC6j49aV4575u.jpg' },
-      { id: 'one_piece', name: 'Luffy', url: 'https://image.tmdb.org/t/p/w154/cMD9Ygz14feJJAXY67phJ6Iy6lF.jpg' },
-      { id: 'death_note', name: 'L', url: 'https://image.tmdb.org/t/p/w154/1tpxmB0G9s3v1sQvN6J7C35z98Z.jpg' },
-      { id: 'demon_slayer', name: 'Tanjirou', url: 'https://image.tmdb.org/t/p/w154/h8ScpS894fK70T97W29fJbHj676.jpg' }
+      { id: 'naruto', name: 'Naruto', url: 'https://image.tmdb.org/t/p/w500/ch7S63o296s8m3tC6j49aV4575u.jpg' },
+      { id: 'one_piece', name: 'Luffy', url: 'https://image.tmdb.org/t/p/w500/cMD9Ygz14feJJAXY67phJ6Iy6lF.jpg' },
+      { id: 'death_note', name: 'L', url: 'https://image.tmdb.org/t/p/w500/1tpxmB0G9s3v1sQvN6J7C35z98Z.jpg' },
+      { id: 'demon_slayer', name: 'Tanjirou', url: 'https://image.tmdb.org/t/p/w500/h8ScpS894fK70T97W29fJbHj676.jpg' }
     ]
   }
 ];
