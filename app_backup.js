@@ -2,102 +2,25 @@
 // DarkFlix - Premium TMDB API & MyEmbed Iframe Player Client
 // ============================================================
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { getDatabase, ref, set, get, update, child, remove, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+(function () {
+  'use strict';
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyD8-QC4CiWHU_lXuAPE1It68iEupLP-pRY",
-  authDomain: "darkflix-e7a8d.firebaseapp.com",
-  databaseURL: "https://darkflix-e7a8d-default-rtdb.firebaseio.com",
-  projectId: "darkflix-e7a8d",
-  storageBucket: "darkflix-e7a8d.firebasestorage.app",
-  messagingSenderId: "136265036172",
-  appId: "1:136265036172:web:d407505cdd85e9becea6a9",
-  measurementId: "G-RETWHJEYT0"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getDatabase(app);
-
-// Avatares Predefinidos Categorizados
-const AVATAR_CATEGORIES = [
-  {
-    title: 'La Casa de Papel & Berlim',
-    avatars: [
-      { id: 'berlin', name: 'Berlin', url: 'assets/avatars/berlin.jpg' },
-      { id: 'the_professor', name: 'O Professor', url: 'assets/avatars/the_professor.jpg' },
-      { id: 'the_girl', name: 'Keila', url: 'assets/avatars/the_girl.jpg' },
-      { id: 'cameron', name: 'Cameron', url: 'assets/avatars/cameron.jpg' },
-      { id: 'bruce', name: 'Bruce', url: 'assets/avatars/bruce.jpg' },
-      { id: 'alicia_sierra', name: 'Alicia Sierra', url: 'assets/avatars/alicia_sierra.jpg' },
-      { id: 'money_heist', name: 'Dali', url: 'assets/avatars/money_heist.png' }
-    ]
-  },
-  {
-    title: 'Destaques e Clássicos',
-    avatars: [
-      { id: 'wednesday', name: 'Wandinha', url: 'assets/avatars/wednesday.png' },
-      { id: 'breaking_bad', name: 'Walter White', url: 'assets/avatars/walter_white.png' },
-      { id: 'stranger_things', name: 'Eleven', url: 'assets/avatars/eleven.png' },
-      { id: 'interstellar', name: 'Cooper', url: 'assets/avatars/cooper.png' },
-      { id: 'avengers', name: 'Homem de Ferro', url: 'assets/avatars/iron_man.png' },
-      { id: 'matrix', name: 'Neo', url: 'assets/avatars/neo.png' }
-    ]
-  },
-  {
-    title: 'Animes',
-    avatars: [
-      { id: 'naruto', name: 'Naruto', url: 'assets/avatars/naruto.png' },
-      { id: 'one_piece', name: 'Luffy', url: 'assets/avatars/luffy.png' },
-      { id: 'death_note', name: 'L', url: 'assets/avatars/l_deathnote.svg' },
-      { id: 'demon_slayer', name: 'Tanjirou', url: 'assets/avatars/tanjirou.svg' }
-    ]
-  }
-];
-
-const PRESET_AVATARS = AVATAR_CATEGORIES.flatMap(cat => cat.avatars);
-
-const COLOR_AVATARS = [
-  { id: 'color_blue', name: 'Azul', url: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100%" height="100%" fill="%232b90d9"/><text x="50" y="55" font-size="30" fill="white" font-family="sans-serif" text-anchor="middle">👤</text></svg>' },
-  { id: 'color_green', name: 'Verde', url: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100%" height="100%" fill="%233ebd5c"/><text x="50" y="55" font-size="30" fill="white" font-family="sans-serif" text-anchor="middle">👤</text></svg>' },
-  { id: 'color_yellow', name: 'Amarelo', url: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100%" height="100%" fill="%23e3b31a"/><text x="50" y="55" font-size="30" fill="white" font-family="sans-serif" text-anchor="middle">👤</text></svg>' },
-  { id: 'color_purple', name: 'Roxo', url: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100%" height="100%" fill="%23943ebd"/><text x="50" y="55" font-size="30" fill="white" font-family="sans-serif" text-anchor="middle">👤</text></svg>' },
-  { id: 'color_red', name: 'Vermelho', url: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100%" height="100%" fill="%23e50914"/><text x="50" y="55" font-size="30" fill="white" font-family="sans-serif" text-anchor="middle">👤</text></svg>' }
-];
-
-// ---------- State ----------
-const STATE = {
-  currentPage: 'auth',
-  currentUser: null,
-  currentProfile: null,
-  allProfiles: {},
-  manageProfilesMode: false,
-  selectedAvatarUrl: PRESET_AVATARS[0].url,
-  
-  // Auth state
-  authMode: 'login',
-  
-  // PIN pad state
-  pinTargetProfileId: null,
-  pinAccumulator: '',
-
-  favorites: [],
-  inProgress: [],
-  currentMovieDetail: null,
-  searchDebounce: null,
-  tmdbApiKey: '1084015975402c8b0a0b81e807d2f7c8',
-  featuredId: localStorage.getItem('darkflix_featured_id') || '157336', // Interstellar default
-  featuredType: localStorage.getItem('darkflix_featured_type') || 'movie',
-  heroTrailerTimeout: null,
-  modalTrailerTimeout: null,
-  heroTrailerPlaying: true,
-  heroTrailerMuted: false,
-  modalTrailerPlaying: true,
-  modalTrailerMuted: false
-};
+  // ---------- State ----------
+  const STATE = {
+    currentPage: 'home',
+    favorites: JSON.parse(localStorage.getItem('darkflix_favorites') || '[]'),
+    currentMovieDetail: null,
+    searchDebounce: null,
+    tmdbApiKey: '1084015975402c8b0a0b81e807d2f7c8',
+    featuredId: localStorage.getItem('darkflix_featured_id') || '157336', // Interstellar default
+    featuredType: localStorage.getItem('darkflix_featured_type') || 'movie',
+    heroTrailerTimeout: null,
+    modalTrailerTimeout: null,
+    heroTrailerPlaying: true,
+    heroTrailerMuted: false,
+    modalTrailerPlaying: true,
+    modalTrailerMuted: false
+  };
 
   // ---------- Genre Maps ----------
   const GENRE_MAP = {
@@ -189,8 +112,6 @@ const STATE = {
     // Pages wrapper
     homeContent: $('#home-content'),
     pages: {
-      auth: $('#page-auth'),
-      profiles: $('#page-profiles'),
       home: $('#page-home'),
       movies: $('#page-movies'),
       series: $('#page-series'),
@@ -257,39 +178,6 @@ const STATE = {
     categoriesWrapper: $('#nav-categories-wrapper'),
     categoriesBtn: $('#nav-categories-btn'),
     categoriesDropdown: $('#categories-dropdown'),
-    
-    // Auth and profile UI
-    authForm: $('#auth-form'),
-    authEmail: $('#auth-email'),
-    authPassword: $('#auth-password'),
-    authConfirmGroup: $('#confirm-password-group'),
-    authConfirmPassword: $('#auth-confirm-password'),
-    btnAuthSubmit: $('#btn-auth-submit'),
-    authTitle: $('#auth-title'),
-    authSwitchText: $('#auth-switch-text'),
-    btnAuthSwitch: $('#btn-auth-switch'),
-    headerProfileWrapper: $('#header-profile-wrapper'),
-    headerAvatar: $('#header-avatar'),
-    profileMenuBtn: $('#profile-menu-btn'),
-    profileDropdown: $('#profile-dropdown'),
-    profileDropdownList: $('#profile-dropdown-list'),
-    btnDropdownManage: $('#btn-dropdown-manage'),
-    btnDropdownLogout: $('#btn-dropdown-logout'),
-    profilesGrid: $('#profiles-grid'),
-    btnManageProfiles: $('#btn-manage-profiles'),
-    pinModal: $('#pin-modal'),
-    pinCloseBtn: $('#pin-close-btn'),
-    profileEditModal: $('#profile-edit-modal'),
-    avatarPickerModal: $('#avatar-picker-modal'),
-    editProfileAvatarImg: $('#edit-profile-avatar-img'),
-    btnChangeAvatar: $('#btn-change-avatar'),
-    editProfileName: $('#edit-profile-name'),
-    editProfilePin: $('#edit-profile-pin'),
-    btnProfileSave: $('#btn-profile-save'),
-    btnProfileCancel: $('#btn-profile-cancel'),
-    btnProfileDelete: $('#btn-profile-delete'),
-    avatarPickerCloseBtn: $('#avatar-picker-close-btn'),
-    avatarPickerSectionsContainer: $('#avatar-picker-sections-container'),
     
     toastContainer: $('#toast-container'),
     footer: $('#main-footer')
@@ -383,10 +271,15 @@ const STATE = {
     }
   }
 
-  async function saveWatchProgress(id, title, type, details = {}) {
-    if (!STATE.currentUser || !STATE.currentProfile) return;
-
+  function saveWatchProgress(id, title, type, details = {}) {
+    let inProgress = JSON.parse(localStorage.getItem('darkflix_in_progress') || '[]');
+    
+    // Obter metadados do item de STATE.currentMovieDetail ou criar fallback
     const movie = STATE.currentMovieDetail || {};
+    
+    // Remover item anterior com mesmo ID se existir para colocar no topo (mais recente)
+    inProgress = inProgress.filter(x => Number(x.id) !== Number(id));
+    
     const progressItem = {
       id: Number(id),
       title: movie.title || movie.name || title,
@@ -400,49 +293,31 @@ const STATE = {
       timestamp: Date.now(),
       ...details
     };
-
-    try {
-      const itemRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/in_progress/${id}`);
-      await set(itemRef, progressItem);
-      
-      STATE.inProgress = STATE.inProgress.filter(x => Number(x.id) !== Number(id));
-      STATE.inProgress.unshift(progressItem);
-      if (STATE.inProgress.length > 12) {
-        STATE.inProgress.pop();
-      }
-    } catch (err) {
-      console.error("Error saving progress to Firebase:", err);
+    
+    inProgress.unshift(progressItem);
+    
+    // Limitar para os últimos 12 itens
+    if (inProgress.length > 12) {
+      inProgress.pop();
     }
+    
+    localStorage.setItem('darkflix_in_progress', JSON.stringify(inProgress));
+    
+    // Também manter compatibilidade com o progresso individual
+    localStorage.setItem(`darkflix_progress_${id}`, JSON.stringify(details));
   }
 
   // ---------- Navigation ----------
   function navigateTo(page) {
     STATE.currentPage = page;
     
-    // Hide header links & search if on auth or profiles page
-    const hideHeaderNav = (page === 'auth' || page === 'profiles');
-    if (DOM.navMenu) {
-      DOM.navMenu.style.visibility = hideHeaderNav ? 'hidden' : 'visible';
-    }
-    if (DOM.menuToggle) {
-      DOM.menuToggle.style.display = hideHeaderNav ? 'none' : '';
-    }
-    if (DOM.logoHome) {
-      DOM.logoHome.style.pointerEvents = (page === 'auth') ? 'none' : 'auto';
-    }
-    
     // Force solid blurred dark header background on inner pages to prevent clashing content
     if (DOM.header) {
-      if (page !== 'home' && page !== 'auth' && page !== 'profiles') {
+      if (page !== 'home') {
         DOM.header.classList.add('scrolled');
       } else {
-        DOM.header.classList.toggle('scrolled', window.scrollY > 20 || page === 'auth' || page === 'profiles');
+        DOM.header.classList.toggle('scrolled', window.scrollY > 20);
       }
-    }
-    
-    // Toggle footer visibility: hide on auth and profiles pages
-    if (DOM.footer) {
-      DOM.footer.style.display = (page === 'auth' || page === 'profiles') ? 'none' : 'block';
     }
     
     // Reset page visibility
@@ -471,7 +346,6 @@ const STATE = {
     else if (page === 'movies') renderMoviesPage();
     else if (page === 'series') renderSeriesPage();
     else if (page === 'animes') renderAnimesPage();
-    else if (page === 'profiles') renderProfilesPage();
   }
 
   function navigateToGenre(type, genreName) {
@@ -498,11 +372,6 @@ const STATE = {
     
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    // Ensure footer is visible on genre pages
-    if (DOM.footer) {
-      DOM.footer.style.display = 'block';
-    }
 
     // Render with genre pre-filtered
     if (type === 'movies') {
@@ -567,6 +436,7 @@ const STATE = {
     `).join('');
   }
 
+  // API loading fail handling
   function showErrorState(container, message) {
     container.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 60px; color: var(--text-secondary);">
@@ -613,24 +483,28 @@ const STATE = {
 
     const typeLabel = mediaType === 'movie' ? 'Filme' : 'Série';
 
-    // Watch progress indicator from synced STATE.inProgress
-    const prog = STATE.inProgress.find(x => Number(x.id) === Number(item.id));
+    // Watch progress indicator
+    const progressKey = `darkflix_progress_${item.id}`;
+    const progress = localStorage.getItem(progressKey);
     let progressIndicatorHTML = '';
 
-    if (prog) {
-      if (prog.percent) {
-        progressIndicatorHTML = `
-          <div class="card-progress-bar" style="position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: rgba(255, 255, 255, 0.3); z-index: 5;">
-            <div style="height: 100%; width: ${prog.percent}%; background: var(--accent); transition: width 0.3s ease;"></div>
-          </div>
-        `;
-      } else if (prog.season) {
-        progressIndicatorHTML = `
-          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(229, 9, 20, 0.9); padding: 3px 8px; font-size: 0.65rem; color: white; text-align: right; font-weight: 700; z-index: 5; border-bottom-left-radius: var(--radius-sm); border-bottom-right-radius: var(--radius-sm);">
-            T${prog.season}:E${prog.episode}
-          </div>
-        `;
-      }
+    if (progress) {
+      try {
+        const prog = JSON.parse(progress);
+        if (prog && prog.percent) {
+          progressIndicatorHTML = `
+            <div class="card-progress-bar" style="position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: rgba(255, 255, 255, 0.3); z-index: 5;">
+              <div style="height: 100%; width: ${prog.percent}%; background: var(--accent); transition: width 0.3s ease;"></div>
+            </div>
+          `;
+        } else if (prog && prog.season) {
+          progressIndicatorHTML = `
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(229, 9, 20, 0.9); padding: 3px 8px; font-size: 0.65rem; color: white; text-align: right; font-weight: 700; z-index: 5; border-bottom-left-radius: var(--radius-sm); border-bottom-right-radius: var(--radius-sm);">
+              T${prog.season}:E${prog.episode}
+            </div>
+          `;
+        }
+      } catch (e) {}
     }
 
     return `
@@ -801,7 +675,7 @@ const STATE = {
       }
 
       // ======= CONTINUE ASSISTINDO =======
-      let inProgressList = STATE.inProgress;
+      let inProgressList = JSON.parse(localStorage.getItem('darkflix_in_progress') || '[]');
       
       // Asynchronously repair missing metadata in history
       let repairedAny = false;
@@ -818,16 +692,15 @@ const STATE = {
               item.vote_average = details.vote_average || item.vote_average;
               item.release_date = details.release_date || details.first_air_date || item.release_date;
               item.first_air_date = details.first_air_date || details.release_date || item.first_air_date;
-              
-              if (STATE.currentUser && STATE.currentProfile) {
-                await set(ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/in_progress/${item.id}`), item);
-              }
               repairedAny = true;
             }
           } catch (e) {
             console.warn(`Erro reparando metadados do item ${item.id}`, e);
           }
         }
+      }
+      if (repairedAny) {
+        localStorage.setItem('darkflix_in_progress', JSON.stringify(inProgressList));
       }
 
       html += `
@@ -909,17 +782,15 @@ const STATE = {
       // Bind "Limpar Histórico" button
       const clearBtn = document.getElementById('btn-clear-history');
       if (clearBtn) {
-        clearBtn.onclick = async () => {
-          if (!STATE.currentUser || !STATE.currentProfile) return;
-          try {
-            showToast("Limpando histórico...", "info");
-            await remove(ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/in_progress`));
-            STATE.inProgress = [];
-            showToast('Histórico de "Continuar Assistindo" limpo!', 'info');
-            renderHome();
-          } catch (err) {
-            console.error("Error clearing progress:", err);
-          }
+        clearBtn.onclick = () => {
+          // Remover lista global
+          const oldList = JSON.parse(localStorage.getItem('darkflix_in_progress') || '[]');
+          oldList.forEach(item => {
+            localStorage.removeItem(`darkflix_progress_${item.id}`);
+          });
+          localStorage.removeItem('darkflix_in_progress');
+          showToast('Histórico de "Continuar Assistindo" limpo!', 'info');
+          renderHome();
         };
       }
 
@@ -1437,13 +1308,19 @@ const STATE = {
       <option value="${s.season_number}">${s.name || `Temporada ${s.season_number}`} (${s.episode_count} eps)</option>
     `).join('');
 
-    const savedProgress = STATE.inProgress.find(x => Number(x.id) === Number(movie.id));
+    const progressKey = `darkflix_progress_${movie.id}`;
+    const progressData = localStorage.getItem(progressKey);
     let savedSeason = null;
     let savedEpisode = null;
 
-    if (savedProgress && savedProgress.season) {
-      savedSeason = parseInt(savedProgress.season);
-      savedEpisode = parseInt(savedProgress.episode);
+    if (progressData) {
+      try {
+        const prog = JSON.parse(progressData);
+        if (prog && prog.season) {
+          savedSeason = parseInt(prog.season);
+          savedEpisode = parseInt(prog.episode);
+        }
+      } catch (e) {}
     }
 
     DOM.modalSeasonSelect.onchange = (e) => {
@@ -1601,42 +1478,35 @@ const STATE = {
   }
 
   // ---------- Watchlist / Favorites Management ----------
-  async function toggleFavorite(movie) {
-    if (!STATE.currentUser || !STATE.currentProfile) return;
-
+  function toggleFavorite(movie) {
     const idx = STATE.favorites.findIndex(item => Number(item.id) === Number(movie.id));
     const title = movie.title || movie.name;
-    const itemRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/favorites/${movie.id}`);
 
-    try {
-      if (idx > -1) {
-        STATE.favorites.splice(idx, 1);
-        await remove(itemRef);
-        showToast(`"${title}" removido da Minha Lista.`, 'info');
-      } else {
-        const favItem = {
-          id: movie.id,
-          title: title,
-          name: movie.name || movie.title,
-          poster_path: movie.poster_path,
-          backdrop_path: movie.backdrop_path,
-          vote_average: movie.vote_average,
-          release_date: movie.release_date || movie.first_air_date,
-          first_air_date: movie.first_air_date || movie.release_date,
-          media_type: movie.media_type || (movie.title ? 'movie' : 'tv')
-        };
-        STATE.favorites.push(favItem);
-        await set(itemRef, favItem);
-        showToast(`"${title}" adicionado à Minha Lista!`, 'success');
-      }
-
-      updateFavoriteBtnState(movie.id);
-      if (STATE.currentPage === 'home') renderHome();
-    } catch (err) {
-      console.error("Error toggling favorite in Firebase:", err);
+    if (idx > -1) {
+      STATE.favorites.splice(idx, 1);
+      showToast(`"${title}" removido da Minha Lista.`, 'info');
+    } else {
+      STATE.favorites.push({
+        id: movie.id,
+        title: title,
+        name: movie.name || movie.title,
+        poster_path: movie.poster_path,
+        backdrop_path: movie.backdrop_path,
+        vote_average: movie.vote_average,
+        release_date: movie.release_date || movie.first_air_date,
+        first_air_date: movie.first_air_date || movie.release_date,
+        media_type: movie.media_type || (movie.title ? 'movie' : 'tv')
+      });
+      showToast(`"${title}" adicionado à Minha Lista!`, 'success');
     }
+
+    localStorage.setItem('darkflix_favorites', JSON.stringify(STATE.favorites));
+    updateFavoriteBtnState(movie.id);
+
+    if (STATE.currentPage === 'home') renderHome();
   }
 
+  // Check if item is in favorites to toggle button UI
   function updateFavoriteBtnState(movieId) {
     const isFavorite = STATE.favorites.some(item => Number(item.id) === Number(movieId));
     const heart = DOM.modalFavoriteBtn.querySelector('.heart-icon');
@@ -1653,8 +1523,6 @@ const STATE = {
       if (heart) heart.setAttribute('fill', 'none');
     }
   }
-
-
 
   // ---------- Setup Core Event Bindings ----------
   function initApp() {
@@ -1870,24 +1738,12 @@ const STATE = {
     DOM.cinemaMode.onclick = (e) => {
       if (e.target === DOM.cinemaMode) closeCinema();
     };
-    DOM.pinModal.onclick = (e) => {
-      if (e.target === DOM.pinModal) closePinModal();
-    };
-    DOM.profileEditModal.onclick = (e) => {
-      if (e.target === DOM.profileEditModal) closeProfileEditModal();
-    };
-    DOM.avatarPickerModal.onclick = (e) => {
-      if (e.target === DOM.avatarPickerModal) closeAvatarPicker();
-    };
 
     // Keyboard ESC to close active overlays
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeDetail();
         closeCinema();
-        closePinModal();
-        closeProfileEditModal();
-        closeAvatarPicker();
       }
     });
 
@@ -1967,603 +1823,11 @@ const STATE = {
       };
     }
 
-    // Bind Netflix System Actions
-    DOM.authForm.onsubmit = (e) => handleAuthSubmit(e);
-    DOM.btnAuthSwitch.onclick = (e) => {
-      e.preventDefault();
-      switchAuthMode();
-    };
-
-    // Password visibility toggle buttons
-    document.querySelectorAll('.btn-toggle-password').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const inputGroup = btn.closest('.input-group');
-        const input = inputGroup.querySelector('input[type="password"], input[type="text"]');
-        const eyeOff = btn.querySelector('.eye-off');
-        const eyeOn = btn.querySelector('.eye-on');
-        if (input.type === 'password') {
-          input.type = 'text';
-          if (eyeOff) eyeOff.style.display = 'none';
-          if (eyeOn) eyeOn.style.display = 'block';
-        } else {
-          input.type = 'password';
-          if (eyeOff) eyeOff.style.display = 'block';
-          if (eyeOn) eyeOn.style.display = 'none';
-        }
-      });
-    });
-
-    DOM.btnDropdownManage.onclick = (e) => {
-      e.preventDefault();
-      navigateTo('profiles');
-      setTimeout(() => {
-        toggleManageProfilesMode();
-      }, 50);
-    };
-
-    DOM.btnDropdownLogout.onclick = (e) => {
-      e.preventDefault();
-      handleLogout();
-    };
-
-    DOM.btnManageProfiles.onclick = (e) => {
-      e.preventDefault();
-      toggleManageProfilesMode();
-    };
-
-    DOM.pinCloseBtn.onclick = (e) => {
-      e.preventDefault();
-      closePinModal();
-    };
-
-    DOM.pinModal.querySelectorAll('.pin-key[data-key]').forEach(btn => {
-      btn.onclick = () => handlePinInput(btn.dataset.key);
-    });
-
-    document.getElementById('pin-clear').onclick = () => handlePinClear();
-    document.getElementById('pin-backspace').onclick = () => handlePinBackspace();
-
-    DOM.btnChangeAvatar.onclick = (e) => {
-      e.preventDefault();
-      openAvatarPicker();
-    };
-
-    DOM.btnProfileSave.onclick = (e) => {
-      e.preventDefault();
-      saveProfileData();
-    };
-
-    DOM.btnProfileCancel.onclick = (e) => {
-      e.preventDefault();
-      closeProfileEditModal();
-    };
-
-    DOM.btnProfileDelete.onclick = (e) => {
-      e.preventDefault();
-      deleteProfileData();
-    };
-
-    DOM.avatarPickerCloseBtn.onclick = (e) => {
-      e.preventDefault();
-      closeAvatarPicker();
-    };
-
-    // Profile dropdown toggle in header
-    if (DOM.profileMenuBtn) {
-      DOM.profileMenuBtn.onclick = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        DOM.profileDropdown.classList.toggle('active');
-      };
-    }
-
-    // Close profile dropdown on outside click
-    document.addEventListener('click', (e) => {
-      if (DOM.headerProfileWrapper && !DOM.headerProfileWrapper.contains(e.target)) {
-        DOM.profileDropdown.classList.remove('active');
-      }
-    });
-  }
-
-  // ---------- Load Profiles from DB ----------
-  async function loadProfilesFromDatabase() {
-    if (!STATE.currentUser) return;
-    try {
-      const dbRef = ref(db);
-      const snapshot = await get(child(dbRef, `users/${STATE.currentUser.uid}/profiles`));
-      if (snapshot.exists()) {
-        STATE.allProfiles = snapshot.val();
-      } else {
-        STATE.allProfiles = {};
-      }
-    } catch (err) {
-      console.error("Error loading profiles:", err);
-    }
-  }
-
-  // ---------- Render Profiles Page ----------
-  function renderProfilesPage() {
-    STATE.manageProfilesMode = false;
-    DOM.btnManageProfiles.classList.remove('active');
-    DOM.btnManageProfiles.textContent = "Gerenciar Perfis";
-    document.getElementById('profiles-screen-title').textContent = "Quem está assistindo?";
-
-    let html = '';
-    const profileIds = Object.keys(STATE.allProfiles);
-
-    profileIds.forEach(id => {
-      const p = STATE.allProfiles[id];
-      const hasPin = p.pin && p.pin.length === 4;
-      html += `
-        <div class="profile-card" data-id="${id}">
-          <div class="profile-avatar-wrapper">
-            <img src="${p.avatar || PRESET_AVATARS[0].url}" alt="${p.name}">
-            ${hasPin ? `<div class="profile-lock-icon" title="Perfil com PIN"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>` : ''}
-          </div>
-          <div class="profile-name">${p.name}</div>
-        </div>
-      `;
-    });
-
-    if (profileIds.length < 5) {
-      html += `
-        <div class="profile-card profile-add-btn" id="btn-add-profile-trigger">
-          <div class="profile-avatar-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </div>
-          <div class="profile-name">Adicionar Perfil</div>
-        </div>
-      `;
-    }
-
-    DOM.profilesGrid.innerHTML = html;
-
-    DOM.profilesGrid.querySelectorAll('.profile-card').forEach(card => {
-      card.onclick = () => {
-        const id = card.dataset.id;
-        if (!id) {
-          openProfileEditModal(null);
-          return;
-        }
-
-        if (STATE.manageProfilesMode) {
-          openProfileEditModal(id);
-        } else {
-          attemptSelectProfile(id);
-        }
-      };
-    });
-  }
-
-  // ---------- Toggle Manage Profiles Mode ----------
-  function toggleManageProfilesMode() {
-    STATE.manageProfilesMode = !STATE.manageProfilesMode;
-    DOM.btnManageProfiles.classList.toggle('active', STATE.manageProfilesMode);
-    
-    if (STATE.manageProfilesMode) {
-      DOM.btnManageProfiles.textContent = "Concluído";
-      document.getElementById('profiles-screen-title').textContent = "Gerenciar Perfis:";
-      
-      DOM.profilesGrid.querySelectorAll('.profile-card').forEach(card => {
-        const id = card.dataset.id;
-        if (id) {
-          card.classList.add('manage-mode');
-          
-          const avatarWrapper = card.querySelector('.profile-avatar-wrapper');
-          const editIcon = document.createElement('div');
-          editIcon.className = 'profile-edit-icon';
-          editIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`;
-          avatarWrapper.appendChild(editIcon);
-        }
-      });
-    } else {
-      renderProfilesPage();
-    }
-  }
-
-  // ---------- Attempt Profile Selection (PIN verification) ----------
-  function attemptSelectProfile(profileId) {
-    const p = STATE.allProfiles[profileId];
-    if (!p) return;
-
-    if (p.pin && p.pin.length === 4) {
-      openPinModal(profileId);
-    } else {
-      selectProfile(profileId);
-    }
-  }
-
-  // ---------- Select Profile and Enter App ----------
-  async function selectProfile(profileId) {
-    const p = STATE.allProfiles[profileId];
-    if (!p) return;
-
-    STATE.currentProfile = { id: profileId, ...p };
-    localStorage.setItem('darkflix_active_profile_id', profileId);
-
-    STATE.favorites = p.favorites ? Object.values(p.favorites) : [];
-    STATE.inProgress = p.in_progress ? Object.values(p.in_progress).sort((a,b) => b.timestamp - a.timestamp) : [];
-
-    showToast(`Bem-vindo de volta, ${p.name}!`, 'success');
-    updateHeaderProfileMenu();
+    // First load
     navigateTo('home');
   }
 
-  // ---------- Update Header Profile Dropdown ----------
-  function updateHeaderProfileMenu() {
-    if (!STATE.currentProfile) {
-      DOM.headerProfileWrapper.style.display = 'none';
-      return;
-    }
-
-    DOM.headerProfileWrapper.style.display = 'block';
-    DOM.headerAvatar.src = STATE.currentProfile.avatar || PRESET_AVATARS[0].url;
-
-    let dropdownListHtml = '';
-    Object.keys(STATE.allProfiles).forEach(id => {
-      if (id !== STATE.currentProfile.id) {
-        const p = STATE.allProfiles[id];
-        dropdownListHtml += `
-          <button class="dropdown-profile-item" data-id="${id}">
-            <img src="${p.avatar || PRESET_AVATARS[0].url}" alt="${p.name}">
-            <span>${p.name}</span>
-          </button>
-        `;
-      }
-    });
-
-    DOM.profileDropdownList.innerHTML = dropdownListHtml;
-
-    DOM.profileDropdownList.querySelectorAll('.dropdown-profile-item').forEach(item => {
-      item.onclick = () => {
-        const id = item.dataset.id;
-        attemptSelectProfile(id);
-      };
-    });
-  }
-
-  // ---------- PIN Modal Logic ----------
-  function openPinModal(profileId) {
-    STATE.pinTargetProfileId = profileId;
-    STATE.pinAccumulator = '';
-    updatePinDisplay();
-    DOM.pinModal.classList.add('active');
-  }
-
-  function closePinModal() {
-    DOM.pinModal.classList.remove('active');
-    STATE.pinTargetProfileId = null;
-    STATE.pinAccumulator = '';
-  }
-
-  function handlePinInput(digit) {
-    if (STATE.pinAccumulator.length < 4) {
-      STATE.pinAccumulator += digit;
-      updatePinDisplay();
-
-      if (STATE.pinAccumulator.length === 4) {
-        const profile = STATE.allProfiles[STATE.pinTargetProfileId];
-        if (String(profile.pin) === String(STATE.pinAccumulator)) {
-          const pid = STATE.pinTargetProfileId;
-          closePinModal();
-          selectProfile(pid);
-        } else {
-          showToast("PIN incorreto. Tente novamente.", "error");
-          STATE.pinAccumulator = '';
-          setTimeout(() => updatePinDisplay(), 300);
-        }
-      }
-    }
-  }
-
-  function handlePinBackspace() {
-    if (STATE.pinAccumulator.length > 0) {
-      STATE.pinAccumulator = STATE.pinAccumulator.slice(0, -1);
-      updatePinDisplay();
-    }
-  }
-
-  function handlePinClear() {
-    STATE.pinAccumulator = '';
-    updatePinDisplay();
-  }
-
-  function updatePinDisplay() {
-    const dots = DOM.pinModal.querySelectorAll('.pin-dot');
-    dots.forEach((dot, index) => {
-      dot.classList.toggle('filled', index < STATE.pinAccumulator.length);
-    });
-  }
-
-  // ---------- Profile Management (Add/Edit/Delete) ----------
-  let editingProfileId = null;
-
-  function openProfileEditModal(profileId = null) {
-    editingProfileId = profileId;
-    
-    if (profileId) {
-      const p = STATE.allProfiles[profileId];
-      DOM.profileEditModal.querySelector('#profile-edit-title').textContent = "Editar Perfil";
-      DOM.editProfileName.value = p.name;
-      DOM.editProfilePin.value = p.pin || '';
-      STATE.selectedAvatarUrl = p.avatar || PRESET_AVATARS[0].url;
-      DOM.btnProfileDelete.style.display = 'inline-flex';
-    } else {
-      DOM.profileEditModal.querySelector('#profile-edit-title').textContent = "Adicionar Perfil";
-      DOM.editProfileName.value = '';
-      DOM.editProfilePin.value = '';
-      
-      const usedAvatars = Object.values(STATE.allProfiles).map(p => p.avatar);
-      const unusedPreset = PRESET_AVATARS.find(a => !usedAvatars.includes(a.url)) || PRESET_AVATARS[0];
-      STATE.selectedAvatarUrl = unusedPreset.url;
-      
-      DOM.btnProfileDelete.style.display = 'none';
-    }
-    
-    DOM.editProfileAvatarImg.src = STATE.selectedAvatarUrl;
-    DOM.profileEditModal.classList.add('active');
-  }
-
-  function closeProfileEditModal() {
-    DOM.profileEditModal.classList.remove('active');
-    editingProfileId = null;
-  }
-
-  async function saveProfileData() {
-    const name = DOM.editProfileName.value.trim();
-    const pin = DOM.editProfilePin.value.trim();
-    const avatar = STATE.selectedAvatarUrl;
-
-    if (!name) {
-      showToast("Por favor, digite um nome para o perfil.", "error");
-      return;
-    }
-
-    if (pin && (pin.length !== 4 || isNaN(pin))) {
-      showToast("O PIN deve conter exatamente 4 números.", "error");
-      return;
-    }
-
-    if (!STATE.currentUser) return;
-
-    if (!editingProfileId && Object.keys(STATE.allProfiles).length >= 5) {
-      showToast("Limite máximo de 5 perfis atingido.", "error");
-      return;
-    }
-
-    try {
-      showToast("Salvando perfil...", "info");
-      const targetId = editingProfileId || `profile_${Date.now()}`;
-      const existingData = editingProfileId ? (STATE.allProfiles[editingProfileId] || {}) : {};
-      
-      const profileData = {
-        name: name,
-        avatar: avatar,
-        pin: pin || null,
-        favorites: existingData.favorites || null,
-        in_progress: existingData.in_progress || null
-      };
-
-      await set(ref(db, `users/${STATE.currentUser.uid}/profiles/${targetId}`), profileData);
-      
-      showToast("Perfil salvo com sucesso!", "success");
-      closeProfileEditModal();
-      
-      await loadProfilesFromDatabase();
-      
-      if (STATE.currentProfile && STATE.currentProfile.id === targetId) {
-        STATE.currentProfile = { id: targetId, ...profileData };
-        localStorage.setItem('darkflix_active_profile_id', targetId);
-        updateHeaderProfileMenu();
-      }
-
-      renderProfilesPage();
-    } catch (err) {
-      console.error("Error saving profile:", err);
-      showToast("Erro ao salvar perfil. Tente novamente.", "error");
-    }
-  }
-
-  async function deleteProfileData() {
-    if (!editingProfileId) return;
-
-    if (!confirm(`Tem certeza que deseja excluir o perfil "${STATE.allProfiles[editingProfileId].name}"? Todo o histórico e favoritos deste perfil serão perdidos.`)) {
-      return;
-    }
-
-    try {
-      showToast("Excluindo perfil...", "info");
-      await remove(ref(db, `users/${STATE.currentUser.uid}/profiles/${editingProfileId}`));
-      showToast("Perfil excluído.", "success");
-      
-      closeProfileEditModal();
-      
-      if (STATE.currentProfile && STATE.currentProfile.id === editingProfileId) {
-        STATE.currentProfile = null;
-        localStorage.removeItem('darkflix_active_profile_id');
-      }
-
-      await loadProfilesFromDatabase();
-      renderProfilesPage();
-    } catch (err) {
-      console.error("Error deleting profile:", err);
-      showToast("Erro ao excluir perfil.", "error");
-    }
-  }
-
-  // ---------- Avatar Picker ----------
-  function openAvatarPicker() {
-    let sectionsHtml = '';
-    
-    // Add dynamic categories
-    AVATAR_CATEGORIES.forEach(cat => {
-      let itemsHtml = '';
-      cat.avatars.forEach(a => {
-        const isActive = STATE.selectedAvatarUrl === a.url ? ' active' : '';
-        itemsHtml += `
-          <div class="avatar-pick-item${isActive}" data-url="${a.url}">
-            <img src="${a.url}" alt="${a.name}">
-          </div>
-        `;
-      });
-      sectionsHtml += `
-        <div class="avatar-picker-group">
-          <h3>${cat.title}</h3>
-          <div class="avatar-picker-grid">
-            ${itemsHtml}
-          </div>
-        </div>
-      `;
-    });
-
-    // Add colors
-    let colorsHtml = '';
-    COLOR_AVATARS.forEach(a => {
-      const isActive = STATE.selectedAvatarUrl === a.url ? ' active' : '';
-      colorsHtml += `
-        <div class="avatar-pick-item${isActive}" data-url="${a.url}">
-          <img src="${a.url}" alt="${a.name}">
-        </div>
-      `;
-    });
-    sectionsHtml += `
-      <div class="avatar-picker-group">
-        <h3>Cores</h3>
-        <div class="avatar-picker-grid">
-          ${colorsHtml}
-        </div>
-      </div>
-    `;
-
-    DOM.avatarPickerSectionsContainer.innerHTML = sectionsHtml;
-
-    DOM.avatarPickerModal.querySelectorAll('.avatar-pick-item').forEach(item => {
-      item.onclick = () => {
-        STATE.selectedAvatarUrl = item.dataset.url;
-        DOM.editProfileAvatarImg.src = STATE.selectedAvatarUrl;
-        closeAvatarPicker();
-      };
-    });
-
-    DOM.avatarPickerModal.classList.add('active');
-  }
-
-  function closeAvatarPicker() {
-    DOM.avatarPickerModal.classList.remove('active');
-  }
-
-  // ---------- Authentication Logic ----------
-  function switchAuthMode() {
-    if (STATE.authMode === 'login') {
-      STATE.authMode = 'signup';
-      DOM.authTitle.textContent = "Criar Conta";
-      DOM.btnAuthSubmit.textContent = "Criar Conta";
-      DOM.authSwitchText.textContent = "Já tem uma conta?";
-      DOM.btnAuthSwitch.textContent = "Entrar agora.";
-      // Show confirm password field
-      if (DOM.authConfirmGroup) {
-        DOM.authConfirmGroup.style.display = 'block';
-        DOM.authConfirmPassword.setAttribute('required', 'required');
-      }
-    } else {
-      STATE.authMode = 'login';
-      DOM.authTitle.textContent = "Entrar";
-      DOM.btnAuthSubmit.textContent = "Entrar";
-      DOM.authSwitchText.textContent = "Novo por aqui?";
-      DOM.btnAuthSwitch.textContent = "Criar conta";
-      // Hide confirm password field
-      if (DOM.authConfirmGroup) {
-        DOM.authConfirmGroup.style.display = 'none';
-        DOM.authConfirmPassword.removeAttribute('required');
-        DOM.authConfirmPassword.value = '';
-      }
-    }
-  }
-
-  async function handleAuthSubmit(e) {
-    e.preventDefault();
-    const email = DOM.authEmail.value.trim();
-    const password = DOM.authPassword.value;
-
-    if (!email || !password) {
-      showToast("Preencha todos os campos.", "error");
-      return;
-    }
-
-    // Validate password confirmation on signup
-    if (STATE.authMode === 'signup') {
-      const confirmPassword = DOM.authConfirmPassword ? DOM.authConfirmPassword.value : '';
-      if (password !== confirmPassword) {
-        showToast("As senhas não coincidem.", "error");
-        return;
-      }
-    }
-
-    try {
-      if (STATE.authMode === 'login') {
-        showToast("Entrando...", "info");
-        await signInWithEmailAndPassword(auth, email, password);
-        showToast("Logado com sucesso!", "success");
-      } else {
-        showToast("Criando conta...", "info");
-        await createUserWithEmailAndPassword(auth, email, password);
-        showToast("Conta criada com sucesso!", "success");
-      }
-    } catch (err) {
-      console.error("Auth error:", err);
-      let errorMsg = "Ocorreu um erro na autenticação.";
-      if (err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found') {
-        errorMsg = "Email ou senha incorretos.";
-      } else if (err.code === 'auth/email-already-in-use') {
-        errorMsg = "Este email já está em uso.";
-      } else if (err.code === 'auth/invalid-email') {
-        errorMsg = "Email inválido.";
-      } else if (err.code === 'auth/weak-password') {
-        errorMsg = "A senha deve conter no mínimo 6 caracteres.";
-      }
-      showToast(errorMsg, "error");
-    }
-  }
-
-  async function handleLogout() {
-    try {
-      showToast("Saindo...", "info");
-      await signOut(auth);
-      localStorage.removeItem('darkflix_active_profile_id');
-      showToast("Desconectado.", "success");
-    } catch (err) {
-      console.error("Error signing out:", err);
-    }
-  }
-
-  // ---------- Firebase Auth State Listener ----------
-  onAuthStateChanged(auth, async (user) => {
-    if (user) {
-      STATE.currentUser = user;
-      await loadProfilesFromDatabase();
-      
-      const savedProfileId = localStorage.getItem('darkflix_active_profile_id');
-      if (savedProfileId && STATE.allProfiles[savedProfileId]) {
-        await selectProfile(savedProfileId);
-      } else {
-        navigateTo('profiles');
-      }
-    } else {
-      STATE.currentUser = null;
-      STATE.currentProfile = null;
-      STATE.allProfiles = {};
-      STATE.favorites = [];
-      STATE.inProgress = [];
-      
-      DOM.headerProfileWrapper.style.display = 'none';
-      navigateTo('auth');
-    }
-  });
-
   // Run initial setup on load
-  if (document.readyState === 'loading') {
-    window.addEventListener('DOMContentLoaded', initApp);
-  } else {
-    initApp();
-  }
+  window.addEventListener('DOMContentLoaded', initApp);
+
+})();

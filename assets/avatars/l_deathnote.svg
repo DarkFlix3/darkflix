@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Outer black background -->
+  <rect width="512" height="512" fill="#000000"/>
+  <!-- Inner rounded frame -->
+  <rect x="24" y="24" width="464" height="464" rx="48" fill="#141414" stroke="#ffffff" stroke-width="6" filter="drop-shadow(0px 0px 12px rgba(255,255,255,0.4))"/>
+  <!-- Gothic L text -->
+  <text x="256" y="340" font-size="260" font-family="'Old English Text MT', 'Cloister Black', 'Georgia', serif" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">L</text>
+  <!-- Decorative gothic border elements -->
+  <path d="M 120,380 L 392,380" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="120" cy="380" r="6" fill="#ffffff"/>
+  <circle cx="392" cy="380" r="6" fill="#ffffff"/>
+</svg>

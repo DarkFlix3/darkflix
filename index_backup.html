@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="DarkFlix - Sua plataforma de streaming premium. Assista filmes e séries sem cadastro, com qualidade cinematográfica.">
-  <meta name="referrer" content="no-referrer">
   <title>DarkFlix — Filmes & Séries</title>
-  <link rel="stylesheet" href="style.css?v=2.0.2">
+  <link rel="stylesheet" href="style.css?v=1.0.1">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
 </head>
 <body>
@@ -28,7 +27,7 @@
       </svg>
     </div>
     <nav class="nav" id="nav-menu">
-      <a href="#" class="nav-link" data-page="home" id="nav-home">Início</a>
+      <a href="#" class="nav-link active" data-page="home" id="nav-home">Início</a>
       <a href="#" class="nav-link" data-page="movies" id="nav-movies">Filmes</a>
       <a href="#" class="nav-link" data-page="series" id="nav-series">Séries</a>
       <div class="nav-categories-wrapper" id="nav-categories-wrapper">
@@ -44,29 +43,6 @@
       <div class="nav-search-wrapper">
         <svg class="nav-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input type="text" class="nav-search" id="search-input" placeholder="Buscar filmes e séries...">
-      </div>
-      <!-- Profile Dropdown Menu -->
-      <div class="header-profile-wrapper" id="header-profile-wrapper" style="display: none;">
-        <button class="profile-menu-btn" id="profile-menu-btn">
-          <img src="" alt="Avatar" class="header-avatar" id="header-avatar">
-          <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="profile-dropdown" id="profile-dropdown">
-          <div class="profile-dropdown-list" id="profile-dropdown-list">
-            <!-- Populated dynamically by JS -->
-          </div>
-          <div class="profile-dropdown-actions">
-            <button id="btn-dropdown-manage">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-              Gerenciar Perfis
-            </button>
-            <hr class="dropdown-divider">
-            <button id="btn-dropdown-logout">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
-              Sair da Conta
-            </button>
-          </div>
-        </div>
       </div>
       <!-- Mobile Categories Accordion -->
       <div class="mobile-categories-wrapper">
@@ -98,68 +74,8 @@
     </button>
   </header>
 
-  <!-- ============ AUTH SCREEN (Login/Cadastro) ============ -->
-  <div class="page-view" id="page-auth">
-    <div class="auth-backdrop"></div>
-    <div class="auth-container">
-      <div class="auth-card">
-        <h2 id="auth-title">Entrar</h2>
-        <form id="auth-form">
-          <div class="input-group">
-            <input type="email" id="auth-email" required placeholder=" ">
-            <label for="auth-email">Email</label>
-          </div>
-          <div class="input-group">
-            <input type="password" id="auth-password" required placeholder=" " minlength="6">
-            <label for="auth-password">Senha</label>
-            <button type="button" class="btn-toggle-password" tabindex="-1" aria-label="Mostrar senha">
-              <svg class="eye-icon eye-off" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
-                <line x1="1" y1="1" x2="23" y2="23"></line>
-              </svg>
-              <svg class="eye-icon eye-on" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-            </button>
-          </div>
-          <div class="input-group" id="confirm-password-group" style="display: none;">
-            <input type="password" id="auth-confirm-password" placeholder=" " minlength="6">
-            <label for="auth-confirm-password">Confirmar Senha</label>
-            <button type="button" class="btn-toggle-password" tabindex="-1" aria-label="Mostrar senha">
-              <svg class="eye-icon eye-off" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
-                <line x1="1" y1="1" x2="23" y2="23"></line>
-              </svg>
-              <svg class="eye-icon eye-on" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-            </button>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block" id="btn-auth-submit">Entrar</button>
-        </form>
-        <div class="auth-switch">
-          <span id="auth-switch-text">Novo por aqui?</span>
-          <button id="btn-auth-switch">Criar conta</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============ PROFILE SELECTION SCREEN ============ -->
-  <div class="page-view" id="page-profiles">
-    <div class="profiles-container">
-      <h1 class="profiles-title" id="profiles-screen-title">Quem está assistindo?</h1>
-      <div class="profiles-grid" id="profiles-grid">
-        <!-- Rendered dynamically by JS -->
-      </div>
-      <button class="btn-manage-profiles" id="btn-manage-profiles">Gerenciar Perfis</button>
-    </div>
-  </div>
-
   <!-- ============ HOME PAGE ============ -->
-  <div class="page-view" id="page-home">
+  <div class="page-view active" id="page-home">
     <section class="hero" id="hero-section">
       <div class="hero-backdrop" id="hero-backdrop"></div>
       <div class="hero-trailer" id="hero-trailer">
@@ -349,80 +265,6 @@
     </div>
   </div>
 
-  <!-- ============ PIN PAD MODAL ============ -->
-  <div class="modal-backdrop" id="pin-modal">
-    <div class="pin-container">
-      <button class="pin-close" id="pin-close-btn">✕</button>
-      <h2 class="pin-title">Bloqueio de Perfil ativado.</h2>
-      <p class="pin-subtitle">Insira seu PIN para acessar este perfil.</p>
-      <div class="pin-display">
-        <div class="pin-dot"></div>
-        <div class="pin-dot"></div>
-        <div class="pin-dot"></div>
-        <div class="pin-dot"></div>
-      </div>
-      <div class="pin-keyboard">
-        <button class="pin-key" data-key="1">1</button>
-        <button class="pin-key" data-key="2">2</button>
-        <button class="pin-key" data-key="3">3</button>
-        <button class="pin-key" data-key="4">4</button>
-        <button class="pin-key" data-key="5">5</button>
-        <button class="pin-key" data-key="6">6</button>
-        <button class="pin-key" data-key="7">7</button>
-        <button class="pin-key" data-key="8">8</button>
-        <button class="pin-key" data-key="9">9</button>
-        <button class="pin-key btn-clear" id="pin-clear">Limpar</button>
-        <button class="pin-key" data-key="0">0</button>
-        <button class="pin-key btn-backspace" id="pin-backspace">⌫</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============ PROFILE EDIT MODAL ============ -->
-  <div class="modal-backdrop" id="profile-edit-modal">
-    <div class="profile-edit-container">
-      <h2 id="profile-edit-title">Editar Perfil</h2>
-      <div class="profile-edit-form">
-        <div class="profile-edit-avatar-section">
-          <div class="avatar-wrapper">
-            <img src="" alt="Avatar" id="edit-profile-avatar-img">
-            <button class="btn-change-avatar" id="btn-change-avatar">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-            </button>
-          </div>
-          <p>Alterar Avatar</p>
-        </div>
-        <div class="profile-edit-inputs">
-          <div class="input-group-edit">
-            <label for="edit-profile-name">Nome do Perfil</label>
-            <input type="text" id="edit-profile-name" maxlength="15" required placeholder="Nome do perfil">
-          </div>
-          <div class="input-group-edit">
-            <label for="edit-profile-pin">PIN de Acesso (4 dígitos)</label>
-            <input type="password" id="edit-profile-pin" pattern="[0-9]*" inputmode="numeric" maxlength="4" placeholder="Sem PIN (deixe em branco)">
-            <small class="help-text">Se ativado, exige PIN de 4 dígitos para acessar este perfil.</small>
-          </div>
-        </div>
-      </div>
-      <div class="profile-edit-actions">
-        <button class="btn btn-primary" id="btn-profile-save">Salvar</button>
-        <button class="btn btn-secondary" id="btn-profile-cancel">Cancelar</button>
-        <button class="btn btn-danger" id="btn-profile-delete">Excluir Perfil</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============ AVATAR SELECTOR MODAL ============ -->
-  <div class="modal-backdrop" id="avatar-picker-modal">
-    <div class="avatar-picker-container">
-      <button class="avatar-picker-close" id="avatar-picker-close-btn">✕</button>
-      <h2>Escolha seu Avatar</h2>
-      <div class="avatar-picker-sections" id="avatar-picker-sections-container">
-        <!-- Injected by JS -->
-      </div>
-    </div>
-  </div>
-
   <!-- ============ TOAST CONTAINER ============ -->
   <div class="toast-container" id="toast-container"></div>
 
@@ -448,6 +290,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script type="module" src="app.js?v=2.0.2"></script>
+  <script src="app.js?v=1.0.1"></script>
 </body>
 </html>
