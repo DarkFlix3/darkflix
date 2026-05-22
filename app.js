@@ -239,6 +239,8 @@ const STATE = {
     authForm: $('#auth-form'),
     authEmail: $('#auth-email'),
     authPassword: $('#auth-password'),
+    authConfirmGroup: $('#confirm-password-group'),
+    authConfirmPassword: $('#auth-confirm-password'),
     btnAuthSubmit: $('#btn-auth-submit'),
     authTitle: $('#auth-title'),
     authSwitchText: $('#auth-switch-text'),
@@ -416,6 +418,11 @@ const STATE = {
       }
     }
     
+    // Toggle footer visibility: hide on auth and profiles pages
+    if (DOM.footer) {
+      DOM.footer.style.display = (page === 'auth' || page === 'profiles') ? 'none' : 'block';
+    }
+    
     // Reset page visibility
     Object.keys(DOM.pages).forEach((key) => {
       if (DOM.pages[key]) DOM.pages[key].classList.toggle('active', key === page);
@@ -469,6 +476,11 @@ const STATE = {
     
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Ensure footer is visible on genre pages
+    if (DOM.footer) {
+      DOM.footer.style.display = 'block';
+    }
 
     // Render with genre pre-filtered
     if (type === 'movies') {
@@ -1940,6 +1952,26 @@ const STATE = {
       switchAuthMode();
     };
 
+    // Password visibility toggle buttons
+    document.querySelectorAll('.btn-toggle-password').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const inputGroup = btn.closest('.input-group');
+        const input = inputGroup.querySelector('input[type="password"], input[type="text"]');
+        const eyeOff = btn.querySelector('.eye-off');
+        const eyeOn = btn.querySelector('.eye-on');
+        if (input.type === 'password') {
+          input.type = 'text';
+          if (eyeOff) eyeOff.style.display = 'none';
+          if (eyeOn) eyeOn.style.display = 'block';
+        } else {
+          input.type = 'password';
+          if (eyeOff) eyeOff.style.display = 'block';
+          if (eyeOn) eyeOn.style.display = 'none';
+        }
+      });
+    });
+
     DOM.btnDropdownManage.onclick = (e) => {
       e.preventDefault();
       navigateTo('profiles');
@@ -2385,12 +2417,23 @@ const STATE = {
       DOM.btnAuthSubmit.textContent = "Criar Conta";
       DOM.authSwitchText.textContent = "Já tem uma conta?";
       DOM.btnAuthSwitch.textContent = "Entrar agora.";
+      // Show confirm password field
+      if (DOM.authConfirmGroup) {
+        DOM.authConfirmGroup.style.display = 'block';
+        DOM.authConfirmPassword.setAttribute('required', 'required');
+      }
     } else {
       STATE.authMode = 'login';
       DOM.authTitle.textContent = "Entrar";
       DOM.btnAuthSubmit.textContent = "Entrar";
       DOM.authSwitchText.textContent = "Novo por aqui?";
-      DOM.btnAuthSwitch.textContent = "Assine agora.";
+      DOM.btnAuthSwitch.textContent = "Criar conta";
+      // Hide confirm password field
+      if (DOM.authConfirmGroup) {
+        DOM.authConfirmGroup.style.display = 'none';
+        DOM.authConfirmPassword.removeAttribute('required');
+        DOM.authConfirmPassword.value = '';
+      }
     }
   }
 
@@ -2402,6 +2445,15 @@ const STATE = {
     if (!email || !password) {
       showToast("Preencha todos os campos.", "error");
       return;
+    }
+
+    // Validate password confirmation on signup
+    if (STATE.authMode === 'signup') {
+      const confirmPassword = DOM.authConfirmPassword ? DOM.authConfirmPassword.value : '';
+      if (password !== confirmPassword) {
+        showToast("As senhas não coincidem.", "error");
+        return;
+      }
     }
 
     try {
