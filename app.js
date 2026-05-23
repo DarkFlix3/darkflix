@@ -1462,6 +1462,12 @@ const STATE = {
     if (nameEl) nameEl.innerText = canal.nome;
     if (logoEl) logoEl.src = canal.logo;
 
+    // Atualizar link de transmissão via Web Video Caster (WVC)
+    const canalWvcBtn = document.getElementById('canal-wvc-btn');
+    if (canalWvcBtn) {
+      canalWvcBtn.href = `wvc-x-callback://open?url=${encodeURIComponent(canal.url)}&title=${encodeURIComponent('DarkFlix Live — ' + canal.nome)}`;
+    }
+
     // Destacar item ativo na grade
     const grid = document.getElementById('grid-canais');
     if (grid) {
@@ -1790,6 +1796,11 @@ const STATE = {
     DOM.cinemaBlockerTop.style.display = 'block';
 
     DOM.cinemaExternalBtn.href = embedUrl;
+
+    const cinemaWvcBtn = document.getElementById('cinema-wvc-btn');
+    if (cinemaWvcBtn) {
+      cinemaWvcBtn.href = `wvc-x-callback://open?url=${encodeURIComponent(embedUrl)}&title=${encodeURIComponent(title)}`;
+    }
 
     DOM.cinemaMode.classList.add('active');
     document.body.style.overflow = 'hidden';
