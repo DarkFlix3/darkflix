@@ -1374,225 +1374,312 @@ const STATE = {
     }
   }
 
-  // ---------- Canais 24 Horas ao Vivo ----------
   const listaCanais = [
     {
+      id: "nicktoons",
       nome: "NickToons",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Nicktoons_2023_logo.png",
       url: "https://stmv2.srvif.com/nicktoons/nicktoons/playlist.m3u8"
     },
     {
+      id: "nickelodeon",
       nome: "Nickelodeon",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/7/71/Nickelodeon_2023_logo.svg",
       url: "https://x1co.com.br/hls/stream.m3u8"
     },
     {
+      id: "sbt",
       nome: "SBT",
+      categoria: "aberto",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFkL6YgXliqq5tf35NK2b8VFk4b-NGErBH1w&s",
       url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8"
     },
     {
+      id: "record-tv",
       nome: "Record TV",
+      categoria: "aberto",
       logo: "https://logodownload.org/wp-content/uploads/2013/12/record-tv-logo.png",
       url: "https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/playlist.m3u8"
     },
     {
+      id: "tv-cultura",
       nome: "TV Cultura",
+      categoria: "aberto",
       logo: "https://upload.wikimedia.org/wikipedia/commons/8/82/Cultura_logo_2013.svg",
       url: "https://player-tvcultura.stream.uol.com.br/live/tvcultura.m3u8"
     },
     {
+      id: "band",
       nome: "Band",
+      categoria: "aberto",
       logo: "https://e7.pngegg.com/pngimages/1008/95/png-clipart-tv-bandeirantes-campinas-logo-tv-bandeirantes-rio-de-janeiro-band-logo-band.png",
       url: "https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/chunklist.m3u8"
     },
     {
+      id: "discovery-turbo",
       nome: "Discovery Turbo",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Discovery_Turbo_logo.svg/1280px-Discovery_Turbo_logo.svg.png",
       url: "https://cdn-5.nxplay.com.br/DISCOVERY_TURBO_NX/index.m3u8"
     },
     {
+      id: "discovery-channel",
       nome: "Discovery Channel",
+      categoria: "fechado",
       logo: "https://toppng.com/uploads/preview/discovery-channel-logo-vector-11574229905pblh5eesph.png",
       url: "https://cdn-5.nxplay.com.br/DISCOVERY_CHANNEL_NX/index.m3u8"
     },
     {
+      id: "lifetime",
       nome: "Lifetime",
+      categoria: "fechado",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkGjad5yikdf-t1f8RTk1gfdEIE3Nvx7f7Cw&s",
       url: "https://cdn-3.nxplay.com.br/LIFE_TIME_TK/index.m3u8"
     },
     {
+      id: "rede-brasil",
       nome: "Rede Brasil",
+      categoria: "aberto",
       logo: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Rede_Brasil_de_Televis%C3%A3o_Logo2023.png",
       url: "https://video09.logicahost.com.br/redebrasiloficial/redebrasiloficial/playlist.m3u8"
     },
     {
+      id: "playtv",
       nome: "PlayTV",
+      categoria: "fechado",
       logo: "https://static.wikia.nocookie.net/logofic/images/f/f9/Playtv.png/revision/latest/scale-to-width-down/785?cb=20200518115119&path-prefix=pt-br",
       url: "https://isaocorp.cloudecast.com/playtv/index.m3u8"
     },
     {
+      id: "gospel-cartoon",
       nome: "Gospel Cartoon",
+      categoria: "fechado",
       logo: "https://www.cxtv.com.br/img/Tvs/Logo/webp-l/f0a3c3c7b9a651e847d86dd71bbb5551.webp",
       url: "https://stmv1.srvif.com/gospelcartoon/gospelcartoon/playlist.m3u8"
     },
     {
+      id: "gospel-movies-television",
       nome: "Gospel Movies Television",
+      categoria: "fechado",
       logo: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiM_jxvdheT60ZpD3nThvOsVJgZ6LCnU8X1iX8l1OW544agWFu5pFUr8pnDzwjrh5VfiYPMrP-Lc-xkuFRjkt4HpLYhStsS-KbUFoW-5ptE_yrbh9dXLkcCj_AiK_DKcJ9YlV4Zj7-VKNnQ5hj9fDykTEn3tCrKGjbsohC2nkLmZXyrqEjOWTZVCzdcaTw/w1200-h630-p-k-no-nu/GOSPEL%20MOVIES%20TELEVISION.webp",
       url: "https://stmv1.srvif.com/gospelf/gospelf/playlist.m3u8"
     },
     {
+      id: "kuriakakos-kids",
       nome: "Kuriakakos Kids",
+      categoria: "fechado",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtlQdZuh4ehWK6jV38JyJ1ERiivxWS2Rw_9A&s",
       url: "https://w2.manasat.com/kkids/smil:kkids.smil/playlist.m3u8"
     },
     {
+      id: "loading-tv",
       nome: "Loading TV",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Logo_loading.png",
       url: "https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8"
     },
     {
+      id: "tv-serie",
       nome: "TV Serie",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Logo_Canal%2B_S%C3%A9ries_2013.svg",
       url: "https://stmv1.srvif.com/tvserie/tvserie/playlist.m3u8"
     },
     {
+      id: "tv-nbn",
       nome: "TV NBN",
+      categoria: "aberto",
       logo: "https://www.tvnbn.com.br/wp-content/uploads/2018/08/logo-TVNBN-300-100.png",
       url: "https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8"
     },
     {
+      id: "mr-bean-animated",
       nome: "Mr. Bean Animated",
+      categoria: "fechado",
       logo: "https://e7.pngegg.com/pngimages/618/786/png-clipart-video-youtube-animated-cartoon-animated-series-mr-bean-dance.png",
       url: "https://amg00627-banijay-amg00627c35-tcl-us-4282.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanbr-tclus/playlist.m3u8?ROGERIOTORRES"
     },
     {
+      id: "moranguinho-hd",
       nome: "Moranguinho ᴴᴰ",
+      categoria: "fechado",
       logo: "https://i.pinimg.com/originals/7e/a7/45/7ea745bd319c3ac14646a8d3b2d95b21.png",
       url: "https://ssai-ads.api.leiniao.com/global-adinsertion-api/hls/live/v2/15d2d4a8f740492cb0f81cbb1feb5123/playlist.m3u8?ROGERIOTORRES"
     },
     {
+      id: "ministerio-infantil-hd",
       nome: "Ministério Infantil ᴴᴰ",
+      categoria: "fechado",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkNKPvTYobDU-Uu73q07GSR4yPc4uucTHmPA&s",
       url: "https://stmv4.voxtvhd.com.br/1990/1990/playlist.m3u8?ROGERIOTORRES"
     },
     {
+      id: "jetsons-tv",
       nome: "Jetsons TV",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/The_Jetsons_%28television_series_logo%29.png",
       url: "https://stmv1.srvif.com/jetsontv/jetsontv/playlist.m3u8"
     },
     {
+      id: "medo-tv-hd",
       nome: "Medo TV ᴴᴰ",
+      categoria: "fechado",
       logo: "https://png.pngtree.com/png-vector/20250825/ourmid/pngtree-ghostface-scream-movie-night-retro-1980s-horror-comic-cover-art-png-image_17207103.webp",
       url: "https://stream.ads.ottera.tv/playlist.m3u8?network_id=4865"
     },
     {
+      id: "runtime-crime-hd",
       nome: "Run:Time Crime ᴴᴰ",
+      categoria: "fechado",
       logo: "https://images.seeklogo.com/logo-png/20/2/crime-rock-band-logo-png_seeklogo-209741.png",
       url: "https://stream.ads.ottera.tv/playlist.m3u8?network_id=4864"
     },
     {
+      id: "anime-tv",
       nome: "Anime TV",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/e/e2/AnimeCentral.PNG",
       url: "https://stmv2.painelvideocast.com.br/animetv/animetv/chunklist.m3u8?ROGERIOTORRES"
     },
     {
+      id: "hallo-anime-hd",
       nome: "Hallo Anime ᴴᴰ",
+      categoria: "fechado",
       logo: "https://image.pngaaa.com/352/1697352-middle.png",
       url: "https://cdn-3.nxplay.com.br/HALLOANIME/index.m3u8?ROGERIOTORRES"
     },
     {
+      id: "otaku-sign-tv-hd",
       nome: "Otaku Sign TV ᴴᴰ",
+      categoria: "fechado",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_dbjREOJ8G0HpLjXRiBoYyAB5Kphb3y12Sw&s",
       url: "https://stmv1.srvif.com/anime/anime/playlist.m3u8?hls_ctx=9o6p063n"
     },
     {
+      id: "mojitv-hd",
       nome: "MojiTV ᴴᴰ",
+      categoria: "fechado",
       logo: "https://logowik.com/content/uploads/images/moji9857.logowik.com.webp",
       url: "https://d29h829bjuxghm.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99992140&ads.xumo_streamId=99992140&ads.channelId=99992140&ads.csid=lgchannels_br_odmediabrazil_ssai&ads.channelName=odmediabrazil_br&ads.xumo_contentName=ODMediaBrazil&ads.xumo_contentId=3193&ads.xumo_providerName=ODMediaBrazil&ads.xumo_providerId=3193&ads.content_category=IAB6&ads.content_genre=kids&ads.content_language=pt&ads.content_rating=tv-g&ads.coppa=1&ads.did=[IFA]&ads.is_lat=[LMT]&ads.us_privacy=[US_PRIVACY]&ads.gdpr=[GDPR]&ads.gdpr_consent=[GDPR_CONSENT]&ads.devicemake=[DEVICE_MAKE]&ads.appName=[APP_NAME]&ads.app_bundle=[APP_BUNDLE]&ads.app_version=[APP_VERSION]&ads.fck=[FCK]&ads.viewsize=[VIEWSIZE]&ads.givn=[NONCE]&ads.app_storeurl=[APP_STOREURL]"
     },
     {
+      id: "sonic",
       nome: "Sonic",
+      categoria: "fechado",
       logo: "https://www.citypng.com/public/uploads/preview/sonic-logo-word-art-free-png-701751694708949q5sudrfmc1.png",
       url: "https://d1si3n1st4nkgb.cloudfront.net/10000/88876021/hls/master.m3u8?ads.xumo_channelId=88876021"
     },
     {
+      id: "tv-max",
       nome: "Tv Max",
+      categoria: "fechado",
       logo: "https://static.wixstatic.com/media/0f057e_8a28dc905a0949ecaeba9368cd313d0d~mv2.png/v1/fill/w_289,h_289,al_c/0f057e_8a28dc905a0949ecaeba9368cd313d0d~mv2.png",
       url: "https://video09.logicahost.com.br/tvmax/tvmax/chunklist.m3u8?ROGERIOTORRES"
     },
     {
+      id: "the-walking-dead-hd",
       nome: "The Walking Dead ᴴᴰ",
+      categoria: "fechado",
       logo: "https://e1.pngegg.com/pngimages/364/48/png-clipart-the-walking-dead-serie-folders-the-walking-dead-logo.png",
       url: "https://amg01822-amc-amg01822c1-lg-br-8375.playouts.now.amagi.tv/playlist/amg01822-amcnetworkslatinamericallcfast-thewalkingdeadbyamcbr-lgbr/playlist.m3u8?ROGERIOTORRES"
     },
     {
+      id: "top-tv",
       nome: "Top tv",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/9/94/LOGO_TOP_TV_HD.png",
       url: "https://isaocorp.cloudecast.com/toptv/tracks-v1a1/mono.m3u8?ROGERIOTORRES"
     },
     {
+      id: "filmes-top-mix",
       nome: "Filmes top mix",
+      categoria: "fechado",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU8Sw_OY0ty-j2lLRlDf5mv-GjQBxH-t_MAA&s",
       url: "https://video03.logicahost.com.br/filmestopmixtv/filmestopmixtv/chunklist.m3u8?ROGERIOTORRES"
     },
     {
+      id: "classics-hd",
       nome: "Classics ᴴᴰ",
+      categoria: "fechado",
       logo: "https://thumbs.dreamstime.com/b/carimbo-de-borracha-cl%C3%A1ssico-dos-filmes-12384807.jpg",
       url: "https://spt-sonyoneclassicas-1-br.samsung.wurl.tv/playlist.m3u8?ROGERIOTORRES"
     },
     {
+      id: "xumo-filmes-hd",
       nome: "Xumo Filmes ᴴᴰ",
+      categoria: "fechado",
       logo: "https://images.seeklogo.com/logo-png/31/2/hd-filmes-logo-png_seeklogo-316948.png",
       url: "https://d29h829bjuxghm.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99992307&ads.xumo_streamId=99992307&ads.channelId=99992307&ads.csid=lgchannels_br_xumofreemoviesbrazil_ssai&ads.channelName=xumofreemoviesbrazil_br&ads.xumo_contentName=XumoFreeMoviesBrazil&ads.xumo_contentId=5&ads.xumo_providerName=XumoFreeMoviesBrazil&ads.xumo_providerId=5&ads.content_category=IAB1-7&ads.content_genre=Movies&ads.content_language=en&ads.content_rating=tv-ma&ads.coppa=0&ads.did=[IFA]&ads.is_lat=[LMT]&ads.us_privacy=[US_PRIVACY]&ads.gdpr=[GDPR]&ads.gdpr_consent=[GDPR_CONSENT]&ads.devicemake=[DEVICE_MAKE]&ads.appName=[APP_NAME]&ads.app_bundle=[APP_BUNDLE]&ads.app_version=[APP_VERSION]&ads.fck=[FCK]&ads.viewsize=[VIEWSIZE]&ads.givn=[NONCE]&ads.app_storeurl=[APP_STOREURL]"
     },
     {
+      id: "spark-tv-hd",
       nome: "Spark TV ᴴᴰ",
+      categoria: "fechado",
       logo: "https://play-lh.googleusercontent.com/jPdDehFaN04fiUdh_rlBYu1ft_j1Qv5X7L1AfWGbZwO-F8bvd6XGOCd50nOBF8m_04abe_AgIObgvUZOUjMEXA",
       url: "https://d25usgadhphvwi.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-sr15nxkp06uk9/playlist.m3u8?ROGERIOTORRES"
     },
     {
+      id: "teletubbies",
       nome: "Teletubbies",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/pt/5/57/Teletubbies_logo.png",
       url: "https://dv8lsrd8fecw9.cloudfront.net/master.m3u8"
     },
     {
+      id: "happykids",
       nome: "HappyKids",
+      categoria: "fechado",
       logo: "https://static.wikia.nocookie.net/logosfake/images/9/90/Happy_Kids_logo_2004.png/revision/latest?cb=20140525234116",
       url: "https://dil9xdvretp0f.cloudfront.net/index.m3u8"
     },
     {
+      id: "disney-xd",
       nome: "Disney XD",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/2009_Disney_XD_logo.svg/3840px-2009_Disney_XD_logo.svg.png",
       url: "http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8"
     },
     {
+      id: "boomerang-eua",
       nome: "Boomerang EUA",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/4/41/Boomerang_tv_logo.png",
       url: "http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8"
     },
     {
+      id: "the-lego-channel",
       nome: "The LEGO Channel",
+      categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/960px-LEGO_logo.svg.png",
       url: "https://dltiqboxjw21d.cloudfront.net/index.m3u8"
     },
     {
+      id: "tom-and-jerry",
       nome: "Tom And Jerry",
+      categoria: "fechado",
       logo: "https://pngimg.com/uploads/tom_and_jerry/tom_and_jerry_PNG42.png",
       url: "https://live20.bozztv.com/giatvplayout7/giatv-208314/playlist.m3u8"
     },
     {
+      id: "minimax",
       nome: "Minimax",
+      categoria: "fechado",
       logo: "https://images.seeklogo.com/logo-png/52/2/minimax-logo-png_seeklogo-522746.png",
       url: "https://vodzong.mjunoon.tv:8087/streamtest/disckids-157-1/playlist.m3u8"
     },
     {
+      id: "disney-junior",
       nome: "Disney Junior",
+      categoria: "fechado",
       logo: "https://logosmarcas.net/wp-content/uploads/2022/02/Disney-Junior-Logo.png",
       url: "http://23.237.104.106:8080/USA_DISNEY_JUNIOR/index.m3u8"
     },
     {
+      id: "baby-shark",
       nome: "Baby Shark",
+      categoria: "fechado",
       logo: "https://w7.pngwing.com/pngs/290/842/png-transparent-baby-shark-typography-texts-thumbnail.png",
       url: "https://c0c65b821b3542c3a4dca92702f59944.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/RakutenTV-eu_BabySharkTV/playlist.m3u8"
     }
