@@ -43,6 +43,7 @@
         </div>
       </div>
       <a href="#" class="nav-link" data-page="animes" id="nav-animes">Animes</a>
+      <a href="#" class="nav-link" data-page="admin" id="nav-admin" style="display: none; color: #fbbf24; font-weight: 700;">👑 Perfil do Site</a>
       <div class="nav-search-wrapper">
         <svg class="nav-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input type="text" class="nav-search" id="search-input" placeholder="Buscar filmes e séries...">
@@ -281,6 +282,12 @@
           </div>
         </div>
 
+        <!-- Abas de Canais -->
+        <div class="canais-tabs" style="display: flex; gap: 15px; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 10px; width: 100%; max-width: 854px;">
+          <button class="canal-tab-btn active" data-category="aberto" id="btn-tab-aberto">📺 Canais Abertos</button>
+          <button class="canal-tab-btn" data-category="fechado" id="btn-tab-fechado">🔒 Canais Fechados</button>
+        </div>
+
         <!-- Grade de Canais -->
         <div class="canais-grid-container" id="grid-canais">
           <!-- Populated by JS -->
@@ -467,6 +474,49 @@
       <h2>Escolha seu Avatar</h2>
       <div class="avatar-picker-sections" id="avatar-picker-sections-container">
         <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CONTROL PANEL (ADMIN) ============ -->
+  <div class="page-view" id="page-admin">
+    <div class="admin-dashboard">
+      <h2 class="dashboard-title">👑 Perfil do Site — <span>Painel Administrativo</span></h2>
+      
+      <div class="dashboard-stats-container">
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon">👥</div>
+          <div class="dashboard-stat-info">
+            <span class="dashboard-stat-value" id="admin-visit-count">...</span>
+            <span class="dashboard-stat-label">Visitas Totais</span>
+          </div>
+        </div>
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon">📺</div>
+          <div class="dashboard-stat-info">
+            <span class="dashboard-stat-value" id="admin-active-channels">...</span>
+            <span class="dashboard-stat-label">Canais Ativos</span>
+          </div>
+        </div>
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon">🛠️</div>
+          <div class="dashboard-stat-info">
+            <span class="dashboard-stat-value" id="admin-maint-channels">...</span>
+            <span class="dashboard-stat-label">Em Manutenção</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="dashboard-card">
+          <h3>⚙️ Gerenciamento de Canais 24h</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 20px; line-height: 1.4;">
+            Desmarque um canal para colocá-lo em modo <strong>Manutenção</strong>. Canais em manutenção exibirão um aviso visual cinza com a etiqueta "Manutenção" e não sintonizarão no player. Marque novamente para reativar.
+          </p>
+          <div class="channels-control-list" id="admin-channels-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
       </div>
     </div>
   </div>

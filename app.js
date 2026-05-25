@@ -164,7 +164,9 @@ const STATE = {
   heroTrailerPlaying: true,
   heroTrailerMuted: false,
   modalTrailerPlaying: true,
-  modalTrailerMuted: false
+  modalTrailerMuted: false,
+  selectedCanalCategory: 'aberto',
+  maintenanceChannels: {}
 };
 
   // ---------- Genre Maps ----------
@@ -264,7 +266,8 @@ const STATE = {
       series: $('#page-series'),
       animes: $('#page-animes'),
       canais: $('#page-canais'),
-      search: $('#page-search')
+      search: $('#page-search'),
+      admin: $('#page-admin')
     },
     
     // Grid lists
@@ -549,6 +552,7 @@ const STATE = {
     else if (page === 'animes') renderAnimesPage();
     else if (page === 'canais') renderCanaisPage();
     else if (page === 'profiles') renderProfilesPage();
+    else if (page === 'admin') renderAdminDashboard();
   }
 
   function navigateToGenre(type, genreName) {
@@ -1615,19 +1619,33 @@ const STATE = {
     const grid = document.getElementById('grid-canais');
     if (!grid) return;
     
-    // Clear and build
+    // Limpar e construir
     grid.innerHTML = '';
     
-    listaCanais.forEach((canal, index) => {
+    // 1. Organizar por ordem alfabética
+    const sortedCanais = [...listaCanais].sort((a, b) => a.nome.localeCompare(b.nome));
+    
+    // 2. Filtrar pela categoria ativa
+    const category = STATE.selectedCanalCategory || 'aberto';
+    const filteredCanais = sortedCanais.filter(canal => canal.categoria === category);
+    
+    if (filteredCanais.length === 0) {
+      grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-secondary);">Nenhum canal nesta categoria.</div>`;
+      return;
+    }
+
+    filteredCanais.forEach((canal) => {
       const item = document.createElement('div');
-      item.className = 'canal-item';
+      
+      const isMaint = STATE.maintenanceChannels && STATE.maintenanceChannels[canal.id] === true;
+      item.className = 'canal-item' + (isMaint ? ' manutencao' : '');
       
       // Se este canal já for o canal ativo no player
       if (canalPlayer && canalPlayer.options && canalPlayer.options.source === canal.url) {
         item.className += ' active';
       }
       
-      item.onclick = () => carregarCanal(index);
+      item.onclick = () => carregarCanal(canal.id);
       item.innerHTML = `
         <img src="${canal.logo}" onerror="this.src='https://via.placeholder.com/100x70?text=LOGO'">
         <span>${canal.nome}</span>
@@ -1636,9 +1654,15 @@ const STATE = {
     });
   }
 
-  function carregarCanal(index) {
-    const canal = listaCanais[index];
+  function carregarCanal(canalId) {
+    const canal = listaCanais.find(c => c.id === canalId);
     if (!canal) return;
+
+    // Bloquear reprodução se estiver em manutenção
+    if (STATE.maintenanceChannels && STATE.maintenanceChannels[canal.id] === true) {
+      showToast(`O canal "${canal.nome}" está em manutenção temporária. Voltaremos em breve!`, 'info');
+      return;
+    }
 
     const playerWrapper = document.getElementById('canal-wrapper-player');
     const infoContainer = document.getElementById('canal-info-container');
@@ -1659,17 +1683,13 @@ const STATE = {
       canalWvcBtn.href = `wvc-x-callback://open?url=${encodeURIComponent(canal.url)}&title=${encodeURIComponent('DarkFlix Live — ' + canal.nome)}`;
     }
 
-    // Atualizar link de transmissão externa
-    const canalExternalBtn = document.getElementById('canal-external-btn');
-    if (canalExternalBtn) {
-      canalExternalBtn.href = canal.url;
-    }
-
     // Destacar item ativo na grade
     const grid = document.getElementById('grid-canais');
     if (grid) {
-      grid.querySelectorAll('.canal-item').forEach((item, idx) => {
-        item.classList.toggle('active', idx === index);
+      grid.querySelectorAll('.canal-item').forEach((item) => {
+        const span = item.querySelector('span');
+        const isActive = span && span.innerText === canal.nome;
+        item.classList.toggle('active', isActive);
       });
     }
 
@@ -1703,6 +1723,75 @@ const STATE = {
     } catch (e) {
       console.error("Erro ao sintonizar Clappr player:", e);
       showToast("Erro ao sintonizar o canal.", "error");
+    }
+  }
+
+  // ---------- Control Panel (Perfil do Site) ----------
+  function renderAdminDashboard() {
+    // 1. Buscar estatísticas de visitas no Firebase Realtime Database
+    const visitsRef = ref(db, 'stats/visitors');
+    get(visitsRef).then((snap) => {
+      const visitVal = snap.val() || 0;
+      const countEl = document.getElementById('admin-visit-count');
+      if (countEl) countEl.innerText = visitVal;
+    }).catch(err => console.error("Erro ao buscar visitas:", err));
+
+    // 2. Calcular estatísticas de canais ativos/manutenção
+    const totalCanais = listaCanais.length;
+    let maintCount = 0;
+    Object.keys(STATE.maintenanceChannels || {}).forEach(k => {
+      if (STATE.maintenanceChannels[k] === true) maintCount++;
+    });
+
+    const activeEl = document.getElementById('admin-active-channels');
+    const maintEl = document.getElementById('admin-maint-channels');
+    if (activeEl) activeEl.innerText = totalCanais - maintCount;
+    if (maintEl) maintEl.innerText = maintCount;
+
+    // 3. Renderizar a lista de canais para o painel administrativo
+    const listContainer = document.getElementById('admin-channels-list');
+    if (listContainer) {
+      // Ordenar canais alfabeticamente
+      const sortedCanais = [...listaCanais].sort((a, b) => a.nome.localeCompare(b.nome));
+      
+      listContainer.innerHTML = sortedCanais.map(canal => {
+        const isMaint = STATE.maintenanceChannels && STATE.maintenanceChannels[canal.id] === true;
+        return `
+          <div class="channel-control-item">
+            <img src="${canal.logo}" onerror="this.src='https://via.placeholder.com/60x30?text=LOGO'">
+            <div class="channel-control-info">
+              <div class="channel-control-name">${canal.nome}</div>
+              <div class="channel-control-category">${canal.categoria === 'aberto' ? '📺 Aberto' : '🔒 Fechado'}</div>
+            </div>
+            <div class="channel-control-switch">
+              <span>${isMaint ? '🔴 Manutenção' : '🟢 Ativo'}</span>
+              <label class="toggle-switch">
+                <input type="checkbox" class="admin-channel-toggle" data-id="${canal.id}" ${!isMaint ? 'checked' : ''}>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Adicionar listeners para os toggles de canal do admin
+      listContainer.querySelectorAll('.admin-channel-toggle').forEach(input => {
+        input.onchange = async () => {
+          const canalId = input.dataset.id;
+          const isFuncionando = input.checked;
+          
+          try {
+            showToast(`${isFuncionando ? 'Ativando' : 'Desativando'} canal no banco de dados...`, 'info');
+            await set(ref(db, `stats/maintenance_channels/${canalId}`), !isFuncionando);
+            showToast(`Status do canal atualizado com sucesso!`, 'success');
+          } catch (e) {
+            console.error("Erro ao atualizar status do canal:", e);
+            showToast("Erro ao atualizar o canal.", "error");
+            // Reverter toggle se falhar
+            input.checked = !isFuncionando;
+          }
+        };
+      });
     }
   }
 
@@ -2569,6 +2658,26 @@ const STATE = {
         DOM.profileDropdown.classList.remove('active');
       }
     });
+
+    // Bind Canal Category tabs
+    const tabAberto = document.getElementById('btn-tab-aberto');
+    const tabFechado = document.getElementById('btn-tab-fechado');
+    if (tabAberto && tabFechado) {
+      tabAberto.onclick = (e) => {
+        e.preventDefault();
+        STATE.selectedCanalCategory = 'aberto';
+        tabAberto.classList.add('active');
+        tabFechado.classList.remove('active');
+        renderCanaisPage();
+      };
+      tabFechado.onclick = (e) => {
+        e.preventDefault();
+        STATE.selectedCanalCategory = 'fechado';
+        tabFechado.classList.add('active');
+        tabAberto.classList.remove('active');
+        renderCanaisPage();
+      };
+    }
   }
 
   // ---------- Load Profiles from DB ----------
@@ -3047,6 +3156,41 @@ const STATE = {
     if (user) {
       STATE.currentUser = user;
       await loadProfilesFromDatabase();
+
+      // Controlar exibição do botão Admin (Perfil do Site) no menu
+      const adminLink = document.getElementById('nav-admin');
+      if (adminLink) {
+        if (user.email === 'indiocrys15@gmail.com') {
+          adminLink.style.display = 'inline-flex';
+        } else {
+          adminLink.style.display = 'none';
+        }
+      }
+
+      // Incrementar visitas no Firebase Realtime Database
+      let hasIncremented = sessionStorage.getItem('visited_cine_session');
+      if (!hasIncremented) {
+        const visitsRef = ref(db, 'stats/visitors');
+        get(visitsRef).then((snap) => {
+          let val = snap.val() || 0;
+          set(visitsRef, val + 1);
+          sessionStorage.setItem('visited_cine_session', 'true');
+        }).catch(err => console.error("Erro ao registrar visita:", err));
+      }
+
+      // Escutar alterações de canais em manutenção em tempo real
+      const maintRef = ref(db, 'stats/maintenance_channels');
+      onValue(maintRef, (snap) => {
+        STATE.maintenanceChannels = snap.val() || {};
+        // Se a página de canais estiver ativa, re-renderizar para atualizar visualmente
+        if (STATE.currentPage === 'canais') {
+          renderCanaisPage();
+        }
+        // Se a página de admin estiver ativa, atualizar painel
+        if (STATE.currentPage === 'admin') {
+          renderAdminDashboard();
+        }
+      });
       
       const savedProfileId = localStorage.getItem('darkflix_active_profile_id');
       if (savedProfileId && STATE.allProfiles[savedProfileId]) {
@@ -3061,6 +3205,9 @@ const STATE = {
       STATE.favorites = [];
       STATE.inProgress = [];
       
+      const adminLink = document.getElementById('nav-admin');
+      if (adminLink) adminLink.style.display = 'none';
+
       DOM.headerProfileWrapper.style.display = 'none';
       navigateTo('auth');
     }
