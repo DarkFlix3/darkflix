@@ -1730,7 +1730,7 @@ const STATE = {
       id: "cinemax-eua",
       nome: "Cinemax EUA",
       categoria: "fechado",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Cinemax_logo.svg",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Cinemax_LA.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
       url: "http://23.237.104.106:8080/USA_CINEMAX/index.m3u8"
     },
     {
@@ -2010,29 +2010,28 @@ const STATE = {
         const isMaint = STATE.maintenanceChannels && STATE.maintenanceChannels[canal.id] === true;
         const isHidden = STATE.hiddenChannels && STATE.hiddenChannels[canal.id] === true;
         return `
-          <div class="channel-control-item" style="display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 12px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: var(--radius-md); margin-bottom: 8px;">
-            <div style="display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0;">
-              <img src="${canal.logo}" onerror="this.src='https://via.placeholder.com/60x30?text=LOGO'" style="width: 50px; height: 30px; object-fit: contain; background: rgba(0,0,0,0.2); border-radius: var(--radius-sm);">
-              <div style="min-width: 0; flex: 1;">
-                <div class="channel-control-name" style="font-weight: 600; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text-primary);">${canal.nome}</div>
-                <div class="channel-control-category" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 2px;">${canal.categoria === 'aberto' ? '📺 Aberto' : '🔒 Fechado'}</div>
+          <div class="channel-control-card">
+            <!-- Header part: Logo & Name -->
+            <div class="channel-control-header">
+              <div class="channel-control-logo-wrapper">
+                <img src="${canal.logo}" onerror="this.src='https://via.placeholder.com/80x48?text=NO+LOGO'">
+              </div>
+              <div class="channel-control-details">
+                <h4>${canal.nome}</h4>
+                <span class="channel-badge">${canal.categoria === 'aberto' ? '📺 Canal Aberto' : '🔒 Canal Fechado'}</span>
               </div>
             </div>
-            <div class="channel-control-switches" style="display: flex; gap: 20px; align-items: center;">
-              <div class="channel-control-switch" style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.75rem; font-weight: 500; color: ${isMaint ? '#ef4444' : '#22c55e'};">${isMaint ? 'Manutenção' : 'Ativo'}</span>
-                <label class="toggle-switch">
-                  <input type="checkbox" class="admin-channel-toggle" data-id="${canal.id}" ${!isMaint ? 'checked' : ''}>
-                  <span class="toggle-slider"></span>
-                </label>
-              </div>
-              <div class="channel-control-switch" style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.75rem; font-weight: 500; color: ${isHidden ? '#9ca3af' : '#60a5fa'};">${isHidden ? 'Oculto' : 'Visível'}</span>
-                <label class="toggle-switch">
-                  <input type="checkbox" class="admin-channel-hide-toggle" data-id="${canal.id}" ${!isHidden ? 'checked' : ''}>
-                  <span class="toggle-slider" style="background-color: #4b5563;"></span>
-                </label>
-              </div>
+
+            <!-- Actions part: Custom Buttons -->
+            <div class="channel-control-actions">
+              <!-- Maintenance Button -->
+              <button class="admin-btn-action admin-btn-maint ${isMaint ? 'maint-active' : ''}" data-id="${canal.id}">
+                🛠️ ${isMaint ? 'Em Manutenção' : 'Manutenção'}
+              </button>
+              <!-- Hidden Button -->
+              <button class="admin-btn-action admin-btn-hide ${isHidden ? 'hide-active' : ''}" data-id="${canal.id}">
+                👁️ ${isHidden ? 'Escondido' : 'Esconder'}
+              </button>
             </div>
           </div>
         `;
@@ -2040,7 +2039,7 @@ const STATE = {
 
       listContainer.innerHTML = `
         <div style="margin-bottom: 25px;">
-          <h4 style="margin: 0 0 12px 0; color: var(--accent); border-left: 3px solid var(--accent); padding-left: 8px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; display: flex; justify-content: space-between;">
+          <h4 style="margin: 0 0 16px 0; color: var(--accent); border-left: 3px solid var(--accent); padding-left: 8px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; display: flex; justify-content: space-between;">
             <span>📺 Canais Abertos</span>
             <span style="font-size: 0.75rem; opacity: 0.8; font-weight: 500; font-family: 'Montserrat', sans-serif;">${canaisAbertos.length} no total</span>
           </h4>
@@ -2050,7 +2049,7 @@ const STATE = {
         </div>
         
         <div>
-          <h4 style="margin: 0 0 12px 0; color: #a855f7; border-left: 3px solid #a855f7; padding-left: 8px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; display: flex; justify-content: space-between;">
+          <h4 style="margin: 40px 0 16px 0; color: #a855f7; border-left: 3px solid #a855f7; padding-left: 8px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; display: flex; justify-content: space-between;">
             <span>🔒 Canais Fechados</span>
             <span style="font-size: 0.75rem; opacity: 0.8; font-weight: 500; font-family: 'Montserrat', sans-serif;">${canaisFechados.length} no total</span>
           </h4>
@@ -2060,38 +2059,38 @@ const STATE = {
         </div>
       `;
 
-      // Adicionar listeners para os toggles de manutenção
-      listContainer.querySelectorAll('.admin-channel-toggle').forEach(input => {
-        input.onchange = async () => {
-          const canalId = input.dataset.id;
-          const isFuncionando = input.checked;
+      // Adicionar listeners para os botões de manutenção
+      listContainer.querySelectorAll('.admin-btn-maint').forEach(button => {
+        button.onclick = async () => {
+          const canalId = button.dataset.id;
+          const isCurrentlyMaint = STATE.maintenanceChannels && STATE.maintenanceChannels[canalId] === true;
+          const nextState = !isCurrentlyMaint;
           
           try {
-            showToast(`${isFuncionando ? 'Ativando' : 'Desativando'} canal no banco de dados...`, 'info');
-            await set(ref(db, `stats/maintenance_channels/${canalId}`), !isFuncionando);
+            showToast(`${nextState ? 'Colocando em manutenção' : 'Ativando'} canal no banco de dados...`, 'info');
+            await set(ref(db, `stats/maintenance_channels/${canalId}`), nextState);
             showToast(`Status do canal atualizado com sucesso!`, 'success');
           } catch (e) {
             console.error("Erro ao atualizar status do canal:", e);
             showToast("Erro ao atualizar o canal.", "error");
-            input.checked = !isFuncionando;
           }
         };
       });
 
-      // Adicionar listeners para os toggles de ocultação
-      listContainer.querySelectorAll('.admin-channel-hide-toggle').forEach(input => {
-        input.onchange = async () => {
-          const canalId = input.dataset.id;
-          const isVisivel = input.checked;
+      // Adicionar listeners para os botões de ocultação
+      listContainer.querySelectorAll('.admin-btn-hide').forEach(button => {
+        button.onclick = async () => {
+          const canalId = button.dataset.id;
+          const isCurrentlyHidden = STATE.hiddenChannels && STATE.hiddenChannels[canalId] === true;
+          const nextState = !isCurrentlyHidden;
           
           try {
-            showToast(`${isVisivel ? 'Exibindo' : 'Ocultando'} canal no banco de dados...`, 'info');
-            await set(ref(db, `stats/hidden_channels/${canalId}`), !isVisivel);
+            showToast(`${nextState ? 'Ocultando' : 'Exibindo'} canal no banco de dados...`, 'info');
+            await set(ref(db, `stats/hidden_channels/${canalId}`), nextState);
             showToast(`Visibilidade do canal atualizada com sucesso!`, 'success');
           } catch (e) {
             console.error("Erro ao atualizar visibilidade do canal:", e);
             showToast("Erro ao atualizar o canal.", "error");
-            input.checked = !isVisivel;
           }
         };
       });
