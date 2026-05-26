@@ -1419,6 +1419,13 @@ const STATE = {
       url: "https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/chunklist.m3u8"
     },
     {
+      id: "boas-novas",
+      nome: "Boas Novas",
+      categoria: "aberto",
+      logo: "https://upload.wikimedia.org/wikipedia/pt/3/39/Rede_Boas_Novas.png",
+      url: "https://cdn.jmvstream.com/w/LVW-9375/LVW9375_6i0wPBCHYc/playlist.m3u8?checkedby:iptvcat.com"
+    },
+    {
       id: "discovery-turbo",
       nome: "Discovery Turbo",
       categoria: "fechado",
@@ -1755,6 +1762,13 @@ const STATE = {
       url: "https://video04.logicahost.com.br/tvpampa/tvpampa/playlist.m3u8"
     },
     {
+      id: "tv-rio-preto",
+      nome: "TV Rio Preto",
+      categoria: "aberto",
+      logo: "https://play-lh.googleusercontent.com/1NDgTUBpCw1aBImap_fq1u0mgBQMqQaAiZQw1G9RCNmy5QcoHW1Ki4jY15MInVayuM8Tca0O3woDcXTd6vXd2Q",
+      url: "https://video02.logicahost.com.br/tvriopreto/tvriopreto/playlist.m3u8?checkedby:iptvcat.com"
+    },
+    {
       id: "sic-tv",
       nome: "SIC TV",
       categoria: "aberto",
@@ -1809,6 +1823,13 @@ const STATE = {
       categoria: "aberto",
       logo: "https://yt3.googleusercontent.com/YgN2a0uoD1DKJjS0hmojDlvuxFHvBF99_a2EkiMw-l-oo_ylmfszdWeA6A65_uK83oqVjwrGPjs=s900-c-k-c0x00ffffff-no-rj",
       url: "http://streamer1.streamhost.org:1935/salive/GMI3anjoh/livestream.m3u8"
+    },
+    {
+      id: "canal-38",
+      nome: "Canal 38",
+      categoria: "aberto",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJRm9-US3lIPLmQG3poj-mgQ-VPsk1ilGL1g&s",
+      url: "https://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8?checkedby:iptvcat.com"
     },
     {
       id: "canale-7-italia",
