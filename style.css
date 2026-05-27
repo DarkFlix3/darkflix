@@ -1670,7 +1670,15 @@ ul, ol {
   }
 
   .profile-menu-btn .chevron-icon {
-    display: none !important;
+    display: inline-block !important;
+    color: var(--text-secondary);
+    transition: transform var(--transition-smooth);
+    margin-top: 2px !important;
+  }
+
+  .header-profile-wrapper.open .chevron-icon {
+    transform: rotate(180deg) !important;
+    color: var(--text-primary) !important;
   }
 
   .profile-name-label {
