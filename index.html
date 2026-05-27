@@ -268,7 +268,10 @@
               </span>
               <span id="canal-current-name" style="font-size: 1.3rem; font-weight: 700; color: var(--text-primary); text-transform: uppercase; font-family: 'Montserrat', sans-serif;"></span>
             </div>
-            <div id="canal-actions-container" style="display: flex; gap: 10px; margin-left: auto;">
+            <div id="canal-actions-container" style="display: flex; gap: 10px; margin-left: auto; flex-wrap: wrap;">
+              <button id="canal-pip-btn" class="btn btn-secondary btn-small btn-pip" style="display: none; align-items: center; gap: 6px;">
+                📺 Minimizar (PiP)
+              </button>
               <a id="canal-wvc-btn" href="" class="btn btn-secondary btn-small btn-wvc" style="background: rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.3); color: #22c55e; text-decoration: none;">
                 <img src="https://vewd.webvideocaster.com/wvc/components/widgets/receiver-logo/images/receiver-logo.png" alt="WVC" style="height: 18px; width: auto; vertical-align: middle; margin-right: 6px;">
                 Transmitir Web Video Cast
@@ -382,7 +385,7 @@
     </button>
     <div class="cinema-player" style="position: relative;">
       <iframe id="cinema-iframe" src="" allow="autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" frameborder="0" allowfullscreen loading="lazy" style="display: none;"></iframe>
-      <video id="cinema-video" controls autoplay playsinline style="width: 100%; height: 100%; display: none; object-fit: contain; background: #000;"></video>
+      <video id="cinema-video" controls autoplay playsinline autopictureinpicture style="width: 100%; height: 100%; display: none; object-fit: contain; background: #000;"></video>
       <div id="cinema-blocker-top" class="cinema-player-blocker-top" style="display: none;"></div>
     </div>
     <p class="cinema-title" id="cinema-title"></p>
@@ -397,9 +400,12 @@
       </button>
     </div>
     <p id="cinema-iframe-tip" style="color: var(--text-muted); font-size: 0.78rem; text-align: center; margin-top: 8px; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.4; opacity: 0.85;">
-      💡 <strong>Dica no Celular:</strong> Se os botões acima não funcionarem no player externo, dê dois toques rápidos nas laterais do vídeo ou ative a tela cheia para usar os controles nativos.
+      💡 <strong>Dica no Celular:</strong> Para assistir em tela minimizada (PiP) ao sair do navegador, ative a <strong>tela cheia</strong> no vídeo e deslize para cima ou saia do aplicativo. Para Canais, você pode usar o botão <strong>Minimizar (PiP)</strong> abaixo.
     </p>
-    <div class="cinema-actions" style="margin-top: 15px; display: flex; gap: 12px; justify-content: center;">
+    <div class="cinema-actions" style="margin-top: 15px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <button id="cinema-pip-btn" class="btn btn-secondary btn-small btn-pip" style="display: none; align-items: center; gap: 6px; padding: 10px 20px;">
+        📺 Minimizar (PiP)
+      </button>
       <a id="cinema-wvc-btn" href="" class="btn btn-secondary btn-small btn-wvc" style="background: rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.3); color: #22c55e; text-decoration: none; padding: 10px 20px;">
         <img src="https://vewd.webvideocaster.com/wvc/components/widgets/receiver-logo/images/receiver-logo.png" alt="WVC" style="height: 18px; width: auto; vertical-align: middle; margin-right: 6px;">
         Transmitir Web Video Cast

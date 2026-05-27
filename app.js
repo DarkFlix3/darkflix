@@ -2033,6 +2033,27 @@ const STATE = {
         canalPlayer.configure({ source: canal.url, autoPlay: true });
         canalPlayer.play();
       }
+
+      // Programmatically configure the Clappr video tag attributes for auto PiP
+      const configureCanalVideo = () => {
+        const vid = document.querySelector('#canal-player video');
+        if (vid) {
+          vid.setAttribute('playsinline', 'true');
+          vid.setAttribute('webkit-playsinline', 'true');
+          vid.setAttribute('autopictureinpicture', 'true');
+          vid.setAttribute('pip', 'true');
+        }
+      };
+      configureCanalVideo();
+      setTimeout(configureCanalVideo, 300);
+      setTimeout(configureCanalVideo, 1000);
+      setTimeout(configureCanalVideo, 2500);
+
+      // Force display the PiP button if browser supports it
+      const canalPipBtn = document.getElementById('canal-pip-btn');
+      if (document.pictureInPictureEnabled && canalPipBtn) {
+        canalPipBtn.style.display = 'inline-flex';
+      }
       
       showToast(`Carregando canal: ${canal.nome}...`, 'success');
       
@@ -3021,6 +3042,7 @@ const STATE = {
         e.preventDefault();
         e.stopPropagation();
         DOM.profileDropdown.classList.toggle('active');
+        DOM.headerProfileWrapper.classList.toggle('open');
       };
     }
 
@@ -3028,6 +3050,94 @@ const STATE = {
     document.addEventListener('click', (e) => {
       if (DOM.headerProfileWrapper && !DOM.headerProfileWrapper.contains(e.target)) {
         DOM.profileDropdown.classList.remove('active');
+        DOM.headerProfileWrapper.classList.remove('open');
+      }
+    });
+
+    // ---------- Picture-in-Picture (PiP) Setup ----------
+    const canalPipBtn = document.getElementById('canal-pip-btn');
+    const cinemaPipBtn = document.getElementById('cinema-pip-btn');
+    const isPiPSupported = document.pictureInPictureEnabled || false;
+
+    if (isPiPSupported) {
+      if (canalPipBtn) canalPipBtn.style.display = 'inline-flex';
+      if (cinemaPipBtn) cinemaPipBtn.style.display = 'inline-flex';
+
+      // Live Channels PiP click handler
+      if (canalPipBtn) {
+        canalPipBtn.onclick = async (e) => {
+          e.preventDefault();
+          const clapprVideo = document.querySelector('#canal-player video');
+          if (clapprVideo) {
+            try {
+              if (document.pictureInPictureElement) {
+                await document.exitPictureInPicture();
+                showToast("Saindo do modo minimizado (PiP)", "info");
+              } else {
+                await clapprVideo.requestPictureInPicture();
+                showToast("Modo minimizado (PiP) ativado!", "success");
+              }
+            } catch (err) {
+              console.error("Erro ao ativar PiP no canal:", err);
+              showToast("Não foi possível minimizar o canal.", "error");
+            }
+          } else {
+            showToast("Nenhum vídeo carregado no player ainda.", "info");
+          }
+        };
+      }
+
+      // Cinema local video PiP click handler
+      if (cinemaPipBtn) {
+        cinemaPipBtn.onclick = async (e) => {
+          e.preventDefault();
+          const cinemaVid = DOM.cinemaVideo;
+          if (cinemaVid && DOM.cinemaMode.classList.contains('active') && cinemaVid.style.display !== 'none') {
+            try {
+              if (document.pictureInPictureElement) {
+                await document.exitPictureInPicture();
+                showToast("Saindo do modo minimizado (PiP)", "info");
+              } else {
+                await cinemaVid.requestPictureInPicture();
+                showToast("Modo minimizado (PiP) ativado!", "success");
+              }
+            } catch (err) {
+              console.error("Erro ao ativar PiP no cinema:", err);
+              showToast("Não foi possível minimizar o player.", "error");
+            }
+          } else {
+            showToast("O player do filme não suporta minimização direta ou está usando o player externo.", "info");
+          }
+        };
+      }
+    }
+
+    // Auto-trigger PiP when app is minimized or tab is switched (Page Visibility API)
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') {
+        // Auto PiP for Live Channel Clappr player
+        const clapprVideo = document.querySelector('#canal-player video');
+        if (clapprVideo && !clapprVideo.paused) {
+          try {
+            if (isPiPSupported && !document.pictureInPictureElement) {
+              clapprVideo.requestPictureInPicture();
+            }
+          } catch (e) {
+            console.warn("Auto PiP falhou para o canal:", e);
+          }
+        }
+
+        // Auto PiP for Cinema local video
+        const cinemaVid = DOM.cinemaVideo;
+        if (cinemaVid && !cinemaVid.paused && DOM.cinemaMode.classList.contains('active') && cinemaVid.style.display !== 'none') {
+          try {
+            if (isPiPSupported && !document.pictureInPictureElement) {
+              cinemaVid.requestPictureInPicture();
+            }
+          } catch (e) {
+            console.warn("Auto PiP falhou para cinema video:", e);
+          }
+        }
       }
     });
 
