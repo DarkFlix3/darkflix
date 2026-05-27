@@ -1658,8 +1658,9 @@ ul, ol {
 
   .profile-menu-btn {
     display: flex !important;
-    align-items: center;
-    gap: 8px;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
     background: transparent;
     padding: 6px;
     cursor: pointer;
@@ -1669,14 +1670,17 @@ ul, ol {
   }
 
   .profile-menu-btn .chevron-icon {
-    display: inline-block !important;
-    color: var(--text-secondary);
-    transition: transform var(--transition-smooth);
+    display: none !important;
   }
 
-  .header-profile-wrapper.open .chevron-icon {
-    transform: rotate(180deg) !important;
+  .profile-name-label {
+    display: block !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
     color: var(--text-primary) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-top: 4px !important;
   }
 
   .header-avatar {
@@ -2732,6 +2736,10 @@ ul, ol {
 .profile-menu-btn .chevron-icon {
   color: var(--text-secondary);
   transition: transform var(--transition-smooth);
+}
+
+.profile-name-label {
+  display: none;
 }
 
 .header-profile-wrapper:hover .profile-menu-btn .chevron-icon {

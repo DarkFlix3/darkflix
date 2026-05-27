@@ -208,6 +208,7 @@ const STATE = {
       animes: $('#page-animes'),
       canais: $('#page-canais'),
       search: $('#page-search'),
+      favorites: $('#page-favorites'),
       admin: $('#page-admin')
     },
     
@@ -495,6 +496,7 @@ const STATE = {
     else if (page === 'animes') renderAnimesPage();
     else if (page === 'canais') renderCanaisPage();
     else if (page === 'profiles') renderProfilesPage();
+    else if (page === 'favorites') renderFavoritesPage();
     else if (page === 'admin') renderAdminDashboard();
   }
 
@@ -2537,6 +2539,26 @@ const STATE = {
     else if (STATE.currentPage === 'series') renderSeriesPage();
   }
 
+  function renderFavoritesPage() {
+    const grid = document.getElementById('favorites-grid-all');
+    const emptyState = document.getElementById('favorites-empty-state');
+    if (!grid || !emptyState) return;
+
+    grid.innerHTML = '';
+
+    if (STATE.favorites.length === 0) {
+      emptyState.style.display = 'block';
+      grid.style.display = 'none';
+      return;
+    }
+
+    emptyState.style.display = 'none';
+    grid.style.display = 'grid';
+
+    grid.innerHTML = STATE.favorites.map((item, i) => createCardHTML(item, i, item.media_type || 'movie')).join('');
+    attachCardEvents(grid);
+  }
+
   // ---------- Watchlist / Favorites Management ----------
   async function toggleFavorite(movie) {
     if (!STATE.currentUser || !STATE.currentProfile) return;
@@ -3008,6 +3030,17 @@ const STATE = {
       }, 50);
     };
 
+    const btnDropdownWatchlist = document.getElementById('btn-dropdown-watchlist');
+    if (btnDropdownWatchlist) {
+      btnDropdownWatchlist.onclick = (e) => {
+        e.preventDefault();
+        navigateTo('favorites');
+        // Close dropdown
+        DOM.profileDropdown.classList.remove('active');
+        DOM.headerProfileWrapper.classList.remove('open');
+      };
+    }
+
     DOM.btnDropdownLogout.onclick = (e) => {
       e.preventDefault();
       handleLogout();
@@ -3390,6 +3423,11 @@ const STATE = {
 
     DOM.headerProfileWrapper.style.display = 'block';
     DOM.headerAvatar.src = STATE.currentProfile.avatar || PRESET_AVATARS[0].url;
+
+    const headerProfileName = document.getElementById('header-profile-name');
+    if (headerProfileName) {
+      headerProfileName.textContent = STATE.currentProfile.name;
+    }
 
     let dropdownListHtml = '';
     Object.keys(STATE.allProfiles).forEach(id => {
