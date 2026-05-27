@@ -70,6 +70,26 @@ const AVATAR_CATEGORIES = [
       { id: 'bmo', name: 'BMO', url: 'assets/avatars/bmo.jpg' },
       { id: 'the_lich', name: 'The Lich', url: 'assets/avatars/the_lich.jpg' }
     ]
+  },
+  {
+    title: 'Supernatural',
+    avatars: [
+      { id: 'dean_winchester', name: 'Dean Winchester', url: 'assets/avatars/dean_winchester.jpg' },
+      { id: 'sam_winchester', name: 'Sam Winchester', url: 'assets/avatars/sam_winchester.jpg' },
+      { id: 'castiel', name: 'Castiel', url: 'assets/avatars/castiel.jpg' },
+      { id: 'crowley', name: 'Crowley', url: 'assets/avatars/crowley.jpg' },
+      { id: 'ruby', name: 'Ruby', url: 'assets/avatars/ruby.jpg' }
+    ]
+  },
+  {
+    title: 'Jujutsu Kaisen',
+    avatars: [
+      { id: 'yuji_itadori', name: 'Yuji Itadori', url: 'assets/avatars/yuji_itadori.jpg' },
+      { id: 'satoru_gojo', name: 'Satoru Gojo', url: 'assets/avatars/satoru_gojo.jpg' },
+      { id: 'mahito', name: 'Mahito', url: 'assets/avatars/mahito.jpg' },
+      { id: 'nobara_kugisaki', name: 'Nobara Kugisaki', url: 'assets/avatars/nobara_kugisaki.jpg' },
+      { id: 'toji_fushiguro', name: 'Toji Fushiguro', url: 'assets/avatars/toji_fushiguro.jpg' }
+    ]
   }
 ];
 
