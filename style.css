@@ -1659,11 +1659,15 @@ ul, ol {
   .profile-menu-btn {
     display: flex;
     align-items: center;
-    gap: 8px;
     background: transparent;
-    padding: 6px;
+    padding: 0;
     cursor: pointer;
     justify-content: center;
+    width: auto;
+  }
+
+  .profile-menu-btn .chevron-icon {
+    display: none !important;
   }
 
   .header-avatar {
