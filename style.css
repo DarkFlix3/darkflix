@@ -1644,43 +1644,53 @@ ul, ol {
 
   .nav-search:focus {
     width: 100%;
-  }
-
-  .header-profile-wrapper {
+  }  .header-profile-wrapper {
     order: -2;
     margin-left: 0;
     width: 100%;
-    margin-bottom: 16px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 12px;
-    transition: all var(--transition-smooth);
-  }
-
-  .header-profile-wrapper.open {
-    border-color: rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.04);
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
   }
 
   .profile-menu-btn {
-    width: 100%;
-    justify-content: space-between;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
     background: transparent;
+    padding: 8px;
+    cursor: pointer;
+    width: auto;
+  }
+
+  .header-avatar {
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 50% !important;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
   }
 
   .profile-dropdown {
-    position: static;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    background: rgba(14, 14, 22, 0.98) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: var(--radius-md) !important;
+    width: 200px;
+    box-shadow: var(--shadow-lg) !important;
     display: none;
-    width: 100%;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    margin-top: 12px;
-    padding: 0;
-    border-top: 1px solid var(--border);
-    padding-top: 12px;
+    flex-direction: column;
+    z-index: 1100;
+    padding: 10px 0;
   }
 
   .profile-dropdown.active {
@@ -1688,11 +1698,25 @@ ul, ol {
   }
 
   .dropdown-profile-item {
-    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    width: 100%;
+    text-align: left;
   }
 
   .profile-dropdown-actions button {
-    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: left;
+    width: 100%;
   }
 
   .hero {
