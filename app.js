@@ -22,7 +22,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getDatabase(app);
 
-// Avatares Predefinidos Categorizados
 const AVATAR_CATEGORIES = [
   {
     title: 'La Casa de Papel & Berlim',
@@ -39,89 +38,27 @@ const AVATAR_CATEGORIES = [
     ]
   },
   {
-    title: '(Des)encanto',
+    title: 'Breaking Bad',
     avatars: [
-      { id: 'bean', name: 'Bean', url: 'assets/avatars/bean.svg' },
-      { id: 'luci', name: 'Luci', url: 'assets/avatars/luci.svg' },
-      { id: 'elfo', name: 'Elfo', url: 'assets/avatars/elfo.svg' },
-      { id: 'king_zog', name: 'Rei Zøg', url: 'assets/avatars/king_zog.svg' },
-      { id: 'queen_oona', name: 'Rainha Oona', url: 'assets/avatars/queen_oona.svg' },
-      { id: 'stan_executioner', name: 'Stan o Algoz', url: 'assets/avatars/stan_executioner.svg' }
+      { id: 'breaking_bad', name: 'Heisenberg', url: 'assets/avatars/walter_white.jpg' }
     ]
   },
   {
-    title: 'Big Mouth',
+    title: 'Stranger Things',
     avatars: [
-      { id: 'andrew', name: 'Andrew', url: 'assets/avatars/andrew.svg' },
-      { id: 'connie', name: 'Connie', url: 'assets/avatars/connie.svg' },
-      { id: 'maury', name: 'Maury', url: 'assets/avatars/maury.svg' },
-      { id: 'jessi', name: 'Jessi', url: 'assets/avatars/jessi.svg' },
-      { id: 'jay', name: 'Jay', url: 'assets/avatars/jay.svg' },
-      { id: 'pillow', name: 'Cherry (Travesseiro)', url: 'assets/avatars/pillow.svg' }
+      { id: 'stranger_things', name: 'Eleven', url: 'assets/avatars/eleven.png' }
     ]
   },
   {
-    title: 'Arcane',
+    title: 'Peaky Blinders',
     avatars: [
-      { id: 'jinx', name: 'Jinx', url: 'assets/avatars/jinx.svg' },
-      { id: 'vi', name: 'Vi', url: 'assets/avatars/vi.svg' },
-      { id: 'caitlyn', name: 'Caitlyn', url: 'assets/avatars/caitlyn.svg' },
-      { id: 'ekko', name: 'Ekko', url: 'assets/avatars/ekko.svg' },
-      { id: 'viktor', name: 'Viktor', url: 'assets/avatars/viktor.svg' },
-      { id: 'mel_medarda', name: 'Mel Medarda', url: 'assets/avatars/mel_medarda.svg' }
+      { id: 'tommy_shelby', name: 'Tommy Shelby', url: 'assets/avatars/tommy_shelby.png' }
     ]
   },
   {
-    title: 'Peaky Blinders: O Homem Imortal',
+    title: 'Game of Thrones',
     avatars: [
-      { id: 'tommy_shelby', name: 'Tommy Shelby', url: 'assets/avatars/tommy_shelby.svg' },
-      { id: 'arthur_shelby', name: 'Arthur Shelby', url: 'assets/avatars/arthur_shelby.svg' },
-      { id: 'grace_shelby', name: 'Grace Shelby', url: 'assets/avatars/grace_shelby.svg' },
-      { id: 'polly_gray', name: 'Polly Gray', url: 'assets/avatars/polly_gray.svg' }
-    ]
-  },
-  {
-    title: 'Lucifer',
-    avatars: [
-      { id: 'amenadiel', name: 'Amenadiel', url: 'assets/avatars/amenadiel.svg' },
-      { id: 'chloe_decker', name: 'Chloe Decker', url: 'assets/avatars/chloe_decker.svg' },
-      { id: 'dan_espinoza', name: 'Dan Espinoza', url: 'assets/avatars/dan_espinoza.svg' }
-    ]
-  },
-  {
-    title: 'Lupin',
-    avatars: [
-      { id: 'lupin_beard', name: 'Assane Diop (Barba)', url: 'assets/avatars/lupin_beard.svg' },
-      { id: 'lupin_glasses', name: 'Assane Diop (Óculos)', url: 'assets/avatars/lupin_glasses.svg' },
-      { id: 'lupin_hat', name: 'Assane Diop (Chapéu)', url: 'assets/avatars/lupin_hat.svg' }
-    ]
-  },
-  {
-    title: 'The Witcher',
-    avatars: [
-      { id: 'jaskier', name: 'Jaskier', url: 'assets/avatars/jaskier.svg' },
-      { id: 'roach', name: 'Carpeado (Roach)', url: 'assets/avatars/roach.svg' },
-      { id: 'witcher_creature', name: 'Criatura', url: 'assets/avatars/witcher_creature.svg' }
-    ]
-  },
-  {
-    title: 'Destaques e Clássicos',
-    avatars: [
-      { id: 'wednesday', name: 'Wandinha', url: 'assets/avatars/wednesday.svg' },
-      { id: 'breaking_bad', name: 'Heisenberg', url: 'assets/avatars/walter_white.jpg' },
-      { id: 'stranger_things', name: 'Eleven', url: 'assets/avatars/eleven.svg' },
-      { id: 'interstellar', name: 'Cooper', url: 'assets/avatars/cooper.svg' },
-      { id: 'avengers', name: 'Iron Man', url: 'assets/avatars/iron_man.svg' },
-      { id: 'matrix', name: 'Neo', url: 'assets/avatars/neo.svg' }
-    ]
-  },
-  {
-    title: 'Animes',
-    avatars: [
-      { id: 'naruto', name: 'Naruto', url: 'assets/avatars/naruto.svg' },
-      { id: 'one_piece', name: 'Luffy', url: 'assets/avatars/luffy.svg' },
-      { id: 'death_note', name: 'L', url: 'assets/avatars/l_deathnote.svg' },
-      { id: 'demon_slayer', name: 'Tanjirou', url: 'assets/avatars/tanjirou.svg' }
+      { id: 'daenerys', name: 'Daenerys', url: 'assets/avatars/daenerys.png' }
     ]
   }
 ];
