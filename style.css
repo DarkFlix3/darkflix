@@ -1651,23 +1651,30 @@ ul, ol {
     margin-left: 0;
     width: 100%;
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
     position: relative;
   }
 
   .profile-menu-btn {
-    display: flex;
+    display: flex !important;
     align-items: center;
+    gap: 8px;
     background: transparent;
-    padding: 0;
+    padding: 6px;
     cursor: pointer;
     justify-content: center;
-    width: auto;
+    margin: 0 auto !important;
+    width: fit-content;
   }
 
   .profile-menu-btn .chevron-icon {
-    display: none !important;
+    display: inline-block !important;
+    color: var(--text-secondary);
+    transition: transform var(--transition-smooth);
+  }
+
+  .header-profile-wrapper.open .chevron-icon {
+    transform: rotate(180deg) !important;
+    color: var(--text-primary) !important;
   }
 
   .header-avatar {
