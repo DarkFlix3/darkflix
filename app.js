@@ -108,7 +108,7 @@ const AVATAR_CATEGORIES = [
     title: 'Destaques e Clássicos',
     avatars: [
       { id: 'wednesday', name: 'Wandinha', url: 'assets/avatars/wednesday.svg' },
-      { id: 'breaking_bad', name: 'Heisenberg', url: 'assets/avatars/walter_white.svg' },
+      { id: 'breaking_bad', name: 'Heisenberg', url: 'assets/avatars/walter_white.jpg' },
       { id: 'stranger_things', name: 'Eleven', url: 'assets/avatars/eleven.svg' },
       { id: 'interstellar', name: 'Cooper', url: 'assets/avatars/cooper.svg' },
       { id: 'avengers', name: 'Iron Man', url: 'assets/avatars/iron_man.svg' },
