@@ -4,7 +4,7 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { getDatabase, ref, set, get, update, child, remove, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { getDatabase, ref, set, get, update, child, remove, onValue, onDisconnect } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -2078,6 +2078,23 @@ const STATE = {
           vid.setAttribute('webkit-playsinline', 'true');
           vid.setAttribute('autopictureinpicture', 'true');
           vid.setAttribute('pip', 'true');
+
+          // Bind event listeners to update session status immediately
+          if (!vid.dataset.pipListenersBound) {
+            vid.addEventListener('enterpictureinpicture', () => {
+              registrarSessaoAtiva();
+            });
+            vid.addEventListener('leavepictureinpicture', () => {
+              registrarSessaoAtiva();
+            });
+            vid.addEventListener('play', () => {
+              registrarSessaoAtiva();
+            });
+            vid.addEventListener('pause', () => {
+              registrarSessaoAtiva();
+            });
+            vid.dataset.pipListenersBound = 'true';
+          }
         }
       };
       configureCanalVideo();
@@ -3295,6 +3312,14 @@ const STATE = {
 
       // Cinema local video PiP click handler
       if (cinemaPipBtn) {
+        const cinemaVid = DOM.cinemaVideo;
+        if (cinemaVid) {
+          cinemaVid.addEventListener('enterpictureinpicture', () => registrarSessaoAtiva());
+          cinemaVid.addEventListener('leavepictureinpicture', () => registrarSessaoAtiva());
+          cinemaVid.addEventListener('play', () => registrarSessaoAtiva());
+          cinemaVid.addEventListener('pause', () => registrarSessaoAtiva());
+        }
+
         cinemaPipBtn.onclick = async (e) => {
           e.preventDefault();
           const cinemaVid = DOM.cinemaVideo;
@@ -3335,6 +3360,7 @@ const STATE = {
 
               window.activeCinemaPipWindow = pipWindow;
               showToast("Modo minimizado (PiP) ativado!", "success");
+              registrarSessaoAtiva();
 
               // Copiar estilos para a nova janela PiP
               [...document.styleSheets].forEach((styleSheet) => {
@@ -3380,6 +3406,7 @@ const STATE = {
                   originalParent.appendChild(playerWrapper);
                 }
                 showToast("Saindo do modo minimizado (PiP)", "info");
+                registrarSessaoAtiva();
               });
 
             } catch (err) {
@@ -3420,6 +3447,26 @@ const STATE = {
             console.warn("Auto PiP falhou para cinema video:", e);
           }
         }
+
+        // Aguarda a transição de PiP ser concluída (se houver) e atualiza o banco de dados
+        setTimeout(() => {
+          registrarSessaoAtiva();
+        }, 800);
+      } else {
+        // Quando a aba voltar a ficar ativa, atualiza imediatamente
+        registrarSessaoAtiva();
+      }
+    });
+
+    // Limpar o status de visualização quando o usuário fechar a aba/navegador
+    window.addEventListener('pagehide', () => {
+      if (STATE.currentUser) {
+        try {
+          const sid = obterSessionId();
+          const currentlyWatchingRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}/currentlyWatching`);
+          // Execução síncrona/imediata tentativa de setar como null antes do unload completo
+          set(currentlyWatchingRef, null);
+        } catch (e) {}
       }
     });
 
@@ -4035,6 +4082,35 @@ const STATE = {
     return sid;
   }
 
+  // Verifica se o usuário está ativamente assistindo a um conteúdo no momento
+  function usuarioEstaAssistindo() {
+    const isPageVisible = document.visibilityState === 'visible';
+    const isPipActive = !!(document.pictureInPictureElement || window.activeCinemaPipWindow);
+    
+    // Se a aba/navegador não estiver visível e também não estiver em modo PiP, não está assistindo
+    if (!isPageVisible && !isPipActive) {
+      return false;
+    }
+
+    // Caso 1: Modo Cinema ativo com algum filme/série sendo reproduzido
+    if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active') && STATE.currentWatchItem) {
+      return true;
+    }
+
+    // Caso 2: Canal ativo na página de canais
+    if (STATE.currentPage === 'canais' && canalPlayer && canalPlayer.options && canalPlayer.options.source) {
+      // Se tivermos acesso ao player e ele estiver explicitamente pausado, não está assistindo
+      try {
+        if (typeof canalPlayer.isPlaying === 'function' && !canalPlayer.isPlaying()) {
+          return false;
+        }
+      } catch (e) {}
+      return true;
+    }
+
+    return false;
+  }
+
   // Registrar/Atualizar sessão ativa no Firebase Realtime Database
   async function registrarSessaoAtiva() {
     if (!STATE.currentUser) return;
@@ -4046,24 +4122,26 @@ const STATE = {
     const localNickname = localStorage.getItem('darkflix_device_nickname') || "";
     
     let currentlyWatching = null;
-    if (DOM.cinemaMode.classList.contains('active') && STATE.currentWatchItem) {
-      currentlyWatching = {
-        title: STATE.currentWatchItem.title,
-        type: STATE.currentWatchItem.type,
-        id: STATE.currentWatchItem.id,
-        season: STATE.currentWatchItem.season || null,
-        episode: STATE.currentWatchItem.episode || null,
-        timestamp: Date.now()
-      };
-    } else if (STATE.currentPage === 'canais' && canalPlayer && canalPlayer.options && canalPlayer.options.source) {
-      const activeCanal = listaCanais.find(c => c.url === canalPlayer.options.source);
-      if (activeCanal) {
+    if (usuarioEstaAssistindo()) {
+      if (DOM.cinemaMode.classList.contains('active') && STATE.currentWatchItem) {
         currentlyWatching = {
-          title: activeCanal.nome,
-          type: 'canal',
-          id: activeCanal.id,
+          title: STATE.currentWatchItem.title,
+          type: STATE.currentWatchItem.type,
+          id: STATE.currentWatchItem.id,
+          season: STATE.currentWatchItem.season || null,
+          episode: STATE.currentWatchItem.episode || null,
           timestamp: Date.now()
         };
+      } else if (STATE.currentPage === 'canais' && canalPlayer && canalPlayer.options && canalPlayer.options.source) {
+        const activeCanal = listaCanais.find(c => c.url === canalPlayer.options.source);
+        if (activeCanal) {
+          currentlyWatching = {
+            title: activeCanal.nome,
+            type: 'canal',
+            id: activeCanal.id,
+            timestamp: Date.now()
+          };
+        }
       }
     }
 
@@ -4083,6 +4161,10 @@ const STATE = {
     try {
       const sessionRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}`);
       await set(sessionRef, sessionData);
+
+      // Agendar remoção do status "assistindo" no Firebase caso a aba/conexão caia
+      const currentlyWatchingRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}/currentlyWatching`);
+      await onDisconnect(currentlyWatchingRef).remove();
     } catch (e) {
       console.warn("Erro ao salvar sessão ativa:", e);
     }
