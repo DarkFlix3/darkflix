@@ -3121,6 +3121,53 @@ const STATE = {
       };
     }
 
+    // Bind Acesso e Aparelhos button
+    const btnDropdownDevices = document.getElementById('btn-dropdown-devices');
+    if (btnDropdownDevices) {
+      btnDropdownDevices.onclick = (e) => {
+        e.preventDefault();
+        abrirModalAparelhos();
+      };
+    }
+
+    // Bind Devices Modal close button
+    const devicesCloseBtn = document.getElementById('devices-close-btn');
+    if (devicesCloseBtn) {
+      devicesCloseBtn.onclick = (e) => {
+        e.preventDefault();
+        fecharModalAparelhos();
+      };
+    }
+
+    // Bind Devices Modal backdrop click to close
+    const devicesModal = document.getElementById('devices-modal');
+    if (devicesModal) {
+      devicesModal.onclick = (e) => {
+        if (e.target === devicesModal) fecharModalAparelhos();
+      };
+    }
+
+    // Bind Save Device Nickname button
+    const btnSaveDeviceName = document.getElementById('btn-save-device-name');
+    if (btnSaveDeviceName) {
+      btnSaveDeviceName.onclick = async (e) => {
+        e.preventDefault();
+        const input = document.getElementById('current-device-name-input');
+        const nickname = input ? input.value.trim() : "";
+        
+        if (!nickname) {
+          localStorage.removeItem('darkflix_device_nickname');
+        } else {
+          localStorage.setItem('darkflix_device_nickname', nickname);
+        }
+        
+        // Atualizar sessão no Firebase com o novo apelido
+        await registrarSessaoAtiva();
+        showToast(nickname ? `Apelido salvo: "${nickname}"` : "Apelido removido.", "success");
+        renderizarModalAparelhos();
+      };
+    }
+
     DOM.btnDropdownLogout.onclick = (e) => {
       e.preventDefault();
       handleLogout();
@@ -3486,6 +3533,9 @@ const STATE = {
     STATE.currentProfile = { id: profileId, ...p };
     localStorage.setItem('darkflix_active_profile_id', profileId);
 
+    // Atualizar a sessão ativa com o novo perfil escolhido
+    await registrarSessaoAtiva();
+
     STATE.favorites = p.favorites ? Object.values(p.favorites) : [];
     STATE.inProgress = p.in_progress ? Object.values(p.in_progress).sort((a,b) => b.timestamp - a.timestamp) : [];
 
@@ -3821,6 +3871,7 @@ const STATE = {
   async function handleLogout() {
     try {
       showToast("Saindo...", "info");
+      pararHeartbeatSessao();
       await signOut(auth);
       localStorage.removeItem('darkflix_active_profile_id');
       showToast("Desconectado.", "success");
@@ -3829,11 +3880,325 @@ const STATE = {
     }
   }
 
+  // ============================================================
+  // Gerenciamento de Acesso & Aparelhos (Netflix-Style)
+  // ============================================================
+  
+  // Função para mapear User Agent em informações legíveis
+  function obterInformacoesAparelho() {
+    const ua = navigator.userAgent;
+    let os = "Outro";
+    let device = "Computador";
+    let icon = "💻";
+
+    // Detectar Sistema Operacional primeiro
+    if (/Windows/i.test(ua)) {
+      os = "Windows";
+    } else if (/Macintosh/i.test(ua)) {
+      // iPadOS 13+ reporta Macintosh por padrão para desktop requests. 
+      // Podemos verificar maxTouchPoints para diferenciar iPad de macOS.
+      if (navigator.maxTouchPoints && navigator.maxTouchPoints > 1) {
+        os = "iOS";
+        device = "Tablet";
+        icon = "📟";
+      } else {
+        os = "macOS";
+      }
+    } else if (/Android/i.test(ua)) {
+      os = "Android";
+      if (/Mobile/i.test(ua)) {
+        device = "Celular";
+        icon = "📱";
+      } else {
+        device = "Tablet";
+        icon = "📟";
+      }
+    } else if (/iPhone|iPod/i.test(ua)) {
+      os = "iOS";
+      device = "Celular";
+      icon = "📱";
+    } else if (/iPad/i.test(ua)) {
+      os = "iOS";
+      device = "Tablet";
+      icon = "📟";
+    } else if (/Linux/i.test(ua)) {
+      os = "Linux";
+    }
+
+    // Detectar Smart TVs e Consoles
+    if (/SmartTV|Tizen|Web0S|Roku|Vizio|AppleTV|GoogleTV|CastTV/i.test(ua)) {
+      device = "Smart TV";
+      icon = "📺";
+      if (/Tizen/i.test(ua)) os = "Tizen OS";
+      else if (/Web0S/i.test(ua)) os = "webOS";
+      else if (/Roku/i.test(ua)) os = "Roku OS";
+      else if (/AppleTV/i.test(ua)) os = "tvOS";
+      else if (/Android/i.test(ua)) os = "Android TV";
+    } else if (/Xbox|PlayStation|Nintendo/i.test(ua)) {
+      device = "Console";
+      icon = "🎮";
+      if (/Xbox/i.test(ua)) os = "Xbox OS";
+      else if (/PlayStation/i.test(ua)) os = "PlayStation OS";
+      else if (/Nintendo/i.test(ua)) os = "Nintendo OS";
+    }
+
+    // Detectar Navegador
+    let browser = "Navegador";
+    if (/Chrome/i.test(ua) && !/Edg/i.test(ua) && !/OPR/i.test(ua)) {
+      browser = "Chrome";
+    } else if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) {
+      browser = "Safari";
+    } else if (/Firefox/i.test(ua)) {
+      browser = "Firefox";
+    } else if (/Edg/i.test(ua)) {
+      browser = "Edge";
+    } else if (/OPR/i.test(ua) || /Opera/i.test(ua)) {
+      browser = "Opera";
+    }
+
+    return { os, device, browser, icon };
+  }
+
+  // Função auxiliar para formatar a descrição do aparelho de forma amigável
+  function formatarDescricaoDispositivo(devInfo) {
+    const device = devInfo.device || "Aparelho";
+    const os = devInfo.os || "Desconhecido";
+    const browser = devInfo.browser || "Navegador";
+    
+    if (device === "Computador") {
+      return `Computador — ${browser} em ${os}`;
+    } else {
+      return `${device} ${os} — ${browser}`;
+    }
+  }
+
+  // Heartbeat para manter o status "Online agora" atualizado a cada 60 segundos
+  let sessionHeartbeatInterval = null;
+  function iniciarHeartbeatSessao() {
+    if (sessionHeartbeatInterval) clearInterval(sessionHeartbeatInterval);
+    
+    sessionHeartbeatInterval = setInterval(async () => {
+      if (STATE.currentUser && document.visibilityState === 'visible') {
+        try {
+          const sid = obterSessionId();
+          const sessionRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}`);
+          await update(sessionRef, { lastActive: Date.now() });
+        } catch (e) {
+          console.warn("Erro no heartbeat da sessão:", e);
+        }
+      }
+    }, 60000);
+  }
+
+  function pararHeartbeatSessao() {
+    if (sessionHeartbeatInterval) {
+      clearInterval(sessionHeartbeatInterval);
+      sessionHeartbeatInterval = null;
+    }
+  }
+
+  // Obter ou gerar identificador único de sessão
+  function obterSessionId() {
+    let sid = localStorage.getItem('darkflix_session_id');
+    if (!sid) {
+      sid = 'session_' + Math.random().toString(36).substring(2, 15) + '_' + Date.now().toString(36);
+      localStorage.setItem('darkflix_session_id', sid);
+    }
+    return sid;
+  }
+
+  // Registrar/Atualizar sessão ativa no Firebase Realtime Database
+  async function registrarSessaoAtiva() {
+    if (!STATE.currentUser) return;
+    
+    const sid = obterSessionId();
+    const info = obterInformacoesAparelho();
+    
+    // Obter apelido local do aparelho, se houver
+    const localNickname = localStorage.getItem('darkflix_device_nickname') || "";
+    
+    const sessionData = {
+      id: sid,
+      deviceInfo: {
+        ...info,
+        nickname: localNickname
+      },
+      lastActive: Date.now(),
+      profileName: STATE.currentProfile ? STATE.currentProfile.name : "Escolha de Perfil",
+      profileAvatar: STATE.currentProfile ? (STATE.currentProfile.avatar || PRESET_AVATARS[0].url) : "",
+      revoked: false
+    };
+
+    try {
+      const sessionRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}`);
+      await set(sessionRef, sessionData);
+    } catch (e) {
+      console.warn("Erro ao salvar sessão ativa:", e);
+    }
+  }
+
+  // Listener para logout forçado caso a sessão seja excluída ou revogada
+  let activeSessionListenerRef = null;
+  
+  function iniciarOuvinteSessaoForcada() {
+    if (!STATE.currentUser) return;
+    
+    const sid = obterSessionId();
+    const sessionRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}`);
+    
+    // Remover ouvinte anterior para evitar duplicações
+    if (activeSessionListenerRef) {
+      activeSessionListenerRef();
+      activeSessionListenerRef = null;
+    }
+
+    activeSessionListenerRef = onValue(sessionRef, (snap) => {
+      const data = snap.val();
+      // Se a sessão foi marcada como revogada ou excluída do banco
+      if (data && data.revoked === true) {
+        showToast("⚠️ Este aparelho foi desconectado pelo administrador da conta.", "error");
+        
+        // Finalizar ouvinte
+        if (activeSessionListenerRef) {
+          activeSessionListenerRef();
+          activeSessionListenerRef = null;
+        }
+        
+        // Executar Logout
+        handleLogout();
+      }
+    });
+  }
+
+  // Carregar e renderizar o Modal de Acesso e Aparelhos
+  async function renderizarModalAparelhos() {
+    const listContainer = document.getElementById('devices-list-container');
+    if (!listContainer || !STATE.currentUser) return;
+
+    listContainer.innerHTML = `
+      <div style="text-align: center; padding: 30px; color: var(--text-secondary);">
+        <div style="margin: 0 auto 12px; width: 24px; height: 24px; border: 2px solid var(--accent-soft); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite;"></div>
+        Buscando dispositivos conectados...
+      </div>
+    `;
+
+    // Carregar apelido do aparelho atual no input
+    const nicknameInput = document.getElementById('current-device-name-input');
+    if (nicknameInput) {
+      nicknameInput.value = localStorage.getItem('darkflix_device_nickname') || "";
+    }
+
+    try {
+      const dbRef = ref(db);
+      const snapshot = await get(child(dbRef, `users/${STATE.currentUser.uid}/sessions`));
+      
+      if (!snapshot.exists()) {
+        listContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted);">Nenhum dispositivo registrado.</div>`;
+        return;
+      }
+
+      const sessions = snapshot.val();
+      const currentSid = obterSessionId();
+      let html = '';
+
+      Object.keys(sessions).forEach(sid => {
+        const sess = sessions[sid];
+        // Se por algum motivo o registro estiver vazio ou revogado, ignorar
+        if (!sess || sess.revoked === true) return;
+
+        const isCurrent = sid === currentSid;
+        const devInfo = sess.deviceInfo || {};
+        const isOnline = Date.now() - (sess.lastActive || 0) < 120000; // Últimos 2 minutos
+        
+        const deviceDetailsText = formatarDescricaoDispositivo(devInfo);
+        const deviceDisplayName = devInfo.nickname 
+          ? `<strong>${devInfo.nickname}</strong> <span style="font-size:0.8rem; font-weight:400; opacity:0.7;">(${deviceDetailsText})</span>`
+          : deviceDetailsText;
+
+        const avatarHTML = sess.profileAvatar 
+          ? `<span class="device-profile-tag"><img src="${sess.profileAvatar}"> Perfil ativo no momento: <strong>${sess.profileName}</strong></span>`
+          : `<span class="device-profile-tag">Sem perfil ativo</span>`;
+
+        html += `
+          <div class="device-item-card${isCurrent ? ' current' : ''}">
+            <div class="device-icon-box">
+              ${devInfo.icon || '💻'}
+            </div>
+            <div class="device-item-details">
+              <h4>${deviceDisplayName}</h4>
+              <div class="device-info-sub">Conexão Segura — Sessão Ativa</div>
+              ${avatarHTML}
+              <div class="device-status-container">
+                ${isCurrent ? '<span class="device-badge-current">Este Aparelho</span>' : ''}
+                ${isOnline ? '<span class="device-badge-active">● Online Agora</span>' : `<span style="font-size:0.7rem; color:var(--text-muted);">Visto em: ${new Date(sess.lastActive).toLocaleString('pt-BR')}</span>`}
+              </div>
+            </div>
+            <div class="device-item-actions">
+              ${isCurrent 
+                ? `<button class="btn-device-logout" style="opacity: 0.6; cursor: not-allowed;" disabled>Dispositivo Atual</button>`
+                : `<button class="btn-device-logout btn-action-revoke" data-session-id="${sid}">Sair</button>`
+              }
+            </div>
+          </div>
+        `;
+      });
+
+      listContainer.innerHTML = html || `<div style="text-align:center; padding:20px; color:var(--text-muted);">Nenhum dispositivo ativo.</div>`;
+
+      // Bind botão de revogar (Sair)
+      listContainer.querySelectorAll('.btn-action-revoke').forEach(btn => {
+        btn.onclick = async () => {
+          const sidToRevoke = btn.dataset.sessionId;
+          if (confirm("Tem certeza que deseja desconectar este dispositivo remotamente? A conta sairá instantaneamente no aparelho dele.")) {
+            showToast("Desconectando aparelho...", "info");
+            try {
+              // Marcar como revogada no Firebase
+              await update(ref(db, `users/${STATE.currentUser.uid}/sessions/${sidToRevoke}`), { revoked: true });
+              showToast("Aparelho desconectado com sucesso!", "success");
+              renderizarModalAparelhos(); // Atualizar painel
+            } catch (err) {
+              console.error("Erro ao revogar sessão:", err);
+              showToast("Erro ao desconectar aparelho.", "error");
+            }
+          }
+        };
+      });
+
+    } catch (e) {
+      console.error("Erro ao carregar aparelhos:", e);
+      listContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted);">Erro ao carregar dispositivos.</div>`;
+    }
+  }
+
+  function abrirModalAparelhos() {
+    DOM.profileDropdown.classList.remove('active');
+    DOM.headerProfileWrapper.classList.remove('open');
+    renderizarModalAparelhos();
+    const modal = document.getElementById('devices-modal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function fecharModalAparelhos() {
+    const modal = document.getElementById('devices-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
   // ---------- Firebase Auth State Listener ----------
   onAuthStateChanged(auth, async (user) => {
     if (user) {
       STATE.currentUser = user;
       await loadProfilesFromDatabase();
+      
+      // Registrar sessão, ouvinte de logout forçado e heartbeat
+      await registrarSessaoAtiva();
+      iniciarOuvinteSessaoForcada();
+      iniciarHeartbeatSessao();
 
       // Controlar exibição do botão Admin (Perfil do Site) no menu
       const adminLink = document.getElementById('nav-admin');
@@ -3896,6 +4261,7 @@ const STATE = {
       STATE.allProfiles = {};
       STATE.favorites = [];
       STATE.inProgress = [];
+      pararHeartbeatSessao();
       
       const adminLink = document.getElementById('nav-admin');
       if (adminLink) adminLink.style.display = 'none';
