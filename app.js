@@ -3535,6 +3535,9 @@ const STATE = {
 
   // ---------- Select Profile and Enter App ----------
   async function selectProfile(profileId) {
+    // Carregar perfis mais recentes do Firebase para garantir dados individuais atualizados
+    await loadProfilesFromDatabase();
+    
     const p = STATE.allProfiles[profileId];
     if (!p) return;
 
@@ -4118,35 +4121,65 @@ const STATE = {
         const devInfo = sess.deviceInfo || {};
         const isOnline = Date.now() - (sess.lastActive || 0) < 120000; // Últimos 2 minutos
         
-        const deviceDetailsText = formatarDescricaoDispositivo(devInfo);
-        const deviceDisplayName = devInfo.nickname 
-          ? `<strong>${devInfo.nickname}</strong> <span style="font-size:0.8rem; font-weight:400; opacity:0.7;">(${deviceDetailsText})</span>`
-          : deviceDetailsText;
+        const deviceTitle = devInfo.nickname ? devInfo.nickname : devInfo.device;
+        const deviceSub = devInfo.nickname ? `${devInfo.device} • ${devInfo.os}` : devInfo.os;
 
         const avatarHTML = sess.profileAvatar 
-          ? `<span class="device-profile-tag"><img src="${sess.profileAvatar}"> Perfil ativo no momento: <strong>${sess.profileName}</strong></span>`
-          : `<span class="device-profile-tag">Sem perfil ativo</span>`;
+          ? `<div style="display:flex; align-items:center; gap:8px;">
+               <img src="${sess.profileAvatar}" style="width:20px; height:20px; border-radius:var(--radius-xs); object-fit:cover;">
+               <span style="font-size:0.82rem; color:var(--text-secondary);">
+                 <strong>${sess.profileName}</strong> <span style="opacity:0.6;">(Última sessão)</span>
+               </span>
+             </div>`
+          : `<div style="display:flex; align-items:center; gap:8px;">
+               <span style="font-size:0.82rem; color:var(--text-muted);">Sem perfil ativo</span>
+             </div>`;
+
+        const activeStatusHTML = isOnline 
+          ? `<span class="device-badge-active" style="color:#22c55e; font-weight:700; font-size:0.8rem; display:inline-flex; align-items:center; gap:6px;">
+               <span style="display:inline-block; width:8px; height:8px; background:#22c55e; border-radius:50%; animation:pulse 1.5s infinite;"></span>
+               Online agora
+             </span>`
+          : `<span style="font-size:0.8rem; color:var(--text-muted); display:inline-flex; align-items:center; gap:4px;">
+               🕒 ${new Date(sess.lastActive).toLocaleString('pt-BR')}
+             </span>`;
 
         html += `
           <div class="device-item-card${isCurrent ? ' current' : ''}">
-            <div class="device-icon-box">
-              ${devInfo.icon || '💻'}
-            </div>
-            <div class="device-item-details">
-              <h4>${deviceDisplayName}</h4>
-              <div class="device-info-sub">Conexão Segura — Sessão Ativa</div>
-              ${avatarHTML}
-              <div class="device-status-container">
-                ${isCurrent ? '<span class="device-badge-current">Este Aparelho</span>' : ''}
-                ${isOnline ? '<span class="device-badge-active">● Online Agora</span>' : `<span style="font-size:0.7rem; color:var(--text-muted);">Visto em: ${new Date(sess.lastActive).toLocaleString('pt-BR')}</span>`}
+            
+            <!-- Card Header: Device Name & Sign Out Action -->
+            <div style="display:flex; align-items:center; justify-content:space-between; width:100%; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom:14px;">
+              <div style="display:flex; align-items:center; gap:12px; min-width:0;">
+                <div class="device-icon-box">
+                  ${devInfo.icon || '💻'}
+                </div>
+                <div style="min-width:0;">
+                  <h4 style="margin:0; font-size:1.05rem; font-weight:700; color:var(--text-primary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${deviceTitle}">
+                    ${deviceTitle}
+                  </h4>
+                  <p style="margin:2px 0 0 0; font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${deviceSub} — ${devInfo.browser || 'Navegador'}">
+                    ${deviceSub} — ${devInfo.browser || 'Navegador'}
+                  </p>
+                </div>
+              </div>
+              
+              <div>
+                ${isCurrent 
+                  ? `<button class="btn-device-logout" style="opacity: 0.6; cursor: not-allowed; padding: 6px 14px; font-size: 0.78rem;" disabled>Atual</button>`
+                  : `<button class="btn-device-logout btn-action-revoke" data-session-id="${sid}" style="padding: 6px 14px; font-size: 0.78rem; border-color: rgba(255,255,255,0.15); background: transparent;">Sair</button>`
+                }
               </div>
             </div>
-            <div class="device-item-actions">
-              ${isCurrent 
-                ? `<button class="btn-device-logout" style="opacity: 0.6; cursor: not-allowed;" disabled>Dispositivo Atual</button>`
-                : `<button class="btn-device-logout btn-action-revoke" data-session-id="${sid}">Sair</button>`
-              }
+
+            <!-- Card Body: User Profile & Timestamp/Online info -->
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              ${avatarHTML}
+              <div style="margin-top:4px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+                ${activeStatusHTML}
+                ${isCurrent ? '<span class="device-badge-current" style="margin-left:auto;">Este Aparelho</span>' : ''}
+              </div>
             </div>
+            
           </div>
         `;
       });
