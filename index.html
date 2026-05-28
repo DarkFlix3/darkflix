@@ -512,24 +512,33 @@
     </div>
   </div>
 
-  <!-- ============ DEVICES MODAL ============ -->
-  <div class="modal-backdrop" id="devices-modal">
-    <div class="devices-container">
-      <button class="devices-close" id="devices-close-btn">✕</button>
-      <h2 class="devices-title">Acesso e Aparelhos</h2>
-      <p class="devices-subtitle">Dispositivos atualmente conectados à sua conta. Se você não reconhecer um aparelho, clique em <strong>Sair</strong> para desconectá-lo.</p>
-      
-      <!-- Current Device Custom Nickname Section -->
-      <div class="current-device-rename-section">
-        <h3>🏷️ Dar apelido a este aparelho:</h3>
-        <div class="rename-input-group">
-          <input type="text" id="current-device-name-input" maxlength="25" placeholder="Ex: Meu PC do Quarto, iPhone do Chrys...">
-          <button class="btn btn-primary btn-small" id="btn-save-device-name">Salvar Apelido</button>
+  <!-- ============ DEVICES PAGE ============ -->
+  <div class="page-view" id="page-devices">
+    <div class="main-content" style="padding-top: calc(var(--header-height) + 40px); margin-top: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <div class="section" style="padding-top: 40px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
+          <h2 class="section-title" style="font-size: 1.8rem; font-family: 'Montserrat', sans-serif; margin: 0;">Acesso e Aparelhos</h2>
+          <button class="btn btn-secondary btn-small" id="btn-devices-back-home" style="display: inline-flex; align-items: center; gap: 6px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Voltar
+          </button>
         </div>
-      </div>
-      
-      <div class="devices-list" id="devices-list-container">
-        <!-- Injected dynamically by JS -->
+        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 28px; font-size: 0.95rem;">
+          Dispositivos atualmente conectados à sua conta. Se você não reconhecer um aparelho, clique em <strong>Sair</strong> para desconectá-lo.
+        </p>
+        
+        <!-- Current Device Custom Nickname Section -->
+        <div class="current-device-rename-section" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 32px;">
+          <h3 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px;">🏷️ Dar apelido a este aparelho:</h3>
+          <div class="rename-input-group" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+            <input type="text" id="current-device-name-input" maxlength="25" placeholder="Ex: Meu PC do Quarto, iPhone do Chrys..." style="flex: 1; min-width: 200px; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-primary); padding: 12px 16px; border-radius: var(--radius-sm); font-size: 0.9rem; transition: border-color var(--transition-fast);">
+            <button class="btn btn-primary" id="btn-save-device-name" style="padding: 12px 24px;">Salvar Apelido</button>
+          </div>
+        </div>
+        
+        <div class="devices-list" id="devices-list-container" style="display: flex; flex-direction: column; gap: 16px;">
+          <!-- Injected dynamically by JS -->
+        </div>
       </div>
     </div>
   </div>

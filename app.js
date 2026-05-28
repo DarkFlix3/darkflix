@@ -289,7 +289,8 @@ const STATE = {
       canais: $('#page-canais'),
       search: $('#page-search'),
       favorites: $('#page-favorites'),
-      admin: $('#page-admin')
+      admin: $('#page-admin'),
+      devices: $('#page-devices')
     },
     
     // Grid lists
@@ -521,8 +522,8 @@ const STATE = {
   function navigateTo(page) {
     STATE.currentPage = page;
     
-    // Hide header links & search if on auth or profiles page
-    const hideHeaderNav = (page === 'auth' || page === 'profiles');
+    // Hide header links & search if on auth or profiles page, or devices page without active profile
+    const hideHeaderNav = (page === 'auth' || page === 'profiles' || (page === 'devices' && !STATE.currentProfile));
     if (DOM.navMenu) {
       DOM.navMenu.style.visibility = hideHeaderNav ? 'hidden' : 'visible';
     }
@@ -535,16 +536,16 @@ const STATE = {
     
     // Force solid blurred dark header background on inner pages to prevent clashing content
     if (DOM.header) {
-      if (page !== 'home' && page !== 'auth' && page !== 'profiles') {
+      if (page !== 'home' && page !== 'auth' && page !== 'profiles' && page !== 'devices') {
         DOM.header.classList.add('scrolled');
       } else {
-        DOM.header.classList.toggle('scrolled', window.scrollY > 20 || page === 'auth' || page === 'profiles');
+        DOM.header.classList.toggle('scrolled', window.scrollY > 20 || page === 'auth' || page === 'profiles' || (page === 'devices' && !STATE.currentProfile));
       }
     }
     
-    // Toggle footer visibility: hide on auth and profiles pages
+    // Toggle footer visibility: hide on auth, profiles, and devices without active profile
     if (DOM.footer) {
-      DOM.footer.style.display = (page === 'auth' || page === 'profiles') ? 'none' : 'block';
+      DOM.footer.style.display = (page === 'auth' || page === 'profiles' || (page === 'devices' && !STATE.currentProfile)) ? 'none' : 'block';
     }
     
     // Reset page visibility
@@ -578,6 +579,7 @@ const STATE = {
     else if (page === 'profiles') renderProfilesPage();
     else if (page === 'favorites') renderFavoritesPage();
     else if (page === 'admin') renderAdminDashboard();
+    else if (page === 'devices') renderizarPaginaAparelhos();
   }
 
   function navigateToGenre(type, genreName) {
@@ -3126,7 +3128,9 @@ const STATE = {
     if (btnDropdownDevices) {
       btnDropdownDevices.onclick = (e) => {
         e.preventDefault();
-        abrirModalAparelhos();
+        DOM.profileDropdown.classList.remove('active');
+        DOM.headerProfileWrapper.classList.remove('open');
+        navigateTo('devices');
       };
     }
 
@@ -3134,24 +3138,20 @@ const STATE = {
     if (btnProfilesDevices) {
       btnProfilesDevices.onclick = (e) => {
         e.preventDefault();
-        abrirModalAparelhos();
+        navigateTo('devices');
       };
     }
 
-    // Bind Devices Modal close button
-    const devicesCloseBtn = document.getElementById('devices-close-btn');
-    if (devicesCloseBtn) {
-      devicesCloseBtn.onclick = (e) => {
+    // Bind Devices Page back button
+    const btnDevicesBackHome = document.getElementById('btn-devices-back-home');
+    if (btnDevicesBackHome) {
+      btnDevicesBackHome.onclick = (e) => {
         e.preventDefault();
-        fecharModalAparelhos();
-      };
-    }
-
-    // Bind Devices Modal backdrop click to close
-    const devicesModal = document.getElementById('devices-modal');
-    if (devicesModal) {
-      devicesModal.onclick = (e) => {
-        if (e.target === devicesModal) fecharModalAparelhos();
+        if (STATE.currentProfile) {
+          navigateTo('home');
+        } else {
+          navigateTo('profiles');
+        }
       };
     }
 
@@ -3172,7 +3172,7 @@ const STATE = {
         // Atualizar sessão no Firebase com o novo apelido
         await registrarSessaoAtiva();
         showToast(nickname ? `Apelido salvo: "${nickname}"` : "Apelido removido.", "success");
-        renderizarModalAparelhos();
+        renderizarPaginaAparelhos();
       };
     }
 
@@ -4078,8 +4078,8 @@ const STATE = {
     });
   }
 
-  // Carregar e renderizar o Modal de Acesso e Aparelhos
-  async function renderizarModalAparelhos() {
+  // Carregar e renderizar a página de Acesso e Aparelhos
+  async function renderizarPaginaAparelhos() {
     const listContainer = document.getElementById('devices-list-container');
     if (!listContainer || !STATE.currentUser) return;
 
@@ -4163,7 +4163,7 @@ const STATE = {
               // Marcar como revogada no Firebase
               await update(ref(db, `users/${STATE.currentUser.uid}/sessions/${sidToRevoke}`), { revoked: true });
               showToast("Aparelho desconectado com sucesso!", "success");
-              renderizarModalAparelhos(); // Atualizar painel
+              renderizarPaginaAparelhos(); // Atualizar painel
             } catch (err) {
               console.error("Erro ao revogar sessão:", err);
               showToast("Erro ao desconectar aparelho.", "error");
@@ -4175,25 +4175,6 @@ const STATE = {
     } catch (e) {
       console.error("Erro ao carregar aparelhos:", e);
       listContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted);">Erro ao carregar dispositivos.</div>`;
-    }
-  }
-
-  function abrirModalAparelhos() {
-    DOM.profileDropdown.classList.remove('active');
-    DOM.headerProfileWrapper.classList.remove('open');
-    renderizarModalAparelhos();
-    const modal = document.getElementById('devices-modal');
-    if (modal) {
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function fecharModalAparelhos() {
-    const modal = document.getElementById('devices-modal');
-    if (modal) {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
     }
   }
 
