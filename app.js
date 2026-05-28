@@ -187,7 +187,8 @@ const STATE = {
   hiddenChannels: {},
   watchStart: null,
   watchInterval: null,
-  currentWatchItem: null
+  currentWatchItem: null,
+  devicesListenerRef: null
 };
 
   // ---------- Genre Maps ----------
@@ -566,6 +567,12 @@ const STATE = {
     stopMainHeroTrailer();
     closeDetail();
     stopCanalPlayer();
+    
+    // Unsubscribe from devices listener if navigating away
+    if (page !== 'devices' && STATE.devicesListenerRef) {
+      STATE.devicesListenerRef();
+      STATE.devicesListenerRef = null;
+    }
     
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1946,6 +1953,9 @@ const STATE = {
     if (infoContainer) infoContainer.style.display = 'none';
     const httpTip = document.getElementById('canal-http-tip');
     if (httpTip) httpTip.style.display = 'none';
+    
+    // Update active session to clear currentlyWatching
+    registrarSessaoAtiva();
   }
 
   function renderCanaisPage() {
@@ -2082,6 +2092,9 @@ const STATE = {
       }
       
       showToast(`Carregando canal: ${canal.nome}...`, 'success');
+      
+      // Update active session immediately with currentlyWatching channel
+      registrarSessaoAtiva();
       
       // Scroll suave para o player
       const targetScroll = playerWrapper.getBoundingClientRect().top + window.scrollY - 100;
@@ -2576,6 +2589,9 @@ const STATE = {
     document.body.style.overflow = 'hidden';
 
     showToast('Iniciando player via MyEmbed.biz...', 'success');
+    
+    // Update active session immediately with currentlyWatching movie/series
+    registrarSessaoAtiva();
   }
 
   function closeCinema() {
@@ -2614,6 +2630,9 @@ const STATE = {
     DOM.cinemaIframe.style.display = 'none';
     DOM.cinemaBlockerTop.style.display = 'none';
     document.body.style.overflow = '';
+
+    // Update active session to remove currentlyWatching
+    registrarSessaoAtiva();
 
     // Refresh indicators
     if (STATE.currentPage === 'home') renderHome();
@@ -3991,9 +4010,7 @@ const STATE = {
     sessionHeartbeatInterval = setInterval(async () => {
       if (STATE.currentUser && document.visibilityState === 'visible') {
         try {
-          const sid = obterSessionId();
-          const sessionRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}`);
-          await update(sessionRef, { lastActive: Date.now() });
+          await registrarSessaoAtiva();
         } catch (e) {
           console.warn("Erro no heartbeat da sessão:", e);
         }
@@ -4028,6 +4045,28 @@ const STATE = {
     // Obter apelido local do aparelho, se houver
     const localNickname = localStorage.getItem('darkflix_device_nickname') || "";
     
+    let currentlyWatching = null;
+    if (DOM.cinemaMode.classList.contains('active') && STATE.currentWatchItem) {
+      currentlyWatching = {
+        title: STATE.currentWatchItem.title,
+        type: STATE.currentWatchItem.type,
+        id: STATE.currentWatchItem.id,
+        season: STATE.currentWatchItem.season || null,
+        episode: STATE.currentWatchItem.episode || null,
+        timestamp: Date.now()
+      };
+    } else if (STATE.currentPage === 'canais' && canalPlayer && canalPlayer.options && canalPlayer.options.source) {
+      const activeCanal = listaCanais.find(c => c.url === canalPlayer.options.source);
+      if (activeCanal) {
+        currentlyWatching = {
+          title: activeCanal.nome,
+          type: 'canal',
+          id: activeCanal.id,
+          timestamp: Date.now()
+        };
+      }
+    }
+
     const sessionData = {
       id: sid,
       deviceInfo: {
@@ -4037,6 +4076,7 @@ const STATE = {
       lastActive: Date.now(),
       profileName: STATE.currentProfile ? STATE.currentProfile.name : "Escolha de Perfil",
       profileAvatar: STATE.currentProfile ? (STATE.currentProfile.avatar || PRESET_AVATARS[0].url) : "",
+      currentlyWatching: currentlyWatching,
       revoked: false
     };
 
@@ -4082,9 +4122,15 @@ const STATE = {
   }
 
   // Carregar e renderizar a página de Acesso e Aparelhos
-  async function renderizarPaginaAparelhos() {
+  function renderizarPaginaAparelhos() {
     const listContainer = document.getElementById('devices-list-container');
     if (!listContainer || !STATE.currentUser) return;
+
+    // Remover ouvinte de aparelhos anterior para evitar duplicações
+    if (STATE.devicesListenerRef) {
+      STATE.devicesListenerRef();
+      STATE.devicesListenerRef = null;
+    }
 
     listContainer.innerHTML = `
       <div style="text-align: center; padding: 30px; color: var(--text-secondary);">
@@ -4099,10 +4145,18 @@ const STATE = {
       nicknameInput.value = localStorage.getItem('darkflix_device_nickname') || "";
     }
 
-    try {
-      const dbRef = ref(db);
-      const snapshot = await get(child(dbRef, `users/${STATE.currentUser.uid}/sessions`));
-      
+    const sessionsRef = ref(db, `users/${STATE.currentUser.uid}/sessions`);
+    
+    STATE.devicesListenerRef = onValue(sessionsRef, (snapshot) => {
+      if (!listContainer || STATE.currentPage !== 'devices') {
+        // Se saiu da página, parar de ouvir
+        if (STATE.devicesListenerRef) {
+          STATE.devicesListenerRef();
+          STATE.devicesListenerRef = null;
+        }
+        return;
+      }
+
       if (!snapshot.exists()) {
         listContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted);">Nenhum dispositivo registrado.</div>`;
         return;
@@ -4134,6 +4188,25 @@ const STATE = {
           : `<div style="display:flex; align-items:center; gap:8px;">
                <span style="font-size:0.82rem; color:var(--text-muted);">Sem perfil ativo</span>
              </div>`;
+
+        let watchingHTML = '';
+        if (sess.currentlyWatching) {
+          const w = sess.currentlyWatching;
+          const label = w.type === 'canal' ? '📺 Assistindo Canal ao Vivo:' : '🎬 Assistindo agora:';
+          watchingHTML = `
+            <div class="device-watching-badge" style="display:flex; align-items:center; gap:8px; background:rgba(229, 9, 20, 0.08); border:1px dashed rgba(229,9,20,0.3); border-radius:var(--radius-sm); padding:8px 12px; margin-top:4px;">
+              <span style="font-size:0.6rem; animation: pulse 1.5s infinite;">🔴</span>
+              <div style="display:flex; flex-direction:column; gap:2px; min-width:0;">
+                <span style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:var(--accent); font-weight:700;">
+                  ${label}
+                </span>
+                <span style="font-size:0.82rem; font-weight:600; color:var(--text-primary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${w.title}">
+                  ${w.title}
+                </span>
+              </div>
+            </div>
+          `;
+        }
 
         const activeStatusHTML = isOnline 
           ? `<span class="device-badge-active" style="color:#22c55e; font-weight:700; font-size:0.8rem; display:inline-flex; align-items:center; gap:6px;">
@@ -4171,9 +4244,10 @@ const STATE = {
               </div>
             </div>
 
-            <!-- Card Body: User Profile & Timestamp/Online info -->
+            <!-- Card Body: User Profile, Currently Watching & Timestamp/Online info -->
             <div style="display:flex; flex-direction:column; gap:8px;">
               ${avatarHTML}
+              ${watchingHTML}
               <div style="margin-top:4px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
                 ${activeStatusHTML}
                 ${isCurrent ? '<span class="device-badge-current" style="margin-left:auto;">Este Aparelho</span>' : ''}
@@ -4196,7 +4270,6 @@ const STATE = {
               // Marcar como revogada no Firebase
               await update(ref(db, `users/${STATE.currentUser.uid}/sessions/${sidToRevoke}`), { revoked: true });
               showToast("Aparelho desconectado com sucesso!", "success");
-              renderizarPaginaAparelhos(); // Atualizar painel
             } catch (err) {
               console.error("Erro ao revogar sessão:", err);
               showToast("Erro ao desconectar aparelho.", "error");
