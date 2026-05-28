@@ -64,6 +64,10 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
               Gerenciar Perfis
             </button>
+            <button id="btn-dropdown-devices">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              Acesso e Aparelhos
+            </button>
             <button id="btn-dropdown-watchlist">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               Na Minha Lista
@@ -162,7 +166,10 @@
       <div class="profiles-grid" id="profiles-grid">
         <!-- Rendered dynamically by JS -->
       </div>
-      <button class="btn-manage-profiles" id="btn-manage-profiles">Gerenciar Perfis</button>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 20px;">
+        <button class="btn-manage-profiles" id="btn-manage-profiles" style="margin-top: 0;">Gerenciar Perfis</button>
+        <button class="btn-manage-profiles" id="btn-profiles-devices" style="margin-top: 0; background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.15);">Acesso e Aparelhos</button>
+      </div>
     </div>
   </div>
 
@@ -501,6 +508,28 @@
       <h2>Escolha seu Avatar</h2>
       <div class="avatar-picker-sections" id="avatar-picker-sections-container">
         <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ DEVICES MODAL ============ -->
+  <div class="modal-backdrop" id="devices-modal">
+    <div class="devices-container">
+      <button class="devices-close" id="devices-close-btn">✕</button>
+      <h2 class="devices-title">Acesso e Aparelhos</h2>
+      <p class="devices-subtitle">Dispositivos atualmente conectados à sua conta. Se você não reconhecer um aparelho, clique em <strong>Sair</strong> para desconectá-lo.</p>
+      
+      <!-- Current Device Custom Nickname Section -->
+      <div class="current-device-rename-section">
+        <h3>🏷️ Dar apelido a este aparelho:</h3>
+        <div class="rename-input-group">
+          <input type="text" id="current-device-name-input" maxlength="25" placeholder="Ex: Meu PC do Quarto, iPhone do Chrys...">
+          <button class="btn btn-primary btn-small" id="btn-save-device-name">Salvar Apelido</button>
+        </div>
+      </div>
+      
+      <div class="devices-list" id="devices-list-container">
+        <!-- Injected dynamically by JS -->
       </div>
     </div>
   </div>

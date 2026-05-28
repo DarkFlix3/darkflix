@@ -3130,6 +3130,14 @@ const STATE = {
       };
     }
 
+    const btnProfilesDevices = document.getElementById('btn-profiles-devices');
+    if (btnProfilesDevices) {
+      btnProfilesDevices.onclick = (e) => {
+        e.preventDefault();
+        abrirModalAparelhos();
+      };
+    }
+
     // Bind Devices Modal close button
     const devicesCloseBtn = document.getElementById('devices-close-btn');
     if (devicesCloseBtn) {
