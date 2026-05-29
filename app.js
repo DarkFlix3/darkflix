@@ -896,20 +896,22 @@ const STATE = {
 
       // Set featured on banner (daily rotating movie/series)
       const heroItem = await selectDailyFeaturedItem(nowPlayingAll, trendingSeries.results);
-      renderHero(heroItem || trendingMovies.results[0]);
+      renderHero(heroItem || trendingMovies.results.find(isItemClean) || trendingMovies.results[0]);
 
       let html = '';
 
       // Helper para gerar seção
       function buildSection(title, items, mediaType) {
         if (!items || items.length === 0) return '';
+        const cleanItems = items.filter(isItemClean);
+        if (cleanItems.length === 0) return '';
         return `
           <section class="section">
             <div class="section-header">
               <h2 class="section-title">${title}</h2>
             </div>
             <div class="movies-row">
-              ${items.map((item, i) => createCardHTML(item, i, mediaType)).join('')}
+              ${cleanItems.map((item, i) => createCardHTML(item, i, mediaType)).join('')}
             </div>
           </section>
         `;
@@ -1044,6 +1046,37 @@ const STATE = {
     }
   }
 
+  // Filtra itens obscuros, sem imagem ou com títulos contendo caracteres especiais/estranhos (ex: Hindi, Árabe)
+  function isItemClean(item) {
+    if (!item) return false;
+
+    // 1. Deve ter poster e imagem de fundo
+    if (!item.poster_path || !item.backdrop_path) return false;
+
+    // 2. Deve ter sinopse razoável
+    if (!item.overview || item.overview.trim().length < 10) return false;
+
+    // 3. Filtro de popularidade (ignorar itens muito obscuros)
+    if (item.popularity && item.popularity < 15) return false;
+
+    // 4. Bloquear títulos com caracteres não-latinos estranhos (ex: Hindi/Devanagari, Árabe, Cirílico, CJK)
+    const title = item.title || item.name || '';
+    const hasNonLatinScripts = /[\u0900-\u097F\u0600-\u06FF\u0400-\u04FF\u0590-\u05FF\u3000-\u9FFF]/;
+    if (hasNonLatinScripts.test(title)) return false;
+
+    return true;
+  }
+
+  // Filtro ligeiramente mais brando para a busca, não exigindo sinopse ou limite de popularidade
+  function isItemCleanSearch(item) {
+    if (!item) return false;
+    if (!item.poster_path || !item.backdrop_path) return false;
+    const title = item.title || item.name || '';
+    const hasNonLatinScripts = /[\u0900-\u097F\u0600-\u06FF\u0400-\u04FF\u0590-\u05FF\u3000-\u9FFF]/;
+    if (hasNonLatinScripts.test(title)) return false;
+    return true;
+  }
+
   async function fetchFeaturedItem() {
     if (!STATE.featuredId) return null;
     try {
@@ -1075,17 +1108,21 @@ const STATE = {
       candidates.push({ id: item.id, media_type: item.media_type });
     });
 
-    // Add cinema releases
+    // Add cinema releases (filtrados)
     if (nowPlayingMovies && nowPlayingMovies.length > 0) {
       nowPlayingMovies.forEach(item => {
-        candidates.push({ id: item.id, media_type: 'movie', data: item });
+        if (isItemClean(item)) {
+          candidates.push({ id: item.id, media_type: 'movie', data: item });
+        }
       });
     }
 
-    // Add trending series
+    // Add trending series (filtrados)
     if (trendingSeriesList && trendingSeriesList.length > 0) {
       trendingSeriesList.forEach(item => {
-        candidates.push({ id: item.id, media_type: 'tv', data: item });
+        if (isItemClean(item)) {
+          candidates.push({ id: item.id, media_type: 'tv', data: item });
+        }
       });
     }
 
@@ -1143,7 +1180,7 @@ const STATE = {
       return details;
     } catch (e) {
       console.warn("Error fetching curated classic details, falling back", e);
-      return nowPlayingMovies[0] || null;
+      return nowPlayingMovies.find(isItemClean) || nowPlayingMovies[0] || null;
     }
   }
 
@@ -1255,13 +1292,14 @@ const STATE = {
 
       const data = await tmdbFetch('/discover/movie', params);
       const results = data.results || [];
+      const cleanResults = results.filter(isItemClean);
 
-      if (results.length === 0) {
+      if (cleanResults.length === 0) {
         DOM.moviesGridAll.innerHTML = `<div class="no-results">Nenhum filme encontrado para essa categoria.</div>`;
         return;
       }
 
-      DOM.moviesGridAll.innerHTML = results.map((item, i) => createCardHTML(item, i, 'movie')).join('');
+      DOM.moviesGridAll.innerHTML = cleanResults.map((item, i) => createCardHTML(item, i, 'movie')).join('');
       attachCardEvents(DOM.moviesGridAll);
 
     } catch (err) {
@@ -1307,13 +1345,14 @@ const STATE = {
 
       const data = await tmdbFetch('/discover/tv', params);
       const results = data.results || [];
+      const cleanResults = results.filter(isItemClean);
 
-      if (results.length === 0) {
+      if (cleanResults.length === 0) {
         DOM.seriesGridAll.innerHTML = `<div class="no-results">Nenhuma série encontrada para essa categoria.</div>`;
         return;
       }
 
-      DOM.seriesGridAll.innerHTML = results.map((item, i) => createCardHTML(item, i, 'tv')).join('');
+      DOM.seriesGridAll.innerHTML = cleanResults.map((item, i) => createCardHTML(item, i, 'tv')).join('');
       attachCardEvents(DOM.seriesGridAll);
 
     } catch (err) {
@@ -1393,13 +1432,14 @@ const STATE = {
 
       // Mesclar e ordenar os animes por popularidade (garante os mais famosos no início)
       const results = [...tvResults, ...movieResults].sort((a, b) => b.popularity - a.popularity);
+      const cleanResults = results.filter(isItemClean);
 
-      if (results.length === 0) {
+      if (cleanResults.length === 0) {
         DOM.animesGridAll.innerHTML = `<div class="no-results">Nenhum anime encontrado para essa categoria.</div>`;
         return;
       }
 
-      DOM.animesGridAll.innerHTML = results.map((item, i) => createCardHTML(item, i)).join('');
+      DOM.animesGridAll.innerHTML = cleanResults.map((item, i) => createCardHTML(item, i)).join('');
       attachCardEvents(DOM.animesGridAll);
 
     } catch (err) {
@@ -2259,15 +2299,16 @@ const STATE = {
     try {
       const data = await tmdbFetch('/search/multi', { query: q });
       const results = (data.results || []).filter(item => item.media_type === 'movie' || item.media_type === 'tv');
+      const cleanResults = results.filter(isItemCleanSearch);
 
-      DOM.searchResultsTitle.innerHTML = `Resultados para: <strong>"${q}"</strong> (${results.length})`;
+      DOM.searchResultsTitle.innerHTML = `Resultados para: <strong>"${q}"</strong> (${cleanResults.length})`;
 
-      if (results.length === 0) {
+      if (cleanResults.length === 0) {
         DOM.searchResultsGrid.innerHTML = '';
         DOM.noResults.style.display = 'block';
       } else {
         DOM.noResults.style.display = 'none';
-        DOM.searchResultsGrid.innerHTML = results.map((item, i) => createCardHTML(item, i)).join('');
+        DOM.searchResultsGrid.innerHTML = cleanResults.map((item, i) => createCardHTML(item, i)).join('');
         attachCardEvents(DOM.searchResultsGrid);
       }
 
