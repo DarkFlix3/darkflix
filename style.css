@@ -1837,13 +1837,16 @@ ul, ol {
   }
 
   .cinema-mode {
-    padding: 60px 0 40px !important;
+    padding: 60px 0 20px !important;
+    justify-content: flex-start !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 
-  /* Scroll wrapper: normal hidden overflow */
+  /* Scroll wrapper: allow content to flow */
   .cinema-player-scroll-wrapper {
     overflow-x: hidden !important;
-    overflow-y: hidden !important;
+    overflow-y: visible !important;
     width: 100% !important;
     padding-bottom: 0 !important;
   }
@@ -4141,6 +4144,45 @@ ul, ol {
   .admin-btn-action {
     padding: 8px 10px;
     font-size: 0.75rem;
+  }
+}
+
+/* ---------- Cinema Player portrait — APK WebView broader breakpoint ---------- */
+/* O WebView do APK pode reportar viewport mais largo que 768px mesmo em celular.
+   Esta regra garante que o player use o layout mobile (16:13, full width, scrollável)
+   em qualquer dispositivo em modo retrato com largura até 1200px. */
+@media (max-width: 1200px) and (orientation: portrait) {
+  .cinema-mode {
+    justify-content: flex-start !important;
+    padding: 60px 0 20px !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cinema-player-scroll-wrapper {
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    width: 100% !important;
+  }
+
+  .cinema-player {
+    width: 100% !important;
+    min-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 13 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+  }
+
+  .cinema-player iframe {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .cinema-close {
+    top: 16px;
+    right: 16px;
   }
 }
 

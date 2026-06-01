@@ -26,6 +26,11 @@ const db = getDatabase(app);
 // Segurança contra Inspeção e Proteção de Dados (Avançado)
 // ============================================================
 (function() {
+  // Detectar se estamos num WebView (APK) — pular verificações pesadas lá
+  const isWebView = /wv|WebView|Android.*Version\/[0-9]/.test(navigator.userAgent)
+    || window.matchMedia('(display-mode: standalone)').matches
+    || navigator.standalone === true;
+
   // Desativar clique direito (Menu de contexto)
   document.addEventListener('contextmenu', event => event.preventDefault());
 
@@ -53,33 +58,37 @@ const db = getDatabase(app);
     }
   });
 
-  // Limpar console constantemente para evitar injeção e leitura de scripts
-  setInterval(() => {
-    console.clear();
-  }, 1000);
+  // Só executar verificações pesadas em navegadores desktop, não em WebView/APK
+  // No APK não existe DevTools, então debugger e console.clear são desperdício de CPU
+  if (!isWebView) {
+    // Limpar console periodicamente para evitar injeção e leitura de scripts
+    setInterval(() => {
+      console.clear();
+    }, 3000);
 
-  // Detector inteligente de DevTools (Mecanismo de Autodestruição da Página)
-  // Se as ferramentas estiverem abertas, o comando debugger causará uma pausa
-  // que atrasará a execução do script. Medimos esse tempo e tomamos providências.
-  setInterval(() => {
-    const startTime = performance.now();
-    debugger;
-    const endTime = performance.now();
-    
-    // Se demorar mais que 100ms, significa que o DevTools estava aberto e pausou no debugger
-    if (endTime - startTime > 100) {
-      document.body.innerHTML = `
-        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; background:#12121a; color:#e50914; font-family:'Montserrat', sans-serif; text-align:center; padding:20px; z-index:999999; position:fixed; inset:0;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:20px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          <h1 style="font-size:2rem; font-weight:800; margin-bottom:10px; text-transform:uppercase; letter-spacing:1px;">Acesso Bloqueado</h1>
-          <p style="color:#a0aec0; font-size:1rem; max-width:450px; line-height:1.5;">Ferramentas de inspeção detectadas. Por motivos de segurança, sua sessão foi encerrada.</p>
-        </div>
-      `;
-      setTimeout(() => {
-        window.location.replace("about:blank");
-      }, 1500);
-    }
-  }, 500);
+    // Detector inteligente de DevTools (Mecanismo de Autodestruição da Página)
+    // Se as ferramentas estiverem abertas, o comando debugger causará uma pausa
+    // que atrasará a execução do script. Medimos esse tempo e tomamos providências.
+    setInterval(() => {
+      const startTime = performance.now();
+      debugger;
+      const endTime = performance.now();
+      
+      // Se demorar mais que 100ms, significa que o DevTools estava aberto e pausou no debugger
+      if (endTime - startTime > 100) {
+        document.body.innerHTML = `
+          <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; background:#12121a; color:#e50914; font-family:'Montserrat', sans-serif; text-align:center; padding:20px; z-index:999999; position:fixed; inset:0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:20px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <h1 style="font-size:2rem; font-weight:800; margin-bottom:10px; text-transform:uppercase; letter-spacing:1px;">Acesso Bloqueado</h1>
+            <p style="color:#a0aec0; font-size:1rem; max-width:450px; line-height:1.5;">Ferramentas de inspeção detectadas. Por motivos de segurança, sua sessão foi encerrada.</p>
+          </div>
+        `;
+        setTimeout(() => {
+          window.location.replace("about:blank");
+        }, 1500);
+      }
+    }, 2000);
+  }
 })();
 
 const AVATAR_CATEGORIES = [
@@ -2926,7 +2935,9 @@ const STATE = {
       "https://image.tmdb.org/t/p/w342/xOMo8NET4x0uJZ6Imvhk4cwjPvY.jpg"  // Demon Slayer
     ];
 
-    const numRows = 5;
+    // No celular/WebView usa menos linhas para economizar memória e CPU
+    const isMobile = window.innerWidth <= 768 || /Android|iPhone|iPad/i.test(navigator.userAgent);
+    const numRows = isMobile ? 3 : 5;
     let gridHtml = '<div class="auth-poster-grid">';
 
     for (let r = 0; r < numRows; r++) {
