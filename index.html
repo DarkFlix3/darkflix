@@ -14,7 +14,7 @@
 
   <!-- ============ INTRO VIDEO OVERLAY ============ -->
   <div id="intro-overlay" class="intro-overlay">
-    <video id="intro-video" class="intro-video" autoplay playsinline muted>
+    <video id="intro-video" class="intro-video" autoplay playsinline webkit-playsinline="true" muted preload="auto">
       <source src="assets/intro.mp4" type="video/mp4">
     </video>
     <button id="intro-skip-btn" class="intro-skip-btn">Pular</button>
@@ -464,20 +464,7 @@
       <div id="cinema-blocker-top" class="cinema-player-blocker-top" style="display: none;"></div>
     </div>
     <p class="cinema-title" id="cinema-title"></p>
-    <div class="cinema-controls" id="cinema-controls" style="margin-top: 15px; display: flex; gap: 16px; justify-content: center;">
-      <button class="btn btn-secondary btn-small" id="cinema-rewind-btn" style="padding: 10px 20px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;"><polygon points="11 19 2 12 11 5 11 19"/><polygon points="22 19 13 12 22 5 22 19"/></svg>
-        Voltar 15s
-      </button>
-      <button class="btn btn-secondary btn-small" id="cinema-fullscreen-btn" style="padding: 10px 20px; background: rgba(229, 9, 20, 0.15); border-color: rgba(229, 9, 20, 0.35); color: white;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-        Tela Cheia
-      </button>
-      <button class="btn btn-secondary btn-small" id="cinema-forward-btn" style="padding: 10px 20px;">
-        Avançar 15s
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px; vertical-align: middle;"><polygon points="13 19 22 12 13 5 13 19"/><polygon points="2 19 11 12 2 5 2 19"/></svg>
-      </button>
-    </div>
+
     <p id="cinema-iframe-tip" style="color: var(--text-muted); font-size: 0.78rem; text-align: center; margin-top: 8px; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.4; opacity: 0.85;">
       💡 <strong>Dica no Celular:</strong> Para assistir em tela minimizada (PiP) ao sair do navegador, ative a <strong>tela cheia</strong> no vídeo e deslize para cima ou saia do aplicativo. Para Canais, você pode usar o botão <strong>Minimizar (PiP)</strong> abaixo.
     </p>

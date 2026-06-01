@@ -1216,17 +1216,35 @@ const STATE = {
     DOM.heroMeta.style.display = 'flex';
     DOM.heroGenres.style.display = 'flex';
 
-    DOM.heroWatchBtn.onclick = () => {
-      if (type === 'movie') {
-        STATE.currentMovieDetail = item;
-        openCinema(item.id, title, type);
-      } else {
-        showToast('Escolha uma temporada e episódio na seção de detalhes!', 'info');
-        openDetail(item);
+    DOM.heroWatchBtn.onclick = async () => {
+      try {
+        showToast('Carregando detalhes...', 'info');
+        const details = await tmdbFetch(`/${type}/${item.id}`);
+        details.media_type = type;
+        if (type === 'movie') {
+          STATE.currentMovieDetail = details;
+          closeDetail();
+          setTimeout(() => openCinema(details.id, title, type), 300);
+        } else {
+          openDetail(details);
+        }
+      } catch (err) {
+        console.error("Erro ao carregar detalhes no destaque:", err);
+        showToast('Erro ao carregar o player.', 'error');
       }
     };
 
-    DOM.heroInfoBtn.onclick = () => openDetail(item);
+    DOM.heroInfoBtn.onclick = async () => {
+      try {
+        showToast('Carregando detalhes...', 'info');
+        const details = await tmdbFetch(`/${type}/${item.id}`);
+        details.media_type = type;
+        openDetail(details);
+      } catch (err) {
+        console.error("Erro ao carregar informações no destaque:", err);
+        showToast('Erro ao carregar detalhes.', 'error');
+      }
+    };
 
     // Auto-play trailer after 5 seconds
     stopMainHeroTrailer();
@@ -2620,8 +2638,12 @@ const STATE = {
       }
     }, 15000);
 
+    const tempMovieDetail = STATE.currentMovieDetail;
     stopMainHeroTrailer();
-    closeDetail(); // closeDetail limpa com segurança STATE.currentMovieDetail agora!
+    closeDetail();
+    if (tempMovieDetail) {
+      STATE.currentMovieDetail = tempMovieDetail;
+    }
 
     DOM.cinemaTitle.textContent = title;
     
@@ -3133,65 +3155,7 @@ const STATE = {
       };
     }
 
-    // Bind Cinema Rewind/Forward buttons
-    if (DOM.cinemaRewindBtn) {
-      DOM.cinemaRewindBtn.onclick = (e) => {
-        e.preventDefault();
-        if (DOM.cinemaVideo.style.display !== 'none') {
-          DOM.cinemaVideo.currentTime = Math.max(0, DOM.cinemaVideo.currentTime - 15);
-        } else {
-          try {
-            const iframeWindow = DOM.cinemaIframe.contentWindow;
-            if (iframeWindow) {
-              iframeWindow.postMessage(JSON.stringify({ event: 'seek', value: -15 }), '*');
-              iframeWindow.postMessage(JSON.stringify({ method: 'seek', value: -15 }), '*');
-            }
-          } catch (err) {}
-          showToast("Tentando voltar 15s... Use os controles na tela se necessário.", "info");
-        }
-      };
-    }
-    if (DOM.cinemaForwardBtn) {
-      DOM.cinemaForwardBtn.onclick = (e) => {
-        e.preventDefault();
-        if (DOM.cinemaVideo.style.display !== 'none') {
-          DOM.cinemaVideo.currentTime = Math.min(DOM.cinemaVideo.duration || 0, DOM.cinemaVideo.currentTime + 15);
-        } else {
-          try {
-            const iframeWindow = DOM.cinemaIframe.contentWindow;
-            if (iframeWindow) {
-              iframeWindow.postMessage(JSON.stringify({ event: 'seek', value: 15 }), '*');
-              iframeWindow.postMessage(JSON.stringify({ method: 'seek', value: 15 }), '*');
-            }
-          } catch (err) {}
-          showToast("Tentando avançar 15s... Use os controles na tela se necessário.", "info");
-        }
-      };
-    }
-    if (DOM.cinemaFullscreenBtn) {
-      DOM.cinemaFullscreenBtn.onclick = (e) => {
-        e.preventDefault();
-        const element = DOM.cinemaMode;
-        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-          if (element.requestFullscreen) {
-            element.requestFullscreen().catch(err => {
-              console.warn("Fullscreen request rejected", err);
-              showToast("Não foi possível entrar em Tela Cheia automaticamente.", "info");
-            });
-          } else if (element.webkitRequestFullscreen) { /* Safari / iOS */
-            element.webkitRequestFullscreen();
-          } else {
-            showToast("Seu navegador não oferece suporte à tela cheia automática.", "info");
-          }
-        } else {
-          if (document.exitFullscreen) {
-            document.exitFullscreen();
-          } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
-          }
-        }
-      };
-    }
+    // Cinema controls buttons (Rewind, Forward, Fullscreen) removed from DOM
 
     // Bind Netflix System Actions
     DOM.authForm.onsubmit = (e) => handleAuthSubmit(e);
