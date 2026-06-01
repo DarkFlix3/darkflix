@@ -838,58 +838,26 @@ const STATE = {
         { title: 'Séries de Guerra e Política', id: '10768' }
       ];
 
-      // Requests base (índices 0-12)
-      const requests = [
+      // Phase 1: Critical Requests (only 7 requests) - loads extremely fast
+      const criticalRequests = [
         tmdbFetch('/movie/now_playing').catch(() => ({ results: [] })),                   // 0
         tmdbFetch('/movie/now_playing', { page: 2 }).catch(() => ({ results: [] })),       // 1
         tmdbFetch('/trending/movie/week').catch(() => ({ results: [] })),                  // 2
         tmdbFetch('/trending/tv/week').catch(() => ({ results: [] })),                     // 3
-        tmdbFetch('/movie/top_rated').catch(() => ({ results: [] })),                      // 4
-        tmdbFetch('/movie/upcoming').catch(() => ({ results: [] })),                       // 5
-        tmdbFetch('/movie/popular').catch(() => ({ results: [] })),                        // 6
-        tmdbFetch('/movie/popular', { page: 2 }).catch(() => ({ results: [] })),           // 7
-        tmdbFetch('/trending/tv/day').catch(() => ({ results: [] })),                      // 8
-        Promise.resolve(null),                                                             // 9
-        tmdbFetch('/tv/top_rated').catch(() => ({ results: [] })),                         // 10
-        tmdbFetch('/tv/on_the_air').catch(() => ({ results: [] })),                        // 11
-        tmdbFetch('/tv/popular').catch(() => ({ results: [] }))                            // 12
+        tmdbFetch('/movie/popular').catch(() => ({ results: [] })),                        // 4
+        tmdbFetch('/movie/popular', { page: 2 }).catch(() => ({ results: [] })),           // 5
+        tmdbFetch('/trending/tv/day').catch(() => ({ results: [] }))                       // 6
       ];
 
-      const baseRequestCount = requests.length; // 13
-
-      // Requests das categorias por gênero de FILMES
-      homeCategories.forEach(cat => {
-        requests.push(tmdbFetch('/discover/movie', { with_genres: cat.id, sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
-      });
-
-      const afterMovieCats = requests.length;
-
-      // Requests das categorias por gênero de SÉRIES
-      seriesCategories.forEach(cat => {
-        requests.push(tmdbFetch('/discover/tv', { with_genres: cat.id, sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
-      });
-
-      // Request especial para Animes (Animações com idioma original Japonês 'ja')
-      requests.push(tmdbFetch('/discover/tv', { with_genres: '16', with_original_language: 'ja', sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
-
-      const responses = await Promise.all(requests);
+      const responses = await Promise.all(criticalRequests);
 
       const nowPlaying1 = responses[0];
       const nowPlaying2 = responses[1];
       const trendingMovies = responses[2];
       const trendingSeries = responses[3];
-      const topRated = responses[4];
-      const upcoming = responses[5];
-      const popular1 = responses[6];
-      const popular2 = responses[7];
-      const trendingSeriesDay = responses[8];
-      const featuredDetails = responses[9];
-      const tvTopRated = responses[10];
-      const tvOnTheAir = responses[11];
-      const tvPopular = responses[12];
-      const movieCategoryResults = responses.slice(baseRequestCount, afterMovieCats);
-      const seriesCategoryResults = responses.slice(afterMovieCats, responses.length - 1);
-      const animeResults = responses[responses.length - 1];
+      const popular1 = responses[4];
+      const popular2 = responses[5];
+      const trendingSeriesDay = responses[6];
 
       // Combinar páginas
       const nowPlayingAll = [...(nowPlaying1.results || []), ...(nowPlaying2.results || [])];
@@ -921,32 +889,34 @@ const STATE = {
       // ======= CONTINUE ASSISTINDO =======
       let inProgressList = STATE.inProgress;
       
-      // Asynchronously repair missing metadata in history
-      let repairedAny = false;
-      for (let i = 0; i < inProgressList.length; i++) {
-        const item = inProgressList[i];
-        if (!item.poster_path && item.id) {
-          try {
-            const details = await tmdbFetch(`/${item.media_type || 'movie'}/${item.id}`);
-            if (details && details.poster_path) {
-              item.poster_path = details.poster_path;
-              item.backdrop_path = item.backdrop_path || details.backdrop_path;
-              item.title = details.title || details.name || item.title;
-              item.name = details.name || details.title || item.name;
-              item.vote_average = details.vote_average || item.vote_average;
-              item.release_date = details.release_date || details.first_air_date || item.release_date;
-              item.first_air_date = details.first_air_date || details.release_date || item.first_air_date;
-              
-              if (STATE.currentUser && STATE.currentProfile) {
-                await set(ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/in_progress/${item.id}`), item);
+      // Asynchronously repair missing metadata in history (WITHOUT blocking the main render!)
+      (async () => {
+        let repairedAny = false;
+        for (let i = 0; i < inProgressList.length; i++) {
+          const item = inProgressList[i];
+          if (!item.poster_path && item.id) {
+            try {
+              const details = await tmdbFetch(`/${item.media_type || 'movie'}/${item.id}`);
+              if (details && details.poster_path) {
+                item.poster_path = details.poster_path;
+                item.backdrop_path = item.backdrop_path || details.backdrop_path;
+                item.title = details.title || details.name || item.title;
+                item.name = details.name || details.title || item.name;
+                item.vote_average = details.vote_average || item.vote_average;
+                item.release_date = details.release_date || details.first_air_date || item.release_date;
+                item.first_air_date = details.first_air_date || details.release_date || item.first_air_date;
+                
+                if (STATE.currentUser && STATE.currentProfile) {
+                  await set(ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/in_progress/${item.id}`), item);
+                }
+                repairedAny = true;
               }
-              repairedAny = true;
+            } catch (e) {
+              console.warn(`Erro reparando metadados do item ${item.id}`, e);
             }
-          } catch (e) {
-            console.warn(`Erro reparando metadados do item ${item.id}`, e);
           }
         }
-      }
+      })();
 
       html += `
         <section class="section section-continue-watching">
@@ -981,39 +951,21 @@ const STATE = {
       // 4. Séries Populares (trending semana)
       html += buildSection('Séries Populares', trendingSeries.results, 'tv');
 
-      // 5. Séries no Ar Agora
-      html += buildSection('Séries no Ar Agora', tvOnTheAir.results, 'tv');
-
-      // 6. Mais Bem Avaliados de Todos os Tempos
-      html += buildSection('Mais Bem Avaliados', topRated.results, 'movie');
-
-      // 7. Séries Mais Bem Avaliadas
-      html += buildSection('Séries Mais Bem Avaliadas', tvTopRated.results, 'tv');
-
       // 9. Populares Agora
       html += buildSection('Populares Agora', popularAll, 'movie');
-
-      // 10. Séries Populares Agora
-      html += buildSection('Séries Populares Agora', tvPopular.results, 'tv');
 
       // 11. Séries em Alta Hoje
       html += buildSection('Séries em Alta Hoje', trendingSeriesDay.results, 'tv');
 
-      // 11.5 Animes
-      const animeShows = animeResults.results || [];
-      html += buildSection('Animes de Sucesso', animeShows, 'tv');
-
-      // 12. Categorias de séries por gênero
-      seriesCategories.forEach((cat, index) => {
-        const results = seriesCategoryResults[index].results || [];
-        html += buildSection(cat.title, results, 'tv');
-      });
-
-      // 13. Categorias de filmes por gênero
-      homeCategories.forEach((cat, index) => {
-        const results = movieCategoryResults[index].results || [];
-        html += buildSection(cat.title, results, 'movie');
-      });
+      // Placeholder for Phase 2 deferred categories with premium animation spinner
+      html += `
+        <div id="home-deferred-content">
+          <div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: var(--text-secondary);">
+            <div style="margin: 0 auto 16px; width: 32px; height: 32px; border: 3px solid var(--accent-soft); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; box-shadow: 0 0 10px var(--accent-glow);"></div>
+            <span style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px;">Carregando mais categorias...</span>
+          </div>
+        </div>
+      `;
 
       DOM.homeContent.innerHTML = html || `
         <div class="no-results">
@@ -1041,11 +993,84 @@ const STATE = {
         };
       }
 
+      // Phase 2: Deferred Requests (Top Rated, upcoming, series categories, movie categories, animes)
+      (async () => {
+        try {
+          const deferredRequests = [
+            tmdbFetch('/movie/top_rated').catch(() => ({ results: [] })),                      // 0
+            tmdbFetch('/movie/upcoming').catch(() => ({ results: [] })),                       // 1
+            tmdbFetch('/tv/top_rated').catch(() => ({ results: [] })),                         // 2
+            tmdbFetch('/tv/on_the_air').catch(() => ({ results: [] })),                        // 3
+            tmdbFetch('/tv/popular').catch(() => ({ results: [] }))                            // 4
+          ];
+
+          // Requests das categorias por gênero de FILMES
+          homeCategories.forEach(cat => {
+            deferredRequests.push(tmdbFetch('/discover/movie', { with_genres: cat.id, sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
+          });
+
+          // Requests das categorias por gênero de SÉRIES
+          seriesCategories.forEach(cat => {
+            deferredRequests.push(tmdbFetch('/discover/tv', { with_genres: cat.id, sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
+          });
+
+          // Request especial para Animes
+          deferredRequests.push(tmdbFetch('/discover/tv', { with_genres: '16', with_original_language: 'ja', sort_by: 'popularity.desc' }).catch(() => ({ results: [] })));
+
+          const defResponses = await Promise.all(deferredRequests);
+
+          const topRated = defResponses[0];
+          const upcoming = defResponses[1];
+          const tvTopRated = defResponses[2];
+          const tvOnTheAir = defResponses[3];
+          const tvPopular = defResponses[4];
+          
+          const baseDefCount = 5;
+          const movieCategoryResults = defResponses.slice(baseDefCount, baseDefCount + homeCategories.length);
+          const seriesCategoryResults = defResponses.slice(baseDefCount + homeCategories.length, defResponses.length - 1);
+          const animeResults = defResponses[defResponses.length - 1];
+
+          let defHtml = '';
+          
+          defHtml += buildSection('Séries no Ar Agora', tvOnTheAir.results, 'tv');
+          defHtml += buildSection('Mais Bem Avaliados', topRated.results, 'movie');
+          defHtml += buildSection('Próximos Lançamentos', upcoming.results, 'movie');
+          defHtml += buildSection('Séries Mais Bem Avaliadas', tvTopRated.results, 'tv');
+          defHtml += buildSection('Séries Populares Agora', tvPopular.results, 'tv');
+          
+          const animeShows = animeResults.results || [];
+          defHtml += buildSection('Animes de Sucesso', animeShows, 'tv');
+
+          seriesCategories.forEach((cat, index) => {
+            const results = seriesCategoryResults[index].results || [];
+            defHtml += buildSection(cat.title, results, 'tv');
+          });
+
+          homeCategories.forEach((cat, index) => {
+            const Math_min_10 = movieCategoryResults[index].results || [];
+            defHtml += buildSection(cat.title, Math_min_10, 'movie');
+          });
+
+          const deferredContainer = document.getElementById('home-deferred-content');
+          if (deferredContainer) {
+            deferredContainer.innerHTML = defHtml;
+            attachCardEvents(deferredContainer);
+          }
+        } catch (e) {
+          console.warn("Erro ao carregar categorias secundárias:", e);
+          const deferredContainer = document.getElementById('home-deferred-content');
+          if (deferredContainer) {
+            deferredContainer.innerHTML = '';
+          }
+        }
+      })();
+
     } catch (err) {
       console.error("Erro renderizando home:", err);
       showErrorState(DOM.homeContent, "Erro ao conectar-se com o TMDB API. Verifique sua conexão.");
     }
   }
+
 
   // Filtra itens obscuros, sem imagem ou com títulos contendo caracteres especiais/estranhos (ex: Hindi, Árabe)
   function isItemClean(item) {
@@ -3666,8 +3691,9 @@ const STATE = {
 
   // ---------- Select Profile and Enter App ----------
   async function selectProfile(profileId) {
-    // Carregar perfis mais recentes do Firebase para garantir dados individuais atualizados
-    await loadProfilesFromDatabase();
+    if (!STATE.allProfiles || Object.keys(STATE.allProfiles).length === 0) {
+      await loadProfilesFromDatabase();
+    }
     
     const p = STATE.allProfiles[profileId];
     if (!p) return;
@@ -3675,8 +3701,8 @@ const STATE = {
     STATE.currentProfile = { id: profileId, ...p };
     localStorage.setItem('darkflix_active_profile_id', profileId);
 
-    // Atualizar a sessão ativa com o novo perfil escolhido
-    await registrarSessaoAtiva();
+    // Registrar a sessão em background, sem await para não bloquear a interface
+    registrarSessaoAtiva();
 
     STATE.favorites = p.favorites ? Object.values(p.favorites) : [];
     STATE.inProgress = p.in_progress ? Object.values(p.in_progress).sort((a,b) => b.timestamp - a.timestamp) : [];
@@ -4916,8 +4942,8 @@ const STATE = {
       // Verificar se o usuário retornou de um link de verificação de email (criação/redefinição de PIN)
       await verificarLinkRedefinicaoPin();
       
-      // Registrar sessão, ouvinte de logout forçado e heartbeat
-      await registrarSessaoAtiva();
+      // Registrar sessão, ouvinte de logout forçado e heartbeat em background para acelerar inicialização
+      registrarSessaoAtiva();
       iniciarOuvinteSessaoForcada();
       iniciarHeartbeatSessao();
 
