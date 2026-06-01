@@ -1041,7 +1041,7 @@ ul, ol {
   position: relative; /* Ensure relative positioning for absolute children */
   width: 90%;
   max-width: 1200px;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 0 80px rgba(229, 9, 20, 0.1);
@@ -1831,10 +1831,15 @@ ul, ol {
     text-align: center;
   }
 
+  .cinema-mode {
+    padding: 60px 0 40px !important;
+  }
+
   .cinema-player {
     width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9 !important;
+    height: 60vh !important;
+    max-height: 450px !important;
+    aspect-ratio: auto !important;
     border-radius: 0 !important;
   }
 
