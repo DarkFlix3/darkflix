@@ -4022,3 +4022,81 @@ ul, ol {
   }
 }
 
+/* ---------- Responsive Mobile Layout for Admin Dashboard ---------- */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 100px 16px 60px;
+  }
+  
+  .dashboard-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .dashboard-stats-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .dashboard-stat-card {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .dashboard-stat-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+  }
+
+  .dashboard-stat-value {
+    font-size: 1.6rem;
+  }
+
+  .dashboard-card {
+    padding: 16px;
+  }
+
+  .dashboard-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .channels-control-list {
+    gap: 20px;
+  }
+
+  .channels-sublist-group {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .channel-control-card {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .channel-control-header {
+    gap: 12px;
+  }
+
+  .channel-control-logo-wrapper {
+    width: 70px;
+    height: 42px;
+  }
+
+  .channel-control-details h4 {
+    font-size: 0.88rem;
+  }
+
+  .admin-btn-action {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+}
+
