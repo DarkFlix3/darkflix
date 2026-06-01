@@ -2591,6 +2591,30 @@ const STATE = {
     }
   }
 
+  let controlsTimeout = null;
+
+  function showCinemaControls() {
+    if (!DOM.cinemaMode) return;
+    
+    const isLandscape = window.innerWidth > window.innerHeight && window.innerWidth <= 950;
+    if (!isLandscape) {
+      DOM.cinemaMode.classList.remove('controls-hidden');
+      return;
+    }
+
+    DOM.cinemaMode.classList.remove('controls-hidden');
+    
+    if (controlsTimeout) {
+      clearTimeout(controlsTimeout);
+    }
+
+    controlsTimeout = setTimeout(() => {
+      if (DOM.cinemaMode.classList.contains('active') && window.innerWidth > window.innerHeight) {
+        DOM.cinemaMode.classList.add('controls-hidden');
+      }
+    }, 3500); // Esconde após 3.5 segundos de inatividade
+  }
+
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
     if (STATE.watchInterval) {
@@ -2726,6 +2750,9 @@ const STATE = {
 
     showToast('Iniciando player via MyEmbed.biz...', 'success');
     
+    // Auto-initiate landscape control hiding
+    showCinemaControls();
+    
     // Update active session immediately with currentlyWatching movie/series
     registrarSessaoAtiva();
   }
@@ -2766,6 +2793,13 @@ const STATE = {
     DOM.cinemaIframe.style.display = 'none';
     DOM.cinemaBlockerTop.style.display = 'none';
     document.body.style.overflow = '';
+
+    // Clear controls hiding timeout and class
+    if (controlsTimeout) {
+      clearTimeout(controlsTimeout);
+      controlsTimeout = null;
+    }
+    DOM.cinemaMode.classList.remove('controls-hidden');
 
     // Update active session to remove currentlyWatching
     registrarSessaoAtiva();
@@ -3182,6 +3216,29 @@ const STATE = {
         closeAvatarPicker();
       }
     });
+
+    // Bind sensor and container interactions to show/hide cinema controls in landscape
+    const topSensor = document.getElementById('cinema-top-sensor');
+    if (topSensor) {
+      topSensor.addEventListener('touchstart', (e) => {
+        showCinemaControls();
+      }, { passive: true });
+      topSensor.addEventListener('mouseenter', () => {
+        showCinemaControls();
+      });
+    }
+
+    if (DOM.cinemaMode) {
+      DOM.cinemaMode.addEventListener('touchstart', (e) => {
+        // Only show if they clicked the container and not the close button itself
+        if (e.target !== DOM.cinemaIframe) {
+          showCinemaControls();
+        }
+      }, { passive: true });
+      DOM.cinemaMode.addEventListener('mousemove', () => {
+        showCinemaControls();
+      });
+    }
 
     // Bind Hero Trailer controls
     if (DOM.heroTrailerPlayPause) {

@@ -1841,37 +1841,24 @@ ul, ol {
     padding: 60px 0 40px !important;
   }
 
-  /* Scroll wrapper: enables left-right swipe to reveal fullscreen button */
+  /* Scroll wrapper: normal hidden overflow */
   .cinema-player-scroll-wrapper {
-    overflow-x: auto !important;
+    overflow-x: hidden !important;
     overflow-y: hidden !important;
     width: 100% !important;
-    scrollbar-width: auto !important;
-    scrollbar-color: var(--accent) rgba(255,255,255,0.05) !important;
-    padding-bottom: 8px !important;
+    padding-bottom: 0 !important;
   }
 
   .cinema-player-scroll-wrapper::-webkit-scrollbar {
-    height: 8px !important;
-    display: block !important;
+    display: none !important;
   }
 
-  .cinema-player-scroll-wrapper::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border-radius: 4px !important;
-  }
-
-  .cinema-player-scroll-wrapper::-webkit-scrollbar-thumb {
-    background: var(--accent) !important;
-    border-radius: 4px !important;
-  }
-
-  /* Player slightly wider than viewport → reveals fullscreen button via horizontal scroll */
+  /* Player ideal full width for portrait mobile */
   .cinema-player {
     width: 100% !important;
-    min-width: 750px !important; /* Force min-width so iframe content gets enough width to display all controls (like Player 1's fullscreen button) */
-    height: 380px !important;
-    aspect-ratio: auto !important;
+    min-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
     border-radius: 0 !important;
     overflow: hidden !important;
   }
@@ -4196,6 +4183,22 @@ ul, ol {
     padding: 8px 16px !important;
     border-radius: var(--radius-xl) !important;
     font-size: 0.78rem !important;
+    transition: opacity 0.35s ease, transform 0.35s ease, background 0.2s ease !important;
+  }
+  .cinema-player-blocker-top {
+    transition: opacity 0.35s ease !important;
+  }
+  .cinema-mode.controls-hidden .cinema-close {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(-10px) !important;
+  }
+  .cinema-mode.controls-hidden .cinema-player-blocker-top {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .cinema-top-sensor {
+    display: block !important;
   }
   .cinema-title,
   .cinema-actions,
