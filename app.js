@@ -3274,6 +3274,10 @@ const STATE = {
         e.stopPropagation();
         STATE.heroTrailerMuted = !STATE.heroTrailerMuted;
         sendTrailerCommand(DOM.heroTrailerIframe, STATE.heroTrailerMuted ? 'mute' : 'unMute');
+        if (!STATE.heroTrailerMuted) {
+          sendTrailerCommand(DOM.heroTrailerIframe, 'playVideo');
+          STATE.heroTrailerPlaying = true;
+        }
         updateTrailerControlsUI('hero', STATE.heroTrailerPlaying, STATE.heroTrailerMuted);
       };
     }
@@ -3294,6 +3298,10 @@ const STATE = {
         e.stopPropagation();
         STATE.modalTrailerMuted = !STATE.modalTrailerMuted;
         sendTrailerCommand(DOM.modalTrailerIframe, STATE.modalTrailerMuted ? 'mute' : 'unMute');
+        if (!STATE.modalTrailerMuted) {
+          sendTrailerCommand(DOM.modalTrailerIframe, 'playVideo');
+          STATE.modalTrailerPlaying = true;
+        }
         updateTrailerControlsUI('modal', STATE.modalTrailerPlaying, STATE.modalTrailerMuted);
       };
     }
@@ -4043,12 +4051,81 @@ const STATE = {
     }
   }
 
+  function confirmarCustomizado(mensagem, titulo = "Confirmar Ação") {
+    return new Promise((resolve) => {
+      const oldModal = document.getElementById('modal-confirmacao-custom');
+      if (oldModal) oldModal.remove();
+
+      const modal = document.createElement('div');
+      modal.id = 'modal-confirmacao-custom';
+      modal.className = 'modal-backdrop active';
+      modal.style.zIndex = '999999';
+
+      modal.innerHTML = `
+        <div class="pin-container" style="box-shadow: var(--shadow-lg); background: #12121a; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px 28px; text-align: center; position: relative; max-width: 400px; width: 90%; transform: scale(0.9); transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+          <button class="pin-close" id="btn-confirm-custom-close" style="position: absolute; right: 15px; top: 15px; background: none; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer; transition: color 0.2s;">✕</button>
+          
+          <div style="margin: 10px auto 20px; width: 64px; height: 64px; background: rgba(229, 9, 20, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(229, 9, 20, 0.2);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#e50914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          
+          <h2 style="font-size: 1.25rem; margin-bottom: 12px; font-weight: 700; color: var(--text-primary); font-family: 'Montserrat', sans-serif;">${titulo}</h2>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 28px; line-height: 1.6; font-family: 'Montserrat', sans-serif; max-width: 320px; margin-left: auto; margin-right: auto;">
+            ${mensagem}
+          </p>
+          
+          <div style="display: flex; gap: 12px; width: 100%;">
+            <button id="btn-confirm-custom-cancel" class="btn btn-secondary" style="flex: 1; padding: 12px; font-size: 0.85rem; font-weight: 700; font-family: 'Montserrat', sans-serif; border-radius: var(--radius-sm);">
+              Cancelar
+            </button>
+            <button id="btn-confirm-custom-confirm" class="btn btn-primary" style="flex: 1; padding: 12px; font-size: 0.85rem; font-weight: 700; font-family: 'Montserrat', sans-serif; border-radius: var(--radius-sm); background: var(--accent);">
+              Confirmar
+            </button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+      document.body.style.overflow = 'hidden';
+
+      setTimeout(() => {
+        const container = modal.querySelector('.pin-container');
+        if (container) container.style.transform = 'scale(1)';
+      }, 50);
+
+      const fecharModal = (result) => {
+        const container = modal.querySelector('.pin-container');
+        if (container) container.style.transform = 'scale(0.9)';
+        modal.classList.remove('active');
+        setTimeout(() => {
+          modal.remove();
+          document.body.style.overflow = '';
+          resolve(result);
+        }, 200);
+      };
+
+      modal.querySelector('#btn-confirm-custom-confirm').onclick = () => fecharModal(true);
+      modal.querySelector('#btn-confirm-custom-cancel').onclick = () => fecharModal(false);
+      modal.querySelector('#btn-confirm-custom-close').onclick = () => fecharModal(false);
+      
+      modal.onclick = (e) => {
+        if (e.target === modal) fecharModal(false);
+      };
+    });
+  }
+
   async function deleteProfileData() {
     if (!editingProfileId) return;
 
-    if (!confirm(`Tem certeza que deseja excluir o perfil "${STATE.allProfiles[editingProfileId].name}"? Todo o histórico e favoritos deste perfil serão perdidos.`)) {
-      return;
-    }
+    const confirmado = await confirmarCustomizado(
+      `Tem certeza que deseja excluir o perfil "${STATE.allProfiles[editingProfileId].name}"? Todo o histórico e favoritos deste perfil serão perdidos.`,
+      "Excluir Perfil"
+    );
+    if (!confirmado) return;
 
     try {
       showToast("Excluindo perfil...", "info");
@@ -5061,7 +5138,11 @@ const STATE = {
         listContainer.querySelectorAll('.btn-action-revoke').forEach(btn => {
           btn.onclick = async () => {
             const sidToRevoke = btn.dataset.sessionId;
-            if (confirm("Tem certeza que deseja desconectar este dispositivo remotamente? A conta sairá instantaneamente no aparelho dele.")) {
+            const confirmado = await confirmarCustomizado(
+              "Tem certeza que deseja desconectar este dispositivo remotamente? A conta sairá instantaneamente no aparelho dele.",
+              "Desconectar Aparelho"
+            );
+            if (confirmado) {
               showToast("Desconectando aparelho...", "info");
               try {
                 // Marcar como revogada no Firebase
