@@ -1000,9 +1000,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 80px 24px 40px;
-  overflow-y: auto;
+  justify-content: center;
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease;
@@ -1014,10 +1012,10 @@ ul, ol {
 }
 
 .cinema-close {
-  position: fixed;
+  position: absolute;
   top: 24px;
   right: 32px;
-  z-index: 3005;
+  z-index: 3001;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1049,12 +1047,13 @@ ul, ol {
 }
 
 .cinema-player iframe {
-  position: relative;
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: none;
-  z-index: 1; /* Draw below blocker */
+  z-index: 1;
 }
 
 .cinema-player video {
@@ -1066,16 +1065,15 @@ ul, ol {
   z-index: 1; /* Draw below blocker */
 }
 
-/* Blocker to cover embedmovies.org watermarks / redirects */
 .cinema-player-blocker-top {
-  position: sticky;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Cover the entire top edge of the iframe player */
-  height: 70px; /* Height to completely cover the watermark */
+  width: 100%;
+  height: 70px;
   background-color: #000 !important;
-  z-index: 9999 !important; /* Ensure it stays strictly on top of the iframe */
-  pointer-events: auto !important; /* Absorb clicks so user doesn't click on the logo underneath */
+  z-index: 9999 !important;
+  pointer-events: auto !important;
 }
 
 @media (max-width: 768px) {

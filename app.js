@@ -3653,8 +3653,9 @@ const STATE = {
           }
         }
 
-        // Auto PiP for iframe player (using Document Picture-in-Picture)
-        if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active') && DOM.cinemaIframe && DOM.cinemaIframe.style.display !== 'none' && !window.activeCinemaPipWindow) {
+        // Auto PiP for iframe player (using Document Picture-in-Picture) — desktop only
+        const isDesktop = window.innerWidth > 950 && !('ontouchstart' in window);
+        if (isDesktop && DOM.cinemaMode && DOM.cinemaMode.classList.contains('active') && DOM.cinemaIframe && DOM.cinemaIframe.style.display !== 'none' && !window.activeCinemaPipWindow) {
           try {
             abrirIframeDocumentPip();
           } catch (e) {
