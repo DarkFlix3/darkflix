@@ -1097,6 +1097,13 @@ ul, ol {
   font-weight: 500;
 }
 
+/* Scroll wrapper – desktop: no overflow; mobile: horizontal scroll */
+.cinema-player-scroll-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* ---------- PAGE VIEWS ---------- */
 .page-view {
   display: none;
@@ -1834,8 +1841,35 @@ ul, ol {
     padding: 60px 0 40px !important;
   }
 
+  /* Scroll wrapper: enables left-right swipe to reveal fullscreen button */
+  .cinema-player-scroll-wrapper {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    width: 100% !important;
+    scrollbar-width: auto !important;
+    scrollbar-color: var(--accent) rgba(255,255,255,0.05) !important;
+    padding-bottom: 8px !important;
+  }
+
+  .cinema-player-scroll-wrapper::-webkit-scrollbar {
+    height: 8px !important;
+    display: block !important;
+  }
+
+  .cinema-player-scroll-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 4px !important;
+  }
+
+  .cinema-player-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: var(--accent) !important;
+    border-radius: 4px !important;
+  }
+
+  /* Player slightly wider than viewport → reveals fullscreen button via horizontal scroll */
   .cinema-player {
-    width: 100vw !important;
+    width: 100% !important;
+    min-width: 750px !important; /* Force min-width so iframe content gets enough width to display all controls (like Player 1's fullscreen button) */
     height: 380px !important;
     aspect-ratio: auto !important;
     border-radius: 0 !important;
@@ -4125,45 +4159,48 @@ ul, ol {
 }
 
 /* ---------- Responsive Mobile Layout for Cinema Player in Landscape ---------- */
-@media (max-width: 900px) and (orientation: landscape), (max-height: 480px) {
+@media (max-width: 950px) and (orientation: landscape), (max-height: 480px) {
   .cinema-mode {
-    padding: 15px 5% 10px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #000 !important;
   }
-  .cinema-close {
-    position: absolute !important;
-    top: 8px !important;
-    right: 15px !important;
-    padding: 6px 12px !important;
-    font-size: 0.75rem !important;
+  .cinema-player-scroll-wrapper {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
   .cinema-player {
-    margin-top: 36px !important;
-    height: 62vh !important;
-    max-height: 220px !important;
-    aspect-ratio: 16 / 11 !important;
-    width: auto !important;
+    width: 100vw !important;
+    min-width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
   }
   .cinema-player iframe {
+    width: 100% !important;
     height: 100% !important;
   }
-  .cinema-actions {
-    flex-direction: row !important;
-    align-items: center !important;
-    width: auto !important;
-    gap: 12px !important;
-    margin-top: 10px !important;
-  }
-  .cinema-actions .btn {
-    width: auto !important;
+  .cinema-close {
+    position: fixed !important;
+    top: 12px !important;
+    right: 12px !important;
+    z-index: 10000 !important;
+    background: rgba(0, 0, 0, 0.65) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
     padding: 8px 16px !important;
-    font-size: 0.8rem !important;
+    border-radius: var(--radius-xl) !important;
+    font-size: 0.78rem !important;
   }
+  .cinema-title,
+  .cinema-actions,
   #cinema-iframe-tip {
     display: none !important;
-  }
-  .cinema-title {
-    font-size: 0.9rem !important;
-    margin-top: 8px !important;
   }
 }
 

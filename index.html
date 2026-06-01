@@ -6,7 +6,7 @@
   <meta name="description" content="DarkFlix - Sua plataforma de streaming premium. Assista filmes e séries sem cadastro, com qualidade cinematográfica.">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>DarkFlix — Filmes & Séries</title>
-  <link rel="stylesheet" href="style.css?v=2.3.2">
+  <link rel="stylesheet" href="style.css?v=2.3.3">
   <link rel="icon" href="assets/favicon1.jpg">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 </head>
@@ -458,10 +458,12 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       Fechar Player
     </button>
-    <div class="cinema-player" style="position: relative;">
-      <iframe id="cinema-iframe" src="" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-fullscreen" allow="autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" frameborder="0" allowfullscreen loading="lazy" style="display: none;"></iframe>
-      <video id="cinema-video" controls autoplay playsinline autopictureinpicture style="width: 100%; height: 100%; display: none; object-fit: contain; background: #000;"></video>
-      <div id="cinema-blocker-top" class="cinema-player-blocker-top" style="display: none;"></div>
+    <div class="cinema-player-scroll-wrapper">
+      <div class="cinema-player" style="position: relative;">
+        <iframe id="cinema-iframe" src="" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-fullscreen allow-popups allow-popups-to-escape-sandbox" allow="autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen="true" mozallowfullscreen="true" loading="lazy" style="display: none;"></iframe>
+        <video id="cinema-video" controls autoplay playsinline autopictureinpicture style="width: 100%; height: 100%; display: none; object-fit: contain; background: #000;"></video>
+        <div id="cinema-blocker-top" class="cinema-player-blocker-top" style="display: none;"></div>
+      </div>
     </div>
     <p class="cinema-title" id="cinema-title"></p>
 
@@ -469,6 +471,10 @@
       💡 <strong>Dica no Celular:</strong> Para assistir em tela minimizada (PiP) ao sair do navegador, ative a <strong>tela cheia</strong> no vídeo e deslize para cima ou saia do aplicativo. Para Canais, você pode usar o botão <strong>Minimizar (PiP)</strong> abaixo.
     </p>
     <div class="cinema-actions" style="margin-top: 15px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <button id="cinema-fullscreen-native-btn" class="btn btn-secondary btn-small" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(229,9,20,0.1); border-color: rgba(229,9,20,0.35); color: #e50914;" title="Tela Cheia">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        Tela Cheia
+      </button>
       <button id="cinema-pip-btn" class="btn btn-secondary btn-small btn-pip" style="display: none; align-items: center; gap: 6px; padding: 10px 20px;">
         📺 Minimizar (PiP)
       </button>
@@ -652,6 +658,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script type="module" src="app.js?v=2.6.1"></script>
+  <script type="module" src="app.js?v=2.6.2"></script>
 </body>
 </html>

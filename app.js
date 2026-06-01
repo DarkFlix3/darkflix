@@ -2708,6 +2708,22 @@ const STATE = {
     DOM.cinemaMode.classList.add('active');
     document.body.style.overflow = 'hidden';
 
+    // Attempt automatic native fullscreen if the screen is already in landscape orientation
+    if (window.innerWidth > window.innerHeight && window.innerWidth <= 950) {
+      setTimeout(() => {
+        try {
+          const playerWrapper = document.querySelector('.cinema-player');
+          if (playerWrapper) {
+            if (playerWrapper.requestFullscreen) {
+              playerWrapper.requestFullscreen().catch(err => console.warn("Fullscreen request rejected:", err));
+            } else if (playerWrapper.webkitRequestFullscreen) {
+              playerWrapper.webkitRequestFullscreen();
+            }
+          }
+        } catch (e) {}
+      }, 500);
+    }
+
     showToast('Iniciando player via MyEmbed.biz...', 'success');
     
     // Update active session immediately with currentlyWatching movie/series
@@ -2904,6 +2920,33 @@ const STATE = {
 
   // ---------- Setup Core Event Bindings ----------
   function initApp() {
+    // Listen for orientation change to handle landscape fullscreen visually and programmatically
+    const handleOrientationChange = () => {
+      if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
+        if (window.innerWidth > window.innerHeight && window.innerWidth <= 950) {
+          try {
+            const playerWrapper = document.querySelector('.cinema-player');
+            if (playerWrapper) {
+              if (playerWrapper.requestFullscreen) {
+                playerWrapper.requestFullscreen().catch(err => {
+                  console.warn("Fullscreen request rejected:", err);
+                });
+              } else if (playerWrapper.webkitRequestFullscreen) {
+                playerWrapper.webkitRequestFullscreen();
+              } else if (playerWrapper.msRequestFullscreen) {
+                playerWrapper.msRequestFullscreen();
+              }
+            }
+          } catch (e) {
+            console.warn("Could not request native fullscreen automatically:", e);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('resize', handleOrientationChange);
+    window.addEventListener('orientationchange', handleOrientationChange);
+
     // Generate Netflix-style scrolling posters backdrop
     generateAuthBackdrop();
 
