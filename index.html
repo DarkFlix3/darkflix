@@ -12,6 +12,52 @@
 </head>
 <body>
 
+  <!-- ============ INTRO VIDEO OVERLAY ============ -->
+  <div id="intro-overlay" class="intro-overlay">
+    <video id="intro-video" class="intro-video" autoplay playsinline muted>
+      <source src="assets/intro.mp4" type="video/mp4">
+    </video>
+    <button id="intro-skip-btn" class="intro-skip-btn">Pular</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const introOverlay = document.getElementById('intro-overlay');
+      const introVideo = document.getElementById('intro-video');
+      const skipBtn = document.getElementById('intro-skip-btn');
+      
+      if (introVideo) {
+        introVideo.play().catch(err => {
+          console.log("Autoplay do vídeo bloqueado ou falhou:", err);
+          setTimeout(hideIntro, 3000);
+        });
+
+        introVideo.addEventListener('ended', hideIntro);
+
+        if (skipBtn) {
+          setTimeout(() => {
+            skipBtn.style.opacity = '1';
+          }, 1000);
+          skipBtn.addEventListener('click', hideIntro);
+        }
+
+        // Garante que o site vai carregar no máximo em 5.5 segundos mesmo se o vídeo falhar
+        setTimeout(hideIntro, 5500);
+      } else {
+        hideIntro();
+      }
+
+      function hideIntro() {
+        if (introOverlay && !introOverlay.classList.contains('fade-out')) {
+          introOverlay.classList.add('fade-out');
+          setTimeout(() => {
+            introOverlay.remove();
+          }, 800);
+        }
+      }
+    });
+  </script>
+
   <!-- ============ HEADER ============ -->
   <header class="header" id="header">
     <div class="logo" id="logo-home">
