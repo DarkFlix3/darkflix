@@ -1041,7 +1041,7 @@ ul, ol {
   position: relative; /* Ensure relative positioning for absolute children */
   width: 90%;
   max-width: 1200px;
-  aspect-ratio: 16 / 13;
+  aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 0 80px rgba(229, 9, 20, 0.1);
