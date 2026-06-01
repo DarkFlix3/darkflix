@@ -3463,7 +3463,18 @@ const STATE = {
         e.stopPropagation();
         DOM.profileDropdown.classList.toggle('active');
         DOM.headerProfileWrapper.classList.toggle('open');
-       // ---------- Picture-in-Picture (PiP) Setup ----------
+      };
+    }
+
+    // Close profile dropdown on outside click
+    document.addEventListener('click', (e) => {
+      if (DOM.headerProfileWrapper && !DOM.headerProfileWrapper.contains(e.target)) {
+        DOM.profileDropdown.classList.remove('active');
+        DOM.headerProfileWrapper.classList.remove('open');
+      }
+    });
+
+    // ---------- Picture-in-Picture (PiP) Setup ----------
     const canalPipBtn = document.getElementById('canal-pip-btn');
     const cinemaPipBtn = document.getElementById('cinema-pip-btn');
     const isPiPSupported = ('documentPictureInPicture' in window) || document.pictureInPictureEnabled || false;
