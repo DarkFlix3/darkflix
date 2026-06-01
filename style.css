@@ -1044,6 +1044,7 @@ ul, ol {
   overflow: hidden;
   box-shadow: 0 0 80px rgba(229, 9, 20, 0.1);
   z-index: 2; /* Stacking context */
+  margin: 0 auto;
 }
 
 .cinema-player iframe {
