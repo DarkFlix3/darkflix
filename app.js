@@ -3273,10 +3273,22 @@ const STATE = {
         e.preventDefault();
         e.stopPropagation();
         STATE.heroTrailerMuted = !STATE.heroTrailerMuted;
-        sendTrailerCommand(DOM.heroTrailerIframe, STATE.heroTrailerMuted ? 'mute' : 'unMute');
-        if (!STATE.heroTrailerMuted) {
-          sendTrailerCommand(DOM.heroTrailerIframe, 'playVideo');
-          STATE.heroTrailerPlaying = true;
+        
+        const iframe = DOM.heroTrailerIframe;
+        if (iframe) {
+          let src = iframe.src;
+          if (!STATE.heroTrailerMuted) {
+            if (src && src.includes('mute=1')) {
+              iframe.src = src.replace('mute=1', 'mute=0');
+              STATE.heroTrailerPlaying = true;
+            } else {
+              sendTrailerCommand(iframe, 'unMute');
+              sendTrailerCommand(iframe, 'playVideo');
+              STATE.heroTrailerPlaying = true;
+            }
+          } else {
+            sendTrailerCommand(iframe, 'mute');
+          }
         }
         updateTrailerControlsUI('hero', STATE.heroTrailerPlaying, STATE.heroTrailerMuted);
       };
@@ -3297,10 +3309,22 @@ const STATE = {
         e.preventDefault();
         e.stopPropagation();
         STATE.modalTrailerMuted = !STATE.modalTrailerMuted;
-        sendTrailerCommand(DOM.modalTrailerIframe, STATE.modalTrailerMuted ? 'mute' : 'unMute');
-        if (!STATE.modalTrailerMuted) {
-          sendTrailerCommand(DOM.modalTrailerIframe, 'playVideo');
-          STATE.modalTrailerPlaying = true;
+        
+        const iframe = DOM.modalTrailerIframe;
+        if (iframe) {
+          let src = iframe.src;
+          if (!STATE.modalTrailerMuted) {
+            if (src && src.includes('mute=1')) {
+              iframe.src = src.replace('mute=1', 'mute=0');
+              STATE.modalTrailerPlaying = true;
+            } else {
+              sendTrailerCommand(iframe, 'unMute');
+              sendTrailerCommand(iframe, 'playVideo');
+              STATE.modalTrailerPlaying = true;
+            }
+          } else {
+            sendTrailerCommand(iframe, 'mute');
+          }
         }
         updateTrailerControlsUI('modal', STATE.modalTrailerPlaying, STATE.modalTrailerMuted);
       };
