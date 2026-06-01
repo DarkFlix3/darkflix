@@ -3276,16 +3276,10 @@ const STATE = {
         
         const iframe = DOM.heroTrailerIframe;
         if (iframe) {
-          let src = iframe.src;
           if (!STATE.heroTrailerMuted) {
-            if (src && src.includes('mute=1')) {
-              iframe.src = src.replace('mute=1', 'mute=0');
-              STATE.heroTrailerPlaying = true;
-            } else {
-              sendTrailerCommand(iframe, 'unMute');
-              sendTrailerCommand(iframe, 'playVideo');
-              STATE.heroTrailerPlaying = true;
-            }
+            sendTrailerCommand(iframe, 'unMute');
+            sendTrailerCommand(iframe, 'playVideo');
+            STATE.heroTrailerPlaying = true;
           } else {
             sendTrailerCommand(iframe, 'mute');
           }
@@ -3312,16 +3306,10 @@ const STATE = {
         
         const iframe = DOM.modalTrailerIframe;
         if (iframe) {
-          let src = iframe.src;
           if (!STATE.modalTrailerMuted) {
-            if (src && src.includes('mute=1')) {
-              iframe.src = src.replace('mute=1', 'mute=0');
-              STATE.modalTrailerPlaying = true;
-            } else {
-              sendTrailerCommand(iframe, 'unMute');
-              sendTrailerCommand(iframe, 'playVideo');
-              STATE.modalTrailerPlaying = true;
-            }
+            sendTrailerCommand(iframe, 'unMute');
+            sendTrailerCommand(iframe, 'playVideo');
+            STATE.modalTrailerPlaying = true;
           } else {
             sendTrailerCommand(iframe, 'mute');
           }
