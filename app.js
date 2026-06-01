@@ -340,6 +340,7 @@ const STATE = {
     cinemaExternalBtn: $('#cinema-external-btn'),
     cinemaRewindBtn: $('#cinema-rewind-btn'),
     cinemaForwardBtn: $('#cinema-forward-btn'),
+    cinemaFullscreenBtn: $('#cinema-fullscreen-btn'),
     
     // Mobile categories accordion
     mobileMoviesTrigger: $('#mobile-movies-trigger'),
@@ -3164,6 +3165,30 @@ const STATE = {
             }
           } catch (err) {}
           showToast("Tentando avançar 15s... Use os controles na tela se necessário.", "info");
+        }
+      };
+    }
+    if (DOM.cinemaFullscreenBtn) {
+      DOM.cinemaFullscreenBtn.onclick = (e) => {
+        e.preventDefault();
+        const element = DOM.cinemaMode;
+        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+          if (element.requestFullscreen) {
+            element.requestFullscreen().catch(err => {
+              console.warn("Fullscreen request rejected", err);
+              showToast("Não foi possível entrar em Tela Cheia automaticamente.", "info");
+            });
+          } else if (element.webkitRequestFullscreen) { /* Safari / iOS */
+            element.webkitRequestFullscreen();
+          } else {
+            showToast("Seu navegador não oferece suporte à tela cheia automática.", "info");
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          }
         }
       };
     }

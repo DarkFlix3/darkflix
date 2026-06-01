@@ -1830,7 +1830,11 @@ ul, ol {
   }
 
   .cinema-player {
-    width: 95%;
+    width: 100% !important;
+    height: 65vh !important;
+    max-height: 65vh !important;
+    aspect-ratio: auto !important;
+    border-radius: 0 !important;
   }
 
   .cinema-close {
