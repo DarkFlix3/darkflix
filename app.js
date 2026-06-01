@@ -3277,9 +3277,22 @@ const STATE = {
         const iframe = DOM.heroTrailerIframe;
         if (iframe) {
           if (!STATE.heroTrailerMuted) {
-            sendTrailerCommand(iframe, 'unMute');
-            sendTrailerCommand(iframe, 'playVideo');
-            STATE.heroTrailerPlaying = true;
+            const isMobile = /Android|iPhone|iPad|iPod|wv|WebView/i.test(navigator.userAgent);
+            if (isMobile) {
+              sendTrailerCommand(iframe, 'unMute');
+              sendTrailerCommand(iframe, 'playVideo');
+              STATE.heroTrailerPlaying = true;
+            } else {
+              let src = iframe.src;
+              if (src && src.includes('mute=1')) {
+                iframe.src = src.replace('mute=1', 'mute=0');
+                STATE.heroTrailerPlaying = true;
+              } else {
+                sendTrailerCommand(iframe, 'unMute');
+                sendTrailerCommand(iframe, 'playVideo');
+                STATE.heroTrailerPlaying = true;
+              }
+            }
           } else {
             sendTrailerCommand(iframe, 'mute');
           }
@@ -3307,9 +3320,22 @@ const STATE = {
         const iframe = DOM.modalTrailerIframe;
         if (iframe) {
           if (!STATE.modalTrailerMuted) {
-            sendTrailerCommand(iframe, 'unMute');
-            sendTrailerCommand(iframe, 'playVideo');
-            STATE.modalTrailerPlaying = true;
+            const isMobile = /Android|iPhone|iPad|iPod|wv|WebView/i.test(navigator.userAgent);
+            if (isMobile) {
+              sendTrailerCommand(iframe, 'unMute');
+              sendTrailerCommand(iframe, 'playVideo');
+              STATE.modalTrailerPlaying = true;
+            } else {
+              let src = iframe.src;
+              if (src && src.includes('mute=1')) {
+                iframe.src = src.replace('mute=1', 'mute=0');
+                STATE.modalTrailerPlaying = true;
+              } else {
+                sendTrailerCommand(iframe, 'unMute');
+                sendTrailerCommand(iframe, 'playVideo');
+                STATE.modalTrailerPlaying = true;
+              }
+            }
           } else {
             sendTrailerCommand(iframe, 'mute');
           }
