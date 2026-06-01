@@ -3277,21 +3277,23 @@ const STATE = {
         const iframe = DOM.heroTrailerIframe;
         if (iframe) {
           if (!STATE.heroTrailerMuted) {
-            const isMobile = /Android|iPhone|iPad|iPod|wv|WebView/i.test(navigator.userAgent);
-            if (isMobile) {
+            let src = iframe.src;
+            if (src && src.includes('mute=1')) {
+              // Recreate the iframe element to propagate the user gesture token (fixes WebView unmuted autoplay block)
+              const parent = iframe.parentNode;
+              const newIframe = document.createElement('iframe');
+              newIframe.id = iframe.id;
+              newIframe.style.cssText = iframe.style.cssText;
+              newIframe.allow = iframe.allow;
+              newIframe.referrerPolicy = iframe.referrerPolicy;
+              newIframe.src = src.replace('mute=1', 'mute=0');
+              parent.replaceChild(newIframe, iframe);
+              DOM.heroTrailerIframe = newIframe;
+              STATE.heroTrailerPlaying = true;
+            } else {
               sendTrailerCommand(iframe, 'unMute');
               sendTrailerCommand(iframe, 'playVideo');
               STATE.heroTrailerPlaying = true;
-            } else {
-              let src = iframe.src;
-              if (src && src.includes('mute=1')) {
-                iframe.src = src.replace('mute=1', 'mute=0');
-                STATE.heroTrailerPlaying = true;
-              } else {
-                sendTrailerCommand(iframe, 'unMute');
-                sendTrailerCommand(iframe, 'playVideo');
-                STATE.heroTrailerPlaying = true;
-              }
             }
           } else {
             sendTrailerCommand(iframe, 'mute');
@@ -3320,21 +3322,23 @@ const STATE = {
         const iframe = DOM.modalTrailerIframe;
         if (iframe) {
           if (!STATE.modalTrailerMuted) {
-            const isMobile = /Android|iPhone|iPad|iPod|wv|WebView/i.test(navigator.userAgent);
-            if (isMobile) {
+            let src = iframe.src;
+            if (src && src.includes('mute=1')) {
+              // Recreate the iframe element to propagate the user gesture token (fixes WebView unmuted autoplay block)
+              const parent = iframe.parentNode;
+              const newIframe = document.createElement('iframe');
+              newIframe.id = iframe.id;
+              newIframe.style.cssText = iframe.style.cssText;
+              newIframe.allow = iframe.allow;
+              newIframe.referrerPolicy = iframe.referrerPolicy;
+              newIframe.src = src.replace('mute=1', 'mute=0');
+              parent.replaceChild(newIframe, iframe);
+              DOM.modalTrailerIframe = newIframe;
+              STATE.modalTrailerPlaying = true;
+            } else {
               sendTrailerCommand(iframe, 'unMute');
               sendTrailerCommand(iframe, 'playVideo');
               STATE.modalTrailerPlaying = true;
-            } else {
-              let src = iframe.src;
-              if (src && src.includes('mute=1')) {
-                iframe.src = src.replace('mute=1', 'mute=0');
-                STATE.modalTrailerPlaying = true;
-              } else {
-                sendTrailerCommand(iframe, 'unMute');
-                sendTrailerCommand(iframe, 'playVideo');
-                STATE.modalTrailerPlaying = true;
-              }
             }
           } else {
             sendTrailerCommand(iframe, 'mute');
