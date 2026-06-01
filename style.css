@@ -1041,7 +1041,7 @@ ul, ol {
   position: relative; /* Ensure relative positioning for absolute children */
   width: 90%;
   max-width: 1200px;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 11;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 0 80px rgba(229, 9, 20, 0.1);
@@ -1049,9 +1049,8 @@ ul, ol {
 }
 
 .cinema-player iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  display: block;
   width: 100%;
   height: 100%;
   border: none;
@@ -1069,7 +1068,7 @@ ul, ol {
 
 /* Blocker to cover embedmovies.org watermarks / redirects */
 .cinema-player-blocker-top {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%; /* Cover the entire top edge of the iframe player */
@@ -1832,15 +1831,19 @@ ul, ol {
   }
 
   .cinema-mode {
-    padding: 60px 0 40px !important;
+    padding: 60px 6% 40px !important;
   }
 
   .cinema-player {
     width: 100% !important;
-    height: 60vh !important;
-    max-height: 450px !important;
+    height: 380px !important;
     aspect-ratio: auto !important;
-    border-radius: 0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+  }
+
+  .cinema-player iframe {
+    height: 100% !important;
   }
 
   .cinema-close {
@@ -4117,6 +4120,49 @@ ul, ol {
   .admin-btn-action {
     padding: 8px 10px;
     font-size: 0.75rem;
+  }
+}
+
+/* ---------- Responsive Mobile Layout for Cinema Player in Landscape ---------- */
+@media (max-width: 900px) and (orientation: landscape), (max-height: 480px) {
+  .cinema-mode {
+    padding: 15px 5% 10px !important;
+  }
+  .cinema-close {
+    position: absolute !important;
+    top: 8px !important;
+    right: 15px !important;
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+  }
+  .cinema-player {
+    margin-top: 36px !important;
+    height: 62vh !important;
+    max-height: 220px !important;
+    aspect-ratio: 16 / 11 !important;
+    width: auto !important;
+  }
+  .cinema-player iframe {
+    height: 100% !important;
+  }
+  .cinema-actions {
+    flex-direction: row !important;
+    align-items: center !important;
+    width: auto !important;
+    gap: 12px !important;
+    margin-top: 10px !important;
+  }
+  .cinema-actions .btn {
+    width: auto !important;
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
+  }
+  #cinema-iframe-tip {
+    display: none !important;
+  }
+  .cinema-title {
+    font-size: 0.9rem !important;
+    margin-top: 8px !important;
   }
 }
 
