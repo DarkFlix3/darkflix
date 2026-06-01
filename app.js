@@ -3240,6 +3240,13 @@ const STATE = {
       });
     }
 
+    // Reveal cinema controls when focus shifts to cinema iframe (user touches or clicks video)
+    window.addEventListener('blur', () => {
+      if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active') && document.activeElement === DOM.cinemaIframe) {
+        showCinemaControls();
+      }
+    });
+
     // Bind Hero Trailer controls
     if (DOM.heroTrailerPlayPause) {
       DOM.heroTrailerPlayPause.onclick = (e) => {
@@ -3456,21 +3463,87 @@ const STATE = {
         e.stopPropagation();
         DOM.profileDropdown.classList.toggle('active');
         DOM.headerProfileWrapper.classList.toggle('open');
-      };
-    }
-
-    // Close profile dropdown on outside click
-    document.addEventListener('click', (e) => {
-      if (DOM.headerProfileWrapper && !DOM.headerProfileWrapper.contains(e.target)) {
-        DOM.profileDropdown.classList.remove('active');
-        DOM.headerProfileWrapper.classList.remove('open');
-      }
-    });
-
-    // ---------- Picture-in-Picture (PiP) Setup ----------
+       // ---------- Picture-in-Picture (PiP) Setup ----------
     const canalPipBtn = document.getElementById('canal-pip-btn');
     const cinemaPipBtn = document.getElementById('cinema-pip-btn');
-    const isPiPSupported = document.pictureInPictureEnabled || false;
+    const isPiPSupported = ('documentPictureInPicture' in window) || document.pictureInPictureEnabled || false;
+
+    // Reusable function to open Document Picture-in-Picture for iframe player
+    async function abrirIframeDocumentPip() {
+      if (!('documentPictureInPicture' in window)) return;
+      if (window.activeCinemaPipWindow) {
+        window.activeCinemaPipWindow.close();
+        return;
+      }
+
+      try {
+        const playerWrapper = document.querySelector('.cinema-player');
+        if (!playerWrapper) return;
+
+        const originalParent = playerWrapper.parentElement;
+        const originalSibling = playerWrapper.nextElementSibling;
+
+        const pipWindow = await window.documentPictureInPicture.requestWindow({
+          width: 854,
+          height: 480
+        });
+
+        window.activeCinemaPipWindow = pipWindow;
+        showToast("Modo minimizado (PiP) ativado!", "success");
+        registrarSessaoAtiva();
+
+        // Copiar estilos para a nova janela PiP
+        [...document.styleSheets].forEach((styleSheet) => {
+          try {
+            const cssRules = [...styleSheet.cssRules].map((rule) => rule.cssText).join('');
+            const style = document.createElement('style');
+            style.textContent = cssRules;
+            pipWindow.document.head.appendChild(style);
+          } catch (e) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = styleSheet.href;
+            pipWindow.document.head.appendChild(link);
+          }
+        });
+
+        // Estilizar a janela flutuante
+        pipWindow.document.body.style.margin = '0';
+        pipWindow.document.body.style.backgroundColor = '#000';
+        pipWindow.document.body.style.overflow = 'hidden';
+
+        // Fazer o wrapper ocupar toda a janela PiP
+        playerWrapper.style.width = '100vw';
+        playerWrapper.style.height = '100vh';
+        playerWrapper.style.position = 'fixed';
+        playerWrapper.style.top = '0';
+        playerWrapper.style.left = '0';
+
+        pipWindow.document.body.append(playerWrapper);
+
+        // Ao fechar a janela, restaurar para a página original
+        pipWindow.addEventListener("pagehide", () => {
+          window.activeCinemaPipWindow = null;
+          playerWrapper.style.width = '';
+          playerWrapper.style.height = '';
+          playerWrapper.style.position = '';
+          playerWrapper.style.top = '';
+          playerWrapper.style.left = '';
+          
+          if (originalSibling) {
+            originalParent.insertBefore(playerWrapper, originalSibling);
+          } else {
+            originalParent.appendChild(playerWrapper);
+          }
+          showToast("Saindo do modo minimizado (PiP)", "info");
+          registrarSessaoAtiva();
+        });
+
+      } catch (err) {
+        console.error("Erro ao abrir Document PiP:", err);
+        showToast("Permita pop-ups/janelas separadas para este site usar o PiP!", "error");
+      }
+    }
 
     if (isPiPSupported) {
       if (canalPipBtn) canalPipBtn.style.display = 'inline-flex';
@@ -3533,76 +3606,7 @@ const STATE = {
 
           // Caso 2: Se estiver usando o iframe (players externos), usamos o Document Picture-in-Picture no PC
           if ('documentPictureInPicture' in window) {
-            try {
-              if (window.activeCinemaPipWindow) {
-                window.activeCinemaPipWindow.close();
-                return;
-              }
-
-              const playerWrapper = document.querySelector('.cinema-player');
-              const originalParent = playerWrapper.parentElement;
-              const originalSibling = playerWrapper.nextElementSibling;
-
-              const pipWindow = await window.documentPictureInPicture.requestWindow({
-                width: 854,
-                height: 480
-              });
-
-              window.activeCinemaPipWindow = pipWindow;
-              showToast("Modo minimizado (PiP) ativado!", "success");
-              registrarSessaoAtiva();
-
-              // Copiar estilos para a nova janela PiP
-              [...document.styleSheets].forEach((styleSheet) => {
-                try {
-                  const cssRules = [...styleSheet.cssRules].map((rule) => rule.cssText).join('');
-                  const style = document.createElement('style');
-                  style.textContent = cssRules;
-                  pipWindow.document.head.appendChild(style);
-                } catch (e) {
-                  const link = document.createElement('link');
-                  link.rel = 'stylesheet';
-                  link.href = styleSheet.href;
-                  pipWindow.document.head.appendChild(link);
-                }
-              });
-
-              // Estilizar a janela flutuante
-              pipWindow.document.body.style.margin = '0';
-              pipWindow.document.body.style.backgroundColor = '#000';
-              pipWindow.document.body.style.overflow = 'hidden';
-
-              // Fazer o wrapper ocupar toda a janela PiP
-              playerWrapper.style.width = '100vw';
-              playerWrapper.style.height = '100vh';
-              playerWrapper.style.position = 'fixed';
-              playerWrapper.style.top = '0';
-              playerWrapper.style.left = '0';
-
-              pipWindow.document.body.append(playerWrapper);
-
-              // Ao fechar a janela, restaurar para a página original
-              pipWindow.addEventListener("pagehide", () => {
-                window.activeCinemaPipWindow = null;
-                playerWrapper.style.width = '';
-                playerWrapper.style.height = '';
-                playerWrapper.style.position = '';
-                playerWrapper.style.top = '';
-                playerWrapper.style.left = '';
-                
-                if (originalSibling) {
-                  originalParent.insertBefore(playerWrapper, originalSibling);
-                } else {
-                  originalParent.appendChild(playerWrapper);
-                }
-                showToast("Saindo do modo minimizado (PiP)", "info");
-                registrarSessaoAtiva();
-              });
-
-            } catch (err) {
-              console.error("Erro ao abrir Document PiP:", err);
-              showToast("Permita pop-ups/janelas separadas para este site usar o PiP!", "error");
-            }
+            await abrirIframeDocumentPip();
           } else {
             // Caso 3: Celular ou navegadores antigos
             showToast("📱 Celular: Ative a tela cheia no player do filme e volte à tela inicial do celular para ativar o PiP nativo!", "info");
@@ -3638,11 +3642,35 @@ const STATE = {
           }
         }
 
+        // Auto PiP for iframe player (using Document Picture-in-Picture)
+        if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active') && DOM.cinemaIframe && DOM.cinemaIframe.style.display !== 'none' && !window.activeCinemaPipWindow) {
+          try {
+            abrirIframeDocumentPip();
+          } catch (e) {
+            console.warn("Auto PiP falhou para iframe:", e);
+          }
+        }
+
         // Aguarda a transição de PiP ser concluída (se houver) e atualiza o banco de dados
         setTimeout(() => {
           registrarSessaoAtiva();
         }, 800);
       } else {
+        // Quando a aba recuperar visibilidade, restauramos automaticamente o player de qualquer PiP ativo
+        if (window.activeCinemaPipWindow) {
+          try {
+            window.activeCinemaPipWindow.close();
+          } catch (e) {
+            console.warn("Falha ao fechar auto PiP:", e);
+          }
+        }
+        if (document.pictureInPictureElement) {
+          try {
+            document.exitPictureInPicture();
+          } catch (e) {
+            console.warn("Falha ao sair do PiP nativo:", e);
+          }
+        }
         // Quando a aba voltar a ficar ativa, atualiza imediatamente
         registrarSessaoAtiva();
       }

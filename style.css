@@ -1041,7 +1041,7 @@ ul, ol {
   position: relative; /* Ensure relative positioning for absolute children */
   width: 90%;
   max-width: 1200px;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 16 / 13;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 0 80px rgba(229, 9, 20, 0.1);
@@ -1858,7 +1858,7 @@ ul, ol {
     width: 100% !important;
     min-width: 100% !important;
     height: auto !important;
-    aspect-ratio: 16 / 9 !important;
+    aspect-ratio: 16 / 13 !important;
     border-radius: 0 !important;
     overflow: hidden !important;
   }
@@ -4185,6 +4185,47 @@ ul, ol {
     font-size: 0.78rem !important;
     transition: opacity 0.35s ease, transform 0.35s ease, background 0.2s ease !important;
   }
+  .cinema-title {
+    position: fixed !important;
+    top: 12px !important;
+    left: 12px !important;
+    bottom: auto !important;
+    z-index: 10000 !important;
+    margin: 0 !important;
+    background: rgba(0, 0, 0, 0.65) !important;
+    padding: 8px 16px !important;
+    border-radius: var(--radius-xl) !important;
+    font-size: 0.82rem !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    transition: opacity 0.35s ease, transform 0.35s ease !important;
+  }
+  .cinema-actions {
+    position: fixed !important;
+    bottom: 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 10000 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    padding: 0 !important;
+    gap: 8px !important;
+    transition: opacity 0.35s ease, transform 0.35s ease !important;
+  }
+  .cinema-actions .btn {
+    padding: 8px 16px !important;
+    font-size: 0.78rem !important;
+    border-radius: var(--radius-xl) !important;
+    background: rgba(0, 0, 0, 0.65) !important;
+    backdrop-filter: blur(10px) !important;
+    width: auto !important;
+    margin: 0 !important;
+  }
   .cinema-player-blocker-top {
     transition: opacity 0.35s ease !important;
   }
@@ -4193,6 +4234,16 @@ ul, ol {
     pointer-events: none !important;
     transform: translateY(-10px) !important;
   }
+  .cinema-mode.controls-hidden .cinema-title {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(-10px) !important;
+  }
+  .cinema-mode.controls-hidden .cinema-actions {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translate(-50%, 10px) !important;
+  }
   .cinema-mode.controls-hidden .cinema-player-blocker-top {
     opacity: 0 !important;
     pointer-events: none !important;
@@ -4200,8 +4251,6 @@ ul, ol {
   .cinema-top-sensor {
     display: block !important;
   }
-  .cinema-title,
-  .cinema-actions,
   #cinema-iframe-tip {
     display: none !important;
   }
