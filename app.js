@@ -4461,8 +4461,19 @@ const STATE = {
     try {
       showToast("Saindo...", "info");
       pararHeartbeatSessao();
+      
+      if (STATE.currentUser) {
+        const sid = localStorage.getItem('darkflix_session_id');
+        if (sid) {
+          const sessionRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}`);
+          await remove(sessionRef);
+        }
+      }
+      
       await signOut(auth);
       localStorage.removeItem('darkflix_active_profile_id');
+      localStorage.removeItem('darkflix_session_id');
+      localStorage.removeItem('darkflix_device_nickname');
       showToast("Desconectado.", "success");
     } catch (err) {
       console.error("Error signing out:", err);
@@ -5030,8 +5041,47 @@ const STATE = {
   async function registrarSessaoAtiva() {
     if (!STATE.currentUser) return;
     
-    const sid = obterSessionId();
+    let sid = localStorage.getItem('darkflix_session_id');
     const info = obterInformacoesAparelho();
+
+    // Se não houver sid no localStorage, tentar reutilizar uma sessão existente no banco para evitar duplicados
+    if (!sid) {
+      try {
+        const sessionsRef = ref(db, `users/${STATE.currentUser.uid}/sessions`);
+        const snapshot = await get(sessionsRef);
+        if (snapshot.exists()) {
+          const sessions = snapshot.val();
+          // Procurar por uma sessão ativa que corresponda ao mesmo aparelho/OS/navegador
+          const existingSid = Object.keys(sessions).find(key => {
+            const sess = sessions[key];
+            return sess && 
+                   sess.revoked !== true && 
+                   sess.deviceInfo && 
+                   sess.deviceInfo.os === info.os && 
+                   sess.deviceInfo.device === info.device && 
+                   sess.deviceInfo.browser === info.browser;
+          });
+          
+          if (existingSid) {
+            sid = existingSid;
+            localStorage.setItem('darkflix_session_id', sid);
+            // Se a sessão existente tinha um apelido, salvar localmente para manter
+            const existingSess = sessions[existingSid];
+            if (existingSess && existingSess.deviceInfo && existingSess.deviceInfo.nickname) {
+              localStorage.setItem('darkflix_device_nickname', existingSess.deviceInfo.nickname);
+            }
+          }
+        }
+      } catch (e) {
+        console.warn("Erro ao buscar sessões anteriores:", e);
+      }
+    }
+    
+    // Se ainda não tiver sid, gerar um novo
+    if (!sid) {
+      sid = 'session_' + Math.random().toString(36).substring(2, 15) + '_' + Date.now().toString(36);
+      localStorage.setItem('darkflix_session_id', sid);
+    }
     
     // Obter apelido local do aparelho, se houver
     const localNickname = localStorage.getItem('darkflix_device_nickname') || "";
@@ -5299,7 +5349,7 @@ const STATE = {
       await verificarLinkRedefinicaoPin();
       
       // Registrar sessão, ouvinte de logout forçado e heartbeat em background para acelerar inicialização
-      registrarSessaoAtiva();
+      await registrarSessaoAtiva();
       iniciarOuvinteSessaoForcada();
       iniciarHeartbeatSessao();
 
