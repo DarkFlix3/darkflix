@@ -692,6 +692,8 @@ ul, ol {
   display: flex;
   gap: 16px;
   overflow-x: auto;
+  padding-top: 16px;
+  margin-top: -16px;
   padding-bottom: 24px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -4291,6 +4293,8 @@ ul, ol {
   display: flex;
   gap: 36px;
   padding-left: 20px;
+  padding-top: 20px;
+  margin-top: -20px;
   overflow-x: auto;
 }
 
@@ -4300,7 +4304,7 @@ ul, ol {
   align-items: flex-end;
   flex: 0 0 auto;
   width: 230px;
-  height: 280px;
+  height: 300px;
   overflow: visible;
   transition: z-index var(--transition-fast);
 }
