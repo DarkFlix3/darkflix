@@ -728,7 +728,7 @@ const STATE = {
   }
 
   // ---------- Card HTML Helper ----------
-  function getNetflixBadgesHTML(item, index, mediaType) {
+  function getNetflixBadgesHTML(item, index, mediaType, hasProgress) {
     let badgesHTML = '';
     
     // 1. Selo TOP 10 (Canto Superior Direito)
@@ -740,6 +740,12 @@ const STATE = {
           <span class="num">10</span>
         </div>
       `;
+    }
+    
+    // Se o item tem progresso (como os da seção Continuar Assistindo), ocultamos
+    // o badge de status inferior para não sobrepor o indicador de temporada/episódio (T1:E1) ou barra vermelha.
+    if (hasProgress) {
+      return badgesHTML;
     }
     
     // 2. Badge de Status (Novidade/Temporada/etc.) no canto inferior
@@ -796,7 +802,7 @@ const STATE = {
       }
     }
 
-    const netflixBadgesHTML = getNetflixBadgesHTML(item, index, mediaType);
+    const netflixBadgesHTML = getNetflixBadgesHTML(item, index, mediaType, !!prog);
 
     return `
       <div class="movie-card" data-id="${item.id}" data-type="${mediaType}" style="animation-delay: ${index * 0.05}s">
