@@ -572,6 +572,7 @@ const STATE = {
     // Mobile menu reset
     DOM.navMenu.classList.remove('open');
     DOM.menuToggle.classList.remove('active');
+    document.body.classList.remove('menu-open');
     
     // Trailers stop
     stopMainHeroTrailer();
@@ -616,6 +617,7 @@ const STATE = {
     // Mobile menu reset
     DOM.navMenu.classList.remove('open');
     DOM.menuToggle.classList.remove('active');
+    document.body.classList.remove('menu-open');
     
     // Stop trailers
     stopMainHeroTrailer();
@@ -3126,7 +3128,8 @@ const STATE = {
     // Menu Mobile toggle
     DOM.menuToggle.addEventListener('click', () => {
       DOM.menuToggle.classList.toggle('active');
-      DOM.navMenu.classList.toggle('open');
+      const isOpen = DOM.navMenu.classList.toggle('open');
+      document.body.classList.toggle('menu-open', isOpen);
     });
 
     // ---------- Desktop Categories Dropdown ----------

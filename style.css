@@ -1619,6 +1619,7 @@ ul, ol {
     right: -100%;
     width: 280px;
     height: 100vh;
+    height: 100dvh;
     background: var(--bg-secondary);
     flex-direction: column;
     padding: 100px 24px 32px;
@@ -1628,10 +1629,15 @@ ul, ol {
     z-index: 999;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
   }
 
   .nav.open {
     right: 0;
+  }
+
+  body.menu-open {
+    overflow: hidden !important;
   }
 
   .nav-link {
