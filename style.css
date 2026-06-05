@@ -4233,3 +4233,112 @@ ul, ol {
   }
 }
 
+/* ============================================================
+   Netflix UI Enhancements (Badges & Top 10)
+   ============================================================ */
+
+.netflix-badge-top10 {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background: #e50914;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 5px 4px;
+  line-height: 1;
+  font-size: 8px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  z-index: 4;
+}
+
+.netflix-badge-top10 .top {
+  font-size: 7px;
+  letter-spacing: 0.5px;
+}
+
+.netflix-badge-top10 .num {
+  font-size: 10px;
+  margin-top: 1px;
+}
+
+.netflix-badge-status {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e50914;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+
+/* Top 10 Section */
+.top10-row {
+  display: flex;
+  gap: 36px;
+  padding-left: 20px;
+  overflow-x: auto;
+}
+
+.top10-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex: 0 0 auto;
+  width: 230px;
+  height: 280px;
+  overflow: visible;
+  transition: z-index var(--transition-fast);
+}
+
+.top10-wrapper:hover {
+  z-index: 15;
+}
+
+.top10-number-container {
+  position: absolute;
+  left: -15px;
+  bottom: -15px;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.top10-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 150px;
+  font-weight: 900;
+  line-height: 0.75;
+  color: #06060a; /* Combina com o background global */
+  -webkit-text-stroke: 4px #595959; /* Borda cinza espessa */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  letter-spacing: -10px;
+}
+
+.top10-wrapper .movie-card {
+  margin-left: auto;
+  width: 185px;
+  z-index: 2;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+/* Ocultar fita redundante de TOP 10 na fileira que já é do Top 10 */
+.top10-wrapper .netflix-badge-top10 {
+  display: none;
+}
+
+

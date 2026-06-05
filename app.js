@@ -728,6 +728,42 @@ const STATE = {
   }
 
   // ---------- Card HTML Helper ----------
+  function getNetflixBadgesHTML(item, index, mediaType) {
+    let badgesHTML = '';
+    
+    // 1. Selo TOP 10 (Canto Superior Direito)
+    const isTop10 = (item.vote_average >= 8.2 && item.popularity > 50) || (index < 3 && item.popularity > 100);
+    if (isTop10) {
+      badgesHTML += `
+        <div class="netflix-badge-top10">
+          <span class="top">TOP</span>
+          <span class="num">10</span>
+        </div>
+      `;
+    }
+    
+    // 2. Badge de Status (Novidade/Temporada/etc.) no canto inferior
+    const dateStr = item.release_date || item.first_air_date || '';
+    const year = parseInt(dateStr.substring(0, 4)) || 0;
+    
+    let statusText = '';
+    if (year >= 2023) {
+      if (mediaType === 'tv') {
+        statusText = (item.id % 2 === 0) ? 'Nova temporada' : 'Novo episódio';
+      } else {
+        statusText = (item.id % 2 === 0) ? 'Novidade' : 'Assista já';
+      }
+    }
+    
+    if (statusText) {
+      badgesHTML += `
+        <div class="netflix-badge-status">${statusText}</div>
+      `;
+    }
+    
+    return badgesHTML;
+  }
+
   function createCardHTML(item, index, defaultMediaType = 'movie') {
     const title = item.title || item.name || 'Sem Título';
     const mediaType = item.media_type || defaultMediaType;
@@ -760,10 +796,13 @@ const STATE = {
       }
     }
 
+    const netflixBadgesHTML = getNetflixBadgesHTML(item, index, mediaType);
+
     return `
       <div class="movie-card" data-id="${item.id}" data-type="${mediaType}" style="animation-delay: ${index * 0.05}s">
         <img class="movie-card-poster" src="${posterSrc}" alt="${title}" loading="lazy"
              onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22450%22><rect fill=%22%2312121a%22 width=%22300%22 height=%22450%22/><text fill=%22%236a6a7a%22 font-family=%22sans-serif%22 font-size=%2216%22 x=%22150%22 y=%22225%22 text-anchor=%22middle%22>Sem Imagem</text></svg>'">
+        ${netflixBadgesHTML}
         <div class="movie-card-overlay">
           <div class="movie-card-play">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -779,6 +818,34 @@ const STATE = {
         </div>
         ${progressIndicatorHTML}
       </div>
+    `;
+  }
+
+  function buildTop10Section(title, items, mediaType) {
+    if (!items || items.length === 0) return '';
+    const cleanItems = items.filter(isItemClean).slice(0, 10);
+    if (cleanItems.length === 0) return '';
+    
+    return `
+      <section class="section top10-section">
+        <div class="section-header">
+          <h2 class="section-title">${title}</h2>
+        </div>
+        <div class="movies-row top10-row">
+          ${cleanItems.map((item, i) => {
+            const rank = i + 1;
+            const cardHTML = createCardHTML(item, i, mediaType);
+            return `
+              <div class="top10-wrapper">
+                <div class="top10-number-container">
+                  <span class="top10-number">${rank}</span>
+                </div>
+                ${cardHTML}
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </section>
     `;
   }
 
@@ -956,8 +1023,14 @@ const STATE = {
         html += buildSection('Minha Lista', STATE.favorites, 'movie');
       }
 
+      // Top 10 Filmes
+      html += buildTop10Section('Top 10 Filmes no DarkFlix', trendingMovies.results, 'movie');
+
       // 3. Filmes em Destaque (trending semana)
       html += buildSection('Filmes em Destaque', trendingMovies.results, 'movie');
+
+      // Top 10 Séries
+      html += buildTop10Section('Top 10 Séries no DarkFlix', trendingSeries.results, 'tv');
 
       // 4. Séries Populares (trending semana)
       html += buildSection('Séries Populares', trendingSeries.results, 'tv');
