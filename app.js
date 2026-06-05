@@ -5043,37 +5043,40 @@ const STATE = {
     
     let sid = localStorage.getItem('darkflix_session_id');
     const info = obterInformacoesAparelho();
+    let userSessions = null;
+
+    // Buscar todas as sessões para reutilização e limpeza de duplicados
+    try {
+      const sessionsRef = ref(db, `users/${STATE.currentUser.uid}/sessions`);
+      const snapshot = await get(sessionsRef);
+      if (snapshot.exists()) {
+        userSessions = snapshot.val();
+      }
+    } catch (e) {
+      console.warn("Erro ao buscar sessões para verificação:", e);
+    }
 
     // Se não houver sid no localStorage, tentar reutilizar uma sessão existente no banco para evitar duplicados
-    if (!sid) {
-      try {
-        const sessionsRef = ref(db, `users/${STATE.currentUser.uid}/sessions`);
-        const snapshot = await get(sessionsRef);
-        if (snapshot.exists()) {
-          const sessions = snapshot.val();
-          // Procurar por uma sessão ativa que corresponda ao mesmo aparelho/OS/navegador
-          const existingSid = Object.keys(sessions).find(key => {
-            const sess = sessions[key];
-            return sess && 
-                   sess.revoked !== true && 
-                   sess.deviceInfo && 
-                   sess.deviceInfo.os === info.os && 
-                   sess.deviceInfo.device === info.device && 
-                   sess.deviceInfo.browser === info.browser;
-          });
-          
-          if (existingSid) {
-            sid = existingSid;
-            localStorage.setItem('darkflix_session_id', sid);
-            // Se a sessão existente tinha um apelido, salvar localmente para manter
-            const existingSess = sessions[existingSid];
-            if (existingSess && existingSess.deviceInfo && existingSess.deviceInfo.nickname) {
-              localStorage.setItem('darkflix_device_nickname', existingSess.deviceInfo.nickname);
-            }
-          }
+    if (!sid && userSessions) {
+      // Procurar por uma sessão ativa que corresponda ao mesmo aparelho/OS/navegador
+      const existingSid = Object.keys(userSessions).find(key => {
+        const sess = userSessions[key];
+        return sess && 
+               sess.revoked !== true && 
+               sess.deviceInfo && 
+               sess.deviceInfo.os === info.os && 
+               sess.deviceInfo.device === info.device && 
+               sess.deviceInfo.browser === info.browser;
+      });
+      
+      if (existingSid) {
+        sid = existingSid;
+        localStorage.setItem('darkflix_session_id', sid);
+        // Se a sessão existente tinha um apelido, salvar localmente para manter
+        const existingSess = userSessions[existingSid];
+        if (existingSess && existingSess.deviceInfo && existingSess.deviceInfo.nickname) {
+          localStorage.setItem('darkflix_device_nickname', existingSess.deviceInfo.nickname);
         }
-      } catch (e) {
-        console.warn("Erro ao buscar sessões anteriores:", e);
       }
     }
     
@@ -5081,6 +5084,31 @@ const STATE = {
     if (!sid) {
       sid = 'session_' + Math.random().toString(36).substring(2, 15) + '_' + Date.now().toString(36);
       localStorage.setItem('darkflix_session_id', sid);
+    }
+
+    // Limpar sessões duplicadas antigas no banco de dados (mesmo aparelho, mas SIDs diferentes)
+    if (userSessions) {
+      try {
+        const cleanupPromises = [];
+        Object.keys(userSessions).forEach(key => {
+          const sess = userSessions[key];
+          if (key !== sid && 
+              sess && 
+              sess.deviceInfo && 
+              sess.deviceInfo.os === info.os && 
+              sess.deviceInfo.device === info.device && 
+              sess.deviceInfo.browser === info.browser) {
+            
+            // É um registro duplicado/antigo, vamos remover do Firebase
+            cleanupPromises.push(remove(ref(db, `users/${STATE.currentUser.uid}/sessions/${key}`)));
+          }
+        });
+        if (cleanupPromises.length > 0) {
+          await Promise.all(cleanupPromises);
+        }
+      } catch (err) {
+        console.warn("Erro ao limpar aparelhos duplicados:", err);
+      }
     }
     
     // Obter apelido local do aparelho, se houver
