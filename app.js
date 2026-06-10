@@ -3234,10 +3234,8 @@ const STATE = {
       hostProfileId: STATE.currentProfile.id,
       movieId: Number(movieId),
       mediaType: type,
-      season: season ? Number(season) : null,
-      episode: episode ? Number(episode) : null,
       title: movieTitle,
-      backdrop: backdrop,
+      backdrop: backdrop || '',
       state: {
         isPlaying: true,
         currentTime: 0,
@@ -3245,6 +3243,10 @@ const STATE = {
       },
       createdAt: Date.now()
     };
+
+    // Only add season/episode if they exist (Firebase rejects null values)
+    if (season) roomData.season = Number(season);
+    if (episode) roomData.episode = Number(episode);
 
     try {
       const roomRef = ref(db, `watch_parties/${randomId}`);
@@ -3257,7 +3259,26 @@ const STATE = {
       joinWatchPartyRoom(randomId, roomData);
     } catch (err) {
       console.error("Erro ao criar sala:", err);
-      showToast("Não foi possível criar a sala.", "error");
+
+      if (err.code === 'PERMISSION_DENIED' || (err.message && err.message.includes('PERMISSION_DENIED'))) {
+        showToast("⚠️ Sem permissão no Firebase! Veja o alerta com instruções.", "error");
+        alert(
+          "🔒 PERMISSÃO NEGADA - Firebase Realtime Database\n\n" +
+          "O Firebase bloqueou a criação da sala porque o caminho 'watch_parties' não está autorizado.\n\n" +
+          "COMO RESOLVER:\n" +
+          "1. Acesse o Firebase Console do seu projeto\n" +
+          "2. Vá em Build > Realtime Database > Regras (Rules)\n" +
+          "3. Adicione esta regra:\n\n" +
+          '  "watch_parties": {\n' +
+          '    ".read": "auth != null",\n' +
+          '    ".write": "auth != null"\n' +
+          '  }\n\n' +
+          "4. Clique em Publicar (Publish)\n" +
+          "5. Tente criar a sala novamente!"
+        );
+      } else {
+        showToast(`Erro ao criar sala: ${err.message || err.code || err}`, "error");
+      }
     }
   }
 
