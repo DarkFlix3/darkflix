@@ -3959,27 +3959,19 @@ const STATE = {
       STATE.typingListener = null;
     }
 
-    if (STATE.currentUser && STATE.currentProfile) {
-      try {
-        const historyItemRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${code}`);
-        const histSnap = await get(historyItemRef);
-        if (histSnap.exists()) {
-          await update(historyItemRef, {
-            status: 'ended',
-            endedAt: Date.now()
-          });
-        }
-      } catch (e) {
-        console.warn("Erro ao atualizar histórico ao sair:", e);
-      }
-    }
-
     closeVoiceChat();
 
     if (STATE.isHost) {
       // Host saindo: deleta a sala inteira diretamente
       try {
         await remove(ref(db, `watch_parties/${code}`));
+        if (STATE.currentUser && STATE.currentProfile) {
+          const historyItemRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${code}`);
+          await update(historyItemRef, {
+            status: 'ended',
+            endedAt: Date.now()
+          });
+        }
       } catch (e) {
         console.warn("Erro ao deletar sala ao sair:", e);
       }
@@ -4017,6 +4009,13 @@ const STATE = {
         const participantsSnap = await get(ref(db, `watch_parties/${code}/participants`));
         if (!participantsSnap.exists() || Object.keys(participantsSnap.val()).length === 0) {
           await remove(ref(db, `watch_parties/${code}`));
+          if (STATE.currentUser && STATE.currentProfile) {
+            const historyItemRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${code}`);
+            await update(historyItemRef, {
+              status: 'ended',
+              endedAt: Date.now()
+            });
+          }
         }
       } catch (e) {
         console.warn("Erro ao verificar sala vazia:", e);
