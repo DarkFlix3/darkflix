@@ -2363,11 +2363,11 @@ const STATE = {
     STATE.adminOnlineListener = onValue(onlineRef, (snap) => {
       const onlineSessions = snap.val() || {};
       
-      // Filtrar sessões ativas (atividade nos últimos 3 minutos como margem de segurança)
+      // Filtrar sessões ativas (tolerando fuso horário e clocks skews em até 30 minutos)
       const agora = Date.now();
       const onlineCount = Object.values(onlineSessions).filter(session => {
         const lastActive = typeof session === 'object' ? (session.lastActive || 0) : session;
-        return agora - lastActive < 180000; // 3 minutos
+        return Math.abs(agora - lastActive) < 1800000; // 30 minutos de tolerância
       }).length;
 
       const onlineEl = document.getElementById('admin-online-count');
@@ -4515,25 +4515,42 @@ const STATE = {
       showToast("Saindo...", "info");
       pararHeartbeatSessao();
       
+      // Remover ouvinte de sessão forçada antes de fazer logout
+      if (activeSessionListenerRef) {
+        activeSessionListenerRef();
+        activeSessionListenerRef = null;
+      }
+      
       if (STATE.currentUser) {
         const sid = localStorage.getItem('darkflix_session_id');
         if (sid) {
-          const sessionRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}`);
-          await remove(sessionRef);
+          try {
+            const sessionRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}`);
+            await remove(sessionRef);
+          } catch (e) {
+            console.warn("Erro ao remover sessão do usuário no banco:", e);
+          }
           
-          // Remover também das sessões online globais
-          const onlineRef = ref(db, `stats/online_sessions/${sid}`);
-          await remove(onlineRef);
+          try {
+            const onlineRef = ref(db, `stats/online_sessions/${sid}`);
+            await remove(onlineRef);
+          } catch (e) {
+            console.warn("Erro ao remover sessão online no banco:", e);
+          }
         }
       }
-      
-      await signOut(auth);
+    } catch (err) {
+      console.error("Erro durante a limpeza pré-logout:", err);
+    } finally {
+      try {
+        await signOut(auth);
+      } catch (authErr) {
+        console.error("Erro ao deslogar do Firebase Auth:", authErr);
+      }
       localStorage.removeItem('darkflix_active_profile_id');
       localStorage.removeItem('darkflix_session_id');
       localStorage.removeItem('darkflix_device_nickname');
       showToast("Desconectado.", "success");
-    } catch (err) {
-      console.error("Error signing out:", err);
     }
   }
 
@@ -5102,7 +5119,7 @@ const STATE = {
     const info = obterInformacoesAparelho();
     let userSessions = null;
 
-    // Buscar todas as sessões para reutilização e limpeza de duplicados
+    // Buscar todas as sessões para limpeza de registros muito antigos (inativos há mais de 7 dias)
     try {
       const sessionsRef = ref(db, `users/${STATE.currentUser.uid}/sessions`);
       const snapshot = await get(sessionsRef);
@@ -5112,30 +5129,6 @@ const STATE = {
     } catch (e) {
       console.warn("Erro ao buscar sessões para verificação:", e);
     }
-
-    // Se não houver sid no localStorage, tentar reutilizar uma sessão existente no banco para evitar duplicados
-    if (!sid && userSessions) {
-      // Procurar por uma sessão ativa que corresponda ao mesmo aparelho/OS/navegador
-      const existingSid = Object.keys(userSessions).find(key => {
-        const sess = userSessions[key];
-        return sess && 
-               sess.revoked !== true && 
-               sess.deviceInfo && 
-               sess.deviceInfo.os === info.os && 
-               sess.deviceInfo.device === info.device && 
-               sess.deviceInfo.browser === info.browser;
-      });
-      
-      if (existingSid) {
-        sid = existingSid;
-        localStorage.setItem('darkflix_session_id', sid);
-        // Se a sessão existente tinha um apelido, salvar localmente para manter
-        const existingSess = userSessions[existingSid];
-        if (existingSess && existingSess.deviceInfo && existingSess.deviceInfo.nickname) {
-          localStorage.setItem('darkflix_device_nickname', existingSess.deviceInfo.nickname);
-        }
-      }
-    }
     
     // Se ainda não tiver sid, gerar um novo
     if (!sid) {
@@ -5143,28 +5136,24 @@ const STATE = {
       localStorage.setItem('darkflix_session_id', sid);
     }
 
-    // Limpar sessões duplicadas antigas no banco de dados (mesmo aparelho, mas SIDs diferentes)
+    // Limpar sessões inativas há mais de 7 dias
     if (userSessions) {
       try {
         const cleanupPromises = [];
+        const seteDias = 7 * 24 * 60 * 60 * 1000;
+        const agora = Date.now();
         Object.keys(userSessions).forEach(key => {
           const sess = userSessions[key];
-          if (key !== sid && 
-              sess && 
-              sess.deviceInfo && 
-              sess.deviceInfo.os === info.os && 
-              sess.deviceInfo.device === info.device && 
-              sess.deviceInfo.browser === info.browser) {
-            
-            // É um registro duplicado/antigo, vamos remover do Firebase
+          if (sess && sess.lastActive && (agora - sess.lastActive > seteDias)) {
             cleanupPromises.push(remove(ref(db, `users/${STATE.currentUser.uid}/sessions/${key}`)));
+            cleanupPromises.push(remove(ref(db, `stats/online_sessions/${key}`)));
           }
         });
         if (cleanupPromises.length > 0) {
           await Promise.all(cleanupPromises);
         }
       } catch (err) {
-        console.warn("Erro ao limpar aparelhos duplicados:", err);
+        console.warn("Erro ao limpar sessões inativas antigas:", err);
       }
     }
     
