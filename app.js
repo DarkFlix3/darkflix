@@ -3533,7 +3533,7 @@ const STATE = {
         if (!data) {
           if (!STATE.isHost) {
             showToast("Sala encerrada pelo anfitrião.", "info");
-            exitWatchPartyRoom();
+            exitWatchPartyRoom(true);
           }
           return;
         }
@@ -3926,7 +3926,7 @@ const STATE = {
     }
   }
 
-  async function exitWatchPartyRoom() {
+  async function exitWatchPartyRoom(forceEnded = false) {
     if (!STATE.roomActive || !STATE.roomCode) return;
     
     showToast("Saindo da sala...", "info");
@@ -4002,8 +4002,19 @@ const STATE = {
         }
       }
 
-      // Convidado saindo: não deleta mais a sala automaticamente se ela ficar vazia, 
-      // pois o anfitrião pode ter apenas desconectado temporariamente (ex: foi responder mensagem no WhatsApp).
+      // Se o convidado foi expulso porque o anfitrião encerrou a sala (forceEnded),
+      // marcar no histórico como encerrada para não aparecer mais como ativa
+      if (forceEnded && STATE.currentUser && STATE.currentProfile) {
+        try {
+          const historyItemRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${code}`);
+          await update(historyItemRef, {
+            status: 'ended',
+            endedAt: Date.now()
+          });
+        } catch (e) {
+          console.warn("Erro ao atualizar histórico do convidado:", e);
+        }
+      }
     }
 
     STATE.roomActive = false;
