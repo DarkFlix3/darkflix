@@ -3430,6 +3430,12 @@ const STATE = {
     STATE.roomActive = true;
     STATE.isHost = roomData.hostProfileId === STATE.currentProfile.id && roomData.hostUid === STATE.currentUser.uid;
     
+    // Atualizar a URL com o código da sala para permitir recarregar a página sem perder a sala
+    const newUrl = `${window.location.origin}${window.location.pathname}?room=${roomCode}`;
+    if (window.location.href !== newUrl) {
+      window.history.replaceState({}, document.title, newUrl);
+    }
+    
     // Safely update DOM code displays
     const roomCodeDisplay = document.getElementById('room-code-display');
     if (roomCodeDisplay) roomCodeDisplay.textContent = `#${roomCode}`;
@@ -3610,18 +3616,6 @@ const STATE = {
         }
 
         const participants = snap.val();
-
-        // Se a sala está ativa e não possui dono/anfitrião na lista de participantes, encerra a sala
-        if (participants) {
-          const hasHost = Object.values(participants).some(p => p.isHost === true);
-          if (!hasHost) {
-            console.log("Nenhum anfitrião encontrado nos participantes da sala. Encerrando sala.");
-            if (STATE.roomCode) {
-              remove(ref(db, `watch_parties/${STATE.roomCode}`)).catch(e => {});
-            }
-            return;
-          }
-        }
 
         let html = '';
 
@@ -4004,22 +3998,8 @@ const STATE = {
         }
       }
 
-      // Convidado saindo: verifica se a sala ficou vazia para deletá-la
-      try {
-        const participantsSnap = await get(ref(db, `watch_parties/${code}/participants`));
-        if (!participantsSnap.exists() || Object.keys(participantsSnap.val()).length === 0) {
-          await remove(ref(db, `watch_parties/${code}`));
-          if (STATE.currentUser && STATE.currentProfile) {
-            const historyItemRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${code}`);
-            await update(historyItemRef, {
-              status: 'ended',
-              endedAt: Date.now()
-            });
-          }
-        }
-      } catch (e) {
-        console.warn("Erro ao verificar sala vazia:", e);
-      }
+      // Convidado saindo: não deleta mais a sala automaticamente se ela ficar vazia, 
+      // pois o anfitrião pode ter apenas desconectado temporariamente (ex: foi responder mensagem no WhatsApp).
     }
 
     STATE.roomActive = false;
@@ -4104,8 +4084,11 @@ const STATE = {
 
             // Verificar se a sala tem participantes
             const participantsSnap = await get(ref(db, `watch_parties/${room.roomCode}/participants`));
-            if (!participantsSnap.exists() || Object.keys(participantsSnap.val()).length === 0) {
-              // Sala existe mas está vazia - deletar e mover para encerrada
+            const hasParticipants = participantsSnap.exists() && Object.keys(participantsSnap.val()).length > 0;
+            const isOld = Date.now() - room.timestamp > 12 * 60 * 60 * 1000; // 12 horas
+            
+            if (!hasParticipants && isOld) {
+              // Sala existe, está vazia e já passou de 12 horas (abandonada) - deletar e mover para encerrada
               await remove(ref(db, `watch_parties/${room.roomCode}`));
               room.status = 'ended';
               room.endedAt = Date.now();
@@ -4581,6 +4564,27 @@ const STATE = {
 
     // Generate Netflix-style scrolling posters backdrop
     generateAuthBackdrop();
+
+    // Listen to Firebase connection state to re-add participant if connection drops and reconnects
+    const connectedRef = ref(db, ".info/connected");
+    onValue(connectedRef, (snap) => {
+      if (snap.val() === true) {
+        if (STATE.roomActive && STATE.roomCode && STATE.currentProfile) {
+          const participantRef = ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`);
+          set(participantRef, {
+            id: STATE.currentProfile.id,
+            uid: STATE.currentUser.uid,
+            name: STATE.currentProfile.name,
+            avatar: STATE.currentProfile.avatar || PRESET_AVATARS[0].url,
+            isHost: STATE.isHost,
+            isSpeaking: STATE.isMicActive,
+            joinedAt: Date.now()
+          }).then(() => {
+            onDisconnect(participantRef).remove().catch(e => console.warn("Erro no onDisconnect:", e));
+          }).catch(e => console.warn("Erro ao re-registrar participante após reconexão:", e));
+        }
+      }
+    });
 
     // Render and bind Mobile categories accordion
     if (DOM.mobileMoviesList && DOM.mobileSeriesList) {
