@@ -3996,15 +3996,6 @@ const STATE = {
             
             // Atualizar lastActive da sala ao sair
             await set(ref(db, `watch_parties/${code}/lastActive`), Date.now());
-
-            // Atualizar o histórico do convidado que saiu para 'ended'
-            if (STATE.currentUser && STATE.currentProfile) {
-              const historyItemRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${code}`);
-              await update(historyItemRef, {
-                status: 'ended',
-                endedAt: Date.now()
-              });
-            }
           }
         } catch (e) {
           console.warn("Erro ao desregistrar participante:", e);
