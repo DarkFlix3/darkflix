@@ -201,7 +201,18 @@ const STATE = {
   adminVisitsListener: null,
   adminUniqueDevicesListener: null,
   adminOnlineListener: null,
-  onlineOnDisconnectSet: false
+  onlineOnDisconnectSet: false,
+
+  // Watch Party state
+  roomActive: false,
+  roomCode: null,
+  isHost: false,
+  roomListener: null,
+  chatListener: null,
+  participantsListener: null,
+  isMicActive: false,
+  mutedParticipants: [],
+  unreadChatCount: 0
 };
 
   // ---------- Genre Maps ----------
@@ -284,6 +295,7 @@ const STATE = {
     heroMeta: $('#hero-meta'),
     heroDescription: $('#hero-description'),
     heroWatchBtn: $('#hero-watch-btn'),
+    heroWatchPartyBtn: $('#hero-watch-party-btn'),
     heroInfoBtn: $('#hero-info-btn'),
     heroTrailer: $('#hero-trailer'),
     heroTrailerIframe: $('#hero-trailer-iframe'),
@@ -331,6 +343,7 @@ const STATE = {
     modalGenres: $('#modal-genres'),
     modalDescription: $('#modal-description'),
     modalWatchBtn: $('#modal-watch-btn'),
+    modalWatchPartyBtn: $('#modal-watch-party-btn'),
     modalFavoriteBtn: $('#modal-favorite-btn'),
     modalFavoriteText: $('#modal-favorite-text'),
     modalCloseBtn: $('#modal-close-btn'),
@@ -354,6 +367,23 @@ const STATE = {
     cinemaRewindBtn: $('#cinema-rewind-btn'),
     cinemaForwardBtn: $('#cinema-forward-btn'),
     cinemaFullscreenBtn: $('#cinema-fullscreen-btn'),
+    
+    // Watch Party sidebar elements
+    cinemaGuestBlocker: $('#cinema-guest-blocker'),
+    cinemaPauseScreen: $('#cinema-pause-screen'),
+    watchPartySidebar: $('#watch-party-sidebar'),
+    roomCodeDisplay: $('#room-code-display'),
+    btnCopyRoomLink: $('#btn-copy-room-link'),
+    btnCloseSidebarChat: $('#btn-close-sidebar-chat'),
+    partyParticipantsList: $('#party-participants-list'),
+    partyChatLogs: $('#party-chat-logs'),
+    partyChatForm: $('#party-chat-form'),
+    partyChatInput: $('#party-chat-input'),
+    btnTogglePartyMic: $('#btn-toggle-party-mic'),
+    btnExitPartyRoom: $('#btn-exit-party-room'),
+    watchPartyFloatingControls: $('#watch-party-floating-controls'),
+    btnExpandSidebarChat: $('#btn-expand-sidebar-chat'),
+    partyUnreadBadge: $('#party-unread-badge'),
     
     // Mobile categories accordion
     mobileMoviesTrigger: $('#mobile-movies-trigger'),
@@ -2898,6 +2928,22 @@ const STATE = {
     
     // Update active session immediately with currentlyWatching movie/series
     registrarSessaoAtiva();
+
+    // If active room and host, update content metadata in Firebase
+    if (STATE.roomActive && STATE.isHost && STATE.roomCode) {
+      update(ref(db, `watch_parties/${STATE.roomCode}`), {
+        movieId: Number(tmdbId),
+        mediaType: type,
+        season: season ? Number(season) : null,
+        episode: episode ? Number(episode) : null,
+        title: title,
+        state: {
+          isPlaying: true,
+          currentTime: initialElapsedTime,
+          lastUpdated: Date.now()
+        }
+      }).catch(e => console.warn("Erro ao atualizar metadados da sala:", e));
+    }
   }
 
   function closeCinema() {
@@ -2951,6 +2997,601 @@ const STATE = {
     if (STATE.currentPage === 'home') renderHome();
     else if (STATE.currentPage === 'movies') renderMoviesPage();
     else if (STATE.currentPage === 'series') renderSeriesPage();
+  }
+
+  // ============================================================
+  // DarkFlix - Watch Party Synchronization & Real-time Chat
+  // ============================================================
+
+  function initWatchPartyEvents() {
+    // 1. Iniciar Watch Party (Dono) a partir do modal de detalhes
+    if (DOM.modalWatchPartyBtn) {
+      DOM.modalWatchPartyBtn.onclick = (e) => {
+        e.preventDefault();
+        const movie = STATE.currentMovieDetail;
+        if (!movie) return;
+        
+        const type = movie.media_type || (movie.title ? 'movie' : 'tv');
+        if (type === 'movie') {
+          createWatchPartyRoom(movie.id, 'movie');
+        } else {
+          const savedProgress = STATE.inProgress.find(x => Number(x.id) === Number(movie.id));
+          const season = savedProgress ? savedProgress.season : 1;
+          const episode = savedProgress ? savedProgress.episode : 1;
+          createWatchPartyRoom(movie.id, 'tv', season, episode);
+        }
+      };
+    }
+
+    // 2. Iniciar Watch Party (Dono) a partir do Hero Banner
+    if (DOM.heroWatchPartyBtn) {
+      DOM.heroWatchPartyBtn.onclick = (e) => {
+        e.preventDefault();
+        const id = STATE.featuredId;
+        const type = STATE.featuredType;
+        if (!id) return;
+        
+        if (type === 'movie') {
+          createWatchPartyRoom(id, 'movie');
+        } else {
+          const savedProgress = STATE.inProgress.find(x => Number(x.id) === Number(id));
+          const season = savedProgress ? savedProgress.season : 1;
+          const episode = savedProgress ? savedProgress.episode : 1;
+          createWatchPartyRoom(id, 'tv', season, episode);
+        }
+      };
+    }
+
+    // 3. Copiar link de convite
+    if (DOM.btnCopyRoomLink) {
+      DOM.btnCopyRoomLink.onclick = (e) => {
+        e.preventDefault();
+        if (!STATE.roomCode) return;
+        
+        const inviteUrl = `${window.location.origin}${window.location.pathname}?room=${STATE.roomCode}`;
+        navigator.clipboard.writeText(inviteUrl).then(() => {
+          showToast("Link de convite copiado!", "success");
+        }).catch((err) => {
+          console.error("Erro ao copiar link:", err);
+          showToast(`Código da sala: ${STATE.roomCode}`, "info");
+        });
+      };
+    }
+
+    // 4. Fechar chat sidebar (colapsar)
+    if (DOM.btnCloseSidebarChat) {
+      DOM.btnCloseSidebarChat.onclick = (e) => {
+        e.preventDefault();
+        if (DOM.watchPartySidebar) {
+          DOM.watchPartySidebar.classList.add('collapsed');
+          if (DOM.watchPartyFloatingControls) {
+            DOM.watchPartyFloatingControls.style.display = 'block';
+          }
+        }
+      };
+    }
+
+    // 5. Expandir chat sidebar (expandir)
+    if (DOM.btnExpandSidebarChat) {
+      DOM.btnExpandSidebarChat.onclick = (e) => {
+        e.preventDefault();
+        if (DOM.watchPartySidebar) {
+          DOM.watchPartySidebar.classList.remove('collapsed');
+          if (DOM.watchPartyFloatingControls) {
+            DOM.watchPartyFloatingControls.style.display = 'none';
+          }
+          STATE.unreadChatCount = 0;
+          if (DOM.partyUnreadBadge) {
+            DOM.partyUnreadBadge.style.display = 'none';
+            DOM.partyUnreadBadge.textContent = '0';
+          }
+          setTimeout(() => {
+            if (DOM.partyChatLogs) DOM.partyChatLogs.scrollTop = DOM.partyChatLogs.scrollHeight;
+          }, 100);
+        }
+      };
+    }
+
+    // 6. Enviar mensagem de chat
+    if (DOM.partyChatForm) {
+      DOM.partyChatForm.onsubmit = (e) => {
+        e.preventDefault();
+        if (!STATE.roomActive || !STATE.roomCode || !STATE.currentProfile) return;
+        
+        const text = DOM.partyChatInput.value.trim();
+        if (!text) return;
+        
+        DOM.partyChatInput.value = '';
+        
+        const messageId = `msg_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
+        const msgData = {
+          senderId: STATE.currentProfile.id,
+          senderName: STATE.currentProfile.name,
+          senderAvatar: STATE.currentProfile.avatar || '',
+          text: text,
+          timestamp: Date.now()
+        };
+        
+        set(ref(db, `watch_parties/${STATE.roomCode}/chat/${messageId}`), msgData)
+          .catch(err => {
+            console.error("Erro ao enviar mensagem:", err);
+            showToast("Erro ao enviar mensagem.", "error");
+          });
+      };
+    }
+
+    // 7. Sair da sala
+    if (DOM.btnExitPartyRoom) {
+      DOM.btnExitPartyRoom.onclick = (e) => {
+        e.preventDefault();
+        exitWatchPartyRoom();
+      };
+    }
+
+    // 8. Dono pausar/retomar sincronização da sala
+    const hostTogglePlayBtn = document.getElementById('btn-host-toggle-play');
+    if (hostTogglePlayBtn) {
+      hostTogglePlayBtn.onclick = async (e) => {
+        e.preventDefault();
+        if (!STATE.roomActive || !STATE.isHost || !STATE.roomCode) return;
+        
+        try {
+          const roomRef = ref(db, `watch_parties/${STATE.roomCode}/state`);
+          const snap = await get(roomRef);
+          const currentState = snap.val() || { isPlaying: true, currentTime: 0 };
+          const nextPlaying = !currentState.isPlaying;
+          
+          let elapsedSeconds = 0;
+          if (STATE.watchStart && STATE.currentWatchItem) {
+            elapsedSeconds = Math.round((Date.now() - STATE.watchStart) / 1000);
+          }
+          const totalElapsed = (STATE.currentWatchItem ? STATE.currentWatchItem.initialElapsedTime : 0) + elapsedSeconds;
+
+          await update(roomRef, {
+            isPlaying: nextPlaying,
+            currentTime: totalElapsed,
+            lastUpdated: Date.now()
+          });
+          
+          hostTogglePlayBtn.textContent = nextPlaying ? "⏸️ Pausar Sala" : "▶️ Retomar Sala";
+          showToast(nextPlaying ? "Sala retomada!" : "Sala pausada para todos!", "info");
+        } catch (err) {
+          console.error("Erro ao alternar reprodução da sala:", err);
+        }
+      };
+    }
+
+    // 9. Mutar/desmutar próprio microfone (WebRTC placeholder com visual completo)
+    if (DOM.btnTogglePartyMic) {
+      DOM.btnTogglePartyMic.onclick = (e) => {
+        e.preventDefault();
+        STATE.isMicActive = !STATE.isMicActive;
+        
+        const label = DOM.btnTogglePartyMic.querySelector('.mic-label');
+        if (STATE.isMicActive) {
+          navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(stream => {
+              DOM.btnTogglePartyMic.classList.remove('mic-muted');
+              DOM.btnTogglePartyMic.classList.add('mic-active');
+              if (label) label.textContent = "Falar";
+              showToast("Microfone conectado!", "success");
+              
+              if (STATE.roomCode && STATE.currentProfile) {
+                update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
+                  isSpeaking: true
+                });
+              }
+              STATE.localVoiceStream = stream;
+            })
+            .catch(err => {
+              console.warn("Microfone negado:", err);
+              showToast("Permissão de áudio necessária.", "error");
+              STATE.isMicActive = false;
+            });
+        } else {
+          DOM.btnTogglePartyMic.classList.add('mic-muted');
+          DOM.btnTogglePartyMic.classList.remove('mic-active');
+          if (label) label.textContent = "Mutado";
+          showToast("Microfone desativado.", "info");
+          
+          if (STATE.localVoiceStream) {
+            STATE.localVoiceStream.getTracks().forEach(track => track.stop());
+            STATE.localVoiceStream = null;
+          }
+          
+          if (STATE.roomCode && STATE.currentProfile) {
+            update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
+              isSpeaking: false
+            });
+          }
+        }
+      };
+    }
+  }
+
+  async function createWatchPartyRoom(movieId, type, season = null, episode = null) {
+    if (!STATE.currentUser || !STATE.currentProfile) {
+      showToast("Selecione seu perfil antes de criar uma sala.", "error");
+      return;
+    }
+
+    const randomId = 'room_' + Math.random().toString(36).substring(2, 8).toUpperCase();
+    showToast("Criando sala de cinema...", "info");
+    
+    let movieTitle = "Filme";
+    let backdrop = "";
+    try {
+      const details = await tmdbFetch(`/${type}/${movieId}`);
+      movieTitle = details.title || details.name || "Filme";
+      backdrop = details.backdrop_path || "";
+    } catch (e) {
+      console.warn("Erro ao buscar detalhes:", e);
+    }
+
+    const roomData = {
+      id: randomId,
+      hostUid: STATE.currentUser.uid,
+      hostProfileId: STATE.currentProfile.id,
+      movieId: Number(movieId),
+      mediaType: type,
+      season: season ? Number(season) : null,
+      episode: episode ? Number(episode) : null,
+      title: movieTitle,
+      backdrop: backdrop,
+      state: {
+        isPlaying: true,
+        currentTime: 0,
+        lastUpdated: Date.now()
+      },
+      createdAt: Date.now()
+    };
+
+    try {
+      const roomRef = ref(db, `watch_parties/${randomId}`);
+      await set(roomRef, roomData);
+      
+      STATE.isHost = true;
+      STATE.roomCode = randomId;
+      STATE.roomActive = true;
+      
+      joinWatchPartyRoom(randomId, roomData);
+    } catch (err) {
+      console.error("Erro ao criar sala:", err);
+      showToast("Não foi possível criar a sala.", "error");
+    }
+  }
+
+  async function joinWatchPartyRoom(roomCode, preloadedRoomData = null) {
+    if (!STATE.currentUser || !STATE.currentProfile) {
+      localStorage.setItem('darkflix_pending_room_code', roomCode);
+      showToast("Selecione seu perfil para entrar na sala.", "info");
+      navigateTo('profiles');
+      return;
+    }
+
+    let roomData = preloadedRoomData;
+    if (!roomData) {
+      try {
+        showToast("Conectando à sala...", "info");
+        const snap = await get(ref(db, `watch_parties/${roomCode}`));
+        if (!snap.exists()) {
+          showToast("Esta sala não existe ou expirou.", "error");
+          localStorage.removeItem('darkflix_pending_room_code');
+          window.history.replaceState({}, document.title, window.location.pathname);
+          return;
+        }
+        roomData = snap.val();
+      } catch (err) {
+        console.error("Erro ao buscar sala:", err);
+        showToast("Erro ao conectar com a sala.", "error");
+        return;
+      }
+    }
+
+    STATE.roomCode = roomCode;
+    STATE.roomActive = true;
+    STATE.isHost = roomData.hostProfileId === STATE.currentProfile.id && roomData.hostUid === STATE.currentUser.uid;
+    
+    if (DOM.roomCodeDisplay) DOM.roomCodeDisplay.textContent = `#${roomCode}`;
+    if (DOM.watchPartySidebar) {
+      DOM.watchPartySidebar.style.display = 'flex';
+      DOM.watchPartySidebar.classList.remove('collapsed');
+    }
+    if (DOM.watchPartyFloatingControls) DOM.watchPartyFloatingControls.style.display = 'none';
+    
+    const hostTogglePlayBtn = document.getElementById('btn-host-toggle-play');
+    if (hostTogglePlayBtn) {
+      hostTogglePlayBtn.style.display = STATE.isHost ? 'inline-flex' : 'none';
+      hostTogglePlayBtn.textContent = roomData.state.isPlaying ? "⏸️ Pausar Sala" : "▶️ Retomar Sala";
+    }
+
+    const participantRef = ref(db, `watch_parties/${roomCode}/participants/${STATE.currentProfile.id}`);
+    await set(participantRef, {
+      id: STATE.currentProfile.id,
+      name: STATE.currentProfile.name,
+      avatar: STATE.currentProfile.avatar || PRESET_AVATARS[0].url,
+      isHost: STATE.isHost,
+      isSpeaking: false,
+      joinedAt: Date.now()
+    });
+    
+    onDisconnect(participantRef).remove().catch(e => console.warn("Erro no onDisconnect:", e));
+
+    const startOffset = roomData.state.currentTime || 0;
+    openCinema(roomData.movieId, roomData.title, roomData.mediaType, roomData.season, roomData.episode);
+    
+    if (STATE.currentWatchItem) {
+      STATE.currentWatchItem.initialElapsedTime = startOffset;
+      STATE.watchStart = Date.now();
+    }
+
+    const systemMsgId = `sys_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
+    set(ref(db, `watch_parties/${roomCode}/chat/${systemMsgId}`), {
+      senderId: 'system',
+      senderName: 'Sistema',
+      senderAvatar: '',
+      text: `👋 ${STATE.currentProfile.name} entrou na sala.`,
+      timestamp: Date.now()
+    });
+
+    const roomRef = ref(db, `watch_parties/${roomCode}`);
+    STATE.roomListener = onValue(roomRef, (snap) => {
+      const data = snap.val();
+      if (!data) {
+        showToast("Sala encerrada pelo anfitrião.", "info");
+        exitWatchPartyRoom();
+        return;
+      }
+
+      // Se o host mudou de vídeo (filme ou série diferente)
+      const currentWatch = STATE.currentWatchItem || {};
+      if (!STATE.isHost && (Number(currentWatch.id) !== Number(data.movieId) || 
+          Number(currentWatch.season) !== Number(data.season) || 
+          Number(currentWatch.episode) !== Number(data.episode))) {
+        showToast(`🎥 O anfitrião mudou de vídeo para: ${data.title}`, "info");
+        openCinema(data.movieId, data.title, data.mediaType, data.season, data.episode);
+        return;
+      }
+
+      const roomState = data.state || {};
+      const isPlaying = roomState.isPlaying !== false;
+      const targetTime = roomState.currentTime || 0;
+
+      if (!STATE.isHost) {
+        if (!isPlaying) {
+          if (DOM.cinemaPauseScreen) DOM.cinemaPauseScreen.style.display = 'flex';
+          if (DOM.cinemaIframe) DOM.cinemaIframe.style.display = 'none';
+          if (DOM.cinemaVideo) DOM.cinemaVideo.style.display = 'none';
+        } else {
+          if (DOM.cinemaPauseScreen) DOM.cinemaPauseScreen.style.display = 'none';
+          if (DOM.cinemaIframe) DOM.cinemaIframe.style.display = 'block';
+
+          let currentLocalTime = 0;
+          if (STATE.watchStart && STATE.currentWatchItem) {
+            const elapsed = Math.round((Date.now() - STATE.watchStart) / 1000);
+            currentLocalTime = STATE.currentWatchItem.initialElapsedTime + elapsed;
+          }
+
+          if (Math.abs(currentLocalTime - targetTime) > 10) {
+            let newUrl = '';
+            if (data.mediaType === 'movie') {
+              newUrl = `https://myembed.biz/filme/${data.movieId}?autoplay=1&start=${targetTime}`;
+            } else {
+              newUrl = `https://myembed.biz/serie/${data.movieId}/${data.season}/${data.episode}?autoplay=1&start=${targetTime}`;
+            }
+
+            if (DOM.cinemaIframe.src !== newUrl) {
+              DOM.cinemaIframe.src = newUrl;
+              showToast("Sincronizando...", "info");
+            }
+
+            if (STATE.currentWatchItem) {
+              STATE.currentWatchItem.initialElapsedTime = targetTime;
+              STATE.watchStart = Date.now();
+            }
+          }
+        }
+      }
+    });
+
+    const participantsRef = ref(db, `watch_parties/${roomCode}/participants`);
+    STATE.participantsListener = onValue(participantsRef, (snap) => {
+      const listContainer = DOM.partyParticipantsList;
+      if (!listContainer) return;
+
+      if (!snap.exists()) {
+        listContainer.innerHTML = '<div style="font-size:0.75rem; color:var(--text-muted);">Ninguém na sala.</div>';
+        return;
+      }
+
+      const participants = snap.val();
+      let html = '';
+
+      Object.keys(participants).forEach(pid => {
+        const p = participants[pid];
+        if (!p) return;
+
+        const isSelf = p.id === STATE.currentProfile.id;
+        const isMuted = STATE.mutedParticipants.includes(p.id);
+        const micIcon = isMuted ? '🔇' : '🔊';
+        const speakPulse = p.isSpeaking ? ' style="border: 2px solid #22c55e;"' : '';
+
+        html += `
+          <div class="participant-item${p.isHost ? ' host' : ''}" data-id="${p.id}">
+            <div class="participant-avatar-wrapper"${speakPulse}>
+              <img src="${p.avatar || PRESET_AVATARS[0].url}" alt="${p.name}">
+              <span class="participant-status-dot"></span>
+            </div>
+            <span class="participant-name" title="${p.name}">${p.name}${isSelf ? ' (Você)' : ''}</span>
+            ${!isSelf ? `
+              <button class="btn-participant-mute${isMuted ? ' muted' : ''}" data-id="${p.id}" title="${isMuted ? 'Desmutar amigo' : 'Mutar amigo'}">
+                ${micIcon}
+              </button>
+            ` : ''}
+          </div>
+        `;
+      });
+
+      listContainer.innerHTML = html;
+
+      listContainer.querySelectorAll('.btn-participant-mute').forEach(btn => {
+        btn.onclick = () => {
+          const targetPid = btn.dataset.id;
+          const index = STATE.mutedParticipants.indexOf(targetPid);
+          if (index > -1) {
+            STATE.mutedParticipants.splice(index, 1);
+            showToast("Usuário desmutado localmente.", "success");
+          } else {
+            STATE.mutedParticipants.push(targetPid);
+            showToast("Usuário mutado para você.", "info");
+          }
+          // Atualiza lista
+          if (STATE.participantsListener) {
+            get(participantsRef);
+          }
+        };
+      });
+    });
+
+    const chatRef = ref(db, `watch_parties/${roomCode}/chat`);
+    STATE.chatListener = onValue(chatRef, (snap) => {
+      const chatLogs = DOM.partyChatLogs;
+      if (!chatLogs) return;
+
+      if (!snap.exists()) {
+        chatLogs.innerHTML = '<div class="chat-message-system">🎈 Chat ativo! Envie uma mensagem.</div>';
+        return;
+      }
+
+      const messages = snap.val();
+      const sortedMessages = Object.values(messages).sort((a, b) => a.timestamp - b.timestamp);
+      const wasAtBottom = chatLogs.scrollHeight - chatLogs.clientHeight <= chatLogs.scrollTop + 50;
+      const lastMessageCount = chatLogs.querySelectorAll('.chat-message-item, .chat-message-system').length;
+
+      chatLogs.innerHTML = sortedMessages.map(msg => {
+        if (msg.senderId === 'system') {
+          return `<div class="chat-message-system">${msg.text}</div>`;
+        }
+        
+        const isSelf = msg.senderId === STATE.currentProfile.id;
+        const senderAvatar = msg.senderAvatar || PRESET_AVATARS[0].url;
+
+        return `
+          <div class="chat-message-item${isSelf ? ' self' : ''}">
+            <div class="message-sender-meta">
+              ${!isSelf ? `<img src="${senderAvatar}" class="message-sender-avatar">` : ''}
+              <span class="message-sender-name">${msg.senderName}</span>
+              <span class="message-time" style="opacity:0.6; margin-left: 4px;">${new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+            </div>
+            <div class="message-bubble">${msg.text}</div>
+          </div>
+        `;
+      }).join('');
+
+      if (wasAtBottom || sortedMessages.length > lastMessageCount) {
+        chatLogs.scrollTop = chatLogs.scrollHeight;
+      }
+
+      if (DOM.watchPartySidebar && DOM.watchPartySidebar.classList.contains('collapsed') && sortedMessages.length > lastMessageCount) {
+        STATE.unreadChatCount += (sortedMessages.length - lastMessageCount);
+        if (DOM.partyUnreadBadge) {
+          DOM.partyUnreadBadge.style.display = 'inline-block';
+          DOM.partyUnreadBadge.textContent = STATE.unreadChatCount;
+        }
+        const lastMsg = sortedMessages[sortedMessages.length - 1];
+        if (lastMsg && lastMsg.senderId !== 'system' && lastMsg.senderId !== STATE.currentProfile.id) {
+          showToast(`💬 ${lastMsg.senderName}: "${lastMsg.text}"`, 'info');
+        }
+      }
+    });
+
+    if (STATE.isHost) {
+      if (STATE.hostSyncInterval) clearInterval(STATE.hostSyncInterval);
+      STATE.hostSyncInterval = setInterval(() => {
+        if (STATE.roomActive && STATE.isHost && STATE.currentWatchItem) {
+          const elapsed = Math.round((Date.now() - STATE.watchStart) / 1000);
+          const totalElapsed = STATE.currentWatchItem.initialElapsedTime + elapsed;
+          
+          const hostTogglePlayBtn = document.getElementById('btn-host-toggle-play');
+          const isPlaying = hostTogglePlayBtn ? (!hostTogglePlayBtn.textContent.includes("Retomar")) : true;
+
+          update(ref(db, `watch_parties/${roomCode}/state`), {
+            currentTime: totalElapsed,
+            isPlaying: isPlaying,
+            lastUpdated: Date.now()
+          }).catch(e => console.warn("Erro no sync do host:", e));
+        }
+      }, 5000);
+    }
+  }
+
+  async function exitWatchPartyRoom() {
+    if (!STATE.roomActive || !STATE.roomCode) return;
+    
+    showToast("Saindo da sala...", "info");
+    const code = STATE.roomCode;
+
+    if (STATE.hostSyncInterval) {
+      clearInterval(STATE.hostSyncInterval);
+      STATE.hostSyncInterval = null;
+    }
+
+    if (STATE.roomListener) {
+      STATE.roomListener();
+      STATE.roomListener = null;
+    }
+    if (STATE.chatListener) {
+      STATE.chatListener();
+      STATE.chatListener = null;
+    }
+    if (STATE.participantsListener) {
+      STATE.participantsListener();
+      STATE.participantsListener = null;
+    }
+
+    if (STATE.localVoiceStream) {
+      STATE.localVoiceStream.getTracks().forEach(track => track.stop());
+      STATE.localVoiceStream = null;
+    }
+    STATE.isMicActive = false;
+
+    if (STATE.currentProfile) {
+      const systemMsgId = `sys_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
+      try {
+        await set(ref(db, `watch_parties/${code}/chat/${systemMsgId}`), {
+          senderId: 'system',
+          senderName: 'Sistema',
+          senderAvatar: '',
+          text: `🚪 ${STATE.currentProfile.name} saiu da sala.`,
+          timestamp: Date.now()
+        });
+        
+        await remove(ref(db, `watch_parties/${code}/participants/${STATE.currentProfile.id}`));
+      } catch (e) {
+        console.warn("Erro ao desregistrar participante:", e);
+      }
+    }
+
+    if (STATE.isHost) {
+      try {
+        await remove(ref(db, `watch_parties/${code}`));
+      } catch (e) {
+        console.warn("Erro ao deletar sala:", e);
+      }
+    }
+
+    STATE.roomActive = false;
+    STATE.roomCode = null;
+    STATE.isHost = false;
+    STATE.unreadChatCount = 0;
+
+    if (DOM.watchPartySidebar) DOM.watchPartySidebar.style.display = 'none';
+    if (DOM.watchPartyFloatingControls) DOM.watchPartyFloatingControls.style.display = 'none';
+    if (DOM.cinemaPauseScreen) DOM.cinemaPauseScreen.style.display = 'none';
+    if (DOM.cinemaGuestBlocker) DOM.cinemaGuestBlocker.style.display = 'none';
+
+    closeCinema();
+    window.history.replaceState({}, document.title, window.location.pathname);
   }
 
   function renderFavoritesPage() {
@@ -3915,6 +4556,9 @@ const STATE = {
         renderCanaisPage();
       };
     }
+
+    // Inicializar Watch Party
+    initWatchPartyEvents();
   }
 
   // ---------- Load Profiles from DB ----------
@@ -4046,6 +4690,19 @@ const STATE = {
     showToast(`Bem-vindo de volta, ${p.name}!`, 'success');
     updateHeaderProfileMenu();
     navigateTo('home');
+
+    // Ativar botão Watch Party no Hero banner
+    if (DOM.heroWatchPartyBtn) DOM.heroWatchPartyBtn.style.display = 'inline-flex';
+
+    // Verificar se há uma sala pendente para auto-entrar
+    const urlParams = new URLSearchParams(window.location.search);
+    const roomCode = urlParams.get('room') || localStorage.getItem('darkflix_pending_room_code');
+    if (roomCode) {
+      localStorage.removeItem('darkflix_pending_room_code');
+      setTimeout(() => {
+        joinWatchPartyRoom(roomCode);
+      }, 500);
+    }
   }
 
   // ---------- Update Header Profile Dropdown ----------

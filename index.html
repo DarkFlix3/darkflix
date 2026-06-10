@@ -257,6 +257,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             Assistir Agora
           </button>
+          <button class="btn btn-secondary" id="hero-watch-party-btn" style="display: none; align-items: center; gap: 8px;">
+            🥳 Watch Party
+          </button>
           <button class="btn btn-secondary" id="hero-info-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
             Mais Informações
@@ -429,6 +432,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             Assistir Agora
           </button>
+          <button class="btn btn-secondary" id="modal-watch-party-btn" style="padding: 13px 24px; display: inline-flex; align-items: center; gap: 8px;">
+            🥳 Watch Party
+          </button>
           <button class="btn btn-secondary" id="modal-favorite-btn" style="padding: 13px 24px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             <span id="modal-favorite-text">Minha Lista</span>
@@ -461,13 +467,88 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       Fechar Player
     </button>
-    <div class="cinema-player-scroll-wrapper">
-      <div class="cinema-player" style="position: relative;">
-        <iframe id="cinema-iframe" src="" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation" allow="autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen="true" mozallowfullscreen="true" loading="lazy" style="display: none;"></iframe>
-        <video id="cinema-video" controls autoplay playsinline autopictureinpicture style="width: 100%; height: 100%; display: none; object-fit: contain; background: #000;"></video>
-        <div id="cinema-blocker-top" class="cinema-player-blocker-top" style="display: none;"></div>
+
+    <div class="cinema-layout-container">
+      <div class="cinema-player-scroll-wrapper">
+        <div class="cinema-player" style="position: relative;">
+          <!-- Invisible blocker overlay for guests (película) -->
+          <div id="cinema-guest-blocker" class="cinema-guest-blocker" style="position: absolute; inset: 0; z-index: 9999; background: transparent; display: none;"></div>
+          
+          <!-- Screen cover when video is paused by owner (Alternativa B) -->
+          <div id="cinema-pause-screen" class="cinema-pause-screen" style="position: absolute; inset: 0; z-index: 9998; background: #000000e8; display: none; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 20px;">
+            <div style="max-width: 400px; background: #18181f; border: 1px solid var(--border); padding: 30px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+              <span style="font-size: 3.5rem; display: block; margin-bottom: 15px; animation: pulse 2s infinite;">⏸️</span>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.5px;">VÍDEO PAUSADO PELO ANFITRIÃO</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; font-family: 'Montserrat', sans-serif;">O dono da sala pausou a transmissão. O vídeo continuará em sincronia assim que ele der o Play.</p>
+            </div>
+          </div>
+
+          <iframe id="cinema-iframe" src="" sandbox="allow-scripts allow-same-origin allow-forms allow-presentation" allow="autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen="true" mozallowfullscreen="true" loading="lazy" style="display: none;"></iframe>
+          <video id="cinema-video" controls autoplay playsinline autopictureinpicture style="width: 100%; height: 100%; display: none; object-fit: contain; background: #000;"></video>
+          <div id="cinema-blocker-top" class="cinema-player-blocker-top" style="display: none;"></div>
+        </div>
+      </div>
+
+      <!-- Watch Party Sidebar -->
+      <div id="watch-party-sidebar" class="watch-party-sidebar" style="display: none;">
+        <div class="sidebar-header">
+          <div class="room-info">
+            <span class="room-label">WATCH PARTY</span>
+            <div style="display: flex; align-items: center; gap: 8px; margin-top: 2px;">
+              <span id="room-code-display" class="room-code">#------</span>
+              <button id="btn-copy-room-link" class="btn-sidebar-action" title="Copiar Link da Sala">🔗 Convidar</button>
+            </div>
+          </div>
+          <button id="btn-close-sidebar-chat" class="btn-close-sidebar" title="Esconder Chat">✕</button>
+        </div>
+        
+        <!-- Participantes list -->
+        <div class="sidebar-participants-wrapper">
+          <span class="section-title">Participantes</span>
+          <div id="party-participants-list" class="party-participants-list">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+        
+        <!-- Chat Area -->
+        <div class="sidebar-chat-wrapper">
+          <span class="section-title">Chat da Sala</span>
+          <div id="party-chat-logs" class="party-chat-logs">
+            <!-- Chat messages populated via JS -->
+          </div>
+        </div>
+
+        <!-- Chat Input -->
+        <form id="party-chat-form" class="party-chat-form">
+          <input type="text" id="party-chat-input" placeholder="Diga algo na sala..." maxlength="150" required autocomplete="off">
+          <button type="submit" id="btn-send-party-message" title="Enviar Mensagem">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+
+        <!-- WebRTC Mic controls -->
+        <div class="sidebar-footer-controls">
+          <button id="btn-host-toggle-play" class="btn-footer-control" style="display: none; background: rgba(251, 191, 36, 0.12); border: 1px solid rgba(251, 191, 36, 0.25); color: #fbbf24;" title="Pausar ou Retomar Transmissão para todos">
+            ⏸️ Pausar Sala
+          </button>
+          <button id="btn-toggle-party-mic" class="btn-footer-control mic-muted" title="Ativar Microfone">
+            <span class="mic-icon">🎙️</span>
+            <span class="mic-label">Mutado</span>
+          </button>
+          <button id="btn-exit-party-room" class="btn-footer-control btn-exit-room" title="Sair da Sala">
+            🚪 Sair
+          </button>
+        </div>
       </div>
     </div>
+
+    <!-- Chat toggle floating button when sidebar is closed -->
+    <div id="watch-party-floating-controls" class="watch-party-floating-controls" style="display: none;">
+      <button id="btn-expand-sidebar-chat" class="btn-floating-toggle" title="Abrir Chat da Sala">
+        💬 Chat da Sala <span id="party-unread-badge" class="unread-badge" style="display: none;">0</span>
+      </button>
+    </div>
+
     <p class="cinema-title" id="cinema-title"></p>
 
     <p id="cinema-iframe-tip" style="color: #fbbf24; font-size: 0.82rem; text-align: center; margin-top: 12px; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.5; background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.2); padding: 10px 16px; border-radius: var(--radius-md); font-family: 'Montserrat', sans-serif;">
