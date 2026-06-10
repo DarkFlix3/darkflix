@@ -212,7 +212,8 @@ const STATE = {
   participantsListener: null,
   isMicActive: false,
   mutedParticipants: [],
-  unreadChatCount: 0
+  unreadChatCount: 0,
+  activeCanalId: null
 };
 
   // ---------- Genre Maps ----------
@@ -2247,6 +2248,8 @@ const STATE = {
     const canal = listaCanais.find(c => c.id === canalId);
     if (!canal) return;
 
+    STATE.activeCanalId = canalId;
+
     // Bloquear reprodução se estiver em manutenção
     if (STATE.maintenanceChannels && STATE.maintenanceChannels[canal.id] === true) {
       showToast(`O canal "${canal.nome}" está em manutenção temporária. Voltaremos em breve!`, 'info');
@@ -2869,37 +2872,89 @@ const STATE = {
 
     DOM.cinemaTitle.textContent = title;
     
-    let embedUrl = '';
-    const startParam = initialElapsedTime ? `&start=${initialElapsedTime}&t=${initialElapsedTime}&time=${initialElapsedTime}` : '';
-
-    if (type === 'movie') {
-      embedUrl = `https://myembed.biz/filme/${tmdbId}?autoplay=1${startParam}`;
-    } else {
-      embedUrl = `https://myembed.biz/serie/${tmdbId}/${season}/${episode}?autoplay=1${startParam}`;
-    }
-
+    // ===== Player Setup: Canal ao Vivo, Watch Party, ou Individual =====
     DOM.cinemaVideo.style.display = 'none';
     DOM.cinemaVideo.src = '';
-    
-    DOM.cinemaIframe.src = embedUrl;
-    DOM.cinemaIframe.style.display = 'block';
-    DOM.cinemaBlockerTop.style.display = 'block';
 
-    if (DOM.cinemaExternalBtn) {
-      DOM.cinemaExternalBtn.href = embedUrl;
-    }
+    if (type === 'canal') {
+      // Canal ao vivo: usar Clappr diretamente no cinema mode
+      DOM.cinemaIframe.style.display = 'none';
+      DOM.cinemaIframe.src = '';
+      DOM.cinemaBlockerTop.style.display = 'none';
 
-    // Use a direct embed link (WarezCDN) for Web Video Cast to ensure a clean playback page with zero selector screens
-    let wvcUrl = '';
-    if (type === 'movie') {
-      wvcUrl = `https://embed.warezcdn.link/filme/${tmdbId}?start=${initialElapsedTime}`;
+      const canal = listaCanais.find(c => c.id === tmdbId);
+      if (canal) {
+        let clapprCont = document.getElementById('cinema-clappr-player');
+        if (!clapprCont) {
+          clapprCont = document.createElement('div');
+          clapprCont.id = 'cinema-clappr-player';
+          clapprCont.style.cssText = 'width:100%;height:100%;position:absolute;inset:0;z-index:1;';
+          document.querySelector('.cinema-player').appendChild(clapprCont);
+        } else {
+          clapprCont.innerHTML = '';
+        }
+        clapprCont.style.display = 'block';
+
+        if (window.cinemaClapprPlayer) {
+          try { window.cinemaClapprPlayer.destroy(); } catch(e){}
+        }
+        window.cinemaClapprPlayer = new Clappr.Player({
+          source: canal.url,
+          parentId: '#cinema-clappr-player',
+          autoPlay: true,
+          width: '100%',
+          height: '100%'
+        });
+      }
     } else {
-      wvcUrl = `https://embed.warezcdn.link/serie/${tmdbId}/${season}/${episode}?start=${initialElapsedTime}`;
+      // Limpar Clappr se existir de uma sessão anterior de canal
+      if (window.cinemaClapprPlayer) {
+        try { window.cinemaClapprPlayer.destroy(); } catch(e){}
+        window.cinemaClapprPlayer = null;
+      }
+      const clapprCont = document.getElementById('cinema-clappr-player');
+      if (clapprCont) { clapprCont.innerHTML = ''; clapprCont.style.display = 'none'; }
+
+      let embedUrl = '';
+      if (STATE.roomActive) {
+        // Watch Party: usar player direto (WarezCDN) sem tela de seleção
+        const startParam = initialElapsedTime ? `?start=${initialElapsedTime}` : '';
+        if (type === 'movie') {
+          embedUrl = `https://embed.warezcdn.link/filme/${tmdbId}${startParam}`;
+        } else {
+          embedUrl = `https://embed.warezcdn.link/serie/${tmdbId}/${season}/${episode}${startParam}`;
+        }
+      } else {
+        // Individual: usar myembed.biz com opções de player
+        const startParam = initialElapsedTime ? `&start=${initialElapsedTime}&t=${initialElapsedTime}&time=${initialElapsedTime}` : '';
+        if (type === 'movie') {
+          embedUrl = `https://myembed.biz/filme/${tmdbId}?autoplay=1${startParam}`;
+        } else {
+          embedUrl = `https://myembed.biz/serie/${tmdbId}/${season}/${episode}?autoplay=1${startParam}`;
+        }
+      }
+
+      DOM.cinemaIframe.src = embedUrl;
+      DOM.cinemaIframe.style.display = 'block';
+      DOM.cinemaBlockerTop.style.display = 'block';
+
+      if (DOM.cinemaExternalBtn) {
+        DOM.cinemaExternalBtn.href = embedUrl;
+      }
     }
 
-    const cinemaWvcBtn = document.getElementById('cinema-wvc-btn');
-    if (cinemaWvcBtn) {
-      cinemaWvcBtn.href = `wvc-x-callback://open?url=${encodeURIComponent(wvcUrl)}&title=${encodeURIComponent(title)}`;
+    // Web Video Cast link (sempre usa WarezCDN para transmissão limpa)
+    if (type !== 'canal') {
+      let wvcUrl = '';
+      if (type === 'movie') {
+        wvcUrl = `https://embed.warezcdn.link/filme/${tmdbId}?start=${initialElapsedTime}`;
+      } else {
+        wvcUrl = `https://embed.warezcdn.link/serie/${tmdbId}/${season}/${episode}?start=${initialElapsedTime}`;
+      }
+      const cinemaWvcBtn = document.getElementById('cinema-wvc-btn');
+      if (cinemaWvcBtn) {
+        cinemaWvcBtn.href = `wvc-x-callback://open?url=${encodeURIComponent(wvcUrl)}&title=${encodeURIComponent(title)}`;
+      }
     }
 
     DOM.cinemaMode.classList.add('active');
@@ -2983,6 +3038,17 @@ const STATE = {
     DOM.cinemaBlockerTop.style.display = 'none';
     document.body.style.overflow = '';
 
+    // Destruir Clappr player usado para Watch Party de canais
+    if (window.cinemaClapprPlayer) {
+      try { window.cinemaClapprPlayer.destroy(); } catch(e){}
+      window.cinemaClapprPlayer = null;
+    }
+    const clapprCont = document.getElementById('cinema-clappr-player');
+    if (clapprCont) {
+      clapprCont.innerHTML = '';
+      clapprCont.style.display = 'none';
+    }
+
     // Clear controls hiding timeout and class
     if (controlsTimeout) {
       clearTimeout(controlsTimeout);
@@ -3039,6 +3105,19 @@ const STATE = {
           const episode = savedProgress ? savedProgress.episode : 1;
           createWatchPartyRoom(id, 'tv', season, episode);
         }
+      };
+    }
+
+    // 2b. Iniciar Watch Party a partir da Página de Canais
+    const canalWatchPartyBtn = document.getElementById('canal-watch-party-btn');
+    if (canalWatchPartyBtn) {
+      canalWatchPartyBtn.onclick = (e) => {
+        e.preventDefault();
+        if (!STATE.activeCanalId) {
+          showToast("Selecione um canal primeiro para criar uma sala.", "info");
+          return;
+        }
+        createWatchPartyRoom(STATE.activeCanalId, 'canal');
       };
     }
 
@@ -3220,19 +3299,27 @@ const STATE = {
     
     let movieTitle = "Filme";
     let backdrop = "";
-    try {
-      const details = await tmdbFetch(`/${type}/${movieId}`);
-      movieTitle = details.title || details.name || "Filme";
-      backdrop = details.backdrop_path || "";
-    } catch (e) {
-      console.warn("Erro ao buscar detalhes:", e);
+    if (type === 'canal') {
+      const canal = listaCanais.find(c => c.id === movieId);
+      if (canal) {
+        movieTitle = canal.nome;
+        backdrop = canal.logo || '';
+      }
+    } else {
+      try {
+        const details = await tmdbFetch(`/${type}/${movieId}`);
+        movieTitle = details.title || details.name || "Filme";
+        backdrop = details.backdrop_path || "";
+      } catch (e) {
+        console.warn("Erro ao buscar detalhes:", e);
+      }
     }
 
     const roomData = {
       id: randomId,
       hostUid: STATE.currentUser.uid,
       hostProfileId: STATE.currentProfile.id,
-      movieId: Number(movieId),
+      movieId: type === 'canal' ? movieId : Number(movieId),
       mediaType: type,
       title: movieTitle,
       backdrop: backdrop || '',
@@ -3364,11 +3451,13 @@ const STATE = {
         return;
       }
 
-      // Se o host mudou de vídeo (filme ou série diferente)
+      // Se o host mudou de vídeo (filme, série ou canal diferente)
       const currentWatch = STATE.currentWatchItem || {};
-      if (!STATE.isHost && (Number(currentWatch.id) !== Number(data.movieId) || 
-          Number(currentWatch.season) !== Number(data.season) || 
-          Number(currentWatch.episode) !== Number(data.episode))) {
+      const currentWatchId = String(currentWatch.id || '');
+      const roomMovieId = String(data.movieId || '');
+      if (!STATE.isHost && (currentWatchId !== roomMovieId || 
+          String(currentWatch.season || '') !== String(data.season || '') || 
+          String(currentWatch.episode || '') !== String(data.episode || ''))) {
         showToast(`🎥 O anfitrião mudou de vídeo para: ${data.title}`, "info");
         openCinema(data.movieId, data.title, data.mediaType, data.season, data.episode);
         return;
@@ -3383,32 +3472,48 @@ const STATE = {
           if (DOM.cinemaPauseScreen) DOM.cinemaPauseScreen.style.display = 'flex';
           if (DOM.cinemaIframe) DOM.cinemaIframe.style.display = 'none';
           if (DOM.cinemaVideo) DOM.cinemaVideo.style.display = 'none';
+          // Pausar Clappr para canais
+          const clapprCont = document.getElementById('cinema-clappr-player');
+          if (clapprCont && window.cinemaClapprPlayer) {
+            try { window.cinemaClapprPlayer.pause(); } catch(e){}
+          }
         } else {
           if (DOM.cinemaPauseScreen) DOM.cinemaPauseScreen.style.display = 'none';
-          if (DOM.cinemaIframe) DOM.cinemaIframe.style.display = 'block';
 
-          let currentLocalTime = 0;
-          if (STATE.watchStart && STATE.currentWatchItem) {
-            const elapsed = Math.round((Date.now() - STATE.watchStart) / 1000);
-            currentLocalTime = STATE.currentWatchItem.initialElapsedTime + elapsed;
-          }
+          // Canais ao vivo não precisam de sincronização de tempo (sempre em tempo real)
+          if (data.mediaType === 'canal') {
+            const clapprCont = document.getElementById('cinema-clappr-player');
+            if (clapprCont) clapprCont.style.display = 'block';
+            if (window.cinemaClapprPlayer) {
+              try { window.cinemaClapprPlayer.play(); } catch(e){}
+            }
+          } else {
+            if (DOM.cinemaIframe) DOM.cinemaIframe.style.display = 'block';
 
-          if (Math.abs(currentLocalTime - targetTime) > 10) {
-            let newUrl = '';
-            if (data.mediaType === 'movie') {
-              newUrl = `https://myembed.biz/filme/${data.movieId}?autoplay=1&start=${targetTime}`;
-            } else {
-              newUrl = `https://myembed.biz/serie/${data.movieId}/${data.season}/${data.episode}?autoplay=1&start=${targetTime}`;
+            let currentLocalTime = 0;
+            if (STATE.watchStart && STATE.currentWatchItem) {
+              const elapsed = Math.round((Date.now() - STATE.watchStart) / 1000);
+              currentLocalTime = STATE.currentWatchItem.initialElapsedTime + elapsed;
             }
 
-            if (DOM.cinemaIframe.src !== newUrl) {
-              DOM.cinemaIframe.src = newUrl;
-              showToast("Sincronizando...", "info");
-            }
+            if (Math.abs(currentLocalTime - targetTime) > 10) {
+              let newUrl = '';
+              const startParam = targetTime ? `?start=${targetTime}` : '';
+              if (data.mediaType === 'movie') {
+                newUrl = `https://embed.warezcdn.link/filme/${data.movieId}${startParam}`;
+              } else {
+                newUrl = `https://embed.warezcdn.link/serie/${data.movieId}/${data.season}/${data.episode}${startParam}`;
+              }
 
-            if (STATE.currentWatchItem) {
-              STATE.currentWatchItem.initialElapsedTime = targetTime;
-              STATE.watchStart = Date.now();
+              if (DOM.cinemaIframe.src !== newUrl) {
+                DOM.cinemaIframe.src = newUrl;
+                showToast("Sincronizando...", "info");
+              }
+
+              if (STATE.currentWatchItem) {
+                STATE.currentWatchItem.initialElapsedTime = targetTime;
+                STATE.watchStart = Date.now();
+              }
             }
           }
         }
