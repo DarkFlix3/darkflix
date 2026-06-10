@@ -4,7 +4,7 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged, sendPasswordResetEmail, EmailAuthProvider, reauthenticateWithCredential, isSignInWithEmailLink, sendSignInLinkToEmail, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { getDatabase, ref, set, get, update, child, remove, onValue, onDisconnect } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { getDatabase, ref, set, get, update, child, remove, onValue, onDisconnect, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -3836,6 +3836,7 @@ const STATE = {
         joinedAt: Date.now()
       });
       onDisconnect(participantRef).remove().catch(e => console.warn("Erro no onDisconnect:", e));
+      onDisconnect(ref(db, `watch_parties/${roomCode}/lastActive`)).set(serverTimestamp()).catch(e => {});
 
       // Register onDisconnect system message for leaving room
       const systemLeaveMsgId = `sys_leave_${STATE.currentProfile.id}_${Date.now()}`;
@@ -3992,6 +3993,18 @@ const STATE = {
             });
             await remove(ref(db, `watch_parties/${code}/participants/${STATE.currentProfile.id}`));
             await remove(ref(db, `watch_parties/${code}/typing/${STATE.currentProfile.id}`));
+            
+            // Atualizar lastActive da sala ao sair
+            await set(ref(db, `watch_parties/${code}/lastActive`), Date.now());
+
+            // Atualizar o histórico do convidado que saiu para 'ended'
+            if (STATE.currentUser && STATE.currentProfile) {
+              const historyItemRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${code}`);
+              await update(historyItemRef, {
+                status: 'ended',
+                endedAt: Date.now()
+              });
+            }
           }
         } catch (e) {
           console.warn("Erro ao desregistrar participante:", e);
@@ -4085,10 +4098,13 @@ const STATE = {
             // Verificar se a sala tem participantes
             const participantsSnap = await get(ref(db, `watch_parties/${room.roomCode}/participants`));
             const hasParticipants = participantsSnap.exists() && Object.keys(participantsSnap.val()).length > 0;
-            const isOld = Date.now() - room.timestamp > 12 * 60 * 60 * 1000; // 12 horas
+            
+            // Usar lastActive se existir (tempo da última desconexão), caso contrário usar a data de criação
+            const lastActiveTime = globalRoomData.lastActive || room.timestamp;
+            const isOld = Date.now() - lastActiveTime > 5 * 60 * 1000; // 5 minutos de inatividade total (sem ninguém)
             
             if (!hasParticipants && isOld) {
-              // Sala existe, está vazia e já passou de 12 horas (abandonada) - deletar e mover para encerrada
+              // Sala existe, está vazia e inativa há mais de 5 minutos - deletar e mover para encerrada
               await remove(ref(db, `watch_parties/${room.roomCode}`));
               room.status = 'ended';
               room.endedAt = Date.now();
