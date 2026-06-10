@@ -197,7 +197,11 @@ const STATE = {
   watchStart: null,
   watchInterval: null,
   currentWatchItem: null,
-  devicesListenerRef: null
+  devicesListenerRef: null,
+  adminVisitsListener: null,
+  adminUniqueDevicesListener: null,
+  adminOnlineListener: null,
+  onlineOnDisconnectSet: false
 };
 
   // ---------- Genre Maps ----------
@@ -529,6 +533,22 @@ const STATE = {
     }
   }
 
+  // Desinscrever-se dos ouvintes do painel admin para poupar recursos
+  function pararOuvintesAdmin() {
+    if (STATE.adminVisitsListener) {
+      STATE.adminVisitsListener();
+      STATE.adminVisitsListener = null;
+    }
+    if (STATE.adminUniqueDevicesListener) {
+      STATE.adminUniqueDevicesListener();
+      STATE.adminUniqueDevicesListener = null;
+    }
+    if (STATE.adminOnlineListener) {
+      STATE.adminOnlineListener();
+      STATE.adminOnlineListener = null;
+    }
+  }
+
   // ---------- Navigation ----------
   function navigateTo(page) {
     STATE.currentPage = page;
@@ -556,7 +576,7 @@ const STATE = {
     
     // Toggle footer visibility: hide on auth, profiles, and devices without active profile
     if (DOM.footer) {
-      DOM.footer.style.display = (page === 'auth' || page === 'profiles' || (page === 'devices' && !STATE.currentProfile)) ? 'none' : 'block';
+      if (DOM.footer) DOM.footer.style.display = (page === 'auth' || page === 'profiles' || (page === 'devices' && !STATE.currentProfile)) ? 'none' : 'block';
     }
     
     // Reset page visibility
@@ -583,6 +603,11 @@ const STATE = {
     if (page !== 'devices' && STATE.devicesListenerRef) {
       STATE.devicesListenerRef();
       STATE.devicesListenerRef = null;
+    }
+
+    // Desinscrever-se dos ouvintes do admin se estiver saindo da página admin
+    if (page !== 'admin') {
+      pararOuvintesAdmin();
     }
     
     // Scroll to top
@@ -2313,15 +2338,43 @@ const STATE = {
 
   // ---------- Control Panel (Perfil do Site) ----------
   function renderAdminDashboard() {
-    // 1. Buscar estatísticas de visitas no Firebase Realtime Database
+    // Limpar ouvintes anteriores para evitar vazamentos de memória e duplicações
+    pararOuvintesAdmin();
+
+    // 1. Ouvir estatísticas de visitas em tempo real
     const visitsRef = ref(db, 'stats/visitors');
-    get(visitsRef).then((snap) => {
+    STATE.adminVisitsListener = onValue(visitsRef, (snap) => {
       const visitVal = snap.val() || 0;
       const countEl = document.getElementById('admin-visit-count');
       if (countEl) countEl.innerText = visitVal;
-    }).catch(err => console.error("Erro ao buscar visitas:", err));
+    }, err => console.error("Erro ao ouvir visitas:", err));
 
-    // 2. Calcular estatísticas de canais ativos/manutenção
+    // 2. Ouvir aparelhos únicos em tempo real
+    const uniqueDevicesRef = ref(db, 'stats/unique_devices');
+    STATE.adminUniqueDevicesListener = onValue(uniqueDevicesRef, (snap) => {
+      const devices = snap.val() || {};
+      const uniqueCount = Object.keys(devices).length;
+      const uniqueEl = document.getElementById('admin-unique-devices-count');
+      if (uniqueEl) uniqueEl.innerText = uniqueCount;
+    }, err => console.error("Erro ao ouvir aparelhos únicos:", err));
+
+    // 3. Ouvir sessões online em tempo real
+    const onlineRef = ref(db, 'stats/online_sessions');
+    STATE.adminOnlineListener = onValue(onlineRef, (snap) => {
+      const onlineSessions = snap.val() || {};
+      
+      // Filtrar sessões ativas (atividade nos últimos 3 minutos como margem de segurança)
+      const agora = Date.now();
+      const onlineCount = Object.values(onlineSessions).filter(session => {
+        const lastActive = typeof session === 'object' ? (session.lastActive || 0) : session;
+        return agora - lastActive < 180000; // 3 minutos
+      }).length;
+
+      const onlineEl = document.getElementById('admin-online-count');
+      if (onlineEl) onlineEl.innerText = onlineCount;
+    }, err => console.error("Erro ao ouvir usuários online:", err));
+
+    // 4. Calcular estatísticas de canais ativos/manutenção
     const totalCanais = listaCanais.length;
     let maintCount = 0;
     Object.keys(STATE.maintenanceChannels || {}).forEach(k => {
@@ -4467,6 +4520,10 @@ const STATE = {
         if (sid) {
           const sessionRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}`);
           await remove(sessionRef);
+          
+          // Remover também das sessões online globais
+          const onlineRef = ref(db, `stats/online_sessions/${sid}`);
+          await remove(onlineRef);
         }
       }
       
@@ -5158,6 +5215,26 @@ const STATE = {
       // Agendar remoção do status "assistindo" no Firebase caso a aba/conexão caia
       const currentlyWatchingRef = ref(db, `users/${STATE.currentUser.uid}/sessions/${sid}/currentlyWatching`);
       await onDisconnect(currentlyWatchingRef).remove();
+
+      // Atualizar status online global
+      const onlineRef = ref(db, `stats/online_sessions/${sid}`);
+      await set(onlineRef, {
+        lastActive: Date.now(),
+        deviceInfo: {
+          device: info.device,
+          os: info.os,
+          browser: info.browser,
+          nickname: localNickname
+        },
+        profileName: STATE.currentProfile ? STATE.currentProfile.name : "Escolha de Perfil"
+      });
+
+      // Registrar o onDisconnect apenas uma vez por carregamento de página
+      if (!STATE.onlineOnDisconnectSet) {
+        onDisconnect(onlineRef).remove().then(() => {
+          STATE.onlineOnDisconnectSet = true;
+        }).catch(err => console.warn("Erro ao agendar onDisconnect online_sessions:", err));
+      }
     } catch (e) {
       console.warn("Erro ao salvar sessão ativa:", e);
     }
@@ -5400,6 +5477,19 @@ const STATE = {
           set(visitsRef, val + 1);
           sessionStorage.setItem('visited_cine_session', 'true');
         }).catch(err => console.error("Erro ao registrar visita:", err));
+      }
+
+      // Registrar aparelho único no Firebase se ainda não estiver registrado localmente
+      let isDeviceRegistered = localStorage.getItem('darkflix_device_registered');
+      if (!isDeviceRegistered) {
+        const sid = obterSessionId();
+        const uniqueDeviceRef = ref(db, `stats/unique_devices/${sid}`);
+        set(uniqueDeviceRef, {
+          firstSeen: Date.now(),
+          deviceInfo: obterInformacoesAparelho()
+        }).then(() => {
+          localStorage.setItem('darkflix_device_registered', 'true');
+        }).catch(err => console.error("Erro ao registrar aparelho único:", err));
       }
 
       // Escutar alterações de canais em manutenção em tempo real
