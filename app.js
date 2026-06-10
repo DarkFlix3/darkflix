@@ -210,6 +210,7 @@ const STATE = {
   roomListener: null,
   chatListener: null,
   participantsListener: null,
+  typingListener: null,
   isMicActive: false,
   mutedParticipants: [],
   unreadChatCount: 0,
@@ -3144,6 +3145,7 @@ const STATE = {
     }
 
     // 6. Enviar mensagem de chat
+    let typingTimeout = null;
     if (DOM.partyChatForm) {
       DOM.partyChatForm.onsubmit = (e) => {
         e.preventDefault();
@@ -3153,6 +3155,10 @@ const STATE = {
         if (!text) return;
         
         DOM.partyChatInput.value = '';
+        
+        if (typingTimeout) clearTimeout(typingTimeout);
+        const typingRef = ref(db, `watch_parties/${STATE.roomCode}/typing/${STATE.currentProfile.id}`);
+        remove(typingRef).catch(e => {});
         
         const messageId = `msg_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
         const msgData = {
@@ -3169,6 +3175,29 @@ const STATE = {
             showToast("Erro ao enviar mensagem.", "error");
           });
       };
+    }
+
+    // 6b. Monitorar digitação do usuário no input do chat
+    const chatInput = document.getElementById('party-chat-input');
+    if (chatInput) {
+      chatInput.addEventListener('input', () => {
+        if (!STATE.roomActive || !STATE.roomCode || !STATE.currentProfile) return;
+
+        const typingRef = ref(db, `watch_parties/${STATE.roomCode}/typing/${STATE.currentProfile.id}`);
+        set(typingRef, STATE.currentProfile.name).catch(e => console.warn("Erro ao definir digitando:", e));
+
+        if (typingTimeout) clearTimeout(typingTimeout);
+        typingTimeout = setTimeout(() => {
+          remove(typingRef).catch(e => console.warn("Erro ao remover digitando:", e));
+        }, 3000);
+      });
+      
+      chatInput.addEventListener('blur', () => {
+        if (STATE.roomActive && STATE.roomCode && STATE.currentProfile) {
+          const typingRef = ref(db, `watch_parties/${STATE.roomCode}/typing/${STATE.currentProfile.id}`);
+          remove(typingRef).catch(e => console.warn("Erro ao remover digitando:", e));
+        }
+      });
     }
 
     // 7. Sair da sala
@@ -3262,7 +3291,7 @@ const STATE = {
 
   async function createWatchPartyRoom(movieId, type, season = null, episode = null) {
     if (type !== 'canal') {
-      showToast("Watch Party é exclusivo para canais ao vivo.", "error");
+      showToast("Assistir com amigos é exclusivo para canais ao vivo.", "error");
       return;
     }
     if (!STATE.currentUser || !STATE.currentProfile) {
@@ -3359,7 +3388,7 @@ const STATE = {
     }
 
     if (roomData.mediaType !== 'canal') {
-      showToast("Esta sala é inválida. Watch Party é exclusivo para canais ao vivo.", "error");
+      showToast("Esta sala é inválida. Assistir com amigos é exclusivo para canais ao vivo.", "error");
       window.history.replaceState({}, document.title, window.location.pathname);
       return;
     }
@@ -3535,15 +3564,25 @@ const STATE = {
           const isSelf = currentProfileId && p.id === currentProfileId;
           const isMuted = STATE.mutedParticipants.includes(p.id);
           const micIcon = isMuted ? '🔇' : '🔊';
-          const speakPulse = p.isSpeaking ? ' style="border: 2px solid #22c55e;"' : '';
+          const isSpeaking = p.isSpeaking === true && !isMuted;
+          const speakingClass = isSpeaking ? ' speaking' : '';
+          const equalizerHTML = isSpeaking ? `
+            <div class="speaking-indicator">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          ` : '';
 
           html += `
             <div class="participant-item${p.isHost ? ' host' : ''}" data-id="${p.id}">
-              <div class="participant-avatar-wrapper"${speakPulse}>
+              <div class="participant-avatar-wrapper${speakingClass}">
                 <img src="${p.avatar || PRESET_AVATARS[0].url}" alt="${p.name}">
                 <span class="participant-status-dot"></span>
               </div>
-              <span class="participant-name" title="${p.name}">${p.name}${isSelf ? ' (Você)' : ''}</span>
+              <span class="participant-name" title="${p.name}">
+                ${p.name}${isSelf ? ' (Você)' : ''}${equalizerHTML}
+              </span>
               ${!isSelf ? `
                 <button class="btn-participant-mute${isMuted ? ' muted' : ''}" data-id="${p.id}" title="${isMuted ? 'Desmutar amigo' : 'Mutar amigo'}">
                   ${micIcon}
@@ -3642,6 +3681,57 @@ const STATE = {
       }
     });
 
+    // Register typing listener
+    const typingRef = ref(db, `watch_parties/${roomCode}/typing`);
+    const typingIndicator = document.getElementById('party-typing-indicator');
+    STATE.typingListener = onValue(typingRef, (snap) => {
+      try {
+        if (!typingIndicator) return;
+        if (!snap.exists()) {
+          typingIndicator.style.display = 'none';
+          typingIndicator.innerHTML = '';
+          return;
+        }
+
+        const typers = snap.val() || {};
+        const currentProfileId = STATE.currentProfile ? STATE.currentProfile.id : null;
+        
+        const names = [];
+        Object.keys(typers).forEach(id => {
+          if (id !== currentProfileId && typers[id]) {
+            names.push(typers[id]);
+          }
+        });
+
+        if (names.length === 0) {
+          typingIndicator.style.display = 'none';
+          typingIndicator.innerHTML = '';
+          return;
+        }
+
+        let typingText = '';
+        if (names.length === 1) {
+          typingText = `<strong>${names[0]}</strong> está digitando`;
+        } else if (names.length === 2) {
+          typingText = `<strong>${names[0]}</strong> e <strong>${names[1]}</strong> estão digitando`;
+        } else {
+          typingText = `Várias pessoas estão digitando`;
+        }
+
+        typingIndicator.innerHTML = `
+          <span>${typingText}</span>
+          <div class="typing-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        `;
+        typingIndicator.style.display = 'flex';
+      } catch (err) {
+        console.error("Erro no typingListener:", err);
+      }
+    });
+
     // Register participant in Firebase
     const participantRef = ref(db, `watch_parties/${roomCode}/participants/${STATE.currentProfile.id}`);
     try {
@@ -3704,6 +3794,10 @@ const STATE = {
       STATE.participantsListener();
       STATE.participantsListener = null;
     }
+    if (STATE.typingListener) {
+      STATE.typingListener();
+      STATE.typingListener = null;
+    }
 
     if (STATE.localVoiceStream) {
       STATE.localVoiceStream.getTracks().forEach(track => track.stop());
@@ -3723,6 +3817,7 @@ const STATE = {
         });
         
         await remove(ref(db, `watch_parties/${code}/participants/${STATE.currentProfile.id}`));
+        await remove(ref(db, `watch_parties/${code}/typing/${STATE.currentProfile.id}`));
       } catch (e) {
         console.warn("Erro ao desregistrar participante:", e);
       }
