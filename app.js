@@ -3532,6 +3532,30 @@ const STATE = {
           return;
         }
 
+        // Detect host changes in real-time
+        if (data.hostProfileId && STATE.currentProfile) {
+          const wasHost = STATE.isHost;
+          const isNowHost = data.hostProfileId === STATE.currentProfile.id && data.hostUid === STATE.currentUser.uid;
+          
+          if (isNowHost !== wasHost) {
+            STATE.isHost = isNowHost;
+            
+            // Update host controls visibility
+            const hostTogglePlayBtn = document.getElementById('btn-host-toggle-play');
+            if (hostTogglePlayBtn) {
+              hostTogglePlayBtn.style.display = isNowHost ? 'inline-flex' : 'none';
+            }
+            const hostSelectorContainer = document.getElementById('sidebar-host-channel-selector');
+            if (hostSelectorContainer) {
+              hostSelectorContainer.style.display = isNowHost ? 'block' : 'none';
+            }
+            
+            if (isNowHost && !wasHost) {
+              showToast("👑 Você agora é o anfitrião da sala!", "success");
+            }
+          }
+        }
+
         // If sintonized channel select is present, keep it in sync
         const channelSelect = document.getElementById('room-channel-select');
         if (channelSelect && channelSelect.value !== data.movieId) {
@@ -3586,6 +3610,19 @@ const STATE = {
         }
 
         const participants = snap.val();
+
+        // Se a sala está ativa e não possui dono/anfitrião na lista de participantes, encerra a sala
+        if (participants) {
+          const hasHost = Object.values(participants).some(p => p.isHost === true);
+          if (!hasHost) {
+            console.log("Nenhum anfitrião encontrado nos participantes da sala. Encerrando sala.");
+            if (STATE.roomCode) {
+              remove(ref(db, `watch_parties/${STATE.roomCode}`)).catch(e => {});
+            }
+            return;
+          }
+        }
+
         let html = '';
 
         const currentProfileId = STATE.currentProfile ? STATE.currentProfile.id : null;
@@ -3612,6 +3649,13 @@ const STATE = {
             </div>
           ` : '';
 
+          const isCurrentHost = STATE.isHost;
+          const transferBtn = (isCurrentHost && !isSelf) ? `
+                <button class="btn-transfer-host" data-pid="${p.id}" data-uid="${p.uid || ''}" data-name="${p.name}" title="Transferir anfitrião para ${p.name}" style="background:none; border:none; cursor:pointer; font-size:1rem; padding:2px 4px; margin-right:2px; opacity:0.7; transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">
+                  👑
+                </button>
+              ` : '';
+
           html += `
             <div class="participant-item${p.isHost ? ' host' : ''}" data-id="${p.id}">
               <div class="participant-avatar-wrapper${speakingClass}">
@@ -3619,13 +3663,16 @@ const STATE = {
                 <span class="participant-status-dot"></span>
               </div>
               <span class="participant-name" title="${p.name}">
-                ${p.name}${isSelf ? ' (Você)' : ''}${equalizerHTML}
+                ${p.name}${isSelf ? ' (Você)' : ''}${p.isHost ? ' 👑' : ''}${equalizerHTML}
               </span>
-              ${!isSelf ? `
-                <button class="btn-participant-mute${isMuted ? ' muted' : ''}" data-id="${p.id}" title="${isMuted ? 'Desmutar amigo' : 'Mutar amigo'}">
-                  ${micIcon}
-                </button>
-              ` : ''}
+              <div style="display:flex; align-items:center; gap:2px;">
+                ${transferBtn}
+                ${!isSelf ? `
+                  <button class="btn-participant-mute${isMuted ? ' muted' : ''}" data-id="${p.id}" title="${isMuted ? 'Desmutar amigo' : 'Mutar amigo'}">
+                    ${micIcon}
+                  </button>
+                ` : ''}
+              </div>
             </div>
           `;
         });
@@ -3645,6 +3692,18 @@ const STATE = {
             }
             if (STATE.participantsListener) {
               get(participantsRef);
+            }
+          };
+        });
+
+        // Host transfer button handlers
+        listContainer.querySelectorAll('.btn-transfer-host').forEach(btn => {
+          btn.onclick = () => {
+            const targetPid = btn.dataset.pid;
+            const targetUid = btn.dataset.uid;
+            const targetName = btn.dataset.name;
+            if (confirm(`Transferir o título de anfitrião para ${targetName}?`)) {
+              transferirAnfitriao(targetPid, targetUid, targetName);
             }
           };
         });
@@ -3775,6 +3834,7 @@ const STATE = {
     try {
       await set(participantRef, {
         id: STATE.currentProfile.id,
+        uid: STATE.currentUser.uid,
         name: STATE.currentProfile.name,
         avatar: STATE.currentProfile.avatar || PRESET_AVATARS[0].url,
         isHost: STATE.isHost,
@@ -3824,6 +3884,53 @@ const STATE = {
     }
   }
 
+  // ---------- Host Transfer ----------
+  async function transferirAnfitriao(targetPid, targetUid, targetName) {
+    if (!STATE.roomCode || !STATE.isHost) {
+      showToast("Você não é o anfitrião desta sala.", "error");
+      return;
+    }
+
+    const code = STATE.roomCode;
+    const myProfileId = STATE.currentProfile ? STATE.currentProfile.id : null;
+
+    try {
+      const updates = {};
+      updates[`watch_parties/${code}/hostProfileId`] = targetPid;
+      updates[`watch_parties/${code}/hostUid`] = targetUid;
+      updates[`watch_parties/${code}/hostName`] = targetName;
+      if (myProfileId) {
+        updates[`watch_parties/${code}/participants/${myProfileId}/isHost`] = false;
+      }
+      updates[`watch_parties/${code}/participants/${targetPid}/isHost`] = true;
+
+      const sysMsgId = `sys_transfer_${Date.now()}`;
+      updates[`watch_parties/${code}/chat/${sysMsgId}`] = {
+        senderId: 'system',
+        senderName: 'Sistema',
+        senderAvatar: '',
+        text: `👑 ${STATE.currentProfile.name} transferiu o título de anfitrião para ${targetName}.`,
+        timestamp: Date.now()
+      };
+
+      await update(ref(db), updates);
+
+      // Update local state
+      STATE.isHost = false;
+
+      // Hide host controls
+      const hostTogglePlayBtn = document.getElementById('btn-host-toggle-play');
+      if (hostTogglePlayBtn) hostTogglePlayBtn.style.display = 'none';
+      const hostSelectorContainer = document.getElementById('sidebar-host-channel-selector');
+      if (hostSelectorContainer) hostSelectorContainer.style.display = 'none';
+
+      showToast(`👑 Você transferiu o título de anfitrião para ${targetName}.`, 'success');
+    } catch (err) {
+      console.error("Erro ao transferir anfitrião:", err);
+      showToast("Erro ao transferir anfitrião.", "error");
+    }
+  }
+
   async function exitWatchPartyRoom() {
     if (!STATE.roomActive || !STATE.roomCode) return;
     
@@ -3852,38 +3959,67 @@ const STATE = {
       STATE.typingListener = null;
     }
 
-    closeVoiceChat();
-
-    if (STATE.currentProfile) {
-      // Cancel onDisconnect system message since we will write it manually now
-      if (STATE.systemLeaveMsgId) {
-        const systemLeaveMsgRef = ref(db, `watch_parties/${code}/chat/${STATE.systemLeaveMsgId}`);
-        onDisconnect(systemLeaveMsgRef).cancel().catch(() => {});
-        STATE.systemLeaveMsgId = null;
-      }
-
-      const systemMsgId = `sys_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
+    if (STATE.currentUser && STATE.currentProfile) {
       try {
-        await set(ref(db, `watch_parties/${code}/chat/${systemMsgId}`), {
-          senderId: 'system',
-          senderName: 'Sistema',
-          senderAvatar: '',
-          text: `🚪 ${STATE.currentProfile.name} saiu da sala.`,
-          timestamp: Date.now()
-        });
-        
-        await remove(ref(db, `watch_parties/${code}/participants/${STATE.currentProfile.id}`));
-        await remove(ref(db, `watch_parties/${code}/typing/${STATE.currentProfile.id}`));
+        const historyItemRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${code}`);
+        const histSnap = await get(historyItemRef);
+        if (histSnap.exists()) {
+          await update(historyItemRef, {
+            status: 'ended',
+            endedAt: Date.now()
+          });
+        }
       } catch (e) {
-        console.warn("Erro ao desregistrar participante:", e);
+        console.warn("Erro ao atualizar histórico ao sair:", e);
       }
     }
 
+    closeVoiceChat();
+
     if (STATE.isHost) {
+      // Host saindo: deleta a sala inteira diretamente
       try {
         await remove(ref(db, `watch_parties/${code}`));
       } catch (e) {
-        console.warn("Erro ao deletar sala:", e);
+        console.warn("Erro ao deletar sala ao sair:", e);
+      }
+    } else {
+      // Convidado saindo: limpa apenas seus dados de participante
+      if (STATE.currentProfile) {
+        if (STATE.systemLeaveMsgId) {
+          const systemLeaveMsgRef = ref(db, `watch_parties/${code}/chat/${STATE.systemLeaveMsgId}`);
+          onDisconnect(systemLeaveMsgRef).cancel().catch(() => {});
+          STATE.systemLeaveMsgId = null;
+        }
+
+        const systemMsgId = `sys_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
+        try {
+          // Apenas tenta escrever se a sala ainda existir (para não recriar salas deletadas)
+          const roomSnap = await get(ref(db, `watch_parties/${code}`));
+          if (roomSnap.exists()) {
+            await set(ref(db, `watch_parties/${code}/chat/${systemMsgId}`), {
+              senderId: 'system',
+              senderName: 'Sistema',
+              senderAvatar: '',
+              text: `🚪 ${STATE.currentProfile.name} saiu da sala.`,
+              timestamp: Date.now()
+            });
+            await remove(ref(db, `watch_parties/${code}/participants/${STATE.currentProfile.id}`));
+            await remove(ref(db, `watch_parties/${code}/typing/${STATE.currentProfile.id}`));
+          }
+        } catch (e) {
+          console.warn("Erro ao desregistrar participante:", e);
+        }
+      }
+
+      // Convidado saindo: verifica se a sala ficou vazia para deletá-la
+      try {
+        const participantsSnap = await get(ref(db, `watch_parties/${code}/participants`));
+        if (!participantsSnap.exists() || Object.keys(participantsSnap.val()).length === 0) {
+          await remove(ref(db, `watch_parties/${code}`));
+        }
+      } catch (e) {
+        console.warn("Erro ao verificar sala vazia:", e);
       }
     }
 
@@ -3953,7 +4089,18 @@ const STATE = {
           const roomRef = ref(db, `watch_parties/${room.roomCode}`);
           const rSnap = await get(roomRef);
           if (rSnap.exists()) {
-            activeRooms.push(room);
+            // Verificar se a sala tem participantes
+            const participantsSnap = await get(ref(db, `watch_parties/${room.roomCode}/participants`));
+            if (!participantsSnap.exists() || Object.keys(participantsSnap.val()).length === 0) {
+              // Sala existe mas está vazia - deletar e mover para encerrada
+              await remove(ref(db, `watch_parties/${room.roomCode}`));
+              room.status = 'ended';
+              room.endedAt = Date.now();
+              await set(ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${room.roomCode}`), room);
+              endedRooms.push(room);
+            } else {
+              activeRooms.push(room);
+            }
           } else {
             // A sala foi encerrada! Atualizar no histórico do perfil
             room.status = 'ended';
@@ -4016,6 +4163,7 @@ const STATE = {
         endedRooms.sort((a,b) => (b.endedAt || b.timestamp) - (a.endedAt || a.timestamp));
         endedContainer.innerHTML = endedRooms.map(room => {
           const dateStr = new Date(room.timestamp).toLocaleString('pt-BR');
+          const endedDateStr = room.endedAt ? new Date(room.endedAt).toLocaleString('pt-BR') : 'Desconhecido';
           return `
             <div class="room-item-card ended-room">
               <div class="room-item-header">
@@ -4030,8 +4178,9 @@ const STATE = {
               </div>
               <div class="room-item-body">
                 <div class="room-meta-info">Criador: <strong>${room.creatorName}</strong></div>
-                <div style="display:flex; justify-content:space-between; align-items:center; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
-                  <span>Entrou em: ${dateStr}</span>
+                <div style="display:flex; flex-direction:column; gap:2px; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+                  <span>📅 Entrou em: ${dateStr}</span>
+                  <span>🔒 Encerrada em: ${endedDateStr}</span>
                 </div>
               </div>
             </div>
