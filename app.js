@@ -4088,6 +4088,20 @@ const STATE = {
           const roomRef = ref(db, `watch_parties/${room.roomCode}`);
           const rSnap = await get(roomRef);
           if (rSnap.exists()) {
+            const globalRoomData = rSnap.val();
+            if (globalRoomData.hostName) {
+              room.creatorName = globalRoomData.hostName;
+            }
+            if (globalRoomData.title) {
+              room.title = globalRoomData.title;
+            }
+            
+            // Atualizar no histórico do perfil de forma assíncrona
+            update(ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${room.roomCode}`), {
+              creatorName: room.creatorName,
+              title: room.title
+            }).catch(() => {});
+
             // Verificar se a sala tem participantes
             const participantsSnap = await get(ref(db, `watch_parties/${room.roomCode}/participants`));
             if (!participantsSnap.exists() || Object.keys(participantsSnap.val()).length === 0) {
