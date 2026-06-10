@@ -114,6 +114,10 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
               Acesso e Aparelhos
             </button>
+            <button id="btn-dropdown-rooms">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Salas
+            </button>
             <button id="btn-dropdown-watchlist">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               Na Minha Lista
@@ -219,6 +223,7 @@
       <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 20px;">
         <button class="btn-manage-profiles" id="btn-manage-profiles" style="margin-top: 0;">Gerenciar Perfis</button>
         <button class="btn-manage-profiles" id="btn-profiles-devices" style="margin-top: 0; background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.15);">Acesso e Aparelhos</button>
+        <button class="btn-manage-profiles" id="btn-profiles-rooms" style="margin-top: 0; background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.15);">Salas</button>
       </div>
     </div>
   </div>
@@ -671,6 +676,40 @@
         
         <div class="devices-list" id="devices-list-container" style="display: flex; flex-direction: column; gap: 16px;">
           <!-- Injected dynamically by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ROOMS PAGE ============ -->
+  <div class="page-view" id="page-rooms">
+    <div class="main-content" style="padding-top: calc(var(--header-height) + 40px); margin-top: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <div class="section" style="padding-top: 40px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
+          <h2 class="section-title" style="font-size: 1.8rem; font-family: 'Montserrat', sans-serif; margin: 0;">Salas</h2>
+          <button class="btn btn-secondary btn-small" id="btn-rooms-back-home" style="display: inline-flex; align-items: center; gap: 6px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Voltar
+          </button>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 28px; font-size: 0.95rem;">
+          Histórico e gerenciamento das salas de transmissão em grupo que você acessou recentemente.
+        </p>
+
+        <!-- Active Rooms (Joined Rooms) Section -->
+        <div class="rooms-section" style="margin-bottom: 40px;">
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.5px;">🟢 Salas Ativas Recentes</h3>
+          <div class="rooms-list" id="active-rooms-list-container" style="display: flex; flex-direction: column; gap: 16px;">
+            <!-- Injected dynamically by JS -->
+          </div>
+        </div>
+
+        <!-- Ended Rooms Section -->
+        <div class="rooms-section">
+          <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.5px;">⏳ Histórico de Salas Encerradas</h3>
+          <div class="rooms-list" id="ended-rooms-list-container" style="display: flex; flex-direction: column; gap: 16px;">
+            <!-- Injected dynamically by JS -->
+          </div>
         </div>
       </div>
     </div>

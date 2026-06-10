@@ -214,7 +214,13 @@ const STATE = {
   isMicActive: false,
   mutedParticipants: [],
   unreadChatCount: 0,
-  activeCanalId: null
+  activeCanalId: null,
+  
+  // WebRTC Audio state
+  localVoiceStream: null,
+  peerConnections: {},
+  remoteAudios: {},
+  systemLeaveMsgId: null
 };
 
   // ---------- Genre Maps ----------
@@ -317,7 +323,8 @@ const STATE = {
       search: $('#page-search'),
       favorites: $('#page-favorites'),
       admin: $('#page-admin'),
-      devices: $('#page-devices')
+      devices: $('#page-devices'),
+      rooms: $('#page-rooms')
     },
     
     // Grid lists
@@ -583,8 +590,8 @@ const STATE = {
   function navigateTo(page) {
     STATE.currentPage = page;
     
-    // Hide header links & search if on auth or profiles page, or devices page without active profile
-    const hideHeaderNav = (page === 'auth' || page === 'profiles' || (page === 'devices' && !STATE.currentProfile));
+    // Hide header links & search if on auth or profiles page, or devices/rooms page without active profile
+    const hideHeaderNav = (page === 'auth' || page === 'profiles' || ((page === 'devices' || page === 'rooms') && !STATE.currentProfile));
     if (DOM.navMenu) {
       DOM.navMenu.style.visibility = hideHeaderNav ? 'hidden' : 'visible';
     }
@@ -597,16 +604,16 @@ const STATE = {
     
     // Force solid blurred dark header background on inner pages to prevent clashing content
     if (DOM.header) {
-      if (page !== 'home' && page !== 'auth' && page !== 'profiles' && page !== 'devices') {
+      if (page !== 'home' && page !== 'auth' && page !== 'profiles' && page !== 'devices' && page !== 'rooms') {
         DOM.header.classList.add('scrolled');
       } else {
-        DOM.header.classList.toggle('scrolled', window.scrollY > 20 || page === 'auth' || page === 'profiles' || (page === 'devices' && !STATE.currentProfile));
+        DOM.header.classList.toggle('scrolled', window.scrollY > 20 || page === 'auth' || page === 'profiles' || ((page === 'devices' || page === 'rooms') && !STATE.currentProfile));
       }
     }
     
-    // Toggle footer visibility: hide on auth, profiles, and devices without active profile
+    // Toggle footer visibility: hide on auth, profiles, and devices/rooms without active profile
     if (DOM.footer) {
-      if (DOM.footer) DOM.footer.style.display = (page === 'auth' || page === 'profiles' || (page === 'devices' && !STATE.currentProfile)) ? 'none' : 'block';
+      if (DOM.footer) DOM.footer.style.display = (page === 'auth' || page === 'profiles' || ((page === 'devices' || page === 'rooms') && !STATE.currentProfile)) ? 'none' : 'block';
     }
     
     // Reset page visibility
@@ -653,6 +660,7 @@ const STATE = {
     else if (page === 'favorites') renderFavoritesPage();
     else if (page === 'admin') renderAdminDashboard();
     else if (page === 'devices') renderizarPaginaAparelhos();
+    else if (page === 'rooms') renderRoomsPage();
   }
 
   function navigateToGenre(type, genreName) {
@@ -3241,7 +3249,7 @@ const STATE = {
       };
     }
 
-    // 9. Mutar/desmutar próprio microfone (WebRTC placeholder com visual completo)
+    // 9. Mutar/desmutar próprio microfone (Com conexões WebRTC completas)
     if (DOM.btnTogglePartyMic) {
       DOM.btnTogglePartyMic.onclick = (e) => {
         e.preventDefault();
@@ -3249,34 +3257,58 @@ const STATE = {
         
         const label = DOM.btnTogglePartyMic.querySelector('.mic-label');
         if (STATE.isMicActive) {
-          navigator.mediaDevices.getUserMedia({ audio: true })
-            .then(stream => {
-              DOM.btnTogglePartyMic.classList.remove('mic-muted');
-              DOM.btnTogglePartyMic.classList.add('mic-active');
-              if (label) label.textContent = "Falar";
-              showToast("Microfone conectado!", "success");
-              
-              if (STATE.roomCode && STATE.currentProfile) {
-                update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
-                  isSpeaking: true
+          if (!STATE.localVoiceStream) {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+              .then(stream => {
+                DOM.btnTogglePartyMic.classList.remove('mic-muted');
+                DOM.btnTogglePartyMic.classList.add('mic-active');
+                if (label) label.textContent = "Falar";
+                showToast("Microfone ativado!", "success");
+                
+                STATE.localVoiceStream = stream;
+                stream.getTracks().forEach(track => {
+                  track.enabled = true;
                 });
-              }
-              STATE.localVoiceStream = stream;
-            })
-            .catch(err => {
-              console.warn("Microfone negado:", err);
-              showToast("Permissão de áudio necessária.", "error");
-              STATE.isMicActive = false;
+
+                reconnectAllVoicePeers();
+                
+                if (STATE.roomCode && STATE.currentProfile) {
+                  update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
+                    isSpeaking: true
+                  });
+                }
+              })
+              .catch(err => {
+                console.warn("Microfone negado:", err);
+                showToast("Permissão de áudio necessária.", "error");
+                STATE.isMicActive = false;
+              });
+          } else {
+            DOM.btnTogglePartyMic.classList.remove('mic-muted');
+            DOM.btnTogglePartyMic.classList.add('mic-active');
+            if (label) label.textContent = "Falar";
+            showToast("Microfone ativado!", "success");
+
+            STATE.localVoiceStream.getTracks().forEach(track => {
+              track.enabled = true;
             });
+
+            if (STATE.roomCode && STATE.currentProfile) {
+              update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
+                isSpeaking: true
+              });
+            }
+          }
         } else {
           DOM.btnTogglePartyMic.classList.add('mic-muted');
           DOM.btnTogglePartyMic.classList.remove('mic-active');
           if (label) label.textContent = "Mutado";
-          showToast("Microfone desativado.", "info");
+          showToast("Microfone mutado.", "info");
           
           if (STATE.localVoiceStream) {
-            STATE.localVoiceStream.getTracks().forEach(track => track.stop());
-            STATE.localVoiceStream = null;
+            STATE.localVoiceStream.getTracks().forEach(track => {
+              track.enabled = false;
+            });
           }
           
           if (STATE.roomCode && STATE.currentProfile) {
@@ -3314,6 +3346,7 @@ const STATE = {
       id: randomId,
       hostUid: STATE.currentUser.uid,
       hostProfileId: STATE.currentProfile.id,
+      hostName: STATE.currentProfile.name,
       movieId: movieId,
       mediaType: 'canal',
       title: movieTitle,
@@ -3557,6 +3590,11 @@ const STATE = {
 
         const currentProfileId = STATE.currentProfile ? STATE.currentProfile.id : null;
 
+        // --- WebRTC voice connections sync ---
+        if (STATE.roomActive && currentProfileId) {
+          syncVoiceConnections(participants, currentProfileId);
+        }
+
         Object.keys(participants).forEach(pid => {
           const p = participants[pid];
           if (!p) return;
@@ -3744,6 +3782,21 @@ const STATE = {
         joinedAt: Date.now()
       });
       onDisconnect(participantRef).remove().catch(e => console.warn("Erro no onDisconnect:", e));
+
+      // Register onDisconnect system message for leaving room
+      const systemLeaveMsgId = `sys_leave_${STATE.currentProfile.id}_${Date.now()}`;
+      const systemLeaveMsgRef = ref(db, `watch_parties/${roomCode}/chat/${systemLeaveMsgId}`);
+      STATE.systemLeaveMsgId = systemLeaveMsgId;
+      onDisconnect(systemLeaveMsgRef).set({
+        senderId: 'system',
+        senderName: 'Sistema',
+        senderAvatar: '',
+        text: `🚪 ${STATE.currentProfile.name} saiu da sala.`,
+        timestamp: Date.now()
+      }).catch(e => console.warn("Erro no onDisconnect chat:", e));
+
+      // Record room in history
+      await recordRoomHistory(roomCode, roomData.title, roomData.hostName || 'Anfitrião', 'active');
     } catch (err) {
       console.error("Erro ao registrar participant:", err);
       showToast("Erro ao registrar participante na sala.", "error");
@@ -3799,13 +3852,16 @@ const STATE = {
       STATE.typingListener = null;
     }
 
-    if (STATE.localVoiceStream) {
-      STATE.localVoiceStream.getTracks().forEach(track => track.stop());
-      STATE.localVoiceStream = null;
-    }
-    STATE.isMicActive = false;
+    closeVoiceChat();
 
     if (STATE.currentProfile) {
+      // Cancel onDisconnect system message since we will write it manually now
+      if (STATE.systemLeaveMsgId) {
+        const systemLeaveMsgRef = ref(db, `watch_parties/${code}/chat/${STATE.systemLeaveMsgId}`);
+        onDisconnect(systemLeaveMsgRef).cancel().catch(() => {});
+        STATE.systemLeaveMsgId = null;
+      }
+
       const systemMsgId = `sys_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
       try {
         await set(ref(db, `watch_parties/${code}/chat/${systemMsgId}`), {
@@ -3843,6 +3899,349 @@ const STATE = {
 
     closeCinema();
     window.history.replaceState({}, document.title, window.location.pathname);
+  }
+
+  // ---------- Rooms Page & History ----------
+  async function recordRoomHistory(roomCode, title, creatorName, status) {
+    if (!STATE.currentUser || !STATE.currentProfile) return;
+    try {
+      const historyRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${roomCode}`);
+      await set(historyRef, {
+        roomCode: roomCode,
+        title: title,
+        creatorName: creatorName,
+        status: status,
+        timestamp: Date.now()
+      });
+    } catch (e) {
+      console.warn("Erro ao salvar histórico de salas:", e);
+    }
+  }
+
+  async function renderRoomsPage() {
+    const activeContainer = document.getElementById('active-rooms-list-container');
+    const endedContainer = document.getElementById('ended-rooms-list-container');
+    if (!activeContainer || !endedContainer || !STATE.currentUser || !STATE.currentProfile) return;
+
+    activeContainer.innerHTML = `
+      <div style="text-align: center; padding: 20px; color: var(--text-secondary);">
+        <div style="margin: 0 auto 12px; width: 20px; height: 20px; border: 2px solid var(--accent-soft); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite;"></div>
+        Verificando salas ativas...
+      </div>
+    `;
+    endedContainer.innerHTML = '';
+
+    try {
+      const historyRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history`);
+      const snapshot = await get(historyRef);
+      
+      if (!snapshot.exists()) {
+        activeContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted); font-size:0.88rem;">Nenhuma sala ativa encontrada.</div>`;
+        endedContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted); font-size:0.88rem;">Nenhum histórico de salas encerradas.</div>`;
+        return;
+      }
+
+      const historyData = snapshot.val();
+      const rooms = Object.values(historyData).sort((a, b) => b.timestamp - a.timestamp);
+
+      const activeRooms = [];
+      const endedRooms = [];
+
+      const checks = rooms.map(async (room) => {
+        if (room.status === 'active') {
+          // Verificar no banco global se a sala ainda existe
+          const roomRef = ref(db, `watch_parties/${room.roomCode}`);
+          const rSnap = await get(roomRef);
+          if (rSnap.exists()) {
+            activeRooms.push(room);
+          } else {
+            // A sala foi encerrada! Atualizar no histórico do perfil
+            room.status = 'ended';
+            room.endedAt = Date.now();
+            await set(ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history/${room.roomCode}`), room);
+            endedRooms.push(room);
+          }
+        } else {
+          endedRooms.push(room);
+        }
+      });
+
+      await Promise.all(checks);
+
+      // Renderizar salas ativas
+      if (activeRooms.length === 0) {
+        activeContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted); font-size:0.88rem;">Nenhuma sala ativa no momento.</div>`;
+      } else {
+        // Ordenar ativas por mais recente
+        activeRooms.sort((a,b) => b.timestamp - a.timestamp);
+        activeContainer.innerHTML = activeRooms.map(room => {
+          const dateStr = new Date(room.timestamp).toLocaleString('pt-BR');
+          return `
+            <div class="room-item-card">
+              <div class="room-item-header">
+                <div class="room-item-title-box">
+                  <div class="room-item-icon-box">📺</div>
+                  <div class="room-item-details">
+                    <h4>${room.title}</h4>
+                    <p>Sala: ${room.roomCode}</p>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-small btn-rejoin-room" data-code="${room.roomCode}" style="padding: 8px 18px; font-size: 0.8rem;">Entrar</button>
+              </div>
+              <div class="room-item-body">
+                <div class="room-meta-info">Anfitrião: <strong>${room.creatorName}</strong></div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top: 8px;">
+                  <span class="room-badge-active"><span class="pulse-dot"></span>Ativa agora</span>
+                  <span style="font-size:0.75rem; color:var(--text-muted);">Acessada em: ${dateStr}</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        // Bind clique no botão Entrar
+        activeContainer.querySelectorAll('.btn-rejoin-room').forEach(btn => {
+          btn.onclick = () => {
+            const code = btn.dataset.code;
+            joinWatchPartyRoom(code);
+          };
+        });
+      }
+
+      // Renderizar salas encerradas
+      if (endedRooms.length === 0) {
+        endedContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted); font-size:0.88rem;">Nenhuma sala encerrada no histórico.</div>`;
+      } else {
+        // Ordenar encerradas por mais recente
+        endedRooms.sort((a,b) => (b.endedAt || b.timestamp) - (a.endedAt || a.timestamp));
+        endedContainer.innerHTML = endedRooms.map(room => {
+          const dateStr = new Date(room.timestamp).toLocaleString('pt-BR');
+          return `
+            <div class="room-item-card ended-room">
+              <div class="room-item-header">
+                <div class="room-item-title-box">
+                  <div class="room-item-icon-box">⏳</div>
+                  <div class="room-item-details">
+                    <h4>${room.title}</h4>
+                    <p>Sala: ${room.roomCode}</p>
+                  </div>
+                </div>
+                <span class="room-badge-ended">Encerrada</span>
+              </div>
+              <div class="room-item-body">
+                <div class="room-meta-info">Criador: <strong>${room.creatorName}</strong></div>
+                <div style="display:flex; justify-content:space-between; align-items:center; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+                  <span>Entrou em: ${dateStr}</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+    } catch (err) {
+      console.error("Erro ao renderizar salas:", err);
+      activeContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted);">Erro ao carregar salas.</div>`;
+    }
+  }
+
+  // ---------- WebRTC voice mesh functions ----------
+  function syncVoiceConnections(participants, myId) {
+    if (!STATE.peerMuteStates) STATE.peerMuteStates = {};
+
+    Object.keys(participants).forEach(pid => {
+      if (pid === myId) return;
+      
+      const p = participants[pid];
+      const isSpeaking = p.isSpeaking === true;
+      const lastSpeaking = STATE.peerMuteStates[pid] === true;
+
+      // Se mudou o estado do microfone dele, recria a conexão para negociar o áudio
+      if (isSpeaking !== lastSpeaking && STATE.peerConnections[pid]) {
+        console.log(`[WebRTC] Estado de voz do peer ${pid} mudou para ${isSpeaking}. Recriando conexão.`);
+        closePeerConnection(pid);
+      }
+      
+      STATE.peerMuteStates[pid] = isSpeaking;
+
+      if (!STATE.peerConnections[pid]) {
+        const isInitiator = myId < pid;
+        setupPeerConnection(pid, isInitiator);
+      }
+    });
+
+    // Fechar conexões de quem saiu
+    Object.keys(STATE.peerConnections).forEach(pid => {
+      if (!participants[pid]) {
+        closePeerConnection(pid);
+        if (STATE.peerMuteStates) delete STATE.peerMuteStates[pid];
+      }
+    });
+  }
+
+  async function setupPeerConnection(targetPid, isInitiator) {
+    if (STATE.peerConnections[targetPid]) return;
+
+    console.log(`[WebRTC] Criando conexão com ${targetPid}. Iniciador: ${isInitiator}`);
+    
+    const pc = new RTCPeerConnection({
+      iceServers: [
+        { urls: 'stun:stun.l.google.com:19302' },
+        { urls: 'stun:stun1.l.google.com:19302' }
+      ]
+    });
+    
+    STATE.peerConnections[targetPid] = pc;
+
+    // Se já temos stream local, adiciona a track
+    if (STATE.localVoiceStream) {
+      STATE.localVoiceStream.getTracks().forEach(track => {
+        pc.addTrack(track, STATE.localVoiceStream);
+      });
+    }
+
+    // Ao receber track remota
+    pc.ontrack = (event) => {
+      console.log(`[WebRTC] Recebeu stream de áudio de ${targetPid}`);
+      let audio = STATE.remoteAudios[targetPid];
+      if (!audio) {
+        audio = document.createElement('audio');
+        audio.autoplay = true;
+        audio.style.display = 'none';
+        document.body.appendChild(audio);
+        STATE.remoteAudios[targetPid] = audio;
+      }
+      audio.srcObject = event.streams[0];
+    };
+
+    const myId = STATE.currentProfile.id;
+    const roomCode = STATE.roomCode;
+
+    // Enviar ICE Candidates locais
+    pc.onicecandidate = (event) => {
+      if (event.candidate) {
+        const role = isInitiator ? 'ice_initiator' : 'ice_receiver';
+        const candId = `cand_${Math.random().toString(36).substring(2, 10)}`;
+        const refPath = isInitiator 
+          ? `watch_parties/${roomCode}/signals/${myId}/${targetPid}/ice_initiator/${candId}`
+          : `watch_parties/${roomCode}/signals/${targetPid}/${myId}/ice_receiver/${candId}`;
+        
+        set(ref(db, refPath), JSON.stringify(event.candidate)).catch(e => {});
+      }
+    };
+
+    // Escutar ICE Candidates do outro lado
+    const otherRolePath = isInitiator
+      ? `watch_parties/${roomCode}/signals/${myId}/${targetPid}/ice_receiver`
+      : `watch_parties/${roomCode}/signals/${targetPid}/${myId}/ice_initiator`;
+      
+    const otherIceRef = ref(db, otherRolePath);
+    // Escutar adição de ICE
+    onValue(otherIceRef, (snap) => {
+      if (snap.exists()) {
+        const candidates = snap.val();
+        Object.keys(candidates).forEach(key => {
+          try {
+            const cand = JSON.parse(candidates[key]);
+            pc.addIceCandidate(new RTCIceCandidate(cand)).catch(e => {});
+          } catch(e){}
+        });
+      }
+    });
+
+    if (isInitiator) {
+      // Cria oferta
+      try {
+        const offer = await pc.createOffer({ offerToReceiveAudio: true });
+        await pc.setLocalDescription(offer);
+        
+        // Grava no Firebase
+        await set(ref(db, `watch_parties/${roomCode}/signals/${myId}/${targetPid}/offer`), JSON.stringify(offer));
+        
+        // Escuta a resposta
+        const answerRef = ref(db, `watch_parties/${roomCode}/signals/${myId}/${targetPid}/answer`);
+        const unsub = onValue(answerRef, async (snap) => {
+          if (snap.exists()) {
+            const answer = JSON.parse(snap.val());
+            if (pc.signalingState === 'have-local-offer') {
+              await pc.setRemoteDescription(new RTCSessionDescription(answer));
+              unsub(); // Desinscreve após conectar
+            }
+          }
+        });
+      } catch (err) {
+        console.error("[WebRTC] Erro ao criar oferta:", err);
+      }
+    } else {
+      // Escuta a oferta
+      const offerRef = ref(db, `watch_parties/${roomCode}/signals/${targetPid}/${myId}/offer`);
+      const unsubOffer = onValue(offerRef, async (snap) => {
+        if (snap.exists()) {
+          const offer = JSON.parse(snap.val());
+          try {
+            unsubOffer(); // Desinscreve
+            await pc.setRemoteDescription(new RTCSessionDescription(offer));
+            const answer = await pc.createAnswer();
+            await pc.setLocalDescription(answer);
+            
+            // Grava resposta
+            await set(ref(db, `watch_parties/${roomCode}/signals/${targetPid}/${myId}/answer`), JSON.stringify(answer));
+          } catch (err) {
+            console.error("[WebRTC] Erro ao responder oferta:", err);
+          }
+        }
+      });
+    }
+  }
+
+  function reconnectAllVoicePeers() {
+    const pids = Object.keys(STATE.peerConnections);
+    pids.forEach(pid => {
+      closePeerConnection(pid);
+    });
+    // E reconecta
+    const participantsRef = ref(db, `watch_parties/${STATE.roomCode}/participants`);
+    get(participantsRef).then(snap => {
+      if (snap.exists() && STATE.roomActive && STATE.currentProfile) {
+        syncVoiceConnections(snap.val(), STATE.currentProfile.id);
+      }
+    });
+  }
+
+  function closePeerConnection(pid) {
+    const pc = STATE.peerConnections[pid];
+    if (pc) {
+      try { pc.close(); } catch(e){}
+      delete STATE.peerConnections[pid];
+    }
+    const audio = STATE.remoteAudios[pid];
+    if (audio) {
+      try { audio.remove(); } catch(e){}
+      delete STATE.remoteAudios[pid];
+    }
+    
+    // Limpar sinalização no Firebase se fomos o iniciador
+    if (STATE.currentProfile && STATE.roomCode) {
+      const myId = STATE.currentProfile.id;
+      if (myId < pid) {
+        remove(ref(db, `watch_parties/${STATE.roomCode}/signals/${myId}/${pid}`)).catch(e => {});
+      }
+    }
+  }
+
+  function closeVoiceChat() {
+    Object.keys(STATE.peerConnections).forEach(pid => {
+      closePeerConnection(pid);
+    });
+    STATE.peerConnections = {};
+    STATE.remoteAudios = {};
+    if (STATE.localVoiceStream) {
+      try {
+        STATE.localVoiceStream.getTracks().forEach(track => track.stop());
+      } catch(e){}
+      STATE.localVoiceStream = null;
+    }
+    STATE.isMicActive = false;
   }
 
   function renderFavoritesPage() {
@@ -4459,6 +4858,37 @@ const STATE = {
         const autorizado = await verificarAcessoAparelhos();
         if (autorizado) {
           navigateTo('devices');
+        }
+      };
+    }
+
+    // Bind Salas buttons
+    const btnDropdownRooms = document.getElementById('btn-dropdown-rooms');
+    if (btnDropdownRooms) {
+      btnDropdownRooms.onclick = (e) => {
+        e.preventDefault();
+        DOM.profileDropdown.classList.remove('active');
+        DOM.headerProfileWrapper.classList.remove('open');
+        navigateTo('rooms');
+      };
+    }
+
+    const btnProfilesRooms = document.getElementById('btn-profiles-rooms');
+    if (btnProfilesRooms) {
+      btnProfilesRooms.onclick = (e) => {
+        e.preventDefault();
+        navigateTo('rooms');
+      };
+    }
+
+    const btnRoomsBackHome = document.getElementById('btn-rooms-back-home');
+    if (btnRoomsBackHome) {
+      btnRoomsBackHome.onclick = (e) => {
+        e.preventDefault();
+        if (STATE.currentProfile) {
+          navigateTo('home');
+        } else {
+          navigateTo('profiles');
         }
       };
     }
