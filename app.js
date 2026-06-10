@@ -296,7 +296,6 @@ const STATE = {
     heroMeta: $('#hero-meta'),
     heroDescription: $('#hero-description'),
     heroWatchBtn: $('#hero-watch-btn'),
-    heroWatchPartyBtn: $('#hero-watch-party-btn'),
     heroInfoBtn: $('#hero-info-btn'),
     heroTrailer: $('#hero-trailer'),
     heroTrailerIframe: $('#hero-trailer-iframe'),
@@ -344,7 +343,6 @@ const STATE = {
     modalGenres: $('#modal-genres'),
     modalDescription: $('#modal-description'),
     modalWatchBtn: $('#modal-watch-btn'),
-    modalWatchPartyBtn: $('#modal-watch-party-btn'),
     modalFavoriteBtn: $('#modal-favorite-btn'),
     modalFavoriteText: $('#modal-favorite-text'),
     modalCloseBtn: $('#modal-close-btn'),
@@ -2256,6 +2254,12 @@ const STATE = {
       return;
     }
 
+    // Se estiver em uma Watch Party ativa e for o Anfitrião, sintonizar o novo canal para todos na sala
+    if (STATE.roomActive && STATE.isHost && STATE.roomCode) {
+      openCinema(canalId, canal.nome, 'canal');
+      return;
+    }
+
     const playerWrapper = document.getElementById('canal-wrapper-player');
     const infoContainer = document.getElementById('canal-info-container');
     const nameEl = document.getElementById('canal-current-name');
@@ -2823,14 +2827,16 @@ const STATE = {
     const runtimeSeconds = runtimeMinutes * 60;
     const initialPercent = Math.min(95, Math.round((initialElapsedTime / runtimeSeconds) * 100));
 
-    saveWatchProgress(tmdbId, title, type, {
-      timestamp: Date.now(),
-      type: type,
-      elapsedTime: initialElapsedTime,
-      percent: initialPercent || 5,
-      season: season ? parseInt(season) : null,
-      episode: episode ? parseInt(episode) : null
-    });
+    if (type !== 'canal') {
+      saveWatchProgress(tmdbId, title, type, {
+        timestamp: Date.now(),
+        type: type,
+        elapsedTime: initialElapsedTime,
+        percent: initialPercent || 5,
+        season: season ? parseInt(season) : null,
+        episode: episode ? parseInt(season) : null
+      });
+    }
 
     // Start watch tracker state
     STATE.watchStart = Date.now();
@@ -2852,14 +2858,16 @@ const STATE = {
         const cappedElapsed = Math.min(STATE.currentWatchItem.runtimeSeconds - 10, totalElapsed);
         const percent = Math.min(95, Math.round((cappedElapsed / STATE.currentWatchItem.runtimeSeconds) * 100));
 
-        saveWatchProgress(STATE.currentWatchItem.id, STATE.currentWatchItem.title, STATE.currentWatchItem.type, {
-          timestamp: Date.now(),
-          type: STATE.currentWatchItem.type,
-          elapsedTime: cappedElapsed,
-          percent: percent,
-          season: STATE.currentWatchItem.season,
-          episode: STATE.currentWatchItem.episode
-        });
+        if (STATE.currentWatchItem.type !== 'canal') {
+          saveWatchProgress(STATE.currentWatchItem.id, STATE.currentWatchItem.title, STATE.currentWatchItem.type, {
+            timestamp: Date.now(),
+            type: STATE.currentWatchItem.type,
+            elapsedTime: cappedElapsed,
+            percent: percent,
+            season: STATE.currentWatchItem.season,
+            episode: STATE.currentWatchItem.episode
+          });
+        }
       }
     }, 15000);
 
@@ -2987,7 +2995,7 @@ const STATE = {
     // If active room and host, update content metadata in Firebase
     if (STATE.roomActive && STATE.isHost && STATE.roomCode) {
       update(ref(db, `watch_parties/${STATE.roomCode}`), {
-        movieId: Number(tmdbId),
+        movieId: type === 'canal' ? tmdbId : Number(tmdbId),
         mediaType: type,
         season: season ? Number(season) : null,
         episode: episode ? Number(episode) : null,
@@ -3016,19 +3024,21 @@ const STATE = {
     }
 
     if (STATE.currentWatchItem) {
-      const elapsedSeconds = Math.round((Date.now() - STATE.watchStart) / 1000);
-      const totalElapsed = STATE.currentWatchItem.initialElapsedTime + elapsedSeconds;
-      const cappedElapsed = Math.min(STATE.currentWatchItem.runtimeSeconds - 10, totalElapsed);
-      const percent = Math.min(95, Math.round((cappedElapsed / STATE.currentWatchItem.runtimeSeconds) * 100));
+      if (STATE.currentWatchItem.type !== 'canal') {
+        const elapsedSeconds = Math.round((Date.now() - STATE.watchStart) / 1000);
+        const totalElapsed = STATE.currentWatchItem.initialElapsedTime + elapsedSeconds;
+        const cappedElapsed = Math.min(STATE.currentWatchItem.runtimeSeconds - 10, totalElapsed);
+        const percent = Math.min(95, Math.round((cappedElapsed / STATE.currentWatchItem.runtimeSeconds) * 100));
 
-      saveWatchProgress(STATE.currentWatchItem.id, STATE.currentWatchItem.title, STATE.currentWatchItem.type, {
-        timestamp: Date.now(),
-        type: STATE.currentWatchItem.type,
-        elapsedTime: cappedElapsed,
-        percent: percent,
-        season: STATE.currentWatchItem.season,
-        episode: STATE.currentWatchItem.episode
-      });
+        saveWatchProgress(STATE.currentWatchItem.id, STATE.currentWatchItem.title, STATE.currentWatchItem.type, {
+          timestamp: Date.now(),
+          type: STATE.currentWatchItem.type,
+          elapsedTime: cappedElapsed,
+          percent: percent,
+          season: STATE.currentWatchItem.season,
+          episode: STATE.currentWatchItem.episode
+        });
+      }
       STATE.currentWatchItem = null;
     }
 
@@ -3070,44 +3080,6 @@ const STATE = {
   // ============================================================
 
   function initWatchPartyEvents() {
-    // 1. Iniciar Watch Party (Dono) a partir do modal de detalhes
-    if (DOM.modalWatchPartyBtn) {
-      DOM.modalWatchPartyBtn.onclick = (e) => {
-        e.preventDefault();
-        const movie = STATE.currentMovieDetail;
-        if (!movie) return;
-        
-        const type = movie.media_type || (movie.title ? 'movie' : 'tv');
-        if (type === 'movie') {
-          createWatchPartyRoom(movie.id, 'movie');
-        } else {
-          const savedProgress = STATE.inProgress.find(x => Number(x.id) === Number(movie.id));
-          const season = savedProgress ? savedProgress.season : 1;
-          const episode = savedProgress ? savedProgress.episode : 1;
-          createWatchPartyRoom(movie.id, 'tv', season, episode);
-        }
-      };
-    }
-
-    // 2. Iniciar Watch Party (Dono) a partir do Hero Banner
-    if (DOM.heroWatchPartyBtn) {
-      DOM.heroWatchPartyBtn.onclick = (e) => {
-        e.preventDefault();
-        const id = STATE.featuredId;
-        const type = STATE.featuredType;
-        if (!id) return;
-        
-        if (type === 'movie') {
-          createWatchPartyRoom(id, 'movie');
-        } else {
-          const savedProgress = STATE.inProgress.find(x => Number(x.id) === Number(id));
-          const season = savedProgress ? savedProgress.season : 1;
-          const episode = savedProgress ? savedProgress.episode : 1;
-          createWatchPartyRoom(id, 'tv', season, episode);
-        }
-      };
-    }
-
     // 2b. Iniciar Watch Party a partir da Página de Canais
     const canalWatchPartyBtn = document.getElementById('canal-watch-party-btn');
     if (canalWatchPartyBtn) {
@@ -3414,14 +3386,37 @@ const STATE = {
     }
 
     const participantRef = ref(db, `watch_parties/${roomCode}/participants/${STATE.currentProfile.id}`);
-    await set(participantRef, {
-      id: STATE.currentProfile.id,
-      name: STATE.currentProfile.name,
-      avatar: STATE.currentProfile.avatar || PRESET_AVATARS[0].url,
-      isHost: STATE.isHost,
-      isSpeaking: false,
-      joinedAt: Date.now()
-    });
+    try {
+      await set(participantRef, {
+        id: STATE.currentProfile.id,
+        name: STATE.currentProfile.name,
+        avatar: STATE.currentProfile.avatar || PRESET_AVATARS[0].url,
+        isHost: STATE.isHost,
+        isSpeaking: false,
+        joinedAt: Date.now()
+      });
+    } catch (err) {
+      console.error("Erro ao registrar participante:", err);
+      showToast("Erro de permissão ao entrar na sala. Verifique as regras do Firebase.", "error");
+      alert(
+        "🔒 ERRO DE PERMISSÃO NO FIREBASE\n\n" +
+        "Não foi possível entrar na sala de Watch Party. Isso ocorre porque as regras de segurança do seu Firebase Realtime Database estão bloqueando a gravação de dados pelos convidados.\n\n" +
+        "COMO RESOLVER:\n" +
+        "1. Acesse o Firebase Console do seu projeto.\n" +
+        "2. Vá em Build > Realtime Database > Regras (Rules).\n" +
+        "3. Configure as permissões de leitura/escrita do nó 'watch_parties' para usuários logados:\n\n" +
+        "   {\n" +
+        "     \"rules\": {\n" +
+        "       \"watch_parties\": {\n" +
+        "         \".read\": \"auth != null\",\n" +
+        "         \".write\": \"auth != null\"\n" +
+        "       }\n" +
+        "     }\n" +
+        "   }\n\n" +
+        "4. Clique em 'Publicar' e recarregue a página."
+      );
+      return;
+    }
     
     onDisconnect(participantRef).remove().catch(e => console.warn("Erro no onDisconnect:", e));
 
@@ -3602,12 +3597,15 @@ const STATE = {
         const isSelf = msg.senderId === STATE.currentProfile.id;
         const senderAvatar = msg.senderAvatar || PRESET_AVATARS[0].url;
 
+        const msgDate = new Date(msg.timestamp);
+        const msgTime = !isNaN(msgDate.getTime()) ? `${String(msgDate.getHours()).padStart(2, '0')}:${String(msgDate.getMinutes()).padStart(2, '0')}` : '';
+
         return `
           <div class="chat-message-item${isSelf ? ' self' : ''}">
             <div class="message-sender-meta">
               ${!isSelf ? `<img src="${senderAvatar}" class="message-sender-avatar">` : ''}
               <span class="message-sender-name">${msg.senderName}</span>
-              <span class="message-time" style="opacity:0.6; margin-left: 4px;">${new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+              <span class="message-time" style="opacity:0.6; margin-left: 4px;">${msgTime}</span>
             </div>
             <div class="message-bubble">${msg.text}</div>
           </div>
@@ -4816,9 +4814,6 @@ const STATE = {
     showToast(`Bem-vindo de volta, ${p.name}!`, 'success');
     updateHeaderProfileMenu();
     navigateTo('home');
-
-    // Ativar botão Watch Party no Hero banner
-    if (DOM.heroWatchPartyBtn) DOM.heroWatchPartyBtn.style.display = 'inline-flex';
 
     // Verificar se há uma sala pendente para auto-entrar
     const urlParams = new URLSearchParams(window.location.search);
