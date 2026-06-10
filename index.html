@@ -498,6 +498,14 @@
           </div>
           <button id="btn-close-sidebar-chat" class="btn-close-sidebar" title="Esconder Chat">✕</button>
         </div>
+
+        <!-- Trocar de Canal (Apenas Anfitrião) -->
+        <div class="sidebar-channel-selector-wrapper" id="sidebar-host-channel-selector" style="display: none; padding: 12px 16px; border-bottom: 1px solid var(--border); background: rgba(255, 255, 255, 0.01);">
+          <label for="room-channel-select" style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 6px; letter-spacing: 0.5px;">📺 Trocar Canal da Sala:</label>
+          <select id="room-channel-select" style="width: 100%; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-primary); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 0.82rem; font-family: inherit; font-weight: 600; outline: none; cursor: pointer; transition: all 0.2s ease;">
+            <!-- Canais serão carregados dinamicamente -->
+          </select>
+        </div>
         
         <!-- Participantes list -->
         <div class="sidebar-participants-wrapper">

@@ -3261,6 +3261,10 @@ const STATE = {
   }
 
   async function createWatchPartyRoom(movieId, type, season = null, episode = null) {
+    if (type !== 'canal') {
+      showToast("Watch Party é exclusivo para canais ao vivo.", "error");
+      return;
+    }
     if (!STATE.currentUser || !STATE.currentProfile) {
       showToast("Selecione seu perfil antes de criar uma sala.", "error");
       return;
@@ -3269,30 +3273,20 @@ const STATE = {
     const randomId = 'room_' + Math.random().toString(36).substring(2, 8).toUpperCase();
     showToast("Criando sala de cinema...", "info");
     
-    let movieTitle = "Filme";
+    let movieTitle = "Canal";
     let backdrop = "";
-    if (type === 'canal') {
-      const canal = listaCanais.find(c => c.id === movieId);
-      if (canal) {
-        movieTitle = canal.nome;
-        backdrop = canal.logo || '';
-      }
-    } else {
-      try {
-        const details = await tmdbFetch(`/${type}/${movieId}`);
-        movieTitle = details.title || details.name || "Filme";
-        backdrop = details.backdrop_path || "";
-      } catch (e) {
-        console.warn("Erro ao buscar detalhes:", e);
-      }
+    const canal = listaCanais.find(c => c.id === movieId);
+    if (canal) {
+      movieTitle = canal.nome;
+      backdrop = canal.logo || '';
     }
 
     const roomData = {
       id: randomId,
       hostUid: STATE.currentUser.uid,
       hostProfileId: STATE.currentProfile.id,
-      movieId: type === 'canal' ? movieId : Number(movieId),
-      mediaType: type,
+      movieId: movieId,
+      mediaType: 'canal',
       title: movieTitle,
       backdrop: backdrop || '',
       state: {
@@ -3302,10 +3296,6 @@ const STATE = {
       },
       createdAt: Date.now()
     };
-
-    // Only add season/episode if they exist (Firebase rejects null values)
-    if (season) roomData.season = Number(season);
-    if (episode) roomData.episode = Number(episode);
 
     try {
       const roomRef = ref(db, `watch_parties/${randomId}`);
@@ -3368,16 +3358,28 @@ const STATE = {
       }
     }
 
+    if (roomData.mediaType !== 'canal') {
+      showToast("Esta sala é inválida. Watch Party é exclusivo para canais ao vivo.", "error");
+      window.history.replaceState({}, document.title, window.location.pathname);
+      return;
+    }
+
     STATE.roomCode = roomCode;
     STATE.roomActive = true;
     STATE.isHost = roomData.hostProfileId === STATE.currentProfile.id && roomData.hostUid === STATE.currentUser.uid;
     
-    if (DOM.roomCodeDisplay) DOM.roomCodeDisplay.textContent = `#${roomCode}`;
-    if (DOM.watchPartySidebar) {
-      DOM.watchPartySidebar.style.display = 'flex';
-      DOM.watchPartySidebar.classList.remove('collapsed');
+    // Safely update DOM code displays
+    const roomCodeDisplay = document.getElementById('room-code-display');
+    if (roomCodeDisplay) roomCodeDisplay.textContent = `#${roomCode}`;
+
+    const watchPartySidebar = document.getElementById('watch-party-sidebar');
+    if (watchPartySidebar) {
+      watchPartySidebar.style.display = 'flex';
+      watchPartySidebar.classList.remove('collapsed');
     }
-    if (DOM.watchPartyFloatingControls) DOM.watchPartyFloatingControls.style.display = 'none';
+
+    const watchPartyFloatingControls = document.getElementById('watch-party-floating-controls');
+    if (watchPartyFloatingControls) watchPartyFloatingControls.style.display = 'none';
     
     const hostTogglePlayBtn = document.getElementById('btn-host-toggle-play');
     if (hostTogglePlayBtn) {
@@ -3385,6 +3387,262 @@ const STATE = {
       hostTogglePlayBtn.textContent = roomData.state.isPlaying ? "⏸️ Pausar Sala" : "▶️ Retomar Sala";
     }
 
+    // Populate channels dropdown & bind host selection
+    const hostSelectorContainer = document.getElementById('sidebar-host-channel-selector');
+    const channelSelect = document.getElementById('room-channel-select');
+    if (hostSelectorContainer) {
+      hostSelectorContainer.style.display = STATE.isHost ? 'block' : 'none';
+    }
+
+    if (channelSelect) {
+      const sortedCanais = [...listaCanais].sort((a, b) => a.nome.localeCompare(b.nome));
+      const abertos = sortedCanais.filter(c => c.categoria === 'aberto');
+      const fechados = sortedCanais.filter(c => c.categoria === 'fechado');
+      
+      let selectHtml = '<option value="">-- Trocar de Canal --</option>';
+      
+      if (abertos.length > 0) {
+        selectHtml += `<optgroup label="📺 Canais Abertos">`;
+        abertos.forEach(c => {
+          const isMaint = STATE.maintenanceChannels && STATE.maintenanceChannels[c.id] === true;
+          const isHidden = STATE.hiddenChannels && STATE.hiddenChannels[c.id] === true;
+          if (!isHidden) {
+            selectHtml += `<option value="${c.id}"${isMaint ? ' disabled' : ''}>${c.nome}${isMaint ? ' (Manutenção)' : ''}</option>`;
+          }
+        });
+        selectHtml += `</optgroup>`;
+      }
+      
+      if (fechados.length > 0) {
+        selectHtml += `<optgroup label="🔒 Canais Fechados">`;
+        fechados.forEach(c => {
+          const isMaint = STATE.maintenanceChannels && STATE.maintenanceChannels[c.id] === true;
+          const isHidden = STATE.hiddenChannels && STATE.hiddenChannels[c.id] === true;
+          if (!isHidden) {
+            selectHtml += `<option value="${c.id}"${isMaint ? ' disabled' : ''}>${c.nome}${isMaint ? ' (Manutenção)' : ''}</option>`;
+          }
+        });
+        selectHtml += `</optgroup>`;
+      }
+      
+      channelSelect.innerHTML = selectHtml;
+      channelSelect.value = roomData.movieId;
+
+      channelSelect.onchange = async (e) => {
+        const newChannelId = e.target.value;
+        if (!newChannelId) return;
+
+        const newChannel = listaCanais.find(c => c.id === newChannelId);
+        if (!newChannel) return;
+
+        if (STATE.roomActive && STATE.isHost && STATE.roomCode) {
+          showToast(`Trocando canal para ${newChannel.nome}...`, 'info');
+          try {
+            await update(ref(db, `watch_parties/${STATE.roomCode}`), {
+              movieId: newChannelId,
+              title: newChannel.nome,
+              mediaType: 'canal',
+              state: {
+                isPlaying: true,
+                currentTime: 0,
+                lastUpdated: Date.now()
+              }
+            });
+            openCinema(newChannelId, newChannel.nome, 'canal');
+          } catch (err) {
+            console.error("Erro ao trocar canal da sala no Firebase:", err);
+            showToast("Erro ao trocar canal.", "error");
+          }
+        }
+      };
+    }
+
+    // Register room state listener BEFORE anything else
+    const roomRef = ref(db, `watch_parties/${roomCode}`);
+    STATE.roomListener = onValue(roomRef, (snap) => {
+      try {
+        const data = snap.val();
+        if (!data) {
+          if (!STATE.isHost) {
+            showToast("Sala encerrada pelo anfitrião.", "info");
+            exitWatchPartyRoom();
+          }
+          return;
+        }
+
+        // If sintonized channel select is present, keep it in sync
+        const channelSelect = document.getElementById('room-channel-select');
+        if (channelSelect && channelSelect.value !== data.movieId) {
+          channelSelect.value = data.movieId;
+        }
+
+        // Sync channel transitions
+        const currentWatch = STATE.currentWatchItem || {};
+        const currentWatchId = String(currentWatch.id || '');
+        const roomMovieId = String(data.movieId || '');
+        if (!STATE.isHost && (currentWatchId !== roomMovieId)) {
+          showToast(`🎥 O anfitrião mudou o canal para: ${data.title}`, "info");
+          openCinema(data.movieId, data.title, data.mediaType);
+          return;
+        }
+
+        const roomState = data.state || {};
+        const isPlaying = roomState.isPlaying !== false;
+
+        if (!STATE.isHost) {
+          const clapprCont = document.getElementById('cinema-clappr-player');
+          const cinemaPauseScreen = document.getElementById('cinema-pause-screen');
+          
+          if (!isPlaying) {
+            if (cinemaPauseScreen) cinemaPauseScreen.style.display = 'flex';
+            if (clapprCont && window.cinemaClapprPlayer) {
+              try { window.cinemaClapprPlayer.pause(); } catch(e){}
+            }
+          } else {
+            if (cinemaPauseScreen) cinemaPauseScreen.style.display = 'none';
+            if (clapprCont) clapprCont.style.display = 'block';
+            if (window.cinemaClapprPlayer) {
+              try { window.cinemaClapprPlayer.play(); } catch(e){}
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Erro no roomListener:", err);
+      }
+    });
+
+    // Register participants listener
+    const participantsRef = ref(db, `watch_parties/${roomCode}/participants`);
+    STATE.participantsListener = onValue(participantsRef, (snap) => {
+      try {
+        const listContainer = document.getElementById('party-participants-list');
+        if (!listContainer) return;
+
+        if (!snap.exists()) {
+          listContainer.innerHTML = '<div style="font-size:0.75rem; color:var(--text-muted);">Ninguém na sala.</div>';
+          return;
+        }
+
+        const participants = snap.val();
+        let html = '';
+
+        const currentProfileId = STATE.currentProfile ? STATE.currentProfile.id : null;
+
+        Object.keys(participants).forEach(pid => {
+          const p = participants[pid];
+          if (!p) return;
+
+          const isSelf = currentProfileId && p.id === currentProfileId;
+          const isMuted = STATE.mutedParticipants.includes(p.id);
+          const micIcon = isMuted ? '🔇' : '🔊';
+          const speakPulse = p.isSpeaking ? ' style="border: 2px solid #22c55e;"' : '';
+
+          html += `
+            <div class="participant-item${p.isHost ? ' host' : ''}" data-id="${p.id}">
+              <div class="participant-avatar-wrapper"${speakPulse}>
+                <img src="${p.avatar || PRESET_AVATARS[0].url}" alt="${p.name}">
+                <span class="participant-status-dot"></span>
+              </div>
+              <span class="participant-name" title="${p.name}">${p.name}${isSelf ? ' (Você)' : ''}</span>
+              ${!isSelf ? `
+                <button class="btn-participant-mute${isMuted ? ' muted' : ''}" data-id="${p.id}" title="${isMuted ? 'Desmutar amigo' : 'Mutar amigo'}">
+                  ${micIcon}
+                </button>
+              ` : ''}
+            </div>
+          `;
+        });
+
+        listContainer.innerHTML = html;
+
+        listContainer.querySelectorAll('.btn-participant-mute').forEach(btn => {
+          btn.onclick = () => {
+            const targetPid = btn.dataset.id;
+            const index = STATE.mutedParticipants.indexOf(targetPid);
+            if (index > -1) {
+              STATE.mutedParticipants.splice(index, 1);
+              showToast("Usuário desmutado localmente.", "success");
+            } else {
+              STATE.mutedParticipants.push(targetPid);
+              showToast("Usuário mutado para você.", "info");
+            }
+            if (STATE.participantsListener) {
+              get(participantsRef);
+            }
+          };
+        });
+      } catch (err) {
+        console.error("Erro no participantsListener:", err);
+      }
+    });
+
+    // Register chat listener
+    const chatRef = ref(db, `watch_parties/${roomCode}/chat`);
+    STATE.chatListener = onValue(chatRef, (snap) => {
+      try {
+        const chatLogs = document.getElementById('party-chat-logs');
+        if (!chatLogs) return;
+
+        if (!snap.exists()) {
+          chatLogs.innerHTML = '<div class="chat-message-system">🎈 Chat ativo! Envie uma mensagem.</div>';
+          return;
+        }
+
+        const messages = snap.val();
+        const sortedMessages = Object.values(messages).sort((a, b) => a.timestamp - b.timestamp);
+        const wasAtBottom = chatLogs.scrollHeight - chatLogs.clientHeight <= chatLogs.scrollTop + 50;
+        
+        const chatUnreadBadge = document.getElementById('party-unread-badge');
+        const partySidebar = document.getElementById('watch-party-sidebar');
+        const lastMessageCount = chatLogs.querySelectorAll('.chat-message-item, .chat-message-system').length;
+
+        const currentProfileId = STATE.currentProfile ? STATE.currentProfile.id : null;
+
+        chatLogs.innerHTML = sortedMessages.map(msg => {
+          if (!msg) return '';
+          if (msg.senderId === 'system') {
+            return `<div class="chat-message-system">${msg.text}</div>`;
+          }
+          
+          const isSelf = currentProfileId && msg.senderId === currentProfileId;
+          const senderAvatar = msg.senderAvatar || PRESET_AVATARS[0].url;
+
+          const msgDate = new Date(msg.timestamp);
+          const msgTime = !isNaN(msgDate.getTime()) ? `${String(msgDate.getHours()).padStart(2, '0')}:${String(msgDate.getMinutes()).padStart(2, '0')}` : '';
+
+          return `
+            <div class="chat-message-item${isSelf ? ' self' : ''}">
+              <div class="message-sender-meta">
+                ${!isSelf ? `<img src="${senderAvatar}" class="message-sender-avatar">` : ''}
+                <span class="message-sender-name">${msg.senderName}</span>
+                <span class="message-time" style="opacity:0.6; margin-left: 4px;">${msgTime}</span>
+              </div>
+              <div class="message-bubble">${msg.text}</div>
+            </div>
+          `;
+        }).join('');
+
+        if (wasAtBottom || sortedMessages.length > lastMessageCount) {
+          chatLogs.scrollTop = chatLogs.scrollHeight;
+        }
+
+        if (partySidebar && partySidebar.classList.contains('collapsed') && sortedMessages.length > lastMessageCount) {
+          STATE.unreadChatCount += (sortedMessages.length - lastMessageCount);
+          if (chatUnreadBadge) {
+            chatUnreadBadge.style.display = 'inline-block';
+            chatUnreadBadge.textContent = STATE.unreadChatCount;
+          }
+          const lastMsg = sortedMessages[sortedMessages.length - 1];
+          if (lastMsg && lastMsg.senderId !== 'system' && lastMsg.senderId !== currentProfileId) {
+            showToast(`💬 ${lastMsg.senderName}: "${lastMsg.text}"`, 'info');
+          }
+        }
+      } catch (err) {
+        console.error("Erro no chatListener:", err);
+      }
+    });
+
+    // Register participant in Firebase
     const participantRef = ref(db, `watch_parties/${roomCode}/participants/${STATE.currentProfile.id}`);
     try {
       await set(participantRef, {
@@ -3395,257 +3653,31 @@ const STATE = {
         isSpeaking: false,
         joinedAt: Date.now()
       });
+      onDisconnect(participantRef).remove().catch(e => console.warn("Erro no onDisconnect:", e));
     } catch (err) {
-      console.error("Erro ao registrar participante:", err);
-      showToast("Erro de permissão ao entrar na sala. Verifique as regras do Firebase.", "error");
-      alert(
-        "🔒 ERRO DE PERMISSÃO NO FIREBASE\n\n" +
-        "Não foi possível entrar na sala de Watch Party. Isso ocorre porque as regras de segurança do seu Firebase Realtime Database estão bloqueando a gravação de dados pelos convidados.\n\n" +
-        "COMO RESOLVER:\n" +
-        "1. Acesse o Firebase Console do seu projeto.\n" +
-        "2. Vá em Build > Realtime Database > Regras (Rules).\n" +
-        "3. Configure as permissões de leitura/escrita do nó 'watch_parties' para usuários logados:\n\n" +
-        "   {\n" +
-        "     \"rules\": {\n" +
-        "       \"watch_parties\": {\n" +
-        "         \".read\": \"auth != null\",\n" +
-        "         \".write\": \"auth != null\"\n" +
-        "       }\n" +
-        "     }\n" +
-        "   }\n\n" +
-        "4. Clique em 'Publicar' e recarregue a página."
-      );
-      return;
-    }
-    
-    onDisconnect(participantRef).remove().catch(e => console.warn("Erro no onDisconnect:", e));
-
-    const startOffset = roomData.state.currentTime || 0;
-    openCinema(roomData.movieId, roomData.title, roomData.mediaType, roomData.season, roomData.episode);
-    
-    if (STATE.currentWatchItem) {
-      STATE.currentWatchItem.initialElapsedTime = startOffset;
-      STATE.watchStart = Date.now();
+      console.error("Erro ao registrar participant:", err);
+      showToast("Erro ao registrar participante na sala.", "error");
     }
 
-    const systemMsgId = `sys_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
-    set(ref(db, `watch_parties/${roomCode}/chat/${systemMsgId}`), {
-      senderId: 'system',
-      senderName: 'Sistema',
-      senderAvatar: '',
-      text: `👋 ${STATE.currentProfile.name} entrou na sala.`,
-      timestamp: Date.now()
-    });
+    // Open cinema mode for channel sintonization
+    try {
+      openCinema(roomData.movieId, roomData.title, roomData.mediaType);
+    } catch (err) {
+      console.error("Erro ao abrir cinema:", err);
+    }
 
-    const roomRef = ref(db, `watch_parties/${roomCode}`);
-    STATE.roomListener = onValue(roomRef, (snap) => {
-      const data = snap.val();
-      if (!data) {
-        showToast("Sala encerrada pelo anfitrião.", "info");
-        exitWatchPartyRoom();
-        return;
-      }
-
-      // Se o host mudou de vídeo (filme, série ou canal diferente)
-      const currentWatch = STATE.currentWatchItem || {};
-      const currentWatchId = String(currentWatch.id || '');
-      const roomMovieId = String(data.movieId || '');
-      if (!STATE.isHost && (currentWatchId !== roomMovieId || 
-          String(currentWatch.season || '') !== String(data.season || '') || 
-          String(currentWatch.episode || '') !== String(data.episode || ''))) {
-        showToast(`🎥 O anfitrião mudou de vídeo para: ${data.title}`, "info");
-        openCinema(data.movieId, data.title, data.mediaType, data.season, data.episode);
-        return;
-      }
-
-      const roomState = data.state || {};
-      const isPlaying = roomState.isPlaying !== false;
-      const targetTime = roomState.currentTime || 0;
-
-      if (!STATE.isHost) {
-        if (!isPlaying) {
-          if (DOM.cinemaPauseScreen) DOM.cinemaPauseScreen.style.display = 'flex';
-          if (DOM.cinemaIframe) DOM.cinemaIframe.style.display = 'none';
-          if (DOM.cinemaVideo) DOM.cinemaVideo.style.display = 'none';
-          // Pausar Clappr para canais
-          const clapprCont = document.getElementById('cinema-clappr-player');
-          if (clapprCont && window.cinemaClapprPlayer) {
-            try { window.cinemaClapprPlayer.pause(); } catch(e){}
-          }
-        } else {
-          if (DOM.cinemaPauseScreen) DOM.cinemaPauseScreen.style.display = 'none';
-
-          // Canais ao vivo não precisam de sincronização de tempo (sempre em tempo real)
-          if (data.mediaType === 'canal') {
-            const clapprCont = document.getElementById('cinema-clappr-player');
-            if (clapprCont) clapprCont.style.display = 'block';
-            if (window.cinemaClapprPlayer) {
-              try { window.cinemaClapprPlayer.play(); } catch(e){}
-            }
-          } else {
-            if (DOM.cinemaIframe) DOM.cinemaIframe.style.display = 'block';
-
-            let currentLocalTime = 0;
-            if (STATE.watchStart && STATE.currentWatchItem) {
-              const elapsed = Math.round((Date.now() - STATE.watchStart) / 1000);
-              currentLocalTime = STATE.currentWatchItem.initialElapsedTime + elapsed;
-            }
-
-            if (Math.abs(currentLocalTime - targetTime) > 10) {
-              let newUrl = '';
-              const startParam = targetTime ? `?start=${targetTime}` : '';
-              if (data.mediaType === 'movie') {
-                newUrl = `https://embed.warezcdn.link/filme/${data.movieId}${startParam}`;
-              } else {
-                newUrl = `https://embed.warezcdn.link/serie/${data.movieId}/${data.season}/${data.episode}${startParam}`;
-              }
-
-              if (DOM.cinemaIframe.src !== newUrl) {
-                DOM.cinemaIframe.src = newUrl;
-                showToast("Sincronizando...", "info");
-              }
-
-              if (STATE.currentWatchItem) {
-                STATE.currentWatchItem.initialElapsedTime = targetTime;
-                STATE.watchStart = Date.now();
-              }
-            }
-          }
-        }
-      }
-    });
-
-    const participantsRef = ref(db, `watch_parties/${roomCode}/participants`);
-    STATE.participantsListener = onValue(participantsRef, (snap) => {
-      const listContainer = DOM.partyParticipantsList;
-      if (!listContainer) return;
-
-      if (!snap.exists()) {
-        listContainer.innerHTML = '<div style="font-size:0.75rem; color:var(--text-muted);">Ninguém na sala.</div>';
-        return;
-      }
-
-      const participants = snap.val();
-      let html = '';
-
-      Object.keys(participants).forEach(pid => {
-        const p = participants[pid];
-        if (!p) return;
-
-        const isSelf = p.id === STATE.currentProfile.id;
-        const isMuted = STATE.mutedParticipants.includes(p.id);
-        const micIcon = isMuted ? '🔇' : '🔊';
-        const speakPulse = p.isSpeaking ? ' style="border: 2px solid #22c55e;"' : '';
-
-        html += `
-          <div class="participant-item${p.isHost ? ' host' : ''}" data-id="${p.id}">
-            <div class="participant-avatar-wrapper"${speakPulse}>
-              <img src="${p.avatar || PRESET_AVATARS[0].url}" alt="${p.name}">
-              <span class="participant-status-dot"></span>
-            </div>
-            <span class="participant-name" title="${p.name}">${p.name}${isSelf ? ' (Você)' : ''}</span>
-            ${!isSelf ? `
-              <button class="btn-participant-mute${isMuted ? ' muted' : ''}" data-id="${p.id}" title="${isMuted ? 'Desmutar amigo' : 'Mutar amigo'}">
-                ${micIcon}
-              </button>
-            ` : ''}
-          </div>
-        `;
+    // Send entry message
+    try {
+      const systemMsgId = `sys_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
+      await set(ref(db, `watch_parties/${roomCode}/chat/${systemMsgId}`), {
+        senderId: 'system',
+        senderName: 'Sistema',
+        senderAvatar: '',
+        text: `👋 ${STATE.currentProfile.name} entrou na sala.`,
+        timestamp: Date.now()
       });
-
-      listContainer.innerHTML = html;
-
-      listContainer.querySelectorAll('.btn-participant-mute').forEach(btn => {
-        btn.onclick = () => {
-          const targetPid = btn.dataset.id;
-          const index = STATE.mutedParticipants.indexOf(targetPid);
-          if (index > -1) {
-            STATE.mutedParticipants.splice(index, 1);
-            showToast("Usuário desmutado localmente.", "success");
-          } else {
-            STATE.mutedParticipants.push(targetPid);
-            showToast("Usuário mutado para você.", "info");
-          }
-          // Atualiza lista
-          if (STATE.participantsListener) {
-            get(participantsRef);
-          }
-        };
-      });
-    });
-
-    const chatRef = ref(db, `watch_parties/${roomCode}/chat`);
-    STATE.chatListener = onValue(chatRef, (snap) => {
-      const chatLogs = DOM.partyChatLogs;
-      if (!chatLogs) return;
-
-      if (!snap.exists()) {
-        chatLogs.innerHTML = '<div class="chat-message-system">🎈 Chat ativo! Envie uma mensagem.</div>';
-        return;
-      }
-
-      const messages = snap.val();
-      const sortedMessages = Object.values(messages).sort((a, b) => a.timestamp - b.timestamp);
-      const wasAtBottom = chatLogs.scrollHeight - chatLogs.clientHeight <= chatLogs.scrollTop + 50;
-      const lastMessageCount = chatLogs.querySelectorAll('.chat-message-item, .chat-message-system').length;
-
-      chatLogs.innerHTML = sortedMessages.map(msg => {
-        if (msg.senderId === 'system') {
-          return `<div class="chat-message-system">${msg.text}</div>`;
-        }
-        
-        const isSelf = msg.senderId === STATE.currentProfile.id;
-        const senderAvatar = msg.senderAvatar || PRESET_AVATARS[0].url;
-
-        const msgDate = new Date(msg.timestamp);
-        const msgTime = !isNaN(msgDate.getTime()) ? `${String(msgDate.getHours()).padStart(2, '0')}:${String(msgDate.getMinutes()).padStart(2, '0')}` : '';
-
-        return `
-          <div class="chat-message-item${isSelf ? ' self' : ''}">
-            <div class="message-sender-meta">
-              ${!isSelf ? `<img src="${senderAvatar}" class="message-sender-avatar">` : ''}
-              <span class="message-sender-name">${msg.senderName}</span>
-              <span class="message-time" style="opacity:0.6; margin-left: 4px;">${msgTime}</span>
-            </div>
-            <div class="message-bubble">${msg.text}</div>
-          </div>
-        `;
-      }).join('');
-
-      if (wasAtBottom || sortedMessages.length > lastMessageCount) {
-        chatLogs.scrollTop = chatLogs.scrollHeight;
-      }
-
-      if (DOM.watchPartySidebar && DOM.watchPartySidebar.classList.contains('collapsed') && sortedMessages.length > lastMessageCount) {
-        STATE.unreadChatCount += (sortedMessages.length - lastMessageCount);
-        if (DOM.partyUnreadBadge) {
-          DOM.partyUnreadBadge.style.display = 'inline-block';
-          DOM.partyUnreadBadge.textContent = STATE.unreadChatCount;
-        }
-        const lastMsg = sortedMessages[sortedMessages.length - 1];
-        if (lastMsg && lastMsg.senderId !== 'system' && lastMsg.senderId !== STATE.currentProfile.id) {
-          showToast(`💬 ${lastMsg.senderName}: "${lastMsg.text}"`, 'info');
-        }
-      }
-    });
-
-    if (STATE.isHost) {
-      if (STATE.hostSyncInterval) clearInterval(STATE.hostSyncInterval);
-      STATE.hostSyncInterval = setInterval(() => {
-        if (STATE.roomActive && STATE.isHost && STATE.currentWatchItem) {
-          const elapsed = Math.round((Date.now() - STATE.watchStart) / 1000);
-          const totalElapsed = STATE.currentWatchItem.initialElapsedTime + elapsed;
-          
-          const hostTogglePlayBtn = document.getElementById('btn-host-toggle-play');
-          const isPlaying = hostTogglePlayBtn ? (!hostTogglePlayBtn.textContent.includes("Retomar")) : true;
-
-          update(ref(db, `watch_parties/${roomCode}/state`), {
-            currentTime: totalElapsed,
-            isPlaying: isPlaying,
-            lastUpdated: Date.now()
-          }).catch(e => console.warn("Erro no sync do host:", e));
-        }
-      }, 5000);
+    } catch (err) {
+      console.warn("Erro ao enviar mensagem do sistema:", err);
     }
   }
 
