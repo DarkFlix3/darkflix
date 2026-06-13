@@ -4397,6 +4397,8 @@ ul, ol {
   z-index: 5;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s ease;
   position: relative;
+  overflow: hidden;
+  min-height: 0;
 }
 
 /* Mobile Sidebar Slide-in Overlay */
@@ -4607,6 +4609,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   min-height: 0; /* Important for scroll container inside flexbox */
+  overflow: hidden;
 }
 
 .party-chat-logs {
@@ -4616,15 +4619,18 @@ ul, ol {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  min-height: 180px; /* Prevent shrinking to 0px on small screen heights */
+  min-height: 100px; /* Allowed to shrink more on small screens / mobile keyboard */
 }
 
 /* Chat Message Bubbles */
 .chat-message-item {
   display: flex;
   flex-direction: column;
-  max-width: 90%;
+  max-width: 85%;
   align-self: flex-start;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .chat-message-item.self {
@@ -4663,6 +4669,8 @@ ul, ol {
   color: var(--text-primary);
   font-size: 0.82rem;
   line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   word-break: break-word;
 }
 
@@ -4670,6 +4678,9 @@ ul, ol {
   background: rgba(229, 9, 20, 0.12);
   border-color: rgba(229, 9, 20, 0.2);
   border-radius: 12px 12px 0 12px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* System messages in chat logs */

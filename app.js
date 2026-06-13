@@ -5400,8 +5400,25 @@ const STATE = {
     initDOM();
     // Listen for orientation change to handle landscape fullscreen visually and programmatically
     const handleOrientationChange = () => {
+      // Don't auto-fullscreen if typing (focused on input/textarea)
+      if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) {
+        return;
+      }
+
       if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
-        if (window.innerWidth > window.innerHeight && window.innerWidth <= 950) {
+        const screenOrientation = window.screen && window.screen.orientation;
+        const orientationType = screenOrientation && screenOrientation.type;
+        
+        let isLandscape = false;
+        if (orientationType) {
+          isLandscape = orientationType.includes('landscape');
+        } else if (window.orientation !== undefined) {
+          isLandscape = Math.abs(window.orientation) === 90;
+        } else {
+          isLandscape = window.innerWidth > window.innerHeight;
+        }
+
+        if (isLandscape && window.innerWidth <= 950) {
           try {
             const playerWrapper = document.querySelector('.cinema-player');
             if (playerWrapper) {
