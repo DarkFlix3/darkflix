@@ -2060,6 +2060,20 @@ const STATE = {
       url: "http://23.237.104.106:8080/USA_CINEMAX/index.m3u8"
     },
     {
+      id: "comedy-central-eua",
+      nome: "Comedy Central EUA",
+      categoria: "fechado",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Comedy_Central_2018.svg",
+      url: "http://23.237.104.106:8080/USA_COMEDY_CENTRAL/index.m3u8"
+    },
+    {
+      id: "cmt-eua",
+      nome: "CMT EUA",
+      categoria: "fechado",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/b/b3/CMT_2017_logo.png",
+      url: "http://23.237.104.106:8080/USA_CMT/index.m3u8"
+    },
+    {
       id: "tv-sao-luis",
       nome: "TV São Luís",
       categoria: "aberto",
@@ -2107,6 +2121,13 @@ const STATE = {
       categoria: "aberto",
       logo: "https://lh6.googleusercontent.com/proxy/pbyreWhPyFcni4oTIK8oQImzEx4-Tg13fm5BvYgZUlDycQAppweNBChD5LDuZP-FqYw8_hOoQrAqEqGp2E63_Do8TCPoMM6qvR6BIap2Xg0",
       url: "http://wowza4.catve.com.br:1935/mastertv/livestream/chunklist_w1821412394.m3u8"
+    },
+    {
+      id: "tv-parana",
+      nome: "TV Paraná",
+      categoria: "aberto",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGOnXPAJ7oqRgNbjCBin2u2ewgu58_v3REjw&s",
+      url: "http://200.189.113.201/hls/tve.m3u8"
     },
     {
       id: "tv-brasil-hd",
