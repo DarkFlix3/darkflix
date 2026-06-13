@@ -3622,6 +3622,14 @@ const STATE = {
             
             if (isNowHost && !wasHost) {
               showToast("👑 Você agora é o anfitrião da sala!", "success");
+              setupHostLobbyListener(roomCode);
+            } else if (!isNowHost && wasHost) {
+              if (STATE.lobbyListener) {
+                STATE.lobbyListener();
+                STATE.lobbyListener = null;
+              }
+              const notifContainer = document.getElementById('lobby-notif-container');
+              if (notifContainer) notifContainer.remove();
             }
           }
         }
