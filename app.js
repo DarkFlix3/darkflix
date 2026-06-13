@@ -202,6 +202,7 @@ const STATE = {
   adminUniqueDevicesListener: null,
   adminOnlineListener: null,
   onlineOnDisconnectSet: false,
+  endedRoomsCurrentPage: 1,
 
   // Watch Party state
   roomActive: false,
@@ -684,7 +685,10 @@ const STATE = {
     else if (page === 'favorites') renderFavoritesPage();
     else if (page === 'admin') renderAdminDashboard();
     else if (page === 'devices') renderizarPaginaAparelhos();
-    else if (page === 'rooms') renderRoomsPage();
+    else if (page === 'rooms') {
+      STATE.endedRoomsCurrentPage = 1;
+      renderRoomsPage();
+    }
   }
 
   function navigateToGenre(type, genreName) {
@@ -4608,6 +4612,7 @@ const STATE = {
   async function renderRoomsPage() {
     const activeContainer = document.getElementById('active-rooms-list-container');
     const endedContainer = document.getElementById('ended-rooms-list-container');
+    const paginationContainer = document.getElementById('ended-rooms-pagination');
     if (!activeContainer || !endedContainer || !STATE.currentUser || !STATE.currentProfile) return;
 
     activeContainer.innerHTML = `
@@ -4617,6 +4622,7 @@ const STATE = {
       </div>
     `;
     endedContainer.innerHTML = '';
+    if (paginationContainer) paginationContainer.innerHTML = '';
 
     try {
       const historyRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${STATE.currentProfile.id}/room_history`);
@@ -4726,13 +4732,30 @@ const STATE = {
         });
       }
 
-      // Renderizar salas encerradas
-      if (endedRooms.length === 0) {
-        endedContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted); font-size:0.88rem;">Nenhuma sala encerrada no histórico.</div>`;
-      } else {
+      // Função interna para desenhar a página de salas encerradas
+      const renderEndedRoomsPage = (pageNumber) => {
+        if (endedRooms.length === 0) {
+          endedContainer.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted); font-size:0.88rem;">Nenhuma sala encerrada no histórico.</div>`;
+          if (paginationContainer) paginationContainer.innerHTML = '';
+          return;
+        }
+
         // Ordenar encerradas por mais recente
         endedRooms.sort((a,b) => (b.endedAt || b.timestamp) - (a.endedAt || a.timestamp));
-        endedContainer.innerHTML = endedRooms.map(room => {
+
+        const itemsPerPage = 5;
+        const totalItems = endedRooms.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+        if (pageNumber < 1) pageNumber = 1;
+        if (pageNumber > totalPages) pageNumber = totalPages;
+        STATE.endedRoomsCurrentPage = pageNumber;
+
+        const startIndex = (pageNumber - 1) * itemsPerPage;
+        const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+        const paginatedRooms = endedRooms.slice(startIndex, endIndex);
+
+        endedContainer.innerHTML = paginatedRooms.map(room => {
           const dateStr = new Date(room.timestamp).toLocaleString('pt-BR');
           const endedDateStr = room.endedAt ? new Date(room.endedAt).toLocaleString('pt-BR') : 'Desconhecido';
           return `
@@ -4757,7 +4780,63 @@ const STATE = {
             </div>
           `;
         }).join('');
-      }
+
+        if (totalPages > 1 && paginationContainer) {
+          let paginationHTML = '';
+          
+          // Botão Anterior
+          const prevDisabled = pageNumber === 1 ? ' disabled' : '';
+          paginationHTML += `<button class="pagination-btn${prevDisabled}" data-page="${pageNumber - 1}">‹</button>`;
+
+          // Páginas com elipses
+          const maxVisiblePages = 5;
+          let startPage = Math.max(1, pageNumber - 2);
+          let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+          
+          if (endPage - startPage < maxVisiblePages - 1) {
+            startPage = Math.max(1, endPage - maxVisiblePages + 1);
+          }
+
+          if (startPage > 1) {
+            paginationHTML += `<button class="pagination-btn" data-page="1">1</button>`;
+            if (startPage > 2) {
+              paginationHTML += `<span class="pagination-ellipsis">...</span>`;
+            }
+          }
+
+          for (let p = startPage; p <= endPage; p++) {
+            const activeClass = p === pageNumber ? ' active' : '';
+            paginationHTML += `<button class="pagination-btn${activeClass}" data-page="${p}">${p}</button>`;
+          }
+
+          if (endPage < totalPages) {
+            if (endPage < totalPages - 1) {
+              paginationHTML += `<span class="pagination-ellipsis">...</span>`;
+            }
+            paginationHTML += `<button class="pagination-btn" data-page="${totalPages}">${totalPages}</button>`;
+          }
+
+          // Botão Próximo
+          const nextDisabled = pageNumber === totalPages ? ' disabled' : '';
+          paginationHTML += `<button class="pagination-btn${nextDisabled}" data-page="${pageNumber + 1}">›</button>`;
+
+          paginationContainer.innerHTML = paginationHTML;
+
+          paginationContainer.querySelectorAll('.pagination-btn').forEach(btn => {
+            btn.onclick = () => {
+              const targetPage = parseInt(btn.dataset.page);
+              if (targetPage && targetPage !== STATE.endedRoomsCurrentPage) {
+                renderEndedRoomsPage(targetPage);
+              }
+            };
+          });
+        } else if (paginationContainer) {
+          paginationContainer.innerHTML = '';
+        }
+      };
+
+      // Iniciar renderização na página correta
+      renderEndedRoomsPage(STATE.endedRoomsCurrentPage || 1);
 
     } catch (err) {
       console.error("Erro ao renderizar salas:", err);
