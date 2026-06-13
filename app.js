@@ -229,7 +229,9 @@ const STATE = {
   voiceUnsubscribers: {},
   myLastSpeakingState: false,
   myLastMicActiveState: false, // New property
-  systemLeaveMsgId: null
+  systemLeaveMsgId: null,
+  audioCtx: null,
+  previousParticipantIds: null
 };
 
   // ---------- Genre Maps ----------
@@ -3569,6 +3571,62 @@ const STATE = {
     }
   }
 
+  // ---------- Sound Effects (Web Audio API) ----------
+  function playRoomSound(type) {
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContext) return;
+      
+      if (!STATE.audioCtx) {
+        STATE.audioCtx = new AudioContext();
+      }
+      const ctx = STATE.audioCtx;
+      if (ctx.state === 'suspended') {
+        ctx.resume();
+      }
+      
+      const playChime = (frequency, duration, volume, waveType = 'sine') => {
+        try {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          
+          osc.type = waveType;
+          osc.frequency.value = frequency;
+          
+          gain.gain.setValueAtTime(volume, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime + duration);
+          
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          
+          osc.start();
+          osc.stop(ctx.currentTime + duration);
+        } catch (e) {
+          console.warn("Erro ao tocar chime:", e);
+        }
+      };
+
+      if (type === 'request') {
+        // Doorbell chime: E5 (659.25 Hz) then A5 (880 Hz)
+        playChime(659.25, 0.2, 0.08);
+        setTimeout(() => {
+          playChime(880.00, 0.35, 0.08);
+        }, 150);
+      } else if (type === 'leave') {
+        // Downward tone: G4 (392 Hz) then E4 (329.63 Hz)
+        playChime(392.00, 0.18, 0.06);
+        setTimeout(() => {
+          playChime(329.63, 0.3, 0.06);
+        }, 120);
+      } else if (type === 'message') {
+        // Extremely soft pop: 900 Hz, 0.08s duration, 0.012 volume
+        playChime(900.00, 0.08, 0.012, 'sine');
+      }
+    } catch (err) {
+      console.warn("Erro no Web Audio API:", err);
+    }
+  }
+
   async function createWatchPartyRoom(movieId, type, season = null, episode = null) {
     if (type !== 'canal') {
       showToast("Assistir com amigos é exclusivo para canais ao vivo.", "error");
@@ -3687,6 +3745,7 @@ const STATE = {
     STATE.roomActive = true;
     STATE.isHost = roomData.hostProfileId === STATE.currentProfile.id && roomData.hostUid === STATE.currentUser.uid;
     STATE.participantRegistered = false; // Reset before registration
+    STATE.previousParticipantIds = null; // Reset previous participants list
 
     if (STATE.isHost) {
       setupHostLobbyListener(roomCode);
@@ -3882,6 +3941,10 @@ const STATE = {
 
         if (!snap.exists()) {
           listContainer.innerHTML = '<div style="font-size:0.75rem; color:var(--text-muted);">Ninguém na sala.</div>';
+          if (STATE.roomActive && STATE.previousParticipantIds && STATE.previousParticipantIds.length > 0) {
+            playRoomSound('leave');
+          }
+          STATE.previousParticipantIds = [];
           return;
         }
 
@@ -3894,6 +3957,16 @@ const STATE = {
           exitWatchPartyRoom();
           return;
         }
+
+        const currentPids = Object.keys(participants);
+        if (STATE.roomActive && STATE.previousParticipantIds) {
+          // Check if someone left
+          const leftPids = STATE.previousParticipantIds.filter(pid => !currentPids.includes(pid));
+          if (leftPids.length > 0) {
+            playRoomSound('leave');
+          }
+        }
+        STATE.previousParticipantIds = currentPids;
 
         let html = '';
 
@@ -4024,6 +4097,15 @@ const STATE = {
         const lastMessageCount = chatLogs.querySelectorAll('.chat-message-item, .chat-message-system').length;
 
         const currentProfileId = STATE.currentProfile ? STATE.currentProfile.id : null;
+
+        // Play chat sound when a new message arrives from another user
+        if (lastMessageCount > 0 && sortedMessages.length > lastMessageCount) {
+          const newMessages = sortedMessages.slice(lastMessageCount);
+          const hasNewUserMessage = newMessages.some(msg => msg && msg.senderId !== 'system' && msg.senderId !== currentProfileId);
+          if (hasNewUserMessage) {
+            playRoomSound('message');
+          }
+        }
 
         chatLogs.innerHTML = sortedMessages.map(msg => {
           if (!msg) return '';
@@ -4439,6 +4521,7 @@ const STATE = {
       Object.keys(requests).forEach(pid => {
         const req = requests[pid];
         if (req.status === 'pending' && !activeCardIds.includes(pid)) {
+          playRoomSound('request');
           const card = document.createElement('div');
           card.className = 'lobby-notification-card';
           card.dataset.pid = pid;
