@@ -3281,7 +3281,13 @@ const STATE = {
         const label = DOM.btnTogglePartyMic.querySelector('.mic-label');
         if (STATE.isMicActive) {
           if (!STATE.localVoiceStream) {
-            navigator.mediaDevices.getUserMedia({ audio: true })
+            navigator.mediaDevices.getUserMedia({
+              audio: {
+                echoCancellation: true,
+                noiseSuppression: true,
+                autoGainControl: true
+              }
+            })
               .then(stream => {
                 DOM.btnTogglePartyMic.classList.remove('mic-muted');
                 DOM.btnTogglePartyMic.classList.add('mic-active');
