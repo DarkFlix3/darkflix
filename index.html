@@ -529,9 +529,31 @@
           <div id="party-typing-indicator" class="party-typing-indicator" style="display: none;"></div>
         </div>
 
-        <!-- Chat Input -->
+        <!-- Chat Input Preview and Form -->
+        <div id="party-file-preview" class="party-file-preview" style="display: none; padding: 8px 16px; background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.06); align-items: center; gap: 10px;">
+          <div class="preview-thumbnail-wrapper" style="position: relative; width: 50px; height: 50px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border);">
+            <img id="party-file-preview-img" src="" alt="Miniatura" style="width: 100%; height: 100%; object-fit: cover;">
+            <button type="button" id="btn-remove-file-preview" title="Remover anexo" style="position: absolute; top: 2px; right: 2px; background: rgba(0,0,0,0.6); color: white; border: none; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-size: 8px; cursor: pointer;">✕</button>
+          </div>
+          <span id="party-file-preview-name" class="preview-filename" style="font-size: 0.75rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1;"></span>
+        </div>
+
         <form id="party-chat-form" class="party-chat-form">
+          <input type="file" id="party-file-input" style="display: none;" accept="image/*">
+          
+          <button type="button" id="btn-attach-file" title="Enviar Foto/Imagem" class="chat-form-icon-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+          </button>
+          
+          <div class="emoji-picker-wrapper" style="position: relative;">
+            <button type="button" id="btn-emoji-picker" title="Inserir Emoji" class="chat-form-icon-btn" style="font-size: 1.15rem; line-height: 1;">😊</button>
+            <div id="emoji-picker-container" class="emoji-picker-container" style="display: none;">
+              <!-- Emojis populated dynamically by JS -->
+            </div>
+          </div>
+
           <input type="text" id="party-chat-input" placeholder="Diga algo na sala..." maxlength="150" required autocomplete="off">
+          
           <button type="submit" id="btn-send-party-message" title="Enviar Mensagem">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
@@ -795,6 +817,14 @@
       <p class="footer-text">© 2025 DarkFlix. Todos os direitos reservados. Feito com ❤ para os amantes de cinema.</p>
     </div>
   </footer>
+
+  <!-- ============ CHAT IMAGE LIGHTBOX MODAL ============ -->
+  <div class="modal-backdrop" id="chat-image-modal" style="z-index: 100010;">
+    <div class="chat-image-lightbox" style="position: relative; max-width: 90%; max-height: 90vh; display: flex; align-items: center; justify-content: center;">
+      <button class="modal-close" id="chat-image-modal-close-btn" style="position: absolute; top: -40px; right: 0; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; transition: color var(--transition-fast);">✕</button>
+      <img id="chat-image-lightbox-img" src="" alt="Imagem ampliada" style="max-width: 100%; max-height: 80vh; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); object-fit: contain;">
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script type="module" src="app.js?v=2.6.3"></script>
