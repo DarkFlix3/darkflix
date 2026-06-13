@@ -222,6 +222,7 @@ const STATE = {
   remoteAudios: {},
   voiceUnsubscribers: {},
   myLastSpeakingState: false,
+  myLastMicActiveState: false, // New property
   systemLeaveMsgId: null
 };
 
@@ -3307,6 +3308,12 @@ const STATE = {
                 STATE.localVoiceStream = gatedStream;
 
                 reconnectAllVoicePeers();
+
+                if (STATE.roomCode && STATE.currentProfile) {
+                  update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
+                    micActive: true
+                  });
+                }
               })
               .catch(err => {
                 console.warn("Microfone negado:", err);
@@ -3325,6 +3332,12 @@ const STATE = {
             if (STATE.localVoiceStream.rawStream) {
               STATE.localVoiceStream.rawStream.getTracks().forEach(track => {
                 track.enabled = true;
+              });
+            }
+
+            if (STATE.roomCode && STATE.currentProfile) {
+              update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
+                micActive: true
               });
             }
           }
@@ -3347,7 +3360,8 @@ const STATE = {
           
           if (STATE.roomCode && STATE.currentProfile) {
             update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
-              isSpeaking: false
+              isSpeaking: false,
+              micActive: false
             });
           }
         }
@@ -3867,6 +3881,7 @@ const STATE = {
         avatar: STATE.currentProfile.avatar || PRESET_AVATARS[0].url,
         isHost: STATE.isHost,
         isSpeaking: false,
+        micActive: false, // New property
         joinedAt: Date.now()
       });
       onDisconnect(participantRef).remove().catch(e => console.warn("Erro no onDisconnect:", e));
@@ -4329,26 +4344,26 @@ const STATE = {
     if (!STATE.peerMuteStates) STATE.peerMuteStates = {};
 
     const myParticipant = participants[myId];
-    const myIsSpeaking = myParticipant ? (myParticipant.isSpeaking === true) : false;
-    const myLastSpeaking = STATE.myLastSpeakingState === true;
-    const mySpeakingStateChanged = myIsSpeaking !== myLastSpeaking;
-    STATE.myLastSpeakingState = myIsSpeaking;
+    const myMicActive = myParticipant ? (myParticipant.micActive === true) : false;
+    const myLastMicActive = STATE.myLastMicActiveState === true;
+    const myMicStateChanged = myMicActive !== myLastMicActive;
+    STATE.myLastMicActiveState = myMicActive;
 
     Object.keys(participants).forEach(pid => {
       if (pid === myId) return;
       
       const p = participants[pid];
-      const isSpeaking = p.isSpeaking === true;
-      const lastSpeaking = STATE.peerMuteStates[pid] === true;
+      const micActive = p.micActive === true;
+      const lastMicActive = STATE.peerMuteStates[pid] === true;
 
-      // Se mudou o estado do microfone dele OU o meu próprio estado de voz mudou, recria a conexão para negociar o áudio
-      const shouldReconnect = (isSpeaking !== lastSpeaking) || mySpeakingStateChanged;
+      // Se mudou o estado do microfone dele OU o meu próprio estado do microfone mudou, recria a conexão para negociar o áudio
+      const shouldReconnect = (micActive !== lastMicActive) || myMicStateChanged;
       if (shouldReconnect && STATE.peerConnections[pid]) {
-        console.log(`[WebRTC] Estado de voz mudou (Peer ${pid}: ${lastSpeaking} -> ${isSpeaking}, Meu: ${myLastSpeaking} -> ${myIsSpeaking}). Recriando conexão.`);
+        console.log(`[WebRTC] Estado do microfone mudou (Peer ${pid}: ${lastMicActive} -> ${micActive}, Meu: ${myLastMicActive} -> ${myMicActive}). Recriando conexão.`);
         closePeerConnection(pid);
       }
       
-      STATE.peerMuteStates[pid] = isSpeaking;
+      STATE.peerMuteStates[pid] = micActive;
 
       if (!STATE.peerConnections[pid]) {
         const isInitiator = myId < pid;
