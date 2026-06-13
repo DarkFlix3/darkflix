@@ -4705,7 +4705,7 @@ ul, ol {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.party-chat-form button {
+.party-chat-form button[type="submit"] {
   background: var(--accent);
   color: white;
   width: 36px;
@@ -5189,6 +5189,181 @@ ul, ol {
 
 .lobby-notification-btn.deny:hover {
   background: rgba(255, 255, 255, 0.14);
+}
+
+/* ============================================================
+   DarkFlix - Watch Party Chat Enhancements (Emoji & File Share)
+   ============================================================ */
+
+/* Chat Form Icon Buttons */
+.chat-form-icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.chat-form-icon-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.chat-form-icon-btn svg {
+  stroke: currentColor;
+  display: block;
+}
+
+/* Emoji Picker Container */
+.emoji-picker-container {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: -40px;
+  width: 260px;
+  height: 190px;
+  background: rgba(18, 18, 26, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg), 0 10px 30px rgba(0,0,0,0.5);
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  overflow-y: auto;
+  z-index: 100000;
+  animation: emojiFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes emojiFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.emoji-picker-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.emoji-picker-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.emoji-picker-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 99px;
+}
+
+.emoji-picker-item {
+  font-size: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  user-select: none;
+  height: 32px;
+  width: 32px;
+  border-radius: var(--radius-sm);
+}
+
+.emoji-picker-item:hover {
+  transform: scale(1.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* File Attachment Preview */
+.party-file-preview {
+  animation: slideUpPreview 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@keyframes slideUpPreview {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Chat Image Bubbles */
+.chat-message-image {
+  max-width: 100%;
+  max-height: 160px;
+  border-radius: var(--radius-sm);
+  margin-top: 6px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: opacity var(--transition-fast), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow-sm);
+}
+
+.chat-message-image:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Lightbox Modal */
+.chat-image-lightbox {
+  animation: lightboxEnter 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes lightboxEnter {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.chat-image-lightbox .modal-close:hover {
+  color: var(--accent);
+}
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 950px) {
+  .watch-party-sidebar {
+    width: 300px !important;
+  }
+  
+  .party-chat-form {
+    padding: 10px 12px !important;
+    gap: 8px !important;
+  }
+
+  .party-chat-form input[type="text"] {
+    padding: 10px 12px !important;
+    font-size: 0.8rem !important;
+    min-width: 0 !important; /* Permite que o input encolha no flexbox e não empurre o botão de enviar para fora da tela */
+    flex: 1 !important;
+  }
+
+  .party-chat-form button[type="submit"] {
+    width: 34px !important;
+    height: 34px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .chat-form-icon-btn {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 1.1rem !important;
+  }
+
+  .emoji-picker-container {
+    left: -10px;
+    width: 220px;
+    height: 160px;
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 
