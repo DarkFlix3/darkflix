@@ -211,6 +211,8 @@ const STATE = {
   chatListener: null,
   participantsListener: null,
   typingListener: null,
+  lobbyListener: null,
+  participantRegistered: false,
   isMicActive: false,
   mutedParticipants: [],
   unreadChatCount: 0,
@@ -3474,9 +3476,23 @@ const STATE = {
       return;
     }
 
+    const isHost = roomData.hostProfileId === STATE.currentProfile.id && roomData.hostUid === STATE.currentUser.uid;
+    if (isHost) {
+      actualJoinWatchPartyRoom(roomCode, roomData);
+    } else {
+      showLobbyScreen(roomCode, roomData);
+    }
+  }
+
+  async function actualJoinWatchPartyRoom(roomCode, roomData) {
     STATE.roomCode = roomCode;
     STATE.roomActive = true;
     STATE.isHost = roomData.hostProfileId === STATE.currentProfile.id && roomData.hostUid === STATE.currentUser.uid;
+    STATE.participantRegistered = false; // Reset before registration
+
+    if (STATE.isHost) {
+      setupHostLobbyListener(roomCode);
+    }
     
     // Atualizar a URL com o código da sala para permitir recarregar a página sem perder a sala
     const newUrl = `${window.location.origin}${window.location.pathname}?room=${roomCode}`;
@@ -3665,9 +3681,15 @@ const STATE = {
 
         const participants = snap.val();
 
-        let html = '';
-
+        // Verificar se fomos expulsos (nossos dados não estão mais presentes e já estávamos registrados)
         const currentProfileId = STATE.currentProfile ? STATE.currentProfile.id : null;
+        if (STATE.participantRegistered && currentProfileId && !participants[currentProfileId] && !STATE.isHost) {
+          showToast("❌ Você foi removido da sala pelo anfitrião.", "error");
+          exitWatchPartyRoom();
+          return;
+        }
+
+        let html = '';
 
         // --- WebRTC voice connections sync ---
         if (STATE.roomActive && currentProfileId) {
@@ -3697,6 +3719,11 @@ const STATE = {
                   👑
                 </button>
               ` : '';
+          const kickBtn = (isCurrentHost && !isSelf) ? `
+                <button class="btn-kick-participant" data-pid="${p.id}" data-name="${p.name}" title="Remover ${p.name} da sala" style="background:none; border:none; cursor:pointer; font-size:1.1rem; padding:2px 4px; opacity:0.7; transition:opacity 0.2s; color:#e50914;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">
+                  ❌
+                </button>
+              ` : '';
 
           html += `
             <div class="participant-item${p.isHost ? ' host' : ''}" data-id="${p.id}">
@@ -3709,6 +3736,7 @@ const STATE = {
               </span>
               <div style="display:flex; align-items:center; gap:2px;">
                 ${transferBtn}
+                ${kickBtn}
                 ${!isSelf ? `
                   <button class="btn-participant-mute${isMuted ? ' muted' : ''}" data-id="${p.id}" title="${isMuted ? 'Desmutar amigo' : 'Mutar amigo'}">
                     ${micIcon}
@@ -3746,6 +3774,21 @@ const STATE = {
             const targetName = btn.dataset.name;
             if (confirm(`Transferir o título de anfitrião para ${targetName}?`)) {
               transferirAnfitriao(targetPid, targetUid, targetName);
+            }
+          };
+        });
+
+        // Host kick button handlers
+        listContainer.querySelectorAll('.btn-kick-participant').forEach(btn => {
+          btn.onclick = async () => {
+            const targetPid = btn.dataset.pid;
+            const targetName = btn.dataset.name;
+            const confirmado = await confirmarCustomizado(
+              `Tem certeza que deseja remover ${targetName} da sala?`,
+              "Remover Participante"
+            );
+            if (confirmado) {
+              removerParticipante(targetPid, targetName);
             }
           };
         });
@@ -3884,6 +3927,7 @@ const STATE = {
         micActive: false, // New property
         joinedAt: Date.now()
       });
+      STATE.participantRegistered = true;
       onDisconnect(participantRef).remove().catch(e => console.warn("Erro no onDisconnect:", e));
       onDisconnect(ref(db, `watch_parties/${roomCode}/lastActive`)).set(serverTimestamp()).catch(e => {});
 
@@ -3975,6 +4019,233 @@ const STATE = {
     }
   }
 
+  async function removerParticipante(targetPid, targetName) {
+    if (!STATE.roomCode || !STATE.isHost) return;
+    try {
+      const code = STATE.roomCode;
+      
+      // Enviar mensagem de sistema no chat
+      const systemMsgId = `sys_kick_${targetPid}_${Date.now()}`;
+      await set(ref(db, `watch_parties/${code}/chat/${systemMsgId}`), {
+        senderId: 'system',
+        senderName: 'Sistema',
+        senderAvatar: '',
+        text: `❌ ${targetName} foi removido da sala pelo anfitrião.`,
+        timestamp: Date.now()
+      });
+      
+      // Remover participante do banco
+      await remove(ref(db, `watch_parties/${code}/participants/${targetPid}`));
+      await remove(ref(db, `watch_parties/${code}/typing/${targetPid}`));
+      
+      showToast(`Participante ${targetName} removido.`, "success");
+    } catch (err) {
+      console.error("Erro ao remover participante:", err);
+      showToast("Erro ao remover participante.", "error");
+    }
+  }
+
+  function showLobbyScreen(roomCode, roomData) {
+    const oldLobby = document.getElementById('lobby-waiting-screen');
+    if (oldLobby) oldLobby.remove();
+
+    const lobby = document.createElement('div');
+    lobby.id = 'lobby-waiting-screen';
+    lobby.style.cssText = `
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(6, 6, 10, 0.95);
+      backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+    `;
+
+    lobby.innerHTML = `
+      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; text-align: center; max-width: 420px; width: 90%; box-shadow: var(--shadow-lg); display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <div style="position: relative;">
+          <img src="${STATE.currentProfile.avatar || PRESET_AVATARS[0].url}" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover;">
+          <div style="position: absolute; bottom: 0; right: 0; background: var(--accent); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg-card); font-size: 0.75rem;">
+            ⏳
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Solicitação de Entrada</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Olá <strong>${STATE.currentProfile.name}</strong>! Aguarde enquanto o anfitrião da sala aprova a sua entrada...</p>
+        </div>
+        
+        <div style="display: flex; gap: 8px; justify-content: center; margin: 10px 0;">
+          <span style="display: inline-block; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; animation: pulse 1.5s infinite; animation-delay: 0s;"></span>
+          <span style="display: inline-block; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; animation: pulse 1.5s infinite; animation-delay: 0.3s;"></span>
+          <span style="display: inline-block; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; animation: pulse 1.5s infinite; animation-delay: 0.6s;"></span>
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); background: rgba(255,255,255,0.02); padding: 10px 15px; border-radius: var(--radius-sm); border: 1px solid var(--border); width: 100%;">
+          Sala: <strong style="color: var(--text-primary);">${roomData.title}</strong><br>
+          Anfitrião: <strong style="color: var(--text-primary);">${roomData.hostName || 'Anfitrião'}</strong>
+        </div>
+        
+        <button id="btn-cancel-lobby-req" class="btn btn-secondary" style="width: 100%; padding: 12px 20px; font-size: 0.88rem;">
+          Cancelar Solicitação
+        </button>
+      </div>
+    `;
+
+    document.body.appendChild(lobby);
+    document.body.style.overflow = 'hidden';
+
+    const lobbyRequestRef = ref(db, `watch_parties/${roomCode}/lobby/${STATE.currentProfile.id}`);
+    
+    // Escrever requisição
+    set(lobbyRequestRef, {
+      id: STATE.currentProfile.id,
+      name: STATE.currentProfile.name,
+      avatar: STATE.currentProfile.avatar || PRESET_AVATARS[0].url,
+      uid: STATE.currentUser.uid,
+      status: 'pending',
+      timestamp: Date.now()
+    }).catch(err => {
+      console.error("Erro ao enviar solicitação para o lobby:", err);
+      showToast("Erro ao conectar ao lobby da sala.", "error");
+      lobby.remove();
+      document.body.style.overflow = '';
+    });
+
+    onDisconnect(lobbyRequestRef).remove().catch(() => {});
+
+    // Escutar status
+    const statusUnsub = onValue(lobbyRequestRef, (snap) => {
+      if (!snap.exists()) {
+        // Se foi removido do lobby, assume como recusado (a não ser que já tenha aprovado e limpado)
+        showToast("❌ Entrada recusada pelo anfitrião.", "error");
+        statusUnsub();
+        lobby.remove();
+        document.body.style.overflow = '';
+        window.history.replaceState({}, document.title, window.location.pathname);
+        navigateTo('home');
+        return;
+      }
+
+      const data = snap.val();
+      if (data.status === 'approved') {
+        showToast("✅ Entrada liberada pelo anfitrião!", "success");
+        statusUnsub();
+        onDisconnect(lobbyRequestRef).cancel().catch(() => {});
+        remove(lobbyRequestRef).catch(() => {});
+        lobby.remove();
+        document.body.style.overflow = '';
+        
+        actualJoinWatchPartyRoom(roomCode, roomData);
+      } else if (data.status === 'denied') {
+        showToast("❌ Entrada recusada pelo anfitrião.", "error");
+        statusUnsub();
+        onDisconnect(lobbyRequestRef).cancel().catch(() => {});
+        remove(lobbyRequestRef).catch(() => {});
+        lobby.remove();
+        document.body.style.overflow = '';
+        window.history.replaceState({}, document.title, window.location.pathname);
+        navigateTo('home');
+      }
+    });
+
+    document.getElementById('btn-cancel-lobby-req').onclick = () => {
+      statusUnsub();
+      onDisconnect(lobbyRequestRef).cancel().catch(() => {});
+      remove(lobbyRequestRef).catch(() => {});
+      lobby.remove();
+      document.body.style.overflow = '';
+      window.history.replaceState({}, document.title, window.location.pathname);
+      navigateTo('home');
+    };
+  }
+
+  function setupHostLobbyListener(roomCode) {
+    if (STATE.lobbyListener) {
+      STATE.lobbyListener();
+      STATE.lobbyListener = null;
+    }
+
+    let notifContainer = document.getElementById('lobby-notif-container');
+    if (!notifContainer) {
+      notifContainer = document.createElement('div');
+      notifContainer.id = 'lobby-notif-container';
+      notifContainer.className = 'lobby-notification-container';
+      document.body.appendChild(notifContainer);
+    }
+
+    const lobbyRef = ref(db, `watch_parties/${roomCode}/lobby`);
+    STATE.lobbyListener = onValue(lobbyRef, (snap) => {
+      if (!STATE.roomActive || !STATE.isHost) {
+        if (STATE.lobbyListener) {
+          STATE.lobbyListener();
+          STATE.lobbyListener = null;
+        }
+        return;
+      }
+
+      const requests = snap.val() || {};
+      
+      const activeCards = notifContainer.querySelectorAll('.lobby-notification-card');
+      const activeCardIds = Array.from(activeCards).map(c => c.dataset.pid);
+
+      // Remover cards de requisições que não são mais pendentes ou foram excluídas
+      activeCards.forEach(card => {
+        const pid = card.dataset.pid;
+        if (!requests[pid] || requests[pid].status !== 'pending') {
+          card.style.animation = 'none';
+          card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+          card.style.opacity = '0';
+          card.style.transform = 'translateX(50px)';
+          setTimeout(() => card.remove(), 250);
+        }
+      });
+
+      // Adicionar novos cards de requisição
+      Object.keys(requests).forEach(pid => {
+        const req = requests[pid];
+        if (req.status === 'pending' && !activeCardIds.includes(pid)) {
+          const card = document.createElement('div');
+          card.className = 'lobby-notification-card';
+          card.dataset.pid = pid;
+          card.innerHTML = `
+            <div class="lobby-notification-header">
+              <img src="${req.avatar || PRESET_AVATARS[0].url}" class="lobby-notification-avatar">
+              <div class="lobby-notification-info">
+                <h5>Solicitação de Entrada</h5>
+                <p><strong>${req.name}</strong> quer entrar na sala.</p>
+              </div>
+            </div>
+            <div class="lobby-notification-actions">
+              <button class="lobby-notification-btn deny" id="btn-lobby-deny-${pid}">Recusar</button>
+              <button class="lobby-notification-btn accept" id="btn-lobby-accept-${pid}">Permitir</button>
+            </div>
+          `;
+          notifContainer.appendChild(card);
+
+          document.getElementById(`btn-lobby-deny-${pid}`).onclick = async () => {
+            try {
+              await update(ref(db, `watch_parties/${roomCode}/lobby/${pid}`), { status: 'denied' });
+              showToast(`Entrada de ${req.name} recusada.`, "info");
+            } catch(e) {
+              console.error("Erro ao recusar entrada:", e);
+            }
+          };
+
+          document.getElementById(`btn-lobby-accept-${pid}`).onclick = async () => {
+            try {
+              await update(ref(db, `watch_parties/${roomCode}/lobby/${pid}`), { status: 'approved' });
+              showToast(`Entrada de ${req.name} aprovada!`, "success");
+            } catch(e) {
+              console.error("Erro ao aprovar entrada:", e);
+            }
+          };
+        }
+      });
+    });
+  }
+
   async function exitWatchPartyRoom(forceEnded = false) {
     if (!STATE.roomActive || !STATE.roomCode) return;
     
@@ -4002,6 +4273,14 @@ const STATE = {
       STATE.typingListener();
       STATE.typingListener = null;
     }
+    if (STATE.lobbyListener) {
+      STATE.lobbyListener();
+      STATE.lobbyListener = null;
+    }
+    const notifContainer = document.getElementById('lobby-notif-container');
+    if (notifContainer) notifContainer.remove();
+    
+    STATE.participantRegistered = false;
 
     closeVoiceChat();
 

@@ -5091,6 +5091,107 @@ ul, ol {
   font-size: 0.8rem;
 }
 
+/* ============================================================
+   Lobby & Admission Requests Styling (Watch Party)
+   ============================================================ */
+.lobby-notification-container {
+  position: fixed;
+  top: 90px;
+  right: 24px;
+  z-index: 100000;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.lobby-notification-card {
+  pointer-events: auto;
+  background: var(--glass-strong);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: slideInRight 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  border-left: 3px solid var(--accent);
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.lobby-notification-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lobby-notification-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+.lobby-notification-info h5 {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.lobby-notification-info p {
+  margin: 2px 0 0 0;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.lobby-notification-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.lobby-notification-btn {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.lobby-notification-btn.accept {
+  background: #22c55e;
+  color: white;
+}
+
+.lobby-notification-btn.accept:hover {
+  background: #16a34a;
+}
+
+.lobby-notification-btn.deny {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.lobby-notification-btn.deny:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+
 
 
 
