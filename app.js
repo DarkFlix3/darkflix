@@ -3294,18 +3294,19 @@ const STATE = {
                 if (label) label.textContent = "Falar";
                 showToast("Microfone ativado!", "success");
                 
-                STATE.localVoiceStream = stream;
-                stream.getTracks().forEach(track => {
-                  track.enabled = true;
+                // Aplica o Noise Gate para evitar vazamento do canal
+                const gatedStream = applyNoiseGate(stream, (speaking) => {
+                  if (STATE.roomCode && STATE.currentProfile) {
+                    update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
+                      isSpeaking: speaking
+                    });
+                  }
                 });
 
+                gatedStream.rawStream = stream;
+                STATE.localVoiceStream = gatedStream;
+
                 reconnectAllVoicePeers();
-                
-                if (STATE.roomCode && STATE.currentProfile) {
-                  update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
-                    isSpeaking: true
-                  });
-                }
               })
               .catch(err => {
                 console.warn("Microfone negado:", err);
@@ -3321,10 +3322,9 @@ const STATE = {
             STATE.localVoiceStream.getTracks().forEach(track => {
               track.enabled = true;
             });
-
-            if (STATE.roomCode && STATE.currentProfile) {
-              update(ref(db, `watch_parties/${STATE.roomCode}/participants/${STATE.currentProfile.id}`), {
-                isSpeaking: true
+            if (STATE.localVoiceStream.rawStream) {
+              STATE.localVoiceStream.rawStream.getTracks().forEach(track => {
+                track.enabled = true;
               });
             }
           }
@@ -3338,6 +3338,11 @@ const STATE = {
             STATE.localVoiceStream.getTracks().forEach(track => {
               track.enabled = false;
             });
+            if (STATE.localVoiceStream.rawStream) {
+              STATE.localVoiceStream.rawStream.getTracks().forEach(track => {
+                track.enabled = false;
+              });
+            }
           }
           
           if (STATE.roomCode && STATE.currentProfile) {
@@ -4237,6 +4242,88 @@ const STATE = {
     }
   }
 
+  // Helper to create a noise gate/voice activity detector to prevent feedback
+  function applyNoiseGate(rawStream, onSpeakingChange) {
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContext) return rawStream;
+
+      const ctx = new AudioContext();
+      const source = ctx.createMediaStreamSource(rawStream);
+      const destination = ctx.createMediaStreamDestination();
+      const gainNode = ctx.createGain();
+      const analyser = ctx.createAnalyser();
+
+      analyser.fftSize = 256;
+      const bufferLength = analyser.fftSize;
+      const dataArray = new Uint8Array(bufferLength);
+
+      source.connect(gainNode);
+      gainNode.connect(destination);
+      source.connect(analyser);
+
+      let isSpeaking = false;
+      let lastSpeakingTime = 0;
+      // 12 is a good threshold: voice is usually > 15-20, while background leakage/humming is < 10
+      const threshold = 12;
+      const hangTime = 800; // ms to keep the gate open after user stops speaking to prevent cutting off words
+
+      const intervalId = setInterval(() => {
+        const activeTracks = rawStream.getTracks().filter(t => t.readyState === 'live');
+        if (activeTracks.length === 0) {
+          clearInterval(intervalId);
+          ctx.close().catch(() => {});
+          return;
+        }
+
+        if (activeTracks.some(t => !t.enabled)) {
+          if (isSpeaking) {
+            isSpeaking = false;
+            gainNode.gain.setValueAtTime(0, ctx.currentTime);
+            onSpeakingChange(false);
+          }
+          return;
+        }
+
+        analyser.getByteTimeDomainData(dataArray);
+
+        let maxVal = 0;
+        for (let i = 0; i < bufferLength; i++) {
+          const val = Math.abs(dataArray[i] - 128);
+          if (val > maxVal) {
+            maxVal = val;
+          }
+        }
+
+        const now = Date.now();
+        if (maxVal > threshold) {
+          lastSpeakingTime = now;
+          if (!isSpeaking) {
+            isSpeaking = true;
+            gainNode.gain.setTargetAtTime(1.0, ctx.currentTime, 0.02);
+            onSpeakingChange(true);
+          }
+        } else {
+          if (isSpeaking && (now - lastSpeakingTime > hangTime)) {
+            isSpeaking = false;
+            gainNode.gain.setTargetAtTime(0.0, ctx.currentTime, 0.15);
+            onSpeakingChange(false);
+          }
+        }
+      }, 50);
+
+      const gatedStream = destination.stream;
+      gatedStream.audioContext = ctx;
+      gatedStream.intervalId = intervalId;
+      gatedStream.gainNode = gainNode;
+
+      return gatedStream;
+    } catch (e) {
+      console.warn("Error creating noise gate:", e);
+      return rawStream;
+    }
+  }
+
   // ---------- WebRTC voice mesh functions ----------
   function syncVoiceConnections(participants, myId) {
     if (!STATE.peerMuteStates) STATE.peerMuteStates = {};
@@ -4458,8 +4545,21 @@ const STATE = {
     STATE.voiceUnsubscribers = {};
     if (STATE.localVoiceStream) {
       try {
+        if (STATE.localVoiceStream.intervalId) {
+          clearInterval(STATE.localVoiceStream.intervalId);
+        }
+        if (STATE.localVoiceStream.audioContext) {
+          STATE.localVoiceStream.audioContext.close().catch(() => {});
+        }
+      } catch(e){}
+      try {
         STATE.localVoiceStream.getTracks().forEach(track => track.stop());
       } catch(e){}
+      if (STATE.localVoiceStream.rawStream) {
+        try {
+          STATE.localVoiceStream.rawStream.getTracks().forEach(track => track.stop());
+        } catch(e){}
+      }
       STATE.localVoiceStream = null;
     }
     STATE.isMicActive = false;
