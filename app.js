@@ -220,6 +220,8 @@ const STATE = {
   localVoiceStream: null,
   peerConnections: {},
   remoteAudios: {},
+  voiceUnsubscribers: {},
+  myLastSpeakingState: false,
   systemLeaveMsgId: null
 };
 
@@ -4233,6 +4235,12 @@ const STATE = {
   function syncVoiceConnections(participants, myId) {
     if (!STATE.peerMuteStates) STATE.peerMuteStates = {};
 
+    const myParticipant = participants[myId];
+    const myIsSpeaking = myParticipant ? (myParticipant.isSpeaking === true) : false;
+    const myLastSpeaking = STATE.myLastSpeakingState === true;
+    const mySpeakingStateChanged = myIsSpeaking !== myLastSpeaking;
+    STATE.myLastSpeakingState = myIsSpeaking;
+
     Object.keys(participants).forEach(pid => {
       if (pid === myId) return;
       
@@ -4240,9 +4248,10 @@ const STATE = {
       const isSpeaking = p.isSpeaking === true;
       const lastSpeaking = STATE.peerMuteStates[pid] === true;
 
-      // Se mudou o estado do microfone dele, recria a conexão para negociar o áudio
-      if (isSpeaking !== lastSpeaking && STATE.peerConnections[pid]) {
-        console.log(`[WebRTC] Estado de voz do peer ${pid} mudou para ${isSpeaking}. Recriando conexão.`);
+      // Se mudou o estado do microfone dele OU o meu próprio estado de voz mudou, recria a conexão para negociar o áudio
+      const shouldReconnect = (isSpeaking !== lastSpeaking) || mySpeakingStateChanged;
+      if (shouldReconnect && STATE.peerConnections[pid]) {
+        console.log(`[WebRTC] Estado de voz mudou (Peer ${pid}: ${lastSpeaking} -> ${isSpeaking}, Meu: ${myLastSpeaking} -> ${myIsSpeaking}). Recriando conexão.`);
         closePeerConnection(pid);
       }
       
@@ -4276,6 +4285,7 @@ const STATE = {
     });
     
     STATE.peerConnections[targetPid] = pc;
+    STATE.voiceUnsubscribers[targetPid] = STATE.voiceUnsubscribers[targetPid] || [];
 
     // Se já temos stream local, adiciona a track
     if (STATE.localVoiceStream) {
@@ -4296,6 +4306,7 @@ const STATE = {
         STATE.remoteAudios[targetPid] = audio;
       }
       audio.srcObject = event.streams[0];
+      audio.play().catch(e => console.warn("[WebRTC] Erro ao reproduzir áudio remetente:", e));
     };
 
     const myId = STATE.currentProfile.id;
@@ -4321,7 +4332,7 @@ const STATE = {
       
     const otherIceRef = ref(db, otherRolePath);
     // Escutar adição de ICE
-    onValue(otherIceRef, (snap) => {
+    const unsubIce = onValue(otherIceRef, (snap) => {
       if (snap.exists()) {
         const candidates = snap.val();
         Object.keys(candidates).forEach(key => {
@@ -4332,6 +4343,7 @@ const STATE = {
         });
       }
     });
+    STATE.voiceUnsubscribers[targetPid].push(unsubIce);
 
     if (isInitiator) {
       // Cria oferta
@@ -4344,15 +4356,20 @@ const STATE = {
         
         // Escuta a resposta
         const answerRef = ref(db, `watch_parties/${roomCode}/signals/${myId}/${targetPid}/answer`);
-        const unsub = onValue(answerRef, async (snap) => {
+        const unsubAnswer = onValue(answerRef, async (snap) => {
           if (snap.exists()) {
             const answer = JSON.parse(snap.val());
             if (pc.signalingState === 'have-local-offer') {
               await pc.setRemoteDescription(new RTCSessionDescription(answer));
-              unsub(); // Desinscreve após conectar
+              if (unsubAnswer) {
+                unsubAnswer();
+              } else {
+                setTimeout(() => { if (unsubAnswer) unsubAnswer(); }, 50);
+              }
             }
           }
         });
+        STATE.voiceUnsubscribers[targetPid].push(unsubAnswer);
       } catch (err) {
         console.error("[WebRTC] Erro ao criar oferta:", err);
       }
@@ -4363,7 +4380,11 @@ const STATE = {
         if (snap.exists()) {
           const offer = JSON.parse(snap.val());
           try {
-            unsubOffer(); // Desinscreve
+            if (unsubOffer) {
+              unsubOffer();
+            } else {
+              setTimeout(() => { if (unsubOffer) unsubOffer(); }, 50);
+            }
             await pc.setRemoteDescription(new RTCSessionDescription(offer));
             const answer = await pc.createAnswer();
             await pc.setLocalDescription(answer);
@@ -4375,6 +4396,7 @@ const STATE = {
           }
         }
       });
+      STATE.voiceUnsubscribers[targetPid].push(unsubOffer);
     }
   }
 
@@ -4393,6 +4415,14 @@ const STATE = {
   }
 
   function closePeerConnection(pid) {
+    // Unsubscribe from Firebase listeners for this peer
+    if (STATE.voiceUnsubscribers && STATE.voiceUnsubscribers[pid]) {
+      STATE.voiceUnsubscribers[pid].forEach(unsub => {
+        try { unsub(); } catch(e){}
+      });
+      delete STATE.voiceUnsubscribers[pid];
+    }
+
     const pc = STATE.peerConnections[pid];
     if (pc) {
       try { pc.close(); } catch(e){}
@@ -4419,6 +4449,7 @@ const STATE = {
     });
     STATE.peerConnections = {};
     STATE.remoteAudios = {};
+    STATE.voiceUnsubscribers = {};
     if (STATE.localVoiceStream) {
       try {
         STATE.localVoiceStream.getTracks().forEach(track => track.stop());
@@ -4426,6 +4457,7 @@ const STATE = {
       STATE.localVoiceStream = null;
     }
     STATE.isMicActive = false;
+    STATE.myLastSpeakingState = false;
   }
 
   function renderFavoritesPage() {
