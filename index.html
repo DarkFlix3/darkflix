@@ -514,7 +514,9 @@
         
         <!-- Participantes list -->
         <div class="sidebar-participants-wrapper">
-          <span class="section-title">Participantes</span>
+          <span class="section-title" id="toggle-participants-btn" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+            Participantes <span id="participants-toggle-chevron" style="font-size: 0.65rem; transition: transform 0.2s ease;">▼</span>
+          </span>
           <div id="party-participants-list" class="party-participants-list">
             <!-- Populated via JS -->
           </div>

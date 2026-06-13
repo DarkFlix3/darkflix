@@ -1092,10 +1092,14 @@ ul, ol {
 }
 
 .cinema-title {
-  margin-top: 20px;
+  margin-top: 8px; /* More compact on PC */
   font-size: 1.1rem;
   color: var(--text-secondary);
   font-weight: 500;
+}
+
+#cinema-iframe-tip {
+  display: none !important; /* Hide mobile tip on PC/desktop by default */
 }
 
 /* Scroll wrapper – desktop: no overflow; mobile: horizontal scroll */
@@ -4195,6 +4199,10 @@ ul, ol {
     top: 16px;
     right: 16px;
   }
+
+  #cinema-iframe-tip {
+    display: block !important; /* Show on mobile/portrait devices */
+  }
 }
 
 /* ---------- Responsive Mobile Layout for Cinema Player in Landscape ---------- */
@@ -4352,8 +4360,8 @@ ul, ol {
 .cinema-layout-container {
   display: flex;
   width: 100%;
-  height: calc(100vh - 120px); /* Adjusts for close player button and margins */
-  margin-top: 50px;
+  height: calc(100vh - 80px); /* Taller layout to fit everything and avoid squishing */
+  margin-top: 10px; /* Reduced top margin to utilize more vertical space */
   position: relative;
   overflow: hidden;
 }
@@ -4377,7 +4385,7 @@ ul, ol {
 }
 
 .watch-party-sidebar {
-  width: 350px;
+  width: 420px; /* Wider sidebar on PC to make chat look larger and prevent text wrapping */
   height: 100%;
   background: rgba(18, 18, 26, 0.95);
   border-left: 1px solid rgba(255, 255, 255, 0.08);
@@ -4418,7 +4426,7 @@ ul, ol {
 
 /* Sidebar Header */
 .sidebar-header {
-  padding: 16px 20px;
+  padding: 12px 20px; /* More compact on PC */
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   justify-content: space-between;
@@ -4595,7 +4603,7 @@ ul, ol {
 /* Chat Logs Area */
 .sidebar-chat-wrapper {
   flex: 1;
-  padding: 16px 20px;
+  padding: 12px 20px; /* More compact on PC */
   display: flex;
   flex-direction: column;
   min-height: 0; /* Important for scroll container inside flexbox */
@@ -4608,6 +4616,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  min-height: 180px; /* Prevent shrinking to 0px on small screen heights */
 }
 
 /* Chat Message Bubbles */
@@ -4682,7 +4691,7 @@ ul, ol {
 
 /* Chat Input Form */
 .party-chat-form {
-  padding: 12px 20px;
+  padding: 10px 20px; /* More compact on PC */
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   gap: 10px;
@@ -4730,7 +4739,7 @@ ul, ol {
 
 /* Footer voice / exit actions */
 .sidebar-footer-controls {
-  padding: 14px 20px;
+  padding: 10px 20px; /* More compact on PC */
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   gap: 12px;

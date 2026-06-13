@@ -217,6 +217,9 @@ const STATE = {
   mutedParticipants: [],
   unreadChatCount: 0,
   activeCanalId: null,
+  attachedFileBase64: null,
+  attachedFileName: null,
+  attachedFileType: null,
   
   // WebRTC Audio state
   localVoiceStream: null,
@@ -290,162 +293,178 @@ const STATE = {
   const $ = (sel) => document.querySelector(sel);
   const $$ = (sel) => document.querySelectorAll(sel);
 
-  const DOM = {
-    header: $('#header'),
-    navMenu: $('#nav-menu'),
-    menuToggle: $('#menu-toggle'),
-    searchInput: $('#search-input'),
-    logoHome: $('#logo-home'),
-    
-    // Hero
-    heroBackdrop: $('#hero-backdrop'),
-    heroBadge: $('#hero-badge'),
-    heroTitle: $('#hero-title'),
-    heroRating: $('#hero-rating'),
-    heroYear: $('#hero-year'),
-    heroDuration: $('#hero-duration'),
-    heroGenres: $('#hero-genres'),
-    heroMeta: $('#hero-meta'),
-    heroDescription: $('#hero-description'),
-    heroWatchBtn: $('#hero-watch-btn'),
-    heroInfoBtn: $('#hero-info-btn'),
-    heroTrailer: $('#hero-trailer'),
-    heroTrailerIframe: $('#hero-trailer-iframe'),
-    heroTrailerControls: $('#hero-trailer-controls'),
-    heroTrailerPlayPause: $('#hero-trailer-play-pause'),
-    heroTrailerMuteUnmute: $('#hero-trailer-mute-unmute'),
-    
-    // Pages wrapper
-    homeContent: $('#home-content'),
-    pages: {
-      auth: $('#page-auth'),
-      profiles: $('#page-profiles'),
-      home: $('#page-home'),
-      movies: $('#page-movies'),
-      series: $('#page-series'),
-      animes: $('#page-animes'),
-      canais: $('#page-canais'),
-      search: $('#page-search'),
-      favorites: $('#page-favorites'),
-      admin: $('#page-admin'),
-      devices: $('#page-devices'),
-      rooms: $('#page-rooms')
-    },
-    
-    // Grid lists
-    moviesGridAll: $('#movies-grid-all'),
-    seriesGridAll: $('#series-grid-all'),
-    moviesFilterBar: $('#movies-filter-bar'),
-    seriesFilterBar: $('#series-filter-bar'),
-    animesGridAll: $('#animes-grid-all'),
-    animesFilterBar: $('#animes-filter-bar'),
-    
-    // Search page
-    searchResultsTitle: $('#search-results-title'),
-    searchResultsGrid: $('#search-results-grid'),
-    noResults: $('#no-results'),
-    
-    // Detail Modal
-    detailModal: $('#detail-modal'),
-    modalHero: $('#modal-hero'),
-    modalTitle: $('#modal-title'),
-    modalRating: $('#modal-rating'),
-    modalYear: $('#modal-year'),
-    modalDuration: $('#modal-duration'),
-    modalTypeBadge: $('#modal-type-badge'),
-    modalGenres: $('#modal-genres'),
-    modalDescription: $('#modal-description'),
-    modalWatchBtn: $('#modal-watch-btn'),
-    modalFavoriteBtn: $('#modal-favorite-btn'),
-    modalFavoriteText: $('#modal-favorite-text'),
-    modalCloseBtn: $('#modal-close-btn'),
-    modalHeroTrailer: $('#modal-hero-trailer'),
-    modalTrailerIframe: $('#modal-trailer-iframe'),
-    modalTrailerControls: $('#modal-trailer-controls'),
-    modalTrailerPlayPause: $('#modal-trailer-play-pause'),
-    modalTrailerMuteUnmute: $('#modal-trailer-mute-unmute'),
-    modalSeriesSelector: $('#modal-series-selector'),
-    modalSeasonSelect: $('#modal-season-select'),
-    modalEpisodesList: $('#modal-episodes-list'),
-    
-    // Cinema mode
-    cinemaMode: $('#cinema-mode'),
-    cinemaBlockerTop: $('#cinema-blocker-top'),
-    cinemaIframe: $('#cinema-iframe'),
-    cinemaVideo: $('#cinema-video'),
-    cinemaTitle: $('#cinema-title'),
-    cinemaCloseBtn: $('#cinema-close-btn'),
-    cinemaExternalBtn: $('#cinema-external-btn'),
-    cinemaRewindBtn: $('#cinema-rewind-btn'),
-    cinemaForwardBtn: $('#cinema-forward-btn'),
-    cinemaFullscreenBtn: $('#cinema-fullscreen-btn'),
-    
-    // Watch Party sidebar elements
-    cinemaGuestBlocker: $('#cinema-guest-blocker'),
-    cinemaPauseScreen: $('#cinema-pause-screen'),
-    watchPartySidebar: $('#watch-party-sidebar'),
-    roomCodeDisplay: $('#room-code-display'),
-    btnCopyRoomLink: $('#btn-copy-room-link'),
-    btnCloseSidebarChat: $('#btn-close-sidebar-chat'),
-    partyParticipantsList: $('#party-participants-list'),
-    partyChatLogs: $('#party-chat-logs'),
-    partyChatForm: $('#party-chat-form'),
-    partyChatInput: $('#party-chat-input'),
-    btnTogglePartyMic: $('#btn-toggle-party-mic'),
-    btnExitPartyRoom: $('#btn-exit-party-room'),
-    watchPartyFloatingControls: $('#watch-party-floating-controls'),
-    btnExpandSidebarChat: $('#btn-expand-sidebar-chat'),
-    partyUnreadBadge: $('#party-unread-badge'),
-    
-    // Mobile categories accordion
-    mobileMoviesTrigger: $('#mobile-movies-trigger'),
-    mobileMoviesList: $('#mobile-movies-list'),
-    mobileSeriesTrigger: $('#mobile-series-trigger'),
-    mobileSeriesList: $('#mobile-series-list'),
-    mobileAnimesTrigger: $('#mobile-animes-trigger'),
-    mobileAnimesList: $('#mobile-animes-list'),
-
-    // Desktop categories dropdown
-    categoriesWrapper: $('#nav-categories-wrapper'),
-    categoriesBtn: $('#nav-categories-btn'),
-    categoriesDropdown: $('#categories-dropdown'),
-    
-    // Auth and profile UI
-    authForm: $('#auth-form'),
-    authEmail: $('#auth-email'),
-    authPassword: $('#auth-password'),
-    authConfirmGroup: $('#confirm-password-group'),
-    authConfirmPassword: $('#auth-confirm-password'),
-    btnAuthSubmit: $('#btn-auth-submit'),
-    authTitle: $('#auth-title'),
-    authSwitchText: $('#auth-switch-text'),
-    btnAuthSwitch: $('#btn-auth-switch'),
-    headerProfileWrapper: $('#header-profile-wrapper'),
-    headerAvatar: $('#header-avatar'),
-    profileMenuBtn: $('#profile-menu-btn'),
-    profileDropdown: $('#profile-dropdown'),
-    profileDropdownList: $('#profile-dropdown-list'),
-    btnDropdownManage: $('#btn-dropdown-manage'),
-    btnDropdownLogout: $('#btn-dropdown-logout'),
-    profilesGrid: $('#profiles-grid'),
-    btnManageProfiles: $('#btn-manage-profiles'),
-    pinModal: $('#pin-modal'),
-    pinCloseBtn: $('#pin-close-btn'),
-    profileEditModal: $('#profile-edit-modal'),
-    avatarPickerModal: $('#avatar-picker-modal'),
-    editProfileAvatarImg: $('#edit-profile-avatar-img'),
-    btnChangeAvatar: $('#btn-change-avatar'),
-    editProfileName: $('#edit-profile-name'),
-    editProfilePin: $('#edit-profile-pin'),
-    btnProfileSave: $('#btn-profile-save'),
-    btnProfileCancel: $('#btn-profile-cancel'),
-    btnProfileDelete: $('#btn-profile-delete'),
-    avatarPickerCloseBtn: $('#avatar-picker-close-btn'),
-    avatarPickerSectionsContainer: $('#avatar-picker-sections-container'),
-    
-    toastContainer: $('#toast-container'),
-    footer: $('#main-footer')
-  };
+  let DOM = {};
+  function initDOM() {
+    DOM = {
+      header: $('#header'),
+      navMenu: $('#nav-menu'),
+      menuToggle: $('#menu-toggle'),
+      searchInput: $('#search-input'),
+      logoHome: $('#logo-home'),
+      
+      // Hero
+      heroBackdrop: $('#hero-backdrop'),
+      heroBadge: $('#hero-badge'),
+      heroTitle: $('#hero-title'),
+      heroRating: $('#hero-rating'),
+      heroYear: $('#hero-year'),
+      heroDuration: $('#hero-duration'),
+      heroGenres: $('#hero-genres'),
+      heroMeta: $('#hero-meta'),
+      heroDescription: $('#hero-description'),
+      heroWatchBtn: $('#hero-watch-btn'),
+      heroInfoBtn: $('#hero-info-btn'),
+      heroTrailer: $('#hero-trailer'),
+      heroTrailerIframe: $('#hero-trailer-iframe'),
+      heroTrailerControls: $('#hero-trailer-controls'),
+      heroTrailerPlayPause: $('#hero-trailer-play-pause'),
+      heroTrailerMuteUnmute: $('#hero-trailer-mute-unmute'),
+      
+      // Pages wrapper
+      homeContent: $('#home-content'),
+      pages: {
+        auth: $('#page-auth'),
+        profiles: $('#page-profiles'),
+        home: $('#page-home'),
+        movies: $('#page-movies'),
+        series: $('#page-series'),
+        animes: $('#page-animes'),
+        canais: $('#page-canais'),
+        search: $('#page-search'),
+        favorites: $('#page-favorites'),
+        admin: $('#page-admin'),
+        devices: $('#page-devices'),
+        rooms: $('#page-rooms')
+      },
+      
+      // Grid lists
+      moviesGridAll: $('#movies-grid-all'),
+      seriesGridAll: $('#series-grid-all'),
+      moviesFilterBar: $('#movies-filter-bar'),
+      seriesFilterBar: $('#series-filter-bar'),
+      animesGridAll: $('#animes-grid-all'),
+      animesFilterBar: $('#animes-filter-bar'),
+      
+      // Search page
+      searchResultsTitle: $('#search-results-title'),
+      searchResultsGrid: $('#search-results-grid'),
+      noResults: $('#no-results'),
+      
+      // Detail Modal
+      detailModal: $('#detail-modal'),
+      modalHero: $('#modal-hero'),
+      modalTitle: $('#modal-title'),
+      modalRating: $('#modal-rating'),
+      modalYear: $('#modal-year'),
+      modalDuration: $('#modal-duration'),
+      modalTypeBadge: $('#modal-type-badge'),
+      modalGenres: $('#modal-genres'),
+      modalDescription: $('#modal-description'),
+      modalWatchBtn: $('#modal-watch-btn'),
+      modalFavoriteBtn: $('#modal-favorite-btn'),
+      modalFavoriteText: $('#modal-favorite-text'),
+      modalCloseBtn: $('#modal-close-btn'),
+      modalHeroTrailer: $('#modal-hero-trailer'),
+      modalTrailerIframe: $('#modal-trailer-iframe'),
+      modalTrailerControls: $('#modal-trailer-controls'),
+      modalTrailerPlayPause: $('#modal-trailer-play-pause'),
+      modalTrailerMuteUnmute: $('#modal-trailer-mute-unmute'),
+      modalSeriesSelector: $('#modal-series-selector'),
+      modalSeasonSelect: $('#modal-season-select'),
+      modalEpisodesList: $('#modal-episodes-list'),
+      
+      // Cinema mode
+      cinemaMode: $('#cinema-mode'),
+      cinemaBlockerTop: $('#cinema-blocker-top'),
+      cinemaIframe: $('#cinema-iframe'),
+      cinemaVideo: $('#cinema-video'),
+      cinemaTitle: $('#cinema-title'),
+      cinemaCloseBtn: $('#cinema-close-btn'),
+      cinemaExternalBtn: $('#cinema-external-btn'),
+      cinemaRewindBtn: $('#cinema-rewind-btn'),
+      cinemaForwardBtn: $('#cinema-forward-btn'),
+      cinemaFullscreenBtn: $('#cinema-fullscreen-btn'),
+      
+      // Watch Party sidebar elements
+      cinemaGuestBlocker: $('#cinema-guest-blocker'),
+      cinemaPauseScreen: $('#cinema-pause-screen'),
+      watchPartySidebar: $('#watch-party-sidebar'),
+      roomCodeDisplay: $('#room-code-display'),
+      btnCopyRoomLink: $('#btn-copy-room-link'),
+      btnCloseSidebarChat: $('#btn-close-sidebar-chat'),
+      partyParticipantsList: $('#party-participants-list'),
+      partyChatLogs: $('#party-chat-logs'),
+      partyChatForm: $('#party-chat-form'),
+      partyChatInput: $('#party-chat-input'),
+      btnTogglePartyMic: $('#btn-toggle-party-mic'),
+      btnExitPartyRoom: $('#btn-exit-party-room'),
+      watchPartyFloatingControls: $('#watch-party-floating-controls'),
+      btnExpandSidebarChat: $('#btn-expand-sidebar-chat'),
+      partyUnreadBadge: $('#party-unread-badge'),
+      
+      // Watch Party Chat Enhancements
+      btnAttachFile: $('#btn-attach-file'),
+      partyFileInput: $('#party-file-input'),
+      btnEmojiPicker: $('#btn-emoji-picker'),
+      emojiPickerContainer: $('#emoji-picker-container'),
+      partyFilePreview: $('#party-file-preview'),
+      partyFilePreviewImg: $('#party-file-preview-img'),
+      partyFilePreviewName: $('#party-file-preview-name'),
+      btnRemoveFilePreview: $('#btn-remove-file-preview'),
+      chatImageModal: $('#chat-image-modal'),
+      chatImageLightboxImg: $('#chat-image-lightbox-img'),
+      chatImageModalCloseBtn: $('#chat-image-modal-close-btn'),
+      
+      // Mobile categories accordion
+      mobileMoviesTrigger: $('#mobile-movies-trigger'),
+      mobileMoviesList: $('#mobile-movies-list'),
+      mobileSeriesTrigger: $('#mobile-series-trigger'),
+      mobileSeriesList: $('#mobile-series-list'),
+      mobileAnimesTrigger: $('#mobile-animes-trigger'),
+      mobileAnimesList: $('#mobile-animes-list'),
+  
+      // Desktop categories dropdown
+      categoriesWrapper: $('#nav-categories-wrapper'),
+      categoriesBtn: $('#nav-categories-btn'),
+      categoriesDropdown: $('#categories-dropdown'),
+      
+      // Auth and profile UI
+      authForm: $('#auth-form'),
+      authEmail: $('#auth-email'),
+      authPassword: $('#auth-password'),
+      authConfirmGroup: $('#confirm-password-group'),
+      authConfirmPassword: $('#auth-confirm-password'),
+      btnAuthSubmit: $('#btn-auth-submit'),
+      authTitle: $('#auth-title'),
+      authSwitchText: $('#auth-switch-text'),
+      btnAuthSwitch: $('#btn-auth-switch'),
+      headerProfileWrapper: $('#header-profile-wrapper'),
+      headerAvatar: $('#header-avatar'),
+      profileMenuBtn: $('#profile-menu-btn'),
+      profileDropdown: $('#profile-dropdown'),
+      profileDropdownList: $('#profile-dropdown-list'),
+      btnDropdownManage: $('#btn-dropdown-manage'),
+      btnDropdownLogout: $('#btn-dropdown-logout'),
+      profilesGrid: $('#profiles-grid'),
+      btnManageProfiles: $('#btn-manage-profiles'),
+      pinModal: $('#pin-modal'),
+      pinCloseBtn: $('#pin-close-btn'),
+      profileEditModal: $('#profile-edit-modal'),
+      avatarPickerModal: $('#avatar-picker-modal'),
+      editProfileAvatarImg: $('#edit-profile-avatar-img'),
+      btnChangeAvatar: $('#btn-change-avatar'),
+      editProfileName: $('#edit-profile-name'),
+      editProfilePin: $('#edit-profile-pin'),
+      btnProfileSave: $('#btn-profile-save'),
+      btnProfileCancel: $('#btn-profile-cancel'),
+      btnProfileDelete: $('#btn-profile-delete'),
+      avatarPickerCloseBtn: $('#avatar-picker-close-btn'),
+      avatarPickerSectionsContainer: $('#avatar-picker-sections-container'),
+      
+      toastContainer: $('#toast-container'),
+      footer: $('#main-footer')
+    };
+  }
 
   // ---------- TMDB API Layer ----------
   async function tmdbFetch(endpoint, params = {}) {
@@ -3115,6 +3134,21 @@ const STATE = {
   // ============================================================
 
   function initWatchPartyEvents() {
+    // Toggle collapsible participants list
+    const toggleParticipantsBtn = document.getElementById('toggle-participants-btn');
+    const participantsList = document.getElementById('party-participants-list');
+    const participantsChevron = document.getElementById('participants-toggle-chevron');
+    if (toggleParticipantsBtn && participantsList) {
+      toggleParticipantsBtn.onclick = (e) => {
+        e.preventDefault();
+        const isCollapsed = participantsList.style.display === 'none';
+        participantsList.style.display = isCollapsed ? 'flex' : 'none';
+        if (participantsChevron) {
+          participantsChevron.textContent = isCollapsed ? '▼' : '►';
+        }
+      };
+    }
+
     // 2b. Iniciar Watch Party a partir da Página de Canais
     const canalWatchPartyBtn = document.getElementById('canal-watch-party-btn');
     if (canalWatchPartyBtn) {
@@ -3178,6 +3212,156 @@ const STATE = {
       };
     }
 
+    // Setup Emoji Picker
+    const POPULAR_EMOJIS = ['😊', '😂', '😍', '👍', '🎉', '🔥', '😭', '😱', '🤔', '👏', '❤️', '🙌', '✨', '🤩', '😮', '🤦', '💀', '💩', '🍿', '🎬', '📺', '👀', '🤣', '💖', '⭐', '❌', '✔️', '😜', '😎', '🙏'];
+    if (DOM.emojiPickerContainer) {
+      DOM.emojiPickerContainer.innerHTML = POPULAR_EMOJIS.map(emoji => `
+        <span class="emoji-picker-item" data-emoji="${emoji}">${emoji}</span>
+      `).join('');
+
+      DOM.emojiPickerContainer.querySelectorAll('.emoji-picker-item').forEach(item => {
+        item.onclick = (e) => {
+          e.stopPropagation();
+          const emoji = item.dataset.emoji;
+          const input = DOM.partyChatInput;
+          if (input) {
+            const startPos = input.selectionStart || 0;
+            const endPos = input.selectionEnd || 0;
+            const text = input.value;
+            input.value = text.substring(0, startPos) + emoji + text.substring(endPos);
+            input.focus();
+            const newCursorPos = startPos + emoji.length;
+            input.setSelectionRange(newCursorPos, newCursorPos);
+            
+            // Trigger input event to update typing indicator
+            const event = new Event('input', { bubbles: true });
+            input.dispatchEvent(event);
+          }
+          DOM.emojiPickerContainer.style.display = 'none';
+        };
+      });
+    }
+
+    if (DOM.btnEmojiPicker && DOM.emojiPickerContainer) {
+      DOM.btnEmojiPicker.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isVisible = DOM.emojiPickerContainer.style.display === 'grid';
+        DOM.emojiPickerContainer.style.display = isVisible ? 'none' : 'grid';
+      };
+      
+      // Close emoji picker when clicking outside
+      document.addEventListener('click', (e) => {
+        if (DOM.emojiPickerContainer && !DOM.btnEmojiPicker.contains(e.target) && !DOM.emojiPickerContainer.contains(e.target)) {
+          DOM.emojiPickerContainer.style.display = 'none';
+        }
+      });
+    }
+
+    // Setup File Upload
+    if (DOM.btnAttachFile && DOM.partyFileInput) {
+      DOM.btnAttachFile.onclick = (e) => {
+        e.preventDefault();
+        DOM.partyFileInput.click();
+      };
+    }
+
+    if (DOM.partyFileInput) {
+      DOM.partyFileInput.onchange = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        STATE.attachedFileName = file.name;
+        STATE.attachedFileType = file.type;
+
+        showToast("Processando arquivo...", "info");
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const base64Url = event.target.result;
+          
+          if (file.type.startsWith('image/')) {
+            // Compress image using Canvas
+            const img = new Image();
+            img.src = base64Url;
+            img.onload = () => {
+              const canvas = document.createElement('canvas');
+              let width = img.width;
+              let height = img.height;
+              const maxDim = 800; // Max width/height limit
+
+              if (width > maxDim || height > maxDim) {
+                if (width > height) {
+                  height = Math.round((height * maxDim) / width);
+                  width = maxDim;
+                } else {
+                  width = Math.round((width * maxDim) / height);
+                  height = maxDim;
+                }
+              }
+
+              canvas.width = width;
+              canvas.height = height;
+              const ctx = canvas.getContext('2d');
+              ctx.drawImage(img, 0, 0, width, height);
+              
+              // Compress to JPEG with 0.7 quality
+              const compressedBase64 = canvas.toDataURL('image/jpeg', 0.7);
+              
+              STATE.attachedFileBase64 = compressedBase64;
+              displayFilePreview(compressedBase64, file.name);
+            };
+          } else {
+            // Check file size for non-image files
+            if (file.size > 500 * 1024) {
+              showToast("Arquivo muito grande! Máximo de 500KB.", "error");
+              clearFileAttachment();
+              return;
+            }
+            STATE.attachedFileBase64 = base64Url;
+            // Use generic document icon or simple visual indicator
+            displayFilePreview('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23a0a0b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>', file.name);
+          }
+        };
+        reader.readAsDataURL(file);
+      };
+    }
+
+    function displayFilePreview(src, filename) {
+      if (DOM.partyFilePreview && DOM.partyFilePreviewImg && DOM.partyFilePreviewName) {
+        DOM.partyFilePreviewImg.src = src;
+        DOM.partyFilePreviewName.textContent = filename;
+        DOM.partyFilePreview.style.display = 'flex';
+        
+        // Remove 'required' from text input when file is selected
+        if (DOM.partyChatInput) {
+          DOM.partyChatInput.removeAttribute('required');
+        }
+      }
+    }
+
+    if (DOM.btnRemoveFilePreview) {
+      DOM.btnRemoveFilePreview.onclick = (e) => {
+        e.preventDefault();
+        clearFileAttachment();
+      };
+    }
+
+    function clearFileAttachment() {
+      STATE.attachedFileBase64 = null;
+      STATE.attachedFileName = null;
+      STATE.attachedFileType = null;
+      if (DOM.partyFileInput) DOM.partyFileInput.value = '';
+      if (DOM.partyFilePreview) DOM.partyFilePreview.style.display = 'none';
+      if (DOM.partyFilePreviewImg) DOM.partyFilePreviewImg.src = '';
+      if (DOM.partyFilePreviewName) DOM.partyFilePreviewName.textContent = '';
+      
+      // Restore 'required' for text input
+      if (DOM.partyChatInput) {
+        DOM.partyChatInput.setAttribute('required', 'required');
+      }
+    }
+
     // 6. Enviar mensagem de chat
     let typingTimeout = null;
     if (DOM.partyChatForm) {
@@ -3186,7 +3370,8 @@ const STATE = {
         if (!STATE.roomActive || !STATE.roomCode || !STATE.currentProfile) return;
         
         const text = DOM.partyChatInput.value.trim();
-        if (!text) return;
+        // If no text AND no attached file, do nothing
+        if (!text && !STATE.attachedFileBase64) return;
         
         DOM.partyChatInput.value = '';
         
@@ -3199,9 +3384,18 @@ const STATE = {
           senderId: STATE.currentProfile.id,
           senderName: STATE.currentProfile.name,
           senderAvatar: STATE.currentProfile.avatar || '',
-          text: text,
+          text: text || '',
           timestamp: Date.now()
         };
+
+        if (STATE.attachedFileBase64) {
+          msgData.fileData = STATE.attachedFileBase64;
+          msgData.fileName = STATE.attachedFileName;
+          msgData.fileType = STATE.attachedFileType;
+        }
+        
+        // Clear preview right away
+        clearFileAttachment();
         
         set(ref(db, `watch_parties/${STATE.roomCode}/chat/${messageId}`), msgData)
           .catch(err => {
@@ -3839,6 +4033,22 @@ const STATE = {
           const msgDate = new Date(msg.timestamp);
           const msgTime = !isNaN(msgDate.getTime()) ? `${String(msgDate.getHours()).padStart(2, '0')}:${String(msgDate.getMinutes()).padStart(2, '0')}` : '';
 
+          let bubbleContent = '';
+          if (msg.text) {
+            bubbleContent += `<div class="message-text">${msg.text}</div>`;
+          }
+          if (msg.fileData) {
+            if (msg.fileType && msg.fileType.startsWith('image/')) {
+              bubbleContent += `<img src="${msg.fileData}" class="chat-message-image" alt="Imagem compartilhada">`;
+            } else {
+              bubbleContent += `
+                <a href="${msg.fileData}" download="${msg.fileName || 'arquivo'}" style="display:flex; align-items:center; gap:6px; color:var(--accent); text-decoration:underline; font-size:0.8rem; margin-top:4px;">
+                  📁 ${msg.fileName || 'Baixar Arquivo'}
+                </a>
+              `;
+            }
+          }
+
           return `
             <div class="chat-message-item${isSelf ? ' self' : ''}">
               <div class="message-sender-meta">
@@ -3846,10 +4056,21 @@ const STATE = {
                 <span class="message-sender-name">${msg.senderName}</span>
                 <span class="message-time" style="opacity:0.6; margin-left: 4px;">${msgTime}</span>
               </div>
-              <div class="message-bubble">${msg.text}</div>
+              <div class="message-bubble">${bubbleContent}</div>
             </div>
           `;
         }).join('');
+
+        // Bind click-to-expand image lightbox
+        chatLogs.querySelectorAll('.chat-message-image').forEach(img => {
+          img.onclick = () => {
+            if (DOM.chatImageModal && DOM.chatImageLightboxImg) {
+              DOM.chatImageLightboxImg.src = img.src;
+              DOM.chatImageModal.classList.add('active');
+              document.body.style.overflow = 'hidden';
+            }
+          };
+        });
 
         if (wasAtBottom || sortedMessages.length > lastMessageCount) {
           chatLogs.scrollTop = chatLogs.scrollHeight;
@@ -5014,6 +5235,7 @@ const STATE = {
 
   // ---------- Setup Core Event Bindings ----------
   function initApp() {
+    initDOM();
     // Listen for orientation change to handle landscape fullscreen visually and programmatically
     const handleOrientationChange = () => {
       if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
@@ -5288,6 +5510,22 @@ const STATE = {
       if (e.target === DOM.avatarPickerModal) closeAvatarPicker();
     };
 
+    // Lightbox Modal click and close bindings
+    if (DOM.chatImageModalCloseBtn && DOM.chatImageModal) {
+      DOM.chatImageModalCloseBtn.onclick = () => {
+        DOM.chatImageModal.classList.remove('active');
+        document.body.style.overflow = '';
+        if (DOM.chatImageLightboxImg) DOM.chatImageLightboxImg.src = '';
+      };
+      DOM.chatImageModal.onclick = (e) => {
+        if (e.target === DOM.chatImageModal) {
+          DOM.chatImageModal.classList.remove('active');
+          document.body.style.overflow = '';
+          if (DOM.chatImageLightboxImg) DOM.chatImageLightboxImg.src = '';
+        }
+      };
+    }
+
     // Keyboard ESC to close active overlays
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
@@ -5296,6 +5534,11 @@ const STATE = {
         closePinModal();
         closeProfileEditModal();
         closeAvatarPicker();
+        if (DOM.chatImageModal && DOM.chatImageModal.classList.contains('active')) {
+          DOM.chatImageModal.classList.remove('active');
+          document.body.style.overflow = '';
+          if (DOM.chatImageLightboxImg) DOM.chatImageLightboxImg.src = '';
+        }
       }
     });
 
