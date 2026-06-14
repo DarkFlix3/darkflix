@@ -2283,7 +2283,7 @@ const STATE = {
       nome: "Cazé TV ᴴᴰ",
       categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/pt/2/22/Logotipo_da_Caz%C3%A9TV.png",
-      url: "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/720p-vtt/index.m3u8?ROGERIOTORRES"
+      url: "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8?ROGERIOTORRES"
     },
     {
       id: "desimpedidos-hd",
@@ -2442,11 +2442,20 @@ const STATE = {
           parentId: "#canal-player",
           autoPlay: true,
           width: '100%',
-          height: '100%'
+          height: '100%',
+          hlsjsConfig: {
+            enableWebVTT: false
+          }
         });
       } else {
         // Se já existe, configura apenas a nova fonte
-        canalPlayer.configure({ source: canal.url, autoPlay: true });
+        canalPlayer.configure({ 
+          source: canal.url, 
+          autoPlay: true,
+          hlsjsConfig: {
+            enableWebVTT: false
+          }
+        });
         canalPlayer.play();
       }
 
@@ -3043,7 +3052,10 @@ const STATE = {
           parentId: '#cinema-clappr-player',
           autoPlay: true,
           width: '100%',
-          height: '100%'
+          height: '100%',
+          hlsjsConfig: {
+            enableWebVTT: false
+          }
         });
       }
     } else {
