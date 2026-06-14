@@ -5361,7 +5361,7 @@ ul, ol {
 
   .party-chat-form input[type="text"] {
     padding: 10px 12px !important;
-    font-size: 0.8rem !important;
+    font-size: 16px !important; /* iOS zoom prevention (must be at least 16px) */
     min-width: 0 !important; /* Permite que o input encolha no flexbox e não empurre o botão de enviar para fora da tela */
     flex: 1 !important;
   }
