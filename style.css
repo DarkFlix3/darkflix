@@ -4300,10 +4300,16 @@ ul, ol {
 .top10-row {
   display: flex;
   gap: 36px;
-  padding-left: 20px;
+  padding-left: 55px; /* Abre espaço à esquerda para o número 1 não sumir */
+  padding-right: 20px;
   padding-top: 20px;
+  padding-bottom: 25px; /* Abre espaço abaixo para os números não serem cortados */
   margin-top: -20px;
+  margin-bottom: -25px; /* Compensa o padding inferior para manter a distância da fileira abaixo */
   overflow-x: auto;
+  overflow-y: hidden; /* Trava o scroll vertical no celular */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .top10-wrapper {
