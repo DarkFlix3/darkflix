@@ -2283,7 +2283,7 @@ const STATE = {
       nome: "Cazé TV ᴴᴰ",
       categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/pt/2/22/Logotipo_da_Caz%C3%A9TV.png",
-      url: "https://cc-panvcqnzkgrdl.akamaized.net/Caze/Caze_TV_BR/Caze_TV.m3u8?ROGERIOTORRES"
+      url: "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/720p-vtt/index.m3u8?ROGERIOTORRES"
     },
     {
       id: "desimpedidos-hd",
