@@ -170,6 +170,7 @@ const STATE = {
   allProfiles: {},
   manageProfilesMode: false,
   selectedAvatarUrl: PRESET_AVATARS[0].url,
+  selectedPlayerServer: localStorage.getItem('darkflix_selected_server') || 'warezcdn',
   
   // Auth state
   authMode: 'login',
@@ -2855,6 +2856,71 @@ const STATE = {
     }, 3500); // Esconde após 3.5 segundos de inatividade
   }
 
+  // ---------- Build Embed URL per Server ----------
+  function buildEmbedUrl(server, tmdbId, type, season, episode, elapsed) {
+    switch (server) {
+      case 'superflix': {
+        if (type === 'movie') {
+          return `https://superflixapi.dev/filme/${tmdbId}`;
+        } else {
+          return `https://superflixapi.dev/serie/${tmdbId}/${season}/${episode}`;
+        }
+      }
+      case 'myembed': {
+        const startParam = elapsed ? `&start=${elapsed}&t=${elapsed}&time=${elapsed}` : '';
+        if (type === 'movie') {
+          return `https://myembed.biz/filme/${tmdbId}?autoplay=1${startParam}`;
+        } else {
+          return `https://myembed.biz/serie/${tmdbId}/${season}/${episode}?autoplay=1${startParam}`;
+        }
+      }
+      case 'warezcdn':
+      default: {
+        const startParam = elapsed ? `?start=${elapsed}` : '';
+        if (type === 'movie') {
+          return `https://embed.warezcdn.link/filme/${tmdbId}${startParam}`;
+        } else {
+          return `https://embed.warezcdn.link/serie/${tmdbId}/${season}/${episode}${startParam}`;
+        }
+      }
+    }
+  }
+
+  // ---------- Change Player Server (Live Switch) ----------
+  function changePlayerServer(newServer) {
+    if (!STATE.currentWatchItem || STATE.roomActive) return;
+    if (newServer === STATE.selectedPlayerServer) return;
+
+    STATE.selectedPlayerServer = newServer;
+    localStorage.setItem('darkflix_selected_server', newServer);
+
+    // Calculate current elapsed time to pass to the new player
+    const elapsedSeconds = Math.round((Date.now() - STATE.watchStart) / 1000);
+    const totalElapsed = STATE.currentWatchItem.initialElapsedTime + elapsedSeconds;
+
+    const embedUrl = buildEmbedUrl(
+      newServer,
+      STATE.currentWatchItem.id,
+      STATE.currentWatchItem.type,
+      STATE.currentWatchItem.season,
+      STATE.currentWatchItem.episode,
+      totalElapsed
+    );
+
+    DOM.cinemaIframe.src = embedUrl;
+
+    // Update active button styling
+    const serverSelector = document.querySelector('.cinema-server-selector');
+    if (serverSelector) {
+      serverSelector.querySelectorAll('.btn-server').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.server === newServer);
+      });
+    }
+
+    const serverNames = { warezcdn: 'WarezCDN', superflix: 'SuperFlix', myembed: 'MyEmbed' };
+    showToast(`Trocando para ${serverNames[newServer]}...`, 'info');
+  }
+
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
     if (STATE.watchInterval) {
@@ -2993,13 +3059,8 @@ const STATE = {
           embedUrl = `https://embed.warezcdn.link/serie/${tmdbId}/${season}/${episode}${startParam}`;
         }
       } else {
-        // Individual: usar myembed.biz com opções de player
-        const startParam = initialElapsedTime ? `&start=${initialElapsedTime}&t=${initialElapsedTime}&time=${initialElapsedTime}` : '';
-        if (type === 'movie') {
-          embedUrl = `https://myembed.biz/filme/${tmdbId}?autoplay=1${startParam}`;
-        } else {
-          embedUrl = `https://myembed.biz/serie/${tmdbId}/${season}/${episode}?autoplay=1${startParam}`;
-        }
+        // Individual: usar servidor selecionado pelo usuário
+        embedUrl = buildEmbedUrl(STATE.selectedPlayerServer, tmdbId, type, season, episode, initialElapsedTime);
       }
 
       DOM.cinemaIframe.src = embedUrl;
@@ -3028,6 +3089,20 @@ const STATE = {
     DOM.cinemaMode.classList.add('active');
     document.body.style.overflow = 'hidden';
 
+    // Show/hide server selector (hidden for canais and watch parties)
+    const serverSelector = document.querySelector('.cinema-server-selector');
+    if (serverSelector) {
+      if (type === 'canal' || STATE.roomActive) {
+        serverSelector.style.display = 'none';
+      } else {
+        serverSelector.style.display = 'flex';
+        // Highlight active server button
+        serverSelector.querySelectorAll('.btn-server').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.server === STATE.selectedPlayerServer);
+        });
+      }
+    }
+
     // Attempt automatic native fullscreen if the screen is already in landscape orientation
     if (window.innerWidth > window.innerHeight && window.innerWidth <= 950) {
       setTimeout(() => {
@@ -3044,7 +3119,8 @@ const STATE = {
       }, 500);
     }
 
-    showToast('Iniciando player via MyEmbed.biz...', 'success');
+    const serverNames = { warezcdn: 'WarezCDN', superflix: 'SuperFlix', myembed: 'MyEmbed' };
+    showToast(`Iniciando player via ${serverNames[STATE.selectedPlayerServer] || 'WarezCDN'}...`, 'success');
     
     // Auto-initiate landscape control hiding
     showCinemaControls();
@@ -5671,6 +5747,18 @@ const STATE = {
     // Close buttons modal & cinema
     DOM.modalCloseBtn.onclick = () => closeDetail();
     DOM.cinemaCloseBtn.onclick = () => closeCinema();
+
+    // Bind Cinema Server Selector buttons
+    const serverSelector = document.querySelector('.cinema-server-selector');
+    if (serverSelector) {
+      serverSelector.querySelectorAll('.btn-server').forEach(btn => {
+        btn.onclick = (e) => {
+          e.preventDefault();
+          const server = btn.dataset.server;
+          changePlayerServer(server);
+        };
+      });
+    }
 
     // Modals backdrop clicks to close
     DOM.detailModal.onclick = (e) => {

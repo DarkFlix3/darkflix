@@ -5451,8 +5451,56 @@ ul, ol {
   user-select: none;
 }
 
+/* ---------- SERVER SELECTOR ---------- */
+.cinema-server-selector {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.cinema-server-selector span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
 
+.btn-server {
+  padding: 8px 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
+.btn-server:hover {
+  background: var(--border-hover);
+  border-color: var(--text-muted);
+}
 
+.btn-server.active {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: white !important;
+  box-shadow: var(--shadow-accent);
+}
 
