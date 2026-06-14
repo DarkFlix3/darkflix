@@ -2161,10 +2161,10 @@ const STATE = {
     },
     {
       id: "tv-brasil-hd",
-      nome: "TV Brasil HD",
+      nome: "TV Brasil ᴴᴰ",
       categoria: "aberto",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/TV_Brasil_logo_2009.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
-      url: "http://streaming.procergs.com.br:1935/tve/stve/playlist.m3u8"
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/TV_Brasil_logo_2023.svg/1280px-TV_Brasil_logo_2023.svg.png",
+      url: "https://tvbrasil-stream.ebc.com.br/index.m3u8?ROGERIOTORRES"
     },
     {
       id: "tv-camara-1",
@@ -2235,6 +2235,76 @@ const STATE = {
       categoria: "aberto",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDWgRy1wTFCQdTCpgqmyamO2UW8rSa-eIc6A&s",
       url: "https://mdstrm.com/live-stream-playlist/5d5d51a4e9a40e25f4a0332c.m3u8?checkedby:iptvcat.net"
+    },
+    {
+      id: "rede-minas-hd",
+      nome: "Rede Minas ᴴᴰ",
+      categoria: "aberto",
+      logo: "https://images.seeklogo.com/logo-png/51/2/rede-minas-logo-png_seeklogo-516107.png",
+      url: "https://8hzcavccys.zoeweb.tv/redeminas/ngrp:redeminas_all/chunklist.m3u8?ROGERIOTORRES"
+    },
+    {
+      id: "rede-familia-hd",
+      nome: "Rede Familia ᴴᴰ",
+      categoria: "aberto",
+      logo: "https://upload.wikimedia.org/wikipedia/pt/9/98/Rede_Fam%C3%ADlia.png",
+      url: "https://tv03.zas.media:1936/rftv/rftv/chunklist.m3u8?ROGERIOTORRES"
+    },
+    {
+      id: "canal-educacao-hd",
+      nome: "Canal Educação ᴴᴰ",
+      categoria: "aberto",
+      logo: "https://www.canaleducacao.tv/images/avace/logo.png",
+      url: "https://canaleducacao-stream.ebc.com.br/index.m3u8?ROGERIOTORRES"
+    },
+    {
+      id: "sic-internacional-hd",
+      nome: "SIC Internacional ᴴᴰ (PT)",
+      categoria: "fechado",
+      logo: "https://upload.wikimedia.org/wikipedia/pt/f/f8/SIC_Internacional.png",
+      url: "https://d1zx6l1dn8vaj5.cloudfront.net/out/v1/b89cc37caa6d418eb423cf092a2ef970/index_4.m3u8?ROGERIOTORRES"
+    },
+    {
+      id: "tv-gov-hd",
+      nome: "TV GOV ᴴᴰ",
+      categoria: "aberto",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/3/34/Canal_Gov_Logo.png",
+      url: "https://canalgov-stream.ebc.com.br/index.m3u8?ROGERIOTORRES"
+    },
+    {
+      id: "univesp-tv-hd",
+      nome: "Univesp TV ᴴᴰ",
+      categoria: "aberto",
+      logo: "https://upload.wikimedia.org/wikipedia/pt/6/6c/Logotipo_da_Univesp_TV.jpg",
+      url: "https://5b33b873179a2.streamlock.net:1443/mastertv/livestream/playlist.m3u8?ROGERIOTORRES"
+    },
+    {
+      id: "caze-tv-hd",
+      nome: "Cazé TV ᴴᴰ",
+      categoria: "fechado",
+      logo: "https://upload.wikimedia.org/wikipedia/pt/2/22/Logotipo_da_Caz%C3%A9TV.png",
+      url: "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8?ROGERIOTORRES"
+    },
+    {
+      id: "desimpedidos-hd",
+      nome: "Desimpedidos ᴴᴰ",
+      categoria: "fechado",
+      logo: "https://pbs.twimg.com/media/G6c3rnyWcAA6BBc.png",
+      url: "https://ogc-desi-tcl-roku-syndication.otteravision.com/ogc/desi/desi_h265.m3u8?ROGERIOTORRES"
+    },
+    {
+      id: "esportes-brasilia-hd",
+      nome: "Esportes Brasília ᴴᴰ",
+      categoria: "fechado",
+      logo: "https://yt3.googleusercontent.com/ytc/AIdro_lfU7d9S8HFalRwhHkKD0J4MX0O_bl1IFRjEwHrE6iCGg=s900-c-k-c0x00ffffff-no-rj",
+      url: "https://a.cdni.live/radioesporte/radioesporte/playlist.m3u8?ROGERIOTORRES"
+    },
+    {
+      id: "racer-brasil-hd",
+      nome: "Racer Brasil ᴴᴰ",
+      categoria: "fechado",
+      logo: "https://brasilracing.com.br/wp-content/uploads/2025/10/1.png",
+      url: "https://amg16379-sports7-amg16379c2-tcl-us-4436.playouts.now.amagi.tv/playlist.m3u8?ROGERIOTORRES"
     }
   ];
 
