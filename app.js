@@ -2324,7 +2324,7 @@ const STATE = {
     if (match && match[2].length === 11) {
       videoId = match[2];
     }
-    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0` : url;
+    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1` : url;
   }
 
   function stopCanalPlayer() {
@@ -2343,6 +2343,14 @@ const STATE = {
     if (infoContainer) infoContainer.style.display = 'none';
     const httpTip = document.getElementById('canal-http-tip');
     if (httpTip) httpTip.style.display = 'none';
+
+    // Clear player container styles and content
+    const playerContainer = document.getElementById('canal-player');
+    if (playerContainer) {
+      playerContainer.innerHTML = '';
+      playerContainer.style.overflow = '';
+      playerContainer.style.position = '';
+    }
     
     // Update active session to clear currentlyWatching
     registrarSessaoAtiva();
@@ -2464,9 +2472,22 @@ const STATE = {
       if (isYoutube) {
         const embedUrl = getYoutubeEmbedUrl(canal.url);
         if (playerContainer) {
-          playerContainer.innerHTML = `<iframe src="${embedUrl}" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%; height:100%; border:none;"></iframe>`;
+          playerContainer.style.overflow = 'hidden';
+          playerContainer.style.position = 'relative';
+          playerContainer.innerHTML = `
+            <iframe src="${embedUrl}" 
+                    style="width: 100%; height: 100%; border: none; transform: scale(1.08); transform-origin: center; pointer-events: none;" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+            </iframe>
+            <div style="position: absolute; inset: 0; z-index: 10; background: transparent;"></div>
+          `;
         }
       } else {
+        if (playerContainer) {
+          playerContainer.style.overflow = '';
+          playerContainer.style.position = '';
+        }
         if (typeof Clappr === 'undefined') {
           showToast('Erro: Biblioteca Clappr não foi carregada.', 'error');
           return;
@@ -2964,6 +2985,13 @@ const STATE = {
 
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
+    // Reset cinema iframe custom styles for YouTube channels
+    if (DOM.cinemaIframe) {
+      DOM.cinemaIframe.style.transform = '';
+      DOM.cinemaIframe.style.transformOrigin = '';
+      DOM.cinemaIframe.style.pointerEvents = '';
+    }
+
     if (STATE.watchInterval) {
       clearInterval(STATE.watchInterval);
       STATE.watchInterval = null;
@@ -3074,7 +3102,10 @@ const STATE = {
           const embedUrl = getYoutubeEmbedUrl(canal.url);
           DOM.cinemaIframe.src = embedUrl;
           DOM.cinemaIframe.style.display = 'block';
-          DOM.cinemaBlockerTop.style.display = 'block';
+          DOM.cinemaIframe.style.transform = 'scale(1.08)';
+          DOM.cinemaIframe.style.transformOrigin = 'center';
+          DOM.cinemaIframe.style.pointerEvents = 'none';
+          DOM.cinemaBlockerTop.style.display = 'none';
           if (DOM.cinemaExternalBtn) {
             DOM.cinemaExternalBtn.href = embedUrl;
           }
