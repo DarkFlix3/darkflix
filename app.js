@@ -2283,7 +2283,7 @@ const STATE = {
       nome: "Cazé TV ᴴᴰ",
       categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/pt/2/22/Logotipo_da_Caz%C3%A9TV.png",
-      url: "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8?ROGERIOTORRES"
+      url: "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8?ROGERIOTORRES"
     },
     {
       id: "desimpedidos-hd",
@@ -2305,10 +2305,27 @@ const STATE = {
       categoria: "fechado",
       logo: "https://brasilracing.com.br/wp-content/uploads/2025/10/1.png",
       url: "https://amg16379-sports7-amg16379c2-tcl-us-4436.playouts.now.amagi.tv/playlist.m3u8?ROGERIOTORRES"
+    },
+    {
+      id: "bluey-ao-vivo",
+      nome: "Bluey Ao Vivo",
+      categoria: "fechado",
+      logo: "https://images.seeklogo.com/logo-png/44/2/bluey-logo-png_seeklogo-449690.png",
+      url: "https://www.youtube.com/watch?v=OBe-ehVPKKk"
     }
   ];
 
   let canalPlayer = null;
+
+  function getYoutubeEmbedUrl(url) {
+    let videoId = '';
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    if (match && match[2].length === 11) {
+      videoId = match[2];
+    }
+    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0` : url;
+  }
 
   function stopCanalPlayer() {
     if (canalPlayer) {
@@ -2319,6 +2336,7 @@ const STATE = {
       }
       canalPlayer = null;
     }
+    STATE.activeCanalId = null;
     const playerWrapper = document.getElementById('canal-wrapper-player');
     const infoContainer = document.getElementById('canal-info-container');
     if (playerWrapper) playerWrapper.style.display = 'none';
@@ -2359,7 +2377,7 @@ const STATE = {
       item.className = 'canal-item' + (isMaint ? ' manutencao' : '');
       
       // Se este canal já for o canal ativo no player
-      if (canalPlayer && canalPlayer.options && canalPlayer.options.source === canal.url) {
+      if (STATE.activeCanalId === canal.id) {
         item.className += ' active';
       }
       
@@ -2429,14 +2447,30 @@ const STATE = {
       });
     }
 
-    // Instanciação do Clappr Player
-    if (typeof Clappr === 'undefined') {
-      showToast('Erro: Biblioteca Clappr não foi carregada.', 'error');
-      return;
-    }
-
+    // Instanciação do Clappr Player ou YouTube Iframe
     try {
-      if (!canalPlayer) {
+      if (canalPlayer) {
+        try { canalPlayer.destroy(); } catch(e){}
+        canalPlayer = null;
+      }
+
+      const playerContainer = document.getElementById('canal-player');
+      if (playerContainer) {
+        playerContainer.innerHTML = '';
+      }
+
+      const isYoutube = canal.url.includes('youtube.com/') || canal.url.includes('youtu.be/');
+
+      if (isYoutube) {
+        const embedUrl = getYoutubeEmbedUrl(canal.url);
+        if (playerContainer) {
+          playerContainer.innerHTML = `<iframe src="${embedUrl}" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%; height:100%; border:none;"></iframe>`;
+        }
+      } else {
+        if (typeof Clappr === 'undefined') {
+          showToast('Erro: Biblioteca Clappr não foi carregada.', 'error');
+          return;
+        }
         canalPlayer = new Clappr.Player({
           source: canal.url,
           parentId: "#canal-player",
@@ -2444,19 +2478,11 @@ const STATE = {
           width: '100%',
           height: '100%',
           hlsjsConfig: {
-            enableWebVTT: false
+            enableWebVTT: false,
+            enableCEA708Captions: false,
+            renderTextTracksNatively: false
           }
         });
-      } else {
-        // Se já existe, configura apenas a nova fonte
-        canalPlayer.configure({ 
-          source: canal.url, 
-          autoPlay: true,
-          hlsjsConfig: {
-            enableWebVTT: false
-          }
-        });
-        canalPlayer.play();
       }
 
       // Programmatically configure the Clappr video tag attributes for auto PiP
@@ -2491,10 +2517,10 @@ const STATE = {
       setTimeout(configureCanalVideo, 1000);
       setTimeout(configureCanalVideo, 2500);
 
-      // Force display the PiP button if browser supports it
+      // Force display the PiP button if browser supports it and it's not a YouTube channel
       const canalPipBtn = document.getElementById('canal-pip-btn');
       if (document.pictureInPictureEnabled && canalPipBtn) {
-        canalPipBtn.style.display = 'inline-flex';
+        canalPipBtn.style.display = isYoutube ? 'none' : 'inline-flex';
       }
       
       showToast(`Carregando canal: ${canal.nome}...`, 'success');
@@ -3026,37 +3052,54 @@ const STATE = {
     DOM.cinemaVideo.src = '';
 
     if (type === 'canal') {
-      // Canal ao vivo: usar Clappr diretamente no cinema mode
+      // Canal ao vivo: usar Clappr ou YouTube embed diretamente no cinema mode
       DOM.cinemaIframe.style.display = 'none';
       DOM.cinemaIframe.src = '';
       DOM.cinemaBlockerTop.style.display = 'none';
 
       const canal = listaCanais.find(c => c.id === tmdbId);
       if (canal) {
-        let clapprCont = document.getElementById('cinema-clappr-player');
-        if (!clapprCont) {
-          clapprCont = document.createElement('div');
-          clapprCont.id = 'cinema-clappr-player';
-          clapprCont.style.cssText = 'width:100%;height:100%;position:absolute;inset:0;z-index:1;';
-          document.querySelector('.cinema-player').appendChild(clapprCont);
-        } else {
-          clapprCont.innerHTML = '';
-        }
-        clapprCont.style.display = 'block';
-
         if (window.cinemaClapprPlayer) {
           try { window.cinemaClapprPlayer.destroy(); } catch(e){}
+          window.cinemaClapprPlayer = null;
         }
-        window.cinemaClapprPlayer = new Clappr.Player({
-          source: canal.url,
-          parentId: '#cinema-clappr-player',
-          autoPlay: true,
-          width: '100%',
-          height: '100%',
-          hlsjsConfig: {
-            enableWebVTT: false
+        let clapprCont = document.getElementById('cinema-clappr-player');
+        if (clapprCont) {
+          clapprCont.innerHTML = '';
+          clapprCont.style.display = 'none';
+        }
+
+        const isYoutube = canal.url.includes('youtube.com/') || canal.url.includes('youtu.be/');
+        if (isYoutube) {
+          const embedUrl = getYoutubeEmbedUrl(canal.url);
+          DOM.cinemaIframe.src = embedUrl;
+          DOM.cinemaIframe.style.display = 'block';
+          DOM.cinemaBlockerTop.style.display = 'block';
+          if (DOM.cinemaExternalBtn) {
+            DOM.cinemaExternalBtn.href = embedUrl;
           }
-        });
+        } else {
+          if (!clapprCont) {
+            clapprCont = document.createElement('div');
+            clapprCont.id = 'cinema-clappr-player';
+            clapprCont.style.cssText = 'width:100%;height:100%;position:absolute;inset:0;z-index:1;';
+            document.querySelector('.cinema-player').appendChild(clapprCont);
+          }
+          clapprCont.style.display = 'block';
+
+          window.cinemaClapprPlayer = new Clappr.Player({
+            source: canal.url,
+            parentId: '#cinema-clappr-player',
+            autoPlay: true,
+            width: '100%',
+            height: '100%',
+            hlsjsConfig: {
+              enableWebVTT: false,
+              enableCEA708Captions: false,
+              renderTextTracksNatively: false
+            }
+          });
+        }
       }
     } else {
       // Limpar Clappr se existir de uma sessão anterior de canal
@@ -7585,13 +7628,15 @@ const STATE = {
     }
 
     // Caso 2: Canal ativo na página de canais
-    if (STATE.currentPage === 'canais' && canalPlayer && canalPlayer.options && canalPlayer.options.source) {
-      // Se tivermos acesso ao player e ele estiver explicitamente pausado, não está assistindo
-      try {
-        if (typeof canalPlayer.isPlaying === 'function' && !canalPlayer.isPlaying()) {
-          return false;
-        }
-      } catch (e) {}
+    if (STATE.currentPage === 'canais' && STATE.activeCanalId) {
+      // Se for Clappr (não-YouTube), podemos verificar se está pausado
+      if (canalPlayer && canalPlayer.options && canalPlayer.options.source) {
+        try {
+          if (typeof canalPlayer.isPlaying === 'function' && !canalPlayer.isPlaying()) {
+            return false;
+          }
+        } catch (e) {}
+      }
       return true;
     }
 
@@ -7658,8 +7703,8 @@ const STATE = {
           episode: STATE.currentWatchItem.episode || null,
           timestamp: Date.now()
         };
-      } else if (STATE.currentPage === 'canais' && canalPlayer && canalPlayer.options && canalPlayer.options.source) {
-        const activeCanal = listaCanais.find(c => c.url === canalPlayer.options.source);
+      } else if (STATE.currentPage === 'canais' && STATE.activeCanalId) {
+        const activeCanal = listaCanais.find(c => c.id === STATE.activeCanalId);
         if (activeCanal) {
           currentlyWatching = {
             title: activeCanal.nome,
