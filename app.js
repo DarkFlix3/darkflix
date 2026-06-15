@@ -6377,6 +6377,70 @@ const STATE = {
       }
     }
 
+    // Fullscreen for channel player and cinema player
+    const canalFullscreenBtn = document.getElementById('canal-fullscreen-btn');
+    if (canalFullscreenBtn) {
+      canalFullscreenBtn.onclick = (e) => {
+        e.preventDefault();
+        const playerWrapper = document.getElementById('canal-wrapper-player');
+        if (playerWrapper) {
+          if (!document.fullscreenElement) {
+            if (playerWrapper.requestFullscreen) {
+              playerWrapper.requestFullscreen().catch(err => console.warn(err));
+            } else if (playerWrapper.webkitRequestFullscreen) {
+              playerWrapper.webkitRequestFullscreen();
+            } else if (playerWrapper.msRequestFullscreen) {
+              playerWrapper.msRequestFullscreen();
+            }
+          } else {
+            if (document.exitFullscreen) {
+              document.exitFullscreen();
+            }
+          }
+        }
+      };
+    }
+
+    const canalWrapperPlayer = document.getElementById('canal-wrapper-player');
+    if (canalWrapperPlayer) {
+      canalWrapperPlayer.ondblclick = (e) => {
+        e.preventDefault();
+        if (!document.fullscreenElement) {
+          if (canalWrapperPlayer.requestFullscreen) {
+            canalWrapperPlayer.requestFullscreen().catch(err => console.warn(err));
+          } else if (canalWrapperPlayer.webkitRequestFullscreen) {
+            canalWrapperPlayer.webkitRequestFullscreen();
+          } else if (canalWrapperPlayer.msRequestFullscreen) {
+            canalWrapperPlayer.msRequestFullscreen();
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          }
+        }
+      };
+    }
+
+    const cinemaPlayer = document.querySelector('.cinema-player');
+    if (cinemaPlayer) {
+      cinemaPlayer.ondblclick = (e) => {
+        e.preventDefault();
+        if (!document.fullscreenElement) {
+          if (cinemaPlayer.requestFullscreen) {
+            cinemaPlayer.requestFullscreen().catch(err => console.warn(err));
+          } else if (cinemaPlayer.webkitRequestFullscreen) {
+            cinemaPlayer.webkitRequestFullscreen();
+          } else if (cinemaPlayer.msRequestFullscreen) {
+            cinemaPlayer.msRequestFullscreen();
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          }
+        }
+      };
+    }
+
     // Auto-trigger PiP when app is minimized or tab is switched (Page Visibility API)
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'hidden') {
