@@ -2283,7 +2283,7 @@ const STATE = {
       nome: "Cazé TV ᴴᴰ",
       categoria: "fechado",
       logo: "https://upload.wikimedia.org/wikipedia/pt/2/22/Logotipo_da_Caz%C3%A9TV.png",
-      url: "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8?ROGERIOTORRES"
+      url: "https://www.youtube.com/watch?v=EYStZQ5FsVk"
     },
     {
       id: "desimpedidos-hd",
@@ -2312,6 +2312,13 @@ const STATE = {
       categoria: "fechado",
       logo: "https://images.seeklogo.com/logo-png/44/2/bluey-logo-png_seeklogo-449690.png",
       url: "https://www.youtube.com/watch?v=OBe-ehVPKKk"
+    },
+    {
+      id: "pica-pau-ao-vivo",
+      nome: "Pica Pau Ao Vivo",
+      categoria: "fechado",
+      logo: "https://static.wikia.nocookie.net/logos/images/c/c9/Logo.png/revision/latest?cb=20160928221609&path-prefix=pt-br",
+      url: "https://www.youtube.com/watch?v=xIs3odCrjZs"
     }
   ];
 
