@@ -2331,7 +2331,7 @@ const STATE = {
     if (match && match[2].length === 11) {
       videoId = match[2];
     }
-    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1` : url;
+    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&fs=1` : url;
   }
 
   function stopCanalPlayer() {
@@ -2483,11 +2483,10 @@ const STATE = {
           playerContainer.style.position = 'relative';
           playerContainer.innerHTML = `
             <iframe src="${embedUrl}" 
-                    style="width: 100%; height: 100%; border: none; transform: scale(1.08); transform-origin: center; pointer-events: none;" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    style="width: 100%; height: 100%; border: none; transform: scale(1.08); transform-origin: center;" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" 
                     allowfullscreen>
             </iframe>
-            <div style="position: absolute; inset: 0; z-index: 10; background: transparent;"></div>
           `;
         }
       } else {
@@ -2996,7 +2995,6 @@ const STATE = {
     if (DOM.cinemaIframe) {
       DOM.cinemaIframe.style.transform = '';
       DOM.cinemaIframe.style.transformOrigin = '';
-      DOM.cinemaIframe.style.pointerEvents = '';
     }
 
     if (STATE.watchInterval) {
@@ -3111,7 +3109,6 @@ const STATE = {
           DOM.cinemaIframe.style.display = 'block';
           DOM.cinemaIframe.style.transform = 'scale(1.08)';
           DOM.cinemaIframe.style.transformOrigin = 'center';
-          DOM.cinemaIframe.style.pointerEvents = 'none';
           DOM.cinemaBlockerTop.style.display = 'none';
           if (DOM.cinemaExternalBtn) {
             DOM.cinemaExternalBtn.href = embedUrl;
@@ -6377,69 +6374,6 @@ const STATE = {
       }
     }
 
-    // Fullscreen for channel player and cinema player
-    const canalFullscreenBtn = document.getElementById('canal-fullscreen-btn');
-    if (canalFullscreenBtn) {
-      canalFullscreenBtn.onclick = (e) => {
-        e.preventDefault();
-        const playerWrapper = document.getElementById('canal-wrapper-player');
-        if (playerWrapper) {
-          if (!document.fullscreenElement) {
-            if (playerWrapper.requestFullscreen) {
-              playerWrapper.requestFullscreen().catch(err => console.warn(err));
-            } else if (playerWrapper.webkitRequestFullscreen) {
-              playerWrapper.webkitRequestFullscreen();
-            } else if (playerWrapper.msRequestFullscreen) {
-              playerWrapper.msRequestFullscreen();
-            }
-          } else {
-            if (document.exitFullscreen) {
-              document.exitFullscreen();
-            }
-          }
-        }
-      };
-    }
-
-    const canalWrapperPlayer = document.getElementById('canal-wrapper-player');
-    if (canalWrapperPlayer) {
-      canalWrapperPlayer.ondblclick = (e) => {
-        e.preventDefault();
-        if (!document.fullscreenElement) {
-          if (canalWrapperPlayer.requestFullscreen) {
-            canalWrapperPlayer.requestFullscreen().catch(err => console.warn(err));
-          } else if (canalWrapperPlayer.webkitRequestFullscreen) {
-            canalWrapperPlayer.webkitRequestFullscreen();
-          } else if (canalWrapperPlayer.msRequestFullscreen) {
-            canalWrapperPlayer.msRequestFullscreen();
-          }
-        } else {
-          if (document.exitFullscreen) {
-            document.exitFullscreen();
-          }
-        }
-      };
-    }
-
-    const cinemaPlayer = document.querySelector('.cinema-player');
-    if (cinemaPlayer) {
-      cinemaPlayer.ondblclick = (e) => {
-        e.preventDefault();
-        if (!document.fullscreenElement) {
-          if (cinemaPlayer.requestFullscreen) {
-            cinemaPlayer.requestFullscreen().catch(err => console.warn(err));
-          } else if (cinemaPlayer.webkitRequestFullscreen) {
-            cinemaPlayer.webkitRequestFullscreen();
-          } else if (cinemaPlayer.msRequestFullscreen) {
-            cinemaPlayer.msRequestFullscreen();
-          }
-        } else {
-          if (document.exitFullscreen) {
-            document.exitFullscreen();
-          }
-        }
-      };
-    }
 
     // Auto-trigger PiP when app is minimized or tab is switched (Page Visibility API)
     document.addEventListener('visibilitychange', () => {
