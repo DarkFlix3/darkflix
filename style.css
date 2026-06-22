@@ -3323,22 +3323,50 @@ ul, ol {
   100% { transform: scale(0.9); opacity: 0.5; }
 }
 
-/* Twitch Live Badge */
+/* Twitch Live Badge & Statuses */
 .twitch-live-badge {
   position: absolute;
   top: 4px;
   right: 4px;
-  background: #e91916;
   color: #fff;
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  padding: 2px 6px;
+  padding: 3px 6px;
   border-radius: 4px;
   line-height: 1;
   text-transform: uppercase;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.twitch-live-badge.status-checking {
+  background: rgba(251, 191, 36, 0.85);
+  box-shadow: 0 0 6px rgba(251, 191, 36, 0.4);
+}
+
+.twitch-live-badge.status-live {
+  background: #e91916;
   box-shadow: 0 0 8px rgba(233, 25, 22, 0.6);
   animation: twitchBadgePulse 2s ease-in-out infinite;
+}
+
+.twitch-live-badge.status-offline {
+  background: rgba(30, 30, 38, 0.85);
+  color: rgba(255, 255, 255, 0.6);
+  box-shadow: none;
+}
+
+/* Offline channels list item styling */
+.canal-item.twitch-offline img {
+  opacity: 0.4;
+  filter: grayscale(80%);
+  transition: all 0.3s ease;
+}
+
+.canal-item.twitch-offline:hover img {
+  opacity: 0.8;
+  filter: grayscale(20%);
 }
 
 @keyframes twitchBadgePulse {

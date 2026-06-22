@@ -1705,21 +1705,21 @@ const STATE = {
       id: "twitch_gaules",
       nome: "Gaules (Twitch)",
       categoria: "twitch",
-      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/05690b79-abaf-4191-bb27-024227c2f6d2-profile_image-70x70.png",
+      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/ea0fe422-84bd-4aee-9d10-fd4b0b3a7054-profile_image-70x70.png",
       url: "https://www.twitch.tv/gaules"
     },
     {
       id: "twitch_alanzoka",
       nome: "Alanzoka (Twitch)",
       categoria: "twitch",
-      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/17b12270-ec18-406c-843e-a1202f54a8b7-profile_image-70x70.png",
+      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/64d44235-1dee-4bca-95da-bee1ee96eea3-profile_image-70x70.png",
       url: "https://www.twitch.tv/alanzoka"
     },
     {
       id: "twitch_casimito",
       nome: "Casimito (Twitch)",
       categoria: "twitch",
-      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/f466c08c-e863-4754-b103-90d5a8cfbaf0-profile_image-70x70.png",
+      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/32805a78-d927-48bd-8089-bf5efed53ea4-profile_image-70x70.png",
       url: "https://www.twitch.tv/casimito"
     },
     {
@@ -2433,6 +2433,37 @@ const STATE = {
     return `https://player.twitch.tv/?channel=${channelName}&parent=${parentHost}&muted=false`;
   }
 
+  async function verificarTwitchStatus(canalId, url, badgeId, itemElement) {
+    const twitchChannel = extrairCanalTwitch(url);
+    if (!twitchChannel) return;
+
+    try {
+      const previewUrl = `https://static-cdn.jtvnw.net/previews-ttv/live_user_${twitchChannel}-320x180.jpg?t=${Date.now()}`;
+      const res = await fetch(previewUrl);
+      const isLive = !res.url.includes('404_preview');
+      
+      const badge = document.getElementById(badgeId);
+      if (badge) {
+        badge.className = isLive ? 'twitch-live-badge status-live' : 'twitch-live-badge status-offline';
+        badge.innerText = isLive ? 'LIVE' : 'OFFLINE';
+      }
+      
+      if (!isLive) {
+        itemElement.classList.add('twitch-offline');
+      } else {
+        itemElement.classList.remove('twitch-offline');
+      }
+    } catch (e) {
+      console.warn("Erro ao checar status da Twitch:", e);
+      const badge = document.getElementById(badgeId);
+      if (badge) {
+        badge.className = 'twitch-live-badge status-offline';
+        badge.innerText = 'OFFLINE';
+      }
+      itemElement.classList.add('twitch-offline');
+    }
+  }
+
   function stopCanalPlayer() {
     if (canalPlayer) {
       try {
@@ -2496,7 +2527,9 @@ const STATE = {
       }
       
       item.onclick = () => carregarCanal(canal.id);
-      const liveBadge = canal.categoria === 'twitch' ? '<span class="twitch-live-badge">LIVE</span>' : '';
+      const isTwitch = canal.categoria === 'twitch';
+      const badgeId = `badge-twitch-${canal.id}`;
+      const liveBadge = isTwitch ? `<span class="twitch-live-badge status-checking" id="${badgeId}">...</span>` : '';
       item.innerHTML = `
         <div style="position:relative;display:inline-block;">
           <img src="${canal.logo}" onerror="this.src='https://via.placeholder.com/100x70?text=LOGO'">
@@ -2505,6 +2538,10 @@ const STATE = {
         <span>${canal.nome}</span>
       `;
       grid.appendChild(item);
+
+      if (isTwitch) {
+        verificarTwitchStatus(canal.id, canal.url, badgeId, item);
+      }
     });
   }
 
