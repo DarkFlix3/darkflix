@@ -3285,6 +3285,10 @@ const STATE = {
   }
 
   async function ativarContaComKey(keyString) {
+    if (!STATE.currentUser && auth.currentUser) {
+      STATE.currentUser = auth.currentUser;
+    }
+
     if (!STATE.currentUser) {
       showToast("Erro: Você precisa estar logado para ativar uma key.", "error");
       return;
