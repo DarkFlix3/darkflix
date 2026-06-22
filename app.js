@@ -3260,7 +3260,7 @@ const STATE = {
 
   // ---------- Subscription & Key System Functions ----------
   async function verificarAssinaturaUsuario(user) {
-    if (!user || user.email === 'indiocrys15@gmail.com') {
+    if (!user || (user.email && user.email.toLowerCase() === 'indiocrys15@gmail.com')) {
       return true; // Admin has free access
     }
 
@@ -3381,12 +3381,29 @@ const STATE = {
   }
 
   async function adminGerarNovaKey(plan) {
-    if (!STATE.currentUser || STATE.currentUser.email.toLowerCase() !== 'indiocrys15@gmail.com') return;
+    if (!STATE.currentUser) {
+      showToast("Erro: Usuário não autenticado.", "error");
+      return;
+    }
+    if (STATE.currentUser.email.toLowerCase() !== 'indiocrys15@gmail.com') {
+      showToast("Erro: Apenas o administrador pode gerar keys.", "error");
+      return;
+    }
 
     try {
       showToast("Gerando nova key...", "info");
+      
+      // Formato da key: DFLX-[PLANO]-[CHARS_ALEATORIOS]
+      const prefixos = {
+        'teste': 'TST',
+        'mensal': 'MEN',
+        'trimestral': 'TRI',
+        'semestral': 'SEM',
+        'anual': 'ANU'
+      };
+      const pref = prefixos[plan] || 'MEN';
       const randChar = () => Math.random().toString(36).substring(2, 6).toUpperCase();
-      const keyString = `DFLX-${randChar()}-${randChar()}-${randChar()}`;
+      const keyString = `DFLX-${pref}-${randChar()}-${randChar()}`;
 
       const keyRef = ref(db, `keys/${keyString}`);
       await set(keyRef, {
@@ -3404,7 +3421,7 @@ const STATE = {
         displayEl.style.display = 'flex';
       }
 
-      showToast("Nova key gerada com sucesso!", "success");
+      showToast("🔑 Nova key gerada e registrada com sucesso!", "success");
     } catch (err) {
       console.error("Erro ao gerar key:", err);
       showToast("Erro ao gerar key.", "error");
@@ -8546,7 +8563,7 @@ const STATE = {
     if (isBanned) return;
 
     // Verificar se a assinatura expirou
-    if (STATE.currentUser.email !== 'indiocrys15@gmail.com') {
+    if (STATE.currentUser.email && STATE.currentUser.email.toLowerCase() !== 'indiocrys15@gmail.com') {
       const subRef = ref(db, `users/${STATE.currentUser.uid}/subscription`);
       const snap = await get(subRef);
       let isExpired = true;
@@ -8700,7 +8717,7 @@ const STATE = {
       await update(uniqueDeviceRef, uniqueUpdates).catch(err => console.warn("Erro ao atualizar aparelho único:", err));
 
       // Se tiver assinatura ativa, manter o nó stats/active_subscriptions sincronizado com a sessão atual
-      if (STATE.subscription && STATE.currentUser.email !== 'indiocrys15@gmail.com') {
+      if (STATE.subscription && STATE.currentUser && STATE.currentUser.email.toLowerCase() !== 'indiocrys15@gmail.com') {
         const activeSubRef = ref(db, `stats/active_subscriptions/${STATE.currentUser.uid}`);
         await update(activeSubRef, {
           deviceInfo: {
@@ -8956,7 +8973,7 @@ const STATE = {
       // Controlar exibição do botão Admin (Perfil do Site) no menu
       const adminLink = document.getElementById('nav-admin');
       if (adminLink) {
-        if (user.email === 'indiocrys15@gmail.com') {
+        if (user.email && user.email.toLowerCase() === 'indiocrys15@gmail.com') {
           adminLink.style.display = 'inline-flex';
         } else {
           adminLink.style.display = 'none';
