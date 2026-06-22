@@ -8575,9 +8575,12 @@ const STATE = {
         }
       }
       if (isExpired) {
-        showToast("⚠️ Sua assinatura expirou. Ative uma nova key.", "error");
+        pararHeartbeatSessao();
+        if (STATE.currentPage !== 'activation') {
+          showToast("⚠️ Sua assinatura expirou. Ative uma nova key.", "error");
+          navigateTo('activation');
+        }
         STATE.subscription = null;
-        navigateTo('activation');
         // Limpar sessões online do aparelho
         const currentSid = obterSessionId();
         if (currentSid) {
