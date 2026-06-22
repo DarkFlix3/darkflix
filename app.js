@@ -201,8 +201,10 @@ const STATE = {
   adminVisitsListener: null,
   adminUniqueDevicesListener: null,
   adminOnlineListener: null,
-  adminDetailPanelType: null, // 'unique' or 'online' or null
+  adminDetailPanelType: null, // 'unique' or 'online' or 'subscription' or null
   adminDetailListener: null,
+  adminSubscriptionsListener: null,
+  subscription: null,
   onlineOnDisconnectSet: false,
   endedRoomsCurrentPage: 1,
 
@@ -339,7 +341,9 @@ const STATE = {
         favorites: $('#page-favorites'),
         admin: $('#page-admin'),
         devices: $('#page-devices'),
-        rooms: $('#page-rooms')
+        rooms: $('#page-rooms'),
+        activation: $('#page-activation'),
+        'subscription-detail': $('#page-subscription-detail')
       },
       
       // Grid lists
@@ -617,6 +621,10 @@ const STATE = {
       STATE.adminDetailListener();
       STATE.adminDetailListener = null;
     }
+    if (STATE.adminSubscriptionsListener) {
+      STATE.adminSubscriptionsListener();
+      STATE.adminSubscriptionsListener = null;
+    }
     STATE.adminDetailPanelType = null;
   }
 
@@ -624,8 +632,8 @@ const STATE = {
   function navigateTo(page) {
     STATE.currentPage = page;
     
-    // Hide header links & search if on auth or profiles page, or devices/rooms page without active profile
-    const hideHeaderNav = (page === 'auth' || page === 'profiles' || ((page === 'devices' || page === 'rooms') && !STATE.currentProfile));
+    // Hide header links & search if on auth, profiles, or activation page, or devices/rooms page without active profile
+    const hideHeaderNav = (page === 'auth' || page === 'profiles' || page === 'activation' || ((page === 'devices' || page === 'rooms') && !STATE.currentProfile));
     if (DOM.navMenu) {
       DOM.navMenu.style.visibility = hideHeaderNav ? 'hidden' : 'visible';
     }
@@ -633,16 +641,21 @@ const STATE = {
       DOM.menuToggle.style.display = hideHeaderNav ? 'none' : '';
     }
     if (DOM.logoHome) {
-      DOM.logoHome.style.pointerEvents = (page === 'auth') ? 'none' : 'auto';
+      DOM.logoHome.style.pointerEvents = (page === 'auth' || page === 'activation') ? 'none' : 'auto';
     }
     
     // Force solid blurred dark header background on inner pages to prevent clashing content
     if (DOM.header) {
-      if (page !== 'home' && page !== 'auth' && page !== 'profiles' && page !== 'devices' && page !== 'rooms') {
+      if (page !== 'home' && page !== 'auth' && page !== 'profiles' && page !== 'devices' && page !== 'rooms' && page !== 'activation' && page !== 'subscription-detail') {
         DOM.header.classList.add('scrolled');
       } else {
-        DOM.header.classList.toggle('scrolled', window.scrollY > 20 || page === 'auth' || page === 'profiles' || ((page === 'devices' || page === 'rooms') && !STATE.currentProfile));
+        DOM.header.classList.toggle('scrolled', window.scrollY > 20 || page === 'auth' || page === 'profiles' || page === 'activation' || ((page === 'devices' || page === 'rooms') && !STATE.currentProfile));
       }
+    }
+
+    if (page !== 'subscription-detail' && subscriptionCountdownInterval) {
+      clearInterval(subscriptionCountdownInterval);
+      subscriptionCountdownInterval = null;
     }
     
     // Toggle footer visibility: hide on auth, profiles, and devices/rooms without active profile
@@ -2577,6 +2590,15 @@ const STATE = {
     // Limpar ouvintes anteriores para evitar vazamentos de memória e duplicações
     pararOuvintesAdmin();
 
+    // Ouvir assinaturas ativas em tempo real
+    const activeSubsRef = ref(db, 'stats/active_subscriptions');
+    STATE.adminSubscriptionsListener = onValue(activeSubsRef, (snap) => {
+      const subs = snap.val() || {};
+      const activeCount = Object.keys(subs).length;
+      const countEl = document.getElementById('admin-subscriptions-count');
+      if (countEl) countEl.innerText = activeCount;
+    }, err => console.error("Erro ao ouvir assinaturas ativas:", err));
+
     // 1. Ouvir estatísticas de visitas em tempo real
     const visitsRef = ref(db, 'stats/visitors');
     STATE.adminVisitsListener = onValue(visitsRef, (snap) => {
@@ -2730,12 +2752,16 @@ const STATE = {
     // Configurar cliques nos cards clicáveis (Aparelhos Únicos & Online Agora)
     const cardUnique = document.getElementById('admin-card-unique-devices');
     const cardOnline = document.getElementById('admin-card-online-now');
+    const cardSubs = document.getElementById('admin-card-active-subscriptions');
 
     if (cardUnique) {
       cardUnique.onclick = () => toggleAdminDetailPanel('unique');
     }
     if (cardOnline) {
       cardOnline.onclick = () => toggleAdminDetailPanel('online');
+    }
+    if (cardSubs) {
+      cardSubs.onclick = () => toggleAdminDetailPanel('subscription');
     }
 
     // Configurar clique para fechar o painel de detalhes
@@ -2872,6 +2898,33 @@ const STATE = {
         console.error("Erro ao carregar sessões online:", err);
         body.innerHTML = `<div class="admin-detail-empty"><p style="color: #ef4444;">Erro ao carregar sessões online. Verifique as regras de segurança do Firebase.</p></div>`;
       });
+    } else if (type === 'subscription') {
+      if (titleEl) titleEl.innerText = "Assinaturas de Acesso Ativas";
+      if (iconEl) iconEl.innerText = "🔑";
+
+      const activeSubsRef = ref(db, 'stats/active_subscriptions');
+      STATE.adminDetailListener = onValue(activeSubsRef, (snap) => {
+        const subs = snap.val() || {};
+        STATE.lastAdminDetailData = Object.entries(subs).map(([uid, data]) => ({
+          uid,
+          key: data.key,
+          plan: data.plan,
+          activatedAt: data.activatedAt || 0,
+          expiresAt: data.expiresAt || 0,
+          deviceInfo: data.deviceInfo || {},
+          profileName: data.profileName || "Usuário",
+          profileAvatar: data.profileAvatar || "",
+          sid: data.sid || null
+        }));
+
+        // Ordenar por data de expiração mais próxima
+        STATE.lastAdminDetailData.sort((a, b) => a.expiresAt - b.expiresAt);
+
+        displayAdminDetailItems();
+      }, (err) => {
+        console.error("Erro ao carregar assinaturas:", err);
+        body.innerHTML = `<div class="admin-detail-empty"><p style="color: #ef4444;">Erro ao carregar assinaturas. Verifique as regras de segurança do Firebase.</p></div>`;
+      });
     }
   }
 
@@ -2922,8 +2975,8 @@ const STATE = {
       if (type === 'online') {
         isOnline = true;
       } else {
-        // Para aparelhos únicos, verifique se a sessão existe e é recente (30min)
-        if (STATE.onlineSessions && STATE.onlineSessions[item.sid]) {
+        // Para aparelhos únicos e assinaturas, verifique se a sessão existe e é recente (30min)
+        if (item.sid && STATE.onlineSessions && STATE.onlineSessions[item.sid]) {
           const lastActive = STATE.onlineSessions[item.sid].lastActive || 0;
           isOnline = Math.abs(agora - lastActive) < 1800000;
         }
@@ -2981,7 +3034,71 @@ const STATE = {
         `;
       }
 
-      // 6. Botões de Ação
+      // 6. Detalhes específicos por aba e botões de ação
+      if (type === 'subscription') {
+        const remaining = item.expiresAt - agora;
+        let timeRemainingText = '';
+        if (remaining <= 0) {
+          timeRemainingText = 'Expirado';
+        } else {
+          const dias = Math.floor(remaining / (24 * 60 * 60 * 1000));
+          const horas = Math.floor((remaining % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+          const minutos = Math.floor((remaining % (60 * 60 * 1000)) / (60 * 1000));
+          timeRemainingText = `${dias}d ${horas}h ${minutos}m restantes`;
+        }
+
+        const detailsHtml = `
+          <div class="admin-user-card-details">
+            <div class="admin-user-card-detail-item">
+              <span class="detail-label">Key:</span>
+              <code style="font-family: monospace; color:#fff; font-weight:700;">${item.key}</code>
+            </div>
+            <div class="admin-user-card-detail-item">
+              <span class="detail-label">Plano:</span>
+              <span style="color:#a855f7; font-weight:700; text-transform:capitalize;">${item.plan}</span>
+            </div>
+            <div class="admin-user-card-detail-item">
+              <span class="detail-label">Ativado em:</span>
+              <span>${new Date(item.activatedAt).toLocaleString('pt-BR')}</span>
+            </div>
+            <div class="admin-user-card-detail-item">
+              <span class="detail-label">Validade:</span>
+              <span style="${remaining <= 0 ? 'color:#ef4444; font-weight:700;' : ''}">${timeRemainingText}</span>
+            </div>
+          </div>
+        `;
+
+        const deslogarBtn = `<button class="admin-btn-kick" onclick="window.adminDeslogarSessaoClick('${item.uid}', '${item.sid}')">🔌 Deslogar</button>`;
+        const revogarBtn = `<button class="admin-btn-revoke" onclick="window.adminRevogarAssinaturaClick('${item.uid}', '${item.key}')">🔑 Revogar</button>`;
+        const banirBtn = `<button class="admin-btn-ban" onclick="window.adminBanirDispositivoClick('${item.sid}', '${item.uid}', '${encodeURIComponent(JSON.stringify(item.deviceInfo))}')">🚫 Banir</button>`;
+
+        return `
+          <div class="admin-user-card" id="admin-user-card-${item.uid}">
+            <div class="admin-user-card-header">
+              <div class="admin-user-card-info">
+                ${avatarHtml}
+                <div class="admin-user-card-text">
+                  <h4>${item.profileName}</h4>
+                  <p title="${deviceText}">${deviceText}</p>
+                </div>
+              </div>
+              <div class="admin-user-card-status ${isOnline ? 'online' : 'offline'}">
+                <span class="status-dot"></span>
+                <span>${isOnline ? 'Online' : 'Offline'}</span>
+              </div>
+            </div>
+            ${detailsHtml}
+            ${watchingHtml}
+            <div class="admin-user-card-actions">
+              ${item.sid ? deslogarBtn : ''}
+              ${revogarBtn}
+              ${banirBtn}
+            </div>
+          </div>
+        `;
+      }
+
+      // Default (unique / online)
       const deslogarBtn = `<button class="admin-btn-kick" onclick="window.adminDeslogarSessaoClick('${item.uid}', '${item.sid}')">🔌 Deslogar</button>`;
       const banirBtn = `<button class="admin-btn-ban" onclick="window.adminBanirDispositivoClick('${item.sid}', '${item.uid}', '${encodeURIComponent(JSON.stringify(item.deviceInfo))}')">🚫 Banir</button>`;
 
@@ -3138,6 +3255,248 @@ const STATE = {
     const realUid = (uid === "null" || !uid || uid === "undefined") ? null : uid;
     if (confirm("⚠️ TEM CERTEZA? Banir este aparelho impedirá qualquer novo login ou acesso a partir deste dispositivo!")) {
       adminBanirDispositivo(sid, deviceInfo, realUid);
+    }
+  };
+
+  // ---------- Subscription & Key System Functions ----------
+  async function verificarAssinaturaUsuario(user) {
+    if (!user || user.email === 'indiocrys15@gmail.com') {
+      return true; // Admin has free access
+    }
+
+    try {
+      const subRef = ref(db, `users/${user.uid}/subscription`);
+      const snap = await get(subRef);
+      if (snap.exists()) {
+        const sub = snap.val();
+        const agora = Date.now();
+        if (sub && sub.expiresAt && agora < sub.expiresAt) {
+          STATE.subscription = sub;
+          return true; // Active!
+        }
+      }
+    } catch (e) {
+      console.warn("Erro ao verificar assinatura do usuário:", e);
+    }
+    
+    STATE.subscription = null;
+    navigateTo('activation');
+    return false;
+  }
+
+  async function ativarContaComKey(keyString) {
+    if (!STATE.currentUser) {
+      showToast("Erro: Você precisa estar logado para ativar uma key.", "error");
+      return;
+    }
+
+    try {
+      showToast("Validando key...", "info");
+      const keyRef = ref(db, `keys/${keyString}`);
+      const snap = await get(keyRef);
+      
+      if (!snap.exists()) {
+        showToast("❌ Key inválida ou inexistente.", "error");
+        return;
+      }
+
+      const keyData = snap.val();
+      if (keyData.activated === true) {
+        showToast("❌ Esta key já foi ativada em outra conta.", "error");
+        return;
+      }
+
+      const agora = Date.now();
+      let durationMs = 30 * 24 * 60 * 60 * 1000; // Mensal padrão
+      
+      const plan = keyData.plan || 'mensal';
+      if (plan === 'teste') durationMs = 3 * 60 * 60 * 1000; // 3 Horas
+      else if (plan === 'trimestral') durationMs = 90 * 24 * 60 * 60 * 1000;
+      else if (plan === 'semestral') durationMs = 180 * 24 * 60 * 60 * 1000;
+      else if (plan === 'anual') durationMs = 365 * 24 * 60 * 60 * 1000;
+
+      const expiresAt = agora + durationMs;
+      
+      const subInfo = {
+        key: keyString,
+        plan: plan,
+        activatedAt: agora,
+        expiresAt: expiresAt
+      };
+
+      // 1. Atualizar registro da key
+      await update(keyRef, {
+        activated: true,
+        activatedAt: agora,
+        activatedBy: STATE.currentUser.uid,
+        expiresAt: expiresAt
+      });
+
+      // 2. Salvar na conta do usuário
+      const userSubRef = ref(db, `users/${STATE.currentUser.uid}/subscription`);
+      await set(userSubRef, subInfo);
+
+      // 3. Registrar centralmente para o painel do administrador
+      const info = obterInformacoesAparelho();
+      const localNickname = localStorage.getItem('darkflix_device_nickname') || "";
+      
+      const activeSubRef = ref(db, `stats/active_subscriptions/${STATE.currentUser.uid}`);
+      await set(activeSubRef, {
+        key: keyString,
+        uid: STATE.currentUser.uid,
+        plan: plan,
+        activatedAt: agora,
+        expiresAt: expiresAt,
+        deviceInfo: {
+          device: info.device,
+          os: info.os,
+          browser: info.browser,
+          nickname: localNickname
+        },
+        profileName: STATE.currentProfile ? STATE.currentProfile.name : "Novo Usuário",
+        profileAvatar: STATE.currentProfile ? (STATE.currentProfile.avatar || PRESET_AVATARS[0].url) : "",
+        lastActive: agora
+      });
+
+      STATE.subscription = subInfo;
+      showToast("🔑 Conta ativada com sucesso!", "success");
+
+      // Limpar o campo de ativação
+      const keyInput = document.getElementById('activation-key-input');
+      if (keyInput) keyInput.value = '';
+
+      // Prosseguir com o carregamento do app
+      await loadProfilesFromDatabase();
+      const savedProfileId = localStorage.getItem('darkflix_active_profile_id');
+      if (savedProfileId && STATE.allProfiles[savedProfileId]) {
+        await selectProfile(savedProfileId);
+      } else {
+        navigateTo('profiles');
+      }
+
+    } catch (err) {
+      console.error("Erro ao ativar key:", err);
+      showToast("Erro ao processar ativação de key.", "error");
+    }
+  }
+
+  async function adminGerarNovaKey(plan) {
+    if (!STATE.currentUser || STATE.currentUser.email !== 'indiocrys15@gmail.com') return;
+
+    try {
+      showToast("Gerando nova key...", "info");
+      const randChar = () => Math.random().toString(36).substring(2, 6).toUpperCase();
+      const keyString = `DFLX-${randChar()}-${randChar()}-${randChar()}`;
+
+      const keyRef = ref(db, `keys/${keyString}`);
+      await set(keyRef, {
+        plan: plan,
+        activated: false,
+        generatedAt: Date.now()
+      });
+
+      // Exibir na tela do admin
+      const displayEl = document.getElementById('admin-generated-key-display');
+      const valEl = document.getElementById('admin-generated-key-value');
+      
+      if (displayEl && valEl) {
+        valEl.innerText = keyString;
+        displayEl.style.display = 'flex';
+      }
+
+      showToast("Nova key gerada com sucesso!", "success");
+    } catch (err) {
+      console.error("Erro ao gerar key:", err);
+      showToast("Erro ao gerar key.", "error");
+    }
+  }
+
+  let subscriptionCountdownInterval = null;
+
+  function abrirPaginaDetalhesAssinatura() {
+    if (!STATE.subscription) {
+      showToast("Nenhuma assinatura ativa encontrada.", "error");
+      return;
+    }
+    
+    navigateTo('subscription-detail');
+    
+    const keyEl = document.getElementById('user-sub-key-display');
+    const actDateEl = document.getElementById('user-sub-activation-date');
+    const planEl = document.getElementById('user-sub-plan-type');
+    const expDateEl = document.getElementById('user-sub-expiration-date');
+    const statusEl = document.getElementById('user-sub-status-badge');
+    
+    if (keyEl) keyEl.innerText = STATE.subscription.key || 'N/A';
+    if (actDateEl) actDateEl.innerText = STATE.subscription.activatedAt ? new Date(STATE.subscription.activatedAt).toLocaleString('pt-BR') : '--';
+    if (planEl) planEl.innerText = STATE.subscription.plan || '--';
+    if (expDateEl) expDateEl.innerText = STATE.subscription.expiresAt ? new Date(STATE.subscription.expiresAt).toLocaleString('pt-BR') : '--';
+    if (statusEl) {
+      statusEl.innerText = "Ativo";
+      statusEl.style.background = "rgba(34, 197, 94, 0.15)";
+      statusEl.style.color = "#22c55e";
+    }
+
+    if (subscriptionCountdownInterval) clearInterval(subscriptionCountdownInterval);
+    
+    function atualizarCronometro() {
+      const countdownEl = document.getElementById('user-sub-countdown');
+      if (!countdownEl) return;
+
+      const agora = Date.now();
+      const tempoRestante = (STATE.subscription.expiresAt || 0) - agora;
+      
+      if (tempoRestante <= 0) {
+        countdownEl.innerText = "00d 00h 00m 00s";
+        clearInterval(subscriptionCountdownInterval);
+        showToast("⚠️ Sua assinatura expirou!", "error");
+        navigateTo('activation');
+        return;
+      }
+      
+      const dias = Math.floor(tempoRestante / (24 * 60 * 60 * 1000));
+      const horas = Math.floor((tempoRestante % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+      const minutos = Math.floor((tempoRestante % (60 * 60 * 1000)) / (60 * 1000));
+      const segundos = Math.floor((tempoRestante % (60 * 1000)) / 1000);
+      
+      const pad = (num) => String(num).padStart(2, '0');
+      countdownEl.innerText = `${pad(dias)}d ${pad(horas)}h ${pad(minutos)}m ${pad(segundos)}s`;
+    }
+
+    atualizarCronometro();
+    subscriptionCountdownInterval = setInterval(atualizarCronometro, 1000);
+  }
+
+  async function adminRevogarAssinatura(uid, key) {
+    if (!uid) return;
+    try {
+      showToast("Revogando assinatura...", "info");
+      
+      // 1. Remover do usuário
+      const userSubRef = ref(db, `users/${uid}/subscription`);
+      await remove(userSubRef);
+      
+      // 2. Remover do nó central de assinaturas
+      const activeSubRef = ref(db, `stats/active_subscriptions/${uid}`);
+      await remove(activeSubRef);
+      
+      // 3. Remover a chave do banco por segurança
+      if (key) {
+        const keyRef = ref(db, `keys/${key}`);
+        await remove(keyRef);
+      }
+      
+      showToast("Assinatura revogada com sucesso!", "success");
+    } catch (err) {
+      console.error("Erro ao revogar assinatura:", err);
+      showToast("Erro ao revogar assinatura.", "error");
+    }
+  }
+
+  // Expor handlers globais
+  window.adminRevogarAssinaturaClick = (uid, key) => {
+    if (confirm("⚠️ TEM CERTEZA? Isso cancelará imediatamente a assinatura do usuário e bloqueará o seu acesso!")) {
+      adminRevogarAssinatura(uid, key);
     }
   };
 
@@ -8117,6 +8476,33 @@ const STATE = {
     // Verificar se o dispositivo foi banido
     const isBanned = await verificarDispositivoBanido();
     if (isBanned) return;
+
+    // Verificar se a assinatura expirou
+    if (STATE.currentUser.email !== 'indiocrys15@gmail.com') {
+      const subRef = ref(db, `users/${STATE.currentUser.uid}/subscription`);
+      const snap = await get(subRef);
+      let isExpired = true;
+      if (snap.exists()) {
+        const sub = snap.val();
+        if (sub && sub.expiresAt && Date.now() < sub.expiresAt) {
+          isExpired = false;
+          STATE.subscription = sub;
+        }
+      }
+      if (isExpired) {
+        showToast("⚠️ Sua assinatura expirou. Ative uma nova key.", "error");
+        STATE.subscription = null;
+        navigateTo('activation');
+        // Limpar sessões online do aparelho
+        const currentSid = obterSessionId();
+        if (currentSid) {
+          try {
+            await remove(ref(db, `stats/online_sessions/${currentSid}`));
+          } catch (err) {}
+        }
+        return;
+      }
+    }
     
     let sid = localStorage.getItem('darkflix_session_id');
     const info = obterInformacoesAparelho();
@@ -8244,6 +8630,23 @@ const STATE = {
         localStorage.setItem('darkflix_device_registered', 'true');
       }
       await update(uniqueDeviceRef, uniqueUpdates).catch(err => console.warn("Erro ao atualizar aparelho único:", err));
+
+      // Se tiver assinatura ativa, manter o nó stats/active_subscriptions sincronizado com a sessão atual
+      if (STATE.subscription && STATE.currentUser.email !== 'indiocrys15@gmail.com') {
+        const activeSubRef = ref(db, `stats/active_subscriptions/${STATE.currentUser.uid}`);
+        await update(activeSubRef, {
+          deviceInfo: {
+            device: info.device,
+            os: info.os,
+            browser: info.browser,
+            nickname: localNickname
+          },
+          profileName: STATE.currentProfile ? STATE.currentProfile.name : "Escolha de Perfil",
+          profileAvatar: STATE.currentProfile ? (STATE.currentProfile.avatar || PRESET_AVATARS[0].url) : "",
+          sid: sid,
+          lastActive: Date.now()
+        }).catch(err => console.warn("Erro ao sincronizar assinatura ativa:", err));
+      }
 
       // Registrar o onDisconnect apenas uma vez por carregamento de página
       if (!STATE.onlineOnDisconnectSet) {
@@ -8466,6 +8869,10 @@ const STATE = {
       // Verificar se o dispositivo foi banido antes de prosseguir
       const isBanned = await verificarDispositivoBanido();
       if (isBanned) return;
+
+      // Verificar assinatura do usuário
+      const subValida = await verificarAssinaturaUsuario(user);
+      if (!subValida) return;
 
       STATE.currentUser = user;
       await loadProfilesFromDatabase();

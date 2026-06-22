@@ -122,6 +122,10 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               Na Minha Lista
             </button>
+            <button id="btn-dropdown-subscription">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Minha Assinatura
+            </button>
             <hr class="dropdown-divider">
             <button id="btn-dropdown-logout">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
@@ -210,6 +214,71 @@
           <button id="btn-auth-switch">Criar conta</button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ============ ACTIVATION PAGE ============ -->
+  <div class="page-view" id="page-activation" style="display:none;">
+    <div class="auth-card" style="max-width: 480px; margin: 80px auto;">
+      <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.8rem; color: #fff; margin-bottom: 10px; text-align: center;">🔑 Ativar Conta</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; text-align: center; margin-bottom: 25px;">
+        Para começar a assistir ao conteúdo do DarkFlix, por favor digite abaixo a sua chave de acesso (Key).
+      </p>
+      <form id="activation-form" onsubmit="event.preventDefault();">
+        <div class="input-group" style="margin-bottom: 20px;">
+          <input type="text" id="activation-key-input" placeholder="XXXX-XXXX-XXXX" required autocomplete="off" style="text-transform: uppercase; font-family: monospace; letter-spacing: 1px; text-align: center; font-size: 1.15rem; font-weight: 700; height: 50px;">
+        </div>
+        <button type="submit" id="btn-activate-account" class="btn-primary" style="width:100%; height: 48px; font-weight: 700; font-size: 1rem;">Ativar Acesso</button>
+      </form>
+      <div style="margin-top: 25px; text-align: center;">
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Ainda não tem uma key de acesso?</p>
+        <p style="font-size: 0.9rem; color: #fff; font-weight: 600;">Fale com a equipe responsável DarkFlix.</p>
+        <button id="btn-activation-logout" class="btn-secondary" style="margin-top: 20px; width: 100%; background: transparent; border: 1px solid rgba(255,255,255,0.2);">Sair da Conta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SUBSCRIPTION DETAIL PAGE ============ -->
+  <div class="page-view" id="page-subscription-detail" style="display:none;">
+    <div class="devices-container" style="max-width: 600px; margin: 40px auto; padding: 20px;">
+      <div class="devices-header" style="margin-bottom: 30px;">
+        <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.8rem; color: #fff;">🔑 Minha Assinatura</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">Veja os detalhes do período de acesso de sua conta.</p>
+      </div>
+
+      <div class="dashboard-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 15px;">
+          <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 600;">Status do Acesso</span>
+          <span id="user-sub-status-badge" style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Ativo</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 25px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.88rem;">
+            <span style="color: var(--text-muted);">Key Ativada:</span>
+            <code id="user-sub-key-display" style="font-family: monospace; font-size: 1rem; color: #fff; font-weight: 600;">XXXX-XXXX-XXXX</code>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.88rem;">
+            <span style="color: var(--text-muted);">Data de Ativação:</span>
+            <span id="user-sub-activation-date" style="color: #fff; font-weight: 500;">--/--/---- --:--</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.88rem;">
+            <span style="color: var(--text-muted);">Plano:</span>
+            <span id="user-sub-plan-type" style="color: #fff; font-weight: 600; text-transform: capitalize;">--</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.88rem;">
+            <span style="color: var(--text-muted);">Data de Expiração:</span>
+            <span id="user-sub-expiration-date" style="color: #fff; font-weight: 500;">--/--/---- --:--</span>
+          </div>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div style="background: rgba(229, 9, 20, 0.05); border: 1px dashed rgba(229, 9, 20, 0.25); border-radius: var(--radius-md); padding: 20px; text-align: center;">
+          <span style="display: block; font-size: 0.72rem; text-transform: uppercase; color: var(--accent); font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">Tempo Restante</span>
+          <div id="user-sub-countdown" style="font-size: 2.2rem; font-weight: 800; color: #fff; font-family: monospace; letter-spacing: 2px;">00d 00h 00m 00s</div>
+        </div>
+      </div>
+
+      <button id="btn-sub-back-home" class="btn-secondary" style="width: 100%; height: 48px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); font-weight: 700;">Voltar para o Início</button>
     </div>
   </div>
 
@@ -783,6 +852,14 @@
           </div>
           <div class="dashboard-stat-expand-icon">▸</div>
         </div>
+        <div class="dashboard-stat-card clickable" id="admin-card-active-subscriptions" title="Clique para ver assinaturas ativas" style="border-color: rgba(168, 85, 247, 0.15);">
+          <div class="dashboard-stat-icon" style="background: rgba(168, 85, 247, 0.1); color: #a855f7;">🔑</div>
+          <div class="dashboard-stat-info">
+            <span class="dashboard-stat-value" id="admin-subscriptions-count" style="color: #a855f7;">...</span>
+            <span class="dashboard-stat-label">Assinaturas Ativas</span>
+          </div>
+          <div class="dashboard-stat-expand-icon">▸</div>
+        </div>
       </div>
 
       <!-- Painel de Detalhes Expandível -->
@@ -811,6 +888,32 @@
           </p>
           <div class="channels-control-list" id="admin-channels-list">
             <!-- Populated dynamically -->
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <h3>🔑 Gerador de Keys de Acesso</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 20px; line-height: 1.4;">
+            Gere novas keys de acesso temporárias ou recorrentes para os clientes. Após a expiração do tempo, o usuário perderá o acesso automaticamente.
+          </p>
+          <div class="key-generator-form" style="display: flex; flex-wrap: wrap; gap: 15px; align-items: flex-end; margin-bottom: 20px;">
+            <div style="flex: 1; min-width: 150px;">
+              <label style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 600;">Plano / Duração</label>
+              <select id="admin-key-plan" style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 10px; color: var(--text-primary); outline: none;">
+                <option value="teste" style="background:#141414;">Teste (3 Horas)</option>
+                <option value="mensal" style="background:#141414;" selected>Mensal (30 Dias)</option>
+                <option value="trimestral" style="background:#141414;">Trimestral (90 Dias)</option>
+                <option value="semestral" style="background:#141414;">Semestral (180 Dias)</option>
+                <option value="anual" style="background:#141414;">Anual (365 Dias)</option>
+              </select>
+            </div>
+            <button id="admin-btn-generate-key" style="background: var(--accent); color: white; border: none; font-weight: 700; padding: 10px 20px; border-radius: var(--radius-sm); cursor: pointer; font-family: 'Montserrat', sans-serif; transition: background 0.2s;">Gerar Nova Key</button>
+          </div>
+          <div id="admin-generated-key-display" style="display: none; background: rgba(34, 197, 94, 0.1); border: 1px dashed #22c55e; border-radius: var(--radius-sm); padding: 12px; margin-bottom: 20px; align-items: center; justify-content: space-between; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Key Gerada:</span>
+              <code id="admin-generated-key-value" style="font-family: monospace; font-size: 1.15rem; color: #22c55e; font-weight: 700; letter-spacing: 1px;">XXXX-XXXX-XXXX</code>
+            </div>
+            <button id="admin-btn-copy-key" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.72rem; font-weight: 600; cursor: pointer;">Copiar</button>
           </div>
         </div>
       </div>

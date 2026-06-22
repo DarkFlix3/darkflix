@@ -5868,5 +5868,40 @@ ul, ol {
   user-select: none;
 }
 
+/* ===== Admin Active Subscriptions Card Active State ===== */
+#admin-card-active-subscriptions.active {
+  border-color: #a855f7 !important;
+}
+#admin-card-active-subscriptions.active .dashboard-stat-expand-icon {
+  color: #a855f7 !important;
+  transform: rotate(90deg);
+}
+#admin-card-active-subscriptions.clickable:hover {
+  border-color: rgba(168, 85, 247, 0.4) !important;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.1) !important;
+}
+
+/* ===== Admin detail card for subscriptions custom styling ===== */
+.admin-btn-revoke {
+  background: transparent;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.admin-btn-revoke:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: #ef4444;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.15);
+}
+
 
 
