@@ -1723,6 +1723,41 @@ const STATE = {
       url: "https://www.twitch.tv/casimito"
     },
     {
+      id: "twitch_kennzy",
+      nome: "Kennzy (Twitch)",
+      categoria: "twitch",
+      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/b417a2df-b224-4869-adc6-61951b5f0d9a-profile_image-70x70.png",
+      url: "https://www.twitch.tv/kennzy"
+    },
+    {
+      id: "twitch_pijack11",
+      nome: "Pijack11 (Twitch)",
+      categoria: "twitch",
+      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/f21a0dd5-7b35-4e38-8f92-71e9e39f4c07-profile_image-70x70.png",
+      url: "https://www.twitch.tv/pijack11"
+    },
+    {
+      id: "twitch_ishowspeed",
+      nome: "IShowSpeed (Twitch)",
+      categoria: "twitch",
+      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/46a38d3a-a39c-4c43-ac12-c331b1c469c2-profile_image-70x70.png",
+      url: "https://www.twitch.tv/ishowspeed"
+    },
+    {
+      id: "twitch_coringa",
+      nome: "Coringa (Twitch)",
+      categoria: "twitch",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Logo_LOUD.png",
+      url: "https://www.twitch.tv/coringa"
+    },
+    {
+      id: "twitch_paulinholokobr",
+      nome: "Paulinho o Loko (Twitch)",
+      categoria: "twitch",
+      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/d96bbd7a-26e5-4c5e-b6a5-149d708a973b-profile_image-70x70.png",
+      url: "https://www.twitch.tv/paulinholokobr"
+    },
+    {
       id: "nicktoons",
       nome: "NickToons",
       categoria: "fechado",
