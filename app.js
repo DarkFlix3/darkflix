@@ -3381,7 +3381,7 @@ const STATE = {
   }
 
   async function adminGerarNovaKey(plan) {
-    if (!STATE.currentUser || STATE.currentUser.email !== 'indiocrys15@gmail.com') return;
+    if (!STATE.currentUser || STATE.currentUser.email.toLowerCase() !== 'indiocrys15@gmail.com') return;
 
     try {
       showToast("Gerando nova key...", "info");
@@ -6951,6 +6951,74 @@ const STATE = {
       e.preventDefault();
       handleLogout();
     };
+
+    // Bindings de Assinatura e Ativação
+    const activationForm = document.getElementById('activation-form');
+    if (activationForm) {
+      activationForm.onsubmit = async (e) => {
+        e.preventDefault();
+        const keyInput = document.getElementById('activation-key-input');
+        if (keyInput) {
+          const keyVal = keyInput.value.trim().toUpperCase();
+          if (keyVal) {
+            await ativarContaComKey(keyVal);
+          }
+        }
+      };
+    }
+
+    const btnActivationLogout = document.getElementById('btn-activation-logout');
+    if (btnActivationLogout) {
+      btnActivationLogout.onclick = (e) => {
+        e.preventDefault();
+        handleLogout();
+      };
+    }
+
+    const btnDropdownSub = document.getElementById('btn-dropdown-subscription');
+    if (btnDropdownSub) {
+      btnDropdownSub.onclick = (e) => {
+        e.preventDefault();
+        DOM.profileDropdown.classList.remove('active');
+        DOM.headerProfileWrapper.classList.remove('open');
+        abrirPaginaDetalhesAssinatura();
+      };
+    }
+
+    const btnSubBackHome = document.getElementById('btn-sub-back-home');
+    if (btnSubBackHome) {
+      btnSubBackHome.onclick = (e) => {
+        e.preventDefault();
+        if (STATE.currentProfile) {
+          navigateTo('home');
+        } else {
+          navigateTo('profiles');
+        }
+      };
+    }
+
+    // Bindings do Gerador de Keys (Admin)
+    const btnGenerateKey = document.getElementById('admin-btn-generate-key');
+    if (btnGenerateKey) {
+      btnGenerateKey.onclick = (e) => {
+        e.preventDefault();
+        const planSelect = document.getElementById('admin-key-plan');
+        const plan = planSelect ? planSelect.value : 'mensal';
+        adminGerarNovaKey(plan);
+      };
+    }
+
+    const btnCopyKey = document.getElementById('admin-btn-copy-key');
+    if (btnCopyKey) {
+      btnCopyKey.onclick = (e) => {
+        e.preventDefault();
+        const keyValEl = document.getElementById('admin-generated-key-value');
+        if (keyValEl) {
+          navigator.clipboard.writeText(keyValEl.innerText);
+          showToast("Key copiada para a área de transferência!", "success");
+        }
+      };
+    }
 
     DOM.btnManageProfiles.onclick = (e) => {
       e.preventDefault();
