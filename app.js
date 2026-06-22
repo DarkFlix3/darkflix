@@ -3359,20 +3359,16 @@ const STATE = {
       });
 
       STATE.subscription = subInfo;
-      showToast("🔑 Conta ativada com sucesso!", "success");
+      showToast("🔑 Conta ativada com sucesso! Inicializando...", "success");
 
       // Limpar o campo de ativação
       const keyInput = document.getElementById('activation-key-input');
       if (keyInput) keyInput.value = '';
 
-      // Prosseguir com o carregamento do app
-      await loadProfilesFromDatabase();
-      const savedProfileId = localStorage.getItem('darkflix_active_profile_id');
-      if (savedProfileId && STATE.allProfiles[savedProfileId]) {
-        await selectProfile(savedProfileId);
-      } else {
-        navigateTo('profiles');
-      }
+      // Recarregar a página para inicializar todos os ouvintes e fluxos com a nova assinatura
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
 
     } catch (err) {
       console.error("Erro ao ativar key:", err);
@@ -8955,11 +8951,12 @@ const STATE = {
       const isBanned = await verificarDispositivoBanido();
       if (isBanned) return;
 
+      STATE.currentUser = user;
+
       // Verificar assinatura do usuário
       const subValida = await verificarAssinaturaUsuario(user);
       if (!subValida) return;
 
-      STATE.currentUser = user;
       await loadProfilesFromDatabase();
 
       // Verificar se o usuário retornou de um link de verificação de email (criação/redefinição de PIN)
