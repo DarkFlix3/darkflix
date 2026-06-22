@@ -1702,6 +1702,27 @@ const STATE = {
 
   const listaCanais = [
     {
+      id: "twitch_gaules",
+      nome: "Gaules (Twitch)",
+      categoria: "twitch",
+      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/05690b79-abaf-4191-bb27-024227c2f6d2-profile_image-70x70.png",
+      url: "https://www.twitch.tv/gaules"
+    },
+    {
+      id: "twitch_alanzoka",
+      nome: "Alanzoka (Twitch)",
+      categoria: "twitch",
+      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/17b12270-ec18-406c-843e-a1202f54a8b7-profile_image-70x70.png",
+      url: "https://www.twitch.tv/alanzoka"
+    },
+    {
+      id: "twitch_casimito",
+      nome: "Casimito (Twitch)",
+      categoria: "twitch",
+      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/f466c08c-e863-4754-b103-90d5a8cfbaf0-profile_image-70x70.png",
+      url: "https://www.twitch.tv/casimito"
+    },
+    {
       id: "nicktoons",
       nome: "NickToons",
       categoria: "fechado",
@@ -2359,6 +2380,24 @@ const STATE = {
     return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&fs=1` : url;
   }
 
+  // Extrai o nome do canal Twitch a partir de uma URL twitch.tv
+  function extrairCanalTwitch(url) {
+    try {
+      const u = new URL(url);
+      const parts = u.pathname.split('/').filter(Boolean);
+      return parts[0] || null;
+    } catch (e) {
+      // Fallback: extrair após twitch.tv/
+      const match = url.match(/twitch\.tv\/([\w]+)/);
+      return match ? match[1] : null;
+    }
+  }
+
+  function getTwitchEmbedUrl(channelName) {
+    const parentHost = window.location.hostname || 'localhost';
+    return `https://player.twitch.tv/?channel=${channelName}&parent=${parentHost}&muted=false`;
+  }
+
   function stopCanalPlayer() {
     if (canalPlayer) {
       try {
@@ -2422,8 +2461,12 @@ const STATE = {
       }
       
       item.onclick = () => carregarCanal(canal.id);
+      const liveBadge = canal.categoria === 'twitch' ? '<span class="twitch-live-badge">LIVE</span>' : '';
       item.innerHTML = `
-        <img src="${canal.logo}" onerror="this.src='https://via.placeholder.com/100x70?text=LOGO'">
+        <div style="position:relative;display:inline-block;">
+          <img src="${canal.logo}" onerror="this.src='https://via.placeholder.com/100x70?text=LOGO'">
+          ${liveBadge}
+        </div>
         <span>${canal.nome}</span>
       `;
       grid.appendChild(item);
@@ -2500,8 +2543,23 @@ const STATE = {
       }
 
       const isYoutube = canal.url.includes('youtube.com/') || canal.url.includes('youtu.be/');
+      const isTwitch = canal.url.includes('twitch.tv/');
 
-      if (isYoutube) {
+      if (isTwitch) {
+        const twitchChannel = extrairCanalTwitch(canal.url);
+        if (twitchChannel && playerContainer) {
+          const embedUrl = getTwitchEmbedUrl(twitchChannel);
+          playerContainer.style.overflow = 'hidden';
+          playerContainer.style.position = 'relative';
+          playerContainer.innerHTML = `
+            <iframe src="${embedUrl}" 
+                    style="width: 100%; height: 100%; border: none;" 
+                    allow="autoplay; encrypted-media; fullscreen" 
+                    allowfullscreen>
+            </iframe>
+          `;
+        }
+      } else if (isYoutube) {
         const embedUrl = getYoutubeEmbedUrl(canal.url);
         if (playerContainer) {
           playerContainer.style.overflow = 'hidden';
@@ -2746,10 +2804,19 @@ const STATE = {
       const sortedCanais = [...listaCanais].sort((a, b) => a.nome.localeCompare(b.nome));
       const canaisAbertos = sortedCanais.filter(c => c.categoria === 'aberto');
       const canaisFechados = sortedCanais.filter(c => c.categoria === 'fechado');
+      const canaisTwitch = sortedCanais.filter(c => c.categoria === 'twitch');
 
       const buildChannelItemHtml = (canal) => {
         const isMaint = STATE.maintenanceChannels && STATE.maintenanceChannels[canal.id] === true;
         const isHidden = STATE.hiddenChannels && STATE.hiddenChannels[canal.id] === true;
+        
+        let badgeText = '📺 Canal Aberto';
+        if (canal.categoria === 'fechado') {
+          badgeText = '🔒 Canal Fechado';
+        } else if (canal.categoria === 'twitch') {
+          badgeText = '🟣 Streamer Twitch';
+        }
+
         return `
           <div class="channel-control-card">
             <!-- Header part: Logo & Name -->
@@ -2759,7 +2826,7 @@ const STATE = {
               </div>
               <div class="channel-control-details">
                 <h4>${canal.nome}</h4>
-                <span class="channel-badge">${canal.categoria === 'aberto' ? '📺 Canal Aberto' : '🔒 Canal Fechado'}</span>
+                <span class="channel-badge">${badgeText}</span>
               </div>
             </div>
 
@@ -2789,13 +2856,23 @@ const STATE = {
           </div>
         </div>
         
-        <div>
-          <h4 style="margin: 40px 0 16px 0; color: #a855f7; border-left: 3px solid #a855f7; padding-left: 8px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; display: flex; justify-content: space-between;">
+        <div style="margin-bottom: 25px;">
+          <h4 style="margin: 0 0 16px 0; color: #a855f7; border-left: 3px solid #a855f7; padding-left: 8px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; display: flex; justify-content: space-between;">
             <span>🔒 Canais Fechados</span>
             <span style="font-size: 0.75rem; opacity: 0.8; font-weight: 500; font-family: 'Montserrat', sans-serif;">${canaisFechados.length} no total</span>
           </h4>
           <div class="channels-sublist-group">
             ${canaisFechados.map(buildChannelItemHtml).join('')}
+          </div>
+        </div>
+
+        <div>
+          <h4 style="margin: 40px 0 16px 0; color: #9146ff; border-left: 3px solid #9146ff; padding-left: 8px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; display: flex; justify-content: space-between;">
+            <span>🟣 Streamers Twitch</span>
+            <span style="font-size: 0.75rem; opacity: 0.8; font-weight: 500; font-family: 'Montserrat', sans-serif;">${canaisTwitch.length} no total</span>
+          </h4>
+          <div class="channels-sublist-group">
+            ${canaisTwitch.map(buildChannelItemHtml).join('')}
           </div>
         </div>
       `;
@@ -4105,7 +4182,22 @@ const STATE = {
         }
 
         const isYoutube = canal.url.includes('youtube.com/') || canal.url.includes('youtu.be/');
-        if (isYoutube) {
+        const isTwitch = canal.url.includes('twitch.tv/');
+
+        if (isTwitch) {
+          const twitchChannel = extrairCanalTwitch(canal.url);
+          if (twitchChannel) {
+            const embedUrl = getTwitchEmbedUrl(twitchChannel);
+            DOM.cinemaIframe.src = embedUrl;
+            DOM.cinemaIframe.style.display = 'block';
+            DOM.cinemaIframe.style.transform = '';
+            DOM.cinemaIframe.style.transformOrigin = '';
+            DOM.cinemaBlockerTop.style.display = 'none';
+            if (DOM.cinemaExternalBtn) {
+              DOM.cinemaExternalBtn.href = `https://www.twitch.tv/${twitchChannel}`;
+            }
+          }
+        } else if (isYoutube) {
           const embedUrl = getYoutubeEmbedUrl(canal.url);
           DOM.cinemaIframe.src = embedUrl;
           DOM.cinemaIframe.style.display = 'block';
@@ -4951,6 +5043,7 @@ const STATE = {
       const sortedCanais = [...listaCanais].sort((a, b) => a.nome.localeCompare(b.nome));
       const abertos = sortedCanais.filter(c => c.categoria === 'aberto');
       const fechados = sortedCanais.filter(c => c.categoria === 'fechado');
+      const twitch = sortedCanais.filter(c => c.categoria === 'twitch');
       
       let selectHtml = '<option value="">-- Trocar de Canal --</option>';
       
@@ -4969,6 +5062,18 @@ const STATE = {
       if (fechados.length > 0) {
         selectHtml += `<optgroup label="🔒 Canais Fechados">`;
         fechados.forEach(c => {
+          const isMaint = STATE.maintenanceChannels && STATE.maintenanceChannels[c.id] === true;
+          const isHidden = STATE.hiddenChannels && STATE.hiddenChannels[c.id] === true;
+          if (!isHidden) {
+            selectHtml += `<option value="${c.id}"${isMaint ? ' disabled' : ''}>${c.nome}${isMaint ? ' (Manutenção)' : ''}</option>`;
+          }
+        });
+        selectHtml += `</optgroup>`;
+      }
+
+      if (twitch.length > 0) {
+        selectHtml += `<optgroup label="🟣 Streamers Twitch">`;
+        twitch.forEach(c => {
           const isMaint = STATE.maintenanceChannels && STATE.maintenanceChannels[c.id] === true;
           const isHidden = STATE.hiddenChannels && STATE.hiddenChannels[c.id] === true;
           if (!isHidden) {
@@ -7523,25 +7628,16 @@ const STATE = {
       }
     });
 
-    // Bind Canal Category tabs
-    const tabAberto = document.getElementById('btn-tab-aberto');
-    const tabFechado = document.getElementById('btn-tab-fechado');
-    if (tabAberto && tabFechado) {
-      tabAberto.onclick = (e) => {
+    // Bind Canal Category tabs dinamicamente
+    document.querySelectorAll('.canal-tab-btn').forEach(btn => {
+      btn.onclick = (e) => {
         e.preventDefault();
-        STATE.selectedCanalCategory = 'aberto';
-        tabAberto.classList.add('active');
-        tabFechado.classList.remove('active');
+        document.querySelectorAll('.canal-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        STATE.selectedCanalCategory = btn.dataset.category || 'aberto';
         renderCanaisPage();
       };
-      tabFechado.onclick = (e) => {
-        e.preventDefault();
-        STATE.selectedCanalCategory = 'fechado';
-        tabFechado.classList.add('active');
-        tabAberto.classList.remove('active');
-        renderCanaisPage();
-      };
-    }
+    });
 
     // Inicializar Watch Party
     initWatchPartyEvents();

@@ -3323,6 +3323,29 @@ ul, ol {
   100% { transform: scale(0.9); opacity: 0.5; }
 }
 
+/* Twitch Live Badge */
+.twitch-live-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #e91916;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px rgba(233, 25, 22, 0.6);
+  animation: twitchBadgePulse 2s ease-in-out infinite;
+}
+
+@keyframes twitchBadgePulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(233, 25, 22, 0.4); }
+  50% { box-shadow: 0 0 14px rgba(233, 25, 22, 0.9); }
+}
+
 @media (max-width: 600px) {
   .canais-grid-container {
     grid-template-columns: repeat(2, 1fr);
