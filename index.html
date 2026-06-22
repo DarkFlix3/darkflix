@@ -896,7 +896,7 @@
             Gere novas keys de acesso temporárias ou recorrentes para os clientes. Após a expiração do tempo, o usuário perderá o acesso automaticamente.
           </p>
           <div class="key-generator-form" style="display: flex; flex-wrap: wrap; gap: 15px; align-items: flex-end; margin-bottom: 20px;">
-            <div style="flex: 1; min-width: 150px;">
+            <div style="flex: 2; min-width: 150px;">
               <label style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 600;">Plano / Duração</label>
               <select id="admin-key-plan" style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 10px; color: var(--text-primary); outline: none;">
                 <option value="teste" style="background:#141414;">Teste (3 Horas)</option>
@@ -906,14 +906,38 @@
                 <option value="anual" style="background:#141414;">Anual (365 Dias)</option>
               </select>
             </div>
-            <button id="admin-btn-generate-key" style="background: var(--accent); color: white; border: none; font-weight: 700; padding: 10px 20px; border-radius: var(--radius-sm); cursor: pointer; font-family: 'Montserrat', sans-serif; transition: background 0.2s;">Gerar Nova Key</button>
+            <div style="flex: 1; min-width: 80px; max-width: 120px;">
+              <label style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 600;">Quantidade</label>
+              <input type="number" id="admin-key-quantity" min="1" max="100" value="1" style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 10px; color: var(--text-primary); outline: none; text-align: center;">
+            </div>
+            <button id="admin-btn-generate-key" style="background: var(--accent); color: white; border: none; font-weight: 700; padding: 10px 20px; border-radius: var(--radius-sm); cursor: pointer; font-family: 'Montserrat', sans-serif; transition: background 0.2s;">Gerar Keys</button>
           </div>
           <div id="admin-generated-key-display" style="display: none; background: rgba(34, 197, 94, 0.1); border: 1px dashed #22c55e; border-radius: var(--radius-sm); padding: 12px; margin-bottom: 20px; align-items: center; justify-content: space-between; gap: 10px;">
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <span style="font-size: 0.85rem; color: var(--text-muted);">Key Gerada:</span>
-              <code id="admin-generated-key-value" style="font-family: monospace; font-size: 1.15rem; color: #22c55e; font-weight: 700; letter-spacing: 1px;">XXXX-XXXX-XXXX</code>
+            <div style="display: flex; align-items: center; gap: 10px; width: 100%;">
+              <span style="font-size: 0.85rem; color: var(--text-muted); white-space: nowrap;" id="admin-generated-key-label">Key Gerada:</span>
+              <code id="admin-generated-key-value" style="font-family: monospace; font-size: 1.15rem; color: #22c55e; font-weight: 700; letter-spacing: 1px; word-break: break-all;">XXXX-XXXX-XXXX</code>
             </div>
-            <button id="admin-btn-copy-key" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.72rem; font-weight: 600; cursor: pointer;">Copiar</button>
+            <button id="admin-btn-copy-key" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.72rem; font-weight: 600; cursor: pointer; white-space: nowrap;">Copiar</button>
+          </div>
+
+          <h4 style="margin: 25px 0 12px 0; color: var(--text-primary); border-left: 3px solid var(--accent); padding-left: 8px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px;">🔑 Histórico de Keys Geradas</h4>
+          <div class="keys-history-container">
+            <table class="keys-history-table">
+              <thead>
+                <tr>
+                  <th>Key</th>
+                  <th>Plano</th>
+                  <th>Gerada em</th>
+                  <th>Status</th>
+                  <th style="text-align: right;">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="admin-keys-history-list">
+                <tr>
+                  <td colspan="5" style="padding: 20px; text-align: center; color: var(--text-muted);">Nenhuma key no histórico.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

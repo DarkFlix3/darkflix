@@ -625,6 +625,11 @@ const STATE = {
       STATE.adminSubscriptionsListener();
       STATE.adminSubscriptionsListener = null;
     }
+    if (STATE.adminKeysListener) {
+      STATE.adminKeysListener();
+      STATE.adminKeysListener = null;
+    }
+    pararControleCronometroAdminSubs();
     STATE.adminDetailPanelType = null;
   }
 
@@ -2585,10 +2590,93 @@ const STATE = {
     }
   }
 
+  function renderKeysHistoryTable(keysData) {
+    const listContainer = document.getElementById('admin-keys-history-list');
+    if (!listContainer) return;
+
+    const entries = Object.entries(keysData);
+    if (entries.length === 0) {
+      listContainer.innerHTML = `
+        <tr>
+          <td colspan="5" style="padding: 20px; text-align: center; color: var(--text-muted); background: transparent;">Nenhuma key no histórico.</td>
+        </tr>
+      `;
+      return;
+    }
+
+    // Ordenar keys por data de geração (mais recentes primeiro)
+    entries.sort((a, b) => {
+      const timeA = a[1].generatedAt || 0;
+      const timeB = b[1].generatedAt || 0;
+      return timeB - timeA;
+    });
+
+    const formatarPlano = (p) => {
+      const nomes = {
+        'teste': 'Teste (3h)',
+        'mensal': 'Mensal (30d)',
+        'trimestral': 'Trimestral (90d)',
+        'semestral': 'Semestral (180d)',
+        'anual': 'Anual (365d)'
+      };
+      return nomes[p] || (p ? p.charAt(0).toUpperCase() + p.slice(1) : 'Mensal');
+    };
+
+    const agora = Date.now();
+
+    listContainer.innerHTML = entries.map(([keyString, data]) => {
+      const dataCriada = data.generatedAt ? new Date(data.generatedAt).toLocaleString('pt-BR') : '--';
+      
+      let statusBadge = '';
+      let isActionable = true;
+
+      if (data.revoked === true || data.expired === true) {
+        statusBadge = `<span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 2px 6px; border-radius: 4px; font-weight: 600; font-size: 0.7rem;">Revogada</span>`;
+        isActionable = false;
+      } else if (data.activated === true) {
+        if (data.expiresAt && agora > data.expiresAt) {
+          statusBadge = `<span style="background: rgba(156, 163, 175, 0.15); color: #9ca3af; padding: 2px 6px; border-radius: 4px; font-weight: 600; font-size: 0.7rem;">Expirada</span>`;
+          isActionable = false;
+        } else {
+          const emailInfo = data.activatedByEmail ? ` (${data.activatedByEmail})` : '';
+          statusBadge = `<span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 2px 6px; border-radius: 4px; font-weight: 600; font-size: 0.7rem;" title="Ativada por ${data.activatedBy || 'usuário'}${emailInfo}">Ativada</span>`;
+        }
+      } else {
+        statusBadge = `<span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 2px 6px; border-radius: 4px; font-weight: 600; font-size: 0.7rem;">Válida / Livre</span>`;
+      }
+
+      const copyBtn = `<button class="admin-btn-action-history" onclick="navigator.clipboard.writeText('${keyString}'); showToast('Key copiada!', 'success');" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: #fff; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 0.7rem; margin-right: 5px;" title="Copiar Key">📋</button>`;
+      
+      const expirarBtn = isActionable 
+        ? `<button class="admin-btn-action-history" onclick="window.adminExpirarKeyClick('${keyString}', '${data.activatedBy || ''}')" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.2); color: #ef4444; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 0.7rem; font-weight: 600;" title="Expirar / Invalidar Key">🚫 Expira</button>` 
+        : `<span style="color: var(--text-muted); font-size: 0.7rem;">—</span>`;
+
+      return `
+        <tr style="border-bottom: 1px solid rgba(255,255,255,0.03);">
+          <td style="padding: 10px; font-family: monospace; font-weight: 600; color: #fff; word-break: break-all;">${keyString}</td>
+          <td style="padding: 10px; color: var(--text-secondary); white-space: nowrap;">${formatarPlano(data.plan)}</td>
+          <td style="padding: 10px; color: var(--text-muted); white-space: nowrap;">${dataCriada}</td>
+          <td style="padding: 10px;">${statusBadge}</td>
+          <td style="padding: 10px; text-align: right; white-space: nowrap;">
+            ${copyBtn}
+            ${expirarBtn}
+          </td>
+        </tr>
+      `;
+    }).join('');
+  }
+
   // ---------- Control Panel (Perfil do Site) ----------
   function renderAdminDashboard() {
     // Limpar ouvintes anteriores para evitar vazamentos de memória e duplicações
     pararOuvintesAdmin();
+
+    // Ouvir histórico de keys em tempo real
+    const keysRef = ref(db, 'keys');
+    STATE.adminKeysListener = onValue(keysRef, (snap) => {
+      const keysData = snap.val() || {};
+      renderKeysHistoryTable(keysData);
+    }, err => console.error("Erro ao ouvir chaves:", err));
 
     // Ouvir assinaturas ativas em tempo real
     const activeSubsRef = ref(db, 'stats/active_subscriptions');
@@ -2801,6 +2889,7 @@ const STATE = {
         STATE.adminDetailListener();
         STATE.adminDetailListener = null;
       }
+      pararControleCronometroAdminSubs();
     } else {
       // Abrir/atualizar o painel
       panel.style.display = 'block';
@@ -2830,6 +2919,7 @@ const STATE = {
     const countEl = document.getElementById('admin-detail-count');
     
     if (!body) return;
+    pararControleCronometroAdminSubs();
 
     // Mostrar indicador de carregamento
     body.innerHTML = `
@@ -2921,6 +3011,7 @@ const STATE = {
         STATE.lastAdminDetailData.sort((a, b) => a.expiresAt - b.expiresAt);
 
         displayAdminDetailItems();
+        iniciarControleCronometroAdminSubs();
       }, (err) => {
         console.error("Erro ao carregar assinaturas:", err);
         body.innerHTML = `<div class="admin-detail-empty"><p style="color: #ef4444;">Erro ao carregar assinaturas. Verifique as regras de segurança do Firebase.</p></div>`;
@@ -3063,7 +3154,7 @@ const STATE = {
             </div>
             <div class="admin-user-card-detail-item">
               <span class="detail-label">Validade:</span>
-              <span style="${remaining <= 0 ? 'color:#ef4444; font-weight:700;' : ''}">${timeRemainingText}</span>
+              <span class="admin-sub-countdown" data-expires="${item.expiresAt}" style="${remaining <= 0 ? 'color:#ef4444; font-weight:700;' : ''}">${timeRemainingText}</span>
             </div>
           </div>
         `;
@@ -3305,6 +3396,10 @@ const STATE = {
       }
 
       const keyData = snap.val();
+      if (keyData.revoked === true || keyData.expired === true) {
+        showToast("❌ Esta key foi expirada ou revogada pelo administrador.", "error");
+        return;
+      }
       if (keyData.activated === true) {
         showToast("❌ Esta key já foi ativada em outra conta.", "error");
         return;
@@ -3333,6 +3428,7 @@ const STATE = {
         activated: true,
         activatedAt: agora,
         activatedBy: STATE.currentUser.uid,
+        activatedByEmail: STATE.currentUser.email || "N/A",
         expiresAt: expiresAt
       });
 
@@ -3390,8 +3486,13 @@ const STATE = {
       return;
     }
 
+    const qtyInput = document.getElementById('admin-key-quantity');
+    let quantity = qtyInput ? parseInt(qtyInput.value) : 1;
+    if (isNaN(quantity) || quantity < 1) quantity = 1;
+    if (quantity > 100) quantity = 100;
+
     try {
-      showToast("Gerando nova key...", "info");
+      showToast(quantity === 1 ? "Gerando nova key..." : `Gerando ${quantity} novas keys...`, "info");
       
       // Formato da key: DFLX-[PLANO]-[CHARS_ALEATORIOS]
       const prefixos = {
@@ -3403,25 +3504,40 @@ const STATE = {
       };
       const pref = prefixos[plan] || 'MEN';
       const randChar = () => Math.random().toString(36).substring(2, 6).toUpperCase();
-      const keyString = `DFLX-${pref}-${randChar()}-${randChar()}`;
+      
+      const keysGenerated = [];
+      const agora = Date.now();
 
-      const keyRef = ref(db, `keys/${keyString}`);
-      await set(keyRef, {
-        plan: plan,
-        activated: false,
-        generatedAt: Date.now()
-      });
+      for (let i = 0; i < quantity; i++) {
+        const keyString = `DFLX-${pref}-${randChar()}-${randChar()}`;
+        const keyRef = ref(db, `keys/${keyString}`);
+        await set(keyRef, {
+          plan: plan,
+          activated: false,
+          generatedAt: agora
+        });
+        keysGenerated.push(keyString);
+      }
 
       // Exibir na tela do admin
       const displayEl = document.getElementById('admin-generated-key-display');
+      const labelEl = document.getElementById('admin-generated-key-label');
       const valEl = document.getElementById('admin-generated-key-value');
       
       if (displayEl && valEl) {
-        valEl.innerText = keyString;
+        if (keysGenerated.length === 1) {
+          if (labelEl) labelEl.innerText = "Key Gerada:";
+          valEl.innerText = keysGenerated[0];
+          valEl.style.whiteSpace = 'normal';
+        } else {
+          if (labelEl) labelEl.innerText = "Keys Geradas:";
+          valEl.innerText = keysGenerated.join('\n');
+          valEl.style.whiteSpace = 'pre-wrap';
+        }
         displayEl.style.display = 'flex';
       }
 
-      showToast("🔑 Nova key gerada e registrada com sucesso!", "success");
+      showToast(keysGenerated.length === 1 ? "🔑 Nova key gerada e registrada com sucesso!" : `🔑 ${keysGenerated.length} novas keys geradas com sucesso!`, "success");
     } catch (err) {
       console.error("Erro ao gerar key:", err);
       showToast("Erro ao gerar key.", "error");
@@ -3429,6 +3545,7 @@ const STATE = {
   }
 
   let subscriptionCountdownInterval = null;
+  let adminSubsCountdownInterval = null;
 
   function abrirPaginaDetalhesAssinatura() {
     if (!STATE.subscription) {
@@ -3483,6 +3600,84 @@ const STATE = {
     atualizarCronometro();
     subscriptionCountdownInterval = setInterval(atualizarCronometro, 1000);
   }
+
+  function iniciarControleCronometroAdminSubs() {
+    if (adminSubsCountdownInterval) clearInterval(adminSubsCountdownInterval);
+    
+    adminSubsCountdownInterval = setInterval(() => {
+      const elements = document.querySelectorAll('.admin-sub-countdown');
+      if (elements.length === 0) {
+        pararControleCronometroAdminSubs();
+        return;
+      }
+      
+      const agora = Date.now();
+      elements.forEach(el => {
+        const expiresAt = parseInt(el.dataset.expires);
+        if (isNaN(expiresAt)) return;
+        
+        const remaining = expiresAt - agora;
+        if (remaining <= 0) {
+          el.innerText = 'Expirado';
+          el.style.color = '#ef4444';
+          el.style.fontWeight = '700';
+        } else {
+          const dias = Math.floor(remaining / (24 * 60 * 60 * 1000));
+          const horas = Math.floor((remaining % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+          const minutos = Math.floor((remaining % (60 * 60 * 1000)) / (60 * 1000));
+          const segundos = Math.floor((remaining % (60 * 1000)) / 1000);
+          
+          const pad = (num) => String(num).padStart(2, '0');
+          el.innerText = `${pad(dias)}d ${pad(horas)}h ${pad(minutos)}m ${pad(segundos)}s restantes`;
+        }
+      });
+    }, 1000);
+  }
+
+  function pararControleCronometroAdminSubs() {
+    if (adminSubsCountdownInterval) {
+      clearInterval(adminSubsCountdownInterval);
+      adminSubsCountdownInterval = null;
+    }
+  }
+
+  async function adminExpirarKey(keyString, uid) {
+    if (!keyString) return;
+    try {
+      showToast("Expirando/invalidando key...", "info");
+      
+      // 1. Marcar a key como revogada/expirada no banco de dados
+      const keyRef = ref(db, `keys/${keyString}`);
+      await update(keyRef, {
+        revoked: true,
+        expired: true
+      });
+
+      // 2. Se a key já tiver sido ativada por um usuário, revogar o acesso dele imediatamente
+      if (uid && uid !== "null" && uid !== "undefined" && uid !== "") {
+        const userSubRef = ref(db, `users/${uid}/subscription`);
+        await remove(userSubRef);
+
+        const activeSubRef = ref(db, `stats/active_subscriptions/${uid}`);
+        await remove(activeSubRef);
+      }
+
+      showToast("🔑 Key expirada e invalidada com sucesso!", "success");
+    } catch (err) {
+      console.error("Erro ao expirar key:", err);
+      showToast("Erro ao expirar key.", "error");
+    }
+  }
+
+  // Expor handlers globais adicionais
+  window.adminExpirarKeyClick = (keyString, uid) => {
+    const msg = (uid && uid !== "null" && uid !== "undefined" && uid !== "")
+      ? "⚠️ ATENÇÃO: Esta key já está ATIVA na conta de um usuário. Ao expirar esta key, a assinatura do usuário será CANCELADA imediatamente. Deseja continuar?"
+      : "Tem certeza que deseja invalidar/expirar esta key? Ela não poderá mais ser usada para ativar nenhuma conta.";
+    if (confirm(msg)) {
+      adminExpirarKey(keyString, uid);
+    }
+  };
 
   async function adminRevogarAssinatura(uid, key) {
     if (!uid) return;
