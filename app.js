@@ -3465,9 +3465,13 @@ const STATE = {
       const keyInput = document.getElementById('activation-key-input');
       if (keyInput) keyInput.value = '';
 
+      // Limpar códigos de sala pendentes e parâmetros da URL para evitar auto-entrar em salas indesejadas pós-ativação
+      localStorage.removeItem('darkflix_pending_room_code');
+      window.history.replaceState({}, document.title, window.location.pathname);
+
       // Recarregar a página para inicializar todos os ouvintes e fluxos com a nova assinatura
       setTimeout(() => {
-        window.location.reload();
+        window.location.href = window.location.origin + window.location.pathname;
       }, 1500);
 
     } catch (err) {
@@ -8186,6 +8190,7 @@ const STATE = {
       localStorage.removeItem('darkflix_active_profile_id');
       localStorage.removeItem('darkflix_session_id');
       localStorage.removeItem('darkflix_device_nickname');
+      localStorage.removeItem('darkflix_pending_room_code');
       showToast("Desconectado.", "success");
     }
   }
