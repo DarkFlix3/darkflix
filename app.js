@@ -2430,7 +2430,7 @@ const STATE = {
 
   function getTwitchEmbedUrl(channelName) {
     const parentHost = window.location.hostname || 'localhost';
-    return `https://player.twitch.tv/?channel=${channelName}&parent=${parentHost}&muted=false`;
+    return `https://player.twitch.tv/?channel=${channelName}&parent=${parentHost}&autoplay=true&muted=false`;
   }
 
   async function verificarTwitchStatus(canalId, url, badgeId, itemElement) {
@@ -2445,7 +2445,7 @@ const STATE = {
       const badge = document.getElementById(badgeId);
       if (badge) {
         badge.className = isLive ? 'twitch-live-badge status-live' : 'twitch-live-badge status-offline';
-        badge.innerText = isLive ? 'LIVE' : 'OFFLINE';
+        badge.innerHTML = isLive ? '<span class="live-dot"></span>LIVE' : 'OFFLINE';
       }
       
       if (!isLive) {
@@ -2529,7 +2529,7 @@ const STATE = {
       item.onclick = () => carregarCanal(canal.id);
       const isTwitch = canal.categoria === 'twitch';
       const badgeId = `badge-twitch-${canal.id}`;
-      const liveBadge = isTwitch ? `<span class="twitch-live-badge status-checking" id="${badgeId}">...</span>` : '';
+      const liveBadge = isTwitch ? `<span class="twitch-live-badge status-checking" id="${badgeId}"><span class="live-dot"></span>...</span>` : '';
       item.innerHTML = `
         <div style="position:relative;display:inline-block;">
           <img src="${canal.logo}" onerror="this.src='https://via.placeholder.com/100x70?text=LOGO'">
