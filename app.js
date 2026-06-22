@@ -201,6 +201,8 @@ const STATE = {
   adminVisitsListener: null,
   adminUniqueDevicesListener: null,
   adminOnlineListener: null,
+  adminDetailPanelType: null, // 'unique' or 'online' or null
+  adminDetailListener: null,
   onlineOnDisconnectSet: false,
   endedRoomsCurrentPage: 1,
 
@@ -611,6 +613,11 @@ const STATE = {
       STATE.adminOnlineListener();
       STATE.adminOnlineListener = null;
     }
+    if (STATE.adminDetailListener) {
+      STATE.adminDetailListener();
+      STATE.adminDetailListener = null;
+    }
+    STATE.adminDetailPanelType = null;
   }
 
   // ---------- Navigation ----------
@@ -2591,6 +2598,7 @@ const STATE = {
     const onlineRef = ref(db, 'stats/online_sessions');
     STATE.adminOnlineListener = onValue(onlineRef, (snap) => {
       const onlineSessions = snap.val() || {};
+      STATE.onlineSessions = onlineSessions; // Salvar para cruzamento de dados!
       
       // Filtrar sessões ativas (tolerando fuso horário e clocks skews em até 30 minutos)
       const agora = Date.now();
@@ -2601,6 +2609,12 @@ const STATE = {
 
       const onlineEl = document.getElementById('admin-online-count');
       if (onlineEl) onlineEl.innerText = onlineCount;
+
+      // Se o painel de detalhes estiver aberto e for do tipo 'unique', atualizar a exibição
+      // para refletir mudanças no status online/offline sem precisar fechar e abrir
+      if (STATE.adminDetailPanelType === 'unique') {
+        displayAdminDetailItems();
+      }
     }, err => console.error("Erro ao ouvir usuários online:", err));
 
     // 4. Calcular estatísticas de canais ativos/manutenção
@@ -2712,7 +2726,420 @@ const STATE = {
         };
       });
     }
+
+    // Configurar cliques nos cards clicáveis (Aparelhos Únicos & Online Agora)
+    const cardUnique = document.getElementById('admin-card-unique-devices');
+    const cardOnline = document.getElementById('admin-card-online-now');
+
+    if (cardUnique) {
+      cardUnique.onclick = () => toggleAdminDetailPanel('unique');
+    }
+    if (cardOnline) {
+      cardOnline.onclick = () => toggleAdminDetailPanel('online');
+    }
+
+    // Configurar clique para fechar o painel de detalhes
+    const closeBtn = document.getElementById('admin-detail-close');
+    if (closeBtn) {
+      closeBtn.onclick = () => {
+        if (STATE.adminDetailPanelType) {
+          toggleAdminDetailPanel(STATE.adminDetailPanelType);
+        }
+      };
+    }
+
+    // Configurar busca no painel de detalhes
+    const searchInput = document.getElementById('admin-detail-search-input');
+    if (searchInput) {
+      searchInput.oninput = () => filterAdminDetailResults();
+    }
   }
+
+  // ---------- Admin Details Panel Rendering & Actions ----------
+  function toggleAdminDetailPanel(type) {
+    const panel = document.getElementById('admin-detail-panel');
+    if (!panel) return;
+
+    const activeCardUnique = document.getElementById('admin-card-unique-devices');
+    const activeCardOnline = document.getElementById('admin-card-online-now');
+
+    if (STATE.adminDetailPanelType === type) {
+      // Fechar o painel
+      panel.style.display = 'none';
+      STATE.adminDetailPanelType = null;
+      if (activeCardUnique) activeCardUnique.classList.remove('active');
+      if (activeCardOnline) activeCardOnline.classList.remove('active');
+      
+      // Cancelar listener do Firebase
+      if (STATE.adminDetailListener) {
+        STATE.adminDetailListener();
+        STATE.adminDetailListener = null;
+      }
+    } else {
+      // Abrir/atualizar o painel
+      panel.style.display = 'block';
+      STATE.adminDetailPanelType = type;
+      
+      if (activeCardUnique) {
+        if (type === 'unique') activeCardUnique.classList.add('active');
+        else activeCardUnique.classList.remove('active');
+      }
+      if (activeCardOnline) {
+        if (type === 'online') activeCardOnline.classList.add('active');
+        else activeCardOnline.classList.remove('active');
+      }
+      
+      // Limpar busca anterior
+      const searchInput = document.getElementById('admin-detail-search-input');
+      if (searchInput) searchInput.value = '';
+
+      renderAdminDetailPanel(type);
+    }
+  }
+
+  function renderAdminDetailPanel(type) {
+    const body = document.getElementById('admin-detail-body');
+    const titleEl = document.getElementById('admin-detail-title');
+    const iconEl = document.getElementById('admin-detail-icon');
+    const countEl = document.getElementById('admin-detail-count');
+    
+    if (!body) return;
+
+    // Mostrar indicador de carregamento
+    body.innerHTML = `
+      <div class="admin-detail-loading" style="padding: 40px 20px; text-align: center; color: var(--text-secondary);">
+        <p>Carregando detalhes...</p>
+      </div>
+    `;
+
+    // Parar listener anterior se houver
+    if (STATE.adminDetailListener) {
+      STATE.adminDetailListener();
+      STATE.adminDetailListener = null;
+    }
+
+    if (type === 'unique') {
+      if (titleEl) titleEl.innerText = "Aparelhos Únicos Registrados";
+      if (iconEl) iconEl.innerText = "📱";
+
+      const devicesRef = ref(db, 'stats/unique_devices');
+      STATE.adminDetailListener = onValue(devicesRef, (snap) => {
+        const devices = snap.val() || {};
+        STATE.lastAdminDetailData = Object.entries(devices).map(([sid, data]) => ({
+          sid,
+          firstSeen: data.firstSeen || 0,
+          lastActive: data.lastActive || 0,
+          deviceInfo: data.deviceInfo || {},
+          profileName: data.profileName || "Apenas Aparelho",
+          profileAvatar: data.profileAvatar || "",
+          uid: data.uid || null
+        }));
+        
+        // Ordenar por lastActive (mais recente primeiro), depois por firstSeen
+        STATE.lastAdminDetailData.sort((a, b) => (b.lastActive || b.firstSeen) - (a.lastActive || a.firstSeen));
+
+        displayAdminDetailItems();
+      }, (err) => {
+        console.error("Erro ao carregar aparelhos únicos:", err);
+        body.innerHTML = `<div class="admin-detail-empty"><p style="color: #ef4444;">Erro ao carregar aparelhos. Verifique as regras de segurança do Firebase.</p></div>`;
+      });
+
+    } else if (type === 'online') {
+      if (titleEl) titleEl.innerText = "Usuários e Sessões Online Agora";
+      if (iconEl) iconEl.innerText = "🟢";
+
+      const onlineRef = ref(db, 'stats/online_sessions');
+      STATE.adminDetailListener = onValue(onlineRef, (snap) => {
+        const sessions = snap.val() || {};
+        const agora = Date.now();
+        STATE.lastAdminDetailData = Object.entries(sessions)
+          .map(([sid, data]) => ({
+            sid,
+            lastActive: data.lastActive || 0,
+            deviceInfo: data.deviceInfo || {},
+            profileName: data.profileName || "Escolha de Perfil",
+            profileAvatar: data.profileAvatar || "",
+            currentlyWatching: data.currentlyWatching || null,
+            uid: data.uid || null
+          }))
+          .filter(sess => Math.abs(agora - sess.lastActive) < 1800000); // 30 minutos de tolerância
+
+        // Ordenar por lastActive (mais recente primeiro)
+        STATE.lastAdminDetailData.sort((a, b) => b.lastActive - a.lastActive);
+
+        displayAdminDetailItems();
+      }, (err) => {
+        console.error("Erro ao carregar sessões online:", err);
+        body.innerHTML = `<div class="admin-detail-empty"><p style="color: #ef4444;">Erro ao carregar sessões online. Verifique as regras de segurança do Firebase.</p></div>`;
+      });
+    }
+  }
+
+  function displayAdminDetailItems() {
+    const body = document.getElementById('admin-detail-body');
+    const countEl = document.getElementById('admin-detail-count');
+    const searchInput = document.getElementById('admin-detail-search-input');
+    const type = STATE.adminDetailPanelType;
+
+    if (!body || !STATE.lastAdminDetailData) return;
+
+    const searchTerm = searchInput ? searchInput.value.trim().toLowerCase() : '';
+    
+    // Filtrar itens se houver busca
+    const filteredItems = STATE.lastAdminDetailData.filter(item => {
+      if (!searchTerm) return true;
+      
+      const profileName = (item.profileName || '').toLowerCase();
+      const device = (item.deviceInfo.device || '').toLowerCase();
+      const os = (item.deviceInfo.os || '').toLowerCase();
+      const browser = (item.deviceInfo.browser || '').toLowerCase();
+      const nickname = (item.deviceInfo.nickname || '').toLowerCase();
+      
+      return profileName.includes(searchTerm) || 
+             device.includes(searchTerm) || 
+             os.includes(searchTerm) || 
+             browser.includes(searchTerm) || 
+             nickname.includes(searchTerm);
+    });
+
+    if (countEl) countEl.innerText = filteredItems.length;
+
+    if (filteredItems.length === 0) {
+      body.innerHTML = `
+        <div class="admin-detail-empty">
+          <div class="empty-icon">🔍</div>
+          <p>Nenhum resultado encontrado.</p>
+        </div>
+      `;
+      return;
+    }
+
+    const agora = Date.now();
+
+    body.innerHTML = filteredItems.map(item => {
+      // 1. Verificar se está online (para 'unique', cross-referenciar com online_sessions. Para 'online', sempre online)
+      let isOnline = false;
+      if (type === 'online') {
+        isOnline = true;
+      } else {
+        // Para aparelhos únicos, verifique se a sessão existe e é recente (30min)
+        if (STATE.onlineSessions && STATE.onlineSessions[item.sid]) {
+          const lastActive = STATE.onlineSessions[item.sid].lastActive || 0;
+          isOnline = Math.abs(agora - lastActive) < 1800000;
+        }
+      }
+
+      // 2. Aparelho e deviceInfo formatados
+      const nickHtml = item.deviceInfo.nickname ? `<strong style="color:var(--text-primary);">${item.deviceInfo.nickname}</strong> — ` : '';
+      const deviceText = `${nickHtml}${item.deviceInfo.device || 'Desconhecido'} (${item.deviceInfo.os || 'Desconhecido'} — ${item.deviceInfo.browser || 'Desconhecido'})`;
+
+      // 3. Avatar ou placeholder
+      let avatarHtml = '';
+      if (item.profileAvatar) {
+        avatarHtml = `<img src="${item.profileAvatar}" class="admin-user-card-avatar" alt="Avatar">`;
+      } else {
+        avatarHtml = `<div class="admin-user-card-avatar-placeholder">👤</div>`;
+      }
+
+      // 4. Última vez conectado / firstSeen
+      let timeText = '';
+      if (isOnline) {
+        timeText = 'Ativo agora';
+      } else {
+        const timeToCheck = item.lastActive || item.firstSeen;
+        if (timeToCheck) {
+          timeText = `Conectado em: ${new Date(timeToCheck).toLocaleString('pt-BR')}`;
+        } else {
+          timeText = 'Sem registros de atividade';
+        }
+      }
+
+      // 5. O que está assistindo (se online e estiver assistindo)
+      let watchingHtml = '';
+      let currentWatching = item.currentlyWatching;
+      if (type === 'unique' && isOnline && STATE.onlineSessions && STATE.onlineSessions[item.sid]) {
+        currentWatching = STATE.onlineSessions[item.sid].currentlyWatching;
+      }
+
+      if (isOnline && currentWatching && currentWatching.title) {
+        let watchTitle = currentWatching.title;
+        if (currentWatching.type === 'serie' || currentWatching.type === 'anime') {
+          const season = currentWatching.season ? `T${currentWatching.season}` : '';
+          const episode = currentWatching.episode ? `E${currentWatching.episode}` : '';
+          watchTitle += ` (${season}${episode})`;
+        } else if (currentWatching.type === 'canal') {
+          watchTitle = `Canal 24h: ${watchTitle}`;
+        }
+        watchingHtml = `
+          <div class="admin-watching-badge">
+            <span class="watching-dot"></span>
+            <div class="watching-info">
+              <span class="watching-label">Assistindo agora</span>
+              <span class="watching-title" title="${watchTitle}">${watchTitle}</span>
+            </div>
+          </div>
+        `;
+      }
+
+      // 6. Botões de Ação
+      const deslogarBtn = `<button class="admin-btn-kick" onclick="window.adminDeslogarSessaoClick('${item.uid}', '${item.sid}')">🔌 Deslogar</button>`;
+      const banirBtn = `<button class="admin-btn-ban" onclick="window.adminBanirDispositivoClick('${item.sid}', '${item.uid}', '${encodeURIComponent(JSON.stringify(item.deviceInfo))}')">🚫 Banir</button>`;
+
+      return `
+        <div class="admin-user-card" id="admin-user-card-${item.sid}">
+          <div class="admin-user-card-header">
+            <div class="admin-user-card-info">
+              ${avatarHtml}
+              <div class="admin-user-card-text">
+                <h4>${item.profileName}</h4>
+                <p title="${deviceText}">${deviceText}</p>
+              </div>
+            </div>
+            <div class="admin-user-card-status ${isOnline ? 'online' : 'offline'}">
+              <span class="status-dot"></span>
+              <span>${isOnline ? 'Online' : 'Offline'}</span>
+            </div>
+          </div>
+          <div class="admin-user-card-details">
+            <div class="admin-user-card-detail-item">
+              <span class="detail-label">Atividade:</span>
+              <span>${timeText}</span>
+            </div>
+            ${item.firstSeen ? `
+            <div class="admin-user-card-detail-item">
+              <span class="detail-label">Registrado:</span>
+              <span>${new Date(item.firstSeen).toLocaleDateString('pt-BR')}</span>
+            </div>` : ''}
+          </div>
+          ${watchingHtml}
+          <div class="admin-user-card-actions">
+            ${deslogarBtn}
+            ${banirBtn}
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function filterAdminDetailResults() {
+    displayAdminDetailItems();
+  }
+
+  async function adminDeslogarSessao(uid, sid) {
+    if (!uid || !sid) return;
+    try {
+      showToast("Desconectando aparelho...", "info");
+      // 1. Marcar a sessão como revogada para o cliente detectar
+      const sessionRef = ref(db, `users/${uid}/sessions/${sid}`);
+      await update(sessionRef, { revoked: true });
+      
+      // 2. Remover de online_sessions
+      const onlineRef = ref(db, `stats/online_sessions/${sid}`);
+      await remove(onlineRef);
+      
+      showToast("Aparelho desconectado com sucesso!", "success");
+    } catch (err) {
+      console.error("Erro ao desconectar aparelho:", err);
+      showToast("Erro ao desconectar aparelho.", "error");
+    }
+  }
+
+  async function adminBanirDispositivo(sid, deviceInfo, uid) {
+    if (!sid) return;
+    try {
+      showToast("Banindo aparelho...", "info");
+      // 1. Adicionar ao nó de banidos
+      const banRef = ref(db, `stats/banned_devices/${sid}`);
+      await set(banRef, {
+        bannedAt: Date.now(),
+        deviceInfo: deviceInfo || {},
+        uid: uid || null
+      });
+      
+      // 2. Se tiver uid, deslogar a sessão ativa
+      if (uid && uid !== "null" && uid !== "undefined") {
+        const sessionRef = ref(db, `users/${uid}/sessions/${sid}`);
+        await update(sessionRef, { revoked: true });
+      }
+      
+      // 3. Remover de online_sessions e unique_devices
+      const onlineRef = ref(db, `stats/online_sessions/${sid}`);
+      await remove(onlineRef);
+      
+      const uniqueDeviceRef = ref(db, `stats/unique_devices/${sid}`);
+      await remove(uniqueDeviceRef);
+      
+      showToast("Aparelho banido com sucesso!", "success");
+    } catch (err) {
+      console.error("Erro ao banir aparelho:", err);
+      showToast("Erro ao banir aparelho.", "error");
+    }
+  }
+
+  async function verificarDispositivoBanido() {
+    if (localStorage.getItem('darkflix_banned') === 'true') {
+      bloquearAcessoBanido();
+      return true;
+    }
+
+    const sid = obterSessionId();
+    if (!sid) return false;
+    
+    try {
+      const banRef = ref(db, `stats/banned_devices/${sid}`);
+      const snap = await get(banRef);
+      if (snap.exists()) {
+        localStorage.setItem('darkflix_banned', 'true');
+        bloquearAcessoBanido();
+        return true;
+      }
+    } catch (e) {
+      console.warn("Erro ao verificar dispositivo banido:", e);
+    }
+    return false;
+  }
+
+  function bloquearAcessoBanido() {
+    showToast("🚫 Este aparelho foi banido da plataforma.", "error");
+    pararHeartbeatSessao();
+    
+    // Deslogar silenciosamente
+    signOut(auth).catch(() => {});
+    localStorage.removeItem('darkflix_active_profile_id');
+    localStorage.removeItem('darkflix_session_id');
+    localStorage.removeItem('darkflix_device_nickname');
+    
+    document.body.innerHTML = `
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background: #0a0a0a; color: #fff; font-family: 'Montserrat', sans-serif; text-align: center; padding: 20px;">
+        <h1 style="color: #e50914; font-size: 3rem; margin-bottom: 20px; font-weight: 800;">Aparelho Banido</h1>
+        <p style="font-size: 1.2rem; color: #aaa; max-width: 500px; line-height: 1.6;">Este dispositivo foi banido da plataforma pelo administrador. Se você acha que isso é um erro, entre em contato com o suporte.</p>
+      </div>
+    `;
+  }
+
+  // Expor handlers globais para os botões com strings de onclick
+  window.adminDeslogarSessaoClick = (uid, sid) => {
+    if (uid === "null" || !uid || uid === "undefined") {
+      showToast("Não é possível deslogar: Usuário não identificado.", "error");
+      return;
+    }
+    if (confirm("Tem certeza que deseja deslogar este aparelho? O usuário será desconectado imediatamente.")) {
+      adminDeslogarSessao(uid, sid);
+    }
+  };
+
+  window.adminBanirDispositivoClick = (sid, uid, deviceInfoEscaped) => {
+    let deviceInfo = {};
+    try {
+      deviceInfo = JSON.parse(decodeURIComponent(deviceInfoEscaped));
+    } catch (e) {
+      console.warn("Erro ao fazer parse das informações do aparelho para banimento:", e);
+    }
+    const realUid = (uid === "null" || !uid || uid === "undefined") ? null : uid;
+    if (confirm("⚠️ TEM CERTEZA? Banir este aparelho impedirá qualquer novo login ou acesso a partir deste dispositivo!")) {
+      adminBanirDispositivo(sid, deviceInfo, realUid);
+    }
+  };
 
   // ---------- Search ----------
   async function performSearch(query) {
@@ -5558,8 +5985,12 @@ const STATE = {
   }
 
   // ---------- Setup Core Event Bindings ----------
-  function initApp() {
+  async function initApp() {
     initDOM();
+    
+    // Verificar se o dispositivo está banido
+    const isBanned = await verificarDispositivoBanido();
+    if (isBanned) return;
     // Listen for orientation change to handle landscape fullscreen visually and programmatically
     const handleOrientationChange = () => {
       // Don't auto-fullscreen if typing (focused on input/textarea)
@@ -7683,6 +8114,10 @@ const STATE = {
   async function registrarSessaoAtiva() {
     if (!STATE.currentUser) return;
     
+    // Verificar se o dispositivo foi banido
+    const isBanned = await verificarDispositivoBanido();
+    if (isBanned) return;
+    
     let sid = localStorage.getItem('darkflix_session_id');
     const info = obterInformacoesAparelho();
     let userSessions = null;
@@ -7776,6 +8211,7 @@ const STATE = {
       // Atualizar status online global
       const onlineRef = ref(db, `stats/online_sessions/${sid}`);
       await set(onlineRef, {
+        uid: STATE.currentUser.uid,
         lastActive: Date.now(),
         deviceInfo: {
           device: info.device,
@@ -7783,8 +8219,31 @@ const STATE = {
           browser: info.browser,
           nickname: localNickname
         },
-        profileName: STATE.currentProfile ? STATE.currentProfile.name : "Escolha de Perfil"
+        profileName: STATE.currentProfile ? STATE.currentProfile.name : "Escolha de Perfil",
+        profileAvatar: STATE.currentProfile ? (STATE.currentProfile.avatar || PRESET_AVATARS[0].url) : "",
+        currentlyWatching: currentlyWatching
       });
+
+      // Atualizar aparelho único com informações recentes do usuário
+      const uniqueDeviceRef = ref(db, `stats/unique_devices/${sid}`);
+      const uniqueUpdates = {
+        lastActive: Date.now(),
+        uid: STATE.currentUser.uid,
+        profileName: STATE.currentProfile ? STATE.currentProfile.name : "Escolha de Perfil",
+        profileAvatar: STATE.currentProfile ? (STATE.currentProfile.avatar || PRESET_AVATARS[0].url) : "",
+        deviceInfo: {
+          device: info.device,
+          os: info.os,
+          browser: info.browser,
+          nickname: localNickname
+        }
+      };
+      // Se ainda não estiver marcado localmente como registrado, adiciona firstSeen
+      if (!localStorage.getItem('darkflix_device_registered')) {
+        uniqueUpdates.firstSeen = Date.now();
+        localStorage.setItem('darkflix_device_registered', 'true');
+      }
+      await update(uniqueDeviceRef, uniqueUpdates).catch(err => console.warn("Erro ao atualizar aparelho único:", err));
 
       // Registrar o onDisconnect apenas uma vez por carregamento de página
       if (!STATE.onlineOnDisconnectSet) {
@@ -8004,6 +8463,10 @@ const STATE = {
   // ---------- Firebase Auth State Listener ----------
   onAuthStateChanged(auth, async (user) => {
     if (user) {
+      // Verificar se o dispositivo foi banido antes de prosseguir
+      const isBanned = await verificarDispositivoBanido();
+      if (isBanned) return;
+
       STATE.currentUser = user;
       await loadProfilesFromDatabase();
 

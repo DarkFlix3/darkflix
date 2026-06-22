@@ -767,19 +767,39 @@
             <span class="dashboard-stat-label">Em Manutenção</span>
           </div>
         </div>
-        <div class="dashboard-stat-card">
+        <div class="dashboard-stat-card clickable" id="admin-card-unique-devices" title="Clique para ver detalhes dos aparelhos">
           <div class="dashboard-stat-icon">📱</div>
           <div class="dashboard-stat-info">
             <span class="dashboard-stat-value" id="admin-unique-devices-count">...</span>
             <span class="dashboard-stat-label">Aparelhos Únicos</span>
           </div>
+          <div class="dashboard-stat-expand-icon">▸</div>
         </div>
-        <div class="dashboard-stat-card">
+        <div class="dashboard-stat-card clickable" id="admin-card-online-now" title="Clique para ver quem está online" style="border-color: rgba(34, 197, 94, 0.15);">
           <div class="dashboard-stat-icon" style="background: rgba(34, 197, 94, 0.1); color: #22c55e;">🟢</div>
           <div class="dashboard-stat-info">
             <span class="dashboard-stat-value" id="admin-online-count" style="color: #22c55e;">...</span>
             <span class="dashboard-stat-label">Online Agora</span>
           </div>
+          <div class="dashboard-stat-expand-icon">▸</div>
+        </div>
+      </div>
+
+      <!-- Painel de Detalhes Expandível -->
+      <div class="admin-detail-panel" id="admin-detail-panel" style="display:none;">
+        <div class="admin-detail-header" id="admin-detail-header">
+          <div class="admin-detail-title-group">
+            <span class="admin-detail-icon" id="admin-detail-icon">📱</span>
+            <h3 id="admin-detail-title">Detalhes</h3>
+            <span class="admin-detail-count" id="admin-detail-count">0</span>
+          </div>
+          <button class="admin-detail-close" id="admin-detail-close" title="Fechar painel">✕</button>
+        </div>
+        <div class="admin-detail-search">
+          <input type="text" id="admin-detail-search-input" placeholder="🔍 Buscar por nome, aparelho..." autocomplete="off">
+        </div>
+        <div class="admin-detail-body" id="admin-detail-body">
+          <!-- Populated dynamically -->
         </div>
       </div>
 
