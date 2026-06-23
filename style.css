@@ -3697,7 +3697,7 @@ ul, ol {
   padding: 12px 0;
   gap: 4px;
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: visible;
   z-index: 900;
   scrollbar-width: none;
   transition: opacity 0.3s ease;
