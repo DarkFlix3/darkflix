@@ -691,6 +691,8 @@ const STATE = {
     // Limpar Twitch showcase e ocultar sidebar ao mudar de página
     const sidebar = document.getElementById('twitch-sidebar');
     if (sidebar) sidebar.style.display = 'none';
+    const pageCanais = document.getElementById('page-canais');
+    if (pageCanais) pageCanais.classList.remove('has-twitch-sidebar');
     if (showcaseInterval) {
       clearInterval(showcaseInterval);
       showcaseInterval = null;
@@ -2513,7 +2515,7 @@ const STATE = {
       .map(([username, data]) => ({ username, ...data }));
   }
 
-  // ===== SHOWCASE (3 telas ao vivo) =====
+  // ===== SHOWCASE (4 telas ao vivo) =====
   function renderShowcase() {
     const container = document.getElementById('twitch-showcase-container');
     if (!container) return;
@@ -2533,13 +2535,14 @@ const STATE = {
     container.style.display = 'grid';
     const parentHost = window.location.hostname || 'localhost';
     const slots = [
-      document.getElementById('showcase-slot-0'),
-      document.getElementById('showcase-slot-1'),
-      document.getElementById('showcase-slot-2')
+      document.getElementById('showcase-slot-0'), // Middle Top
+      document.getElementById('showcase-slot-1'), // Middle Bottom
+      document.getElementById('showcase-slot-2'), // Left
+      document.getElementById('showcase-slot-3')  // Right
     ];
 
-    // Pegar os 3 primeiros ao vivo (ou menos)
-    const featured = liveStreamers.slice(0, 3);
+    // Pegar os 4 primeiros ao vivo (ou menos)
+    const featured = liveStreamers.slice(0, 4);
 
     slots.forEach((slot, i) => {
       if (!slot) return;
@@ -2615,7 +2618,11 @@ const STATE = {
     const maxItems = 20;
     const items = sorted.slice(0, maxItems);
 
-    sidebar.innerHTML = '';
+    sidebar.innerHTML = `
+      <div class="twitch-sidebar-header" style="width: 100%; display: flex; justify-content: center; margin: 4px 0 16px; opacity: 0.85;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #fff;"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+      </div>
+    `;
     
     items.forEach(canal => {
       const username = extrairCanalTwitch(canal.url);
@@ -2760,6 +2767,11 @@ const STATE = {
     // Mostrar/ocultar showcase e sidebar
     const showcaseContainer = document.getElementById('twitch-showcase-container');
     const sidebar = document.getElementById('twitch-sidebar');
+    const pageCanais = document.getElementById('page-canais');
+    if (pageCanais) {
+      pageCanais.classList.toggle('has-twitch-sidebar', category === 'twitch');
+    }
+
     if (showcaseContainer) {
       if (category === 'twitch') {
         if (!showcaseInterval) {

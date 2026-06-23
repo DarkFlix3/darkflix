@@ -3423,6 +3423,11 @@ ul, ol {
 }
 
 @media (max-width: 600px) {
+  /* Prevent horizontal overflow on the entire canais page */
+  #page-canais .section {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
   .canais-grid-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -3447,6 +3452,8 @@ ul, ol {
     padding-bottom: 8px !important;
     max-width: 100% !important;
     flex-wrap: nowrap !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
   }
   .canais-tabs::-webkit-scrollbar {
     display: none;
@@ -3487,27 +3494,33 @@ ul, ol {
     width: 100% !important;
     justify-content: center !important;
   }
-  /* Showcase mobile */
+  /* Showcase mobile - stack vertically, main stream first and largest */
   .twitch-showcase {
     grid-template-columns: 1fr !important;
-    grid-template-rows: auto auto auto !important;
+    grid-template-rows: auto !important;
     height: auto !important;
     max-height: none !important;
+    gap: 8px !important;
+    margin-bottom: 18px !important;
+  }
+  .twitch-showcase .showcase-cell {
+    grid-column: 1 !important;
+    grid-row: auto !important;
   }
   .twitch-showcase .showcase-main {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    min-height: 200px !important;
+    order: -2 !important;
+    height: 220px !important;
+    min-height: auto !important;
   }
-  .twitch-showcase .showcase-side {
-    grid-column: 1 !important;
-    min-height: 160px !important;
+  .twitch-showcase .showcase-sub-middle {
+    order: -1 !important;
+    height: 160px !important;
+    min-height: auto !important;
   }
-  .twitch-showcase .showcase-side:nth-child(2) {
-    grid-row: 2 !important;
-  }
-  .twitch-showcase .showcase-side:nth-child(3) {
-    grid-row: 3 !important;
+  .twitch-showcase .showcase-left,
+  .twitch-showcase .showcase-right {
+    height: 150px !important;
+    min-height: auto !important;
   }
   .showcase-overlay-info {
     padding: 6px 10px !important;
@@ -3522,6 +3535,10 @@ ul, ol {
   .twitch-sidebar {
     display: none !important;
   }
+  /* No sidebar offset on mobile */
+  #page-canais.has-twitch-sidebar .main-content {
+    padding-left: 20px !important;
+  }
 }
 
 /* ============================================================
@@ -3529,12 +3546,12 @@ ul, ol {
    ============================================================ */
 .twitch-showcase {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 8px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1.8fr 1fr;
+  gap: 12px;
   width: 100%;
-  max-height: 420px;
-  height: 420px;
+  max-height: 480px;
+  height: 480px;
   margin-bottom: 28px;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -3554,13 +3571,24 @@ ul, ol {
   box-shadow: 0 0 20px rgba(145, 70, 255, 0.4);
 }
 
-.twitch-showcase .showcase-main {
-  grid-row: 1 / 3;
+.twitch-showcase .showcase-left {
   grid-column: 1;
+  grid-row: 1 / 3;
 }
 
-.twitch-showcase .showcase-side {
+.twitch-showcase .showcase-right {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+.twitch-showcase .showcase-main {
   grid-column: 2;
+  grid-row: 1;
+}
+
+.twitch-showcase .showcase-sub-middle {
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .twitch-showcase .showcase-cell iframe {
@@ -3642,15 +3670,27 @@ ul, ol {
 /* ============================================================
    Twitch Sidebar (Like Twitch Left Nav)
    ============================================================ */
+/* Offset content to the right when left sidebar is active */
+#page-canais.has-twitch-sidebar .main-content {
+  padding-left: 68px;
+  transition: padding-left 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  #page-canais.has-twitch-sidebar .main-content {
+    padding-left: 0 !important;
+  }
+}
+
 .twitch-sidebar {
   position: fixed;
-  right: 0;
+  left: 0;
   top: var(--header-height, 65px);
   bottom: 0;
   width: 52px;
   background: rgba(14, 14, 16, 0.95);
   backdrop-filter: blur(12px);
-  border-left: 1px solid rgba(145, 70, 255, 0.15);
+  border-right: 1px solid rgba(145, 70, 255, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3733,10 +3773,10 @@ ul, ol {
   animation: liveDotPulse 1s ease-in-out infinite;
 }
 
-/* Sidebar Tooltip (on hover) */
+/* Sidebar Tooltip (on hover) - appears to the RIGHT of left sidebar */
 .twitch-sidebar-tooltip {
   position: absolute;
-  right: 48px;
+  left: 48px;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(24, 24, 28, 0.98);
@@ -3748,7 +3788,7 @@ ul, ol {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.2s ease, transform 0.2s ease;
-  transform: translateY(-50%) translateX(6px);
+  transform: translateY(-50%) translateX(-6px);
   z-index: 9999;
   box-shadow: 0 8px 32px rgba(0,0,0,0.6);
 }
