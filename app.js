@@ -688,6 +688,14 @@ const STATE = {
     closeDetail();
     stopCanalPlayer();
     
+    // Limpar Twitch showcase e ocultar sidebar ao mudar de página
+    const sidebar = document.getElementById('twitch-sidebar');
+    if (sidebar) sidebar.style.display = 'none';
+    if (showcaseInterval) {
+      clearInterval(showcaseInterval);
+      showcaseInterval = null;
+    }
+    
     // Unsubscribe from devices listener if navigating away
     if (page !== 'devices' && STATE.devicesListenerRef) {
       STATE.devicesListenerRef();
@@ -1701,62 +1709,41 @@ const STATE = {
   }
 
   const listaCanais = [
-    {
-      id: "twitch_gaules",
-      nome: "Gaules (Twitch)",
-      categoria: "twitch",
-      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/ea0fe422-84bd-4aee-9d10-fd4b0b3a7054-profile_image-70x70.png",
-      url: "https://www.twitch.tv/gaules"
-    },
-    {
-      id: "twitch_alanzoka",
-      nome: "Alanzoka (Twitch)",
-      categoria: "twitch",
-      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/64d44235-1dee-4bca-95da-bee1ee96eea3-profile_image-70x70.png",
-      url: "https://www.twitch.tv/alanzoka"
-    },
-    {
-      id: "twitch_casimito",
-      nome: "Casimito (Twitch)",
-      categoria: "twitch",
-      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/32805a78-d927-48bd-8089-bf5efed53ea4-profile_image-70x70.png",
-      url: "https://www.twitch.tv/casimito"
-    },
-    {
-      id: "twitch_kennzy",
-      nome: "Kennzy (Twitch)",
-      categoria: "twitch",
-      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/b417a2df-b224-4869-adc6-61951b5f0d9a-profile_image-70x70.png",
-      url: "https://www.twitch.tv/kennzy"
-    },
-    {
-      id: "twitch_pijack11",
-      nome: "Pijack11 (Twitch)",
-      categoria: "twitch",
-      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/f21a0dd5-7b35-4e38-8f92-71e9e39f4c07-profile_image-70x70.png",
-      url: "https://www.twitch.tv/pijack11"
-    },
-    {
-      id: "twitch_ishowspeed",
-      nome: "IShowSpeed (Twitch)",
-      categoria: "twitch",
-      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/46a38d3a-a39c-4c43-ac12-c331b1c469c2-profile_image-70x70.png",
-      url: "https://www.twitch.tv/ishowspeed"
-    },
-    {
-      id: "twitch_coringa",
-      nome: "Coringa (Twitch)",
-      categoria: "twitch",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Logo_LOUD.png",
-      url: "https://www.twitch.tv/coringa"
-    },
-    {
-      id: "twitch_paulinholokobr",
-      nome: "Paulinho o Loko (Twitch)",
-      categoria: "twitch",
-      logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/d96bbd7a-26e5-4c5e-b6a5-149d708a973b-profile_image-70x70.png",
-      url: "https://www.twitch.tv/paulinholokobr"
-    },
+    // ===== TWITCH STREAMERS (30+) =====
+    { id: "twitch_gaules", nome: "Gaules", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/ea0fe422-84bd-4aee-9d10-fd4b0b3a7054-profile_image-70x70.png", url: "https://www.twitch.tv/gaules" },
+    { id: "twitch_alanzoka", nome: "Alanzoka", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/64d44235-1dee-4bca-95da-bee1ee96eea3-profile_image-70x70.png", url: "https://www.twitch.tv/alanzoka" },
+    { id: "twitch_casimito", nome: "Casimito", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/32805a78-d927-48bd-8089-bf5efed53ea4-profile_image-70x70.png", url: "https://www.twitch.tv/casimito" },
+    { id: "twitch_kennzy", nome: "Kennzy", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/b417a2df-b224-4869-adc6-61951b5f0d9a-profile_image-70x70.png", url: "https://www.twitch.tv/kennzy" },
+    { id: "twitch_pijack11", nome: "Pijack11", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/f21a0dd5-7b35-4e38-8f92-71e9e39f4c07-profile_image-70x70.png", url: "https://www.twitch.tv/pijack11" },
+    { id: "twitch_ishowspeed", nome: "IShowSpeed", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/46a38d3a-a39c-4c43-ac12-c331b1c469c2-profile_image-70x70.png", url: "https://www.twitch.tv/ishowspeed" },
+    { id: "twitch_coringa", nome: "Coringa", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/3f038015-59f4-44f3-8a82-7437d3afd068-profile_image-70x70.png", url: "https://www.twitch.tv/coringa" },
+    { id: "twitch_paulinholokobr", nome: "Paulinho o Loko", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/d96bbd7a-26e5-4c5e-b6a5-149d708a973b-profile_image-70x70.png", url: "https://www.twitch.tv/paulinholokobr" },
+    { id: "twitch_bisteconee", nome: "Bisteconee", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/00aed781-c3f2-49d8-88a4-3d6f0feb4b0f-profile_image-70x70.png", url: "https://www.twitch.tv/bisteconee" },
+    { id: "twitch_cellbit", nome: "Cellbit", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/0595cdd0-65a7-4fa3-996d-323cf3a54be1-profile_image-70x70.png", url: "https://www.twitch.tv/cellbit" },
+    { id: "twitch_felps", nome: "Felps", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/2626d071-0773-47f3-867e-a027412bdb2a-profile_image-70x70.png", url: "https://www.twitch.tv/felps" },
+    { id: "twitch_baiano", nome: "Baiano", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/05396d4d-7af0-4b9b-8c7e-c03563b4d448-profile_image-70x70.png", url: "https://www.twitch.tv/baiano" },
+    { id: "twitch_xqc", nome: "xQc", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-70x70.jpeg", url: "https://www.twitch.tv/xqc" },
+    { id: "twitch_kaicenat", nome: "Kai Cenat", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/bf6a04cf-3f44-4986-8eed-5c36bfad542b-profile_image-70x70.png", url: "https://www.twitch.tv/kaicenat" },
+    { id: "twitch_tarik", nome: "Tarik", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/f04d2a14-8d63-4cd5-a469-7ec2cd6e5ce3-profile_image-70x70.png", url: "https://www.twitch.tv/tarik" },
+    { id: "twitch_ninja", nome: "Ninja", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/90d40495-f467-4911-9035-72d8d10a49c5-profile_image-70x70.png", url: "https://www.twitch.tv/ninja" },
+    { id: "twitch_pokimane", nome: "Pokimane", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/912232e8-9e53-4fb7-aac4-14aed07869ca-profile_image-70x70.png", url: "https://www.twitch.tv/pokimane" },
+    { id: "twitch_auronplay", nome: "AuronPlay", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/f1ea7d5a-ab2c-4e91-bba5-3ce211adfc3b-profile_image-70x70.png", url: "https://www.twitch.tv/auronplay" },
+    { id: "twitch_ibai", nome: "Ibai", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/574228be-01ef-4eab-bc0e-a4f6b68bedba-profile_image-70x70.png", url: "https://www.twitch.tv/ibai" },
+    { id: "twitch_thegrefg", nome: "TheGrefg", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/bc9e7c87-c85a-45a6-9e45-0eb1e87eb47a-profile_image-70x70.png", url: "https://www.twitch.tv/thegrefg" },
+    { id: "twitch_rubius", nome: "Rubius", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/a2592e98-5ba6-4c9a-9d9e-cf036d6f64c2-profile_image-70x70.jpg", url: "https://www.twitch.tv/rubius" },
+    { id: "twitch_moistcr1tikal", nome: "MoistCr1TiKaL", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/df6f775d-8794-4cbe-aa85-dbdc72975696-profile_image-70x70.png", url: "https://www.twitch.tv/moistcr1tikal" },
+    { id: "twitch_summit1g", nome: "Summit1g", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-70x70.png", url: "https://www.twitch.tv/summit1g" },
+    { id: "twitch_shroud", nome: "Shroud", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/c754eebf-745b-4e0a-814a-10bcaecaabbc-profile_image-70x70.png", url: "https://www.twitch.tv/shroud" },
+    { id: "twitch_tfue", nome: "Tfue", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/f65f290a-d37e-4c33-bc74-de6049eddf55-profile_image-70x70.png", url: "https://www.twitch.tv/tfue" },
+    { id: "twitch_nickmercs", nome: "NICKMERCS", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/b04e20be-6c0b-4379-b163-7f9a928e03f0-profile_image-70x70.png", url: "https://www.twitch.tv/nickmercs" },
+    { id: "twitch_hasanabi", nome: "HasanAbi", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/0347a9aa-e396-49a5-b0f1-31261704bab8-profile_image-70x70.jpeg", url: "https://www.twitch.tv/hasanabi" },
+    { id: "twitch_sodapoppin", nome: "Sodapoppin", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/fc7b15b2-e400-4e74-8c8b-2ad3725e5770-profile_image-70x70.png", url: "https://www.twitch.tv/sodapoppin" },
+    { id: "twitch_loud_coringa", nome: "LOUD Coringa", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/3f038015-59f4-44f3-8a82-7437d3afd068-profile_image-70x70.png", url: "https://www.twitch.tv/loud_coringa" },
+    { id: "twitch_yoda", nome: "YoDa", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/e5e89aba-723b-4ba1-852c-d8fba19b1da1-profile_image-70x70.png", url: "https://www.twitch.tv/yoda" },
+    { id: "twitch_liminhag", nome: "Liminha", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/user-default-pictures-uv/dbdc9198-def8-11e9-8681-784f43822e80-profile_image-70x70.png", url: "https://www.twitch.tv/liminhag" },
+    { id: "twitch_juansguarnizo", nome: "JuanSGuarnizo", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/74586414-e27b-4347-89c5-109e42ac3e1d-profile_image-70x70.png", url: "https://www.twitch.tv/juansguarnizo" },
+    { id: "twitch_elspreen", nome: "ElSpreen", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/d4885242-febf-4a11-a42a-a0ad52474ee2-profile_image-70x70.png", url: "https://www.twitch.tv/elspreen" },
+    { id: "twitch_quackity", nome: "Quackity", categoria: "twitch", logo: "https://static-cdn.jtvnw.net/jtv_user_pictures/4c2864d1-2739-4e10-ac60-7f74f30feef4-profile_image-70x70.png", url: "https://www.twitch.tv/quackity" },
     {
       id: "nicktoons",
       nome: "NickToons",
@@ -2493,6 +2480,266 @@ const STATE = {
     registrarSessaoAtiva();
   }
 
+  // ===== TWITCH LIVE STATUS CACHE =====
+  const twitchLiveCache = {}; // { channelUsername: { isLive: bool, checkedAt: timestamp } }
+  let showcaseInterval = null;
+
+  function getTwitchStreamers() {
+    return listaCanais.filter(c => c.categoria === 'twitch');
+  }
+
+  async function checkAllTwitchStatuses() {
+    const streamers = getTwitchStreamers();
+    const promises = streamers.map(async (canal) => {
+      const username = extrairCanalTwitch(canal.url);
+      if (!username) return;
+      try {
+        const previewUrl = `https://static-cdn.jtvnw.net/previews-ttv/live_user_${username}-320x180.jpg?t=${Date.now()}`;
+        const res = await fetch(previewUrl);
+        const isLive = !res.url.includes('404_preview');
+        twitchLiveCache[username] = { isLive, checkedAt: Date.now(), canalId: canal.id, nome: canal.nome, logo: canal.logo, url: canal.url };
+      } catch (e) {
+        if (!twitchLiveCache[username]) {
+          twitchLiveCache[username] = { isLive: false, checkedAt: Date.now(), canalId: canal.id, nome: canal.nome, logo: canal.logo, url: canal.url };
+        }
+      }
+    });
+    await Promise.allSettled(promises);
+  }
+
+  function getLiveStreamers() {
+    return Object.entries(twitchLiveCache)
+      .filter(([_, data]) => data.isLive)
+      .map(([username, data]) => ({ username, ...data }));
+  }
+
+  // ===== SHOWCASE (3 telas ao vivo) =====
+  function renderShowcase() {
+    const container = document.getElementById('twitch-showcase-container');
+    if (!container) return;
+
+    const category = STATE.selectedCanalCategory || 'aberto';
+    if (category !== 'twitch') {
+      container.style.display = 'none';
+      return;
+    }
+
+    const liveStreamers = getLiveStreamers();
+    if (liveStreamers.length === 0) {
+      container.style.display = 'none';
+      return;
+    }
+
+    container.style.display = 'grid';
+    const parentHost = window.location.hostname || 'localhost';
+    const slots = [
+      document.getElementById('showcase-slot-0'),
+      document.getElementById('showcase-slot-1'),
+      document.getElementById('showcase-slot-2')
+    ];
+
+    // Pegar os 3 primeiros ao vivo (ou menos)
+    const featured = liveStreamers.slice(0, 3);
+
+    slots.forEach((slot, i) => {
+      if (!slot) return;
+      if (i < featured.length) {
+        const s = featured[i];
+        const embedUrl = `https://player.twitch.tv/?channel=${s.username}&parent=${parentHost}&autoplay=true&muted=true`;
+        slot.innerHTML = `
+          <iframe src="${embedUrl}" allowfullscreen></iframe>
+          <div class="showcase-overlay-info" onclick="document.querySelector('[data-category=twitch]').click(); setTimeout(() => { const el = document.querySelector('[data-canal-id=${s.canalId}]'); if(el) el.click(); }, 300);">
+            <img src="${s.logo}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(s.nome)}&background=9146ff&color=fff&size=36'" alt="${s.nome}">
+            <span class="showcase-name">${s.nome}</span>
+            <span class="showcase-live-tag"><span class="live-dot"></span>LIVE</span>
+          </div>
+        `;
+        slot.onclick = () => carregarCanal(s.canalId);
+      } else {
+        slot.innerHTML = `
+          <div class="showcase-placeholder">
+            <span class="showcase-placeholder-icon">📡</span>
+            <span>Aguardando live...</span>
+          </div>
+        `;
+        slot.onclick = null;
+      }
+    });
+  }
+
+  // ===== SIDEBAR (estilo Twitch) =====
+  function getWatchHistory() {
+    try {
+      return JSON.parse(localStorage.getItem('darkflix_twitch_history') || '{}');
+    } catch { return {}; }
+  }
+
+  function saveWatchHistory(history) {
+    try {
+      localStorage.setItem('darkflix_twitch_history', JSON.stringify(history));
+    } catch {}
+  }
+
+  function trackWatch(canalId) {
+    const history = getWatchHistory();
+    history[canalId] = (history[canalId] || 0) + 1;
+    saveWatchHistory(history);
+  }
+
+  function renderTwitchSidebar() {
+    const sidebar = document.getElementById('twitch-sidebar');
+    if (!sidebar) return;
+
+    const streamers = getTwitchStreamers();
+    if (streamers.length === 0) {
+      sidebar.style.display = 'none';
+      return;
+    }
+
+    sidebar.style.display = 'flex';
+
+    const history = getWatchHistory();
+    
+    // Ordenar: primeiro os ao vivo, depois por histórico de visualização, depois aleatório
+    const sorted = [...streamers].sort((a, b) => {
+      const aUser = extrairCanalTwitch(a.url);
+      const bUser = extrairCanalTwitch(b.url);
+      const aLive = twitchLiveCache[aUser]?.isLive ? 1 : 0;
+      const bLive = twitchLiveCache[bUser]?.isLive ? 1 : 0;
+      if (bLive !== aLive) return bLive - aLive; // Lives primeiro
+      const aWatch = history[a.id] || 0;
+      const bWatch = history[b.id] || 0;
+      return bWatch - aWatch; // Mais assistidos depois
+    });
+
+    const maxItems = 20;
+    const items = sorted.slice(0, maxItems);
+
+    sidebar.innerHTML = '';
+    
+    items.forEach(canal => {
+      const username = extrairCanalTwitch(canal.url);
+      const cached = twitchLiveCache[username];
+      const isLive = cached?.isLive || false;
+
+      const itemDiv = document.createElement('div');
+      itemDiv.className = `twitch-sidebar-item ${isLive ? 'is-live' : 'is-offline'}`;
+      itemDiv.onclick = () => {
+        // Navegar para a aba Twitch e carregar o canal
+        const twitchTab = document.querySelector('[data-category="twitch"]');
+        if (twitchTab && !twitchTab.classList.contains('active')) {
+          twitchTab.click();
+        }
+        carregarCanal(canal.id);
+      };
+
+      itemDiv.innerHTML = `
+        <img src="${canal.logo}" alt="${canal.nome}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(canal.nome)}&background=9146ff&color=fff&size=36'">
+        ${isLive ? '<span class="sidebar-live-dot"></span>' : ''}
+        <div class="twitch-sidebar-tooltip">
+          <div class="tooltip-header">
+            <span class="tooltip-name">${canal.nome}</span>
+            <span class="tooltip-status ${isLive ? 'live' : 'offline'}">${isLive ? '🔴 AO VIVO' : 'OFFLINE'}</span>
+          </div>
+          ${isLive ? '<div class="tooltip-title">Assistindo agora na Twitch</div>' : '<div class="tooltip-title" style="color: rgba(255,255,255,0.35);">Canal offline no momento</div>'}
+        </div>
+      `;
+
+      sidebar.appendChild(itemDiv);
+    });
+  }
+
+  // ===== SHOWCASE + SIDEBAR AUTO-REFRESH =====
+  async function initTwitchShowcaseAndSidebar() {
+    await checkAllTwitchStatuses();
+    renderShowcase();
+    renderTwitchSidebar();
+
+    // Atualizar badges na grid se visível
+    updateGridBadges();
+
+    // Auto-refresh a cada 60 segundos
+    if (showcaseInterval) clearInterval(showcaseInterval);
+    showcaseInterval = setInterval(async () => {
+      await checkAllTwitchStatuses();
+      renderShowcase();
+      renderTwitchSidebar();
+      updateGridBadges();
+    }, 60000);
+  }
+
+  function updateGridBadges() {
+    const streamers = getTwitchStreamers();
+    streamers.forEach(canal => {
+      const username = extrairCanalTwitch(canal.url);
+      const cached = twitchLiveCache[username];
+      if (!cached) return;
+
+      const badgeId = `badge-twitch-${canal.id}`;
+      const badge = document.getElementById(badgeId);
+      if (badge) {
+        badge.className = cached.isLive ? 'twitch-live-badge status-live' : 'twitch-live-badge status-offline';
+        badge.innerHTML = cached.isLive ? '<span class="live-dot"></span>LIVE' : 'OFFLINE';
+      }
+
+      const item = badge?.closest('.canal-item');
+      if (item) {
+        if (cached.isLive) {
+          item.classList.remove('twitch-offline');
+        } else {
+          item.classList.add('twitch-offline');
+        }
+      }
+    });
+  }
+
+  // ===== INTERACTION OVERLAY LOGIC (Evitar pausa indesejada ao rolar) =====
+  function initPlayerOverlay() {
+    const overlay = document.getElementById('canal-player-overlay');
+    const tip = document.getElementById('canal-player-overlay-tip');
+    if (!overlay) return;
+
+    let overlayTimeout = null;
+
+    overlay.addEventListener('click', (e) => {
+      // Desativar overlay temporariamente para permitir interação com o iframe
+      overlay.style.pointerEvents = 'none';
+      if (tip) tip.style.opacity = '0';
+      
+      // Re-ativar após 5 segundos de inatividade
+      clearTimeout(overlayTimeout);
+      overlayTimeout = setTimeout(() => {
+        overlay.style.pointerEvents = 'auto';
+      }, 5000);
+    });
+
+    // Re-ativar overlay imediatamente quando rolar a página
+    window.addEventListener('scroll', () => {
+      overlay.style.pointerEvents = 'auto';
+      if (tip) tip.style.opacity = '0';
+      clearTimeout(overlayTimeout);
+    }, { passive: true });
+
+    // Mostrar dica ao passar mouse ou tocar
+    overlay.addEventListener('mouseenter', () => {
+      if (overlay.style.pointerEvents !== 'none' && tip) {
+        tip.style.opacity = '1';
+      }
+    });
+    overlay.addEventListener('mouseleave', () => {
+      if (tip) tip.style.opacity = '0';
+    });
+    
+    overlay.addEventListener('touchstart', () => {
+      if (overlay.style.pointerEvents !== 'none' && tip) {
+        tip.style.opacity = '1';
+        setTimeout(() => {
+          if (tip) tip.style.opacity = '0';
+        }, 1500);
+      }
+    }, { passive: true });
+  }
+
   function renderCanaisPage() {
     const grid = document.getElementById('grid-canais');
     if (!grid) return;
@@ -2509,6 +2756,27 @@ const STATE = {
       const isHidden = STATE.hiddenChannels && STATE.hiddenChannels[canal.id] === true;
       return canal.categoria === category && !isHidden;
     });
+
+    // Mostrar/ocultar showcase e sidebar
+    const showcaseContainer = document.getElementById('twitch-showcase-container');
+    const sidebar = document.getElementById('twitch-sidebar');
+    if (showcaseContainer) {
+      if (category === 'twitch') {
+        if (!showcaseInterval) {
+          initTwitchShowcaseAndSidebar();
+        } else {
+          renderShowcase();
+          renderTwitchSidebar();
+        }
+      } else {
+        showcaseContainer.style.display = 'none';
+        if (sidebar) sidebar.style.display = 'none';
+        if (showcaseInterval) {
+          clearInterval(showcaseInterval);
+          showcaseInterval = null;
+        }
+      }
+    }
     
     if (filteredCanais.length === 0) {
       grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-secondary);">Nenhum canal nesta categoria.</div>`;
@@ -2520,6 +2788,7 @@ const STATE = {
       
       const isMaint = STATE.maintenanceChannels && STATE.maintenanceChannels[canal.id] === true;
       item.className = 'canal-item' + (isMaint ? ' manutencao' : '');
+      item.setAttribute('data-canal-id', canal.id);
       
       // Se este canal já for o canal ativo no player
       if (STATE.activeCanalId === canal.id) {
@@ -2529,17 +2798,33 @@ const STATE = {
       item.onclick = () => carregarCanal(canal.id);
       const isTwitch = canal.categoria === 'twitch';
       const badgeId = `badge-twitch-${canal.id}`;
-      const liveBadge = isTwitch ? `<span class="twitch-live-badge status-checking" id="${badgeId}"><span class="live-dot"></span>...</span>` : '';
+
+      // Usar cache para status se disponível
+      const username = isTwitch ? extrairCanalTwitch(canal.url) : null;
+      const cached = username ? twitchLiveCache[username] : null;
+      let liveBadgeHTML = '';
+      if (isTwitch) {
+        if (cached) {
+          const statusClass = cached.isLive ? 'status-live' : 'status-offline';
+          const badgeText = cached.isLive ? '<span class="live-dot"></span>LIVE' : 'OFFLINE';
+          liveBadgeHTML = `<span class="twitch-live-badge ${statusClass}" id="${badgeId}">${badgeText}</span>`;
+          if (!cached.isLive) item.className += ' twitch-offline';
+        } else {
+          liveBadgeHTML = `<span class="twitch-live-badge status-checking" id="${badgeId}"><span class="live-dot"></span>...</span>`;
+        }
+      }
+
       item.innerHTML = `
         <div style="position:relative;display:inline-block;">
-          <img src="${canal.logo}" onerror="this.src='https://via.placeholder.com/100x70?text=LOGO'">
-          ${liveBadge}
+          <img src="${canal.logo}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(canal.nome)}&background=9146ff&color=fff&size=70'">
+          ${liveBadgeHTML}
         </div>
         <span>${canal.nome}</span>
       `;
       grid.appendChild(item);
 
-      if (isTwitch) {
+      // Se não tiver cache ainda, verificar individualmente
+      if (isTwitch && !cached) {
         verificarTwitchStatus(canal.id, canal.url, badgeId, item);
       }
     });
@@ -6739,6 +7024,7 @@ const STATE = {
   // ---------- Setup Core Event Bindings ----------
   async function initApp() {
     initDOM();
+    initPlayerOverlay();
     
     // Verificar se o dispositivo está banido
     const isBanned = await verificarDispositivoBanido();

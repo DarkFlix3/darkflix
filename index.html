@@ -419,16 +419,41 @@
           </div>
 
           <!-- Player Wrapper -->
-          <div class="canais-player-wrapper" id="canal-wrapper-player" style="display: none; width: 100%; max-width: 854px; background: #000; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border);">
+          <div class="canais-player-wrapper" id="canal-wrapper-player" style="display: none; width: 100%; max-width: 854px; background: #000; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border); position: relative;">
             <div id="canal-player" style="aspect-ratio: 16/9; width: 100%;"></div>
+            <div id="canal-player-overlay" style="position: absolute; inset: 0; z-index: 10; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: opacity 0.3s ease;">
+              <span id="canal-player-overlay-tip" style="background: rgba(0,0,0,0.85); color: #fff; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; pointer-events: none; opacity: 0; transition: opacity 0.3s ease; font-family: 'Montserrat', sans-serif;">Toque para interagir</span>
+            </div>
           </div>
           <p id="canal-http-tip" style="display: none; color: #fbbf24; font-size: 0.82rem; text-align: center; margin-top: 15px; max-width: 854px; line-height: 1.5; background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.2); padding: 12px 18px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); font-family: 'Montserrat', sans-serif;">
             ⚠️ <strong>Bloqueio de Segurança (HTTP):</strong> Este fluxo é transmitido via HTTP. Se o vídeo não carregar devido à segurança do navegador (Mixed Content), clique no ícone de "Cadeado / Configurações" ao lado da URL no seu navegador e ative <strong>"Conteúdo não seguro" (Insecure Content)</strong> para este site, depois recarregue a página. Alternativamente, use o botão <strong>Web Video Cast</strong> acima para assistir.
           </p>
         </div>
 
+        <!-- Twitch Live Showcase (3 telas ao vivo) -->
+        <div id="twitch-showcase-container" class="twitch-showcase" style="display: none;">
+          <div class="showcase-cell showcase-main" id="showcase-slot-0">
+            <div class="showcase-placeholder">
+              <span class="showcase-placeholder-icon">📡</span>
+              <span>Procurando lives...</span>
+            </div>
+          </div>
+          <div class="showcase-cell showcase-side" id="showcase-slot-1">
+            <div class="showcase-placeholder">
+              <span class="showcase-placeholder-icon">📡</span>
+              <span>Procurando lives...</span>
+            </div>
+          </div>
+          <div class="showcase-cell showcase-side" id="showcase-slot-2">
+            <div class="showcase-placeholder">
+              <span class="showcase-placeholder-icon">📡</span>
+              <span>Procurando lives...</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Abas de Canais -->
-        <div class="canais-tabs" style="display: flex; gap: 15px; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 10px; width: 100%; max-width: 854px;">
+        <div class="canais-tabs" style="display: flex; gap: 15px; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 10px; width: 100%;">
           <button class="canal-tab-btn active" data-category="aberto" id="btn-tab-aberto">📺 Canais Abertos</button>
           <button class="canal-tab-btn" data-category="fechado" id="btn-tab-fechado">🔒 Canais Fechados</button>
           <button class="canal-tab-btn" data-category="twitch" id="btn-tab-twitch">🟣 Streamers Twitch</button>
@@ -977,7 +1002,12 @@
     </div>
   </div>
 
+  <!-- Twitch Sidebar (estilo Twitch) -->
+  <div class="twitch-sidebar" id="twitch-sidebar" style="display: none;">
+    <!-- Populated dynamically by JS -->
+  </div>
+
   <!-- Scripts -->
-  <script type="module" src="app.js?v=2.6.3"></script>
+  <script type="module" src="app.js?v=2.7.0"></script>
 </body>
 </html>
