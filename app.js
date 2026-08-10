@@ -1073,6 +1073,36 @@ const STATE = {
       const popular2 = responses[5];
       const trendingSeriesDay = responses[6];
 
+      // Garantir que "Elize Matsunaga: Era Uma Vez um Crime" (128456) e "O Mentalista" (5920) estejam em alta no site
+      try {
+        const [elizeRes, mentalistRes] = await Promise.all([
+          tmdbFetch('/tv/128456').catch(() => null),
+          tmdbFetch('/tv/5920').catch(() => null)
+        ]);
+
+        if (elizeRes && trendingSeries.results) {
+          elizeRes.media_type = 'tv';
+          if (!trendingSeries.results.some(x => Number(x.id) === 128456)) {
+            trendingSeries.results.unshift(elizeRes);
+          }
+          if (trendingSeriesDay.results && !trendingSeriesDay.results.some(x => Number(x.id) === 128456)) {
+            trendingSeriesDay.results.unshift(elizeRes);
+          }
+        }
+
+        if (mentalistRes && trendingSeries.results) {
+          mentalistRes.media_type = 'tv';
+          if (!trendingSeries.results.some(x => Number(x.id) === 5920)) {
+            trendingSeries.results.splice(1, 0, mentalistRes);
+          }
+          if (trendingSeriesDay.results && !trendingSeriesDay.results.some(x => Number(x.id) === 5920)) {
+            trendingSeriesDay.results.splice(1, 0, mentalistRes);
+          }
+        }
+      } catch (e) {
+        console.warn("Erro ao carregar Séries em Alta customizadas:", e);
+      }
+
       // Combinar páginas
       const nowPlayingAll = [...(nowPlaying1.results || []), ...(nowPlaying2.results || [])];
       const popularAll = [...(popular1.results || []), ...(popular2.results || [])];

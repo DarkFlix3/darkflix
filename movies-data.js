@@ -272,6 +272,36 @@ const DEFAULT_MOVIES = [
     poster: "https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
     backdrop: "https://image.tmdb.org/t/p/original/euYIwmwkmz95mnXvufEmbL6ovhZ.jpg",
     video: "https://www.youtube.com/embed/4rgYUipGJNo?autoplay=1"
+  },
+  {
+    id: 128456,
+    title: "Elize Matsunaga: Era Uma Vez um Crime",
+    year: 2021,
+    duration: "1 Temporada",
+    rating: 7.8,
+    type: "series",
+    featured: true,
+    videoType: "url",
+    genres: ["Documentário", "Crime"],
+    description: "A série documental analisa o crime que chocaria o Brasil, trazendo a primeira entrevista com Elize Matsunaga e depoimentos de familiares, advogados e especialistas sobre o assassinato de Marcos Matsunaga.",
+    poster: "https://image.tmdb.org/t/p/w500/vLg51aN7ZndG4i7mR7i1t5e2n0i.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/j9X2o7mR7i1t5e2n0ivLg51aN7Z.jpg",
+    video: "https://myembed.biz/serie/128456/1/1"
+  },
+  {
+    id: 5920,
+    title: "O Mentalista",
+    year: 2008,
+    duration: "7 Temporadas",
+    rating: 8.4,
+    type: "series",
+    featured: true,
+    videoType: "url",
+    genres: ["Crime", "Drama", "Mistério"],
+    description: "Patrick Jane é um consultor independente da Bureau de Investigação da Califórnia (CBI) que tem um histórico notável de solução de crimes graves usando suas habilidades apuradas de observação e dedução.",
+    poster: "https://image.tmdb.org/t/p/w500/ac9nL3r7sB1vW3k0v5X.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/w5Xv3k0v5Xac9nL3r7sB1.jpg",
+    video: "https://myembed.biz/serie/5920/1/1"
   }
 ];
 
