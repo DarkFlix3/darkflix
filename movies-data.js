@@ -277,16 +277,16 @@ const DEFAULT_MOVIES = [
     id: 128456,
     title: "Elize: Sombras de uma Mulher",
     year: 2021,
-    duration: "1 Temporada",
-    rating: 7.8,
-    type: "series",
+    duration: "1h 55m",
+    rating: 8.2,
+    type: "movie",
     featured: true,
     videoType: "url",
-    genres: ["Documentário", "Crime"],
-    description: "A série documental analisa o crime que chocaria o Brasil, trazendo a primeira entrevista com Elize Matsunaga e depoimentos de familiares, advogados e especialistas sobre o assassinato de Marcos Matsunaga.",
+    genres: ["Documentário", "Crime", "Drama"],
+    description: "O documentário revela os bastidores, segredos e desdobramentos do crime que chocaria o Brasil, trazendo uma perspectiva profunda sobre o caso de Elize Matsunaga.",
     poster: "https://image.tmdb.org/t/p/w500/vLg51aN7ZndG4i7mR7i1t5e2n0i.jpg",
     backdrop: "https://image.tmdb.org/t/p/original/j9X2o7mR7i1t5e2n0ivLg51aN7Z.jpg",
-    video: "https://myembed.biz/serie/128456/1/1"
+    video: "https://myembed.biz/filme/128456"
   },
   {
     id: 5920,

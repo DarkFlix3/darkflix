@@ -1073,34 +1073,46 @@ const STATE = {
       const popular2 = responses[5];
       const trendingSeriesDay = responses[6];
 
-      // Garantir que "Elize: Sombras de uma Mulher" (128456) e "O Mentalista" (5920) estejam no Top 10
+      // Garantir que "Elize: Sombras de uma Mulher" (Filme #1) e "O Mentalista" (Série #1) estejam no Top 10
       try {
         const [elizeRes, mentalistRes] = await Promise.all([
-          tmdbFetch('/tv/128456').catch(() => null),
+          tmdbFetch('/movie/128456').catch(() => null),
           tmdbFetch('/tv/5920').catch(() => null)
         ]);
 
-        if (elizeRes) {
-          elizeRes.media_type = 'tv';
-          elizeRes.name = "Elize: Sombras de uma Mulher";
-          elizeRes.original_name = "Elize: Sombras de uma Mulher";
-          elizeRes.title = "Elize: Sombras de uma Mulher";
-          elizeRes.popularity = 999;
-          if (!elizeRes.poster_path) elizeRes.poster_path = "/vLg51aN7ZndG4i7mR7i1t5e2n0i.jpg";
-          if (!elizeRes.backdrop_path) elizeRes.backdrop_path = "/j9X2o7mR7i1t5e2n0ivLg51aN7Z.jpg";
-          if (!elizeRes.overview) elizeRes.overview = "A série documental analisa o crime que chocaria o Brasil, trazendo a primeira entrevista com Elize Matsunaga.";
+        // 1. Elize: Sombras de uma Mulher (FILME)
+        const elizeObj = {
+          id: 128456,
+          media_type: 'movie',
+          title: "Elize: Sombras de uma Mulher",
+          name: "Elize: Sombras de uma Mulher",
+          original_title: "Elize: Sombras de uma Mulher",
+          overview: "O documentário revela os bastidores, segredos e desdobramentos do crime que chocaria o Brasil, trazendo uma perspectiva profunda sobre o caso de Elize Matsunaga.",
+          poster_path: (elizeRes && elizeRes.poster_path) || "/vLg51aN7ZndG4i7mR7i1t5e2n0i.jpg",
+          backdrop_path: (elizeRes && elizeRes.backdrop_path) || "/j9X2o7mR7i1t5e2n0ivLg51aN7Z.jpg",
+          vote_average: (elizeRes && elizeRes.vote_average) || 8.2,
+          release_date: (elizeRes && elizeRes.release_date) || "2021-07-08",
+          popularity: 999
+        };
 
-          if (trendingSeries && trendingSeries.results) {
-            trendingSeries.results = trendingSeries.results.filter(x => Number(x.id) !== 128456);
-            trendingSeries.results.unshift(elizeRes);
-          }
-
-          if (trendingSeriesDay && trendingSeriesDay.results) {
-            trendingSeriesDay.results = trendingSeriesDay.results.filter(x => Number(x.id) !== 128456);
-            trendingSeriesDay.results.unshift(elizeRes);
-          }
+        if (trendingMovies && trendingMovies.results) {
+          trendingMovies.results = trendingMovies.results.filter(x => Number(x.id) !== 128456);
+          trendingMovies.results.unshift(elizeObj);
         }
 
+        if (nowPlayingAll) {
+          nowPlayingAll.unshift(elizeObj);
+        }
+
+        // Remover Elize das Séries para não duplicar
+        if (trendingSeries && trendingSeries.results) {
+          trendingSeries.results = trendingSeries.results.filter(x => Number(x.id) !== 128456);
+        }
+        if (trendingSeriesDay && trendingSeriesDay.results) {
+          trendingSeriesDay.results = trendingSeriesDay.results.filter(x => Number(x.id) !== 128456);
+        }
+
+        // 2. O Mentalista (SÉRIIE)
         if (mentalistRes) {
           mentalistRes.media_type = 'tv';
           mentalistRes.name = "O Mentalista";
@@ -1113,16 +1125,16 @@ const STATE = {
 
           if (trendingSeries && trendingSeries.results) {
             trendingSeries.results = trendingSeries.results.filter(x => Number(x.id) !== 5920);
-            trendingSeries.results.splice(1, 0, mentalistRes);
+            trendingSeries.results.unshift(mentalistRes);
           }
 
           if (trendingSeriesDay && trendingSeriesDay.results) {
             trendingSeriesDay.results = trendingSeriesDay.results.filter(x => Number(x.id) !== 5920);
-            trendingSeriesDay.results.splice(1, 0, mentalistRes);
+            trendingSeriesDay.results.unshift(mentalistRes);
           }
         }
       } catch (e) {
-        console.warn("Erro ao carregar Séries em Alta customizadas:", e);
+        console.warn("Erro ao carregar Destaques customizados:", e);
       }
 
       // Combinar páginas
