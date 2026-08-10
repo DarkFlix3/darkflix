@@ -4629,7 +4629,9 @@ const STATE = {
 
       DOM.cinemaIframe.src = embedUrl;
       DOM.cinemaIframe.style.display = 'block';
-      DOM.cinemaBlockerTop.style.display = 'block';
+      DOM.cinemaIframe.style.transform = '';
+      DOM.cinemaIframe.style.transformOrigin = '';
+      DOM.cinemaBlockerTop.style.display = 'none';
 
       if (DOM.cinemaExternalBtn) {
         DOM.cinemaExternalBtn.href = embedUrl;
