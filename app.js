@@ -385,6 +385,8 @@ const STATE = {
       // Cinema mode
       cinemaMode: $('#cinema-mode'),
       cinemaBlockerTop: $('#cinema-blocker-top'),
+      cinemaTopLeftMask: $('#cinema-top-left-mask'),
+      cinemaTopRightMask: $('#cinema-top-right-mask'),
       cinemaIframe: $('#cinema-iframe'),
       cinemaVideo: $('#cinema-video'),
       cinemaTitle: $('#cinema-title'),
@@ -4537,6 +4539,8 @@ const STATE = {
       DOM.cinemaIframe.style.display = 'none';
       DOM.cinemaIframe.src = '';
       DOM.cinemaBlockerTop.style.display = 'none';
+      if (DOM.cinemaTopLeftMask) DOM.cinemaTopLeftMask.style.setProperty('display', 'none', 'important');
+      if (DOM.cinemaTopRightMask) DOM.cinemaTopRightMask.style.setProperty('display', 'none', 'important');
 
       const canal = listaCanais.find(c => c.id === tmdbId);
       if (canal) {
@@ -4632,6 +4636,8 @@ const STATE = {
       DOM.cinemaIframe.style.transform = '';
       DOM.cinemaIframe.style.transformOrigin = '';
       DOM.cinemaBlockerTop.style.display = 'none';
+      if (DOM.cinemaTopLeftMask) DOM.cinemaTopLeftMask.style.setProperty('display', 'flex', 'important');
+      if (DOM.cinemaTopRightMask) DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
 
       if (DOM.cinemaExternalBtn) {
         DOM.cinemaExternalBtn.href = embedUrl;
@@ -4733,6 +4739,8 @@ const STATE = {
     DOM.cinemaIframe.src = '';
     DOM.cinemaIframe.style.display = 'none';
     DOM.cinemaBlockerTop.style.display = 'none';
+    if (DOM.cinemaTopLeftMask) DOM.cinemaTopLeftMask.style.setProperty('display', 'none', 'important');
+    if (DOM.cinemaTopRightMask) DOM.cinemaTopRightMask.style.setProperty('display', 'none', 'important');
     document.body.style.overflow = '';
 
     // Destruir Clappr player usado para Watch Party de canais
