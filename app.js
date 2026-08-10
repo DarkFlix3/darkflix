@@ -1073,7 +1073,7 @@ const STATE = {
       const popular2 = responses[5];
       const trendingSeriesDay = responses[6];
 
-      // Garantir que "Elize Matsunaga: Era Uma Vez um Crime" (128456) e "O Mentalista" (5920) estejam em alta no site
+      // Garantir que "Elize: Sombras de uma Mulher" (128456) e "O Mentalista" (5920) estejam no Top 10
       try {
         const [elizeRes, mentalistRes] = await Promise.all([
           tmdbFetch('/tv/128456').catch(() => null),
@@ -1082,20 +1082,30 @@ const STATE = {
 
         if (elizeRes && trendingSeries.results) {
           elizeRes.media_type = 'tv';
-          if (!trendingSeries.results.some(x => Number(x.id) === 128456)) {
-            trendingSeries.results.unshift(elizeRes);
-          }
-          if (trendingSeriesDay.results && !trendingSeriesDay.results.some(x => Number(x.id) === 128456)) {
+          elizeRes.name = "Elize: Sombras de uma Mulher";
+          elizeRes.original_name = "Elize: Sombras de uma Mulher";
+          elizeRes.title = "Elize: Sombras de uma Mulher";
+
+          trendingSeries.results = trendingSeries.results.filter(x => Number(x.id) !== 128456);
+          trendingSeries.results.unshift(elizeRes);
+
+          if (trendingSeriesDay.results) {
+            trendingSeriesDay.results = trendingSeriesDay.results.filter(x => Number(x.id) !== 128456);
             trendingSeriesDay.results.unshift(elizeRes);
           }
         }
 
         if (mentalistRes && trendingSeries.results) {
           mentalistRes.media_type = 'tv';
-          if (!trendingSeries.results.some(x => Number(x.id) === 5920)) {
-            trendingSeries.results.splice(1, 0, mentalistRes);
-          }
-          if (trendingSeriesDay.results && !trendingSeriesDay.results.some(x => Number(x.id) === 5920)) {
+          mentalistRes.name = "O Mentalista";
+          mentalistRes.original_name = "O Mentalista";
+          mentalistRes.title = "O Mentalista";
+
+          trendingSeries.results = trendingSeries.results.filter(x => Number(x.id) !== 5920);
+          trendingSeries.results.splice(1, 0, mentalistRes);
+
+          if (trendingSeriesDay.results) {
+            trendingSeriesDay.results = trendingSeriesDay.results.filter(x => Number(x.id) !== 5920);
             trendingSeriesDay.results.splice(1, 0, mentalistRes);
           }
         }

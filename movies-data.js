@@ -275,7 +275,7 @@ const DEFAULT_MOVIES = [
   },
   {
     id: 128456,
-    title: "Elize Matsunaga: Era Uma Vez um Crime",
+    title: "Elize: Sombras de uma Mulher",
     year: 2021,
     duration: "1 Temporada",
     rating: 7.8,
