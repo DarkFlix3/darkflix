@@ -4530,42 +4530,7 @@ const STATE = {
 
 
 
-  function hideCinemaMasks() {
-    if (STATE.maskTimer) {
-      clearTimeout(STATE.maskTimer);
-      STATE.maskTimer = null;
-    }
-    if (DOM.cinemaTopLeftMask) {
-      DOM.cinemaTopLeftMask.classList.add('hidden-mask');
-      DOM.cinemaTopLeftMask.style.setProperty('display', 'none', 'important');
-    }
-    if (DOM.cinemaTopRightMask) {
-      DOM.cinemaTopRightMask.classList.add('hidden-mask');
-      DOM.cinemaTopRightMask.style.setProperty('display', 'none', 'important');
-    }
-  }
 
-  function showCinemaMasks() {
-    if (DOM.cinemaTopLeftMask) {
-      DOM.cinemaTopLeftMask.classList.remove('hidden-mask');
-      DOM.cinemaTopLeftMask.style.setProperty('display', 'flex', 'important');
-    }
-    if (DOM.cinemaTopRightMask) {
-      DOM.cinemaTopRightMask.classList.remove('hidden-mask');
-      DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
-    }
-
-    if (STATE.maskTimer) clearTimeout(STATE.maskTimer);
-    // Sumir automaticamente 2.5 segundos após carregar o player como garantia
-    STATE.maskTimer = setTimeout(hideCinemaMasks, 2500);
-  }
-
-  // Ouvinte global de mensagens do player de vídeo para sumir com as máscaras assim que o vídeo der play
-  window.addEventListener('message', (e) => {
-    if (e && e.data) {
-      hideCinemaMasks();
-    }
-  });
 
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
@@ -4769,23 +4734,8 @@ const STATE = {
       DOM.cinemaIframe.style.transformOrigin = '';
       DOM.cinemaBlockerTop.style.display = 'none';
 
-      // Mostrar as máscaras inicialmente durante o carregamento do player
-      showCinemaMasks();
-
-      // Esconder máscaras imediatamente quando o iframe terminar de carregar
-      DOM.cinemaIframe.onload = () => {
-        setTimeout(hideCinemaMasks, 1500);
-      };
-
-      // Esconder máscaras ao clicar ou tocar em qualquer parte das máscaras
-      if (DOM.cinemaTopLeftMask) {
-        DOM.cinemaTopLeftMask.onclick = hideCinemaMasks;
-        DOM.cinemaTopLeftMask.ontouchstart = hideCinemaMasks;
-      }
-      if (DOM.cinemaTopRightMask) {
-        DOM.cinemaTopRightMask.onclick = hideCinemaMasks;
-        DOM.cinemaTopRightMask.ontouchstart = hideCinemaMasks;
-      }
+      if (DOM.cinemaTopLeftMask) DOM.cinemaTopLeftMask.style.setProperty('display', 'flex', 'important');
+      if (DOM.cinemaTopRightMask) DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
 
       if (DOM.cinemaExternalBtn) {
         DOM.cinemaExternalBtn.href = embedUrl;
@@ -4902,8 +4852,7 @@ const STATE = {
       clapprCont.style.display = 'none';
     }
 
-    // Limpar timer e esconder máscaras superiores completamente
-    hideCinemaMasks();
+
 
     // Clear controls hiding timeout and class
     if (controlsTimeout) {
