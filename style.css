@@ -1116,6 +1116,20 @@ ul, ol {
   font-size: 0.78rem !important;
 }
 
+.cinema-top-left-mask,
+.cinema-top-right-mask {
+  transition: opacity 0.8s ease, visibility 0.8s ease !important;
+  opacity: 1;
+  visibility: visible;
+}
+
+.cinema-top-left-mask.hidden-mask,
+.cinema-top-right-mask.hidden-mask {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 @media (max-width: 768px) {
   .cinema-top-left-mask, .cinema-top-right-mask {
     width: 150px !important;

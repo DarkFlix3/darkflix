@@ -1128,46 +1128,10 @@ const STATE = {
       const nowPlayingAll = [...(nowPlaying1.results || []), ...(nowPlaying2.results || [])];
       const popularAll = [...(popular1.results || []), ...(popular2.results || [])];
 
-      // Garantir que "Elize: Sombras de uma Mulher" (Filme #1) e "O Mentalista" (Série #1) estejam no Top 10
+      // Garantir que "O Mentalista" (Série #1) esteja no Top 10 Séries
       try {
-        const [elizeRes, mentalistRes] = await Promise.all([
-          tmdbFetch('/tv/128456').catch(() => null),
-          tmdbFetch('/tv/5920').catch(() => null)
-        ]);
+        const mentalistRes = await tmdbFetch('/tv/5920').catch(() => null);
 
-        // 1. Elize: Sombras de uma Mulher (FILME - Posição #1 no Top 10 Filmes)
-        const elizeObj = {
-          id: 128456,
-          media_type: 'movie',
-          title: "Elize: Sombras de uma Mulher",
-          name: "Elize: Sombras de uma Mulher",
-          original_title: "Elize: Sombras de uma Mulher",
-          overview: "O documentário revela os bastidores, segredos e desdobramentos do crime que chocaria o Brasil, trazendo uma perspectiva profunda sobre o caso de Elize Matsunaga.",
-          poster_path: (elizeRes && elizeRes.poster_path) || "/vLg51aN7ZndG4i7mR7i1t5e2n0i.jpg",
-          backdrop_path: (elizeRes && elizeRes.backdrop_path) || "/j9X2o7mR7i1t5e2n0ivLg51aN7Z.jpg",
-          vote_average: (elizeRes && elizeRes.vote_average) || 8.2,
-          release_date: (elizeRes && elizeRes.first_air_date) || "2021-07-08",
-          popularity: 999
-        };
-
-        if (trendingMovies && trendingMovies.results) {
-          trendingMovies.results = trendingMovies.results.filter(x => Number(x.id) !== 128456);
-          trendingMovies.results.unshift(elizeObj);
-        }
-
-        if (nowPlayingAll) {
-          nowPlayingAll.unshift(elizeObj);
-        }
-
-        // Remover Elize das Séries para não duplicar
-        if (trendingSeries && trendingSeries.results) {
-          trendingSeries.results = trendingSeries.results.filter(x => Number(x.id) !== 128456);
-        }
-        if (trendingSeriesDay && trendingSeriesDay.results) {
-          trendingSeriesDay.results = trendingSeriesDay.results.filter(x => Number(x.id) !== 128456);
-        }
-
-        // 2. O Mentalista (SÉRIE - Posição #1 no Top 10 Séries)
         const mentalistObj = mentalistRes || {
           id: 5920,
           media_type: 'tv',
@@ -1198,7 +1162,7 @@ const STATE = {
           trendingSeriesDay.results.unshift(mentalistObj);
         }
       } catch (e) {
-        console.warn("Erro ao carregar Destaques customizados:", e);
+        console.warn("Erro ao carregar O Mentalista:", e);
       }
 
       // Set featured on banner (daily rotating movie/series)
@@ -4767,8 +4731,23 @@ const STATE = {
       DOM.cinemaIframe.style.transform = '';
       DOM.cinemaIframe.style.transformOrigin = '';
       DOM.cinemaBlockerTop.style.display = 'none';
-      if (DOM.cinemaTopLeftMask) DOM.cinemaTopLeftMask.style.setProperty('display', 'flex', 'important');
-      if (DOM.cinemaTopRightMask) DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
+
+      // Mostrar as máscaras inicialmente
+      if (DOM.cinemaTopLeftMask) {
+        DOM.cinemaTopLeftMask.classList.remove('hidden-mask');
+        DOM.cinemaTopLeftMask.style.setProperty('display', 'flex', 'important');
+      }
+      if (DOM.cinemaTopRightMask) {
+        DOM.cinemaTopRightMask.classList.remove('hidden-mask');
+        DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
+      }
+
+      // Timer para fazer as máscaras sumirem automaticamente após 4.5 segundos e não atrapalharem a reprodução
+      if (STATE.maskTimer) clearTimeout(STATE.maskTimer);
+      STATE.maskTimer = setTimeout(() => {
+        if (DOM.cinemaTopLeftMask) DOM.cinemaTopLeftMask.classList.add('hidden-mask');
+        if (DOM.cinemaTopRightMask) DOM.cinemaTopRightMask.classList.add('hidden-mask');
+      }, 4500);
 
       if (DOM.cinemaExternalBtn) {
         DOM.cinemaExternalBtn.href = embedUrl;
@@ -4883,6 +4862,20 @@ const STATE = {
     if (clapprCont) {
       clapprCont.innerHTML = '';
       clapprCont.style.display = 'none';
+    }
+
+    // Limpar timer e esconder máscaras superiores
+    if (STATE.maskTimer) {
+      clearTimeout(STATE.maskTimer);
+      STATE.maskTimer = null;
+    }
+    if (DOM.cinemaTopLeftMask) {
+      DOM.cinemaTopLeftMask.classList.add('hidden-mask');
+      DOM.cinemaTopLeftMask.style.display = 'none';
+    }
+    if (DOM.cinemaTopRightMask) {
+      DOM.cinemaTopRightMask.classList.add('hidden-mask');
+      DOM.cinemaTopRightMask.style.display = 'none';
     }
 
     // Clear controls hiding timeout and class
