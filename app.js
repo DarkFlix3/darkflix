@@ -1127,11 +1127,11 @@ const STATE = {
       // Garantir que "Elize: Sombras de uma Mulher" (Filme #1) e "O Mentalista" (Série #1) estejam no Top 10
       try {
         const [elizeRes, mentalistRes] = await Promise.all([
-          tmdbFetch('/movie/128456').catch(() => null),
+          tmdbFetch('/tv/128456').catch(() => null),
           tmdbFetch('/tv/5920').catch(() => null)
         ]);
 
-        // 1. Elize: Sombras de uma Mulher (FILME)
+        // 1. Elize: Sombras de uma Mulher (FILME - Posição #1 no Top 10 Filmes)
         const elizeObj = {
           id: 128456,
           media_type: 'movie',
@@ -1142,7 +1142,7 @@ const STATE = {
           poster_path: (elizeRes && elizeRes.poster_path) || "/vLg51aN7ZndG4i7mR7i1t5e2n0i.jpg",
           backdrop_path: (elizeRes && elizeRes.backdrop_path) || "/j9X2o7mR7i1t5e2n0ivLg51aN7Z.jpg",
           vote_average: (elizeRes && elizeRes.vote_average) || 8.2,
-          release_date: (elizeRes && elizeRes.release_date) || "2021-07-08",
+          release_date: (elizeRes && elizeRes.first_air_date) || "2021-07-08",
           popularity: 999
         };
 
@@ -1163,26 +1163,35 @@ const STATE = {
           trendingSeriesDay.results = trendingSeriesDay.results.filter(x => Number(x.id) !== 128456);
         }
 
-        // 2. O Mentalista (SÉRIIE)
-        if (mentalistRes) {
-          mentalistRes.media_type = 'tv';
-          mentalistRes.name = "O Mentalista";
-          mentalistRes.original_name = "O Mentalista";
-          mentalistRes.title = "O Mentalista";
-          mentalistRes.popularity = 999;
-          if (!mentalistRes.poster_path) mentalistRes.poster_path = "/ac9nL3r7sB1vW3k0v5X.jpg";
-          if (!mentalistRes.backdrop_path) mentalistRes.backdrop_path = "/w5Xv3k0v5Xac9nL3r7sB1.jpg";
-          if (!mentalistRes.overview) mentalistRes.overview = "Patrick Jane é um consultor independente da CBI que usa suas habilidades incríveis de observação para resolver crimes.";
+        // 2. O Mentalista (SÉRIE - Posição #1 no Top 10 Séries)
+        const mentalistObj = mentalistRes || {
+          id: 5920,
+          media_type: 'tv',
+          name: "O Mentalista",
+          title: "O Mentalista",
+          original_name: "The Mentalist",
+          overview: "Patrick Jane é um consultor independente da CBI que usa suas habilidades incríveis de observação para resolver crimes.",
+          poster_path: "/ac9nL3r7sB1vW3k0v5X.jpg",
+          backdrop_path: "/w5Xv3k0v5Xac9nL3r7sB1.jpg",
+          vote_average: 8.4,
+          first_air_date: "2008-09-23",
+          popularity: 999
+        };
+        mentalistObj.media_type = 'tv';
+        mentalistObj.name = "O Mentalista";
+        mentalistObj.title = "O Mentalista";
+        mentalistObj.popularity = 999;
+        if (!mentalistObj.poster_path) mentalistObj.poster_path = "/ac9nL3r7sB1vW3k0v5X.jpg";
+        if (!mentalistObj.backdrop_path) mentalistObj.backdrop_path = "/w5Xv3k0v5Xac9nL3r7sB1.jpg";
 
-          if (trendingSeries && trendingSeries.results) {
-            trendingSeries.results = trendingSeries.results.filter(x => Number(x.id) !== 5920);
-            trendingSeries.results.unshift(mentalistRes);
-          }
+        if (trendingSeries && trendingSeries.results) {
+          trendingSeries.results = trendingSeries.results.filter(x => Number(x.id) !== 5920);
+          trendingSeries.results.unshift(mentalistObj);
+        }
 
-          if (trendingSeriesDay && trendingSeriesDay.results) {
-            trendingSeriesDay.results = trendingSeriesDay.results.filter(x => Number(x.id) !== 5920);
-            trendingSeriesDay.results.unshift(mentalistRes);
-          }
+        if (trendingSeriesDay && trendingSeriesDay.results) {
+          trendingSeriesDay.results = trendingSeriesDay.results.filter(x => Number(x.id) !== 5920);
+          trendingSeriesDay.results.unshift(mentalistObj);
         }
       } catch (e) {
         console.warn("Erro ao carregar Destaques customizados:", e);
@@ -4734,18 +4743,22 @@ const STATE = {
       if (STATE.roomActive) {
         // Watch Party: usar player direto (WarezCDN) sem tela de seleção
         const startParam = initialElapsedTime ? `?start=${initialElapsedTime}` : '';
-        if (type === 'movie') {
+        if (Number(tmdbId) === 128456) {
+          embedUrl = `https://embed.warezcdn.link/serie/128456/1/1${startParam}`;
+        } else if (type === 'movie') {
           embedUrl = `https://embed.warezcdn.link/filme/${tmdbId}${startParam}`;
         } else {
-          embedUrl = `https://embed.warezcdn.link/serie/${tmdbId}/${season}/${episode}${startParam}`;
+          embedUrl = `https://embed.warezcdn.link/serie/${tmdbId}/${season || 1}/${episode || 1}${startParam}`;
         }
       } else {
         // Individual: usar myembed.biz com opções de player
         const startParam = initialElapsedTime ? `&start=${initialElapsedTime}&t=${initialElapsedTime}&time=${initialElapsedTime}` : '';
-        if (type === 'movie') {
+        if (Number(tmdbId) === 128456) {
+          embedUrl = `https://myembed.biz/serie/128456/1/1?autoplay=1${startParam}`;
+        } else if (type === 'movie') {
           embedUrl = `https://myembed.biz/filme/${tmdbId}?autoplay=1${startParam}`;
         } else {
-          embedUrl = `https://myembed.biz/serie/${tmdbId}/${season}/${episode}?autoplay=1${startParam}`;
+          embedUrl = `https://myembed.biz/serie/${tmdbId}/${season || 1}/${episode || 1}?autoplay=1${startParam}`;
         }
       }
 
