@@ -4533,10 +4533,6 @@ const STATE = {
 
 
   function esconderMascarasCinema() {
-    if (STATE.maskTimer) {
-      clearTimeout(STATE.maskTimer);
-      STATE.maskTimer = null;
-    }
     if (DOM.cinemaTopLeftMask) {
       DOM.cinemaTopLeftMask.classList.add('hidden-mask');
       DOM.cinemaTopLeftMask.style.setProperty('display', 'none', 'important');
@@ -4556,11 +4552,14 @@ const STATE = {
       DOM.cinemaTopRightMask.classList.remove('hidden-mask');
       DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
     }
-
-    if (STATE.maskTimer) clearTimeout(STATE.maskTimer);
-    // Quando o player termina de carregar e os botões abaixo (PiP / WVC Transmitir) aparecem na tela, as máscaras sumem automaticamente
-    STATE.maskTimer = setTimeout(esconderMascarasCinema, 3000);
   }
+
+  // Ouvinte global para mensagens do player de vídeo (disparado quando o usuário clica para Selecionar Áudio / Dublado / Legendado)
+  window.addEventListener('message', (e) => {
+    if (e && e.data) {
+      esconderMascarasCinema();
+    }
+  });
 
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
@@ -4764,20 +4763,23 @@ const STATE = {
       DOM.cinemaIframe.style.transformOrigin = '';
       DOM.cinemaBlockerTop.style.display = 'none';
 
-      // Mostrar máscaras no topo inicialmente
+      // Mostrar máscaras no topo para cobrir marca d'água enquanto a tela de "Selecione um Áudio" estiver visível
       mostrarMascarasCinema();
 
-      // Esconder as máscaras assim que os botões PiP / WVC Transmitir forem interagidos
-      const cinemaPipBtn = document.getElementById('cinema-pip-btn');
-      const cinemaWvcBtn = document.getElementById('cinema-wvc-btn');
-
-      if (cinemaPipBtn) {
-        cinemaPipBtn.onclick = esconderMascarasCinema;
-        cinemaPipBtn.onmouseenter = esconderMascarasCinema;
+      // Ao clicar em qualquer lugar da área do player ou das máscaras (seleção de áudio/play), a máscara é removida imediatamente
+      const playerContainer = document.querySelector('.cinema-player');
+      if (playerContainer) {
+        playerContainer.onclick = esconderMascarasCinema;
+        playerContainer.ontouchstart = esconderMascarasCinema;
       }
-      if (cinemaWvcBtn) {
-        cinemaWvcBtn.onclick = esconderMascarasCinema;
-        cinemaWvcBtn.onmouseenter = esconderMascarasCinema;
+
+      if (DOM.cinemaTopLeftMask) {
+        DOM.cinemaTopLeftMask.onclick = esconderMascarasCinema;
+        DOM.cinemaTopLeftMask.ontouchstart = esconderMascarasCinema;
+      }
+      if (DOM.cinemaTopRightMask) {
+        DOM.cinemaTopRightMask.onclick = esconderMascarasCinema;
+        DOM.cinemaTopRightMask.ontouchstart = esconderMascarasCinema;
       }
 
       if (DOM.cinemaExternalBtn) {

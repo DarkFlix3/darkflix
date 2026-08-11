@@ -1118,6 +1118,7 @@ ul, ol {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
+  z-index: -1 !important;
 }
 
 
