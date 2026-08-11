@@ -4539,8 +4539,11 @@ const STATE = {
     activeElementCheckInterval = setInterval(() => {
       if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
         if (document.activeElement === DOM.cinemaIframe) {
-          // Usuário clicou dentro do iframe (selecionou áudio/play) -> esconde as máscaras
+          // Usuário clicou no iframe (selecionou áudio/play) -> esconde as máscaras
           esconderMascarasCinema();
+        } else if (document.activeElement === document.body) {
+          // Se o foco retornou para a página (recarregou ou voltou para Selecionar Áudio) -> mostra as máscaras
+          mostrarMascarasCinema();
         }
       }
     }, 200);
@@ -4566,18 +4569,15 @@ const STATE = {
       DOM.cinemaTopRightMask.classList.remove('hidden-mask');
       DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
     }
-
-    iniciarInspecaoCliqueIframe();
   }
 
-  // Se a página/janela recuperar o foco (ex: usuário voltou para a tela de Selecionar Áudio ou recarregou o player), mostra as máscaras novamente!
+  // Ouvinte de foco e movimento de mouse para restaurar máscaras se o usuário voltar para a tela de Selecionar Áudio
   window.addEventListener('focus', () => {
     if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
       mostrarMascarasCinema();
     }
   });
 
-  // Ouvinte de perda de foco e postMessage para capturar no milissegundo em que o usuário clica dentro do iframe para Selecionar Áudio
   window.addEventListener('blur', () => {
     if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
       esconderMascarasCinema();
@@ -4794,21 +4794,19 @@ const STATE = {
 
       // Mostrar máscaras no topo para cobrir marca d'água enquanto a tela de "Selecione um Áudio" estiver visível
       mostrarMascarasCinema();
+      iniciarInspecaoCliqueIframe();
 
-      // Ao clicar em qualquer lugar da área do player ou das máscaras (seleção de áudio/play), a máscara é removida imediatamente
+      // Ao mover o cursor para o topo do player ou ao interagir com a área superior, restaura as máscaras caso o usuário tenha voltado para Selecionar Áudio
       const playerContainer = document.querySelector('.cinema-player');
       if (playerContainer) {
-        playerContainer.onclick = esconderMascarasCinema;
-        playerContainer.ontouchstart = esconderMascarasCinema;
-      }
-
-      if (DOM.cinemaTopLeftMask) {
-        DOM.cinemaTopLeftMask.onclick = esconderMascarasCinema;
-        DOM.cinemaTopLeftMask.ontouchstart = esconderMascarasCinema;
-      }
-      if (DOM.cinemaTopRightMask) {
-        DOM.cinemaTopRightMask.onclick = esconderMascarasCinema;
-        DOM.cinemaTopRightMask.ontouchstart = esconderMascarasCinema;
+        playerContainer.onmousemove = (e) => {
+          const rect = playerContainer.getBoundingClientRect();
+          const relativeY = e.clientY - rect.top;
+          // Se o cursor estiver na faixa superior (primeiros 70px do topo do player) e não estiver com o iframe em foco
+          if (relativeY >= 0 && relativeY <= 70 && document.activeElement !== DOM.cinemaIframe) {
+            mostrarMascarasCinema();
+          }
+        };
       }
 
       if (DOM.cinemaExternalBtn) {
