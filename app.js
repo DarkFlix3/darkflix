@@ -4532,7 +4532,24 @@ const STATE = {
 
 
 
+  let activeElementCheckInterval = null;
+
+  function iniciarInspecaoCliqueIframe() {
+    if (activeElementCheckInterval) clearInterval(activeElementCheckInterval);
+    activeElementCheckInterval = setInterval(() => {
+      if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
+        if (document.activeElement === DOM.cinemaIframe) {
+          esconderMascarasCinema();
+        }
+      }
+    }, 150);
+  }
+
   function esconderMascarasCinema() {
+    if (activeElementCheckInterval) {
+      clearInterval(activeElementCheckInterval);
+      activeElementCheckInterval = null;
+    }
     if (DOM.cinemaTopLeftMask) {
       DOM.cinemaTopLeftMask.classList.add('hidden-mask');
       DOM.cinemaTopLeftMask.style.setProperty('display', 'none', 'important');
@@ -4552,9 +4569,17 @@ const STATE = {
       DOM.cinemaTopRightMask.classList.remove('hidden-mask');
       DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
     }
+
+    iniciarInspecaoCliqueIframe();
   }
 
-  // Ouvinte global para mensagens do player de vídeo (disparado quando o usuário clica para Selecionar Áudio / Dublado / Legendado)
+  // Ouvinte de perda de foco e postMessage para capturar no milissegundo em que o usuário clica dentro do iframe para Selecionar Áudio
+  window.addEventListener('blur', () => {
+    if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
+      esconderMascarasCinema();
+    }
+  });
+
   window.addEventListener('message', (e) => {
     if (e && e.data) {
       esconderMascarasCinema();
