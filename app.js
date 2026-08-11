@@ -4592,6 +4592,20 @@ const STATE = {
 
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
+    // Remover foco de elementos anteriores (ex: iframe anterior)
+    try {
+      if (document.activeElement && document.activeElement.blur) {
+        document.activeElement.blur();
+      }
+    } catch (e) {}
+
+    // Sempre resetar e mostrar as máscaras no topo ao abrir um novo vídeo/filme/série
+    if (type !== 'canal') {
+      mostrarMascarasCinema();
+    } else {
+      esconderMascarasCinema();
+    }
+
     // Reset cinema iframe custom styles for YouTube channels
     if (DOM.cinemaIframe) {
       DOM.cinemaIframe.style.transform = '';
