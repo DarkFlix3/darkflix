@@ -1121,8 +1121,9 @@ const STATE = {
       const trendingMovies = responses[2];
       const trendingSeries = responses[3];
       const popular1 = responses[4];
-      const popular2 = responses[5];
-      const trendingSeriesDay = responses[6];
+      // Combinar páginas
+      const nowPlayingAll = [...(nowPlaying1.results || []), ...(nowPlaying2.results || [])];
+      const popularAll = [...(popular1.results || []), ...(popular2.results || [])];
 
       // Garantir que "Elize: Sombras de uma Mulher" (Filme #1) e "O Mentalista" (Série #1) estejam no Top 10
       try {
@@ -1196,10 +1197,6 @@ const STATE = {
       } catch (e) {
         console.warn("Erro ao carregar Destaques customizados:", e);
       }
-
-      // Combinar páginas
-      const nowPlayingAll = [...(nowPlaying1.results || []), ...(nowPlaying2.results || [])];
-      const popularAll = [...(popular1.results || []), ...(popular2.results || [])];
 
       // Set featured on banner (daily rotating movie/series)
       const heroItem = await selectDailyFeaturedItem(nowPlayingAll, trendingSeries.results);
