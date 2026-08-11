@@ -4539,17 +4539,14 @@ const STATE = {
     activeElementCheckInterval = setInterval(() => {
       if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
         if (document.activeElement === DOM.cinemaIframe) {
+          // Usuário clicou dentro do iframe (selecionou áudio/play) -> esconde as máscaras
           esconderMascarasCinema();
         }
       }
-    }, 150);
+    }, 200);
   }
 
   function esconderMascarasCinema() {
-    if (activeElementCheckInterval) {
-      clearInterval(activeElementCheckInterval);
-      activeElementCheckInterval = null;
-    }
     if (DOM.cinemaTopLeftMask) {
       DOM.cinemaTopLeftMask.classList.add('hidden-mask');
       DOM.cinemaTopLeftMask.style.setProperty('display', 'none', 'important');
@@ -4572,6 +4569,13 @@ const STATE = {
 
     iniciarInspecaoCliqueIframe();
   }
+
+  // Se a página/janela recuperar o foco (ex: usuário voltou para a tela de Selecionar Áudio ou recarregou o player), mostra as máscaras novamente!
+  window.addEventListener('focus', () => {
+    if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
+      mostrarMascarasCinema();
+    }
+  });
 
   // Ouvinte de perda de foco e postMessage para capturar no milissegundo em que o usuário clica dentro do iframe para Selecionar Áudio
   window.addEventListener('blur', () => {
