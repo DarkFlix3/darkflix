@@ -4538,12 +4538,11 @@ const STATE = {
     if (activeElementCheckInterval) clearInterval(activeElementCheckInterval);
     activeElementCheckInterval = setInterval(() => {
       if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
+        // Ignorar o foco legado do iframe anterior durante 1.8s ao abrir um novo vídeo
+        if (STATE.justOpenedNewVideo) return;
+
         if (document.activeElement === DOM.cinemaIframe) {
-          // Usuário clicou no iframe (selecionou áudio/play) -> esconde as máscaras
           esconderMascarasCinema();
-        } else if (document.activeElement === document.body) {
-          // Se o foco retornou para a página (recarregou ou voltou para Selecionar Áudio) -> mostra as máscaras
-          mostrarMascarasCinema();
         }
       }
     }, 200);
@@ -4561,6 +4560,7 @@ const STATE = {
   }
 
   function mostrarMascarasCinema() {
+    // Forçar exibição visível das máscaras
     if (DOM.cinemaTopLeftMask) {
       DOM.cinemaTopLeftMask.classList.remove('hidden-mask');
       DOM.cinemaTopLeftMask.style.setProperty('display', 'flex', 'important');
@@ -4569,6 +4569,15 @@ const STATE = {
       DOM.cinemaTopRightMask.classList.remove('hidden-mask');
       DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
     }
+
+    // Bloquear temporariamente a inspecao para o novo video abrir obrigatoriamente com a mascara
+    STATE.justOpenedNewVideo = true;
+    if (STATE.newVideoResetTimer) clearTimeout(STATE.newVideoResetTimer);
+    STATE.newVideoResetTimer = setTimeout(() => {
+      STATE.justOpenedNewVideo = false;
+    }, 1800);
+
+    iniciarInspecaoCliqueIframe();
   }
 
   // Ouvinte de foco e movimento de mouse para restaurar máscaras se o usuário voltar para a tela de Selecionar Áudio
@@ -4592,14 +4601,13 @@ const STATE = {
 
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
-    // Remover foco de elementos anteriores (ex: iframe anterior)
+    // Remover foco de elementos anteriores para não carregar iframe focado
     try {
-      if (document.activeElement && document.activeElement.blur) {
-        document.activeElement.blur();
-      }
+      if (DOM.cinemaIframe && DOM.cinemaIframe.blur) DOM.cinemaIframe.blur();
+      if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
     } catch (e) {}
 
-    // Sempre resetar e mostrar as máscaras no topo ao abrir um novo vídeo/filme/série
+    // Garantir exibição visível das máscaras ao carregar o novo vídeo
     if (type !== 'canal') {
       mostrarMascarasCinema();
     } else {
