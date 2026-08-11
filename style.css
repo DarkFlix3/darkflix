@@ -1125,9 +1125,11 @@ ul, ol {
 
 .cinema-top-left-mask.hidden-mask,
 .cinema-top-right-mask.hidden-mask {
+  display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
+  z-index: -1 !important;
 }
 
 @media (max-width: 768px) {
