@@ -4532,6 +4532,36 @@ const STATE = {
 
 
 
+  function esconderMascarasCinema() {
+    if (STATE.maskTimer) {
+      clearTimeout(STATE.maskTimer);
+      STATE.maskTimer = null;
+    }
+    if (DOM.cinemaTopLeftMask) {
+      DOM.cinemaTopLeftMask.classList.add('hidden-mask');
+      DOM.cinemaTopLeftMask.style.setProperty('display', 'none', 'important');
+    }
+    if (DOM.cinemaTopRightMask) {
+      DOM.cinemaTopRightMask.classList.add('hidden-mask');
+      DOM.cinemaTopRightMask.style.setProperty('display', 'none', 'important');
+    }
+  }
+
+  function mostrarMascarasCinema() {
+    if (DOM.cinemaTopLeftMask) {
+      DOM.cinemaTopLeftMask.classList.remove('hidden-mask');
+      DOM.cinemaTopLeftMask.style.setProperty('display', 'flex', 'important');
+    }
+    if (DOM.cinemaTopRightMask) {
+      DOM.cinemaTopRightMask.classList.remove('hidden-mask');
+      DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
+    }
+
+    if (STATE.maskTimer) clearTimeout(STATE.maskTimer);
+    // Quando o player termina de carregar e os botões abaixo (PiP / WVC Transmitir) aparecem na tela, as máscaras sumem automaticamente
+    STATE.maskTimer = setTimeout(esconderMascarasCinema, 3000);
+  }
+
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
     // Reset cinema iframe custom styles for YouTube channels
@@ -4734,8 +4764,21 @@ const STATE = {
       DOM.cinemaIframe.style.transformOrigin = '';
       DOM.cinemaBlockerTop.style.display = 'none';
 
-      if (DOM.cinemaTopLeftMask) DOM.cinemaTopLeftMask.style.setProperty('display', 'flex', 'important');
-      if (DOM.cinemaTopRightMask) DOM.cinemaTopRightMask.style.setProperty('display', 'flex', 'important');
+      // Mostrar máscaras no topo inicialmente
+      mostrarMascarasCinema();
+
+      // Esconder as máscaras assim que os botões PiP / WVC Transmitir forem interagidos
+      const cinemaPipBtn = document.getElementById('cinema-pip-btn');
+      const cinemaWvcBtn = document.getElementById('cinema-wvc-btn');
+
+      if (cinemaPipBtn) {
+        cinemaPipBtn.onclick = esconderMascarasCinema;
+        cinemaPipBtn.onmouseenter = esconderMascarasCinema;
+      }
+      if (cinemaWvcBtn) {
+        cinemaWvcBtn.onclick = esconderMascarasCinema;
+        cinemaWvcBtn.onmouseenter = esconderMascarasCinema;
+      }
 
       if (DOM.cinemaExternalBtn) {
         DOM.cinemaExternalBtn.href = embedUrl;
@@ -4837,8 +4880,7 @@ const STATE = {
     DOM.cinemaIframe.src = '';
     DOM.cinemaIframe.style.display = 'none';
     DOM.cinemaBlockerTop.style.display = 'none';
-    if (DOM.cinemaTopLeftMask) DOM.cinemaTopLeftMask.style.setProperty('display', 'none', 'important');
-    if (DOM.cinemaTopRightMask) DOM.cinemaTopRightMask.style.setProperty('display', 'none', 'important');
+    esconderMascarasCinema();
     document.body.style.overflow = '';
 
     // Destruir Clappr player usado para Watch Party de canais

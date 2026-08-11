@@ -1112,8 +1112,12 @@ ul, ol {
   user-select: none;
   box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.8);
 }
-.cinema-top-right-mask span {
-  font-size: 0.78rem !important;
+.cinema-top-left-mask.hidden-mask,
+.cinema-top-right-mask.hidden-mask {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 
