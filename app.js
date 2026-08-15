@@ -128,6 +128,33 @@ const db = getDatabase(app);
       return true;
     }
   }, true);
+
+  // 3. Ocultar completamente qualquer mensagem do Erro 2501 (SSL connection could not complete)
+  const originalAlert = window.alert;
+  window.alert = function(msg) {
+    if (msg && (String(msg).includes('2501') || String(msg).toLowerCase().includes('ssl') || String(msg).toLowerCase().includes('connection could not complete'))) {
+      console.warn('[APK Guard] Mensagem de Erro 2501 ocultada:', msg);
+      return;
+    }
+    return originalAlert.apply(this, arguments);
+  };
+
+  window.addEventListener('error', function(e) {
+    const errorMsg = String(e && (e.message || (e.error && e.error.message) || ''));
+    if (errorMsg && (errorMsg.includes('2501') || errorMsg.toLowerCase().includes('ssl') || errorMsg.toLowerCase().includes('connection could not complete'))) {
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
+      return true;
+    }
+  }, true);
+
+  window.addEventListener('unhandledrejection', function(e) {
+    const reason = String(e && e.reason ? e.reason : '');
+    if (reason && (reason.includes('2501') || reason.toLowerCase().includes('ssl') || reason.toLowerCase().includes('connection could not complete'))) {
+      if (e.preventDefault) e.preventDefault();
+      return true;
+    }
+  });
 })();
 
 const AVATAR_CATEGORIES = [
