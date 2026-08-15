@@ -1,0 +1,17 @@
+{
+  "name": "DarkFlix — Filmes & Séries",
+  "short_name": "DarkFlix",
+  "description": "Sua plataforma de streaming premium. Assista filmes e séries com qualidade cinematográfica.",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#06060a",
+  "theme_color": "#06060a",
+  "icons": [
+    {
+      "src": "assets/favicon1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
