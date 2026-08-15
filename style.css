@@ -47,15 +47,19 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #06060a !important;
+  width: 100%;
+  height: 100%;
 }
 
 body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-primary, #06060a) !important;
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .modal-title, .admin-header h1 {
@@ -997,7 +1001,10 @@ ul, ol {
 .cinema-mode {
   position: fixed;
   inset: 0;
-  background: #000;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: #000000 !important;
   z-index: 3000;
   display: flex;
   flex-direction: column;
