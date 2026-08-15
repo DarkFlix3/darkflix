@@ -5161,9 +5161,14 @@ ul, ol {
 @media (max-width: 1200px) and (orientation: portrait) {
   .cinema-mode {
     justify-content: flex-start !important;
-    padding: 60px 0 20px !important;
+    padding-top: max(60px, env(safe-area-inset-top, 60px)) !important;
+    padding-bottom: max(100px, env(safe-area-inset-bottom, 100px)) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
+    background-color: #06060a !important;
+    background: #06060a !important;
   }
 
   .cinema-player-scroll-wrapper {
