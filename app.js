@@ -91,6 +91,45 @@ const db = getDatabase(app);
   }
 })();
 
+// ============================================================
+// Proteção de WebView (APK Android) contra Erros de Anúncios (net::ERR_UNKNOWN_URL_SCHEME, intent://, shopee://)
+// ============================================================
+(function protectWebViewFromAdCrashes() {
+  // 1. Interceptar popups window.open para impedir esquemas como intent://, market://, shopee:// de travarem o APK
+  const originalOpen = window.open;
+  window.open = function(url, target, features) {
+    if (url && typeof url === 'string') {
+      const lower = url.toLowerCase();
+      if (
+        lower.startsWith('intent:') ||
+        lower.startsWith('market:') ||
+        lower.startsWith('shopee') ||
+        lower.startsWith('app:') ||
+        lower.startsWith('android-app:')
+      ) {
+        console.warn('[APK Ad Guard] Pop-up de esquema externo bloqueado:', url);
+        return null; // Bloqueia esquemas externos que travam o WebView no APK
+      }
+    }
+    try {
+      return originalOpen.apply(this, arguments);
+    } catch (err) {
+      console.warn('[APK Ad Guard] Pop-up interceptado com sucesso:', err);
+      return null;
+    }
+  };
+
+  // 2. Tratar erros globais de esquemas desconhecidos em WebViews Android
+  window.addEventListener('error', function(e) {
+    if (e && e.message && (e.message.includes('ERR_UNKNOWN_URL_SCHEME') || e.message.includes('intent://') || e.message.includes('shopee'))) {
+      console.warn('[APK Ad Guard] Suprimido erro de esquema de anúncio no WebView:', e.message);
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
+      return true;
+    }
+  }, true);
+})();
+
 const AVATAR_CATEGORIES = [
   {
     title: 'Invocação do Mal',
