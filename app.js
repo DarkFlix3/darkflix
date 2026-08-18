@@ -1068,7 +1068,20 @@ const STATE = {
 
   function attachCardEvents(container) {
     container.querySelectorAll('.movie-card').forEach((card) => {
-      card.addEventListener('click', async () => {
+      card.addEventListener('click', async (e) => {
+        // Se for um card de livro/HQ, abrir o leitor de livros imediatamente
+        const bookId = card.dataset.bookId || card.getAttribute('data-book-id');
+        if (bookId || card.classList.contains('book-card') || card.dataset.type === 'book') {
+          e.preventDefault();
+          e.stopPropagation();
+          const targetId = bookId || card.dataset.id;
+          const book = DEFAULT_BOOKS.find(b => String(b.id) === String(targetId));
+          if (book) {
+            openBookReader(book);
+          }
+          return;
+        }
+
         const idNum = Number(card.dataset.id);
         const type = card.dataset.type || 'movie';
         try {
@@ -1942,7 +1955,7 @@ const STATE = {
     const posterSrc = book.poster || 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22450%22><rect fill=%22%2312121a%22 width=%22300%22 height=%22450%22/><text fill=%22%236a6a7a%22 font-family=%22sans-serif%22 font-size=%2216%22 x=%22150%22 y=%22225%22 text-anchor=%22middle%22>Sem Capa</text></svg>';
 
     return `
-      <div class="movie-card book-card" data-book-id="${book.id}" style="animation-delay: ${index * 0.05}s">
+      <div class="movie-card book-card" data-book-id="${book.id}" data-id="${book.id}" data-type="book" style="cursor: pointer; animation-delay: ${index * 0.05}s">
         <img class="movie-card-poster" src="${posterSrc}" alt="${title}" loading="lazy"
              onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22450%22><rect fill=%22%2312121a%22 width=%22300%22 height=%22450%22/><text fill=%22%236a6a7a%22 font-family=%22sans-serif%22 font-size=%2216%22 x=%22150%22 y=%22225%22 text-anchor=%22middle%22>Sem Capa</text></svg>'">
         <div style="position: absolute; top: 10px; left: 10px; z-index: 4; background: rgba(229, 9, 20, 0.9); color: white; font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: var(--radius-sm); text-transform: uppercase;">
@@ -1969,9 +1982,11 @@ const STATE = {
   function attachBookCardEvents(container) {
     if (!container) return;
     container.querySelectorAll('.book-card').forEach(card => {
-      card.onclick = () => {
-        const bookId = card.getAttribute('data-book-id');
-        const book = DEFAULT_BOOKS.find(b => b.id === bookId);
+      card.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const bookId = card.getAttribute('data-book-id') || card.getAttribute('data-id');
+        const book = DEFAULT_BOOKS.find(b => String(b.id) === String(bookId));
         if (book) {
           openBookReader(book);
         }
@@ -1981,26 +1996,36 @@ const STATE = {
 
   // Open Book Reader Modal
   function openBookReader(book) {
-    if (!DOM.bookReaderModal || !DOM.bookReaderIframe) return;
+    const modal = document.getElementById('book-reader-modal') || DOM.bookReaderModal;
+    const iframe = document.getElementById('book-reader-iframe') || DOM.bookReaderIframe;
+    const titleEl = document.getElementById('book-reader-title') || DOM.bookReaderTitle;
+    const badgeEl = document.getElementById('book-reader-badge') || DOM.bookReaderBadge;
+    const extBtn = document.getElementById('book-reader-external-btn') || DOM.bookReaderExternalBtn;
+
+    if (!modal || !iframe) {
+      console.warn("Reader modal or iframe element not found!");
+      return;
+    }
 
     const embedUrl = getEmbeddableReaderUrl(book.readerUrl);
 
-    if (DOM.bookReaderTitle) DOM.bookReaderTitle.textContent = book.title || 'Leitor de Livros e HQs';
-    if (DOM.bookReaderBadge) DOM.bookReaderBadge.textContent = (book.genres && book.genres[0]) ? `📖 ${book.genres[0].toUpperCase()}` : '📚 LEITOR DARKFLIX';
-    DOM.bookReaderIframe.src = embedUrl;
+    if (titleEl) titleEl.textContent = book.title || 'Leitor de Livros e HQs';
+    if (badgeEl) badgeEl.textContent = (book.genres && book.genres[0]) ? `📖 ${book.genres[0].toUpperCase()}` : '📚 LEITOR DARKFLIX';
+    iframe.src = embedUrl;
 
-    if (DOM.bookReaderExternalBtn) {
-      DOM.bookReaderExternalBtn.href = book.readerUrl || embedUrl;
+    if (extBtn) {
+      extBtn.href = book.readerUrl || embedUrl;
     }
 
-    DOM.bookReaderModal.style.display = 'flex';
+    modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
 
   function closeBookReader() {
-    if (!DOM.bookReaderModal || !DOM.bookReaderIframe) return;
-    DOM.bookReaderIframe.src = '';
-    DOM.bookReaderModal.style.display = 'none';
+    const modal = document.getElementById('book-reader-modal') || DOM.bookReaderModal;
+    const iframe = document.getElementById('book-reader-iframe') || DOM.bookReaderIframe;
+    if (iframe) iframe.src = '';
+    if (modal) modal.style.display = 'none';
     document.body.style.overflow = '';
   }
 
