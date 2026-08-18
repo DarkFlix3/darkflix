@@ -326,7 +326,7 @@ const DEFAULT_BOOKS = [
     description: "Edição 01 da minissérie completa da Marvel em formato PDF. O Mercenário Tagarela inicia sua jornada insana contra versões alternativas de si mesmo pelo multiverso.",
     poster: "assets/hqs/deadpool_01.png",
     backdrop: "assets/hqs/deadpool_01.png",
-    readerUrl: "https://drive.google.com/file/d/1-H1XE4ulEDBgBN81_SkS3v3MtcWPeJfx/view?usp=sharing"
+    readerUrl: "https://drive.google.com/file/d/12t2pkBnPC1wCBQdNJbedEUaiKodtxxel/view?usp=sharing"
   },
   {
     id: "hq-deadpool-02",
@@ -341,7 +341,7 @@ const DEFAULT_BOOKS = [
     description: "Edição 02 da minissérie completa da Marvel em formato PDF. A guerra multiversal dos Deadpools esquenta com batalhas épicas e insanas.",
     poster: "assets/hqs/deadpool_02.png",
     backdrop: "assets/hqs/deadpool_02.png",
-    readerUrl: "https://drive.google.com/file/d/12t2pkBnPC1wCBQdNJbedEUaiKodtxxel/view?usp=sharing"
+    readerUrl: "https://drive.google.com/file/d/1-H1XE4ulEDBgBN81_SkS3v3MtcWPeJfx/view?usp=sharing"
   },
   {
     id: "hq-deadpool-03",
