@@ -402,6 +402,21 @@ const DEFAULT_BOOKS = [
     poster: "https://m.media-amazon.com/images/I/81IioFHXeOL._UF1000,1000_QL80_.jpg",
     backdrop: "https://m.media-amazon.com/images/I/81IioFHXeOL._UF1000,1000_QL80_.jpg",
     readerUrl: "https://drive.google.com/file/d/1WnNN-a8RSWJ03om36v6oLr0YD-_B3m8n/view?usp=sharing"
+  },
+  {
+    id: "livro-warren-lugar-sombrio",
+    title: "Ed & Lorraine Warren: Lugar Sombrio",
+    author: "Ed & Lorraine Warren",
+    year: 2019,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Fantasia & Ficção", "Clássicos"],
+    description: "Os demonologistas mais famosos do mundo investigam casos aterrorizantes e sobrenaturais de casas assombradas e espíritos demoníacos. Clique para ler o livro completo!",
+    poster: "https://m.media-amazon.com/images/I/A1Cb9Ffck8L._UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/A1Cb9Ffck8L._UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1aMDH7Tc8hFaylJZ-68af8oTiW22BG7Du/view?usp=sharing"
   }
 ];
 
