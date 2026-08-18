@@ -1915,16 +1915,18 @@ const STATE = {
 
   // ---------- Render Books & HQs Page ----------
   function renderBooksPage(selectedCategory = 'Todos') {
-    if (!DOM.booksGridAll || !DOM.booksFilterBar) return;
+    const grid = document.getElementById('books-grid-all') || DOM.booksGridAll;
+    const filterBar = document.getElementById('books-filter-bar') || DOM.booksFilterBar;
+    if (!grid || !filterBar) return;
 
     // Render filter bar with BOOK_GENRES
-    DOM.booksFilterBar.innerHTML = BOOK_GENRES.map(genre => `
+    filterBar.innerHTML = BOOK_GENRES.map(genre => `
       <button class="filter-btn ${genre === selectedCategory ? 'active' : ''}" data-genre="${genre}">
         ${genre === 'Todos' ? '📚 Todos os Livros e HQs' : genre}
       </button>
     `).join('');
 
-    DOM.booksFilterBar.querySelectorAll('.filter-btn').forEach(btn => {
+    filterBar.querySelectorAll('.filter-btn').forEach(btn => {
       btn.onclick = () => {
         const cat = btn.getAttribute('data-genre');
         renderBooksPage(cat);
@@ -1937,12 +1939,12 @@ const STATE = {
       : DEFAULT_BOOKS.filter(b => b.genres && b.genres.includes(selectedCategory));
 
     if (filteredBooks.length === 0) {
-      DOM.booksGridAll.innerHTML = `<div class="no-results">Nenhum livro ou HQ encontrado para essa categoria.</div>`;
+      grid.innerHTML = `<div class="no-results">Nenhum livro ou HQ encontrado para essa categoria.</div>`;
       return;
     }
 
-    DOM.booksGridAll.innerHTML = filteredBooks.map((book, i) => createBookCardHTML(book, i)).join('');
-    attachBookCardEvents(DOM.booksGridAll);
+    grid.innerHTML = filteredBooks.map((book, i) => createBookCardHTML(book, i)).join('');
+    attachBookCardEvents(grid);
   }
 
   // Generate Card HTML for Books & HQs
@@ -1952,6 +1954,7 @@ const STATE = {
     const rating = book.rating ? book.rating.toFixed(1) : '9.5';
     const year = book.year || '2024';
     const pages = book.duration || 'Livro';
+    const posterSrc = book.poster || 'https://i.imgur.com/cb5ZH4n.png';
     const badgeText = (author && author.toLowerCase().includes('marvel')) 
       ? '📖 HQ MARVEL' 
       : (book.genres && book.genres.includes('HQs & Quadrinhos')) 
