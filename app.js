@@ -1359,21 +1359,6 @@ const STATE = {
       // 11. Séries em Alta Hoje
       html += buildSection('Séries em Alta Hoje', trendingSeriesDay.results, 'tv');
 
-      // 12. Livros e HQs no DarkFlix
-      if (typeof DEFAULT_BOOKS !== 'undefined' && DEFAULT_BOOKS.length > 0) {
-        html += `
-          <section class="section section-books">
-            <div class="section-header">
-              <h2 class="section-title">📚 Livros & HQs Recomendados</h2>
-              <a href="#" class="view-all-link" id="home-view-all-books">Ver Todos ›</a>
-            </div>
-            <div class="movies-row">
-              ${DEFAULT_BOOKS.map((book, i) => createBookCardHTML(book, i)).join('')}
-            </div>
-          </section>
-        `;
-      }
-
       // Placeholder for Phase 2 deferred categories with premium animation spinner
       html += `
         <div id="home-deferred-content">
@@ -1392,15 +1377,6 @@ const STATE = {
       `;
 
       attachCardEvents(DOM.homeContent);
-      attachBookCardEvents(DOM.homeContent);
-
-      const viewAllBooksBtn = $('#home-view-all-books');
-      if (viewAllBooksBtn) {
-        viewAllBooksBtn.onclick = (e) => {
-          e.preventDefault();
-          navigateTo('books');
-        };
-      }
 
       // Bind "Limpar Histórico" button
       const clearBtn = document.getElementById('btn-clear-history');
