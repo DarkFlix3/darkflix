@@ -372,6 +372,21 @@ const DEFAULT_BOOKS = [
     poster: "https://i.imgur.com/cb5ZH4n.png",
     backdrop: "https://i.imgur.com/cb5ZH4n.png",
     readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
+  },
+  {
+    id: "livro-pequeno-principe",
+    title: "O Pequeno Príncipe",
+    author: "Antoine de Saint-Exupéry",
+    year: 1943,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Clássicos", "Fantasia & Ficção", "Desenvolvimento & Educação"],
+    description: "Um piloto cai no Deserto do Saara e encontra um jovem príncipe de um pequeno asteroide. Uma obra-prima clássica sobre amor, amizade e a essência da vida. Clique para ler o livro completo!",
+    poster: "https://br.web.img3.acsta.net/pictures/14/12/11/15/29/051042.jpg",
+    backdrop: "https://br.web.img3.acsta.net/pictures/14/12/11/15/29/051042.jpg",
+    readerUrl: "https://drive.google.com/file/d/10a3h7LWXg2R-HWgRI8-_doCyIaS2TnI4/view?usp=sharing"
   }
 ];
 
