@@ -314,33 +314,18 @@ const ALL_GENRES = [
 // Catalog of Books, Comics (HQs), and Manga
 const DEFAULT_BOOKS = [
   {
-    id: "hq-1",
-    title: "O Pequeno Príncipe (HQ / Quadrinhos PDF)",
-    author: "Antoine de Saint-Exupéry",
+    id: "hq-deadpool-04",
+    title: "Deadpool Mata Deadpool — Edição 04",
+    author: "Marvel Comics",
     year: 2024,
-    duration: "HQ Completa PDF",
+    duration: "HQ Completa (PDF)",
     rating: 9.9,
     type: "book",
     featured: true,
-    genres: ["HQs & Quadrinhos", "Fantasia & Ficção", "Clássicos"],
-    description: "HQ Completa em formato PDF no Google Drive. Clique em Ler Agora para abrir a história ilustrada diretamente no site.",
-    poster: "https://m.media-amazon.com/images/I/71O2XIytdEL._AC_UF1000,1000_QL80_.jpg",
-    backdrop: "https://m.media-amazon.com/images/S/pv-target-images/0e1d8a39b33a5980a312275210c4f8263152d5b62b10a9bd4d32a92631165a28._SX1080_.jpg",
-    readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
-  },
-  {
-    id: "hq-2",
-    title: "HQ Coleção Especial (PDF)",
-    author: "DarkFlix Comics",
-    year: 2024,
-    duration: "PDF Ilustrado",
-    rating: 9.7,
-    type: "book",
-    featured: true,
-    genres: ["HQs & Quadrinhos", "Fantasia & Ficção"],
-    description: "História em Quadrinhos em alta resolução pronta para leitura em tela cheia.",
-    poster: "https://m.media-amazon.com/images/I/91r4mH0P37L._AC_UF1000,1000_QL80_.jpg",
-    backdrop: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/08/Spider-Man-Kravens-Last-Hunt.jpg",
+    genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
+    description: "HQ Completa da Marvel em formato PDF. O Mercenário Tagarela em uma cruzada insana caçando e enfrentando versões alternativas de si mesmo pelo multiverso Marvel. Clique para ler diretamente no leitor do site!",
+    poster: "https://m.media-amazon.com/images/I/81PjT3S9qCL._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/hZkgoQYus5dXo3H8T7CYV2UImTl.jpg",
     readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
   }
 ];
