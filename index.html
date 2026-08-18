@@ -101,6 +101,7 @@
         </div>
       </div>
       <a href="#" class="nav-link" data-page="animes" id="nav-animes">Animes</a>
+      <a href="#" class="nav-link" data-page="books" id="nav-books">📚 Livros e HQs</a>
       <a href="#" class="nav-link" data-page="admin" id="nav-admin" style="display: none; color: #fbbf24; font-weight: 700;">👑 Perfil do Site</a>
       <div class="nav-search-wrapper">
         <svg class="nav-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -168,6 +169,13 @@
             <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="mobile-category-list" id="mobile-animes-list"></div>
+        </div>
+        <div class="mobile-category-group">
+          <button class="mobile-category-header" id="mobile-books-trigger">
+            📚 Livros & HQs por Categoria
+            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="mobile-category-list" id="mobile-books-list"></div>
         </div>
       </div>
     </nav>
@@ -393,6 +401,22 @@
         </div>
         <div class="filter-bar" id="animes-filter-bar"></div>
         <div class="movies-grid" id="animes-grid-all"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ BOOKS & HQS PAGE ============ -->
+  <div class="page-view" id="page-books">
+    <div class="main-content" style="padding-top: calc(var(--header-height) + 40px); margin-top: 0;">
+      <div class="section">
+        <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
+          <div>
+            <h2 class="section-title" id="books-page-title" style="margin-bottom: 4px;">📚 Livros, HQs & Mangás</h2>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Leia os melhores livros, quadrinhos e mangás organizados por categoria diretamente no DarkFlix.</p>
+          </div>
+        </div>
+        <div class="filter-bar" id="books-filter-bar"></div>
+        <div class="movies-grid" id="books-grid-all"></div>
       </div>
     </div>
   </div>
@@ -720,6 +744,30 @@
     </div>
   </div>
 
+  <!-- ============ BOOK READER MODAL ============ -->
+  <div class="modal-backdrop" id="book-reader-modal" style="display: none; z-index: 4000;">
+    <div class="book-reader-container">
+      <div class="book-reader-header">
+        <div class="book-reader-title-info">
+          <span class="book-reader-badge" id="book-reader-badge">📚 LEITOR DARKFLIX</span>
+          <h3 id="book-reader-title" class="book-reader-title">Título do Livro</h3>
+        </div>
+        <div class="book-reader-controls">
+          <a id="book-reader-external-btn" href="" target="_blank" class="btn-reader-action" title="Abrir no Google Drive">
+            ↗️ Abrir no Drive
+          </a>
+          <button id="book-reader-fullscreen-btn" class="btn-reader-action" title="Alternar Tela Cheia">
+            ⛶ Tela Cheia
+          </button>
+          <button id="book-reader-close-btn" class="btn-reader-close" title="Fechar Leitor">✕ Fechar Leitor</button>
+        </div>
+      </div>
+      <div class="book-reader-iframe-wrapper">
+        <iframe id="book-reader-iframe" src="" allow="autoplay; fullscreen" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- ============ PIN PAD MODAL ============ -->
   <div class="modal-backdrop" id="pin-modal">
     <div class="pin-container">
@@ -1033,7 +1081,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="movies-data.js?v=4.8.0"></script>
-  <script type="module" src="app.js?v=4.8.0"></script>
+  <script src="movies-data.js?v=4.9.0"></script>
+  <script type="module" src="app.js?v=4.9.0"></script>
 </body>
 </html>

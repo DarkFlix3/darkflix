@@ -402,6 +402,7 @@ const STATE = {
         movies: $('#page-movies'),
         series: $('#page-series'),
         animes: $('#page-animes'),
+        books: $('#page-books'),
         canais: $('#page-canais'),
         search: $('#page-search'),
         favorites: $('#page-favorites'),
@@ -419,6 +420,8 @@ const STATE = {
       seriesFilterBar: $('#series-filter-bar'),
       animesGridAll: $('#animes-grid-all'),
       animesFilterBar: $('#animes-filter-bar'),
+      booksGridAll: $('#books-grid-all'),
+      booksFilterBar: $('#books-filter-bar'),
       
       // Search page
       searchResultsTitle: $('#search-results-title'),
@@ -499,6 +502,17 @@ const STATE = {
       mobileSeriesList: $('#mobile-series-list'),
       mobileAnimesTrigger: $('#mobile-animes-trigger'),
       mobileAnimesList: $('#mobile-animes-list'),
+      mobileBooksTrigger: $('#mobile-books-trigger'),
+      mobileBooksList: $('#mobile-books-list'),
+
+      // Book Reader Modal
+      bookReaderModal: $('#book-reader-modal'),
+      bookReaderIframe: $('#book-reader-iframe'),
+      bookReaderTitle: $('#book-reader-title'),
+      bookReaderBadge: $('#book-reader-badge'),
+      bookReaderExternalBtn: $('#book-reader-external-btn'),
+      bookReaderFullscreenBtn: $('#book-reader-fullscreen-btn'),
+      bookReaderCloseBtn: $('#book-reader-close-btn'),
   
       // Desktop categories dropdown
       categoriesWrapper: $('#nav-categories-wrapper'),
@@ -785,6 +799,7 @@ const STATE = {
     else if (page === 'movies') renderMoviesPage();
     else if (page === 'series') renderSeriesPage();
     else if (page === 'animes') renderAnimesPage();
+    else if (page === 'books') renderBooksPage();
     else if (page === 'canais') renderCanaisPage();
     else if (page === 'profiles') renderProfilesPage();
     else if (page === 'favorites') renderFavoritesPage();
@@ -1866,6 +1881,136 @@ const STATE = {
     } catch (err) {
       console.error("Erro ao carregar animes:", err);
       showErrorState(DOM.animesGridAll, "Erro ao conectar com o TMDB e carregar os animes.");
+    }
+  }
+
+  // Helper to convert Google Drive view links to embeddable preview URLs
+  function getEmbeddableReaderUrl(url) {
+    if (!url) return '';
+    if (url.includes('drive.google.com')) {
+      const match = url.match(/\/file\/d\/([^\/]+)/) || url.match(/id=([^&]+)/);
+      if (match && match[1]) {
+        return `https://drive.google.com/file/d/${match[1]}/preview`;
+      }
+    }
+    return url;
+  }
+
+  // ---------- Render Books & HQs Page ----------
+  function renderBooksPage(selectedCategory = 'Todos') {
+    if (!DOM.booksGridAll || !DOM.booksFilterBar) return;
+
+    // Render filter bar with BOOK_GENRES
+    DOM.booksFilterBar.innerHTML = BOOK_GENRES.map(genre => `
+      <button class="filter-btn ${genre === selectedCategory ? 'active' : ''}" data-genre="${genre}">
+        ${genre === 'Todos' ? '📚 Todos os Livros e HQs' : genre}
+      </button>
+    `).join('');
+
+    DOM.booksFilterBar.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.onclick = () => {
+        const cat = btn.getAttribute('data-genre');
+        renderBooksPage(cat);
+      };
+    });
+
+    // Filter books catalog
+    const filteredBooks = (selectedCategory === 'Todos') 
+      ? DEFAULT_BOOKS 
+      : DEFAULT_BOOKS.filter(b => b.genres && b.genres.includes(selectedCategory));
+
+    if (filteredBooks.length === 0) {
+      DOM.booksGridAll.innerHTML = `<div class="no-results">Nenhum livro ou HQ encontrado para essa categoria.</div>`;
+      return;
+    }
+
+    DOM.booksGridAll.innerHTML = filteredBooks.map((book, i) => createBookCardHTML(book, i)).join('');
+    attachBookCardEvents(DOM.booksGridAll);
+  }
+
+  // Generate Card HTML for Books & HQs
+  function createBookCardHTML(book, index) {
+    const title = book.title || 'Livro Sem Título';
+    const author = book.author || 'Autor Desconhecido';
+    const rating = book.rating ? book.rating.toFixed(1) : '9.5';
+    const year = book.year || '2024';
+    const pages = book.duration || 'Livro';
+    const posterSrc = book.poster || 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22450%22><rect fill=%22%2312121a%22 width=%22300%22 height=%22450%22/><text fill=%22%236a6a7a%22 font-family=%22sans-serif%22 font-size=%2216%22 x=%22150%22 y=%22225%22 text-anchor=%22middle%22>Sem Capa</text></svg>';
+
+    return `
+      <div class="movie-card book-card" data-book-id="${book.id}" style="animation-delay: ${index * 0.05}s">
+        <img class="movie-card-poster" src="${posterSrc}" alt="${title}" loading="lazy"
+             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22450%22><rect fill=%22%2312121a%22 width=%22300%22 height=%22450%22/><text fill=%22%236a6a7a%22 font-family=%22sans-serif%22 font-size=%2216%22 x=%22150%22 y=%22225%22 text-anchor=%22middle%22>Sem Capa</text></svg>'">
+        <div style="position: absolute; top: 10px; left: 10px; z-index: 4; background: rgba(229, 9, 20, 0.9); color: white; font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: var(--radius-sm); text-transform: uppercase;">
+          📖 LEITURA
+        </div>
+        <div class="movie-card-overlay">
+          <div class="movie-card-play" style="border-radius: 50%; width: 50px; height: 50px; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; background: var(--accent); color: white;">
+            📖
+          </div>
+        </div>
+        <div class="movie-card-info">
+          <h3 class="movie-card-title">${title}</h3>
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${author}</p>
+          <div class="movie-card-meta">
+            <span class="card-rating">★ ${rating}</span>
+            <span>${pages}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Attach Events to Book Cards
+  function attachBookCardEvents(container) {
+    if (!container) return;
+    container.querySelectorAll('.book-card').forEach(card => {
+      card.onclick = () => {
+        const bookId = card.getAttribute('data-book-id');
+        const book = DEFAULT_BOOKS.find(b => b.id === bookId);
+        if (book) {
+          openBookReader(book);
+        }
+      };
+    });
+  }
+
+  // Open Book Reader Modal
+  function openBookReader(book) {
+    if (!DOM.bookReaderModal || !DOM.bookReaderIframe) return;
+
+    const embedUrl = getEmbeddableReaderUrl(book.readerUrl);
+
+    if (DOM.bookReaderTitle) DOM.bookReaderTitle.textContent = book.title || 'Leitor de Livros e HQs';
+    if (DOM.bookReaderBadge) DOM.bookReaderBadge.textContent = (book.genres && book.genres[0]) ? `📖 ${book.genres[0].toUpperCase()}` : '📚 LEITOR DARKFLIX';
+    DOM.bookReaderIframe.src = embedUrl;
+
+    if (DOM.bookReaderExternalBtn) {
+      DOM.bookReaderExternalBtn.href = book.readerUrl || embedUrl;
+    }
+
+    DOM.bookReaderModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBookReader() {
+    if (!DOM.bookReaderModal || !DOM.bookReaderIframe) return;
+    DOM.bookReaderIframe.src = '';
+    DOM.bookReaderModal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function toggleBookReaderFullscreen() {
+    const container = document.querySelector('.book-reader-container');
+    if (!container) return;
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(err => console.warn(err));
+    } else {
+      if (container.requestFullscreen) {
+        container.requestFullscreen().catch(err => console.warn(err));
+      } else if (container.webkitRequestFullscreen) {
+        container.webkitRequestFullscreen();
+      }
     }
   }
 
@@ -7481,6 +7626,52 @@ const STATE = {
       });
     }
 
+    // Render and bind Mobile Books & HQs categories accordion
+    if (DOM.mobileBooksList && DOM.mobileBooksTrigger) {
+      DOM.mobileBooksList.innerHTML = BOOK_GENRES.map(name => `
+        <button class="mobile-category-item" data-genre="${name}">${name}</button>
+      `).join('');
+
+      DOM.mobileBooksTrigger.onclick = (e) => {
+        e.preventDefault();
+        DOM.mobileBooksTrigger.classList.toggle('active');
+        DOM.mobileBooksList.classList.toggle('open');
+        
+        DOM.mobileMoviesTrigger.classList.remove('active');
+        DOM.mobileMoviesList.classList.remove('open');
+        DOM.mobileSeriesTrigger.classList.remove('active');
+        DOM.mobileSeriesList.classList.remove('open');
+        if (DOM.mobileAnimesTrigger) {
+          DOM.mobileAnimesTrigger.classList.remove('active');
+          DOM.mobileAnimesList.classList.remove('open');
+        }
+      };
+
+      DOM.mobileBooksList.querySelectorAll('.mobile-category-item').forEach(item => {
+        item.onclick = (e) => {
+          e.preventDefault();
+          const genre = item.dataset.genre;
+          switchPage('books');
+          renderBooksPage(genre);
+        };
+      });
+    }
+
+    // Bind Book Reader Modal close and fullscreen events
+    if (DOM.bookReaderCloseBtn) {
+      DOM.bookReaderCloseBtn.onclick = closeBookReader;
+    }
+    if (DOM.bookReaderFullscreenBtn) {
+      DOM.bookReaderFullscreenBtn.onclick = toggleBookReaderFullscreen;
+    }
+    if (DOM.bookReaderModal) {
+      DOM.bookReaderModal.onclick = (e) => {
+        if (e.target === DOM.bookReaderModal) {
+          closeBookReader();
+        }
+      };
+    }
+
     // Window header scroll glass effect
     window.addEventListener('scroll', () => {
       if (STATE.currentPage !== 'home') {
@@ -7543,6 +7734,12 @@ const STATE = {
             ${animeGenreNames.map(name => `<button class="category-pill" data-type="animes" data-genre="${name}">${name}</button>`).join('')}
           </div>
         </div>
+        <div class="categories-section">
+          <div class="categories-section-title">📚 Livros & HQs</div>
+          <div class="categories-grid">
+            ${BOOK_GENRES.map(name => `<button class="category-pill" data-type="books" data-genre="${name}">${name}</button>`).join('')}
+          </div>
+        </div>
       `;
 
       // Toggle dropdown
@@ -7566,7 +7763,12 @@ const STATE = {
           const type = pill.dataset.type;
           const genre = pill.dataset.genre;
           DOM.categoriesWrapper.classList.remove('open');
-          navigateToGenre(type, genre);
+          if (type === 'books') {
+            switchPage('books');
+            renderBooksPage(genre);
+          } else {
+            navigateToGenre(type, genre);
+          }
         });
       });
     }

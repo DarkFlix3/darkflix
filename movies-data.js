@@ -310,3 +310,121 @@ const ALL_GENRES = [
   "Ação", "Aventura", "Comédia", "Crime", "Drama",
   "Fantasia", "Ficção Científica", "História", "Terror", "Thriller"
 ];
+
+// Catalog of Books, Comics (HQs), and Manga
+const DEFAULT_BOOKS = [
+  {
+    id: "book-1",
+    title: "O Pequeno Príncipe",
+    author: "Antoine de Saint-Exupéry",
+    year: 1943,
+    duration: "96 Páginas",
+    rating: 9.8,
+    type: "book",
+    featured: true,
+    genres: ["Fantasia & Ficção", "Clássicos"],
+    description: "Um piloto cai no deserto do Saara e encontra um jovem príncipe que viajou de seu pequeno asteroide. Uma fábula poética sobre amizade, amor e o sentido da vida.",
+    poster: "https://m.media-amazon.com/images/I/71O2XIytdEL._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/S/pv-target-images/0e1d8a39b33a5980a312275210c4f8263152d5b62b10a9bd4d32a92631165a28._SX1080_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
+  },
+  {
+    id: "book-2",
+    title: "Homem-Aranha: A Última Caçada de Kraven",
+    author: "J.M. DeMatteis / Marvel Comics",
+    year: 1987,
+    duration: "144 Páginas",
+    rating: 9.6,
+    type: "book",
+    featured: true,
+    genres: ["HQs & Quadrinhos", "Ação"],
+    description: "Kraven, o Caçador, realiza seu derradeiro plano para derrotar o Homem-Aranha e provar sua superioridade, enterrando o herói vivo e assumindo seu manto.",
+    poster: "https://m.media-amazon.com/images/I/91r4mH0P37L._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/08/Spider-Man-Kravens-Last-Hunt.jpg",
+    readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
+  },
+  {
+    id: "book-3",
+    title: "Batman: A Piada Mortal",
+    author: "Alan Moore / DC Comics",
+    year: 1988,
+    duration: "64 Páginas",
+    rating: 9.7,
+    type: "book",
+    featured: false,
+    genres: ["HQs & Quadrinhos", "Terror & Mistério"],
+    description: "Uma história sombria que explora as origens do Coringa e seu plano maquiavélico para provar que basta um dia ruim para enlouquecer o homem mais são.",
+    poster: "https://m.media-amazon.com/images/I/81xZ-l7N77L._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/S/pv-target-images/3f283c482ed31e67041f02170363297a731b790d9a74a106e2311894d03998f8._SX1080_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
+  },
+  {
+    id: "book-4",
+    title: "O Hobbit",
+    author: "J.R.R. Tolkien",
+    year: 1937,
+    duration: "310 Páginas",
+    rating: 9.5,
+    type: "book",
+    featured: false,
+    genres: ["Fantasia & Ficção", "Aventura"],
+    description: "Bilbo Bolseiro vivia uma vida calma no Condado até receber a visita do mago Gandalf e treze anões em uma jornada perigosa para recuperar o Reino de Erebor.",
+    poster: "https://m.media-amazon.com/images/I/91M9xPfd10L._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/hZkgoQYus5dXo3H8T7CYV2UImTl.jpg",
+    readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
+  },
+  {
+    id: "book-5",
+    title: "Drácula",
+    author: "Bram Stoker",
+    year: 1897,
+    duration: "416 Páginas",
+    rating: 9.4,
+    type: "book",
+    featured: false,
+    genres: ["Terror & Mistério", "Clássicos"],
+    description: "Jonathan Harker viaja à Transilvânia para fechar um negócio imobiliário com o Conde Drácula e descobre os horrores inomináveis do vampiro milenar.",
+    poster: "https://m.media-amazon.com/images/I/81x1R0VqVIL._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/euYIwmwkmz95mnXvufEmbL6ovhZ.jpg",
+    readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
+  },
+  {
+    id: "book-6",
+    title: "Pai Rico, Pai Pobre",
+    author: "Robert T. Kiyosaki",
+    year: 1997,
+    duration: "336 Páginas",
+    rating: 9.3,
+    type: "book",
+    featured: false,
+    genres: ["Desenvolvimento & Educação"],
+    description: "O livro número 1 em finanças pessoais que ensina os conceitos de independência financeira, investimento e gestão patrimonial para mudar a mentalidade sobre dinheiro.",
+    poster: "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
+  },
+  {
+    id: "book-7",
+    title: "Attack on Titan — Vol. 01",
+    author: "Hajime Isayama",
+    year: 2009,
+    duration: "192 Páginas",
+    rating: 9.6,
+    type: "book",
+    featured: false,
+    genres: ["HQs & Quadrinhos", "Fantasia & Ficção"],
+    description: "A humanidade vive cercada por muralhas gigantescas para se proteger de gigantes devoradores chamados Titãs. Eren Yeager jura exterminar todos os Titãs.",
+    poster: "https://m.media-amazon.com/images/I/91tK3CWW90L._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+    readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
+  }
+];
+
+const BOOK_GENRES = [
+  "Todos",
+  "HQs & Quadrinhos",
+  "Fantasia & Ficção",
+  "Terror & Mistério",
+  "Desenvolvimento & Educação",
+  "Clássicos"
+];
