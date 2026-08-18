@@ -314,6 +314,51 @@ const ALL_GENRES = [
 // Catalog of Books, Comics (HQs), and Manga
 const DEFAULT_BOOKS = [
   {
+    id: "hq-deadpool-01",
+    title: "Deadpool Mata Deadpool — Edição 01",
+    author: "Marvel Comics",
+    year: 2024,
+    duration: "HQ Completa (PDF)",
+    rating: 9.8,
+    type: "book",
+    featured: true,
+    genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
+    description: "Edição 01 da minissérie completa da Marvel em formato PDF. O Mercenário Tagarela inicia sua jornada insana contra versões alternativas de si mesmo pelo multiverso.",
+    poster: "https://i.imgur.com/cb5ZH4n.png",
+    backdrop: "https://i.imgur.com/cb5ZH4n.png",
+    readerUrl: "https://drive.google.com/file/d/1-H1XE4ulEDBgBN81_SkS3v3MtcWPeJfx/view?usp=sharing"
+  },
+  {
+    id: "hq-deadpool-02",
+    title: "Deadpool Mata Deadpool — Edição 02",
+    author: "Marvel Comics",
+    year: 2024,
+    duration: "HQ Completa (PDF)",
+    rating: 9.8,
+    type: "book",
+    featured: true,
+    genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
+    description: "Edição 02 da minissérie completa da Marvel em formato PDF. A guerra multiversal dos Deadpools esquenta com batalhas épicas e insanas.",
+    poster: "https://i.imgur.com/cb5ZH4n.png",
+    backdrop: "https://i.imgur.com/cb5ZH4n.png",
+    readerUrl: "https://drive.google.com/file/d/12t2pkBnPC1wCBQdNJbedEUaiKodtxxel/view?usp=sharing"
+  },
+  {
+    id: "hq-deadpool-03",
+    title: "Deadpool Mata Deadpool — Edição 03",
+    author: "Marvel Comics",
+    year: 2024,
+    duration: "HQ Completa (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
+    description: "Edição 03 da minissérie completa da Marvel em formato PDF. Os sobreviventes se preparam para a grande batalha final pelo destino da realidade.",
+    poster: "https://i.imgur.com/cb5ZH4n.png",
+    backdrop: "https://i.imgur.com/cb5ZH4n.png",
+    readerUrl: "https://drive.google.com/file/d/15byeGXNz5Sf1KxViotdY92kHBbr_zf_v/view?usp=sharing"
+  },
+  {
     id: "hq-deadpool-04",
     title: "Deadpool Mata Deadpool — Edição 04",
     author: "Marvel Comics",
@@ -323,7 +368,7 @@ const DEFAULT_BOOKS = [
     type: "book",
     featured: true,
     genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
-    description: "HQ Completa da Marvel em formato PDF. O Mercenário Tagarela em uma cruzada insana caçando e enfrentando versões alternativas de si mesmo pelo multiverso Marvel. Clique para ler diretamente no leitor do site!",
+    description: "Edição 04 (Final) da minissérie completa da Marvel em formato PDF. O confronto definitivo que encerrará a caçada do Mercenário Tagarela.",
     poster: "https://i.imgur.com/cb5ZH4n.png",
     backdrop: "https://i.imgur.com/cb5ZH4n.png",
     readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
