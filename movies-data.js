@@ -374,16 +374,16 @@ const DEFAULT_BOOKS = [
     readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
   },
   {
-    id: "livro-pequeno-principe",
-    title: "O Pequeno Príncipe",
-    author: "Antoine de Saint-Exupéry",
-    year: 1943,
+    id: "livro-simplesmente-acontece",
+    title: "Simplesmente Acontece",
+    author: "Cecelia Ahern",
+    year: 2014,
     duration: "Livro Completo (PDF)",
-    rating: 9.9,
+    rating: 9.8,
     type: "book",
     featured: true,
-    genres: ["Clássicos", "Fantasia & Ficção", "Desenvolvimento & Educação"],
-    description: "Um piloto cai no Deserto do Saara e encontra um jovem príncipe de um pequeno asteroide. Uma obra-prima clássica sobre amor, amizade e a essência da vida. Clique para ler o livro completo!",
+    genres: ["Romance & Drama", "Fantasia & Ficção", "Clássicos"],
+    description: "Alex e Rosie são amigos inseparáveis que cresceram juntos em Dublin. Uma história apaixonante e emocionante sobre o amor, o tempo e os caminhos da vida. Clique para ler o livro completo!",
     poster: "https://br.web.img3.acsta.net/pictures/14/12/11/15/29/051042.jpg",
     backdrop: "https://br.web.img3.acsta.net/pictures/14/12/11/15/29/051042.jpg",
     readerUrl: "https://drive.google.com/file/d/10a3h7LWXg2R-HWgRI8-_doCyIaS2TnI4/view?usp=sharing"
@@ -393,6 +393,7 @@ const DEFAULT_BOOKS = [
 const BOOK_GENRES = [
   "Todos",
   "HQs & Quadrinhos",
+  "Romance & Drama",
   "Fantasia & Ficção",
   "Terror & Mistério",
   "Desenvolvimento & Educação",
