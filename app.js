@@ -2018,6 +2018,7 @@ const STATE = {
     }
 
     modal.style.display = 'flex';
+    modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
@@ -2025,7 +2026,10 @@ const STATE = {
     const modal = document.getElementById('book-reader-modal') || DOM.bookReaderModal;
     const iframe = document.getElementById('book-reader-iframe') || DOM.bookReaderIframe;
     if (iframe) iframe.src = '';
-    if (modal) modal.style.display = 'none';
+    if (modal) {
+      modal.classList.remove('active');
+      modal.style.display = 'none';
+    }
     document.body.style.overflow = '';
   }
 

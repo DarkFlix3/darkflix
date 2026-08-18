@@ -6589,6 +6589,13 @@ ul, ol {
 }
 
 /* ---------- BOOK & HQ READER MODAL ---------- */
+#book-reader-modal.active {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
 .book-reader-container {
   width: 95vw;
   max-width: 1200px;
