@@ -324,8 +324,8 @@ const DEFAULT_BOOKS = [
     featured: true,
     genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
     description: "HQ Completa da Marvel em formato PDF. O Mercenário Tagarela em uma cruzada insana caçando e enfrentando versões alternativas de si mesmo pelo multiverso Marvel. Clique para ler diretamente no leitor do site!",
-    poster: "https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg",
+    poster: "https://i.imgur.com/cb5ZH4n.png",
+    backdrop: "https://i.imgur.com/cb5ZH4n.png",
     readerUrl: "https://drive.google.com/file/d/1aSmhGLnvlIykGnSgx8tJ4-u0BZYN1KjW/view?usp=sharing"
   }
 ];

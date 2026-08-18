@@ -1952,12 +1952,12 @@ const STATE = {
     const rating = book.rating ? book.rating.toFixed(1) : '9.5';
     const year = book.year || '2024';
     const pages = book.duration || 'Livro';
-    const posterSrc = book.poster || 'https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg';
+    const posterSrc = book.poster || 'https://i.imgur.com/cb5ZH4n.png';
 
     return `
       <div class="movie-card book-card" data-book-id="${book.id}" data-id="${book.id}" data-type="book" style="cursor: pointer; animation-delay: ${index * 0.05}s">
         <img class="movie-card-poster" src="${posterSrc}" alt="${title}" loading="lazy" referrerpolicy="no-referrer"
-             onerror="this.onerror=null; this.src='https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg';">
+             onerror="this.onerror=null; this.src='https://i.imgur.com/cb5ZH4n.png';">
         <div style="position: absolute; top: 10px; left: 10px; z-index: 4; background: rgba(229, 9, 20, 0.9); color: white; font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: var(--radius-sm); text-transform: uppercase;">
           📖 HQ MARVEL
         </div>
