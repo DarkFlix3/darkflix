@@ -324,8 +324,8 @@ const DEFAULT_BOOKS = [
     featured: true,
     genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
     description: "Edição 01 da minissérie completa da Marvel em formato PDF. O Mercenário Tagarela inicia sua jornada insana contra versões alternativas de si mesmo pelo multiverso.",
-    poster: "https://i.imgur.com/cb5ZH4n.png",
-    backdrop: "https://i.imgur.com/cb5ZH4n.png",
+    poster: "assets/hqs/deadpool_01.png",
+    backdrop: "assets/hqs/deadpool_01.png",
     readerUrl: "https://drive.google.com/file/d/1-H1XE4ulEDBgBN81_SkS3v3MtcWPeJfx/view?usp=sharing"
   },
   {
@@ -339,8 +339,8 @@ const DEFAULT_BOOKS = [
     featured: true,
     genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
     description: "Edição 02 da minissérie completa da Marvel em formato PDF. A guerra multiversal dos Deadpools esquenta com batalhas épicas e insanas.",
-    poster: "https://i.imgur.com/cb5ZH4n.png",
-    backdrop: "https://i.imgur.com/cb5ZH4n.png",
+    poster: "assets/hqs/deadpool_02.png",
+    backdrop: "assets/hqs/deadpool_02.png",
     readerUrl: "https://drive.google.com/file/d/12t2pkBnPC1wCBQdNJbedEUaiKodtxxel/view?usp=sharing"
   },
   {
@@ -354,8 +354,8 @@ const DEFAULT_BOOKS = [
     featured: true,
     genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
     description: "Edição 03 da minissérie completa da Marvel em formato PDF. Os sobreviventes se preparam para a grande batalha final pelo destino da realidade.",
-    poster: "https://i.imgur.com/cb5ZH4n.png",
-    backdrop: "https://i.imgur.com/cb5ZH4n.png",
+    poster: "assets/hqs/deadpool_03.png",
+    backdrop: "assets/hqs/deadpool_03.png",
     readerUrl: "https://drive.google.com/file/d/15byeGXNz5Sf1KxViotdY92kHBbr_zf_v/view?usp=sharing"
   },
   {
