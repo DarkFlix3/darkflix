@@ -1884,16 +1884,20 @@ const STATE = {
     }
   }
 
-  // Helper to convert Google Drive view links to embeddable preview URLs
+  // Helper to convert Google Drive view links or PDF links to embeddable preview URLs
   function getEmbeddableReaderUrl(url) {
     if (!url) return '';
-    if (url.includes('drive.google.com')) {
-      const match = url.match(/\/file\/d\/([^\/]+)/) || url.match(/id=([^&]+)/);
+    const cleanUrl = url.trim();
+    if (cleanUrl.includes('drive.google.com')) {
+      const match = cleanUrl.match(/\/file\/d\/([^\/]+)/) || cleanUrl.match(/id=([^&]+)/);
       if (match && match[1]) {
         return `https://drive.google.com/file/d/${match[1]}/preview`;
       }
     }
-    return url;
+    if (cleanUrl.toLowerCase().endsWith('.pdf') || cleanUrl.toLowerCase().includes('.pdf?')) {
+      return `https://docs.google.com/gview?embedded=true&url=${encodeURIComponent(cleanUrl)}`;
+    }
+    return cleanUrl;
   }
 
   // ---------- Render Books & HQs Page ----------
