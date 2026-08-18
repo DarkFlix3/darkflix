@@ -1952,14 +1952,18 @@ const STATE = {
     const rating = book.rating ? book.rating.toFixed(1) : '9.5';
     const year = book.year || '2024';
     const pages = book.duration || 'Livro';
-    const posterSrc = book.poster || 'https://i.imgur.com/cb5ZH4n.png';
+    const badgeText = (author && author.toLowerCase().includes('marvel')) 
+      ? '📖 HQ MARVEL' 
+      : (book.genres && book.genres.includes('HQs & Quadrinhos')) 
+        ? '📖 HQ' 
+        : '📖 LIVRO';
 
     return `
       <div class="movie-card book-card" data-book-id="${book.id}" data-id="${book.id}" data-type="book" style="cursor: pointer; animation-delay: ${index * 0.05}s">
         <img class="movie-card-poster" src="${posterSrc}" alt="${title}" loading="lazy" referrerpolicy="no-referrer"
              onerror="this.onerror=null; this.src='https://i.imgur.com/cb5ZH4n.png';">
         <div style="position: absolute; top: 10px; left: 10px; z-index: 4; background: rgba(229, 9, 20, 0.9); color: white; font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: var(--radius-sm); text-transform: uppercase;">
-          📖 HQ MARVEL
+          ${badgeText}
         </div>
         <div class="movie-card-overlay">
           <div class="movie-card-play" style="border-radius: 50%; width: 50px; height: 50px; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; background: var(--accent); color: white;">
