@@ -1952,14 +1952,15 @@ const STATE = {
     const rating = book.rating ? book.rating.toFixed(1) : '9.5';
     const year = book.year || '2024';
     const pages = book.duration || 'Livro';
-    const posterSrc = book.poster || 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22450%22><rect fill=%22%2312121a%22 width=%22300%22 height=%22450%22/><text fill=%22%236a6a7a%22 font-family=%22sans-serif%22 font-size=%2216%22 x=%22150%22 y=%22225%22 text-anchor=%22middle%22>Sem Capa</text></svg>';
+    const posterSrc = book.poster || 'https://image.tmdb.org/t/p/w500/yF1eOkaYvYySTFiUtjNg8GvE2jB.jpg';
+    const fallbackPoster = 'https://image.tmdb.org/t/p/w500/yF1eOkaYvYySTFiUtjNg8GvE2jB.jpg';
 
     return `
       <div class="movie-card book-card" data-book-id="${book.id}" data-id="${book.id}" data-type="book" style="cursor: pointer; animation-delay: ${index * 0.05}s">
-        <img class="movie-card-poster" src="${posterSrc}" alt="${title}" loading="lazy"
-             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22450%22><rect fill=%22%2312121a%22 width=%22300%22 height=%22450%22/><text fill=%22%236a6a7a%22 font-family=%22sans-serif%22 font-size=%2216%22 x=%22150%22 y=%22225%22 text-anchor=%22middle%22>Sem Capa</text></svg>'">
+        <img class="movie-card-poster" src="${posterSrc}" alt="${title}" loading="lazy" referrerpolicy="no-referrer"
+             onerror="if(this.src!=='${fallbackPoster}'){this.src='${fallbackPoster}';}else{this.onerror=null;this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22450%22><rect fill=%22%2312121a%22 width=%22300%22 height=%22450%22/><text fill=%22%23e50914%22 font-family=%22sans-serif%22 font-weight=%22bold%22 font-size=%2222%22 x=%22150%22 y=%22200%22 text-anchor=%22middle%22>DEADPOOL</text><text fill=%22%23ffffff%22 font-family=%22sans-serif%22 font-size=%2214%22 x=%22150%22 y=%22230%22 text-anchor=%22middle%22>MATA DEADPOOL #04</text></svg>';}">
         <div style="position: absolute; top: 10px; left: 10px; z-index: 4; background: rgba(229, 9, 20, 0.9); color: white; font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: var(--radius-sm); text-transform: uppercase;">
-          📖 LEITURA
+          📖 HQ MARVEL
         </div>
         <div class="movie-card-overlay">
           <div class="movie-card-play" style="border-radius: 50%; width: 50px; height: 50px; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; background: var(--accent); color: white;">
