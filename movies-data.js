@@ -387,6 +387,21 @@ const DEFAULT_BOOKS = [
     poster: "https://br.web.img3.acsta.net/pictures/14/12/11/15/29/051042.jpg",
     backdrop: "https://br.web.img3.acsta.net/pictures/14/12/11/15/29/051042.jpg",
     readerUrl: "https://drive.google.com/file/d/10a3h7LWXg2R-HWgRI8-_doCyIaS2TnI4/view?usp=sharing"
+  },
+  {
+    id: "livro-do-bill",
+    title: "O Livro do Bill",
+    author: "Alex Hirsch (Gravity Falls)",
+    year: 2024,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Fantasia & Ficção", "Desenvolvimento & Educação"],
+    description: "Escrito pelo mestre da bizarrice Bill Cipher em pessoa! Explore as origens mais obscuras e sinistras do universo de Gravity Falls nesta obra inigualável. Clique para ler o livro completo!",
+    poster: "https://m.media-amazon.com/images/I/81IioFHXeOL._UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/81IioFHXeOL._UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1WnNN-a8RSWJ03om36v6oLr0YD-_B3m8n/view?usp=sharing"
   }
 ];
 
