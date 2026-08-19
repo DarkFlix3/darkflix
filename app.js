@@ -4856,20 +4856,25 @@ const STATE = {
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // Auto-play trailer in modal after 5 seconds
+    // Auto-play trailer in modal after 1.5 seconds
     stopModalTrailer();
     STATE.modalTrailerTimeout = setTimeout(async () => {
       const trailer = await fetchTrailerUrl(movie.id, type);
-      if (trailer && DOM.detailModal.classList.contains('active')) {
-        DOM.modalTrailerIframe.src = trailer;
-        DOM.modalTrailerIframe.style.display = 'block';
-        DOM.modalHeroTrailer.classList.add('active');
+      const modalEl = document.getElementById('detail-modal') || DOM.detailModal;
+      const iframeEl = document.getElementById('modal-trailer-iframe') || DOM.modalTrailerIframe;
+      const heroTrailerEl = document.getElementById('modal-hero-trailer') || DOM.modalHeroTrailer;
+      const trailerControls = document.getElementById('modal-trailer-controls') || DOM.modalTrailerControls;
+
+      if (trailer && modalEl && modalEl.classList.contains('active') && iframeEl && heroTrailerEl) {
+        iframeEl.src = trailer;
+        iframeEl.style.display = 'block';
+        heroTrailerEl.classList.add('active');
         STATE.modalTrailerPlaying = true;
         STATE.modalTrailerMuted = true;
         updateTrailerControlsUI('modal', true, true);
-        if (DOM.modalTrailerControls) DOM.modalTrailerControls.style.display = 'flex';
+        if (trailerControls) trailerControls.style.display = 'flex';
       }
-    }, 5000);
+    }, 1500);
   }
 
   function closeDetail() {
@@ -7801,8 +7806,8 @@ const STATE = {
     // Generate Netflix-style scrolling posters backdrop
     generateAuthBackdrop();
 
-    // Global Event Delegation for Movie/Series/Book Card clicks
-    document.body.addEventListener('click', async (e) => {
+    // Global Event Delegation for Movie/Series/Book Card clicks (Instant 0ms Modal opening)
+    document.body.addEventListener('click', (e) => {
       const card = e.target.closest('.movie-card');
       if (!card) return;
 
@@ -7829,48 +7834,57 @@ const STATE = {
       const isNumericId = !isNaN(Number(rawId));
       const idNum = isNumericId ? Number(rawId) : rawId;
 
-      try {
-        showToast('Carregando detalhes...', 'info');
-        let details = null;
+      // Extract instant info directly from the clicked card DOM element
+      const cardTitle = card.querySelector('.movie-card-title')?.textContent || 'Carregando...';
+      const cardPoster = card.querySelector('.movie-card-poster')?.src || '';
+      const cardMeta = card.querySelector('.movie-card-meta')?.textContent || '';
+      const cardRatingMatch = cardMeta.match(/★\s*([\d\.]+)/);
+      const cardRating = cardRatingMatch ? parseFloat(cardRatingMatch[1]) : 8.5;
+      const cardYearMatch = cardMeta.match(/\b(19\d\d|20\d\d)\b/);
+      const cardYear = cardYearMatch ? cardYearMatch[1] : '2024';
 
-        if (isNumericId) {
-          try {
-            const res = await tmdbFetch(`/${type}/${idNum}`);
-            if (res && !res.status_code && (res.title || res.name)) {
-              details = res;
-              details.media_type = type;
-            }
-          } catch (err) {
-            console.warn(`TMDB fetch para ID ${idNum} falhou`, err);
+      let instantDetails = {
+        id: idNum,
+        title: cardTitle,
+        name: cardTitle,
+        media_type: type,
+        vote_average: cardRating,
+        release_date: `${cardYear}-01-01`,
+        poster: cardPoster,
+        backdrop_path: null,
+        overview: 'Carregando sinopse e detalhes completos...'
+      };
+
+      // Check local DEFAULT_MOVIES first for immediate rich data
+      if (typeof DEFAULT_MOVIES !== 'undefined') {
+        const localItem = DEFAULT_MOVIES.find(m => String(m.id) === String(rawId) || Number(m.id) === Number(rawId));
+        if (localItem) {
+          instantDetails = {
+            id: localItem.id,
+            title: localItem.title,
+            name: localItem.title,
+            media_type: localItem.type === 'series' ? 'tv' : 'movie',
+            overview: localItem.description,
+            vote_average: localItem.rating,
+            release_date: `${localItem.year || 2024}-01-01`,
+            poster_path: localItem.poster ? localItem.poster.replace('https://image.tmdb.org/t/p/w500', '') : '',
+            backdrop_path: localItem.backdrop ? localItem.backdrop.replace('https://image.tmdb.org/t/p/original', '') : '',
+            genres: localItem.genres ? localItem.genres.map(g => ({ name: g })) : []
+          };
+        }
+      }
+
+      // OPEN MODAL INSTANTLY (0ms latency!)
+      openDetail(instantDetails);
+
+      // Async fetch full TMDB data in background and update modal smoothly
+      if (isNumericId) {
+        tmdbFetch(`/${type}/${idNum}`).then(res => {
+          if (res && !res.status_code && (res.title || res.name)) {
+            res.media_type = type;
+            openDetail(res);
           }
-        }
-
-        if (!details && typeof DEFAULT_MOVIES !== 'undefined') {
-          const localItem = DEFAULT_MOVIES.find(m => String(m.id) === String(rawId) || Number(m.id) === Number(rawId));
-          if (localItem) {
-            details = {
-              id: localItem.id,
-              title: localItem.title,
-              name: localItem.title,
-              media_type: localItem.type === 'series' ? 'tv' : 'movie',
-              overview: localItem.description,
-              vote_average: localItem.rating,
-              release_date: `${localItem.year || 2024}-01-01`,
-              poster_path: localItem.poster ? localItem.poster.replace('https://image.tmdb.org/t/p/w500', '') : '',
-              backdrop_path: localItem.backdrop ? localItem.backdrop.replace('https://image.tmdb.org/t/p/original', '') : '',
-              genres: localItem.genres ? localItem.genres.map(g => ({ name: g })) : []
-            };
-          }
-        }
-
-        if (details) {
-          openDetail(details);
-        } else {
-          showToast('Erro ao carregar os detalhes do título.', 'error');
-        }
-      } catch (err) {
-        console.error("Erro ao carregar detalhes:", err);
-        showToast('Erro ao carregar os detalhes do título.', 'error');
+        }).catch(err => console.warn(`Background TMDB fetch para ID ${idNum} falhou`, err));
       }
     });
 
