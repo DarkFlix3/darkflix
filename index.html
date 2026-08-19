@@ -761,6 +761,12 @@
           <h3 id="book-reader-title" class="book-reader-title">Título do Livro</h3>
         </div>
         <div class="book-reader-controls">
+          <div class="zoom-controls" style="display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 2px 6px; gap: 4px; border: 1px solid rgba(255,255,255,0.12);">
+            <button id="book-reader-zoom-out" class="btn-reader-action" title="Diminuir Zoom (-)" style="padding: 4px 10px; font-weight: 800; font-size: 0.9rem; border-radius: 4px;">🔍 -</button>
+            <span id="book-reader-zoom-level" style="font-size: 0.82rem; font-weight: 700; color: #fff; min-width: 46px; text-align: center; user-select: none;">100%</span>
+            <button id="book-reader-zoom-in" class="btn-reader-action" title="Aumentar Zoom (+)" style="padding: 4px 10px; font-weight: 800; font-size: 0.9rem; border-radius: 4px;">🔍 +</button>
+            <button id="book-reader-zoom-reset" class="btn-reader-action" title="Resetar Zoom (100%)" style="padding: 4px 8px; font-size: 0.78rem; border-radius: 4px;">↺</button>
+          </div>
           <a id="book-reader-external-btn" href="" target="_blank" class="btn-reader-action" title="Abrir no Google Drive">
             ↗️ Abrir no Drive
           </a>
@@ -1089,7 +1095,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="movies-data.js?v=8.9.0"></script>
-  <script type="module" src="app.js?v=8.9.0"></script>
+  <script src="movies-data.js?v=9.0.0"></script>
+  <script type="module" src="app.js?v=9.0.0"></script>
 </body>
 </html>

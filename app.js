@@ -301,7 +301,8 @@ const STATE = {
   myLastMicActiveState: false, // New property
   systemLeaveMsgId: null,
   audioCtx: null,
-  previousParticipantIds: null
+  previousParticipantIds: null,
+  bookReaderZoom: 100
 };
 
   // ---------- Genre Maps ----------
@@ -2020,6 +2021,40 @@ const STATE = {
     });
   }
 
+  // Zoom Logic for Book Reader
+  function applyBookReaderZoom() {
+    const iframe = document.getElementById('book-reader-iframe') || DOM.bookReaderIframe;
+    const zoomLabel = document.getElementById('book-reader-zoom-level');
+    const zoomVal = STATE.bookReaderZoom || 100;
+
+    if (zoomLabel) {
+      zoomLabel.textContent = `${zoomVal}%`;
+    }
+
+    if (iframe) {
+      const scale = zoomVal / 100;
+      iframe.style.transform = `scale(${scale})`;
+      if (scale > 1) {
+        iframe.style.width = `${(100 / scale).toFixed(2)}%`;
+        iframe.style.height = `${(100 / scale).toFixed(2)}%`;
+      } else {
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+      }
+    }
+  }
+
+  function changeBookReaderZoom(delta) {
+    let current = STATE.bookReaderZoom || 100;
+    if (delta === 0) {
+      current = 100;
+    } else {
+      current = Math.min(250, Math.max(60, current + delta));
+    }
+    STATE.bookReaderZoom = current;
+    applyBookReaderZoom();
+  }
+
   // Open Book Reader Modal
   function openBookReader(book) {
     const modal = document.getElementById('book-reader-modal') || DOM.bookReaderModal;
@@ -2043,6 +2078,9 @@ const STATE = {
       extBtn.href = book.readerUrl || embedUrl;
     }
 
+    STATE.bookReaderZoom = 100;
+    applyBookReaderZoom();
+
     modal.style.display = 'flex';
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -2052,6 +2090,8 @@ const STATE = {
     const modal = document.getElementById('book-reader-modal') || DOM.bookReaderModal;
     const iframe = document.getElementById('book-reader-iframe') || DOM.bookReaderIframe;
     if (iframe) iframe.src = '';
+    STATE.bookReaderZoom = 100;
+    applyBookReaderZoom();
     if (modal) {
       modal.classList.remove('active');
       modal.style.display = 'none';
@@ -7744,13 +7784,21 @@ const STATE = {
       });
     }
 
-    // Bind Book Reader Modal close and fullscreen events
+    // Bind Book Reader Modal close, zoom and fullscreen events
     if (DOM.bookReaderCloseBtn) {
       DOM.bookReaderCloseBtn.onclick = closeBookReader;
     }
     if (DOM.bookReaderFullscreenBtn) {
       DOM.bookReaderFullscreenBtn.onclick = toggleBookReaderFullscreen;
     }
+
+    const zoomInBtn = document.getElementById('book-reader-zoom-in');
+    const zoomOutBtn = document.getElementById('book-reader-zoom-out');
+    const zoomResetBtn = document.getElementById('book-reader-zoom-reset');
+
+    if (zoomInBtn) zoomInBtn.onclick = () => changeBookReaderZoom(15);
+    if (zoomOutBtn) zoomOutBtn.onclick = () => changeBookReaderZoom(-15);
+    if (zoomResetBtn) zoomResetBtn.onclick = () => changeBookReaderZoom(0);
     if (DOM.bookReaderModal) {
       DOM.bookReaderModal.onclick = (e) => {
         if (e.target === DOM.bookReaderModal) {
