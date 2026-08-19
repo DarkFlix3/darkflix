@@ -6802,9 +6802,14 @@ ul, ol {
   display: flex;
   gap: 14px;
   overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
   padding: 6px 4px;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  width: 100%;
 }
 
 .publisher-carousel::-webkit-scrollbar {

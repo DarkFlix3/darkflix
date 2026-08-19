@@ -1939,15 +1939,50 @@ const STATE = {
       });
     }
 
-    // Attach click events to publisher cards
+    // Attach click events & scroll buttons to publisher carousel
     if (publisherCarousel && !publisherCarousel.dataset.bound) {
       publisherCarousel.dataset.bound = "true";
+      
       publisherCarousel.querySelectorAll('.publisher-card').forEach(card => {
         card.onclick = () => {
           const pub = card.getAttribute('data-publisher');
           STATE.selectedPublisher = pub;
           renderBooksPage(selectedCategory, pub);
         };
+      });
+
+      const leftBtn = document.getElementById('publisher-scroll-left');
+      const rightBtn = document.getElementById('publisher-scroll-right');
+
+      if (leftBtn) {
+        leftBtn.onclick = (e) => {
+          e.preventDefault();
+          publisherCarousel.scrollBy({ left: -180, behavior: 'smooth' });
+        };
+      }
+      if (rightBtn) {
+        rightBtn.onclick = (e) => {
+          e.preventDefault();
+          publisherCarousel.scrollBy({ left: 180, behavior: 'smooth' });
+        };
+      }
+
+      // Mouse drag scrolling support
+      let isDown = false;
+      let startX, scrollLeft;
+      publisherCarousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - publisherCarousel.offsetLeft;
+        scrollLeft = publisherCarousel.scrollLeft;
+      });
+      publisherCarousel.addEventListener('mouseleave', () => isDown = false);
+      publisherCarousel.addEventListener('mouseup', () => isDown = false);
+      publisherCarousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - publisherCarousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        publisherCarousel.scrollLeft = scrollLeft - walk;
       });
     }
 
