@@ -7801,6 +7801,79 @@ const STATE = {
     // Generate Netflix-style scrolling posters backdrop
     generateAuthBackdrop();
 
+    // Global Event Delegation for Movie/Series/Book Card clicks
+    document.body.addEventListener('click', async (e) => {
+      const card = e.target.closest('.movie-card');
+      if (!card) return;
+
+      // Book card check
+      const bookId = card.dataset.bookId || card.getAttribute('data-book-id');
+      if (bookId || card.classList.contains('book-card') || card.dataset.type === 'book') {
+        e.preventDefault();
+        e.stopPropagation();
+        const targetId = bookId || card.dataset.id;
+        const book = DEFAULT_BOOKS.find(b => String(b.id) === String(targetId));
+        if (book) {
+          openBookReader(book);
+        }
+        return;
+      }
+
+      const rawId = card.dataset.id;
+      if (!rawId) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      const type = card.dataset.type || 'movie';
+      const isNumericId = !isNaN(Number(rawId));
+      const idNum = isNumericId ? Number(rawId) : rawId;
+
+      try {
+        showToast('Carregando detalhes...', 'info');
+        let details = null;
+
+        if (isNumericId) {
+          try {
+            const res = await tmdbFetch(`/${type}/${idNum}`);
+            if (res && !res.status_code && (res.title || res.name)) {
+              details = res;
+              details.media_type = type;
+            }
+          } catch (err) {
+            console.warn(`TMDB fetch para ID ${idNum} falhou`, err);
+          }
+        }
+
+        if (!details && typeof DEFAULT_MOVIES !== 'undefined') {
+          const localItem = DEFAULT_MOVIES.find(m => String(m.id) === String(rawId) || Number(m.id) === Number(rawId));
+          if (localItem) {
+            details = {
+              id: localItem.id,
+              title: localItem.title,
+              name: localItem.title,
+              media_type: localItem.type === 'series' ? 'tv' : 'movie',
+              overview: localItem.description,
+              vote_average: localItem.rating,
+              release_date: `${localItem.year || 2024}-01-01`,
+              poster_path: localItem.poster ? localItem.poster.replace('https://image.tmdb.org/t/p/w500', '') : '',
+              backdrop_path: localItem.backdrop ? localItem.backdrop.replace('https://image.tmdb.org/t/p/original', '') : '',
+              genres: localItem.genres ? localItem.genres.map(g => ({ name: g })) : []
+            };
+          }
+        }
+
+        if (details) {
+          openDetail(details);
+        } else {
+          showToast('Erro ao carregar os detalhes do título.', 'error');
+        }
+      } catch (err) {
+        console.error("Erro ao carregar detalhes:", err);
+        showToast('Erro ao carregar os detalhes do título.', 'error');
+      }
+    });
+
     // Listen to Firebase connection state to re-add participant if connection drops and reconnects
     const connectedRef = ref(db, ".info/connected");
     onValue(connectedRef, (snap) => {
