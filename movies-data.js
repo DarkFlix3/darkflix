@@ -417,6 +417,21 @@ const DEFAULT_BOOKS = [
     poster: "https://m.media-amazon.com/images/I/A1Cb9Ffck8L._UF1000,1000_QL80_.jpg",
     backdrop: "https://m.media-amazon.com/images/I/A1Cb9Ffck8L._UF1000,1000_QL80_.jpg",
     readerUrl: "https://drive.google.com/file/d/1aMDH7Tc8hFaylJZ-68af8oTiW22BG7Du/view?usp=sharing"
+  },
+  {
+    id: "livro-warren-demonologistas",
+    title: "Ed & Lorraine Warren: Demonologistas",
+    author: "Ed & Lorraine Warren / Gerald Brittle",
+    year: 2016,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Fantasia & Ficção", "Clássicos"],
+    description: "A biografia definitiva dos demonologistas mais famosos do mundo. Casos reais assustadores, arquivos sobrenaturais e investigações paranormais detalhadas. Clique para ler o livro completo!",
+    poster: "https://images.tcdn.com.br/img/img_prod/1175968/ed_amp_lorraine_warrer_demonologistas_arquivos_sobrenaturais_55071_1_d36a7e44ad47462868012bb0ca74d0c9.jpg",
+    backdrop: "https://images.tcdn.com.br/img/img_prod/1175968/ed_amp_lorraine_warrer_demonologistas_arquivos_sobrenaturais_55071_1_d36a7e44ad47462868012bb0ca74d0c9.jpg",
+    readerUrl: "https://drive.google.com/file/d/1-5e07Jt30ajZqKXrZbKsC6plPLMoEqFd/view?usp=sharing"
   }
 ];
 
