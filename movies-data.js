@@ -552,6 +552,36 @@ const DEFAULT_BOOKS = [
     poster: "https://rocco.com.br/wp-content/uploads/2024/04/9786555324075.jpg",
     backdrop: "https://rocco.com.br/wp-content/uploads/2024/04/9786555324075.jpg",
     readerUrl: "https://drive.google.com/file/d/1OZlZPnctuB9m7tPhdWIGS3t7Z7dilclh/view?usp=sharing"
+  },
+  {
+    id: "livro-atraves-da-minha-janela",
+    title: "Através da Minha Janela",
+    author: "Ariana Godoy",
+    year: 2019,
+    duration: "Livro Completo (PDF)",
+    rating: 9.8,
+    type: "book",
+    featured: true,
+    genres: ["Romance & Drama", "Clássicos", "Desenvolvimento & Educação"],
+    description: "Raquel é apaixonada por Ares, seu vizinho atraente e misterioso. Ela o observa em segredo através da janela, até que uma senha de Wi-Fi compartilhada desencadeia um jogo de sedução e um romance intenso. Clique para ler!",
+    poster: "https://i.pinimg.com/originals/4b/4b/6a/4b4b6aa34905d24957b061b97fdb4a8e.jpg",
+    backdrop: "https://i.pinimg.com/originals/4b/4b/6a/4b4b6aa34905d24957b061b97fdb4a8e.jpg",
+    readerUrl: "https://drive.google.com/file/d/146Yzl4Bkmif-xX7PCr2v-9HFoyuYl5FJ/view?usp=sharing"
+  },
+  {
+    id: "livro-diarios-do-vampiro-destino",
+    title: "Diários do Vampiro: O Destino",
+    author: "L.J. Smith",
+    year: 2012,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Fantasia & Ficção", "Romance & Drama"],
+    description: "Elena Gilbert enfrenta seu destino supremo. Em meio ao triângulo amoroso épico com os irmãos vampiros Stefan e Damon Salvatore, forças das trevas ameaçam destruir Fell's Church para sempre. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/612NcXJzsdL.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/612NcXJzsdL.jpg",
+    readerUrl: "https://drive.google.com/file/d/1ILpQcnLmXltTli04WamXSB-f54Tt98QE/view?usp=sharing"
   }
 ];
 
