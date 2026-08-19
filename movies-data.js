@@ -507,6 +507,21 @@ const DEFAULT_BOOKS = [
     poster: "https://i.pinimg.com/564x/0d/4f/bd/0d4fbdfdb1ed726b86f6127aa9a4850f.jpg",
     backdrop: "https://i.pinimg.com/564x/0d/4f/bd/0d4fbdfdb1ed726b86f6127aa9a4850f.jpg",
     readerUrl: "https://drive.google.com/file/d/1yYUAMTR_7Ig2MeExC8EpSChQAO8RG7Fr/view?usp=sharing"
+  },
+  {
+    id: "livro-o-exorcista",
+    title: "O Exorcista",
+    author: "William Peter Blatty",
+    year: 1971,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Fantasia & Ficção", "Clássicos"],
+    description: "Um dos maiores clássicos do terror de todos os tempos. A aterrorizante história da garota Regan MacNeil, tomada por uma força demoníaca sombria. Clique para ler o livro completo!",
+    poster: "https://m.media-amazon.com/images/I/91fQ51I4TRL.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/91fQ51I4TRL.jpg",
+    readerUrl: "https://drive.google.com/file/d/1QpTroiYBeuA46VzXgDF_NRrYCI8ypyzT/view?usp=sharing"
   }
 ];
 
