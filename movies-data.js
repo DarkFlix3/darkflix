@@ -612,6 +612,66 @@ const DEFAULT_BOOKS = [
     poster: "https://m.media-amazon.com/images/I/618mNqdHzCL._UF1000,1000_QL80_.jpg",
     backdrop: "https://m.media-amazon.com/images/I/618mNqdHzCL._UF1000,1000_QL80_.jpg",
     readerUrl: "https://drive.google.com/file/d/1ZIiGfcm5HwRsdJ7mqyhwyGv721V3QGMa/view?usp=sharing"
+  },
+  {
+    id: "hq-invencivel-vol-03",
+    title: "Invencível — Volume 3",
+    author: "Robert Kirkman (Image Comics)",
+    year: 2005,
+    duration: "HQ Completa (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
+    description: "Mark Grayson enfrenta batalhas intergalácticas ainda mais violentas ao se reunir inesperadamente com seu pai no planeta Thra. Revelações chocantes sobre o Império Viltrumita! Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/51ItR1unaoL._UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/51ItR1unaoL._UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/17WK2oAb9dF7kDul0huJcCxOQcIK-DQVM/view?usp=sharing"
+  },
+  {
+    id: "hq-invencivel-vol-04",
+    title: "Invencível — Volume 4",
+    author: "Robert Kirkman (Image Comics)",
+    year: 2006,
+    duration: "HQ Completa (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
+    description: "Mark retorna à Terra trazendo seu meio-irmão Oliver. Enquanto tenta equilibrar a faculdade, o namoro e o heroísmo, novos vilões mortais testam os limites de Invencível. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/51-EPAWYQJL._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/51-EPAWYQJL._AC_UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1ozf6qcsDuTo8uO7oAlGaMu0h94GOqVia/view?usp=sharing"
+  },
+  {
+    id: "hq-invencivel-vol-05",
+    title: "Invencível — Volume 5",
+    author: "Robert Kirkman (Image Comics)",
+    year: 2007,
+    duration: "HQ Completa (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
+    description: "A tensão escala ao limite supremo quando Angstrom Levy retorna sedento por vingança, ameaçando a família de Mark através de fendas interdimensionais. Conflitos colossais! Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/51VC0yufbnL._UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/51VC0yufbnL._UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1fgMxIfgqow_xe-wCpcePHM3FIitnWN5Q/view?usp=sharing"
+  },
+  {
+    id: "hq-invencivel-vol-06",
+    title: "Invencível — Volume 6",
+    author: "Robert Kirkman (Image Comics)",
+    year: 2008,
+    duration: "HQ Completa (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
+    description: "A Guerra Viltrumita se aproxima inexoravelmente. Mark e Allen, o Alienígena, unem forças com a Coalizão de Planetas para preparar a maior resistência do universo. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/61KDa2jyJgL._UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/61KDa2jyJgL._UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1iYf0JFc9aB7NhYIF5qaWJ-ZhZFKIqWKo/view?usp=sharing"
   }
 ];
 
