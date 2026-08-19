@@ -432,6 +432,21 @@ const DEFAULT_BOOKS = [
     poster: "https://images.tcdn.com.br/img/img_prod/1175968/ed_amp_lorraine_warrer_demonologistas_arquivos_sobrenaturais_55071_1_d36a7e44ad47462868012bb0ca74d0c9.jpg",
     backdrop: "https://images.tcdn.com.br/img/img_prod/1175968/ed_amp_lorraine_warrer_demonologistas_arquivos_sobrenaturais_55071_1_d36a7e44ad47462868012bb0ca74d0c9.jpg",
     readerUrl: "https://drive.google.com/file/d/1-5e07Jt30ajZqKXrZbKsC6plPLMoEqFd/view?usp=sharing"
+  },
+  {
+    id: "livro-warren-vidas-eternas",
+    title: "Ed & Lorraine Warren: Vidas Eternas",
+    author: "Ed & Lorraine Warren",
+    year: 2019,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Fantasia & Ficção", "Clássicos"],
+    description: "Casos reais impressionantes de reencarnação, vidas passadas e mistérios espirituais investigados pelos maiores especialistas do sobrenatural. Clique para ler o livro completo!",
+    poster: "https://m.media-amazon.com/images/I/A1E6cdLODLL._UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/A1E6cdLODLL._UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1GP-S7PbzgMU8WYda5S1dx0g8rIgPBRlQ/view?usp=sharing"
   }
 ];
 
