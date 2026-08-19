@@ -1915,11 +1915,41 @@ const STATE = {
   }
 
   // ---------- Render Books & HQs Page ----------
-  function renderBooksPage(selectedCategory = 'Todos') {
+  function renderBooksPage(selectedCategory = 'Todos', selectedPublisher = null) {
     const grid = document.getElementById('books-grid-all') || DOM.booksGridAll;
     const filterBar = document.getElementById('books-filter-bar') || DOM.booksFilterBar;
     const searchInput = document.getElementById('books-search-input');
+    const publisherCarousel = document.getElementById('publisher-carousel');
     if (!grid || !filterBar) return;
+
+    if (selectedPublisher !== null) {
+      STATE.selectedPublisher = selectedPublisher;
+    }
+    const currentPublisher = STATE.selectedPublisher || 'all';
+
+    // Highlight active publisher card
+    if (publisherCarousel) {
+      publisherCarousel.querySelectorAll('.publisher-card').forEach(card => {
+        const pub = card.getAttribute('data-publisher');
+        if (pub === currentPublisher) {
+          card.classList.add('active');
+        } else {
+          card.classList.remove('active');
+        }
+      });
+    }
+
+    // Attach click events to publisher cards
+    if (publisherCarousel && !publisherCarousel.dataset.bound) {
+      publisherCarousel.dataset.bound = "true";
+      publisherCarousel.querySelectorAll('.publisher-card').forEach(card => {
+        card.onclick = () => {
+          const pub = card.getAttribute('data-publisher');
+          STATE.selectedPublisher = pub;
+          renderBooksPage(selectedCategory, pub);
+        };
+      });
+    }
 
     // Render filter bar with BOOK_GENRES
     filterBar.innerHTML = BOOK_GENRES.map(genre => `
@@ -1931,7 +1961,7 @@ const STATE = {
     filterBar.querySelectorAll('.filter-btn').forEach(btn => {
       btn.onclick = () => {
         const cat = btn.getAttribute('data-genre');
-        renderBooksPage(cat);
+        renderBooksPage(cat, currentPublisher);
       };
     });
 
@@ -1941,6 +1971,29 @@ const STATE = {
         ? DEFAULT_BOOKS 
         : DEFAULT_BOOKS.filter(b => b.genres && b.genres.includes(selectedCategory));
 
+      // Apply Publisher Filter
+      if (currentPublisher === 'marvel') {
+        books = books.filter(b => 
+          (b.publisher === 'marvel') ||
+          (b.author && b.author.toLowerCase().includes('marvel')) ||
+          (b.genres && b.genres.includes('Marvel')) ||
+          (b.title && b.title.toLowerCase().includes('deadpool'))
+        );
+      } else if (currentPublisher === 'dc') {
+        books = books.filter(b => 
+          (b.publisher === 'dc') ||
+          (b.author && b.author.toLowerCase().includes('dc')) ||
+          (b.genres && b.genres.includes('DC'))
+        );
+      } else if (currentPublisher === 'darkside') {
+        books = books.filter(b => 
+          (b.publisher === 'darkside') ||
+          (b.genres && (b.genres.includes('Terror & Mistério') || b.genres.includes('DarkSide'))) ||
+          (b.author && (b.author.toLowerCase().includes('warren') || b.author.toLowerCase().includes('freida') || b.author.toLowerCase().includes('king') || b.author.toLowerCase().includes('darkside')))
+        );
+      }
+
+      // Apply Search Query
       if (q) {
         books = books.filter(b => 
           (b.title && b.title.toLowerCase().includes(q)) ||
@@ -1951,7 +2004,15 @@ const STATE = {
       }
 
       if (books.length === 0) {
-        grid.innerHTML = `<div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 40px 20px; color: var(--text-secondary);">Nenhum livro ou HQ encontrado para "${q || selectedCategory}".</div>`;
+        let emptyMessage = `Nenhum livro ou HQ encontrado para "${q || selectedCategory}".`;
+        if (currentPublisher === 'dc') {
+          emptyMessage = `⚡ Nenhuma HQ da DC Comics encontrada no momento.`;
+        } else if (currentPublisher === 'marvel') {
+          emptyMessage = `🦸 Nenhuma HQ da Marvel encontrada para essa seleção.`;
+        } else if (currentPublisher === 'darkside') {
+          emptyMessage = `💀 Nenhum livro de terror ou da DarkSide encontrado para essa seleção.`;
+        }
+        grid.innerHTML = `<div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 50px 20px; color: var(--text-secondary); font-size: 1rem;">${emptyMessage}</div>`;
         return;
       }
 

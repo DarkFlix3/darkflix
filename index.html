@@ -422,7 +422,36 @@
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </div>
+        <!-- Publisher / Brand Logos Carousel -->
+        <div class="publisher-carousel-container" style="margin-bottom: 22px;">
+          <h4 style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <span>✨ Filtrar por Editora / Universo</span>
+          </h4>
+          <div class="publisher-carousel" id="publisher-carousel">
+            <div class="publisher-card active" data-publisher="all" title="Ver Todos os Livros e HQs">
+              <div class="publisher-logo-box" style="background: linear-gradient(135deg, #e50914, #80000a); display: flex; align-items: center; justify-content: center; height: 100%; width: 100%;">
+                <span style="font-weight: 900; font-size: 1rem; color: #fff; letter-spacing: 1px;">TODOS</span>
+              </div>
+              <span class="publisher-name">Ver Todos</span>
+            </div>
+
+            <div class="publisher-card" data-publisher="marvel" title="HQs e Obras da Marvel Comics">
+              <img src="assets/publishers/marvel.jpg" alt="Marvel" class="publisher-img">
+              <span class="publisher-name">Marvel</span>
+            </div>
+
+            <div class="publisher-card" data-publisher="dc" title="HQs e Obras da DC Comics">
+              <img src="assets/publishers/dc.jpg" alt="DC Comics" class="publisher-img">
+              <span class="publisher-name">DC Comics</span>
+            </div>
+
+            <div class="publisher-card" data-publisher="darkside" title="Livros da DarkSide Books & Terror">
+              <img src="assets/publishers/darkside.png" alt="DarkSide Books" class="publisher-img">
+              <span class="publisher-name">DarkSide</span>
+            </div>
+          </div>
         </div>
+
         <div class="filter-bar" id="books-filter-bar"></div>
         <div class="movies-grid" id="books-grid-all"></div>
       </div>
@@ -1095,7 +1124,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="movies-data.js?v=9.2.0"></script>
-  <script type="module" src="app.js?v=9.2.0"></script>
+  <script src="movies-data.js?v=9.3.0"></script>
+  <script type="module" src="app.js?v=9.3.0"></script>
 </body>
 </html>
