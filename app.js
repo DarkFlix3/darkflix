@@ -1947,12 +1947,36 @@ const STATE = {
     if (publisherCarousel && !publisherCarousel.dataset.bound) {
       publisherCarousel.dataset.bound = "true";
       
+      let isMoved = false;
+      let startX = 0;
+
       publisherCarousel.querySelectorAll('.publisher-card').forEach(card => {
-        card.onclick = () => {
+        card.addEventListener('touchstart', (e) => {
+          if (e.touches.length === 1) {
+            startX = e.touches[0].clientX;
+            isMoved = false;
+          }
+        }, { passive: true });
+
+        card.addEventListener('touchmove', (e) => {
+          if (e.touches.length === 1) {
+            const diffX = Math.abs(e.touches[0].clientX - startX);
+            if (diffX > 6) {
+              isMoved = true;
+            }
+          }
+        }, { passive: true });
+
+        card.addEventListener('click', (e) => {
+          if (isMoved) {
+            e.preventDefault();
+            e.stopPropagation();
+            return;
+          }
           const pub = card.getAttribute('data-publisher');
           STATE.selectedPublisher = pub;
           renderBooksPage(selectedCategory, pub);
-        };
+        });
       });
 
       const leftBtn = document.getElementById('publisher-scroll-left');
@@ -1961,58 +1985,17 @@ const STATE = {
       if (leftBtn) {
         leftBtn.onclick = (e) => {
           e.preventDefault();
+          e.stopPropagation();
           publisherCarousel.scrollBy({ left: -180, behavior: 'smooth' });
         };
       }
       if (rightBtn) {
         rightBtn.onclick = (e) => {
           e.preventDefault();
+          e.stopPropagation();
           publisherCarousel.scrollBy({ left: 180, behavior: 'smooth' });
         };
       }
-
-      // Mouse & Touch Drag Scrolling (APK / Android / iOS WebView)
-      let isDown = false;
-      let startX, scrollLeft;
-
-      publisherCarousel.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX - publisherCarousel.offsetLeft;
-        scrollLeft = publisherCarousel.scrollLeft;
-      });
-      publisherCarousel.addEventListener('mouseleave', () => isDown = false);
-      publisherCarousel.addEventListener('mouseup', () => isDown = false);
-      publisherCarousel.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - publisherCarousel.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        publisherCarousel.scrollLeft = scrollLeft - walk;
-      });
-
-      // Touch Drag Scrolling for APK / Mobile Touchscreens
-      let touchStartX = 0;
-      let touchStartScroll = 0;
-      let isTouchDragging = false;
-
-      publisherCarousel.addEventListener('touchstart', (e) => {
-        if (e.touches.length === 1) {
-          isTouchDragging = true;
-          touchStartX = e.touches[0].clientX;
-          touchStartScroll = publisherCarousel.scrollLeft;
-        }
-      }, { passive: true });
-
-      publisherCarousel.addEventListener('touchmove', (e) => {
-        if (!isTouchDragging || e.touches.length !== 1) return;
-        const currentX = e.touches[0].clientX;
-        const diff = touchStartX - currentX;
-        publisherCarousel.scrollLeft = touchStartScroll + diff;
-      }, { passive: true });
-
-      publisherCarousel.addEventListener('touchend', () => {
-        isTouchDragging = false;
-      }, { passive: true });
     }
 
     // Render filter bar with BOOK_GENRES
@@ -4794,9 +4777,28 @@ const STATE = {
 
   // ---------- Details Modal ----------
   async function openDetail(movie) {
+    if (!movie) return;
     STATE.currentMovieDetail = movie;
 
     stopMainHeroTrailer();
+
+    const modal = document.getElementById('detail-modal') || DOM.detailModal;
+    if (!modal) {
+      console.warn("detailModal não foi encontrado na página.");
+      return;
+    }
+
+    const modalHero = document.getElementById('modal-hero') || DOM.modalHero;
+    const modalTitle = document.getElementById('modal-title') || DOM.modalTitle;
+    const modalRating = document.getElementById('modal-rating') || DOM.modalRating;
+    const modalYear = document.getElementById('modal-year') || DOM.modalYear;
+    const modalDuration = document.getElementById('modal-duration') || DOM.modalDuration;
+    const modalTypeBadge = document.getElementById('modal-type-badge') || DOM.modalTypeBadge;
+    const modalGenres = document.getElementById('modal-genres') || DOM.modalGenres;
+    const modalDescription = document.getElementById('modal-description') || DOM.modalDescription;
+    const modalWatchBtn = document.getElementById('modal-watch-btn') || DOM.modalWatchBtn;
+    const modalFavoriteBtn = document.getElementById('modal-favorite-btn') || DOM.modalFavoriteBtn;
+    const modalSeriesSelector = document.getElementById('modal-series-selector') || DOM.modalSeriesSelector;
 
     const title = movie.title || movie.name || 'Sem Título';
     const rating = movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A';
@@ -4805,48 +4807,53 @@ const STATE = {
 
     const backdropUrl = movie.backdrop_path 
       ? `https://image.tmdb.org/t/p/w780${movie.backdrop_path}` 
-      : 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%221000%22 height=%22500%22><rect fill=%22%2312121a%22 width=%221000%22 height=%22500%22/></svg>';
+      : (movie.poster ? movie.poster : 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%221000%22 height=%22500%22><rect fill=%22%2312121a%22 width=%221000%22 height=%22500%22/></svg>');
 
-    DOM.modalHero.style.backgroundImage = `url("${backdropUrl}")`;
-    DOM.modalTitle.textContent = title;
-    DOM.modalRating.textContent = rating;
-    DOM.modalYear.textContent = year;
+    if (modalHero) modalHero.style.backgroundImage = `url("${backdropUrl}")`;
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalRating) modalRating.textContent = rating;
+    if (modalYear) modalYear.textContent = year;
 
     let durationLabel = '';
     if (type === 'movie') {
       durationLabel = movie.runtime ? `${Math.floor(movie.runtime / 60)}h ${movie.runtime % 60}m` : 'Filme';
-      DOM.modalWatchBtn.style.display = 'inline-flex';
-      DOM.modalSeriesSelector.style.display = 'none';
+      if (modalWatchBtn) modalWatchBtn.style.display = 'inline-flex';
+      if (modalSeriesSelector) modalSeriesSelector.style.display = 'none';
     } else {
       durationLabel = movie.number_of_seasons ? `${movie.number_of_seasons} Temporada(s)` : 'Série';
-      DOM.modalWatchBtn.style.display = 'none';
-      DOM.modalSeriesSelector.style.display = 'block';
+      if (modalWatchBtn) modalWatchBtn.style.display = 'none';
+      if (modalSeriesSelector) modalSeriesSelector.style.display = 'block';
 
       loadSeasonsDropdown(movie);
     }
 
-    DOM.modalDuration.textContent = durationLabel;
-    DOM.modalTypeBadge.textContent = type === 'movie' ? 'Filme' : 'Série';
+    if (modalDuration) modalDuration.textContent = durationLabel;
+    if (modalTypeBadge) modalTypeBadge.textContent = type === 'movie' ? 'Filme' : 'Série';
 
     const genreNames = movie.genres 
-      ? movie.genres.map(g => g.name) 
+      ? movie.genres.map(g => g.name || g) 
       : (movie.genre_ids ? movie.genre_ids.map(id => GENRE_MAP[id] || '').filter(Boolean) : []);
     
-    DOM.modalGenres.innerHTML = genreNames.map(g => `<span>${g}</span>`).join('');
-    DOM.modalDescription.textContent = movie.overview || 'Sinopse indisponível em português.';
+    if (modalGenres) modalGenres.innerHTML = genreNames.map(g => `<span>${g}</span>`).join('');
+    if (modalDescription) modalDescription.textContent = movie.overview || 'Sinopse indisponível em português.';
 
     updateFavoriteBtnState(movie.id);
 
-    DOM.modalWatchBtn.onclick = () => {
-      closeDetail();
-      setTimeout(() => openCinema(movie.id, title, 'movie'), 300);
-    };
+    if (modalWatchBtn) {
+      modalWatchBtn.onclick = () => {
+        closeDetail();
+        setTimeout(() => openCinema(movie.id, title, type), 300);
+      };
+    }
 
-    DOM.modalFavoriteBtn.onclick = () => {
-      toggleFavorite(movie);
-    };
+    if (modalFavoriteBtn) {
+      modalFavoriteBtn.onclick = () => {
+        toggleFavorite(movie);
+      };
+    }
 
-    DOM.detailModal.classList.add('active');
+    modal.style.display = 'flex';
+    modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 
     // Auto-play trailer in modal after 5 seconds
