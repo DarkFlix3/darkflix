@@ -4528,6 +4528,13 @@ const STATE = {
   // ---------- Search ----------
   async function performSearch(query) {
     const q = query.trim();
+    if (STATE.currentPage === 'books') {
+      const searchInput = document.getElementById('books-search-input');
+      if (searchInput) searchInput.value = q;
+      renderBooksPage();
+      return;
+    }
+
     if (!q) {
       navigateTo('home');
       return;
