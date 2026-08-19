@@ -807,6 +807,51 @@ const DEFAULT_BOOKS = [
     poster: "https://m.media-amazon.com/images/I/5175WVR5cML._AC_UF1000,1000_QL80_.jpg",
     backdrop: "https://m.media-amazon.com/images/I/5175WVR5cML._AC_UF1000,1000_QL80_.jpg",
     readerUrl: "https://drive.google.com/file/d/1cCckv85iNMLkZyj1yg0ftnXtcA3evep-/view?usp=sharing"
+  },
+  {
+    id: "livro-a-empregada",
+    title: "A Empregada",
+    author: "Freida McFadden",
+    year: 2022,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Clássicos", "Fantasia & Ficção"],
+    description: "Millie aceita trabalhar como empregada doméstica para a rica família Winchester. Mas atrás das portas trancadas da mansão, segredos perturbadores e perigos mortais a aguardam. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/81BdpMhm3iL._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/81BdpMhm3iL._AC_UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1WEVjg7jQvuda2gAb29XRv1bwZW5sTXJw/view?usp=sharing"
+  },
+  {
+    id: "livro-o-segredo-da-empregada",
+    title: "O Segredo da Empregada",
+    author: "Freida McFadden",
+    year: 2023,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Clássicos", "Fantasia & Ficção"],
+    description: "Trabalhando para o influente Douglas Garrick, Millie percebe que a esposa dele nunca sai do quarto e marcas de sangue aparecem nas roupas. Um suspense aterrorizante! Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/81qwX4O+XIL.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/81qwX4O+XIL.jpg",
+    readerUrl: "https://drive.google.com/file/d/1xZrqofGFrgvGxYZ4JjXrhSkwTlqkpUmr/view?usp=sharing"
+  },
+  {
+    id: "livro-o-casamento-da-empregada",
+    title: "O Casamento da Empregada",
+    author: "Freida McFadden",
+    year: 2024,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Clássicos", "Fantasia & Ficção"],
+    description: "Anos depois, Millie agora é casada e tem uma família. Ao se mudarem para um bairro quieto, a vizinhança esconde olhos atentos e segredos do passado que ameaçam destruir tudo. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/8161x5kcceL._UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/8161x5kcceL._UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/13uJnzQy8SYxeG_3Ef_tBUhRkUMs_43ah/view?usp=sharing"
   }
 ];
 
