@@ -2032,14 +2032,13 @@ const STATE = {
     }
 
     if (iframe) {
-      const scale = zoomVal / 100;
-      iframe.style.transform = `scale(${scale})`;
-      if (scale > 1) {
-        iframe.style.width = `${(100 / scale).toFixed(2)}%`;
-        iframe.style.height = `${(100 / scale).toFixed(2)}%`;
-      } else {
+      iframe.style.transform = 'none';
+      if (zoomVal <= 100) {
         iframe.style.width = '100%';
         iframe.style.height = '100%';
+      } else {
+        iframe.style.width = `${zoomVal}%`;
+        iframe.style.height = `${zoomVal}%`;
       }
     }
   }
