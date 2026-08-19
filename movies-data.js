@@ -582,6 +582,36 @@ const DEFAULT_BOOKS = [
     poster: "https://m.media-amazon.com/images/I/612NcXJzsdL.jpg",
     backdrop: "https://m.media-amazon.com/images/I/612NcXJzsdL.jpg",
     readerUrl: "https://drive.google.com/file/d/1ILpQcnLmXltTli04WamXSB-f54Tt98QE/view?usp=sharing"
+  },
+  {
+    id: "hq-invencivel-vol-01",
+    title: "Invencível — Volume 1",
+    author: "Robert Kirkman (Image Comics)",
+    year: 2003,
+    duration: "HQ Completa (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
+    description: "Mark Grayson é um garoto comum do ensino médio, exceto pelo fato de seu pai ser o Omni-Man, o super-herói mais poderoso do planeta. Quando Mark desenvolve seus próprios poderes, sua vida muda para sempre. Clique para ler!",
+    poster: "https://imagecomics.com/files/releases/Invincible_01-1.jpg",
+    backdrop: "https://imagecomics.com/files/releases/Invincible_01-1.jpg",
+    readerUrl: "https://drive.google.com/file/d/1T1WadPk6yXF9FKaV5rYzuBr_HNT9WS0N/view?usp=sharing"
+  },
+  {
+    id: "hq-invencivel-vol-02",
+    title: "Invencível — Volume 2",
+    author: "Robert Kirkman (Image Comics)",
+    year: 2004,
+    duration: "HQ Completa (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["HQs & Quadrinhos", "Ação", "Fantasia & Ficção"],
+    description: "As consequências devastadoras da revelação sobre Omni-Man deixam Mark Grayson e o mundo abalados. Mark precisa assumir o manto de defensor da Terra e enfrentar novas ameaças galácticas. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/618mNqdHzCL._UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/618mNqdHzCL._UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1ZIiGfcm5HwRsdJ7mqyhwyGv721V3QGMa/view?usp=sharing"
   }
 ];
 
