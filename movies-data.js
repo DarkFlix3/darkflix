@@ -762,6 +762,51 @@ const DEFAULT_BOOKS = [
     poster: "https://m.media-amazon.com/images/I/71DW9z3UXkL.jpg",
     backdrop: "https://m.media-amazon.com/images/I/71DW9z3UXkL.jpg",
     readerUrl: "https://drive.google.com/file/d/1oOH0LFOBHKMhdDin76VPDDMTwiXpmWd_/view?usp=sharing"
+  },
+  {
+    id: "livro-para-todos-os-garotos-que-ja-amei",
+    title: "Para Todos os Garotos Que Já Amei",
+    author: "Jenny Han",
+    year: 2014,
+    duration: "Livro Completo (PDF)",
+    rating: 9.8,
+    type: "book",
+    featured: true,
+    genres: ["Romance & Drama", "Clássicos", "Desenvolvimento & Educação"],
+    description: "Lara Jean guarda cartas de amor secretas para cada garoto por quem já se apaixonou. Sua vida vira de cabeça para baixo quando as cartas são misteriosamente enviadas aos destinatários. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/71GNVIeQV4S._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/71GNVIeQV4S._AC_UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1Ri6zJiEXi27671IQ5g1oFL-0bHnSZBxZ/view?usp=sharing"
+  },
+  {
+    id: "livro-a-empregada-esta-de-olho",
+    title: "A Empregada Está de Olho",
+    author: "Freida McFadden",
+    year: 2023,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Clássicos", "Fantasia & Ficção"],
+    description: "Millie consegue um novo trabalho em uma mansão luxuosa. Porém, o sótão trancado e os segredos sombrios dos seus patrões escondem um pesadelo aterrorizante e reviravoltas chocantes. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/81ldjmypeIL.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/81ldjmypeIL.jpg",
+    readerUrl: "https://drive.google.com/file/d/1A16lrZCodKwp0aZtVVwG4_zFt5k3U00e/view?usp=sharing"
+  },
+  {
+    id: "livro-ala-d",
+    title: "Ala D",
+    author: "Freida McFadden",
+    year: 2023,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Clássicos", "Fantasia & Ficção"],
+    description: "Amy, uma estudante de medicina, precisa passar o plantão noturno na trancada e aterrorizante Ala D, uma unidade psiquiátrica de segurança máxima onde segredos do passado voltam para caçá-la. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/5175WVR5cML._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/5175WVR5cML._AC_UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1cCckv85iNMLkZyj1yg0ftnXtcA3evep-/view?usp=sharing"
   }
 ];
 
