@@ -522,6 +522,36 @@ const DEFAULT_BOOKS = [
     poster: "https://m.media-amazon.com/images/I/91fQ51I4TRL.jpg",
     backdrop: "https://m.media-amazon.com/images/I/91fQ51I4TRL.jpg",
     readerUrl: "https://drive.google.com/file/d/1QpTroiYBeuA46VzXgDF_NRrYCI8ypyzT/view?usp=sharing"
+  },
+  {
+    id: "livro-bussola-de-ouro",
+    title: "A Bússola de Ouro",
+    author: "Philip Pullman",
+    year: 1995,
+    duration: "Livro Completo (PDF)",
+    rating: 9.8,
+    type: "book",
+    featured: true,
+    genres: ["Fantasia & Ficção", "Desenvolvimento & Educação", "Clássicos"],
+    description: "Lyra Belacqua vive em um mundo onde cada ser humano é acompanhado por um daimon. Ao investigar o sequestro de crianças, ela descobre segredos sombrios e um instrumento poderoso: o aletiômetro. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/91T-vC38laL._AC_UF1000,1000_QL80_AIweblab1381794,T1_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/91T-vC38laL._AC_UF1000,1000_QL80_AIweblab1381794,T1_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1DtmJS3bg_zumqdku5m3ttMcQU-S0kNJM/view?usp=sharing"
+  },
+  {
+    id: "livro-harry-potter-reliquias-da-morte",
+    title: "Harry Potter e as Relíquias da Morte",
+    author: "J.K. Rowling",
+    year: 2007,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Fantasia & Ficção", "Clássicos", "Desenvolvimento & Educação"],
+    description: "O capítulo final e épico da saga do menino bruxo. Harry, Rony e Hermione saem em uma perigosa missão para destruir as Horcruxes e enfrentar Lord Voldemort na Batalha de Hogwarts. Clique para ler!",
+    poster: "https://rocco.com.br/wp-content/uploads/2024/04/9786555324075.jpg",
+    backdrop: "https://rocco.com.br/wp-content/uploads/2024/04/9786555324075.jpg",
+    readerUrl: "https://drive.google.com/file/d/1OZlZPnctuB9m7tPhdWIGS3t7Z7dilclh/view?usp=sharing"
   }
 ];
 
