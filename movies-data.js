@@ -477,6 +477,21 @@ const DEFAULT_BOOKS = [
     poster: "https://darkside.vtexassets.com/arquivos/ids/167914/64-exorcismo-thomas-b-allen-0.jpg?v=636802539595270000",
     backdrop: "https://darkside.vtexassets.com/arquivos/ids/167914/64-exorcismo-thomas-b-allen-0.jpg?v=636802539595270000",
     readerUrl: "https://drive.google.com/file/d/1S5KkXg7PYrnnPzCQvhFhFmDLpn6k1FiC/view?usp=sharing"
+  },
+  {
+    id: "livro-homem-de-giz",
+    title: "O Homem de Giz",
+    author: "C.J. Tudor",
+    year: 2018,
+    duration: "Livro Completo (PDF)",
+    rating: 9.8,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Fantasia & Ficção", "Clássicos"],
+    description: "Um grupo de crianças usava bonecos de giz para mandar mensagens secretas. Trinta anos depois, o passado sombrio e os segredos mortais voltam para assombrá-los. Clique para ler o livro completo!",
+    poster: "https://static.estantevirtual.com.br/book/00/COJ-2794-000/COJ-2794-000_detail1.jpg?ts=1720029764445&ims=fit-in/600x800/filters:fill(fff):quality(100)",
+    backdrop: "https://static.estantevirtual.com.br/book/00/COJ-2794-000/COJ-2794-000_detail1.jpg?ts=1720029764445&ims=fit-in/600x800/filters:fill(fff):quality(100)",
+    readerUrl: "https://drive.google.com/file/d/17R4EHSOgAJMp43WRwP2l8iX6rxhcjlSn/view?usp=sharing"
   }
 ];
 
