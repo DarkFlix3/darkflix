@@ -462,6 +462,21 @@ const DEFAULT_BOOKS = [
     poster: "https://m.media-amazon.com/images/I/51UgEgRAf4L._SY445_SX342_ML2_.jpg",
     backdrop: "https://m.media-amazon.com/images/I/51UgEgRAf4L._SY445_SX342_ML2_.jpg",
     readerUrl: "https://drive.google.com/file/d/14F06E9QQWGt1-jlJFJyz1WwmxZwoezW3/view?usp=sharing"
+  },
+  {
+    id: "livro-exorcismo",
+    title: "Exorcismo",
+    author: "Thomas B. Allen",
+    year: 2014,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Terror & Mistério", "Fantasia & Ficção", "Clássicos"],
+    description: "A história real que inspirou o maior filme de terror de todos os tempos. O diário verdadeiro do padre e a terrível possessão de Robbie Mannheim em 1949. Clique para ler o livro completo!",
+    poster: "https://darkside.vtexassets.com/arquivos/ids/167914/64-exorcismo-thomas-b-allen-0.jpg?v=636802539595270000",
+    backdrop: "https://darkside.vtexassets.com/arquivos/ids/167914/64-exorcismo-thomas-b-allen-0.jpg?v=636802539595270000",
+    readerUrl: "https://drive.google.com/file/d/1S5KkXg7PYrnnPzCQvhFhFmDLpn6k1FiC/view?usp=sharing"
   }
 ];
 
