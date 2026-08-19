@@ -1917,6 +1917,7 @@ const STATE = {
   function renderBooksPage(selectedCategory = 'Todos') {
     const grid = document.getElementById('books-grid-all') || DOM.booksGridAll;
     const filterBar = document.getElementById('books-filter-bar') || DOM.booksFilterBar;
+    const searchInput = document.getElementById('books-search-input');
     if (!grid || !filterBar) return;
 
     // Render filter bar with BOOK_GENRES
@@ -1933,18 +1934,36 @@ const STATE = {
       };
     });
 
-    // Filter books catalog
-    const filteredBooks = (selectedCategory === 'Todos') 
-      ? DEFAULT_BOOKS 
-      : DEFAULT_BOOKS.filter(b => b.genres && b.genres.includes(selectedCategory));
+    const updateBooksDisplay = () => {
+      const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      let books = (selectedCategory === 'Todos') 
+        ? DEFAULT_BOOKS 
+        : DEFAULT_BOOKS.filter(b => b.genres && b.genres.includes(selectedCategory));
 
-    if (filteredBooks.length === 0) {
-      grid.innerHTML = `<div class="no-results">Nenhum livro ou HQ encontrado para essa categoria.</div>`;
-      return;
+      if (q) {
+        books = books.filter(b => 
+          (b.title && b.title.toLowerCase().includes(q)) ||
+          (b.author && b.author.toLowerCase().includes(q)) ||
+          (b.genres && b.genres.some(g => g.toLowerCase().includes(q))) ||
+          (b.description && b.description.toLowerCase().includes(q))
+        );
+      }
+
+      if (books.length === 0) {
+        grid.innerHTML = `<div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 40px 20px; color: var(--text-secondary);">Nenhum livro ou HQ encontrado para "${q || selectedCategory}".</div>`;
+        return;
+      }
+
+      grid.innerHTML = books.map((book, i) => createBookCardHTML(book, i)).join('');
+      attachBookCardEvents(grid);
+    };
+
+    if (searchInput && !searchInput.dataset.bound) {
+      searchInput.dataset.bound = "true";
+      searchInput.oninput = () => updateBooksDisplay();
     }
 
-    grid.innerHTML = filteredBooks.map((book, i) => createBookCardHTML(book, i)).join('');
-    attachBookCardEvents(grid);
+    updateBooksDisplay();
   }
 
   // Generate Card HTML for Books & HQs
@@ -4519,19 +4538,40 @@ const STATE = {
     showLoadingSkeletons(DOM.searchResultsGrid);
 
     try {
-      const data = await tmdbFetch('/search/multi', { query: q });
+      const data = await tmdbFetch('/search/multi', { query: q }).catch(() => ({ results: [] }));
       const results = (data.results || []).filter(item => item.media_type === 'movie' || item.media_type === 'tv');
       const cleanResults = results.filter(isItemCleanSearch);
 
-      DOM.searchResultsTitle.innerHTML = `Resultados para: <strong>"${q}"</strong> (${cleanResults.length})`;
+      // Search Books & HQs
+      const matchingBooks = (typeof DEFAULT_BOOKS !== 'undefined') ? DEFAULT_BOOKS.filter(b => 
+        (b.title && b.title.toLowerCase().includes(q.toLowerCase())) ||
+        (b.author && b.author.toLowerCase().includes(q.toLowerCase())) ||
+        (b.genres && b.genres.some(g => g.toLowerCase().includes(q.toLowerCase()))) ||
+        (b.description && b.description.toLowerCase().includes(q.toLowerCase()))
+      ) : [];
 
-      if (cleanResults.length === 0) {
+      const totalCount = cleanResults.length + matchingBooks.length;
+      DOM.searchResultsTitle.innerHTML = `Resultados para: <strong>"${q}"</strong> (${totalCount})`;
+
+      if (totalCount === 0) {
         DOM.searchResultsGrid.innerHTML = '';
         DOM.noResults.style.display = 'block';
       } else {
         DOM.noResults.style.display = 'none';
-        DOM.searchResultsGrid.innerHTML = cleanResults.map((item, i) => createCardHTML(item, i)).join('');
+        
+        let html = '';
+        if (matchingBooks.length > 0) {
+          html += matchingBooks.map((book, i) => createBookCardHTML(book, i)).join('');
+        }
+        if (cleanResults.length > 0) {
+          html += cleanResults.map((item, i) => createCardHTML(item, i)).join('');
+        }
+
+        DOM.searchResultsGrid.innerHTML = html;
         attachCardEvents(DOM.searchResultsGrid);
+        if (matchingBooks.length > 0) {
+          attachBookCardEvents(DOM.searchResultsGrid);
+        }
       }
 
     } catch (err) {

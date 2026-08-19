@@ -414,6 +414,14 @@
             <h2 class="section-title" id="books-page-title" style="margin-bottom: 4px;">📚 Livros, HQs & Mangás</h2>
             <p style="color: var(--text-secondary); font-size: 0.9rem;">Leia os melhores livros, quadrinhos e mangás organizados por categoria diretamente no DarkFlix.</p>
           </div>
+          <div class="books-search-wrapper" style="position: relative; width: 100%; max-width: 320px;">
+            <input type="text" id="books-search-input" placeholder="🔍 Pesquisar por título ou autor..." 
+                   style="width: 100%; padding: 10px 16px 10px 38px; border-radius: 20px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.18); color: #fff; font-size: 0.88rem; outline: none; transition: all 0.3s ease;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none;">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
         </div>
         <div class="filter-bar" id="books-filter-bar"></div>
         <div class="movies-grid" id="books-grid-all"></div>
@@ -1081,7 +1089,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="movies-data.js?v=8.7.0"></script>
-  <script type="module" src="app.js?v=8.7.0"></script>
+  <script src="movies-data.js?v=8.8.0"></script>
+  <script type="module" src="app.js?v=8.8.0"></script>
 </body>
 </html>
