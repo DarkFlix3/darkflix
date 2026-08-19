@@ -605,9 +605,11 @@ const STATE = {
         || videos.find(v => v.type === 'Teaser' && v.site === 'YouTube')
         || videos.find(v => v.site === 'YouTube');
       if (trailer) {
-        // Use youtube-nocookie.com to avoid Error 153 (player configuration error)
-        // This domain is YouTube's official solution for privacy-safe embeds and avoids referrer blocks
-        return `https://www.youtube-nocookie.com/embed/${trailer.key}?autoplay=1&mute=1&controls=0&loop=1&playlist=${trailer.key}&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0&enablejsapi=1&playsinline=1&origin=${encodeURIComponent(window.location.origin)}`;
+        // Clean origin check for WebView/APK (prevents YouTube Error 150/153 on mobile)
+        const originParam = (window.location.origin && window.location.origin.startsWith('http')) 
+          ? `&origin=${encodeURIComponent(window.location.origin)}` 
+          : '';
+        return `https://www.youtube-nocookie.com/embed/${trailer.key}?autoplay=1&mute=1&controls=0&loop=1&playlist=${trailer.key}&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0&enablejsapi=1&playsinline=1${originParam}`;
       }
     } catch (e) {
       console.warn("Falha ao buscar trailer do vídeo", e);
