@@ -6818,6 +6818,7 @@ ul, ol {
 
 .publisher-card {
   flex: 0 0 140px;
+  min-width: 140px;
   height: 80px;
   position: relative;
   border-radius: 12px;
@@ -6828,6 +6829,7 @@ ul, ol {
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   box-shadow: 0 4px 12px rgba(0,0,0,0.35);
   user-select: none;
+  -webkit-user-drag: none;
 }
 
 .publisher-card:hover {

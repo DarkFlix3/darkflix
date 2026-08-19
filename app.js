@@ -1068,6 +1068,7 @@ const STATE = {
   }
 
   function attachCardEvents(container) {
+    if (!container) return;
     container.querySelectorAll('.movie-card').forEach((card) => {
       card.addEventListener('click', async (e) => {
         // Se for um card de livro/HQ, abrir o leitor de livros imediatamente
@@ -1083,21 +1084,30 @@ const STATE = {
           return;
         }
 
-        const idNum = Number(card.dataset.id);
+        const rawId = card.dataset.id;
         const type = card.dataset.type || 'movie';
+        const isNumericId = !isNaN(Number(rawId));
+        const idNum = isNumericId ? Number(rawId) : rawId;
+
         try {
           showToast('Carregando detalhes...', 'info');
           let details = null;
-          try {
-            details = await tmdbFetch(`/${type}/${idNum}`);
-            if (details) details.media_type = type;
-          } catch (e) {
-            console.warn(`TMDB fetch para ID ${idNum} falhou, buscando dados locais.`, e);
+
+          if (isNumericId) {
+            try {
+              const res = await tmdbFetch(`/${type}/${idNum}`);
+              if (res && !res.status_code && (res.title || res.name)) {
+                details = res;
+                details.media_type = type;
+              }
+            } catch (err) {
+              console.warn(`TMDB fetch para ID ${idNum} falhou, tentando fallback local.`, err);
+            }
           }
 
           // Fallback para DEFAULT_MOVIES (banco de dados local)
           if (!details && typeof DEFAULT_MOVIES !== 'undefined') {
-            const localItem = DEFAULT_MOVIES.find(m => Number(m.id) === idNum);
+            const localItem = DEFAULT_MOVIES.find(m => String(m.id) === String(rawId) || Number(m.id) === Number(rawId));
             if (localItem) {
               details = {
                 id: localItem.id,
@@ -1106,16 +1116,16 @@ const STATE = {
                 media_type: localItem.type === 'series' ? 'tv' : 'movie',
                 overview: localItem.description,
                 vote_average: localItem.rating,
-                release_date: `${localItem.year}-01-01`,
-                poster_path: localItem.poster.replace('https://image.tmdb.org/t/p/w500', ''),
-                backdrop_path: localItem.backdrop.replace('https://image.tmdb.org/t/p/original', ''),
+                release_date: `${localItem.year || 2024}-01-01`,
+                poster_path: localItem.poster ? localItem.poster.replace('https://image.tmdb.org/t/p/w500', '') : '',
+                backdrop_path: localItem.backdrop ? localItem.backdrop.replace('https://image.tmdb.org/t/p/original', '') : '',
                 genres: localItem.genres ? localItem.genres.map(g => ({ name: g })) : []
               };
             }
           }
 
           // Fallback específico para Elize: Sombras de uma Mulher (128456)
-          if (!details && idNum === 128456) {
+          if (!details && (idNum === 128456 || String(rawId) === '128456')) {
             details = {
               id: 128456,
               title: "Elize: Sombras de uma Mulher",
@@ -1131,12 +1141,6 @@ const STATE = {
           }
 
           if (details) {
-            // Garantir título correto para Elize
-            if (idNum === 128456) {
-              details.title = "Elize: Sombras de uma Mulher";
-              details.name = "Elize: Sombras de uma Mulher";
-              details.media_type = "movie";
-            }
             openDetail(details);
           } else {
             showToast('Erro ao carregar os detalhes do título.', 'error');
@@ -1967,9 +1971,10 @@ const STATE = {
         };
       }
 
-      // Mouse drag scrolling support
+      // Mouse & Touch Drag Scrolling (APK / Android / iOS WebView)
       let isDown = false;
       let startX, scrollLeft;
+
       publisherCarousel.addEventListener('mousedown', (e) => {
         isDown = true;
         startX = e.pageX - publisherCarousel.offsetLeft;
@@ -1984,6 +1989,30 @@ const STATE = {
         const walk = (x - startX) * 1.5;
         publisherCarousel.scrollLeft = scrollLeft - walk;
       });
+
+      // Touch Drag Scrolling for APK / Mobile Touchscreens
+      let touchStartX = 0;
+      let touchStartScroll = 0;
+      let isTouchDragging = false;
+
+      publisherCarousel.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          isTouchDragging = true;
+          touchStartX = e.touches[0].clientX;
+          touchStartScroll = publisherCarousel.scrollLeft;
+        }
+      }, { passive: true });
+
+      publisherCarousel.addEventListener('touchmove', (e) => {
+        if (!isTouchDragging || e.touches.length !== 1) return;
+        const currentX = e.touches[0].clientX;
+        const diff = touchStartX - currentX;
+        publisherCarousel.scrollLeft = touchStartScroll + diff;
+      }, { passive: true });
+
+      publisherCarousel.addEventListener('touchend', () => {
+        isTouchDragging = false;
+      }, { passive: true });
     }
 
     // Render filter bar with BOOK_GENRES
