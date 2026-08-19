@@ -6713,6 +6713,39 @@ ul, ol {
   transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), width 0.25s cubic-bezier(0.25, 1, 0.5, 1), height 0.25s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+.zoom-controls {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 2px 6px;
+  gap: 4px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.zoom-controls #book-reader-zoom-out,
+.zoom-controls #book-reader-zoom-in {
+  padding: 4px 10px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.zoom-controls #book-reader-zoom-reset {
+  padding: 4px 8px;
+  font-size: 0.78rem;
+  border-radius: 4px;
+}
+
+.zoom-controls #book-reader-zoom-level {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  min-width: 44px;
+  text-align: center;
+  user-select: none;
+}
+
 @media (max-width: 768px) {
   .book-reader-container {
     width: 100vw;
@@ -6720,11 +6753,41 @@ ul, ol {
     height: 100dvh;
     border-radius: 0;
   }
+  .book-reader-header {
+    padding: 8px 10px;
+    flex-wrap: wrap;
+    gap: 6px;
+    background: #111;
+  }
   .book-reader-title-info {
-    max-width: 100%;
+    max-width: 55%;
   }
   .book-reader-title {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+  }
+  .book-reader-badge {
+    font-size: 0.62rem;
+    padding: 2px 6px;
+  }
+  .book-reader-controls {
+    gap: 4px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .btn-reader-action {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+  }
+  .btn-reader-close {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  .hide-mobile-text {
+    display: none !important;
+  }
+  .hide-mobile-btn {
+    display: none !important;
   }
 }
 

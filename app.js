@@ -2055,6 +2055,46 @@ const STATE = {
     applyBookReaderZoom();
   }
 
+  // Pinch-to-Zoom (Dois Dedos no Celular / Touch)
+  let initialPinchDist = 0;
+  let initialPinchZoom = 100;
+
+  function setupPinchToZoom() {
+    const container = document.getElementById('book-reader-modal');
+    if (!container || container.dataset.pinchBound) return;
+    container.dataset.pinchBound = "true";
+
+    container.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 2) {
+        initialPinchDist = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY
+        );
+        initialPinchZoom = STATE.bookReaderZoom || 100;
+      }
+    }, { passive: true });
+
+    container.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 2 && initialPinchDist > 0) {
+        const currDist = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY
+        );
+        const ratio = currDist / initialPinchDist;
+        let newZoom = Math.round(initialPinchZoom * ratio);
+        newZoom = Math.min(250, Math.max(60, newZoom));
+        STATE.bookReaderZoom = newZoom;
+        applyBookReaderZoom();
+      }
+    }, { passive: true });
+
+    container.addEventListener('touchend', (e) => {
+      if (e.touches.length < 2) {
+        initialPinchDist = 0;
+      }
+    }, { passive: true });
+  }
+
   // Open Book Reader Modal
   function openBookReader(book) {
     const modal = document.getElementById('book-reader-modal') || DOM.bookReaderModal;
@@ -2080,6 +2120,7 @@ const STATE = {
 
     STATE.bookReaderZoom = 100;
     applyBookReaderZoom();
+    setupPinchToZoom();
 
     modal.style.display = 'flex';
     modal.classList.add('active');
