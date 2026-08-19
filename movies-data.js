@@ -492,6 +492,21 @@ const DEFAULT_BOOKS = [
     poster: "https://static.estantevirtual.com.br/book/00/COJ-2794-000/COJ-2794-000_detail1.jpg?ts=1720029764445&ims=fit-in/600x800/filters:fill(fff):quality(100)",
     backdrop: "https://static.estantevirtual.com.br/book/00/COJ-2794-000/COJ-2794-000_detail1.jpg?ts=1720029764445&ims=fit-in/600x800/filters:fill(fff):quality(100)",
     readerUrl: "https://drive.google.com/file/d/17R4EHSOgAJMp43WRwP2l8iX6rxhcjlSn/view?usp=sharing"
+  },
+  {
+    id: "livro-interestelar",
+    title: "Interestelar",
+    author: "Kip Thorne & Greg Keyes",
+    year: 2014,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Fantasia & Ficção", "Desenvolvimento & Educação", "Clássicos"],
+    description: "As reservas da Terra estão no fim. Uma expedição espacial atravessa um buraco de minhoca no espaço-tempo em busca de um novo lar para a humanidade. A ciência e ficção por trás da obra-prima. Clique para ler o livro completo!",
+    poster: "https://i.pinimg.com/564x/0d/4f/bd/0d4fbdfdb1ed726b86f6127aa9a4850f.jpg",
+    backdrop: "https://i.pinimg.com/564x/0d/4f/bd/0d4fbdfdb1ed726b86f6127aa9a4850f.jpg",
+    readerUrl: "https://drive.google.com/file/d/1yYUAMTR_7Ig2MeExC8EpSChQAO8RG7Fr/view?usp=sharing"
   }
 ];
 
