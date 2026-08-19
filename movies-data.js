@@ -447,6 +447,21 @@ const DEFAULT_BOOKS = [
     poster: "https://m.media-amazon.com/images/I/A1E6cdLODLL._UF1000,1000_QL80_.jpg",
     backdrop: "https://m.media-amazon.com/images/I/A1E6cdLODLL._UF1000,1000_QL80_.jpg",
     readerUrl: "https://drive.google.com/file/d/1GP-S7PbzgMU8WYda5S1dx0g8rIgPBRlQ/view?usp=sharing"
+  },
+  {
+    id: "livro-culpa-e-das-estrelas",
+    title: "A Culpa É das Estrelas",
+    author: "John Green",
+    year: 2012,
+    duration: "Livro Completo (PDF)",
+    rating: 9.8,
+    type: "book",
+    featured: true,
+    genres: ["Romance & Drama", "Clássicos", "Desenvolvimento & Educação"],
+    description: "Hazel e Augustus são dois adolescentes que se conhecem em um grupo de apoio a pacientes com câncer e vivem uma linda e emocionante história de amor inesquecível. Clique para ler o livro completo!",
+    poster: "https://m.media-amazon.com/images/I/51UgEgRAf4L._SY445_SX342_ML2_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/51UgEgRAf4L._SY445_SX342_ML2_.jpg",
+    readerUrl: "https://drive.google.com/file/d/14F06E9QQWGt1-jlJFJyz1WwmxZwoezW3/view?usp=sharing"
   }
 ];
 
