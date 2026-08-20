@@ -852,6 +852,21 @@ const DEFAULT_BOOKS = [
     poster: "https://m.media-amazon.com/images/I/8161x5kcceL._UF1000,1000_QL80_.jpg",
     backdrop: "https://m.media-amazon.com/images/I/8161x5kcceL._UF1000,1000_QL80_.jpg",
     readerUrl: "https://drive.google.com/file/d/13uJnzQy8SYxeG_3Ef_tBUhRkUMs_43ah/view?usp=sharing"
+  },
+  {
+    id: "livro-culpa-nossa",
+    title: "Culpa Nossa",
+    author: "Mercedes Ron",
+    year: 2023,
+    duration: "Livro Completo (PDF)",
+    rating: 9.9,
+    type: "book",
+    featured: true,
+    genres: ["Romance & Drama", "Clássicos", "Fantasia & Ficção"],
+    description: "O desfecho épico e emocionante da trilogia Culpados. O amor incondicional entre Nick e Noah enfrentará os maiores testes, perigos e segredos do passado. Clique para ler!",
+    poster: "https://m.media-amazon.com/images/I/51Y+aQ0C2VL._AC_UF1000,1000_QL80_.jpg",
+    backdrop: "https://m.media-amazon.com/images/I/51Y+aQ0C2VL._AC_UF1000,1000_QL80_.jpg",
+    readerUrl: "https://drive.google.com/file/d/1LPDWtXlXTGdFnYOCnrfbLzwnT8_b_GKZ/view?usp=sharing"
   }
 ];
 
