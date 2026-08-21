@@ -4739,15 +4739,8 @@ const STATE = {
       const results = (data.results || []).filter(item => item.media_type === 'movie' || item.media_type === 'tv');
       const cleanResults = results.filter(isItemCleanSearch);
 
-      // Search Books & HQs
-      const matchingBooks = (typeof DEFAULT_BOOKS !== 'undefined') ? DEFAULT_BOOKS.filter(b => 
-        (b.title && b.title.toLowerCase().includes(q.toLowerCase())) ||
-        (b.author && b.author.toLowerCase().includes(q.toLowerCase())) ||
-        (b.genres && b.genres.some(g => g.toLowerCase().includes(q.toLowerCase()))) ||
-        (b.description && b.description.toLowerCase().includes(q.toLowerCase()))
-      ) : [];
-
-      const totalCount = cleanResults.length + matchingBooks.length;
+      // Fora da categoria de livros, a pesquisa busca estritamente filmes, séries e animes (livros são excluídos)
+      const totalCount = cleanResults.length;
       DOM.searchResultsTitle.innerHTML = `Resultados para: <strong>"${q}"</strong> (${totalCount})`;
 
       if (totalCount === 0) {
@@ -4755,20 +4748,8 @@ const STATE = {
         DOM.noResults.style.display = 'block';
       } else {
         DOM.noResults.style.display = 'none';
-        
-        let html = '';
-        if (matchingBooks.length > 0) {
-          html += matchingBooks.map((book, i) => createBookCardHTML(book, i)).join('');
-        }
-        if (cleanResults.length > 0) {
-          html += cleanResults.map((item, i) => createCardHTML(item, i)).join('');
-        }
-
-        DOM.searchResultsGrid.innerHTML = html;
+        DOM.searchResultsGrid.innerHTML = cleanResults.map((item, i) => createCardHTML(item, i)).join('');
         attachCardEvents(DOM.searchResultsGrid);
-        if (matchingBooks.length > 0) {
-          attachBookCardEvents(DOM.searchResultsGrid);
-        }
       }
 
     } catch (err) {
