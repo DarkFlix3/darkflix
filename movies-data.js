@@ -1758,6 +1758,2907 @@ const DEFAULT_BOOKS = [
     backdrop: "https://www.coverbrowser.com/image/x-man/18-1.jpg",
     readerUrl: "https://drive.google.com/file/d/1zo6Vll8L-gy_PFeP7F7EqdRx2N1zgKSk/view?usp=drive_link"
   }
+,
+  {
+  "id": "hq-marvel-batch2-1-nx001",
+  "title": "NX001",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição NX001 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Owsst6Zo-Xj7VQ23v_fDsoIHhYcRgLzI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Owsst6Zo-Xj7VQ23v_fDsoIHhYcRgLzI",
+  "readerUrl": "https://drive.google.com/file/d/1fFZHPQ3k_eYtp77z2uxGhKkqo6a-DlKq/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-2-fabulosos-x-men-515-11-2009",
+  "title": "Fabulosos X-Men #515 (11, 2009)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men #515 (11, 2009) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1yjwEYiyiPE-aMzA2MKEP4kMsPwjXw6QL",
+  "backdrop": "https://lh3.googleusercontent.com/d/1yjwEYiyiPE-aMzA2MKEP4kMsPwjXw6QL",
+  "readerUrl": "https://drive.google.com/file/d/1Z0JcMnNaA8tvhixWIVD8Q-bZT915oYI6/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-3-fabulosos-x-men-519-02-2010",
+  "title": "Fabulosos X-Men #519 (02, 2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men #519 (02, 2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1s6pPtE6X8TN-DA2J8hS5odQ7iHiyNjhP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1s6pPtE6X8TN-DA2J8hS5odQ7iHiyNjhP",
+  "readerUrl": "https://drive.google.com/file/d/1ORsNv-8FRaauMIwfhcY3xaOGbW2QpEuW/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-4-nx004",
+  "title": "NX004",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição NX004 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cmwHZLGUhieIWcPefLQhKQFCqvrSGXfR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cmwHZLGUhieIWcPefLQhKQFCqvrSGXfR",
+  "readerUrl": "https://drive.google.com/file/d/1i0HmlfnpQ2ed-cxbuEwCkghryN59Z2ki/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-5-nx003",
+  "title": "NX003",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição NX003 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1D9X4Fzqse9jxt9RsEdpT5_Au4hT6QpSj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1D9X4Fzqse9jxt9RsEdpT5_Au4hT6QpSj",
+  "readerUrl": "https://drive.google.com/file/d/1FGmp8TARIRjzKefnkXtWHpeMdoFYYCGS/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-6-fabulosos-x-men-521-04-2010",
+  "title": "Fabulosos X-Men #521 (04, 2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men #521 (04, 2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kdxiir8b8aBnjMbBmJNsje31LVtsqw7v",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kdxiir8b8aBnjMbBmJNsje31LVtsqw7v",
+  "readerUrl": "https://drive.google.com/file/d/1gru7LR83ZH5rjNTEZtd2GEiBG5cdxR5S/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-7-xfnx",
+  "title": "XFNX",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição XFNX da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/11Qke8UA6GKoNEjEbtP0NpXdyztci5Hvu",
+  "backdrop": "https://lh3.googleusercontent.com/d/11Qke8UA6GKoNEjEbtP0NpXdyztci5Hvu",
+  "readerUrl": "https://drive.google.com/file/d/1jmz23XjLNnKCmTF2cd_IP629Gt4GbRY_/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-8-fabulosos-x-men-516-12-2009",
+  "title": "Fabulosos X-Men #516 (12, 2009)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men #516 (12, 2009) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LwFysh-wWM5ksTBiezs3WP3WZRdsNiaW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LwFysh-wWM5ksTBiezs3WP3WZRdsNiaW",
+  "readerUrl": "https://drive.google.com/file/d/1TM7LoZ1Mcg9xKt-53P7APlD6eHo0rHCY/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-9-fabulosos-x-men-518-02-2010",
+  "title": "Fabulosos X-Men #518 (02, 2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men #518 (02, 2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18cP4Lxdjv1jql0WZF3OUGi9oXMJE20uc",
+  "backdrop": "https://lh3.googleusercontent.com/d/18cP4Lxdjv1jql0WZF3OUGi9oXMJE20uc",
+  "readerUrl": "https://drive.google.com/file/d/11w2QZ4mC_Xq-xzs0tpo0LdyP9EunMh7n/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-10-x-men-legacy-229",
+  "title": "X-Men Legacy #229",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Legacy #229 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Pup9xWTLbR8C8D0vrIKyM_AWbPhjR7bZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Pup9xWTLbR8C8D0vrIKyM_AWbPhjR7bZ",
+  "readerUrl": "https://drive.google.com/file/d/12b4SWeju52cl53vi__qKQMHu9vUc4-Sr/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-11-nx002",
+  "title": "NX002",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição NX002 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-oZlnHY8vgq5yw6BquqkfMO73X5yzWDF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-oZlnHY8vgq5yw6BquqkfMO73X5yzWDF",
+  "readerUrl": "https://drive.google.com/file/d/14uT56LN_jFPYAbkv_8l6hJ_uFDDZYqq8/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-12-x-men-legacy-230",
+  "title": "X-Men Legacy #230",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Legacy #230 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bMw6gp0eyaGQcUF01hV-aMQyK4TpPiqT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bMw6gp0eyaGQcUF01hV-aMQyK4TpPiqT",
+  "readerUrl": "https://drive.google.com/file/d/1qwzwrt5xfJ3K0eS-7Cz8ghw5bz96k5my/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-13-x-men-legacy-228",
+  "title": "X-Men Legacy #228",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Legacy #228 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1TnTUsykR7JbDWiudV1c6K4IxKyTuZH9j",
+  "backdrop": "https://lh3.googleusercontent.com/d/1TnTUsykR7JbDWiudV1c6K4IxKyTuZH9j",
+  "readerUrl": "https://drive.google.com/file/d/1n8nYhtXyA4LCWh9NlEdCxv23Bnpvfzcg/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-14-fabulosos-x-men-517-01-2010",
+  "title": "Fabulosos X-Men #517 (01, 2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men #517 (01, 2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1v5TKYbQZuwIY--JB0DYHg3gyv6d3vaWx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1v5TKYbQZuwIY--JB0DYHg3gyv6d3vaWx",
+  "readerUrl": "https://drive.google.com/file/d/1bbwZYNJ5fL1Y1OyicVIjCDpCR6u4kdyB/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-15-x-men-204-esp-cie-em-extin-o-cap-tulo-final",
+  "title": "X-Men.204.-.Espécie.em.Extinção.-.Capítulo.Final",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men.204.-.Espécie.em.Extinção.-.Capítulo.Final da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ab5ptOq22BSNasFloI6TNPv6eHvRP1Jt",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ab5ptOq22BSNasFloI6TNPv6eHvRP1Jt",
+  "readerUrl": "https://drive.google.com/file/d/1n2_swleSRK3rKX1lDtGIC60-q-8aQ0h9/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-16-x-factor-v3-24-esp-cie-em-extin-o-cap-tulo-15",
+  "title": "X-Factor.V3.24.-.Espécie.em.Extinção.-.Capítulo.15",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Factor.V3.24.-.Espécie.em.Extinção.-.Capítulo.15 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/164F1FAuAsy-tXFnVesnLJZ8YwRgxrPlp",
+  "backdrop": "https://lh3.googleusercontent.com/d/164F1FAuAsy-tXFnVesnLJZ8YwRgxrPlp",
+  "readerUrl": "https://drive.google.com/file/d/1l8tw6m-7zarFIV_ACzUEDGkTUk0d5j1R/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-17-uncanny-x-men-489-especie-em-extincao-capitulo-06",
+  "title": "uncanny.x-men.489.especie.em.extincao.capitulo.06",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição uncanny.x-men.489.especie.em.extincao.capitulo.06 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ddeF-Z0AzYl5b3XcF4Zbj0Ln04vikqLa",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ddeF-Z0AzYl5b3XcF4Zbj0Ln04vikqLa",
+  "readerUrl": "https://drive.google.com/file/d/1xKufVOvWcMQ0ENLjnrCTm0PbhnLEILRY/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-18-x-men-203-esp-cie-em-extin-o-capitulo-13",
+  "title": "X-Men.203.-.Espécie.em.Extinção.-.Capitulo.13",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men.203.-.Espécie.em.Extinção.-.Capitulo.13 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cDMHfHowIVlPoLnxiUvpvHIQjOf-5O6h",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cDMHfHowIVlPoLnxiUvpvHIQjOf-5O6h",
+  "readerUrl": "https://drive.google.com/file/d/161cHMY_aM8qD6_pb89GFp88QEbmHJdYF/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-19-x-factor-v3-23-esp-cie-em-extin-o-cap-tulo-11",
+  "title": "X-Factor.V3.23.Espécie.em.Extinção.Capítulo.11",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Factor.V3.23.Espécie.em.Extinção.Capítulo.11 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/198a6v8_ni8cgYtwuiSXQWPr-oB_Gx3Br",
+  "backdrop": "https://lh3.googleusercontent.com/d/198a6v8_ni8cgYtwuiSXQWPr-oB_Gx3Br",
+  "readerUrl": "https://drive.google.com/file/d/1ojyojkMEBpVa2BKADD-HCcpkgyjgCxCL/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-20-x-men-200-esp-cie-em-extin-o-capitulo-01",
+  "title": "X-Men.200.Espécie.em.Extinção.Capitulo.01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men.200.Espécie.em.Extinção.Capitulo.01 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bFM0mAK8zZqbKjggltSVe0Ihlu1fpVcL",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bFM0mAK8zZqbKjggltSVe0Ihlu1fpVcL",
+  "readerUrl": "https://drive.google.com/file/d/1m2e9-gSu062X8b8TfDabo7Y8Whp7MIAW/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-21-x-factor-22-especie-em-extincao-capitulo-07",
+  "title": "x-factor.22.especie.em.extincao.capitulo.07",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-factor.22.especie.em.extincao.capitulo.07 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1yrvS7RUXN8mw6xW-rElJpH75l_exqXRm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1yrvS7RUXN8mw6xW-rElJpH75l_exqXRm",
+  "readerUrl": "https://drive.google.com/file/d/1m-pIe9kuzKheQUr9C3P_z2Htd1fsTY_y/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-22-x-men-202-especie-em-extincao-capitulo-09",
+  "title": "x-men.202.especie.em.extincao.capitulo.09",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-men.202.especie.em.extincao.capitulo.09 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oJyBH4b69TfShjHJRItuNQIwZ_RjPDcC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oJyBH4b69TfShjHJRItuNQIwZ_RjPDcC",
+  "readerUrl": "https://drive.google.com/file/d/1opW3b6kau1vRSNtq8ZflCesVZ339MCsI/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-23-x-men-201-especie-em-extincao-capitulo-05",
+  "title": "x-men.201.especie.em.extincao.capitulo.05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-men.201.especie.em.extincao.capitulo.05 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bn7B9nd8S2RIYSza91eyIwcsgIfuhcB_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bn7B9nd8S2RIYSza91eyIwcsgIfuhcB_",
+  "readerUrl": "https://drive.google.com/file/d/1bNoTiTsWjC_JgFfoNnzAAHWLMmejgljn/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-24-x-factor-21-esp-cie-em-extin-o-capitulo-03",
+  "title": "X-Factor.21.Espécie.em.Extinção.Capitulo.03",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Factor.21.Espécie.em.Extinção.Capitulo.03 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17ELEjn9qj-lMLoDsIqzQmxbqWN9rvUTi",
+  "backdrop": "https://lh3.googleusercontent.com/d/17ELEjn9qj-lMLoDsIqzQmxbqWN9rvUTi",
+  "readerUrl": "https://drive.google.com/file/d/1lX0Mkho8vKBlZu8psAxX_9ascRAYVss1/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-25-x-men-especie-em-extincao-prologo",
+  "title": "x-men.especie.em.extincao.prologo",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-men.especie.em.extincao.prologo da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17pkpJENFGCtkfHtLswma8wicSaNRaeUR",
+  "backdrop": "https://lh3.googleusercontent.com/d/17pkpJENFGCtkfHtLswma8wicSaNRaeUR",
+  "readerUrl": "https://drive.google.com/file/d/1tu1fOh3aybd0G8HyClZ_f4eQBpXXxq34/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-26-x-factor-v3-25-complexo-de-messias",
+  "title": "x-factor v3 25 - complexo de messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-factor v3 25 - complexo de messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YJ6EjLKO9AENm4baWhq2u82h5vG9jUeJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YJ6EjLKO9AENm4baWhq2u82h5vG9jUeJ",
+  "readerUrl": "https://drive.google.com/file/d/1GWizKGCG-2yxvE_r-bOAPY00nESJa8tX/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-27-x-men-207-complexo-de-messias",
+  "title": "x-men - 207 - complexo.de.messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-men - 207 - complexo.de.messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HEIknnDoyYnqrl1lwRuOb7gGfXK2mhIP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HEIknnDoyYnqrl1lwRuOb7gGfXK2mhIP",
+  "readerUrl": "https://drive.google.com/file/d/1Kw1Gkj28TwdpWOpEhHqUmY5ZFvWQTOKr/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-28-new-x-men-46-complexo-de-messias",
+  "title": "new x-men 46 - complexo de messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição new x-men 46 - complexo de messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QNgRTwXXTN1-Qo9U3Eusx6QaVBW15Aga",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QNgRTwXXTN1-Qo9U3Eusx6QaVBW15Aga",
+  "readerUrl": "https://drive.google.com/file/d/1xx6Z9m0pQs3qDsU_mVahsE0zQCFon9lq/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-29-new-x-men-45-complexo-de-messias",
+  "title": "new x-men 45 - complexo de messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição new x-men 45 - complexo de messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1OZxeeDbRH___uWpn8Zs6lPuZOQyHRaTo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1OZxeeDbRH___uWpn8Zs6lPuZOQyHRaTo",
+  "readerUrl": "https://drive.google.com/file/d/1a0j0DF5CyRUfH8fcd5NhyH-bz4D_p-Q6/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-30-x-factor-v3-27-complexo-de-messias",
+  "title": "x-factor v3 27 - complexo de messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-factor v3 27 - complexo de messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FYfu37aDP7I0ftz7nxkn-qRKQp4HoJkn",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FYfu37aDP7I0ftz7nxkn-qRKQp4HoJkn",
+  "readerUrl": "https://drive.google.com/file/d/1MjyI5hly7QhQDNpdnWWM_x3SvuFF3BUB/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-31-x-men-complexo-de-messias",
+  "title": "x-men - complexo de messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-men - complexo de messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uGN6kgr2Nhcayy6pT4BVoLRVyJxpCc4R",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uGN6kgr2Nhcayy6pT4BVoLRVyJxpCc4R",
+  "readerUrl": "https://drive.google.com/file/d/1fHhMxDiiv_uTDPWe7UbT8ASQ-YSJIoI9/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-32-x-men-205-complexo-de-messias",
+  "title": "x-men 205 - complexo de messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-men 205 - complexo de messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1T9FtR9kYegZzmHAX_8eckQb0PzInOC1y",
+  "backdrop": "https://lh3.googleusercontent.com/d/1T9FtR9kYegZzmHAX_8eckQb0PzInOC1y",
+  "readerUrl": "https://drive.google.com/file/d/1S19KtpQMvj98rIyMw4rTsj8VxtoyRY_A/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-33-x-factor-v3-26-complexo-de-messias",
+  "title": "x-factor v3 26 - complexo de messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-factor v3 26 - complexo de messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HHzbAXzURhgmcAJGqt9nHVHEQgTReXJI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HHzbAXzURhgmcAJGqt9nHVHEQgTReXJI",
+  "readerUrl": "https://drive.google.com/file/d/1b_EHQcTGrYZeJ9qeLmbvpfgfXyO8kfTD/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-34-uncanny-x-men-494-complexo-de-messias",
+  "title": "uncanny x-men 494 - complexo de messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição uncanny x-men 494 - complexo de messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1soFfiUVmu9wN7ofio5sfjSMcMf2tMuUZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1soFfiUVmu9wN7ofio5sfjSMcMf2tMuUZ",
+  "readerUrl": "https://drive.google.com/file/d/1nDImKAb-1QwkKABKsvwSuQmu_8YWppVT/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-35-x-men-206-complexo-de-messias",
+  "title": "x-men 206 - complexo de messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-men 206 - complexo de messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vJocuxyQxFtEA90U3Zs6boQ6b1Ri5E6G",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vJocuxyQxFtEA90U3Zs6boQ6b1Ri5E6G",
+  "readerUrl": "https://drive.google.com/file/d/1NhAH8O3ZVtdbUzt2AiRT2IlUxGriGi6z/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-36-uncanny-x-men-493-complexo-de-messias",
+  "title": "uncanny x-men 493 - complexo de messias",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição uncanny x-men 493 - complexo de messias da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1OQRe0j2WHNjw8Vv1I8iKQSO7v-SkYX4N",
+  "backdrop": "https://lh3.googleusercontent.com/d/1OQRe0j2WHNjw8Vv1I8iKQSO7v-SkYX4N",
+  "readerUrl": "https://drive.google.com/file/d/1_59fKF8OQmL4plwyqSL4CXN8pR1EpPkH/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-37-x-men-curse-of-the-mutants-death-of-dr-cula",
+  "title": "X-Men Curse Of The Mutants - Death Of Drácula",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Curse Of The Mutants - Death Of Drácula da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hxOXM0COArxc8reBTDkmXeZAb_SyxBrJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hxOXM0COArxc8reBTDkmXeZAb_SyxBrJ",
+  "readerUrl": "https://drive.google.com/file/d/1DFpcxGlRbRmK7RGCAqhwlEBfMizMPt7w/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-38-namor-o-primeiro-mutante-01-2010",
+  "title": "Namor - O Primeiro Mutante #01 (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Namor - O Primeiro Mutante #01 (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_9BKp2ho1pH1tI7--R16N0Sxk-4bkyw-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_9BKp2ho1pH1tI7--R16N0Sxk-4bkyw-",
+  "readerUrl": "https://drive.google.com/file/d/1FMUzn5Us3FFUf92CgWIZH3rSlkDyUwT9/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-39-maldicao-dos-mutantes-blade-one-shot-2010",
+  "title": "Maldicao.dos.Mutantes.-.Blade.-.One-Shot.(2010).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Maldicao.dos.Mutantes.-.Blade.-.One-Shot.(2010). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lhR_9nAd6SWPVijrWSVX1DKQjB4DL7zr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lhR_9nAd6SWPVijrWSVX1DKQjB4DL7zr",
+  "readerUrl": "https://drive.google.com/file/d/1xhlr3ZHnauOocQRtCsE7QOnp-5hr8c2c/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-40-x-men-11-2011",
+  "title": "X-Men #11 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men #11 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kaR5cubEXtLTLYCDgxUaJIFFkHVEL_sN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kaR5cubEXtLTLYCDgxUaJIFFkHVEL_sN",
+  "readerUrl": "https://drive.google.com/file/d/17scbkCX2poqfLTv2Ckn33qt1HHjTyXzn/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-41-x-men-v2-06-2011",
+  "title": "X-Men v2 #06 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men v2 #06 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1b4wOm8C2A4bfUi8IF2kpG52kP49EZ6h0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1b4wOm8C2A4bfUi8IF2kpG52kP49EZ6h0",
+  "readerUrl": "https://drive.google.com/file/d/12tNYunDmolYdX8wwpsAHoN6dZOF12dv5/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-42-deadpool-30-2010",
+  "title": "Deadpool #30 2010",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Deadpool #30 2010 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12s8H1MCiNJp57XnYoS6fab85h6GB2uVY",
+  "backdrop": "https://lh3.googleusercontent.com/d/12s8H1MCiNJp57XnYoS6fab85h6GB2uVY",
+  "readerUrl": "https://drive.google.com/file/d/1FLja6Ymmi_J70Cfg8S5uJ8XSqLkNWINm/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-43-namor-o-primeiro-mutante-04-2011",
+  "title": "Namor - O Primeiro Mutante #04 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Namor - O Primeiro Mutante #04 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1TPwjSpjEfwCpA0D1mrrIv0Ru1mLqzaOI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1TPwjSpjEfwCpA0D1mrrIv0Ru1mLqzaOI",
+  "readerUrl": "https://drive.google.com/file/d/1GWvGvo5dPhYqxFAU7Zu1KRSb0fm10r96/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-44-namor-o-primeiro-mutante-03-2010",
+  "title": "Namor - O Primeiro Mutante #03 (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Namor - O Primeiro Mutante #03 (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1U5120WvLfJpfXc1UwHZF9e8F_9iw8jJe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1U5120WvLfJpfXc1UwHZF9e8F_9iw8jJe",
+  "readerUrl": "https://drive.google.com/file/d/1Oz4Ufl5ylWsi16PFxOx4_eL-Uuf1GKCm/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-45-namor-o-primeiro-mutante-02-2010",
+  "title": "Namor - O Primeiro Mutante #02 (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Namor - O Primeiro Mutante #02 (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1y4gwZtnOwnNH4051XeiXqhnV5Za9hHvp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1y4gwZtnOwnNH4051XeiXqhnV5Za9hHvp",
+  "readerUrl": "https://drive.google.com/file/d/12y__Wqqa2kQf5gt5i-3c7wyizMuMj88u/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-46-x-men-02-2010",
+  "title": "X-Men #02 (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men #02 (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1d5xLuRQcLJmkgCnAvsbmu4bFzNN0CaHx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1d5xLuRQcLJmkgCnAvsbmu4bFzNN0CaHx",
+  "readerUrl": "https://drive.google.com/file/d/10KO8aiDeFQSo04BfF-_Mqv6Y-6AUFsM2/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-47-x-men-curse-of-the-mutants-tempestade-e-gambit-2010",
+  "title": "X-Men Curse Of The Mutants - Tempestade e Gambit (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Curse Of The Mutants - Tempestade e Gambit (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UlO4_GUgBCD0wl7WCG783pQRZNEKSO6q",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UlO4_GUgBCD0wl7WCG783pQRZNEKSO6q",
+  "readerUrl": "https://drive.google.com/file/d/1f1BVvr1RX2vx-O-GuxZ2lh8hk6_GKqQe/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-48-x-men-vs-vampiros-01-2011",
+  "title": "X-Men vs. Vampiros #01 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men vs. Vampiros #01 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WekYRocnZHRkkw3bgmB0CYI28r61rV2y",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WekYRocnZHRkkw3bgmB0CYI28r61rV2y",
+  "readerUrl": "https://drive.google.com/file/d/1dzeVj2A4rWIQu1A7E7vywyVzXSIvajS7/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-49-x-men-03-2010",
+  "title": "X-Men #03 (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men #03 (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qSBMF-YBqJJlorlBAborLsIoQbxA3zQp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qSBMF-YBqJJlorlBAborLsIoQbxA3zQp",
+  "readerUrl": "https://drive.google.com/file/d/1f-L_I5faQC-c7DqVYO_hoWGBeTbqFRyD/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-50-x-men-fumaca-e-sangue-2010",
+  "title": "X-Men - Fumaca e Sangue (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men - Fumaca e Sangue (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eMAmvuaU2uIl_-CwA5FFFfsuzbcYQkSM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eMAmvuaU2uIl_-CwA5FFFfsuzbcYQkSM",
+  "readerUrl": "https://drive.google.com/file/d/1-Pqos0TmTwMTPOmStAhpRBpRliCXD99_/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-51-x-men-01-2010",
+  "title": "X-Men #01 (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men #01 (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1M6VDxD_OyfbIVREP4020MRjyk3yplTXR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1M6VDxD_OyfbIVREP4020MRjyk3yplTXR",
+  "readerUrl": "https://drive.google.com/file/d/1zHrojYOZhsHBdtSxYUNZ7s6DUsmGxY4T/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-52-fabulosos-x-men-495-04-2008",
+  "title": "Fabulosos X-Men #495 (04, 2008)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men #495 (04, 2008) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uyNToEXmtNBKLSG8ypi31rX62wVGjRtI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uyNToEXmtNBKLSG8ypi31rX62wVGjRtI",
+  "readerUrl": "https://drive.google.com/file/d/111vSGKcMRJxI54nmBDcaF0-sXKlfgJsc/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-53-x-necrosha-01-2009",
+  "title": "X-Necrosha #01 (2009)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Necrosha #01 (2009) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wSNh117EgnbKz6zvGTZV7xAQbOCUjYx5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wSNh117EgnbKz6zvGTZV7xAQbOCUjYx5",
+  "readerUrl": "https://drive.google.com/file/d/1hzHkQOv3fwPdUtKvgRAuBaUQUdKFOXph/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-54-gera-o-esperan-a-12-de-17",
+  "title": "Geração Esperança - 12 de 17",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Geração Esperança - 12 de 17 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1c8Fph5fyb9tAu2Z_Mzn2RnMWTLkG37R8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1c8Fph5fyb9tAu2Z_Mzn2RnMWTLkG37R8",
+  "readerUrl": "https://drive.google.com/file/d/1LvpycuT5l3uN32jF_3dM0Bpg42y-v0vP/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-55-x-men-legacy-208-04-2008",
+  "title": "X-Men Legacy #208 (04, 2008)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Legacy #208 (04, 2008) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KfTUWIWbexLrWO77YLvkkvQx7HCLQABz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KfTUWIWbexLrWO77YLvkkvQx7HCLQABz",
+  "readerUrl": "https://drive.google.com/file/d/1kfHJypXrxMRJ1XNcFJiom3C5cvzUQwah/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-56-x-men-pecado-original",
+  "title": "x-men.-.pecado.original",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-men.-.pecado.original da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HaWHSnIVw_mcP_QaqU4IIFd5EyYG2hy6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HaWHSnIVw_mcP_QaqU4IIFd5EyYG2hy6",
+  "readerUrl": "https://drive.google.com/file/d/1n0YTk0vfqqs31teOhz5suzC9_UyCQMDQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-57-x-men-the-magneto-war-01",
+  "title": "X-Men The Magneto War 01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men The Magneto War 01 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VuoSmCjuunGnJOKFEya4LCTN-RGN8yG1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VuoSmCjuunGnJOKFEya4LCTN-RGN8yG1",
+  "readerUrl": "https://drive.google.com/file/d/1ORjnW9TIRWJRqj02GK6g02FMNIMdVz4Q/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-58-wolverine-v4-18-2012",
+  "title": "Wolverine V4 #18 (2012)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine V4 #18 (2012) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1MVld-YQO2edpRQKrNvvte8bN7JN6JAjC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1MVld-YQO2edpRQKrNvvte8bN7JN6JAjC",
+  "readerUrl": "https://drive.google.com/file/d/1IRfQNpQOU-8rGa91I249-Z-gy295XdbZ/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-59-uncanny-x-men-313-alianca-falange-prologo-05-de-09-1994",
+  "title": "uncanny.x-men.313.-.alianca.falange.-.prologo.05.de.09.(1994).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição uncanny.x-men.313.-.alianca.falange.-.prologo.05.de.09.(1994). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1OSSZON2zeLu0C29h-vICHe-XLP1wGo2b",
+  "backdrop": "https://lh3.googleusercontent.com/d/1OSSZON2zeLu0C29h-vICHe-XLP1wGo2b",
+  "readerUrl": "https://drive.google.com/file/d/1j1tc99mFBHluAEIntzd_rBDsanj4nAos/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-60-fabulosos-x-men-vol-1963-524-07-2010",
+  "title": "Fabulosos X-Men Vol.1963 #524 (07, 2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men Vol.1963 #524 (07, 2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IUWACzQj7BaMqB0eb4dbowIrgQwKaqMU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IUWACzQj7BaMqB0eb4dbowIrgQwKaqMU",
+  "readerUrl": "https://drive.google.com/file/d/1R9jew00Iyu_TiVojan3ppVpKaa-1M362/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-61-wolverine-origens-30-pecado-original-05-de-05-2008",
+  "title": "Wolverine.Origens.30.-.Pecado.Original.05.de.05.(2008).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine.Origens.30.-.Pecado.Original.05.de.05.(2008). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QYaK9Z6Hh0xqEkj-Hrzw1AomKYL0JJwu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QYaK9Z6Hh0xqEkj-Hrzw1AomKYL0JJwu",
+  "readerUrl": "https://drive.google.com/file/d/1vn6qKt_SX60uwX7nT3GNTskX4Prm-2YN/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-62-wolverine-vol-1988-117-10-1997",
+  "title": "Wolverine Vol.1988 #117 (10, 1997)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine Vol.1988 #117 (10, 1997) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zQLLa59IUEuTXfkNOf1KTxz9QfdeYjRc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zQLLa59IUEuTXfkNOf1KTxz9QfdeYjRc",
+  "readerUrl": "https://drive.google.com/file/d/1hctK1F7L91hXVOLgMcX0zcSit6X_2WD8/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-63-x-factor-v1986-61",
+  "title": "X-Factor V1986 #61",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Factor V1986 #61 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HAdZ4KkAlK70gPBZM0BaJKN2WaBT6QAO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HAdZ4KkAlK70gPBZM0BaJKN2WaBT6QAO",
+  "readerUrl": "https://drive.google.com/file/d/1Aammt1pArRFeAiSsv2DB7tsci4ui9i35/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-64-cable-v2-02",
+  "title": "Cable V2 #02.",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Cable V2 #02. da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bWVFQ-WMHkqHwSqnrJb8qoHYUEsbRWaX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bWVFQ-WMHkqHwSqnrJb8qoHYUEsbRWaX",
+  "readerUrl": "https://drive.google.com/file/d/1Y-pwzTda6pjwI9Sp9W0n8V4fdcmf6iFv/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-65-x-force-03-de-28",
+  "title": "X-Force - 03 de 28",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Force - 03 de 28 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15sblcx3fafMIowAyf_G5sZlef0grDnBm",
+  "backdrop": "https://lh3.googleusercontent.com/d/15sblcx3fafMIowAyf_G5sZlef0grDnBm",
+  "readerUrl": "https://drive.google.com/file/d/1RNCHrdQx8q7f08qwAf9ppA2RNoGX9jUU/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-66-jovens-x-men-01-de-12",
+  "title": "Jovens X-Men - 01 de 12",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Jovens X-Men - 01 de 12 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nk-5a72_6X3dweSuHL1sSJIJg5-VARer",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nk-5a72_6X3dweSuHL1sSJIJg5-VARer",
+  "readerUrl": "https://drive.google.com/file/d/1IUMUPpet65phOxGJQRAxpMwGBxrAvNKb/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-67-x-factor-179-v3-30",
+  "title": "X-Factor 179 (v3 - 30)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Factor 179 (v3 - 30) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QvQ33s9SLxTl3mIIxf70fHGBAFrTjV35",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QvQ33s9SLxTl3mIIxf70fHGBAFrTjV35",
+  "readerUrl": "https://drive.google.com/file/d/1uucCimx80NgJnoemaQAPBzCKtJkGz8IO/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-68-os-fabulosos-x-men-v1-272",
+  "title": "Os Fabulosos X-Men V1 #272",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Os Fabulosos X-Men V1 #272 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1sk2VWNd7KQ2I63lZSXGh0qYMMLx8h4QF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1sk2VWNd7KQ2I63lZSXGh0qYMMLx8h4QF",
+  "readerUrl": "https://drive.google.com/file/d/1zphUoJGiLonUFiSe_RiaC-Bc9Yk-g6R9/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-69-x-men-legacy-210-06-2008",
+  "title": "X-Men Legacy #210 (06, 2008)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Legacy #210 (06, 2008) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gZDapYMi4j_XI70zzoYZtDujWGYzvCOJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gZDapYMi4j_XI70zzoYZtDujWGYzvCOJ",
+  "readerUrl": "https://drive.google.com/file/d/1tAisM8Jy5wFxNUH13CMHEjCYeO3UNcK9/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-70-x-men-legacy-209-05-2008",
+  "title": "X-Men Legacy #209 (05, 2008)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Legacy #209 (05, 2008) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qOCpRyfgyASytsSwXE6jBZacsuCU5ITH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qOCpRyfgyASytsSwXE6jBZacsuCU5ITH",
+  "readerUrl": "https://drive.google.com/file/d/1Li-CRTnP5WmCi0F631I8jGw5uJzkOMuo/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-71-wolverine-vol-1988-116-09-1997",
+  "title": "Wolverine Vol.1988 #116 (09, 1997)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine Vol.1988 #116 (09, 1997) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uBJUVAy5LtYjj5kKqGDwzjKU8L8WuFzr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uBJUVAy5LtYjj5kKqGDwzjKU8L8WuFzr",
+  "readerUrl": "https://drive.google.com/file/d/1CLikN9M00ySFydjECk0ML4HB--SR2VhC/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-72-fabulosos-x-men-497-06-2008",
+  "title": "Fabulosos X-Men #497 (06, 2008)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men #497 (06, 2008) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1seepaMVFbNfBWqTHwpvrgKWaJvtv1Ayp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1seepaMVFbNfBWqTHwpvrgKWaJvtv1Ayp",
+  "readerUrl": "https://drive.google.com/file/d/1yl7F137L46OBdxQdh5-eEGQYa1BYgdsf/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-73-x-men-divididos-venceremos-01-de-02",
+  "title": "X-Men.-.Divididos.Venceremos.01.de.02.",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men.-.Divididos.Venceremos.01.de.02. da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1SBbxSh31SqY0gGgDoVd-Gu6CId2-RDHS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1SBbxSh31SqY0gGgDoVd-Gu6CId2-RDHS",
+  "readerUrl": "https://drive.google.com/file/d/1OChCwfo3HGzCJcR9GXdeP0G0ivfV0bCs/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-74-wolverine-vol-1988-115-08-1997",
+  "title": "Wolverine Vol.1988 #115 (08, 1997)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine Vol.1988 #115 (08, 1997) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Z4rfzFqVhUvv4LAQUq1TaDa99fYV4VWY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Z4rfzFqVhUvv4LAQUq1TaDa99fYV4VWY",
+  "readerUrl": "https://drive.google.com/file/d/1RM8NYGvr7XkErFhK5mVnbt5X0Fr-Td3g/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-75-excalibur-v1-81-alianca-falange-prologo-09-de-09-1994",
+  "title": "excalibur.v1.81.-.alianca.falange.-.prologo.09.de.09.(1994).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição excalibur.v1.81.-.alianca.falange.-.prologo.09.de.09.(1994). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eeh1t9OLwy-rBBIr86DJUs_VJdjMcVGs",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eeh1t9OLwy-rBBIr86DJUs_VJdjMcVGs",
+  "readerUrl": "https://drive.google.com/file/d/1CVn0lL5p3qOG7K3FwhHf1XQ-qnGiQchj/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-76-wolverine-vol-2003-63-maio-2008",
+  "title": "Wolverine Vol.2003 #63 (Maio, 2008)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine Vol.2003 #63 (Maio, 2008) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1L3a03sXpQ43yO1VV-dsE4fVU7odan0Ea",
+  "backdrop": "https://lh3.googleusercontent.com/d/1L3a03sXpQ43yO1VV-dsE4fVU7odan0Ea",
+  "readerUrl": "https://drive.google.com/file/d/16QS90VYE0691UdToOQBVYjgbXadEmHhS/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-77-magneto-nao-e-um-heroi-01-2012",
+  "title": "Magneto nao e um Heroi #01 (2012)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Magneto nao e um Heroi #01 (2012) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16puONwluZVAizTsyqO0Mm9WhGE-KdnuD",
+  "backdrop": "https://lh3.googleusercontent.com/d/16puONwluZVAizTsyqO0Mm9WhGE-KdnuD",
+  "readerUrl": "https://drive.google.com/file/d/1_GcQ9dCaku0S1o43ltVNtLOUQohRgR4k/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-78-x-factor-178-v3-29",
+  "title": "X-Factor 178 (v3 - 29)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Factor 178 (v3 - 29) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1K_ZZn0xznm_YsqXL0u8s3-GGRGRYytTA",
+  "backdrop": "https://lh3.googleusercontent.com/d/1K_ZZn0xznm_YsqXL0u8s3-GGRGRYytTA",
+  "readerUrl": "https://drive.google.com/file/d/14HsqmlByvXGax7ynG1pyaGYJkROPpBho/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-79-x-factor-v1986-62",
+  "title": "X-Factor V1986 #62",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Factor V1986 #62 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oZPpvg-NC9K7MjNcxowO_pydB1LziJZY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oZPpvg-NC9K7MjNcxowO_pydB1LziJZY",
+  "readerUrl": "https://drive.google.com/file/d/1UxSWZvUIt4yjFuhTGA3u93F_Ae08axiL/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-80-x-23-17-2012",
+  "title": "X-23.17.(2012).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-23.17.(2012). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wUFeBeRIgMhHN3d4a_-6dTQeKXZvXMyR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wUFeBeRIgMhHN3d4a_-6dTQeKXZvXMyR",
+  "readerUrl": "https://drive.google.com/file/d/1EZZxcBCxy4GTNtxXtEelyO7hNYeH2Sgg/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-81-x-force-02-de-28",
+  "title": "X-Force - 02 de 28",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Force - 02 de 28 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1erpfIjiJMlr9JAHr8i3sj4sWB6EzgDCv",
+  "backdrop": "https://lh3.googleusercontent.com/d/1erpfIjiJMlr9JAHr8i3sj4sWB6EzgDCv",
+  "readerUrl": "https://drive.google.com/file/d/12_hYPnoBOuhl6ck__4DOuF_oLoFOjpzS/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-82-x-men-second-coming-vol-01-001-2010-second-coming",
+  "title": "X-Men Second Coming [Vol.01] #001 (2010) [Second Coming]",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Second Coming [Vol.01] #001 (2010) [Second Coming] da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lsr872VmgSyV6BbHlloVqy0P5MFZK0kT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lsr872VmgSyV6BbHlloVqy0P5MFZK0kT",
+  "readerUrl": "https://drive.google.com/file/d/1G_LcVwNS36BlPOSjQfCH7L0jkBmpP_R3/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-83-x-men-regenese-one-shot-2011",
+  "title": "X-Men.Regenese.-.One-Shot.(2011).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men.Regenese.-.One-Shot.(2011). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12wbzNot83GOUefkmb9hnET5zU7kjwIdQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/12wbzNot83GOUefkmb9hnET5zU7kjwIdQ",
+  "readerUrl": "https://drive.google.com/file/d/13Y9m4Fsk-N04dxi_hyf7KKcTfBfIgfF-/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-84-wolverine-v4-17-2011",
+  "title": "Wolverine V4 #17 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine V4 #17 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ATZQl6ezHaUxGVnGrOf_mA4iQIMM_r5e",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ATZQl6ezHaUxGVnGrOf_mA4iQIMM_r5e",
+  "readerUrl": "https://drive.google.com/file/d/1NflKEXCin0Y5cqTnDwhkfHqSh04zprVW/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-85-x-factor-v1986-60",
+  "title": "X-Factor V1986 #60",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Factor V1986 #60 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Df30YuZYtJA0Tzg_obm2znDuOd4_QnRg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Df30YuZYtJA0Tzg_obm2znDuOd4_QnRg",
+  "readerUrl": "https://drive.google.com/file/d/10T2vBhdoM4hSm_iGmG2IfS0rMfMNqTZo/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-86-x-force-01-de-28",
+  "title": "X-Force - 01 de 28",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Force - 01 de 28 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kv1ByywC_mzhpZBhJxFx0kgjD6Zz6hBI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kv1ByywC_mzhpZBhJxFx0kgjD6Zz6hBI",
+  "readerUrl": "https://drive.google.com/file/d/19G5XmBCh8JroKU20nx1NWahxKJIN03Mt/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-87-x-force-067-ingl-s",
+  "title": "X-Force - 067 INGLÊS",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Force - 067 INGLÊS da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zBL7XLnX61iKkRJ58tePfOATiFgdWerV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zBL7XLnX61iKkRJ58tePfOATiFgdWerV",
+  "readerUrl": "https://drive.google.com/file/d/1QSVud0I-CKtR_PJIwfFOZpMjluS3wMAy/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-88-x-men-v1-086",
+  "title": "X-Men v1 #086",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men v1 #086 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1v11aqibc2CCd2iema5YZOhIySaRSG-ii",
+  "backdrop": "https://lh3.googleusercontent.com/d/1v11aqibc2CCd2iema5YZOhIySaRSG-ii",
+  "readerUrl": "https://drive.google.com/file/d/1KyD9Q7i1XEVZ4cdeo4zyLAToFBfyyb9g/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-89-novos-mutantes-v1-096-dezembro-1990",
+  "title": "Novos Mutantes v1 #096 (Dezembro, 1990)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Novos Mutantes v1 #096 (Dezembro, 1990) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1n8J0E8TC4mCYqi3ptF5gDOmhUHXbpJsZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1n8J0E8TC4mCYqi3ptF5gDOmhUHXbpJsZ",
+  "readerUrl": "https://drive.google.com/file/d/1MMm0wvaL1tJjA47G5N9ptPxb-pvQ4Czl/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-90-academia-vingadores-22-2012",
+  "title": "Academia Vingadores #22 (2012)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Academia Vingadores #22 (2012) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1u7AQ2RKk6yYU68XF3SJ9YH4M7Q4D44BW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1u7AQ2RKk6yYU68XF3SJ9YH4M7Q4D44BW",
+  "readerUrl": "https://drive.google.com/file/d/1rOdi5mk3VqiAet_yiC0dernV58S1dyUL/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-91-cable-v2-01",
+  "title": "Cable V2 #01.",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Cable V2 #01. da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_Yr_xwxW3d3CJG7YR8mcHoNeZiZBW8le",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_Yr_xwxW3d3CJG7YR8mcHoNeZiZBW8le",
+  "readerUrl": "https://drive.google.com/file/d/1E_-z54hglJQuNNDJTkv7IgUAtvMv9F9C/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-92-excalibur-v1-80-alianca-falange-prologo-08-de-09-1994",
+  "title": "excalibur.v1.80.-.alianca.falange.-.prologo.08.de.09.(1994).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição excalibur.v1.80.-.alianca.falange.-.prologo.08.de.09.(1994). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17lFgfaOpAQkW0d5wdpZIHSbFYo1yLxs9",
+  "backdrop": "https://lh3.googleusercontent.com/d/17lFgfaOpAQkW0d5wdpZIHSbFYo1yLxs9",
+  "readerUrl": "https://drive.google.com/file/d/1FqLSidzBmdFYbQejz6rXeL9CMJuoRgy7/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-93-novos-mutantes-v1-097-janeiro-1991",
+  "title": "Novos Mutantes v1 #097 (Janeiro, 1991)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Novos Mutantes v1 #097 (Janeiro, 1991) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BFbsTL6Ck9GT2JSlDXwJYhxh9SuEahIv",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BFbsTL6Ck9GT2JSlDXwJYhxh9SuEahIv",
+  "readerUrl": "https://drive.google.com/file/d/1wd7P40JzAiRlcxYtKdsHBfOLrHBInO2l/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-94-uncanny-x-men-316-alianca-falange-01-de-09-1994",
+  "title": "uncanny.x-men.316.-.alianca.falange.01.de.09.(1994).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição uncanny.x-men.316.-.alianca.falange.01.de.09.(1994). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ch-9Tq-LTm_E27SsVr6n4S40w0LX4vxU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ch-9Tq-LTm_E27SsVr6n4S40w0LX4vxU",
+  "readerUrl": "https://drive.google.com/file/d/1ngGZM6NMCi3M5y5OF1UFuR8v4t68SjnD/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-95-09d-segundo-advento-revela-es-ci-ncia-cega-01",
+  "title": "09d - Segundo Advento - Revelações - Ciência Cega 01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição 09d - Segundo Advento - Revelações - Ciência Cega 01 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RGUXXbMr4_TvEpZDaaUlB0aKN2n42TOq",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RGUXXbMr4_TvEpZDaaUlB0aKN2n42TOq",
+  "readerUrl": "https://drive.google.com/file/d/15548mWiRHcGVK30BlQxro3Q0hrBE41I8/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-96-x-men-legacy-231-necrosha-2010",
+  "title": "X-Men Legacy #231 - Necrosha (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Legacy #231 - Necrosha (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1g_fd7mVuOhfSR-85mf9f0hd7q4fCOCVh",
+  "backdrop": "https://lh3.googleusercontent.com/d/1g_fd7mVuOhfSR-85mf9f0hd7q4fCOCVh",
+  "readerUrl": "https://drive.google.com/file/d/1YtnqV6Dz4hjhWPn4zuFUBI5f_ULFY851/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-97-x-force-vol-03-022-necrosha-2010",
+  "title": "X-Force Vol.03 #022 - Necrosha (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Force Vol.03 #022 - Necrosha (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GI8J95s0HSrr8r6zgAnhbPmRCOGNFFDY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GI8J95s0HSrr8r6zgAnhbPmRCOGNFFDY",
+  "readerUrl": "https://drive.google.com/file/d/1E8H-TB6-X753QriVbN77sI7TIPPp9LW2/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-98-fabulosos-x-men-544-10-2011",
+  "title": "Fabulosos X-Men #544 (10, 2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men #544 (10, 2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1c5gM3STrppUg0DGv3nXnR6ZJqQux-soB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1c5gM3STrppUg0DGv3nXnR6ZJqQux-soB",
+  "readerUrl": "https://drive.google.com/file/d/1-c_nfuWVnIqjyBij2XQkDKOrRxJm5N-W/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-99-excalibur-v1-79-alianca-falange-prologo-07-de-09-1994",
+  "title": "excalibur.v1.79.-.alianca.falange.-.prologo.07.de.09.(1994).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição excalibur.v1.79.-.alianca.falange.-.prologo.07.de.09.(1994). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1JE_NPXu85QNciv-kMe2zTFUslN0amw5T",
+  "backdrop": "https://lh3.googleusercontent.com/d/1JE_NPXu85QNciv-kMe2zTFUslN0amw5T",
+  "readerUrl": "https://drive.google.com/file/d/1nl-2MybgOb_xgVb0YK4eq0oG0GwKZb5A/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-100-x-men-v1-087",
+  "title": "X-Men v1 #087",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men v1 #087 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1n55XFaADmLmH4zYZ07dPFO_1u5hMoiIH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1n55XFaADmLmH4zYZ07dPFO_1u5hMoiIH",
+  "readerUrl": "https://drive.google.com/file/d/18mRieLTaP3ZV-CzsBWjq1b6mwWOk1FXm/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-101-excalibur-v1-78-alianca-falange-prologo-06-de-09-1994",
+  "title": "excalibur.v1.78.-.alianca.falange.-.prologo.06.de.09.(1994).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição excalibur.v1.78.-.alianca.falange.-.prologo.06.de.09.(1994). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lJ9ztDbmLUFNaVeqX46gqxcSxw7-yQy5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lJ9ztDbmLUFNaVeqX46gqxcSxw7-yQy5",
+  "readerUrl": "https://drive.google.com/file/d/1imbZ5o6Dfa845rDxzfXWJnLbduOAckrj/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-102-x-force-vol-03-anual-01-necrosha-2010",
+  "title": "X-Force Vol.03 Anual #01 - Necrosha (2010)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Force Vol.03 Anual #01 - Necrosha (2010) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rRyezyWqEuEl1_BfYc30WdsXSRRnJ4Pk",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rRyezyWqEuEl1_BfYc30WdsXSRRnJ4Pk",
+  "readerUrl": "https://drive.google.com/file/d/14Q7l42ADxmhBLCBhpHFvtEoY4Fm_qrXE/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-103-wolverine-vol-2003-62-janeiro-2008",
+  "title": "Wolverine Vol.2003 #62 (Janeiro, 2008)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine Vol.2003 #62 (Janeiro, 2008) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KMud1ioJBmvcupSOncMRdbRH9B9EEmGT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KMud1ioJBmvcupSOncMRdbRH9B9EEmGT",
+  "readerUrl": "https://drive.google.com/file/d/1L9R5KS1UQbu_wjZT2wgwTwbNmRm4UPxz/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-104-x-factor-177-v3-28",
+  "title": "X-Factor 177 (v3 - 28)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Factor 177 (v3 - 28) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RV_pvWQfhOn8ujGV7t7Kvk1O8_WIueUu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RV_pvWQfhOn8ujGV7t7Kvk1O8_WIueUu",
+  "readerUrl": "https://drive.google.com/file/d/1lL44aeCKjwGoCJAh44PXLMz2S8EN-tRt/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-105-x-men-legacy-217-pecado-original-02-de-05-2008",
+  "title": "X-Men.Legacy.217.-.Pecado.Original.02.de.05.(2008).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men.Legacy.217.-.Pecado.Original.02.de.05.(2008). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16rlS8VG2n-8Kfl0Qu2dDLPe4nJJbCbli",
+  "backdrop": "https://lh3.googleusercontent.com/d/16rlS8VG2n-8Kfl0Qu2dDLPe4nJJbCbli",
+  "readerUrl": "https://drive.google.com/file/d/1Vn3QmIldLrCMP4YwGkT8jIjlCgcuCHht/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-106-novos-mutantes-v1-095-novembro-1990",
+  "title": "Novos Mutantes v1 #095 (Novembro, 1990)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Novos Mutantes v1 #095 (Novembro, 1990) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CGZA25-JsCGoHJFD0k1QwGUNz6VEpPnm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CGZA25-JsCGoHJFD0k1QwGUNz6VEpPnm",
+  "readerUrl": "https://drive.google.com/file/d/1xgfDftkFEpD84KMV2MC0aFd9xLQ3MTsG/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-107-wolverine-origens-28",
+  "title": "Wolverine.Origens.28",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine.Origens.28 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12ikoQ2L2kCmSwRNBxBgCMKtUtipy54LT",
+  "backdrop": "https://lh3.googleusercontent.com/d/12ikoQ2L2kCmSwRNBxBgCMKtUtipy54LT",
+  "readerUrl": "https://drive.google.com/file/d/10LCujMij4Gng8hSjpIz4PlXIe1okQxWU/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-108-os-fabulosos-x-men-v1-270",
+  "title": "Os Fabulosos X-Men V1 #270",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Os Fabulosos X-Men V1 #270 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1M3mu066XK7LZxuE47myf16Bz2U35tmSw",
+  "backdrop": "https://lh3.googleusercontent.com/d/1M3mu066XK7LZxuE47myf16Bz2U35tmSw",
+  "readerUrl": "https://drive.google.com/file/d/1oaaZSkMkixyx2G6xTYp2ux75YEU6oKK7/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-109-x-23-08-v3-filhos-do-atomo-sq",
+  "title": "X-23 #08 v3 (Filhos do Atomo SQ)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-23 #08 v3 (Filhos do Atomo SQ) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eFr8y7mH8Qd-QsKxyQMugRymhSW9Wjz7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eFr8y7mH8Qd-QsKxyQMugRymhSW9Wjz7",
+  "readerUrl": "https://drive.google.com/file/d/1ueUWniMjQsYfIDfM0ZSjd2VIaOyQAY2a/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-110-x-factor-109-despertar-dez-1994",
+  "title": "X-Factor 109 - Despertar (Dez.1994)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Factor 109 - Despertar (Dez.1994) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17ie7jixNghJa8gw_o1ui2VdRqyxkShZM",
+  "backdrop": "https://lh3.googleusercontent.com/d/17ie7jixNghJa8gw_o1ui2VdRqyxkShZM",
+  "readerUrl": "https://drive.google.com/file/d/1LCv8lFPe6RU6fFnL3a5hqGiqwJNkvfr1/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-111-wolverine-086-sombrio",
+  "title": "Wolverine #086.Sombrio",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine #086.Sombrio da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PRySJu_nk7hJ5ZuDog4_0_WWVxebL4xe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PRySJu_nk7hJ5ZuDog4_0_WWVxebL4xe",
+  "readerUrl": "https://drive.google.com/file/d/1O_HZkKVGcMn5WW-qzGmbTwgxaA_KT7O3/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-112-uncanny-x-men-321-a-busca-de-legi-o-03-de-04",
+  "title": "Uncanny.X-men.321.-.A.Busca.de.Legião.03.de.04.",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Uncanny.X-men.321.-.A.Busca.de.Legião.03.de.04. da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1AyN-SZ6g7bN7fsVSYcoZQtHciV7VIS4d",
+  "backdrop": "https://lh3.googleusercontent.com/d/1AyN-SZ6g7bN7fsVSYcoZQtHciV7VIS4d",
+  "readerUrl": "https://drive.google.com/file/d/1K672_Yd1C9az4NrsabSvWPTZOHB4Ky0h/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-113-x-men-108-01-2001",
+  "title": "X-Men #108 (01, 2001)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men #108 (01, 2001) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Fk7dkeV_8ztawdhvBK-6BRxLowrCQuGz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Fk7dkeV_8ztawdhvBK-6BRxLowrCQuGz",
+  "readerUrl": "https://drive.google.com/file/d/1MrdPMsbCcRXjysIAEBLgIxIO0MSWcAkW/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-114-vingadores-v1-369-lacos-de-sangue-05-de-05-1993",
+  "title": "Vingadores.v1.369.-.Lacos.de.Sangue.05.de.05.(1993).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Vingadores.v1.369.-.Lacos.de.Sangue.05.de.05.(1993). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1g-JSxEVsVbcPPUqlha4p76bGNCPpqpJF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1g-JSxEVsVbcPPUqlha4p76bGNCPpqpJF",
+  "readerUrl": "https://drive.google.com/file/d/1TVbZnhKt11RfuML2Vv8S-XQrEyKAQXkI/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-115-vingadores-v1-368-lacos-de-sangue-01-de-05-1993",
+  "title": "Vingadores.v1.368.-.Lacos.de.Sangue.01.de.05.(1993).",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Vingadores.v1.368.-.Lacos.de.Sangue.01.de.05.(1993). da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Y4psJGfWjPIGPdqgA6l19E8tmVj9sq_z",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Y4psJGfWjPIGPdqgA6l19E8tmVj9sq_z",
+  "readerUrl": "https://drive.google.com/file/d/1OtXiw2Ep3rym2fMiJevGmgTPpFPzL-HC/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-116-cable-vol-1993-87-01-2001",
+  "title": "Cable Vol.1993 #87 (01, 2001)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Cable Vol.1993 #87 (01, 2001) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1m0osYNzhLDSXJSSdAJ31W0sB5TTk611j",
+  "backdrop": "https://lh3.googleusercontent.com/d/1m0osYNzhLDSXJSSdAJ31W0sB5TTk611j",
+  "readerUrl": "https://drive.google.com/file/d/1I5iy1pQssG8rcOK8lf2Nm4AmXqeqEQl5/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-117-daken-wolverine-sombrio-08-2011",
+  "title": "Daken Wolverine Sombrio #08 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Daken Wolverine Sombrio #08 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KqUQuItxYM5TpscEn6YGg6fwUm7JHQuq",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KqUQuItxYM5TpscEn6YGg6fwUm7JHQuq",
+  "readerUrl": "https://drive.google.com/file/d/1dCN6Sv2Ro00watDuCDAKUT-ioa5R-5-Y/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-118-bishop-o-ltimo-x-man-16",
+  "title": "Bishop - O Último X-Man - 16",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Bishop - O Último X-Man - 16 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qlsQXyumpbPqxM4nzAtogMhN2iYO2NS-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qlsQXyumpbPqxM4nzAtogMhN2iYO2NS-",
+  "readerUrl": "https://drive.google.com/file/d/1pizAhLiJLN8j6p8IzNBylsbBqEZ6fCha/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-119-namor-o-primeiro-mutante-anual-01-hqbr-06nov11-renegados",
+  "title": "namor.-.o.primeiro.mutante.-.anual.01.hqbr.06nov11.renegados.",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição namor.-.o.primeiro.mutante.-.anual.01.hqbr.06nov11.renegados. da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZCabhqpd76iOEFPeT-LhQcgld1WC8gJE",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZCabhqpd76iOEFPeT-LhQcgld1WC8gJE",
+  "readerUrl": "https://drive.google.com/file/d/14Lw3rglKMK8DzbmRYErDdJOXTTsQlBYl/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-120-x-23-v3-09-2011",
+  "title": "X-23 v3 #09 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-23 v3 #09 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hwkGBCE83jZ3p-mbXjLNoqdeJI00wog8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hwkGBCE83jZ3p-mbXjLNoqdeJI00wog8",
+  "readerUrl": "https://drive.google.com/file/d/1ieywkjUk3tNusZVTumuZrZRieGUuL8f4/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-121-004daken-wolverine-sombrio-09",
+  "title": "004Daken Wolverine Sombrio #09",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição 004Daken Wolverine Sombrio #09 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1foMHFuvxfVq04uEv0VTvYb_5kBFubIDK",
+  "backdrop": "https://lh3.googleusercontent.com/d/1foMHFuvxfVq04uEv0VTvYb_5kBFubIDK",
+  "readerUrl": "https://drive.google.com/file/d/1Bl9896RFqhfhCOcA9EYYDDdImMCpBMvI/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-122-cable-v1993-020-february-1995-pt-br",
+  "title": "Cable v1993 #020 (February, 1995) pt-br",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Cable v1993 #020 (February, 1995) pt-br da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1aAwVYgXt-Z-KjMqOdsM8xAovIfUtS-PH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1aAwVYgXt-Z-KjMqOdsM8xAovIfUtS-PH",
+  "readerUrl": "https://drive.google.com/file/d/1v4EPe-rhYYHaa5JZWuALCkONu3OZlR8Q/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-123-wolverine-origens-047",
+  "title": "Wolverine.Origens#047.",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine.Origens#047. da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1sxfrQY0aJXadJO6VaXwnXtwcX7pKZMaq",
+  "backdrop": "https://lh3.googleusercontent.com/d/1sxfrQY0aJXadJO6VaXwnXtwcX7pKZMaq",
+  "readerUrl": "https://drive.google.com/file/d/1HRm-2eWNOKthHia4VDUAvpgbaSY0d4yj/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-124-steve-rogers-supersoldado-anual-01-hqbr-19mai11-shark-renegados-osimpossiveis",
+  "title": "Steve.Rogers.-.Supersoldado.Anual.01.HQBR.19MAI11.Shark.Renegados.OsImpossiveis",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Steve.Rogers.-.Supersoldado.Anual.01.HQBR.19MAI11.Shark.Renegados.OsImpossiveis da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19xm-HVJPVh2L8jNIxxtfy5A2vG5dNSnm",
+  "backdrop": "https://lh3.googleusercontent.com/d/19xm-HVJPVh2L8jNIxxtfy5A2vG5dNSnm",
+  "readerUrl": "https://drive.google.com/file/d/18UBQV6w_DZzZmrozrYXCRuIr4Y8PpXub/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-125-wolverine-085-sombrio",
+  "title": "Wolverine #085.Sombrio",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Wolverine #085.Sombrio da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zmj_2x5UXj_OtmY8cKHx_xlBths4m41b",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zmj_2x5UXj_OtmY8cKHx_xlBths4m41b",
+  "readerUrl": "https://drive.google.com/file/d/1SHtqHmr0_cW87M5WVL71sw4SgB32i_si/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-126-os-fabulosos-x-men-anual-v2-03-hqbr-18mai11-shark-renegados-osimpossiveis",
+  "title": "Os.Fabulosos.X-Men.Anual.V2.03.HQBr.18MAI11.Shark.Renegados.OsImpossiveis",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Os.Fabulosos.X-Men.Anual.V2.03.HQBr.18MAI11.Shark.Renegados.OsImpossiveis da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1s8TymdA4CNuL5v4cod2xchuEKq_MaZSd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1s8TymdA4CNuL5v4cod2xchuEKq_MaZSd",
+  "readerUrl": "https://drive.google.com/file/d/1dVaHFgwqQTloVKyCUtSxBA995AqSpkA6/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-127-fabulosos-x-men-388-12-2000",
+  "title": "Fabulosos X-Men #388 (12, 2000)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Fabulosos X-Men #388 (12, 2000) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Dm1ik747BSdi1EjAhif_HW9PaudwF9jx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Dm1ik747BSdi1EjAhif_HW9PaudwF9jx",
+  "readerUrl": "https://drive.google.com/file/d/1Irb74uxH_4aiSPE2IhVv5ahuGBuX2ZgQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-128-the-uncanny-x-men-319",
+  "title": "The Uncanny X-Men 319",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição The Uncanny X-Men 319 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ho9Tt_QucCu7-c0U9aNNYCSpksW1imnD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ho9Tt_QucCu7-c0U9aNNYCSpksW1imnD",
+  "readerUrl": "https://drive.google.com/file/d/1niMZzFVCmMRQ9iKuLJwZBxjdXNgx15Qx/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-129-x-men-massacre-02-de-15",
+  "title": "X-Men Massacre 02 de 15",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Massacre 02 de 15 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xIp8XOl2k7tfXvmsDEKOux2dblyecv05",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xIp8XOl2k7tfXvmsDEKOux2dblyecv05",
+  "readerUrl": "https://drive.google.com/file/d/1g0SDg3eDq5JLDpIltjXFbj3cgaY1lFHh/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-130-x-men-massacre-01-de-15",
+  "title": "X-Men Massacre 01 de 15",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Massacre 01 de 15 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DYlbs3qXVMmudPNslJZeKOExTc1eMkPG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DYlbs3qXVMmudPNslJZeKOExTc1eMkPG",
+  "readerUrl": "https://drive.google.com/file/d/1dqwjp4guejNrLHInIEPnkD0SqQWrD5oo/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-131-x-men-massacre-05-wolverine-v2-103",
+  "title": "X-Men Massacre 05 - Wolverine v2. 103",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Massacre 05 - Wolverine v2. 103 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1J7Txqc466BTMa6x6ly0m_F-xWJ7_0wDm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1J7Txqc466BTMa6x6ly0m_F-xWJ7_0wDm",
+  "readerUrl": "https://drive.google.com/file/d/1YNF-b-r223FpQx8P77gDeupCYdADsFRx/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-132-x-men-massacre-13-de-15-excalibur-100",
+  "title": "x-men massacre 13 de 15 - excalibur 100",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição x-men massacre 13 de 15 - excalibur 100 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LY4iCkxfzyhJN__Znz4wv0hyrtkg3Etl",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LY4iCkxfzyhJN__Znz4wv0hyrtkg3Etl",
+  "readerUrl": "https://drive.google.com/file/d/1UcAkm7um3GaqQCHiJrcogCugnRwpkSWk/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-133-x-men-massacre-07-de-15",
+  "title": "X-Men Massacre 07 de 15",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Massacre 07 de 15 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1AHLNQSfq9-yyY2FXzi6Kjs_4vF6_E6M2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1AHLNQSfq9-yyY2FXzi6Kjs_4vF6_E6M2",
+  "readerUrl": "https://drive.google.com/file/d/1JlNzVbrWlmmM38KCqy0NdxYOoBHYEWPJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-134-x-men-massacre-12-o-incr-vel-hulk-444",
+  "title": "X-Men Massacre 12 - O Incrí vel Hulk 444",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Massacre 12 - O Incrí vel Hulk 444 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1f6ZGSoYFDIFiWak6ZGlYuIHjLLOaU9Bo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1f6ZGSoYFDIFiWak6ZGlYuIHjLLOaU9Bo",
+  "readerUrl": "https://drive.google.com/file/d/1bH1so4j1TaydNpK4Oo2ybQdN1_BSTLDJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-135-x-men-massacre-06-de-15",
+  "title": "X-Men Massacre 06 de 15",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Massacre 06 de 15 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1t9aV2-kmmRzyn0IA2iWGw3ZrOj0Nz_wb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1t9aV2-kmmRzyn0IA2iWGw3ZrOj0Nz_wb",
+  "readerUrl": "https://drive.google.com/file/d/1DwIzFZZrkCY26NTtzYAJnj3wG2loGH1-/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-136-x-men-preludio-para-a-cisao-01-2011",
+  "title": "X-Men Preludio para a Cisao #01 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men Preludio para a Cisao #01 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LDemCFNEbpyaVzWw4extJY2RLTtMtC6p",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LDemCFNEbpyaVzWw4extJY2RLTtMtC6p",
+  "readerUrl": "https://drive.google.com/file/d/1c3OgMX1OFJt2izeyu9uc3O4QJWiZO8wq/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-137-x-men-preludio-para-a-cisao-03-2011",
+  "title": "X-Men - Preludio para a Cisao #03 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men - Preludio para a Cisao #03 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1678TKDwTI0oC-83Bx2mDepUyDeRQT2qq",
+  "backdrop": "https://lh3.googleusercontent.com/d/1678TKDwTI0oC-83Bx2mDepUyDeRQT2qq",
+  "readerUrl": "https://drive.google.com/file/d/1hwLFigQkgiozos6HdME7CeBjSUWaJAcD/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-138-x-men-cisao-02-2011",
+  "title": "X-Men - Cisao #02 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men - Cisao #02 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19gAMAFI1eAfpEYpotyRyypmRYUfUOyzc",
+  "backdrop": "https://lh3.googleusercontent.com/d/19gAMAFI1eAfpEYpotyRyypmRYUfUOyzc",
+  "readerUrl": "https://drive.google.com/file/d/1V7xjPjSxQkEeaCni3vdzrb9wwNb4aARG/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-139-x-men-preludio-para-a-cisao-02-2011",
+  "title": "X-Men - Preludio para a Cisao #02 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men - Preludio para a Cisao #02 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/158bH1ImDFxwy6bECKrH9DOMJByBJGogj",
+  "backdrop": "https://lh3.googleusercontent.com/d/158bH1ImDFxwy6bECKrH9DOMJByBJGogj",
+  "readerUrl": "https://drive.google.com/file/d/1wuq26DS_Ha9mCIQPn9-R952cYv_CKwGu/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-140-x-men-preludio-para-a-cisao-04-2011",
+  "title": "X-Men - Preludio para a Cisao #04 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men - Preludio para a Cisao #04 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NK4eTwLBJ67zOPNP2RfON2V9e59lQ4RW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NK4eTwLBJ67zOPNP2RfON2V9e59lQ4RW",
+  "readerUrl": "https://drive.google.com/file/d/1kpSIzDOgUxodcxi2UpvkvqZY1zhnf3G0/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-141-x-men-cisao-01-2011",
+  "title": "X-Men - Cisao #01 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men - Cisao #01 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1it_Xt9n8X_yivipp44OxNyabR-ICp4yU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1it_Xt9n8X_yivipp44OxNyabR-ICp4yU",
+  "readerUrl": "https://drive.google.com/file/d/1ZkJFGvRGYiM2zrrULz23EUnxZs9dMSu-/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-142-gera-o-esperan-a-10-de-17",
+  "title": "Geração Esperança - 10 de 17",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Geração Esperança - 10 de 17 da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15GZF8A5SDlj5VgciV1vDPvTUQy5MZR9m",
+  "backdrop": "https://lh3.googleusercontent.com/d/15GZF8A5SDlj5VgciV1vDPvTUQy5MZR9m",
+  "readerUrl": "https://drive.google.com/file/d/1eoXuQHl4C6y2c3f5xArvfwlNTSOWec9X/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-143-geracao-esperanca-011-cisao-2011",
+  "title": "Geracao Esperanca #011 - Cisao (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Geracao Esperanca #011 - Cisao (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Y0CGfUEDLjVf7b5ydPU4X61UhHMuMGzY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Y0CGfUEDLjVf7b5ydPU4X61UhHMuMGzY",
+  "readerUrl": "https://drive.google.com/file/d/1NjK8zrtlgLEaA2FbJuEku7o0Fc_fI2hW/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-144-x-men-cisao-04-2011",
+  "title": "X-Men - Cisao #04 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men - Cisao #04 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1k-l43sCAzeMgW9Cb9aWWv33UpnJGuKjB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1k-l43sCAzeMgW9Cb9aWWv33UpnJGuKjB",
+  "readerUrl": "https://drive.google.com/file/d/19eOIyEanzHWmY-3UzQ3ol3bA-0WbZ3NP/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-batch2-145-x-men-cisao-03-2011",
+  "title": "X-Men - Cisao #03 (2011)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2010,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição X-Men - Cisao #03 (2011) da Marvel Comics em formato PDF. Acompanhe as aventuras épicas dos mutantes no universo Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CcUI-OfrRX5LDiCAoCqxDCdyAZL_i_aw",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CcUI-OfrRX5LDiCAoCqxDCdyAZL_i_aw",
+  "readerUrl": "https://drive.google.com/file/d/1qWtUidzORbHJxPEi1atRIC-QVnm9urX_/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
