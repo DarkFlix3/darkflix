@@ -4659,6 +4659,4667 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/1CcUI-OfrRX5LDiCAoCqxDCdyAZL_i_aw",
   "readerUrl": "https://drive.google.com/file/d/1qWtUidzORbHJxPEi1atRIC-QVnm9urX_/view?usp=drive_link"
 }
+,
+  {
+  "id": "hq-uncanny-xmen-issue-048",
+  "title": "Uncanny X-Men #048",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #048 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xn3AJiWhxaSByBzco1V5eEtGb11NVEqg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xn3AJiWhxaSByBzco1V5eEtGb11NVEqg",
+  "readerUrl": "https://drive.google.com/file/d/1aRvZM7iaTd0kuzGc7gkughz08hTngfd0/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-062",
+  "title": "Uncanny X-Men #062",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #062 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16qOPIDQYZeJ84aO2iRU80Ssvvp-zagUJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/16qOPIDQYZeJ84aO2iRU80Ssvvp-zagUJ",
+  "readerUrl": "https://drive.google.com/file/d/1eGg7uDnQBmQH5qbtK3vEKKc5E1q9HMSW/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-065",
+  "title": "Uncanny X-Men #065",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #065 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dW-Z0KRKPS2WHmexq7Y1OEhVzt54RQVw",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dW-Z0KRKPS2WHmexq7Y1OEhVzt54RQVw",
+  "readerUrl": "https://drive.google.com/file/d/1HVheVXkMFUcFooaVKfVGmeuFRSfbo0wr/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-076",
+  "title": "Uncanny X-Men #076",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #076 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ius_3h6J7qPHrXOA8j7oy7n9YEb_F6px",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ius_3h6J7qPHrXOA8j7oy7n9YEb_F6px",
+  "readerUrl": "https://drive.google.com/file/d/1I-XsZEgEPnsHIzWk0cWDkjKFUZCvcpK2/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-084",
+  "title": "Uncanny X-Men #084",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #084 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xVGiRVTB_-GawXR0vLOsrEnBREz6ZKAg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xVGiRVTB_-GawXR0vLOsrEnBREz6ZKAg",
+  "readerUrl": "https://drive.google.com/file/d/1hwEHKpdn33qa-LH0aNPDPOZTn48hH8xj/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-099",
+  "title": "Uncanny X-Men #099",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #099 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nsC6YMqGVWE9uEfhi5BADmP5kcNL2Hyu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nsC6YMqGVWE9uEfhi5BADmP5kcNL2Hyu",
+  "readerUrl": "https://drive.google.com/file/d/1oFHT8Eb9y31rUn69NKWUdTPafLkeDjhb/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-100",
+  "title": "Uncanny X-Men #100",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #100 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VDufinsK78LYPcsHErSj42P46lHtfaUx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VDufinsK78LYPcsHErSj42P46lHtfaUx",
+  "readerUrl": "https://drive.google.com/file/d/1CImYG0Tnkr5XSaI3eQsce0iFTv0RobmV/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-104",
+  "title": "Uncanny X-Men #104",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #104 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1d2oW_n7tgSjSkfhvGN6VRFheiGZPsuS_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1d2oW_n7tgSjSkfhvGN6VRFheiGZPsuS_",
+  "readerUrl": "https://drive.google.com/file/d/15fEMlOZk0k7jKsH-x3hHHMDLJ8TCzqZK/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-122",
+  "title": "Uncanny X-Men #122",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #122 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13V-7S5Bi1yra89xdQbwLGrYZseOeSUUW",
+  "backdrop": "https://lh3.googleusercontent.com/d/13V-7S5Bi1yra89xdQbwLGrYZseOeSUUW",
+  "readerUrl": "https://drive.google.com/file/d/1gcvQXtisqBwRgJXXIXat9bstctQzKO1m/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-144",
+  "title": "Uncanny X-Men #144",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #144 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1O6-agddVm0XJ39aXCuE3MJz8drGZaWqG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1O6-agddVm0XJ39aXCuE3MJz8drGZaWqG",
+  "readerUrl": "https://drive.google.com/file/d/1Nsz9UHr3suHYzxj-6K09kF280-FMTnK-/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-147",
+  "title": "Uncanny X-Men #147",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #147 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1yicfSwH6IrJvl6Mq_MvphbRfTDxwVcIJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1yicfSwH6IrJvl6Mq_MvphbRfTDxwVcIJ",
+  "readerUrl": "https://drive.google.com/file/d/1fAOrfA4RG7cD2QgeiIyeO5nhZj8OZ5MF/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-149",
+  "title": "Uncanny X-Men #149",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #149 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HpUaGpjAewMkMu7ENhx4FwIkAtNCDpEN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HpUaGpjAewMkMu7ENhx4FwIkAtNCDpEN",
+  "readerUrl": "https://drive.google.com/file/d/1xA0FqcEVLH5qlTBoxoSgvB0CP5CCwsve/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-150",
+  "title": "Uncanny X-Men #150",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #150 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1I0SXCM9wF0GE9mlGylnJy49nUDdWsG1C",
+  "backdrop": "https://lh3.googleusercontent.com/d/1I0SXCM9wF0GE9mlGylnJy49nUDdWsG1C",
+  "readerUrl": "https://drive.google.com/file/d/1Sdyav8aS-H8jLMEf2dLAdGJ6-lbQtpAF/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-151",
+  "title": "Uncanny X-Men #151",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #151 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10-81VFDj-KDxpwZVrFWbvCVyFSEm9X-P",
+  "backdrop": "https://lh3.googleusercontent.com/d/10-81VFDj-KDxpwZVrFWbvCVyFSEm9X-P",
+  "readerUrl": "https://drive.google.com/file/d/1ymUqY8lrGyOT4OgVlvlgqHmxceDxeHqk/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-153",
+  "title": "Uncanny X-Men #153",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #153 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1OWGY3o7TqMKE0F3czjEaAovYxgWrQyGM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1OWGY3o7TqMKE0F3czjEaAovYxgWrQyGM",
+  "readerUrl": "https://drive.google.com/file/d/10LEZVpd3rLRGK_DiCMC48iKB20qDW8Du/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-154",
+  "title": "Uncanny X-Men #154",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #154 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1s_ya5s8op2hqHLCxOWBstY8iPH8JNhah",
+  "backdrop": "https://lh3.googleusercontent.com/d/1s_ya5s8op2hqHLCxOWBstY8iPH8JNhah",
+  "readerUrl": "https://drive.google.com/file/d/1JgIL-IiKSI8XPKAuaCv4hfFhTJU25JEw/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-158",
+  "title": "Uncanny X-Men #158",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #158 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oYl0mtQJRpwT5Wsj6kQIVAWLIA2DYYuU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oYl0mtQJRpwT5Wsj6kQIVAWLIA2DYYuU",
+  "readerUrl": "https://drive.google.com/file/d/1SCnaq8Zo8gP9pmwdPOG72gW_ac8wxvdo/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-159",
+  "title": "Uncanny X-Men #159",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #159 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1G8rc0ksasI8FuWcQrY-eYGrW0HGjiIl6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1G8rc0ksasI8FuWcQrY-eYGrW0HGjiIl6",
+  "readerUrl": "https://drive.google.com/file/d/18k0V5BtWBG7PHrQBbG-Nl1eSxNxO-hPJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-160",
+  "title": "Uncanny X-Men #160",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #160 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18X-lzfbabphJFjITO0Gdbudg7iV9ngPV",
+  "backdrop": "https://lh3.googleusercontent.com/d/18X-lzfbabphJFjITO0Gdbudg7iV9ngPV",
+  "readerUrl": "https://drive.google.com/file/d/1n4Mre5D_4QruffHBQgIS4oKzYk2nRXwp/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-161",
+  "title": "Uncanny X-Men #161",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #161 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wMmQV70vG370I_wpAIWouFIts1HXiU-6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wMmQV70vG370I_wpAIWouFIts1HXiU-6",
+  "readerUrl": "https://drive.google.com/file/d/1gCX7TdKgrIMWo4pe4OcKDFUMJ-pZnENL/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-162",
+  "title": "Uncanny X-Men #162",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #162 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1knZx5MankcQndD7O2vjX3ZfR2l9EHt9g",
+  "backdrop": "https://lh3.googleusercontent.com/d/1knZx5MankcQndD7O2vjX3ZfR2l9EHt9g",
+  "readerUrl": "https://drive.google.com/file/d/14sCrDuqdlPCj56qZqVhq2qqlsts1LEBa/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-165",
+  "title": "Uncanny X-Men #165",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #165 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1X7LDcLLNpWg0w33DDSvcpoPdFRuc2ohu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1X7LDcLLNpWg0w33DDSvcpoPdFRuc2ohu",
+  "readerUrl": "https://drive.google.com/file/d/1ENgLRm79IR7VIday7ymHo-Ra33vxcA97/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-166",
+  "title": "Uncanny X-Men #166",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #166 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1aVOBTGPoAJG3hD0XLpOKOMI17PQJl28I",
+  "backdrop": "https://lh3.googleusercontent.com/d/1aVOBTGPoAJG3hD0XLpOKOMI17PQJl28I",
+  "readerUrl": "https://drive.google.com/file/d/11GKT6tMDrWn6tHknEsZ7iyPi88svTEOF/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-167",
+  "title": "Uncanny X-Men #167",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #167 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1D6ckFgLZpvTA0ENXLIFv7U5MJ45oy_00",
+  "backdrop": "https://lh3.googleusercontent.com/d/1D6ckFgLZpvTA0ENXLIFv7U5MJ45oy_00",
+  "readerUrl": "https://drive.google.com/file/d/1sZ-Jlq0Cbjq56kJPp1Yyg9sFMIJY0fbl/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-168",
+  "title": "Uncanny X-Men #168",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #168 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1T99QpzQEvwM55yjMg7FV9MVNREZCeX_o",
+  "backdrop": "https://lh3.googleusercontent.com/d/1T99QpzQEvwM55yjMg7FV9MVNREZCeX_o",
+  "readerUrl": "https://drive.google.com/file/d/1tDH9LoY35dl-iriOTRw3vsqoTkoMwe6S/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-169",
+  "title": "Uncanny X-Men #169",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #169 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UCCQpC7fJdXH1pRoDj2FmWBgMY7-e0w4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UCCQpC7fJdXH1pRoDj2FmWBgMY7-e0w4",
+  "readerUrl": "https://drive.google.com/file/d/14F7UGvGyup3vtQoqc1Q7OKwmFkCF3w9H/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-170",
+  "title": "Uncanny X-Men #170",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #170 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1h09p5mPxe21mcLMC6fPcDKn8fRv3PDae",
+  "backdrop": "https://lh3.googleusercontent.com/d/1h09p5mPxe21mcLMC6fPcDKn8fRv3PDae",
+  "readerUrl": "https://drive.google.com/file/d/19qsMwNfxHxzzXLhuhFHCWNISrMGR71g2/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-172",
+  "title": "Uncanny X-Men #172",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #172 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xTE6MUwbeCT2dJMefuqQJlteoIxCHJCd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xTE6MUwbeCT2dJMefuqQJlteoIxCHJCd",
+  "readerUrl": "https://drive.google.com/file/d/1bZkIr42i0m1rWj-NhpCdjLGAtsi80c2k/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-173",
+  "title": "Uncanny X-Men #173",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #173 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CJ_jqOLlzcI8_IcvyWn0ZlfIakS7JbWN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CJ_jqOLlzcI8_IcvyWn0ZlfIakS7JbWN",
+  "readerUrl": "https://drive.google.com/file/d/1dhIEhiS50y5TkI55IcIwHkvlhOlZ-w3A/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-174",
+  "title": "Uncanny X-Men #174",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #174 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19IkMWte5lQMlCosgARAHoUMtFyGvxji6",
+  "backdrop": "https://lh3.googleusercontent.com/d/19IkMWte5lQMlCosgARAHoUMtFyGvxji6",
+  "readerUrl": "https://drive.google.com/file/d/1tyzhvDB02mV2SlBgqVG6lQ0Fy-bckxtn/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-176",
+  "title": "Uncanny X-Men #176",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #176 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1T8zyfHIFv7V60DuAsmQg7Yo01bzyi2US",
+  "backdrop": "https://lh3.googleusercontent.com/d/1T8zyfHIFv7V60DuAsmQg7Yo01bzyi2US",
+  "readerUrl": "https://drive.google.com/file/d/1-t_00xIcLZJYxE_vk4SJJlZnTSiAn5MB/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-177",
+  "title": "Uncanny X-Men #177",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #177 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GybuSJE4ouCoaLUM7h6RvvmiXKx3r5JK",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GybuSJE4ouCoaLUM7h6RvvmiXKx3r5JK",
+  "readerUrl": "https://drive.google.com/file/d/1Gqifu-harAyaV14wj7ZQkF8JfMN69R5u/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-181",
+  "title": "Uncanny X-Men #181",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #181 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NPVLmS7KLTJ0E2P2SP7C9U9MXjlv0D1o",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NPVLmS7KLTJ0E2P2SP7C9U9MXjlv0D1o",
+  "readerUrl": "https://drive.google.com/file/d/16itcs5PIhXXlhhZCM-5kdiY-Nfh9XOrW/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-182",
+  "title": "Uncanny X-Men #182",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #182 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BpPIYszer9TM-xpfMihrFp_1ql88F8XO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BpPIYszer9TM-xpfMihrFp_1ql88F8XO",
+  "readerUrl": "https://drive.google.com/file/d/17cy5w5YsC0wfMN126FoeGv1qrmZgNyYl/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-183",
+  "title": "Uncanny X-Men #183",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #183 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1h1olKKjc-t6uAWuEIjuRZeVHNzhQtQOO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1h1olKKjc-t6uAWuEIjuRZeVHNzhQtQOO",
+  "readerUrl": "https://drive.google.com/file/d/1fjKdRCF21v2XIE_jVfvDIssa_SHKt_vg/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-184",
+  "title": "Uncanny X-Men #184",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #184 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17aQ48rtE3Xz6G9Nx8HwBYA9TdTBwUSs5",
+  "backdrop": "https://lh3.googleusercontent.com/d/17aQ48rtE3Xz6G9Nx8HwBYA9TdTBwUSs5",
+  "readerUrl": "https://drive.google.com/file/d/1Bw6eBGnLfarRjhm9rDgAAkOP_Oqd-Uam/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-185",
+  "title": "Uncanny X-Men #185",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #185 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xFsbGMkANwCtHr9XxFDRggLF75ullpWm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xFsbGMkANwCtHr9XxFDRggLF75ullpWm",
+  "readerUrl": "https://drive.google.com/file/d/1hYs-83M1Cg9Hm0pa9qlqoX2KLK-YdL3Y/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-186",
+  "title": "Uncanny X-Men #186",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #186 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ISafT0zPkYxgmt9tbASGRx0h275G3ZF9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ISafT0zPkYxgmt9tbASGRx0h275G3ZF9",
+  "readerUrl": "https://drive.google.com/file/d/1xLnxJU9a5fBgTq8OMMS_aqYHjXfbVcHm/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-188",
+  "title": "Uncanny X-Men #188",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #188 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xud2JJ9NdhFCnF-iO0RpEB_9UhNi1K-8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xud2JJ9NdhFCnF-iO0RpEB_9UhNi1K-8",
+  "readerUrl": "https://drive.google.com/file/d/14JpzW1GCxP1K9fg-Kf6lbXf0IJtiUYFK/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-190",
+  "title": "Uncanny X-Men #190",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #190 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1o07O4-62BLAw3GxEas1AGG87AbZirHJ-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1o07O4-62BLAw3GxEas1AGG87AbZirHJ-",
+  "readerUrl": "https://drive.google.com/file/d/1hLUv9ziNG0UL1KP0kZufph1ugIIqSi9b/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-191",
+  "title": "Uncanny X-Men #191",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #191 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ger-1hkXx2jtFxkYk6-cVJqNeZdU_h1e",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ger-1hkXx2jtFxkYk6-cVJqNeZdU_h1e",
+  "readerUrl": "https://drive.google.com/file/d/1hyWtphyCJmA3-2Ozv-HqN_Gqk2y_IMKa/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-194",
+  "title": "Uncanny X-Men #194",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #194 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15jTy2zWIDvBUpYK7DyGrgOgqVhUBNTLz",
+  "backdrop": "https://lh3.googleusercontent.com/d/15jTy2zWIDvBUpYK7DyGrgOgqVhUBNTLz",
+  "readerUrl": "https://drive.google.com/file/d/1tCeN7viqA2-E1CooOiAQ9MTsw9rdvzX4/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-195",
+  "title": "Uncanny X-Men #195",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #195 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18sZ9NlsnMlQEcl7ESVHbq2lXV877lC_s",
+  "backdrop": "https://lh3.googleusercontent.com/d/18sZ9NlsnMlQEcl7ESVHbq2lXV877lC_s",
+  "readerUrl": "https://drive.google.com/file/d/1P9j3rn-s-x3BBy2JeNN-fN_74rUoOxrd/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-196",
+  "title": "Uncanny X-Men #196",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #196 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YLRHyxrB7ouB_AGM3odjjCkgdmG9-mNM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YLRHyxrB7ouB_AGM3odjjCkgdmG9-mNM",
+  "readerUrl": "https://drive.google.com/file/d/1O777zgIaRlqpWtP0VKmr5JORdd7_WGsx/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-197",
+  "title": "Uncanny X-Men #197",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #197 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VlSXnVgrrVGYXZORQS89nVykwkgapomK",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VlSXnVgrrVGYXZORQS89nVykwkgapomK",
+  "readerUrl": "https://drive.google.com/file/d/1KD_klhQ71FRWb-zRdVIh5T25NW_kQKNf/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-198",
+  "title": "Uncanny X-Men #198",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #198 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16dHFoFhQCRz4LdDTDlTuX7n9yxJI8cdb",
+  "backdrop": "https://lh3.googleusercontent.com/d/16dHFoFhQCRz4LdDTDlTuX7n9yxJI8cdb",
+  "readerUrl": "https://drive.google.com/file/d/13RH3WnZ6dGYyi_l0itmAkN26JxYMLFQi/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-199",
+  "title": "Uncanny X-Men #199",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #199 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KhGbhMG2ZZsmuj_9InEH9i9FiB0KsZvP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KhGbhMG2ZZsmuj_9InEH9i9FiB0KsZvP",
+  "readerUrl": "https://drive.google.com/file/d/1oSGzEv1bxzJ1Y55eDTOSdJfp9mhRDWNb/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-201",
+  "title": "Uncanny X-Men #201",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #201 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cPWNoTRRsqDfJsXjTfYQb9i_XJVSSEyc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cPWNoTRRsqDfJsXjTfYQb9i_XJVSSEyc",
+  "readerUrl": "https://drive.google.com/file/d/1Xx8lB6TduS6ZT5WBEllplletQUO09kAc/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-204",
+  "title": "Uncanny X-Men #204",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #204 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qRqjwboZ1nHCHKvHnp0XZ9s2OFn0M8Sa",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qRqjwboZ1nHCHKvHnp0XZ9s2OFn0M8Sa",
+  "readerUrl": "https://drive.google.com/file/d/1dOxuvKzc5JlySMcfjsqXMHiezt0FBswl/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-205",
+  "title": "Uncanny X-Men #205",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #205 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16Prd_ZcHTmFqyU0WYXD1Oq90McXME3SH",
+  "backdrop": "https://lh3.googleusercontent.com/d/16Prd_ZcHTmFqyU0WYXD1Oq90McXME3SH",
+  "readerUrl": "https://drive.google.com/file/d/19lyCEYPMqVGwv2_-1EhPZrrMGsDWyqL3/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-206",
+  "title": "Uncanny X-Men #206",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #206 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14hmezt5RUZtQO0hIX-dngTaLLDkfprzu",
+  "backdrop": "https://lh3.googleusercontent.com/d/14hmezt5RUZtQO0hIX-dngTaLLDkfprzu",
+  "readerUrl": "https://drive.google.com/file/d/163wbzOYKMNCx-hMv1HNC5Xodi2cDDOwD/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-207",
+  "title": "Uncanny X-Men #207",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #207 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RK8KO82GYGIiApb3lec2VUNzAhBhz5eU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RK8KO82GYGIiApb3lec2VUNzAhBhz5eU",
+  "readerUrl": "https://drive.google.com/file/d/1T69fyGSCynJO_9GArbApzMSS6WITVpYa/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-208",
+  "title": "Uncanny X-Men #208",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #208 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wPaPs4TtNRNZylna99aM8crXbYDs_3bh",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wPaPs4TtNRNZylna99aM8crXbYDs_3bh",
+  "readerUrl": "https://drive.google.com/file/d/1TPYLKhhGDvzUt5W3iR02iWQ091-5Q5KS/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-209",
+  "title": "Uncanny X-Men #209",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #209 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jaWsSV6SVlhdrrVILcj_O4rO_klzmVb-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jaWsSV6SVlhdrrVILcj_O4rO_klzmVb-",
+  "readerUrl": "https://drive.google.com/file/d/19WEQDI1BVk-59mn0RjTdMDpzfjud058F/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-210",
+  "title": "Uncanny X-Men #210",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #210 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13pEm7cexa5-0P_8NKQL-1WH7aQvC4yGN",
+  "backdrop": "https://lh3.googleusercontent.com/d/13pEm7cexa5-0P_8NKQL-1WH7aQvC4yGN",
+  "readerUrl": "https://drive.google.com/file/d/1kHLjNBTDHXsBuuSfVveI9IuedFxDASH5/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-213",
+  "title": "Uncanny X-Men #213",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #213 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-zt23_rpxnmcGXFU4pGibOYv0P7Mg70o",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-zt23_rpxnmcGXFU4pGibOYv0P7Mg70o",
+  "readerUrl": "https://drive.google.com/file/d/1tGDwrcDjOItJsV-YZgf-_o4n7WSRTD4i/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-214",
+  "title": "Uncanny X-Men #214",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #214 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/11CcmJUyycy5x3aBgqOc2pGekmMVkIb-C",
+  "backdrop": "https://lh3.googleusercontent.com/d/11CcmJUyycy5x3aBgqOc2pGekmMVkIb-C",
+  "readerUrl": "https://drive.google.com/file/d/1_HuNO0OK6d2DJZCNa7xt5p81qMCslryv/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-216",
+  "title": "Uncanny X-Men #216",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #216 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DmGua8xm13Iowbt2jOB25pJPZtiYHliY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DmGua8xm13Iowbt2jOB25pJPZtiYHliY",
+  "readerUrl": "https://drive.google.com/file/d/1e5iIk1icV8xWC-6RFQ3voc5gQiitm9hL/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-221",
+  "title": "Uncanny X-Men #221",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #221 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tYYULZBhDWoxcmIndQjLuFW7j_gHMmFZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tYYULZBhDWoxcmIndQjLuFW7j_gHMmFZ",
+  "readerUrl": "https://drive.google.com/file/d/1FDaDy4LkvlVQsU4pTiMaWFpnWgfQnBwj/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-227",
+  "title": "Uncanny X-Men #227",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #227 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NL4DqQiogUGQP2tEaRDq2J7M9qvnuijr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NL4DqQiogUGQP2tEaRDq2J7M9qvnuijr",
+  "readerUrl": "https://drive.google.com/file/d/11vhgJeZjkEh1itpL69eDZVkYiJ9RLww0/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-229",
+  "title": "Uncanny X-Men #229",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #229 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jHGKnAc-m46jal6WehR2b7-2-RoyrVE3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jHGKnAc-m46jal6WehR2b7-2-RoyrVE3",
+  "readerUrl": "https://drive.google.com/file/d/1ar66yjmT6NL5lx4IuvJHdXd2bOzPxEGz/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-230",
+  "title": "Uncanny X-Men #230",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #230 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1TjX0RdPKM3cXkgzE6xmty9sIXW-Sig-d",
+  "backdrop": "https://lh3.googleusercontent.com/d/1TjX0RdPKM3cXkgzE6xmty9sIXW-Sig-d",
+  "readerUrl": "https://drive.google.com/file/d/1Ax1dX8EKIWOSKeBG3ntpIJvE7PgcY5X8/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-231",
+  "title": "Uncanny X-Men #231",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #231 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ib9l999Ob-VR8QDIAKxYnqykzZ1veJui",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ib9l999Ob-VR8QDIAKxYnqykzZ1veJui",
+  "readerUrl": "https://drive.google.com/file/d/1mEjq_imARhBEVHmlMu9gsutsKSnmgxmn/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-232",
+  "title": "Uncanny X-Men #232",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #232 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jUIa1juPxGSJjYIvxvGCzWVTPFetvB1I",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jUIa1juPxGSJjYIvxvGCzWVTPFetvB1I",
+  "readerUrl": "https://drive.google.com/file/d/121I0YkbeatdV_OOO6qutCajIlgvC9RO8/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-233",
+  "title": "Uncanny X-Men #233",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #233 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cM9PsZjbVNHeWLUs7pVn0V_wsW-gM6O3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cM9PsZjbVNHeWLUs7pVn0V_wsW-gM6O3",
+  "readerUrl": "https://drive.google.com/file/d/1Uzt1l_RgR_zzZrAjsPETcAVM37HopSDl/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-234",
+  "title": "Uncanny X-Men #234",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #234 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1g2WP-eA2vBjF02jmi8FSP21uof7S6b1k",
+  "backdrop": "https://lh3.googleusercontent.com/d/1g2WP-eA2vBjF02jmi8FSP21uof7S6b1k",
+  "readerUrl": "https://drive.google.com/file/d/1DS0UjyqhTrSAxozxPP__tmX6ddOeSgnT/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-236",
+  "title": "Uncanny X-Men #236",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #236 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ePEIhEyEqFGd5kVlpAi-fEr_9IqIGu1d",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ePEIhEyEqFGd5kVlpAi-fEr_9IqIGu1d",
+  "readerUrl": "https://drive.google.com/file/d/12ghcGyrWMwWLOTfq-2lLMI2xInx07KJi/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-237",
+  "title": "Uncanny X-Men #237",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #237 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ETfCu3M96J1x8XtsY-SSVZ1ThvlttaWr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ETfCu3M96J1x8XtsY-SSVZ1ThvlttaWr",
+  "readerUrl": "https://drive.google.com/file/d/1W7l-56SxUTAYxxvqd3sKj4lldFaW41eP/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-243",
+  "title": "Uncanny X-Men #243",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #243 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZEcuGnQu4ykPrQy5XQPfOzxFmWE3XOk4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZEcuGnQu4ykPrQy5XQPfOzxFmWE3XOk4",
+  "readerUrl": "https://drive.google.com/file/d/1sLXaXET761KYIObELpRME4jSVnhDsc_Z/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-252",
+  "title": "Uncanny X-Men #252",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #252 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Td-EpTJO8-tlBGpMiDWeaEHU-RVnjjEM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Td-EpTJO8-tlBGpMiDWeaEHU-RVnjjEM",
+  "readerUrl": "https://drive.google.com/file/d/18-A3Nv6jA830Cvx6MBbH-awm72s7nerO/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-256",
+  "title": "Uncanny X-Men #256",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #256 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qtUpCyIRKgzAzPeJdyqqE96ECSkJoFas",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qtUpCyIRKgzAzPeJdyqqE96ECSkJoFas",
+  "readerUrl": "https://drive.google.com/file/d/18TSI2qrlozf4fXCC3Nq758vws-nmZ47t/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-257",
+  "title": "Uncanny X-Men #257",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #257 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1MBVQq9OnKCEMd3n26Dsx4RENxEFCJYji",
+  "backdrop": "https://lh3.googleusercontent.com/d/1MBVQq9OnKCEMd3n26Dsx4RENxEFCJYji",
+  "readerUrl": "https://drive.google.com/file/d/1me1Wc3ZFC7HSJYSOlt6ZQXbxLt1sJIJW/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-258",
+  "title": "Uncanny X-Men #258",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #258 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-qu2Hn2i3PE6jsO-Esn9LocjN2JOkJiA",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-qu2Hn2i3PE6jsO-Esn9LocjN2JOkJiA",
+  "readerUrl": "https://drive.google.com/file/d/1Qu5Pf-Wh30YkXMafjr__KLsLtaSs21UV/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-259",
+  "title": "Uncanny X-Men #259",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #259 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mKAxP7Xu8Psh8P_SCh1QEuWESChEUOoW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mKAxP7Xu8Psh8P_SCh1QEuWESChEUOoW",
+  "readerUrl": "https://drive.google.com/file/d/1hwVilzgSMwQTre2L0l7GEXgc1a0jiZLR/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-260",
+  "title": "Uncanny X-Men #260",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #260 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1q6bhJ16e80o7F6b6OA7cqT2P-Rxsk4gj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1q6bhJ16e80o7F6b6OA7cqT2P-Rxsk4gj",
+  "readerUrl": "https://drive.google.com/file/d/13c1zMi3PfzYSngkX4-8Vhq-ziinTRZTP/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-261",
+  "title": "Uncanny X-Men #261",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #261 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1P62u9JIASQZh0IfNz9RwBJs4nNwr3ikk",
+  "backdrop": "https://lh3.googleusercontent.com/d/1P62u9JIASQZh0IfNz9RwBJs4nNwr3ikk",
+  "readerUrl": "https://drive.google.com/file/d/1Y-GdU7XWRTRIWtIOTCQ5LOn6i67N7_ui/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-262",
+  "title": "Uncanny X-Men #262",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #262 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1aTKXcPj7KQ4kaXlRO0HeQ6Z82wg6JzVd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1aTKXcPj7KQ4kaXlRO0HeQ6Z82wg6JzVd",
+  "readerUrl": "https://drive.google.com/file/d/1Ks2eJoKJM7VQTY5es7ibsqKAA-JeHlns/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-263",
+  "title": "Uncanny X-Men #263",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #263 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VZ4Fmj4J9GKGmkRBcaF_Nreg46nQcEPk",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VZ4Fmj4J9GKGmkRBcaF_Nreg46nQcEPk",
+  "readerUrl": "https://drive.google.com/file/d/1FSa_MeL_20TQ7q2Hg7dqTw-PHXMOF1Jl/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-264",
+  "title": "Uncanny X-Men #264",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #264 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1J9FB-39D8hV2YilBrn6jwI3sPIDX34rr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1J9FB-39D8hV2YilBrn6jwI3sPIDX34rr",
+  "readerUrl": "https://drive.google.com/file/d/18-Gr627ZuKQ0B-msL0a4kfEQ4BKN_ovJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-265",
+  "title": "Uncanny X-Men #265",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #265 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15S4fNBLlCJ8uCSEWzG_eSvSpQV16RShR",
+  "backdrop": "https://lh3.googleusercontent.com/d/15S4fNBLlCJ8uCSEWzG_eSvSpQV16RShR",
+  "readerUrl": "https://drive.google.com/file/d/1U1VFn7_Y8ieI0HS9KGI17Mx-hj3ENdKC/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-266",
+  "title": "Uncanny X-Men #266",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #266 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1L1kk_iwj7KLYOCYRyWfGTKOZKiWBAW_S",
+  "backdrop": "https://lh3.googleusercontent.com/d/1L1kk_iwj7KLYOCYRyWfGTKOZKiWBAW_S",
+  "readerUrl": "https://drive.google.com/file/d/1L5HmcVnQJZbmL0QXZ_94bB6P2VeMvASG/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-268",
+  "title": "Uncanny X-Men #268",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #268 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15xzU42kv6zPuKkBPEobnLLvag6p27K-q",
+  "backdrop": "https://lh3.googleusercontent.com/d/15xzU42kv6zPuKkBPEobnLLvag6p27K-q",
+  "readerUrl": "https://drive.google.com/file/d/1dGAcf91QMF57tskIiPYwsL9-hWg_7PnL/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-273",
+  "title": "Uncanny X-Men #273",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #273 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_aWq16aIa99LUIe-vHSz7fWIfiwYz06G",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_aWq16aIa99LUIe-vHSz7fWIfiwYz06G",
+  "readerUrl": "https://drive.google.com/file/d/1xelmi_If2ZCV8BV8v-eNmr8Rodc7uKve/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-275",
+  "title": "Uncanny X-Men #275",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #275 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lef8HEpQbEdIQSDyK5ZHREiWW4Q-o9bQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lef8HEpQbEdIQSDyK5ZHREiWW4Q-o9bQ",
+  "readerUrl": "https://drive.google.com/file/d/1BG7zf8wE0S-ZnjnWaSibrwyHzjWxGfYH/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-276",
+  "title": "Uncanny X-Men #276",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #276 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZZpoYzJb1IAX9NS-knwDI2QHI4rLiUl6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZZpoYzJb1IAX9NS-knwDI2QHI4rLiUl6",
+  "readerUrl": "https://drive.google.com/file/d/1FpSk_KhLssCV5EZxJ4xxDhcdc6cjZbOY/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-277",
+  "title": "Uncanny X-Men #277",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #277 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1sWAS3EqOhzCuOTnxkSuwwTHVjdFqsSgZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1sWAS3EqOhzCuOTnxkSuwwTHVjdFqsSgZ",
+  "readerUrl": "https://drive.google.com/file/d/16dkzASEWfZhjeYtv_0mx_CUsqEXfZzJG/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-278",
+  "title": "Uncanny X-Men #278",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #278 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Y-5KBD7guDjm62QbTbtxOz7ZcO2vxGk7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Y-5KBD7guDjm62QbTbtxOz7ZcO2vxGk7",
+  "readerUrl": "https://drive.google.com/file/d/1mb4Soi1xknB_Id1osJLvYj2qc7FtymAt/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-279",
+  "title": "Uncanny X-Men #279",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #279 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DKzAJVAY3u7_IRQAwN22Vu9ZnrU5A_kk",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DKzAJVAY3u7_IRQAwN22Vu9ZnrU5A_kk",
+  "readerUrl": "https://drive.google.com/file/d/1WL30fb5C_rlBEeFtdG6pidrfh0fluK6F/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-281",
+  "title": "Uncanny X-Men #281",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #281 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IG0r9e-JTRwlb_0KMx4CRN4YyfGMK59X",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IG0r9e-JTRwlb_0KMx4CRN4YyfGMK59X",
+  "readerUrl": "https://drive.google.com/file/d/1UujQsYW4AIm-utvWwkZR2YmCz5SAaw7L/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-282",
+  "title": "Uncanny X-Men #282",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #282 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WMhYIBCq7jR3V566YneGhXpsUDHQ3I8w",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WMhYIBCq7jR3V566YneGhXpsUDHQ3I8w",
+  "readerUrl": "https://drive.google.com/file/d/1hjFB1zKZcqtR1BGBsGCQlAJHBIZZEl1v/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-283",
+  "title": "Uncanny X-Men #283",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #283 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Hnhni-2r7ObBEjqvZjGMQ1qFxqBK8x0A",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Hnhni-2r7ObBEjqvZjGMQ1qFxqBK8x0A",
+  "readerUrl": "https://drive.google.com/file/d/1W9llhuNdfp-de826SDMjWUqFjdQ3WIrX/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-284",
+  "title": "Uncanny X-Men #284",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #284 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1P-IvoeSS7vrVbAmUJLs4R8v1BAubOd7l",
+  "backdrop": "https://lh3.googleusercontent.com/d/1P-IvoeSS7vrVbAmUJLs4R8v1BAubOd7l",
+  "readerUrl": "https://drive.google.com/file/d/1Qqki9jxw5yLRWeTIkKWVx4aise9Ux5eF/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-285",
+  "title": "Uncanny X-Men #285",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #285 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10cHO6bt0Lb2OWDzMrNjkLIYxzkyHF2m5",
+  "backdrop": "https://lh3.googleusercontent.com/d/10cHO6bt0Lb2OWDzMrNjkLIYxzkyHF2m5",
+  "readerUrl": "https://drive.google.com/file/d/16JTrb-ZNee31BkbZ9ZWDAwoEgnZ4sYpW/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-286",
+  "title": "Uncanny X-Men #286",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #286 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14Qmo7FCnCzXREEMUvIHLU-fMkFhEAg9k",
+  "backdrop": "https://lh3.googleusercontent.com/d/14Qmo7FCnCzXREEMUvIHLU-fMkFhEAg9k",
+  "readerUrl": "https://drive.google.com/file/d/1psLZo5LMoJx-Ldt3o0q0okrNYC3jAddq/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-287",
+  "title": "Uncanny X-Men #287",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #287 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Dgx8v8b9ohARi03Smg1pDz3TNLAprQMp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Dgx8v8b9ohARi03Smg1pDz3TNLAprQMp",
+  "readerUrl": "https://drive.google.com/file/d/12QRawsjMB5sS21QQHLq2tWrXgXKVVAU4/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-288",
+  "title": "Uncanny X-Men #288",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #288 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RjkN-i9B7OwwTKcbead_jUUjuJP1UYF1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RjkN-i9B7OwwTKcbead_jUUjuJP1UYF1",
+  "readerUrl": "https://drive.google.com/file/d/1npmgimeihiNPp3lC9Fg1TKPmki6i16Y4/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-289",
+  "title": "Uncanny X-Men #289",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #289 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rbR9M8winHiICB7dcEh1jVIayLrC9Ll7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rbR9M8winHiICB7dcEh1jVIayLrC9Ll7",
+  "readerUrl": "https://drive.google.com/file/d/1OoiKTYMZW_x9vjlwIYwbIYDW-7pUvY0V/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-290",
+  "title": "Uncanny X-Men #290",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #290 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rua5Zq4DiIZjW_Jy-1tdNlENaGOqzxD_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rua5Zq4DiIZjW_Jy-1tdNlENaGOqzxD_",
+  "readerUrl": "https://drive.google.com/file/d/1HVvHJc9zkJi3MSE1CyNOn0Ud6vo1rqUB/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-300",
+  "title": "Uncanny X-Men #300",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #300 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10dTHhkCjp_NaWQWUuzvTrMSeu968RJgB",
+  "backdrop": "https://lh3.googleusercontent.com/d/10dTHhkCjp_NaWQWUuzvTrMSeu968RJgB",
+  "readerUrl": "https://drive.google.com/file/d/1fI7HmN20i9cDw9Vk1MYTHctnpYwXjA1Z/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-301",
+  "title": "Uncanny X-Men #301",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #301 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mqwCV6hLS96i9RYQ-lTLuR-xAHGS_9ub",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mqwCV6hLS96i9RYQ-lTLuR-xAHGS_9ub",
+  "readerUrl": "https://drive.google.com/file/d/1l78B2DrreC0mifaoykQ_0WCOOJQus21X/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-302",
+  "title": "Uncanny X-Men #302",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #302 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rnoSbaZeXWBq3ARYeRtYnNwaSRrGDOIq",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rnoSbaZeXWBq3ARYeRtYnNwaSRrGDOIq",
+  "readerUrl": "https://drive.google.com/file/d/1GYFqSA9W--e9T45ugYZG7zihdXp98mz4/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-303",
+  "title": "Uncanny X-Men #303",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #303 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XNkg4rzhR1jgfZv9WNv_3vYzIZe90YGr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XNkg4rzhR1jgfZv9WNv_3vYzIZe90YGr",
+  "readerUrl": "https://drive.google.com/file/d/1__SANbG1dUHFozP2SsklHqJAY11_o-aC/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-305",
+  "title": "Uncanny X-Men #305",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #305 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ka58fn_To94aOap4HSwcCVE2KDFcQR3b",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ka58fn_To94aOap4HSwcCVE2KDFcQR3b",
+  "readerUrl": "https://drive.google.com/file/d/13LI10-uN-ffQTwHNzQszfxHwKmMU8oTa/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-306",
+  "title": "Uncanny X-Men #306",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #306 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ytgOCKvp8HZUog3WFu_DPdubhuOTIgbV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ytgOCKvp8HZUog3WFu_DPdubhuOTIgbV",
+  "readerUrl": "https://drive.google.com/file/d/1r_3neI8Ag1ZtvzBZN9l94LSMFzPLtkmm/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-307",
+  "title": "Uncanny X-Men #307",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #307 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VJTjKK9x62AdtFmS7LU57xdJgs-X98wt",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VJTjKK9x62AdtFmS7LU57xdJgs-X98wt",
+  "readerUrl": "https://drive.google.com/file/d/1H24_s8uDgObY-Z6_H5VZjvvF-iowJZf4/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-308",
+  "title": "Uncanny X-Men #308",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #308 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ntUqD6JRIpdfD5a_DptQyy43maqq5wf2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ntUqD6JRIpdfD5a_DptQyy43maqq5wf2",
+  "readerUrl": "https://drive.google.com/file/d/18djzlHs0Rlt2VkjOx4n10H8PnnEr1hO2/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-309",
+  "title": "Uncanny X-Men #309",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #309 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1b362DPrpGB0oqpef4QOuAf_vPMcPseOM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1b362DPrpGB0oqpef4QOuAf_vPMcPseOM",
+  "readerUrl": "https://drive.google.com/file/d/1zT1D2K1rK1iopBEROGq4HXp1WL-Dmddj/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-310",
+  "title": "Uncanny X-Men #310",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #310 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1t8CmnmfX_xsOKP-_QQ6OTeogvbPQhGlV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1t8CmnmfX_xsOKP-_QQ6OTeogvbPQhGlV",
+  "readerUrl": "https://drive.google.com/file/d/1UiK4R9iM6s1BEZXAv8_yRAuKTYB405F7/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-311",
+  "title": "Uncanny X-Men #311",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #311 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YEhLvnaEhuqODUOZwl0T196PTSS-MGLX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YEhLvnaEhuqODUOZwl0T196PTSS-MGLX",
+  "readerUrl": "https://drive.google.com/file/d/1diuZYYtZPYGD8nzrhUoRyZHIYosW5egS/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-312",
+  "title": "Uncanny X-Men #312",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #312 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HlfW_JmUrjB3MM4bDb8GfLd9JHU8TmuG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HlfW_JmUrjB3MM4bDb8GfLd9JHU8TmuG",
+  "readerUrl": "https://drive.google.com/file/d/1gfg6oZiyvRd9POOgQ34gRCO0OPGbLJ1f/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-313",
+  "title": "Uncanny X-Men #313",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #313 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dSa1GP2kqlzlibVmkN-uOHhfAJ30RSo7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dSa1GP2kqlzlibVmkN-uOHhfAJ30RSo7",
+  "readerUrl": "https://drive.google.com/file/d/1NfQvDpSXkfh1yQtegyTb7QN1RpP8LVTP/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-334",
+  "title": "Uncanny X-Men #334",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #334 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hiXItqOwYVUL3iFOgBF92HS0iikDlj7I",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hiXItqOwYVUL3iFOgBF92HS0iikDlj7I",
+  "readerUrl": "https://drive.google.com/file/d/1N-D_gwyyd5me8jd-yZqCUDmsW6shgKWo/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-335",
+  "title": "Uncanny X-Men #335",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #335 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PdmJfaJ4I_KSrCi5M12kQhIBfo62LT67",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PdmJfaJ4I_KSrCi5M12kQhIBfo62LT67",
+  "readerUrl": "https://drive.google.com/file/d/1gJsPaWDpsYByupIeZptKWALEWjRhDyss/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-336",
+  "title": "Uncanny X-Men #336",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #336 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1OKA-6n2IjON6qANWxVLfUYbIM_WCcHF-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1OKA-6n2IjON6qANWxVLfUYbIM_WCcHF-",
+  "readerUrl": "https://drive.google.com/file/d/1mcR5eGio2Y7yAwvX1-X74D-W1AUGFroY/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-337",
+  "title": "Uncanny X-Men #337",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #337 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14-C9zRg6MV06s3MNAEgdILZSV_AHYzpr",
+  "backdrop": "https://lh3.googleusercontent.com/d/14-C9zRg6MV06s3MNAEgdILZSV_AHYzpr",
+  "readerUrl": "https://drive.google.com/file/d/1u1BHxjD_gTTLnW4uePO99bFDZmBdOeKn/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-341",
+  "title": "Uncanny X-Men #341",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #341 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Y5c_VEi5VY8IXXidgo6sWt5Ku6IwQ0UB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Y5c_VEi5VY8IXXidgo6sWt5Ku6IwQ0UB",
+  "readerUrl": "https://drive.google.com/file/d/1vkT_AkE2xu62TxxO3O6bh3eN0RU7SZp1/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-342",
+  "title": "Uncanny X-Men #342",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #342 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PcPR9M0R4rjKHqseWiBG-ZO9ZzfVKEop",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PcPR9M0R4rjKHqseWiBG-ZO9ZzfVKEop",
+  "readerUrl": "https://drive.google.com/file/d/1cb5iQhqPGIPe3jotR5MlnidfGZ4ogcwf/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-345",
+  "title": "Uncanny X-Men #345",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #345 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1d2zL9ytJxVWMwDkVU-qX0pQGpbMV5gp2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1d2zL9ytJxVWMwDkVU-qX0pQGpbMV5gp2",
+  "readerUrl": "https://drive.google.com/file/d/1nexQI3ocF9tkp288l11OwRbO03VCTvEU/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-346",
+  "title": "Uncanny X-Men #346",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #346 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1o1cWH5IAtrFY32ESWm1j-TybrJ2kPPmG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1o1cWH5IAtrFY32ESWm1j-TybrJ2kPPmG",
+  "readerUrl": "https://drive.google.com/file/d/1YPFJE6LYO6vqJx_0t-EUZknoG3r2jMoC/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-347",
+  "title": "Uncanny X-Men #347",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #347 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/188yZbUC9zuJOtT2g24yUTxDs4LKZI5mc",
+  "backdrop": "https://lh3.googleusercontent.com/d/188yZbUC9zuJOtT2g24yUTxDs4LKZI5mc",
+  "readerUrl": "https://drive.google.com/file/d/1eDYMeMDBeqwk88xB9-zstLk9DZzYsQXV/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-348",
+  "title": "Uncanny X-Men #348",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #348 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LNXW_KW3fKiOYpAB1xc8ypGmD2g7-9gf",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LNXW_KW3fKiOYpAB1xc8ypGmD2g7-9gf",
+  "readerUrl": "https://drive.google.com/file/d/1ChX9JJGJ7VFyEAHIoNEuVrxidl4vF53n/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-355",
+  "title": "Uncanny X-Men #355",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #355 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Xc1e4XDxqHMm6TS9dukj3RfiBRrvibvA",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Xc1e4XDxqHMm6TS9dukj3RfiBRrvibvA",
+  "readerUrl": "https://drive.google.com/file/d/1a7gtSztJ-N7X0GKSlIXMNIGuMdfLDTOL/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-356",
+  "title": "Uncanny X-Men #356",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #356 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NhEv9XmIfQRZ9Rj5b62OvuNQ1i0HB3l-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NhEv9XmIfQRZ9Rj5b62OvuNQ1i0HB3l-",
+  "readerUrl": "https://drive.google.com/file/d/1EZDNkY5e7Ki6_MvkHbh3Vd1u6Y4jGEVQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-357",
+  "title": "Uncanny X-Men #357",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #357 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nJKDfRsThskrwcTZd7ETWnfI12c8t_Hf",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nJKDfRsThskrwcTZd7ETWnfI12c8t_Hf",
+  "readerUrl": "https://drive.google.com/file/d/1LqrkhNyHMprBKkyIMU1We_BArzKPpNWM/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-360",
+  "title": "Uncanny X-Men #360",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #360 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1MOvk5fZTzhOLD71OtT8OhWaAgg_f8CCT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1MOvk5fZTzhOLD71OtT8OhWaAgg_f8CCT",
+  "readerUrl": "https://drive.google.com/file/d/16tTttkGz7U53nYFFmhwQO9wOKZeLtcCH/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-361",
+  "title": "Uncanny X-Men #361",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #361 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ELk5ytrOThVPvEP8mwD29q0OtjFVdNfe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ELk5ytrOThVPvEP8mwD29q0OtjFVdNfe",
+  "readerUrl": "https://drive.google.com/file/d/1a1Oh4RiOPs-TxLLdi3v9UgnyRt3Bd6Sp/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-362",
+  "title": "Uncanny X-Men #362",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #362 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_uunus8k7GYDs8ByuH20DsJJLay3tW5l",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_uunus8k7GYDs8ByuH20DsJJLay3tW5l",
+  "readerUrl": "https://drive.google.com/file/d/1v3ylXJuPZFREYjzrEqi_JnbCUcdPtsHm/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-363",
+  "title": "Uncanny X-Men #363",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #363 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1F1TmXA0zRfc8UhuvnEpmb2ecK7aF8BqB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1F1TmXA0zRfc8UhuvnEpmb2ecK7aF8BqB",
+  "readerUrl": "https://drive.google.com/file/d/1Tnts5PDji6uvh-oDWGp3M0jNdyxIl76o/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-364",
+  "title": "Uncanny X-Men #364",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #364 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/184w78UBjCFoDUSPzyfqnYXwLuRNZzsxx",
+  "backdrop": "https://lh3.googleusercontent.com/d/184w78UBjCFoDUSPzyfqnYXwLuRNZzsxx",
+  "readerUrl": "https://drive.google.com/file/d/16uUt-atvEQIDxk9cUl2KT-WBpv-mvIEj/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-365",
+  "title": "Uncanny X-Men #365",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #365 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zbMHP-WlTUd_q9SYrv-HXLNMNIBVjtF2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zbMHP-WlTUd_q9SYrv-HXLNMNIBVjtF2",
+  "readerUrl": "https://drive.google.com/file/d/1yyHfFAQnClAHHQFVqBaR_4QsCQs4l_Yc/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-366",
+  "title": "Uncanny X-Men #366",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #366 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1w_FQH706NfIPGDNL30_UJx9ratQxBNH9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1w_FQH706NfIPGDNL30_UJx9ratQxBNH9",
+  "readerUrl": "https://drive.google.com/file/d/13iem4S2i2ORNuwf-rlq0A0Xny8i3qEbH/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-367",
+  "title": "Uncanny X-Men #367",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #367 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LgzHUIs-5CtPfSL-7eHpAoohHjRlxDmz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LgzHUIs-5CtPfSL-7eHpAoohHjRlxDmz",
+  "readerUrl": "https://drive.google.com/file/d/1U_ZeznO0bPFLWnCt7Q8LxaO97WxGSQU4/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-368",
+  "title": "Uncanny X-Men #368",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #368 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zc8aeK7cjHp1MynT6qsoNNxWdj1h25tG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zc8aeK7cjHp1MynT6qsoNNxWdj1h25tG",
+  "readerUrl": "https://drive.google.com/file/d/1ne4T-CiBzCU0BCV2vqn0GUwyQVWpz6lD/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-372",
+  "title": "Uncanny X-Men #372",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #372 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17DKzVRrjaLeF_Iq9cDMaFe3fwPhaw0OA",
+  "backdrop": "https://lh3.googleusercontent.com/d/17DKzVRrjaLeF_Iq9cDMaFe3fwPhaw0OA",
+  "readerUrl": "https://drive.google.com/file/d/1v2q13lSukbT45wcZNP-xWoyR2pw0X1Ie/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-373",
+  "title": "Uncanny X-Men #373",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #373 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uvvNyNEzNWo7qgWJFQMw9Ww0eshwXZQR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uvvNyNEzNWo7qgWJFQMw9Ww0eshwXZQR",
+  "readerUrl": "https://drive.google.com/file/d/14FVayHW0_B0Hl7CboExlxdaTkOBr7gSD/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-374",
+  "title": "Uncanny X-Men #374",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #374 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nqzl7vXZSBHEwzgtT5OiTXhhjrsojA-H",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nqzl7vXZSBHEwzgtT5OiTXhhjrsojA-H",
+  "readerUrl": "https://drive.google.com/file/d/1SQhLK4wILT0IPcgUGj-4LCB0PEs6WRjN/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-375",
+  "title": "Uncanny X-Men #375",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #375 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gz4wgyp3rwRculRcqIQltOhqgKd13RaS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gz4wgyp3rwRculRcqIQltOhqgKd13RaS",
+  "readerUrl": "https://drive.google.com/file/d/1JeK34XM3RJGW54ggujl_EjDSPJOryiMm/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-387",
+  "title": "Uncanny X-Men #387",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #387 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tZ-F0qmbiffhc9BLzgIXWyDgUjRyqss8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tZ-F0qmbiffhc9BLzgIXWyDgUjRyqss8",
+  "readerUrl": "https://drive.google.com/file/d/1af1MLGE3eGHZpaCVFHwmJErGCv3Gt_A1/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-388",
+  "title": "Uncanny X-Men #388",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #388 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LpHydSxmA-_tW8_hX_AqJDOZ1Qu8KqvO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LpHydSxmA-_tW8_hX_AqJDOZ1Qu8KqvO",
+  "readerUrl": "https://drive.google.com/file/d/13kSFUd2AsbhErTt71XqtAQsHs1jKuoPa/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-390",
+  "title": "Uncanny X-Men #390",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #390 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1iFqISg1b9WwQ1SKZwBqSb243jymOGRj0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1iFqISg1b9WwQ1SKZwBqSb243jymOGRj0",
+  "readerUrl": "https://drive.google.com/file/d/1qwSAyynI6GaYVuCnQqNdszwoiV9tvRLG/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-391",
+  "title": "Uncanny X-Men #391",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #391 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1yktYbIxci5ClteSdkmvw55tb0Mm8kNYX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1yktYbIxci5ClteSdkmvw55tb0Mm8kNYX",
+  "readerUrl": "https://drive.google.com/file/d/19f4JGxJeFgyQ62l9TyFYCCRvGnUI3djt/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-392",
+  "title": "Uncanny X-Men #392",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #392 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PPPPliLskmTTHEkgk7XcAtVG7aFewBwn",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PPPPliLskmTTHEkgk7XcAtVG7aFewBwn",
+  "readerUrl": "https://drive.google.com/file/d/1cF2FTIF2rQdVV3VXff-TY9qEvbrZPuYq/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-393",
+  "title": "Uncanny X-Men #393",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #393 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1E28LcWm04EmxvTnyWNzppVK5bpmRbMpA",
+  "backdrop": "https://lh3.googleusercontent.com/d/1E28LcWm04EmxvTnyWNzppVK5bpmRbMpA",
+  "readerUrl": "https://drive.google.com/file/d/1cOufXlyMP-U9UG1OHqASd97CSHOo1NNe/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-394",
+  "title": "Uncanny X-Men #394",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #394 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ljKI7ErCtGIDdCx5V--diLHqQTA-K70_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ljKI7ErCtGIDdCx5V--diLHqQTA-K70_",
+  "readerUrl": "https://drive.google.com/file/d/1UkBoEGG_009wIvT9x5W9SD9FTSSQP1OY/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-395",
+  "title": "Uncanny X-Men #395",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #395 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ghvx7vbvZ3Ms-_WgfxoGfhQbbXcb1Xc0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ghvx7vbvZ3Ms-_WgfxoGfhQbbXcb1Xc0",
+  "readerUrl": "https://drive.google.com/file/d/1tlxOWaDTV4Yj3xjhuKjYMc0JdoBlJKnz/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-397",
+  "title": "Uncanny X-Men #397",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #397 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BkVepz04VsMR_uv4sRTaAsWzyfkOXZxa",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BkVepz04VsMR_uv4sRTaAsWzyfkOXZxa",
+  "readerUrl": "https://drive.google.com/file/d/1ywbRqPw5TeWkWXJU-ls40USTzcKgWOQU/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-401",
+  "title": "Uncanny X-Men #401",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #401 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/185aIfz8llEsmDpRCixogHG8LBUE4Qqvn",
+  "backdrop": "https://lh3.googleusercontent.com/d/185aIfz8llEsmDpRCixogHG8LBUE4Qqvn",
+  "readerUrl": "https://drive.google.com/file/d/1vMyEq9N8sY5_h317TFxf5za8AWCKVm96/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-402",
+  "title": "Uncanny X-Men #402",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #402 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1adae8UwfbsLWsA9Wc-W0pTpA2b_PuQ5Q",
+  "backdrop": "https://lh3.googleusercontent.com/d/1adae8UwfbsLWsA9Wc-W0pTpA2b_PuQ5Q",
+  "readerUrl": "https://drive.google.com/file/d/1jUPn_hLXeveHiD-3W_kcaBiQ64Ln4xT2/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-403",
+  "title": "Uncanny X-Men #403",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #403 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1MRkCk1KZt4rLsoAcUS5eWl9ftReujH2R",
+  "backdrop": "https://lh3.googleusercontent.com/d/1MRkCk1KZt4rLsoAcUS5eWl9ftReujH2R",
+  "readerUrl": "https://drive.google.com/file/d/1FsmniJFo8Um9fHOtmX6QZGbo55dPx8z8/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-404",
+  "title": "Uncanny X-Men #404",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #404 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15vmGRvboF9Rd-nEaNPhTOAospFsGF5O6",
+  "backdrop": "https://lh3.googleusercontent.com/d/15vmGRvboF9Rd-nEaNPhTOAospFsGF5O6",
+  "readerUrl": "https://drive.google.com/file/d/11dUKUMU_Jn-nbOB0Gj9atuboJcrNqtuT/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-405",
+  "title": "Uncanny X-Men #405",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #405 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Bd8UcD7_wMrfoa_BP2qtXaW-Y1uMx8qr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Bd8UcD7_wMrfoa_BP2qtXaW-Y1uMx8qr",
+  "readerUrl": "https://drive.google.com/file/d/1ErmijJByWUWUcRBCnKQZkMKsWDZetqly/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-406",
+  "title": "Uncanny X-Men #406",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #406 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Yjvo7Gy0I_XiN-EwhncU4YwAU8d6_pjO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Yjvo7Gy0I_XiN-EwhncU4YwAU8d6_pjO",
+  "readerUrl": "https://drive.google.com/file/d/1FdavBKpzjK5L3pyZIV6FYCdquUBTApfw/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-407",
+  "title": "Uncanny X-Men #407",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #407 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1L8UnowpbIH9y-mlOmCvgfe7Beab0hUs-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1L8UnowpbIH9y-mlOmCvgfe7Beab0hUs-",
+  "readerUrl": "https://drive.google.com/file/d/1ztFhjRJeKPz5ke9C1C5-KLQPAoT3fMhj/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-408",
+  "title": "Uncanny X-Men #408",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #408 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1q8l2vMG7XVJ-m7UFn1fc04l6uoqV3R4l",
+  "backdrop": "https://lh3.googleusercontent.com/d/1q8l2vMG7XVJ-m7UFn1fc04l6uoqV3R4l",
+  "readerUrl": "https://drive.google.com/file/d/1sKamYZOtvs1F1xf26uZHhSUktlFJsRqy/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-409",
+  "title": "Uncanny X-Men #409",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #409 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1znbhLuJJ6yXdnWcZCeovhuiREYiRBpCG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1znbhLuJJ6yXdnWcZCeovhuiREYiRBpCG",
+  "readerUrl": "https://drive.google.com/file/d/1GT4xuR8Sl8ih_OFvnrh8TUy9ZzFsoM6b/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-410",
+  "title": "Uncanny X-Men #410",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #410 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1aH8KV3bDrRAhcxRjlceOmuuqnYJglv8c",
+  "backdrop": "https://lh3.googleusercontent.com/d/1aH8KV3bDrRAhcxRjlceOmuuqnYJglv8c",
+  "readerUrl": "https://drive.google.com/file/d/16JputCqrwdFBWM-P4OjUP4WOdlFpNFv0/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-411",
+  "title": "Uncanny X-Men #411",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #411 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QKEF1T69ic_eGo8nUes0QP9v-2q6UOXc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QKEF1T69ic_eGo8nUes0QP9v-2q6UOXc",
+  "readerUrl": "https://drive.google.com/file/d/12nhVusY6RSBWAD--NIzRh6JxUu8wXMeA/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-412",
+  "title": "Uncanny X-Men #412",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #412 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16dA7iwPtTTeblOneeTdE_29zknhwyihC",
+  "backdrop": "https://lh3.googleusercontent.com/d/16dA7iwPtTTeblOneeTdE_29zknhwyihC",
+  "readerUrl": "https://drive.google.com/file/d/19Ie6HKHgsjzUS2K2ndePgBJXdEZnNAue/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-413",
+  "title": "Uncanny X-Men #413",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #413 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WNSL1WQKR8iqUajNgjm4NqtOXwymDw8N",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WNSL1WQKR8iqUajNgjm4NqtOXwymDw8N",
+  "readerUrl": "https://drive.google.com/file/d/1tDTkflO56bWLsyds5mITr-UcyKAiniFt/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-415",
+  "title": "Uncanny X-Men #415",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #415 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uFJ5h2jjvE4DbBCyM0kiN9DRpsRKovlz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uFJ5h2jjvE4DbBCyM0kiN9DRpsRKovlz",
+  "readerUrl": "https://drive.google.com/file/d/1BNpUb3y-nn1CzJY4Zz7B_CfAXKFsVSKY/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-416",
+  "title": "Uncanny X-Men #416",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #416 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IzI6rf-H7gtLzahgfE0qyIrosZYjL63Z",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IzI6rf-H7gtLzahgfE0qyIrosZYjL63Z",
+  "readerUrl": "https://drive.google.com/file/d/14VeEpMNaQ6IwfsMWjM9RNhRQnSaaT3vg/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-417",
+  "title": "Uncanny X-Men #417",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #417 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KN8nc9leOkhUvq8q5LVjcjEh1NJT1uVl",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KN8nc9leOkhUvq8q5LVjcjEh1NJT1uVl",
+  "readerUrl": "https://drive.google.com/file/d/1c5ChBz_nyv_qiA8K23jyaxl9h-hwyqJn/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-418",
+  "title": "Uncanny X-Men #418",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #418 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1AgVf1DuKyD9Lv63KcjxgeRT0B2wpI6Vj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1AgVf1DuKyD9Lv63KcjxgeRT0B2wpI6Vj",
+  "readerUrl": "https://drive.google.com/file/d/1FAc1Q_ra4sVVVnbsjZUQgrDJQ5lYJLru/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-419",
+  "title": "Uncanny X-Men #419",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #419 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_ngL7ez9dbgETqbIZguu4BSDKxxIV8gZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_ngL7ez9dbgETqbIZguu4BSDKxxIV8gZ",
+  "readerUrl": "https://drive.google.com/file/d/1rKTOsWFmtzm5isVQXx2t0d8Cczcv6q2U/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-420",
+  "title": "Uncanny X-Men #420",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #420 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lbRCIm6OkhziiQRikx-EdEBYwXGIgrVm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lbRCIm6OkhziiQRikx-EdEBYwXGIgrVm",
+  "readerUrl": "https://drive.google.com/file/d/1BfdeHbLYqkpXup9LmmAR7QOiVPHZg4p3/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-421",
+  "title": "Uncanny X-Men #421",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #421 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Q1lg4tIPnYxO5uo6iq9D6Pho99YKL1_j",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Q1lg4tIPnYxO5uo6iq9D6Pho99YKL1_j",
+  "readerUrl": "https://drive.google.com/file/d/1hlHca5vyG6htGj23dFRSSihEm-didfKx/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-422",
+  "title": "Uncanny X-Men #422",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #422 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zAvU2zWqkG31-HUaqp27q5_nmKdT_jFG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zAvU2zWqkG31-HUaqp27q5_nmKdT_jFG",
+  "readerUrl": "https://drive.google.com/file/d/1uAHQiMvEHVC522qNtpkyefKfQQO6QFgu/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-427",
+  "title": "Uncanny X-Men #427",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #427 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1r21T6MniMQBH5Wz0MfH0Z8lBtyXeH7ln",
+  "backdrop": "https://lh3.googleusercontent.com/d/1r21T6MniMQBH5Wz0MfH0Z8lBtyXeH7ln",
+  "readerUrl": "https://drive.google.com/file/d/1UzS-NR-DjsUilPySR0jsL3BA-n-MChEc/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-428",
+  "title": "Uncanny X-Men #428",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #428 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lVB8nfw3Ha4TPMorPMdjFQfrlEjkEfIW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lVB8nfw3Ha4TPMorPMdjFQfrlEjkEfIW",
+  "readerUrl": "https://drive.google.com/file/d/1g5I_rPPLKP3bpfECSVXkvCFN7ycUZvU-/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-429",
+  "title": "Uncanny X-Men #429",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #429 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VxGAfE2fianawHn-cIqOqNkMW-Nzuiz2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VxGAfE2fianawHn-cIqOqNkMW-Nzuiz2",
+  "readerUrl": "https://drive.google.com/file/d/1AF1S464tuaA7kmvh8uznRIX7u3QDUyk4/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-430",
+  "title": "Uncanny X-Men #430",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #430 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rS5LwkMjpeu0H6km3ul4snRhItmTM92J",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rS5LwkMjpeu0H6km3ul4snRhItmTM92J",
+  "readerUrl": "https://drive.google.com/file/d/19qaUJl3bhpkkevESl-53rPi2SRCPpgea/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-431",
+  "title": "Uncanny X-Men #431",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #431 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BMCFp9LZ1eXqNO6TQPr_6J9jXdSC-4Eu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BMCFp9LZ1eXqNO6TQPr_6J9jXdSC-4Eu",
+  "readerUrl": "https://drive.google.com/file/d/1KCOuh1JzVDI2BjA9n_x-U0t9S5mHg1n2/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-432",
+  "title": "Uncanny X-Men #432",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #432 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1O0Ixi4mt28WEDsR1aWXoA3nMlX1JtcTs",
+  "backdrop": "https://lh3.googleusercontent.com/d/1O0Ixi4mt28WEDsR1aWXoA3nMlX1JtcTs",
+  "readerUrl": "https://drive.google.com/file/d/1ITsdh2fjCVxOMVD2vc_ZOm2Vo6wtVWwd/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-433",
+  "title": "Uncanny X-Men #433",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #433 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WCZaJ2ZlR5AN0J_hNZqy-ScpyfJXjGOp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WCZaJ2ZlR5AN0J_hNZqy-ScpyfJXjGOp",
+  "readerUrl": "https://drive.google.com/file/d/1DGJtnb5fyQ2fvE0IYWX941uzvrlbkl6P/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-434",
+  "title": "Uncanny X-Men #434",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #434 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1S5JmWaql0k-W7EKKYrf1vAhpoZP6gTfn",
+  "backdrop": "https://lh3.googleusercontent.com/d/1S5JmWaql0k-W7EKKYrf1vAhpoZP6gTfn",
+  "readerUrl": "https://drive.google.com/file/d/1nC7VQq5gDzUGbxlJn86xiZqfoGFnkRlj/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-435",
+  "title": "Uncanny X-Men #435",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #435 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1f41iz_N5OmG-s1eXUEu12zNR9oXNzaZ2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1f41iz_N5OmG-s1eXUEu12zNR9oXNzaZ2",
+  "readerUrl": "https://drive.google.com/file/d/1hs2RonpVV78rU57aAULDHzUApebYLSYv/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-436",
+  "title": "Uncanny X-Men #436",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #436 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1M-4CfDBfDHOatvZeyHuBRTepduoTztjT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1M-4CfDBfDHOatvZeyHuBRTepduoTztjT",
+  "readerUrl": "https://drive.google.com/file/d/1xEvmbPNt-TUpnzM-4wTGBfqa2sw_l-aO/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-437",
+  "title": "Uncanny X-Men #437",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #437 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Sb9OCGgPzVj8HiAcU3EAAdq5PDjNGbvn",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Sb9OCGgPzVj8HiAcU3EAAdq5PDjNGbvn",
+  "readerUrl": "https://drive.google.com/file/d/1R-EArA1xYBNlDzLiKJS08Xvpr7nEkSYX/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-438",
+  "title": "Uncanny X-Men #438",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #438 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LnkmhUJCiTKm5d5kvVcYZG01OT-sBEtW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LnkmhUJCiTKm5d5kvVcYZG01OT-sBEtW",
+  "readerUrl": "https://drive.google.com/file/d/1woLHlDPnzHcF_cnoQewpFhQ7BEH8QWHB/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-439",
+  "title": "Uncanny X-Men #439",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #439 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KSu4mHoL2yoyB4L-4-29P3IGO1SIhQdN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KSu4mHoL2yoyB4L-4-29P3IGO1SIhQdN",
+  "readerUrl": "https://drive.google.com/file/d/11Zw1Rqha9XPcphuoryRMYOsbpP8HwoWS/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-441",
+  "title": "Uncanny X-Men #441",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #441 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cAQC02iKxlpzth5bZfE0DKZMukB35IuF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cAQC02iKxlpzth5bZfE0DKZMukB35IuF",
+  "readerUrl": "https://drive.google.com/file/d/1RA_sZUjt7_Rmw8o133kQkhAW7pkFxKmt/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-443",
+  "title": "Uncanny X-Men #443",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #443 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eRDzWPpu3WSkETqcaj8_4T8RrNsl75D8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eRDzWPpu3WSkETqcaj8_4T8RrNsl75D8",
+  "readerUrl": "https://drive.google.com/file/d/1l2VnrN5yD-lQ7FvTOslHM0395LMJEpSS/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-444",
+  "title": "Uncanny X-Men #444",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #444 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1W2Du1iFSjGmy8ktQhuRJMDXRFZ4Bwe6s",
+  "backdrop": "https://lh3.googleusercontent.com/d/1W2Du1iFSjGmy8ktQhuRJMDXRFZ4Bwe6s",
+  "readerUrl": "https://drive.google.com/file/d/1cQc1l8Q27pJv3okbQZsxC9DVsfSa-Ifm/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-445",
+  "title": "Uncanny X-Men #445",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #445 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1O-jTEdHL2mbBaF7iK3H0yj9gwKIom-eY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1O-jTEdHL2mbBaF7iK3H0yj9gwKIom-eY",
+  "readerUrl": "https://drive.google.com/file/d/1ZPZipoAQyt0cPZ5CdvW3QZ39MAnuuEMv/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-446",
+  "title": "Uncanny X-Men #446",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #446 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FTK_lfR6sOPpkJM9EW8H_xGbaG4DdFfL",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FTK_lfR6sOPpkJM9EW8H_xGbaG4DdFfL",
+  "readerUrl": "https://drive.google.com/file/d/1c6-Lgur3w6FVFvsMnq_SDKPdqPgcT8SE/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-447",
+  "title": "Uncanny X-Men #447",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #447 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tEs-XWhxAskHfzHN4khnXacQfYVATEmx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tEs-XWhxAskHfzHN4khnXacQfYVATEmx",
+  "readerUrl": "https://drive.google.com/file/d/1NFqdf7Cx-MWzwVHMgOjQC6nQ0DgT0JjQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-448",
+  "title": "Uncanny X-Men #448",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #448 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17XE-Y1cFHLVktBG20i28UNvMuVXeScHx",
+  "backdrop": "https://lh3.googleusercontent.com/d/17XE-Y1cFHLVktBG20i28UNvMuVXeScHx",
+  "readerUrl": "https://drive.google.com/file/d/1rmu29ZPydOBYDPOA1Nu41sXqAl1xAIT8/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-449",
+  "title": "Uncanny X-Men #449",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #449 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cYhyQqm63UQoaAemiqQp957hz-cSBgUh",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cYhyQqm63UQoaAemiqQp957hz-cSBgUh",
+  "readerUrl": "https://drive.google.com/file/d/1_n8_WnBswmrcxLMnRtxY1N4BNSOUfdtU/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-451",
+  "title": "Uncanny X-Men #451",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #451 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10y3auzBB0Imh3TW38IY0I_F4Brr7Vh-e",
+  "backdrop": "https://lh3.googleusercontent.com/d/10y3auzBB0Imh3TW38IY0I_F4Brr7Vh-e",
+  "readerUrl": "https://drive.google.com/file/d/1AWWidJe8Rql3VmF19dfTle23g06S0EC8/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-454",
+  "title": "Uncanny X-Men #454",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #454 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1I4lx3qBaY2dzpedegNyj1mWoUk-RcKjH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1I4lx3qBaY2dzpedegNyj1mWoUk-RcKjH",
+  "readerUrl": "https://drive.google.com/file/d/1h3WS7nmBgyRx-z-J659yRVTYxEOk1-zz/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-456",
+  "title": "Uncanny X-Men #456",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #456 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DK70MXHDFjJLd7iix-Dr1LCQ40QgCLz5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DK70MXHDFjJLd7iix-Dr1LCQ40QgCLz5",
+  "readerUrl": "https://drive.google.com/file/d/16BKJxJfQPk_x7uVZRxIwWIlGsFDgPwR5/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-457",
+  "title": "Uncanny X-Men #457",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #457 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12cUZwTc359smZt4lAn9ZEA60U9d_f1lg",
+  "backdrop": "https://lh3.googleusercontent.com/d/12cUZwTc359smZt4lAn9ZEA60U9d_f1lg",
+  "readerUrl": "https://drive.google.com/file/d/1I6u3465r_bkiAX7K665v2KytZs400Gys/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-458",
+  "title": "Uncanny X-Men #458",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #458 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ioSdkS9VNI6x8Fl8IyaXIKrzXWiWq6F4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ioSdkS9VNI6x8Fl8IyaXIKrzXWiWq6F4",
+  "readerUrl": "https://drive.google.com/file/d/1raWd69KJpo_K22R9RinJC-ocvxE7bjJ1/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-459",
+  "title": "Uncanny X-Men #459",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #459 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Misojh9BjWjDhJuLmXd_QzLg1f3q8L6_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Misojh9BjWjDhJuLmXd_QzLg1f3q8L6_",
+  "readerUrl": "https://drive.google.com/file/d/1fHzx_2yQPqitLltaa_dDtUPdWoNAcTAL/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-462",
+  "title": "Uncanny X-Men #462",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #462 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/109mXJRIQHIB5FxyizCqUqcHeGMRjuyyu",
+  "backdrop": "https://lh3.googleusercontent.com/d/109mXJRIQHIB5FxyizCqUqcHeGMRjuyyu",
+  "readerUrl": "https://drive.google.com/file/d/1Jj-tDkk8K6bBbxTdDvOJRvCOlVBE1_7c/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-463",
+  "title": "Uncanny X-Men #463",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #463 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17Rh878TY6ZHaAWfoOXft0dHWezlhNgBD",
+  "backdrop": "https://lh3.googleusercontent.com/d/17Rh878TY6ZHaAWfoOXft0dHWezlhNgBD",
+  "readerUrl": "https://drive.google.com/file/d/1SYDH0_fAgJq75bRllF9fdMNh0tTG0Zd8/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-464",
+  "title": "Uncanny X-Men #464",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #464 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hiO8iYDsrpFAZTwYaa8w9c--NsqcJolm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hiO8iYDsrpFAZTwYaa8w9c--NsqcJolm",
+  "readerUrl": "https://drive.google.com/file/d/1dQxqIUnNX2TQAArsdWqwLL_e9a0hPuLz/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-465",
+  "title": "Uncanny X-Men #465",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #465 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13tI6165DkFbAhIoLuvTeBiDkWzqf234y",
+  "backdrop": "https://lh3.googleusercontent.com/d/13tI6165DkFbAhIoLuvTeBiDkWzqf234y",
+  "readerUrl": "https://drive.google.com/file/d/1h7EZE4gPGi92MnwRb961uSE9MXl4Mtyj/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-466",
+  "title": "Uncanny X-Men #466",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #466 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/164umpyPyq3S_XyFbd7lMAGEtpGDUSqR3",
+  "backdrop": "https://lh3.googleusercontent.com/d/164umpyPyq3S_XyFbd7lMAGEtpGDUSqR3",
+  "readerUrl": "https://drive.google.com/file/d/1318p_jl8p-dwh9I8unHm_zMOZo_P95iq/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-467",
+  "title": "Uncanny X-Men #467",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #467 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kKY7sH_UXhLJghEpE6LadIjMIyJLjzpD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kKY7sH_UXhLJghEpE6LadIjMIyJLjzpD",
+  "readerUrl": "https://drive.google.com/file/d/1yegkzNQYrMqL2s7iSDIWbY44LBhss1YX/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-468",
+  "title": "Uncanny X-Men #468",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #468 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kTRqHFY_IwKyItBljYyn-Y5aOgpaSzu9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kTRqHFY_IwKyItBljYyn-Y5aOgpaSzu9",
+  "readerUrl": "https://drive.google.com/file/d/1CACqE06t3zBqQKFRA-vuB2QBlUd2Ihrt/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-469",
+  "title": "Uncanny X-Men #469",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #469 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1L1gsn2vEPJjKxBz1sZq4FpSKAFoAGFhe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1L1gsn2vEPJjKxBz1sZq4FpSKAFoAGFhe",
+  "readerUrl": "https://drive.google.com/file/d/1AWrBNs5p-Xr90J2sNqjYLJmZgQtUom09/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-470",
+  "title": "Uncanny X-Men #470",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #470 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wfcF8r9TmuPaxcRGugY2OZ8ItCSMCy2m",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wfcF8r9TmuPaxcRGugY2OZ8ItCSMCy2m",
+  "readerUrl": "https://drive.google.com/file/d/1yBQEEQV-MKA8BUQPYpwMfiW2lQTDGK0c/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-471",
+  "title": "Uncanny X-Men #471",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #471 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DfSgRGh6HexqB5OPkSHNwW1qHvAxk34e",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DfSgRGh6HexqB5OPkSHNwW1qHvAxk34e",
+  "readerUrl": "https://drive.google.com/file/d/1KhcprNPX8ShwaRnzHeGG8sg1cCCazeTh/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-472",
+  "title": "Uncanny X-Men #472",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #472 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HgiMjzs7fWqchBhk5QG6qr7QSxzlI8_r",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HgiMjzs7fWqchBhk5QG6qr7QSxzlI8_r",
+  "readerUrl": "https://drive.google.com/file/d/1lHgs0WHTGKY75OU2o4dZ3ml6YtP-KuJV/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-473",
+  "title": "Uncanny X-Men #473",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #473 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16FDhHRyEOCORXTNCKDMJ8-VgDYGmTv18",
+  "backdrop": "https://lh3.googleusercontent.com/d/16FDhHRyEOCORXTNCKDMJ8-VgDYGmTv18",
+  "readerUrl": "https://drive.google.com/file/d/1VT8tw8Soauv81po8k3RT5afyVrhw1o_o/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-474",
+  "title": "Uncanny X-Men #474",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #474 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vXKVNu3dtaeoraiSAVdY-2_snJt5JGeN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vXKVNu3dtaeoraiSAVdY-2_snJt5JGeN",
+  "readerUrl": "https://drive.google.com/file/d/1vaOydCkBDU8bApgMkMXYu_m7DXCw2p5w/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-475",
+  "title": "Uncanny X-Men #475",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #475 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Wnt1Ix0Cwoq3V-Bi486X04jnxe7XkW9d",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Wnt1Ix0Cwoq3V-Bi486X04jnxe7XkW9d",
+  "readerUrl": "https://drive.google.com/file/d/1rfXNIX72LjpBvC5fmSanJ4kUUjEu52gJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-476",
+  "title": "Uncanny X-Men #476",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #476 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18fIQvzQej0iLLukhTk6L9LVMvHeXlfQI",
+  "backdrop": "https://lh3.googleusercontent.com/d/18fIQvzQej0iLLukhTk6L9LVMvHeXlfQI",
+  "readerUrl": "https://drive.google.com/file/d/1JEkSADGLy_qTs7m_1jD_eTyDN3-WnuQU/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-477",
+  "title": "Uncanny X-Men #477",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #477 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1H1A_IZ-e4MLz280LFH01yKrmCwCyYYkN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1H1A_IZ-e4MLz280LFH01yKrmCwCyYYkN",
+  "readerUrl": "https://drive.google.com/file/d/1-Zdw8Jo_H8gFK43ITugg1zSfxGM5-w9B/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-478",
+  "title": "Uncanny X-Men #478",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #478 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GkKiWviX36rZljQDUMMAwxYzVeIiXK_w",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GkKiWviX36rZljQDUMMAwxYzVeIiXK_w",
+  "readerUrl": "https://drive.google.com/file/d/1Im_2RjgtO_JLBLkxYDlz7hfoK9pkycud/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-479",
+  "title": "Uncanny X-Men #479",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #479 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Shbt3dNL3fyS0CxqgrtRvnd0EIb-sfM8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Shbt3dNL3fyS0CxqgrtRvnd0EIb-sfM8",
+  "readerUrl": "https://drive.google.com/file/d/1XRINPAEo2zsK2ypeI0CmFt6-dTN8k4c_/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-480",
+  "title": "Uncanny X-Men #480",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #480 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1MdqiDe2hCpnrErZ7EvvCT5APJoMX1h5R",
+  "backdrop": "https://lh3.googleusercontent.com/d/1MdqiDe2hCpnrErZ7EvvCT5APJoMX1h5R",
+  "readerUrl": "https://drive.google.com/file/d/1ZNm4ZouVAVgIsB0GdW8LG3Q_W6Wl2lk3/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-481",
+  "title": "Uncanny X-Men #481",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #481 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1R-ics2RGJrwZ9Yxv34Neqckn7YktSKcC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1R-ics2RGJrwZ9Yxv34Neqckn7YktSKcC",
+  "readerUrl": "https://drive.google.com/file/d/1Dg_uzcxFFOsOs5e60PCiklc90yiHEVpO/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-482",
+  "title": "Uncanny X-Men #482",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #482 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1iwWcuWVsFwgMPU6_6q1YmJR1GlZcUmjo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1iwWcuWVsFwgMPU6_6q1YmJR1GlZcUmjo",
+  "readerUrl": "https://drive.google.com/file/d/1XSa_Aw0zEO9DTGkZS6oXmRKNOSh1xWqO/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-483",
+  "title": "Uncanny X-Men #483",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #483 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1npIBQVzIkGlKOU4CY5-8xRETce8RXTyD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1npIBQVzIkGlKOU4CY5-8xRETce8RXTyD",
+  "readerUrl": "https://drive.google.com/file/d/1RyWR0-AnfhWHiaaRw1PMdWwNrJYj3fxQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-484",
+  "title": "Uncanny X-Men #484",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #484 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VJr6bvGoLP7VJj_BAoAXLz5n5GzG0zN_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VJr6bvGoLP7VJj_BAoAXLz5n5GzG0zN_",
+  "readerUrl": "https://drive.google.com/file/d/1SBqSLbvAgE0crfTcabPop1FGgF3KCxJY/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-485",
+  "title": "Uncanny X-Men #485",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #485 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1avpwRDQhTK4RV4IidhNa9FLMbfXOV36-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1avpwRDQhTK4RV4IidhNa9FLMbfXOV36-",
+  "readerUrl": "https://drive.google.com/file/d/1VH8Be2ZM272Ka4lmFETfUnAnkuDJ0GrK/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-486",
+  "title": "Uncanny X-Men #486",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #486 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EH8TO1As3_YQm8GEFOx2CWqXXKMhmdP0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EH8TO1As3_YQm8GEFOx2CWqXXKMhmdP0",
+  "readerUrl": "https://drive.google.com/file/d/1FcLy8H8VYvwAEv89Ogoq6uswwE-okiW1/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-488",
+  "title": "Uncanny X-Men #488",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #488 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BCvAznkrnAzI-OdXSARpeIjqWf9dkxnA",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BCvAznkrnAzI-OdXSARpeIjqWf9dkxnA",
+  "readerUrl": "https://drive.google.com/file/d/1L-S8FBs_KwuqbeitsDKiGN3WkEb4I508/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-489",
+  "title": "Uncanny X-Men #489",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #489 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ipdaRjWTH9-CNQxlh2So1Q1ADWvgFyYu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ipdaRjWTH9-CNQxlh2So1Q1ADWvgFyYu",
+  "readerUrl": "https://drive.google.com/file/d/1sBlvu5QUxDyLxOTSEDXJWaG65-s6OdUD/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-490",
+  "title": "Uncanny X-Men #490",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #490 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19Dgk1iN0_0r93_2G_HZO0UaCVbt6HQ9D",
+  "backdrop": "https://lh3.googleusercontent.com/d/19Dgk1iN0_0r93_2G_HZO0UaCVbt6HQ9D",
+  "readerUrl": "https://drive.google.com/file/d/1fNupWLPoczMMta93Eh--i3yEAxsvUtvY/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-491",
+  "title": "Uncanny X-Men #491",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #491 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16kqUxteiM1qqotJCbz6GEN76wd78YJ8p",
+  "backdrop": "https://lh3.googleusercontent.com/d/16kqUxteiM1qqotJCbz6GEN76wd78YJ8p",
+  "readerUrl": "https://drive.google.com/file/d/1pZ6mwls_gNGWkVxPtDK-c-rAFg3nn8kk/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-492",
+  "title": "Uncanny X-Men #492",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #492 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jknzdwNwWHeI9I16ylqWNUZhLBNUuubh",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jknzdwNwWHeI9I16ylqWNUZhLBNUuubh",
+  "readerUrl": "https://drive.google.com/file/d/1OeLk7-kuS2ojHFCJVNkar0lhD7pSUmji/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-493",
+  "title": "Uncanny X-Men #493",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #493 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qtx13O-4JzbA6cSrZwG7XyxYOvorFW4-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qtx13O-4JzbA6cSrZwG7XyxYOvorFW4-",
+  "readerUrl": "https://drive.google.com/file/d/1o42e6KXIEa6Q5dmnrryW-qY5s2Rd1Rj5/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-494",
+  "title": "Uncanny X-Men #494",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #494 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1h4t6oeyEKi9jNhzuAa7UjpOnoxzliWU4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1h4t6oeyEKi9jNhzuAa7UjpOnoxzliWU4",
+  "readerUrl": "https://drive.google.com/file/d/1dfWoPBnC8WhxokK8HMF0TM4skwKD3ADK/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-495",
+  "title": "Uncanny X-Men #495",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #495 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Bb7HhUJ6WNNnSyvlRdzLswNqivyeLYq1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Bb7HhUJ6WNNnSyvlRdzLswNqivyeLYq1",
+  "readerUrl": "https://drive.google.com/file/d/1FSe9OknzS91xWlWg4nOalgpJ0QprN3X1/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-496",
+  "title": "Uncanny X-Men #496",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #496 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/175i7ji3va_CFB7IdpyIJlSJVreIXm9NR",
+  "backdrop": "https://lh3.googleusercontent.com/d/175i7ji3va_CFB7IdpyIJlSJVreIXm9NR",
+  "readerUrl": "https://drive.google.com/file/d/1Lc0MtYhWx2pBZr18Y5p1NB8cXnhP98CZ/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-500",
+  "title": "Uncanny X-Men #500",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #500 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1E0UMROi_6GfhWTCjBd9TphXdTp6yl_6Z",
+  "backdrop": "https://lh3.googleusercontent.com/d/1E0UMROi_6GfhWTCjBd9TphXdTp6yl_6Z",
+  "readerUrl": "https://drive.google.com/file/d/1vnLIUbcBlyfu-MeaDHiBzH7syeacAlQ4/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-501",
+  "title": "Uncanny X-Men #501",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #501 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1be50YoKltaEU5MDmBTuV3HFiBnmRWwe8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1be50YoKltaEU5MDmBTuV3HFiBnmRWwe8",
+  "readerUrl": "https://drive.google.com/file/d/17VutUO5Q7ohy_7sBad2jSL-_j8s3_C8_/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-502",
+  "title": "Uncanny X-Men #502",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #502 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1TieWWgB-3ulPJYq5y58J3A71jGBAh4Tv",
+  "backdrop": "https://lh3.googleusercontent.com/d/1TieWWgB-3ulPJYq5y58J3A71jGBAh4Tv",
+  "readerUrl": "https://drive.google.com/file/d/18vjqQ0ZfEPAdLstdURzqIuCtlkspQGT2/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-503",
+  "title": "Uncanny X-Men #503",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #503 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XLFFFOI802a72NzOTs8kkjvjY9GQUSlY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XLFFFOI802a72NzOTs8kkjvjY9GQUSlY",
+  "readerUrl": "https://drive.google.com/file/d/1WxJ4mmqAtd367qGafcuDokyHB62mNwF4/view?usp=drive_link"
+},
+  {
+  "id": "hq-uncanny-xmen-issue-504",
+  "title": "Uncanny X-Men #504",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1990,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição clássica Uncanny X-Men #504 da Marvel Comics em formato PDF. Acompanhe a saga lendária dos mutantes. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1THoZNh9cR-9Bp6ZXTp48wKPs_uG5A3Gr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1THoZNh9cR-9Bp6ZXTp48wKPs_uG5A3Gr",
+  "readerUrl": "https://drive.google.com/file/d/1wntBcoFYwFtzYIqamI5jqcTdugrouLuK/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
