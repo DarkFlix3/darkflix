@@ -11863,10 +11863,2272 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/1Lq2_EUxUEIoM-PSxuwgdcgxr2F8Tzfy4",
   "readerUrl": "https://drive.google.com/file/d/1565d3U3Ory1NHrImd0LxnCEqwtmmgpZd/view?usp=drive_link"
 }
+,
+  {
+  "id": "hq-turma-da-monica-1-almanaque-da-magali-ed-globo-51",
+  "title": "Almanaque Da Magali - Ed Globo 51",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Almanaque Da Magali - Ed Globo 51 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16hKJILJzLuj6uX2_a7cGZ-NYDRGrWaLE",
+  "backdrop": "https://lh3.googleusercontent.com/d/16hKJILJzLuj6uX2_a7cGZ-NYDRGrWaLE",
+  "readerUrl": "https://drive.google.com/file/d/1WJnbhOXLa84QT_l_xdiKqhkHladjY9fX/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-2-almanaque-da-monica-01",
+  "title": "Almanaque Da Monica 01",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Almanaque Da Monica 01 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tsBytkuJRlEw1zZDhBSG4cblWM6duu4L",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tsBytkuJRlEw1zZDhBSG4cblWM6duu4L",
+  "readerUrl": "https://drive.google.com/file/d/1MOd9EgLGmY8E_h-F9RVmX9QMjrJiKdU9/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-3-almanaque-magali-49",
+  "title": "Almanaque Magali 49",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Almanaque Magali 49 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13gZp-byYoqffBjQRTjIcWC4_OuVvgo6i",
+  "backdrop": "https://lh3.googleusercontent.com/d/13gZp-byYoqffBjQRTjIcWC4_OuVvgo6i",
+  "readerUrl": "https://drive.google.com/file/d/1YinyoPom5hH46WxgX28lTPa9d3FGs6ln/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-4-almanaque-piteco-e-horacio-06",
+  "title": "Almanaque Piteco E Horacio 06",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Almanaque Piteco E Horacio 06 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KFB_xKQpRkJK7Vu0DRhnPnMjnEWb0fzu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KFB_xKQpRkJK7Vu0DRhnPnMjnEWb0fzu",
+  "readerUrl": "https://drive.google.com/file/d/1Picol1xyykgt1BMefxisBOsoVaZ06iBR/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-5-almanaque-tematico-cebolinha-invencoes",
+  "title": "Almanaque Tematico Cebolinha Invencoes",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Almanaque Tematico Cebolinha Invencoes da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uVHtr7F6_UqnS6byEjg3oasP4-3f2RE6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uVHtr7F6_UqnS6byEjg3oasP4-3f2RE6",
+  "readerUrl": "https://drive.google.com/file/d/1cLBccL7mzjQCo2vmP_Tp3dJw2B3Onc9R/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-6-almanaque-tematico-016-vampiros",
+  "title": "Almanaque Tematico 016 - Vampiros",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Almanaque Tematico 016 - Vampiros da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/120A6GUyG7c9oieGIiFu5yOzIh1ur2YVv",
+  "backdrop": "https://lh3.googleusercontent.com/d/120A6GUyG7c9oieGIiFu5yOzIh1ur2YVv",
+  "readerUrl": "https://drive.google.com/file/d/1PtNtmQl0iQzlnauHWRTSD_46mYB8Td3c/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-7-almanaque-chicobento-n39",
+  "title": "Almanaque Chicobento N39",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Almanaque Chicobento N39 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-Y2eCbXC7MMZ3TTdbwf1YS2sZkjmOkN_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-Y2eCbXC7MMZ3TTdbwf1YS2sZkjmOkN_",
+  "readerUrl": "https://drive.google.com/file/d/1nxq5JsyjpW0ZcUP6-Q4mUAsYaA2W93Wa/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-8-avaturma",
+  "title": "Avaturma",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Avaturma da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HWtALIqSPI8K9glkgznByLUDYfKvUcfm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HWtALIqSPI8K9glkgznByLUDYfKvUcfm",
+  "readerUrl": "https://drive.google.com/file/d/1o2ZSgvGVJ-10fQXXA-S5lYpWVkjlMU00/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-9-brincadeiras",
+  "title": "Brincadeiras",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Brincadeiras da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1p6aiXdlf7B8w6Urj6M87SX7TB1MbVYNO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1p6aiXdlf7B8w6Urj6M87SX7TB1MbVYNO",
+  "readerUrl": "https://drive.google.com/file/d/1-5I7CzTGhFcvQeg0z3jG9VK4mOBo7LET/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-10-capitao-feio",
+  "title": "Capitao Feio",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Capitao Feio da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14drtzJ6L_xzMAi3qeqFNcolpvgJP4CCM",
+  "backdrop": "https://lh3.googleusercontent.com/d/14drtzJ6L_xzMAi3qeqFNcolpvgJP4CCM",
+  "readerUrl": "https://drive.google.com/file/d/1oIb48EXFuJT-WCZDYX29OtdnngpYNXHW/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-11-cascao-153",
+  "title": "Cascao 153",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 153 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1h7YHkUKuzmhquacldt9oo7VcyvnWTaVT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1h7YHkUKuzmhquacldt9oo7VcyvnWTaVT",
+  "readerUrl": "https://drive.google.com/file/d/1RU_G4Meo2QMp7m5WgSR7q95nPBiAc7mp/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-12-cascao-25-panini",
+  "title": "Cascao 25 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 25 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FpUZj5qeVnzgwAb7C3-ToIP1glkEwNbH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FpUZj5qeVnzgwAb7C3-ToIP1glkEwNbH",
+  "readerUrl": "https://drive.google.com/file/d/1MnfYANB0p428G_wwXezXSMvhmTmx3ZjB/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-13-cascao-32-panini",
+  "title": "Cascao 32 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 32 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gwo-CE_NGO9X4vOB-15-aHxArkU8tkZ3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gwo-CE_NGO9X4vOB-15-aHxArkU8tkZ3",
+  "readerUrl": "https://drive.google.com/file/d/1N8dHFiTHNV0pSIFQTzBJcN4Dyg0rGxYQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-14-cascao-328-globo",
+  "title": "Cascao 328 Globo",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 328 Globo da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Vgo69VAs8tFiIqwGTNQxlLVem683hEZH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Vgo69VAs8tFiIqwGTNQxlLVem683hEZH",
+  "readerUrl": "https://drive.google.com/file/d/1slOOn6LGmRT02GmOh71zK7mf7XPovev7/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-15-cascao-34-panini",
+  "title": "Cascao 34 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 34 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NUKAb09FXgkiWamYD8_IIr3_ipT-ZF96",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NUKAb09FXgkiWamYD8_IIr3_ipT-ZF96",
+  "readerUrl": "https://drive.google.com/file/d/1Ol3G4pfNYs0IdPRSmOAITe405xwt8VDX/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-16-cascao-40",
+  "title": "Cascao 40",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 40 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BZgVYQ89Y4NhVz1RQudzuMJGcnTxG3Z9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BZgVYQ89Y4NhVz1RQudzuMJGcnTxG3Z9",
+  "readerUrl": "https://drive.google.com/file/d/1ETsSvj1F_MCJSbrwqd6TPeGQTK03EdR6/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-17-cascao-53-panini",
+  "title": "Cascao 53 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 53 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Iv6xVa6RinP9Eu8MYlu5RtErk7POe7b-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Iv6xVa6RinP9Eu8MYlu5RtErk7POe7b-",
+  "readerUrl": "https://drive.google.com/file/d/1FYGDYeYseH001Ug9ATzDIutlYcojQWQh/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-18-cascao-62-panini",
+  "title": "Cascao 62 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 62 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PjoFtG9fxywKKqZhGbAiz-Hdo6GoiEWe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PjoFtG9fxywKKqZhGbAiz-Hdo6GoiEWe",
+  "readerUrl": "https://drive.google.com/file/d/18am6zlJLMDayp1VWbEg7AdBovuzO5Y9s/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-19-cascao-globo-175",
+  "title": "Cascao Globo 175",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao Globo 175 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IxK4KSbiT_e6GWerU4v-3r_ViDi35urJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IxK4KSbiT_e6GWerU4v-3r_ViDi35urJ",
+  "readerUrl": "https://drive.google.com/file/d/1KTTi09c7vydFdeFfir7Ck3Y6clWJ-x6B/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-20-cascao-n-37",
+  "title": "Cascao N 37",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao N 37 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EUik609VOXXXBvQVJBVQPhPTTNWNNN3N",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EUik609VOXXXBvQVJBVQPhPTTNWNNN3N",
+  "readerUrl": "https://drive.google.com/file/d/1kSqGQtFQBp0t8SS7FlCxUGmt7cJ3oXeT/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-21-cascao-panini-02",
+  "title": "Cascao Panini 02",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao Panini 02 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RUaJ4gDLFRfFZbRujaJC6SW9uG9vDELP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RUaJ4gDLFRfFZbRujaJC6SW9uG9vDELP",
+  "readerUrl": "https://drive.google.com/file/d/1PHZY0rIE6rjv1c4pwDWLRngKmVmoW82S/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-22-cascao-panini-47",
+  "title": "Cascao Panini 47",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao Panini 47 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Lv0yLvoH9dXE747hqXxj3j1uHJgVfv9C",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Lv0yLvoH9dXE747hqXxj3j1uHJgVfv9C",
+  "readerUrl": "https://drive.google.com/file/d/1wju7cBhsoK4r2-c8lxeCGluzXEd5CvUz/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-23-cascao-panini-52",
+  "title": "Cascao Panini 52",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao Panini 52 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1O0A856-JPL4xEWCmGTIWn7iQSqxPCMaS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1O0A856-JPL4xEWCmGTIWn7iQSqxPCMaS",
+  "readerUrl": "https://drive.google.com/file/d/1sodGolnwaPIYITBRLkEwjuzBI1mpGdh-/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-24-cascao-015",
+  "title": "Cascao 015",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 015 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vJPYV7-Xg1Imeh35Jph_stIfyT81CvJN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vJPYV7-Xg1Imeh35Jph_stIfyT81CvJN",
+  "readerUrl": "https://drive.google.com/file/d/13IwPr1E3vZZn0tviFvfwBc7c_HYynNCB/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-25-cascao-423",
+  "title": "Cascao 423",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 423 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1T8vC3GKLZaFWmjAekSbfvtgi4lz3Kg4N",
+  "backdrop": "https://lh3.googleusercontent.com/d/1T8vC3GKLZaFWmjAekSbfvtgi4lz3Kg4N",
+  "readerUrl": "https://drive.google.com/file/d/1iUdKZOva7pbt9L5Eg5Z_dvoR4glat-HD/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-26-cascao-437",
+  "title": "Cascao 437",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 437 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rjvWc7z4wE11LwGc_8bVKOB2bBmlnM-0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rjvWc7z4wE11LwGc_8bVKOB2bBmlnM-0",
+  "readerUrl": "https://drive.google.com/file/d/1c7lMFwcV6m_QaaxMlWpNiY5oOhPFHHXq/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-27-cascao-462",
+  "title": "Cascao 462",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao 462 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ed4tBJpDNi2ZQNEZrZLCQBM3nnKnq8D7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ed4tBJpDNi2ZQNEZrZLCQBM3nnKnq8D7",
+  "readerUrl": "https://drive.google.com/file/d/1Yh3ATjfW7msJdTbExQTNA3_7TaNgGLqZ/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-28-cascao21panini",
+  "title": "Cascao21panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao21panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1G0OQmLT0DZKXLtFOEp303biDPtBwJilP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1G0OQmLT0DZKXLtFOEp303biDPtBwJilP",
+  "readerUrl": "https://drive.google.com/file/d/1xxftKEvgvCE16tkv7mOS6X5BsRRvj1bp/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-29-cascao48-panini",
+  "title": "Cascao48 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao48 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ErddjLV0uQhxtwxBakAs2zfLG366_Bb3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ErddjLV0uQhxtwxBakAs2zfLG366_Bb3",
+  "readerUrl": "https://drive.google.com/file/d/1h60oCCQ4g7-uxDOeNoxPXl9RAsUAxYPz/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-30-cascao61panini",
+  "title": "Cascao61Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cascao61Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nugE33J2WtYRyXECtfHEWIUusYbvMJzo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nugE33J2WtYRyXECtfHEWIUusYbvMJzo",
+  "readerUrl": "https://drive.google.com/file/d/1qs8pzr-UrlnEJ1jKkt7xTnWygJ_R2cTi/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-31-cebolinha-28-a-fuga-pelos-infinitos-gibis",
+  "title": "Cebolinha -28 A Fuga Pelos Infinitos Gibis",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha -28 A Fuga Pelos Infinitos Gibis da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZJwPKcgs2QM1uF3KKp3fGBXv3atepTlY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZJwPKcgs2QM1uF3KKp3fGBXv3atepTlY",
+  "readerUrl": "https://drive.google.com/file/d/18mcxM0bmWi-SwGn5joKHok_JTobK980W/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-32-cebolinha-099",
+  "title": "Cebolinha 099",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha 099 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ytcBwMq-r2FZpDw4VpnJp9dlGj-Y-xPi",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ytcBwMq-r2FZpDw4VpnJp9dlGj-Y-xPi",
+  "readerUrl": "https://drive.google.com/file/d/1pmWorU03eMEn6CrCGls7IcHWohkU1-7h/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-33-cebolinha-111-globo",
+  "title": "Cebolinha 111 Globo",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha 111 Globo da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dYSfjTAxaQrRmFet5H3ueQ62U9DuCfw2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dYSfjTAxaQrRmFet5H3ueQ62U9DuCfw2",
+  "readerUrl": "https://drive.google.com/file/d/176EWKKiNk6agFk-Bd5QZmWApxbCpKGoU/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-34-cebolinha-19-panini",
+  "title": "Cebolinha 19 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha 19 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nHHyMIovzSTg-tpHx4r25RDMPPmAyk29",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nHHyMIovzSTg-tpHx4r25RDMPPmAyk29",
+  "readerUrl": "https://drive.google.com/file/d/1DAWMMjgLUGJBQ-q7W9wmBYsOPzM5UyBT/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-35-cebolinha-33-panini",
+  "title": "Cebolinha 33 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha 33 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15F6kHLzcF-UTxtz1Kj3YnaiXzyGjnVcz",
+  "backdrop": "https://lh3.googleusercontent.com/d/15F6kHLzcF-UTxtz1Kj3YnaiXzyGjnVcz",
+  "readerUrl": "https://drive.google.com/file/d/1Qrrt7J_DBZQNvqAkOdb0LC6eXHJtouCt/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-36-cebolinha-46-panini",
+  "title": "Cebolinha 46 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha 46 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1usy3VJqzteRCU5WkKOOqGHevfo3tXeKJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1usy3VJqzteRCU5WkKOOqGHevfo3tXeKJ",
+  "readerUrl": "https://drive.google.com/file/d/1vkL2YfZH9HyOa3ol2mdPit5xLmrMaduk/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-37-cebolinha-66-panini",
+  "title": "Cebolinha 66 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha 66 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_0csGG1zpj_XntzdM4XpBH4xGCL6qFAc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_0csGG1zpj_XntzdM4XpBH4xGCL6qFAc",
+  "readerUrl": "https://drive.google.com/file/d/1UVU6_41xtJZU1aCUuKB9ELyhr_6m6duD/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-38-cebolinha-ed-abril-121",
+  "title": "Cebolinha Ed Abril 121",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha Ed Abril 121 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FxDTySn0sKFxJcY5yO_my1W1z2xXkB5B",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FxDTySn0sKFxJcY5yO_my1W1z2xXkB5B",
+  "readerUrl": "https://drive.google.com/file/d/1KzuKoPNXxczXhyrxfgJVTdNWJr8mz4CA/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-39-cebolinha-panini-08",
+  "title": "Cebolinha Panini 08",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha Panini 08 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wxjJyDJIDmeu4ue9Pj0VgX475k0M2rLs",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wxjJyDJIDmeu4ue9Pj0VgX475k0M2rLs",
+  "readerUrl": "https://drive.google.com/file/d/1cy7N7FwkLTAUr7UVRSLTfcCk6C4jiyBh/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-40-cebolinha-panini-18",
+  "title": "Cebolinha Panini 18",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha Panini 18 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13j6NWt1zHZe4MViyyz6luG3iWEqQEzEQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/13j6NWt1zHZe4MViyyz6luG3iWEqQEzEQ",
+  "readerUrl": "https://drive.google.com/file/d/13voUEVbgexZ1VR8xmtzejrOsYAWTIQpT/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-41-cebolinha-panini-42",
+  "title": "Cebolinha Panini 42",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha Panini 42 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZE-LQlBNJBNkui-8qDdNsN4_JgfLLjFy",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZE-LQlBNJBNkui-8qDdNsN4_JgfLLjFy",
+  "readerUrl": "https://drive.google.com/file/d/1AB7v2hj6lEGkYlAw58aQXGE_wIkS3Pva/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-42-cebolinha-panini-47",
+  "title": "Cebolinha Panini 47",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha Panini 47 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FNIgA-G9iIAMrkYqH-q036njbOzkIjgN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FNIgA-G9iIAMrkYqH-q036njbOzkIjgN",
+  "readerUrl": "https://drive.google.com/file/d/1ik3RAL2gGX7VjG_EETgPbvHTUaX1Q1a9/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-43-cebolinha-panini-59",
+  "title": "Cebolinha Panini 59",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha Panini 59 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qgwlgTNSVy57kSFTG_FyiL3bcf5PSIwg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qgwlgTNSVy57kSFTG_FyiL3bcf5PSIwg",
+  "readerUrl": "https://drive.google.com/file/d/1F9Kb5EZj0tupL4aVhwn833uMfjkvhzpV/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-44-cebolinha-wilson-claudio-arts",
+  "title": "Cebolinha Wilson Claudio Arts",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha Wilson Claudio Arts da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10kJR-r2Df3ckcxz9cPaN2p1aPpZ0zJtN",
+  "backdrop": "https://lh3.googleusercontent.com/d/10kJR-r2Df3ckcxz9cPaN2p1aPpZ0zJtN",
+  "readerUrl": "https://drive.google.com/file/d/1iK18TJ-anYG_49AY-v0q-eF9FX4V5TMN/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-45-cebolinha-017",
+  "title": "Cebolinha 017",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha 017 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NinijuVn7DMjFbxv7aotLAYPECeIiWRO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NinijuVn7DMjFbxv7aotLAYPECeIiWRO",
+  "readerUrl": "https://drive.google.com/file/d/1yOz7PjhBuSVO6Tc81gdk0AiAQF8NYKoa/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-46-cebolinha-055",
+  "title": "Cebolinha 055",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha 055 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LZ_TrX1Mxx1UszlvzRwZRjTf3gFaoz7T",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LZ_TrX1Mxx1UszlvzRwZRjTf3gFaoz7T",
+  "readerUrl": "https://drive.google.com/file/d/1sxwqHFNt3SRig90noBQHejIWME8u-Fmn/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-47-cebolinha-089-almanaque",
+  "title": "Cebolinha 089 - Almanaque",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha 089 - Almanaque da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xypToUc5eFvixszIDapO5ri45BKSmvc-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xypToUc5eFvixszIDapO5ri45BKSmvc-",
+  "readerUrl": "https://drive.google.com/file/d/1LWKB1MUcqLWR7rcf7rnXtK_dURF7lgyJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-48-cebolinha-209",
+  "title": "Cebolinha 209",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha 209 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EujLMbxr-xJgeVB2-xtDKam-_zkxjuwB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EujLMbxr-xJgeVB2-xtDKam-_zkxjuwB",
+  "readerUrl": "https://drive.google.com/file/d/1_z0AKk_cisubg1fdddFUJh2OQCnzKn0K/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-49-cebolinha38panini",
+  "title": "Cebolinha38Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha38Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mJCkgA-uWEVTukgJgnuN78QdRE5xPzK_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mJCkgA-uWEVTukgJgnuN78QdRE5xPzK_",
+  "readerUrl": "https://drive.google.com/file/d/1Qn4LbTBCaxUa4kIUBfEfG_MWBsmbglKo/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-50-cebolinha38panini",
+  "title": "Cebolinha38Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha38Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ayWILwOiVATsNc6_Vw-tN6CgCUaBqWVq",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ayWILwOiVATsNc6_Vw-tN6CgCUaBqWVq",
+  "readerUrl": "https://drive.google.com/file/d/1qWQrFw_4wlO4EhtIcxJKtDcWUvFe1uhv/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-51-cebolinha39panini",
+  "title": "Cebolinha39Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Cebolinha39Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1fWsnfgAgOtTtEoXVMSedUke00gMO4HBm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1fWsnfgAgOtTtEoXVMSedUke00gMO4HBm",
+  "readerUrl": "https://drive.google.com/file/d/1_PhaIEcFVdzSlJ_2tiPrs2vZfLrUyvdY/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-52-chico-bento-panini-01",
+  "title": "Chico Bento Panini 01",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Chico Bento Panini 01 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UVwkJSpPwoGTwxSQejwmcPjx18b-qEZW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UVwkJSpPwoGTwxSQejwmcPjx18b-qEZW",
+  "readerUrl": "https://drive.google.com/file/d/18ts546i1_7OaItzMjYd7qvzEPqO1RM9U/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-53-chico-bento-panini-22",
+  "title": "Chico Bento Panini 22",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Chico Bento Panini 22 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19pAzQsA4bT99WCNBxYQDVGH031gb4EVw",
+  "backdrop": "https://lh3.googleusercontent.com/d/19pAzQsA4bT99WCNBxYQDVGH031gb4EVw",
+  "readerUrl": "https://drive.google.com/file/d/1P6dRrtEme652KQv92fM717tgxZZ7hG3r/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-54-chico-bento-panini-56",
+  "title": "CHICO BENTO PANINI 56",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição CHICO BENTO PANINI 56 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1sLa1UwrNpBWRRJexkW7nsO_m7OSyPkpS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1sLa1UwrNpBWRRJexkW7nsO_m7OSyPkpS",
+  "readerUrl": "https://drive.google.com/file/d/1U0kbO1NA9ohzU3mjR0tpJKXCyz831RA3/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-55-chico-bento-panini-58",
+  "title": "Chico Bento Panini 58",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Chico Bento Panini 58 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CCGvslZ2RYqvlAiCzvLuVgpjM6wb4V4q",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CCGvslZ2RYqvlAiCzvLuVgpjM6wb4V4q",
+  "readerUrl": "https://drive.google.com/file/d/17x4NFtAo-zSg4VGE_r81dfH731eIOFqi/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-56-chico-bento-panini-61",
+  "title": "Chico Bento Panini 61",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Chico Bento Panini 61 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oDfR39tnn82GrIm2EFa5kIA6lwgVzptg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oDfR39tnn82GrIm2EFa5kIA6lwgVzptg",
+  "readerUrl": "https://drive.google.com/file/d/1ghnbKvDopJrRIpq_SIeOy7ktLraoaFeX/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-57-chico-bento-024",
+  "title": "Chico Bento 024",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Chico Bento 024 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1x32l055SWv5TD5ci3zaui0Oi_TnMGDga",
+  "backdrop": "https://lh3.googleusercontent.com/d/1x32l055SWv5TD5ci3zaui0Oi_TnMGDga",
+  "readerUrl": "https://drive.google.com/file/d/1yjW4nZk_FD0jJqGvMAGtdjUIxXvCLueP/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-58-chico-bento-032",
+  "title": "Chico Bento 032",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Chico Bento 032 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RSu5grPCNJjnrfGHAb7MaY8TMS9LTgiI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RSu5grPCNJjnrfGHAb7MaY8TMS9LTgiI",
+  "readerUrl": "https://drive.google.com/file/d/1RmDgjjjUlDToVCF4w6sw8PmYWSFFDLyg/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-59-chico-bento-064",
+  "title": "Chico Bento 064",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Chico Bento 064 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1O5CzJKttiD1ZTD2bQEFbk120GnCdoLLL",
+  "backdrop": "https://lh3.googleusercontent.com/d/1O5CzJKttiD1ZTD2bQEFbk120GnCdoLLL",
+  "readerUrl": "https://drive.google.com/file/d/1S21x_fXTHpS4zNAV1v16oNcT28dHiZVt/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-60-chico-bento-globo-340",
+  "title": "Chico Bento Globo 340",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Chico Bento Globo 340 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/132nPt74dlNmvLrGRLN9uLyUc15Cgk6mj",
+  "backdrop": "https://lh3.googleusercontent.com/d/132nPt74dlNmvLrGRLN9uLyUc15Cgk6mj",
+  "readerUrl": "https://drive.google.com/file/d/1GmFVmUVf08C6xgS3CedF_Dn7j0HoXABi/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-61-chico-bento-globo-340",
+  "title": "Chico Bento Globo 340",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Chico Bento Globo 340 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oY2jK71xRI25W1DKP9COdZgLEE6gj7r3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oY2jK71xRI25W1DKP9COdZgLEE6gj7r3",
+  "readerUrl": "https://drive.google.com/file/d/1_UnXF8IHgQ5Tj192diQky3e1XiI8Ycs8/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-62-classicos-do-cinema-n8",
+  "title": "Classicos Do Cinema N8",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Classicos Do Cinema N8 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Zyv9RMTajNe81fS5EXa6EYQZhyq_Zqvt",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Zyv9RMTajNe81fS5EXa6EYQZhyq_Zqvt",
+  "readerUrl": "https://drive.google.com/file/d/1Iden76kX4YyHNXOybUgsN31ZPzd8s5d2/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-63-classicos-do-cinema-02-imundo-perdido",
+  "title": "Classicos Do Cinema 02 - Imundo Perdido",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Classicos Do Cinema 02 - Imundo Perdido da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/11_leHMsela4zHYz8wdUQnZCFfXUW6E1c",
+  "backdrop": "https://lh3.googleusercontent.com/d/11_leHMsela4zHYz8wdUQnZCFfXUW6E1c",
+  "readerUrl": "https://drive.google.com/file/d/1ZeREbgagZYoNJSuaSGXEQyhXfUAmU3y-/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-64-classicos-do-cinema-026-coelho-de-ferro",
+  "title": "Classicos Do Cinema 026 - Coelho De Ferro",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Classicos Do Cinema 026 - Coelho De Ferro da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BhDKgLxsi4koKk7rnaRAG4WagHLb5nqE",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BhDKgLxsi4koKk7rnaRAG4WagHLb5nqE",
+  "readerUrl": "https://drive.google.com/file/d/1Ur2N2GcBYtanbeuc00gvvi87wQ6T6sg9/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-65-classicos-do-cinema-22",
+  "title": "Classicos Do Cinema 22",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Classicos Do Cinema 22 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12lZP4DuaCZ7rDp4-ZMGnXpLhNUwKo6Bd",
+  "backdrop": "https://lh3.googleusercontent.com/d/12lZP4DuaCZ7rDp4-ZMGnXpLhNUwKo6Bd",
+  "readerUrl": "https://drive.google.com/file/d/162P3GUaGCjKXCbyzmgZHFqXRUTZrLDOI/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-66-globo-cebolinha-107",
+  "title": "Globo - Cebolinha 107",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Globo - Cebolinha 107 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZejsSyO6eFM2PX3E-jXeyaAtC1mt1Rd5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZejsSyO6eFM2PX3E-jXeyaAtC1mt1Rd5",
+  "readerUrl": "https://drive.google.com/file/d/1Zb2k9Vj_j6IN6zbQQH4hZ94Ms3HWUCsZ/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-67-globo-cebolinha-107",
+  "title": "Globo - Cebolinha 107",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Globo - Cebolinha 107 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_ytRpSB6wnvnPM_gpBy7T_X9-TPt6eOu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_ytRpSB6wnvnPM_gpBy7T_X9-TPt6eOu",
+  "readerUrl": "https://drive.google.com/file/d/1B71SR4WJQusreCxWBqt5ZabKG1H3lm1E/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-68-globo-cebolinha-212",
+  "title": "Globo - Cebolinha 212",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Globo - Cebolinha 212 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lNAL8mcu0dlOo5JRxntftWmQ2Y094ftj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lNAL8mcu0dlOo5JRxntftWmQ2Y094ftj",
+  "readerUrl": "https://drive.google.com/file/d/1y1Yj0aO0rhEr6pHnZd2Nvn8nJqllprKj/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-69-globo-cebolinha-212",
+  "title": "Globo - Cebolinha 212",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Globo - Cebolinha 212 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1yYIR0p1mWtwOe6m5OmdO6I74cuVX68bK",
+  "backdrop": "https://lh3.googleusercontent.com/d/1yYIR0p1mWtwOe6m5OmdO6I74cuVX68bK",
+  "readerUrl": "https://drive.google.com/file/d/132yzcMlm-rmtkYNZozkACCYqtde8BO1m/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-70-globo-monica-235",
+  "title": "Globo - Monica 235",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Globo - Monica 235 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-uTF466G0gX7x5mha14s-3ihjbklrUBb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-uTF466G0gX7x5mha14s-3ihjbklrUBb",
+  "readerUrl": "https://drive.google.com/file/d/1htXjls1etFDXMAR9ZKdef4NRTuC6IEuh/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-71-historinhas-de-duas-paginas-01",
+  "title": "Historinhas De Duas Paginas 01",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Historinhas De Duas Paginas 01 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vjIe2FSGa4mwBjD1ndkXuoLBECf9mF7G",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vjIe2FSGa4mwBjD1ndkXuoLBECf9mF7G",
+  "readerUrl": "https://drive.google.com/file/d/1iY_tncj350CnGHlGcL_EVWgBokkCNs_M/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-72-magali-229",
+  "title": "MAGALI 229",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição MAGALI 229 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oWg3wtGsbvk29GLmmwLo1n9ZmxAfM6ec",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oWg3wtGsbvk29GLmmwLo1n9ZmxAfM6ec",
+  "readerUrl": "https://drive.google.com/file/d/120T4-ARTyWJaVG2hssiBLD9UNgtqSE8S/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-73-magali-347",
+  "title": "Magali 347",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Magali 347 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eCibYW0OoWDlNREP_L9abo9XD6rfAhnT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eCibYW0OoWDlNREP_L9abo9XD6rfAhnT",
+  "readerUrl": "https://drive.google.com/file/d/1QF63rKhFsmfKsrg9t3CLh0ZvlpGaw7tq/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-74-magali-352-globo",
+  "title": "Magali 352 Globo",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Magali 352 Globo da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14jKXfhDqPfRpRGnVmBKEVBQwHuh_x19M",
+  "backdrop": "https://lh3.googleusercontent.com/d/14jKXfhDqPfRpRGnVmBKEVBQwHuh_x19M",
+  "readerUrl": "https://drive.google.com/file/d/1cLkfXWHDS7f8gnIRAVYGRnRvFZQoxGER/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-75-magali-363",
+  "title": "Magali 363",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Magali 363 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DQFbE56R64hm_x1Zn8MUw_JY12aT6wAV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DQFbE56R64hm_x1Zn8MUw_JY12aT6wAV",
+  "readerUrl": "https://drive.google.com/file/d/15x8jMCZsngCNh59yqyKaoiUvAQvEm9wJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-76-magali-coca-cola",
+  "title": "Magali Coca Cola",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Magali Coca Cola da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1JuRTuPkuFYCAq3l4pssFm2MQyhq-P9Rm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1JuRTuPkuFYCAq3l4pssFm2MQyhq-P9Rm",
+  "readerUrl": "https://drive.google.com/file/d/1_vzurOwKVDinj7bTT40GB8Fi1GM-VblO/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-77-magali-coca-cola",
+  "title": "Magali Coca Cola",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Magali Coca Cola da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1j2v1YZKoFHH_XnHb4tRGn5vp6xqBTNH5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1j2v1YZKoFHH_XnHb4tRGn5vp6xqBTNH5",
+  "readerUrl": "https://drive.google.com/file/d/1ZqWa_NWDOv6p42hSvtMC5ShEOBg39YeB/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-78-magali-panini-10",
+  "title": "Magali Panini 10",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Magali Panini 10 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YaVlxXpNanvLGliuUGo96HkNBhvXtGI9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YaVlxXpNanvLGliuUGo96HkNBhvXtGI9",
+  "readerUrl": "https://drive.google.com/file/d/1AyBzHym3X9OoMX_VS6F4-dGT907TgILO/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-79-magali-panini-52",
+  "title": "Magali Panini 52",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Magali Panini 52 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WRZIYLkrQAnGt0LIKMvtXCiDROjuiM8Z",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WRZIYLkrQAnGt0LIKMvtXCiDROjuiM8Z",
+  "readerUrl": "https://drive.google.com/file/d/1savWIk2-vF7Xloo2MGGX-6R7q0q-GVEc/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-80-magali-002",
+  "title": "Magali 002",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Magali 002 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oxo5J2XFWgK2YjdktK68JzyDisvip_E9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oxo5J2XFWgK2YjdktK68JzyDisvip_E9",
+  "readerUrl": "https://drive.google.com/file/d/1MRvl8JSKzhISfZ-y6dSXV1XLqKrSvn0b/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-81-magali-054-almanaque",
+  "title": "Magali 054 - Almanaque",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Magali 054 - Almanaque da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1x-XY9NXHO6q81hfbiREIiOJUCOiHwhvN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1x-XY9NXHO6q81hfbiREIiOJUCOiHwhvN",
+  "readerUrl": "https://drive.google.com/file/d/1-I254OHNEOih-rOOPDww-H8JHIAFuncU/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-82-mauricio-apresenta-05-monica-e-os-barbaros",
+  "title": "Mauricio Apresenta 05 - Monica E Os Barbaros",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Mauricio Apresenta 05 - Monica E Os Barbaros da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1D1PzFOi6YZvyruWU5XfDW9vv6HpvrDVN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1D1PzFOi6YZvyruWU5XfDW9vv6HpvrDVN",
+  "readerUrl": "https://drive.google.com/file/d/1Siu6IYN47Yv7uStbJihAI8y_ab4BVYNQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-83-monica-ed-globo-100",
+  "title": "Monica - Ed Globo 100",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica - Ed Globo 100 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1AqsgQ5q-ywrS3ppNUueUMV-jE5LvBR0h",
+  "backdrop": "https://lh3.googleusercontent.com/d/1AqsgQ5q-ywrS3ppNUueUMV-jE5LvBR0h",
+  "readerUrl": "https://drive.google.com/file/d/1KUopXPZeExjoNlWpPVTjKjq06EQ5g076/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-84-monica-ed-globo-69",
+  "title": "Monica - Ed Globo 69",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica - Ed Globo 69 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1g5Hk69cLet_rsrl6W68WpaCHW-MM7RW2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1g5Hk69cLet_rsrl6W68WpaCHW-MM7RW2",
+  "readerUrl": "https://drive.google.com/file/d/1-Yv6xnSPn8VuEAANmhd7jSL4b_JpmVrI/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-85-monica-14-panini",
+  "title": "Monica 14 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica 14 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1L5ZBNfGelYokNTzanvuGXZZsd0xAnqfl",
+  "backdrop": "https://lh3.googleusercontent.com/d/1L5ZBNfGelYokNTzanvuGXZZsd0xAnqfl",
+  "readerUrl": "https://drive.google.com/file/d/1ALtUtqj-Oinhb_XG20UtbUVh9MRoFDRB/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-86-monica-226",
+  "title": "Monica 226",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica 226 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ku97aEuzMyS1C_HSopvl6zPSopZpKZJU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ku97aEuzMyS1C_HSopvl6zPSopZpKZJU",
+  "readerUrl": "https://drive.google.com/file/d/1r4872ZKdrhdRFftYjQpSTjG4KL6g7y8y/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-87-monica-32-panini",
+  "title": "Monica 32 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica 32 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-pYtA-kEBSLuKWnkk_Tl5uarDvhdj2vq",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-pYtA-kEBSLuKWnkk_Tl5uarDvhdj2vq",
+  "readerUrl": "https://drive.google.com/file/d/1x6gAbM_nEHoVdCsc3iOz9ZyK5VFsemyg/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-88-monica-52-panini",
+  "title": "Monica 52 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica 52 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ekuvg3CGq_iP8L7xuNUPhzMWBslVT8aQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ekuvg3CGq_iP8L7xuNUPhzMWBslVT8aQ",
+  "readerUrl": "https://drive.google.com/file/d/1aGiIjvvbZqLwL62NcMxa6JxmMG2MYPTu/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-89-monica-panini-01",
+  "title": "Monica Panini 01",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica Panini 01 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1aoZ4FGpQPSFjJs-Ph6-OlBhFRBFo2bas",
+  "backdrop": "https://lh3.googleusercontent.com/d/1aoZ4FGpQPSFjJs-Ph6-OlBhFRBFo2bas",
+  "readerUrl": "https://drive.google.com/file/d/1LgW8wCitPEpYvjMo3HAvpZNFDhkDY2Jt/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-90-monica-panini-57",
+  "title": "Monica Panini 57",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica Panini 57 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Y9vxYkw4uuslwxdJrjfimB47pFleFWYb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Y9vxYkw4uuslwxdJrjfimB47pFleFWYb",
+  "readerUrl": "https://drive.google.com/file/d/1fV8MslVplVjOV_QCvsIkRU-TwQiCLYZR/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-91-monica-005-almanaque",
+  "title": "Monica 005 - Almanaque",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica 005 - Almanaque da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DSvD_1UHg2Qx47QyzSJyKI95Oe-zfnjU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DSvD_1UHg2Qx47QyzSJyKI95Oe-zfnjU",
+  "readerUrl": "https://drive.google.com/file/d/1RTTgaSflP0cT58yjI47ESFB3EwE77Qje/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-92-monica-232",
+  "title": "Monica 232",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica 232 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1JyV2vW_HN6G3r0D-dOahtSUxphclPtQ1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1JyV2vW_HN6G3r0D-dOahtSUxphclPtQ1",
+  "readerUrl": "https://drive.google.com/file/d/1Oqn7U5B-1wRHxvGwFr6fKnPbCpRca-pm/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-93-monica-234",
+  "title": "Monica 234",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica 234 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/127CoJVgmSrxhqF1D3k8GRk2w1LxqjP0A",
+  "backdrop": "https://lh3.googleusercontent.com/d/127CoJVgmSrxhqF1D3k8GRk2w1LxqjP0A",
+  "readerUrl": "https://drive.google.com/file/d/198QGw4C2XXdU07UVm_ykemM9rx1pwDKu/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-94-monica-nas-olimpiadas-edicao-especial",
+  "title": "Monica Nas Olimpiadas - Edicao Especial",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica Nas Olimpiadas - Edicao Especial da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1AdB-4TDMx9aSMAAKclsJYNSHA0NIW19q",
+  "backdrop": "https://lh3.googleusercontent.com/d/1AdB-4TDMx9aSMAAKclsJYNSHA0NIW19q",
+  "readerUrl": "https://drive.google.com/file/d/1maPugvmp5MDFgUpqInp8lqivP9zTVXiv/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-95-monica21-panini",
+  "title": "Monica21 Panini",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Monica21 Panini da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1sNfanjrm2lIX0iZW-m0pE5Jl_DsrolnW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1sNfanjrm2lIX0iZW-m0pE5Jl_DsrolnW",
+  "readerUrl": "https://drive.google.com/file/d/14YH_P_ALfBXts8l7-rc5Cm5373O1SHwr/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-96-o-aniversario-do-cebolinha",
+  "title": "O Aniversario Do Cebolinha",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição O Aniversario Do Cebolinha da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NDXPJgRg_6qibRL2B93ZSFkU5J-Ny-RD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NDXPJgRg_6qibRL2B93ZSFkU5J-Ny-RD",
+  "readerUrl": "https://drive.google.com/file/d/1M5NaR39Dte9Jkn0uANSSaL6vLk-tZr5P/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-97-os-namorados",
+  "title": "Os Namorados",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Os Namorados da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DjTj0Zi3nvqVMqI5zfSTCE-khSCiNAV0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DjTj0Zi3nvqVMqI5zfSTCE-khSCiNAV0",
+  "readerUrl": "https://drive.google.com/file/d/1rtvvvjOXfL1WyOXuPF4rM0x0Lv23E8eS/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-98-parquedamonica-138",
+  "title": "Parquedamonica 138",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Parquedamonica 138 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1y3jn1nhNQdxVPx4Zvs2fk6xGQpbi4ag4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1y3jn1nhNQdxVPx4Zvs2fk6xGQpbi4ag4",
+  "readerUrl": "https://drive.google.com/file/d/1Sk-Gc3eIxwx7CcW9tQ5m3BwL5h6Nh4i6/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-99-parquedamonica-138",
+  "title": "Parquedamonica 138",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Parquedamonica 138 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1SZqYA86EK7ZpXNeXzEt0KPa5SaNqp9yw",
+  "backdrop": "https://lh3.googleusercontent.com/d/1SZqYA86EK7ZpXNeXzEt0KPa5SaNqp9yw",
+  "readerUrl": "https://drive.google.com/file/d/1wjdAAhxj9B4-Wi9ryaFU59ZB0EzOmRDQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-100-planeta-dos-coelhinhos",
+  "title": "Planeta Dos Coelhinhos",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Planeta Dos Coelhinhos da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1c4xaipP_AXC2avHeWGTpfATVXKh_k5k8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1c4xaipP_AXC2avHeWGTpfATVXKh_k5k8",
+  "readerUrl": "https://drive.google.com/file/d/1yZGQpenzUHCyygrXfm0kTNBNfofxdomq/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-101-ronaldinho-gaucho-045",
+  "title": "Ronaldinho Gaucho 045",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Ronaldinho Gaucho 045 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QH6zpNM2FceCINM7DkGOBmnCfj1_AP3W",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QH6zpNM2FceCINM7DkGOBmnCfj1_AP3W",
+  "readerUrl": "https://drive.google.com/file/d/1ev_VAj1KMnlv-bF9u7S-9W_lNArViq9a/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-102-ronaldinho-gaucho-046",
+  "title": "Ronaldinho Gaucho 046",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Ronaldinho Gaucho 046 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10eC-ZyRrTAVp_dWZkFomNtZiKBtw-OXb",
+  "backdrop": "https://lh3.googleusercontent.com/d/10eC-ZyRrTAVp_dWZkFomNtZiKBtw-OXb",
+  "readerUrl": "https://drive.google.com/file/d/1xgVKGeFDb39e5os_8mtTYDu5eydx13N-/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-103-saiba-mais-sobre-045-historia-da-matematica",
+  "title": "Saiba Mais Sobre 045 - Historia Da Matematica",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Saiba Mais Sobre 045 - Historia Da Matematica da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nXZ_Oy3X4x9lMZWxZr2KH_THWO6uVKj_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nXZ_Oy3X4x9lMZWxZr2KH_THWO6uVKj_",
+  "readerUrl": "https://drive.google.com/file/d/1MIVvZyU55uF-NuOV4luTBS2EbtfiGVyu/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-104-saiba-mais-sobre-07-descobrimento-do-brasil",
+  "title": "Saiba Mais Sobre 07 - Descobrimento Do Brasil",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Saiba Mais Sobre 07 - Descobrimento Do Brasil da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1SneTA4loB8DR1W8y1jlAywTm7Hi2ubJE",
+  "backdrop": "https://lh3.googleusercontent.com/d/1SneTA4loB8DR1W8y1jlAywTm7Hi2ubJE",
+  "readerUrl": "https://drive.google.com/file/d/1kQ6kG4QnWmLvl--33FltmgQlx_7bDaAC/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-105-saiba-mais-sobre-13-dia-das-criancas",
+  "title": "Saiba Mais Sobre 13 - Dia Das Criancas",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Saiba Mais Sobre 13 - Dia Das Criancas da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kWbrXTHpdJEBAMtuwIs3nIBf_kB2M9zS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kWbrXTHpdJEBAMtuwIs3nIBf_kB2M9zS",
+  "readerUrl": "https://drive.google.com/file/d/1kNhR6HH6nKqa8pe815Z9KjF6wruSKp84/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-106-saiba-mais-sobre-57-steve-jobs",
+  "title": "Saiba Mais Sobre 57 - Steve Jobs",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Saiba Mais Sobre 57 - Steve Jobs da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12PKkums1Cz5JAUIbprycUbyy3jtYxd3Y",
+  "backdrop": "https://lh3.googleusercontent.com/d/12PKkums1Cz5JAUIbprycUbyy3jtYxd3Y",
+  "readerUrl": "https://drive.google.com/file/d/1kMhtdDWooMDXcuNfjuuRRMHcytGIowMK/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-107-super-almanaque-da-monica-n1",
+  "title": "Super Almanaque Da Monica N1",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Super Almanaque Da Monica N1 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-gO--FbJYv65G-ZTaTrmO5ZjCE9tQwBz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-gO--FbJYv65G-ZTaTrmO5ZjCE9tQwBz",
+  "readerUrl": "https://drive.google.com/file/d/17ReRVVFfYRVpxE3MJfwHgshJntCuu8jw/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-108-turma-da-monica-panini-59",
+  "title": "Turma Da Monica Panini 59",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Turma Da Monica Panini 59 da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1345uaRovVETu3fn-qo7VP243PP8HloWI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1345uaRovVETu3fn-qo7VP243PP8HloWI",
+  "readerUrl": "https://drive.google.com/file/d/1mTHecay_WdcbpvgBqZraNC32eeN5QBLn/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-109-turma-da-monica-extra-04-ze-vampir",
+  "title": "Turma Da Monica Extra 04 - Ze Vampir",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Turma Da Monica Extra 04 - Ze Vampir da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qZB_75XjbImpZwJGYcbNh6HcEcLZc6ec",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qZB_75XjbImpZwJGYcbNh6HcEcLZc6ec",
+  "readerUrl": "https://drive.google.com/file/d/1efhVfzshQyhcvIVOXOSg3Jg2Vnio7Nwz/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-110-turma-da-monica-extra-05-denise",
+  "title": "Turma Da Monica Extra 05 - Denise",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Turma Da Monica Extra 05 - Denise da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GXraoRbs1-Rz4gCBJyIGdLsagFzLYgAu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GXraoRbs1-Rz4gCBJyIGdLsagFzLYgAu",
+  "readerUrl": "https://drive.google.com/file/d/1E7_NxKOdoaulGdsnOR9QajKALF5hqu-P/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-111-turma-da-monica-extra-06-dona-morte",
+  "title": "Turma Da Monica Extra 06 - Dona Morte",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Turma Da Monica Extra 06 - Dona Morte da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bZdD9ggdzjkDivQFjn3_FOfQbuVwtzo_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bZdD9ggdzjkDivQFjn3_FOfQbuVwtzo_",
+  "readerUrl": "https://drive.google.com/file/d/1sK1Ig1MQL9jOzFyp3wXCDviZJJwEaNdV/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-112-uma-aventura-no-tempo",
+  "title": "Uma Aventura No Tempo",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Uma Aventura No Tempo da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HGE6NpLsvKcEgZDtxf_yYAAVhq5demlt",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HGE6NpLsvKcEgZDtxf_yYAAVhq5demlt",
+  "readerUrl": "https://drive.google.com/file/d/133ikQwf7O4AUhC2tkvGzs-PLqweXzxLJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-turma-da-monica-113-voce-sabia-08-oswaldo-cruz",
+  "title": "Voce Sabia 08 - Oswaldo Cruz",
+  "author": "Mauricio de Sousa",
+  "publisher": "turma_da_monica",
+  "year": 2000,
+  "duration": "Gibi Completo (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Turma da Mônica",
+    "HQs & Quadrinhos",
+    "Infantil & Família"
+  ],
+  "description": "Edição Voce Sabia 08 - Oswaldo Cruz da Turma da Mônica de Mauricio de Sousa em formato PDF. Histórias divertidas e inesquecíveis para toda a família! Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1S_crnF0Aby65vvpto-Qv5DpD3CY-Ou_y",
+  "backdrop": "https://lh3.googleusercontent.com/d/1S_crnF0Aby65vvpto-Qv5DpD3CY-Ou_y",
+  "readerUrl": "https://drive.google.com/file/d/1LYLf5VyHQar9bmB4tACB_ESGPureoO3z/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
   "Todos",
+  "Turma da Mônica",
   "HQs & Quadrinhos",
   "Romance & Drama",
   "Fantasia & Ficção",

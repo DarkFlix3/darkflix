@@ -2040,6 +2040,12 @@ const STATE = {
           (b.genres && (b.genres.includes('Terror & Mistério') || b.genres.includes('DarkSide'))) ||
           (b.author && (b.author.toLowerCase().includes('warren') || b.author.toLowerCase().includes('freida') || b.author.toLowerCase().includes('king') || b.author.toLowerCase().includes('darkside')))
         );
+      } else if (currentPublisher === 'turma_da_monica') {
+        books = books.filter(b => 
+          (b.publisher === 'turma_da_monica') ||
+          (b.author && b.author.toLowerCase().includes('mauricio')) ||
+          (b.genres && b.genres.includes('Turma da Mônica'))
+        );
       }
 
       // Apply Search Query
