@@ -11522,6 +11522,347 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/1yQbDxbhlBdVPoOOfjc8dtjMHj023MWEN",
   "readerUrl": "https://drive.google.com/file/d/1hxMXWi0iP0xtOs6jWYTncVM6XSMMJv67/view?usp=drive_link"
 }
+,
+  {
+  "id": "hq-dc-1-aquaman-vol-2-02",
+  "title": "Aquaman Vol. 2 #02",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Aquaman Vol. 2 #02 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BcdWTSYZmnOW1IyKw32gblYb0vf0PUJ5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BcdWTSYZmnOW1IyKw32gblYb0vf0PUJ5",
+  "readerUrl": "https://drive.google.com/file/d/10E11WQyNSkNgZkLPyl0BCaOee0Ex0CDK/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-2-aquaman-vol-2-02",
+  "title": "Aquaman Vol. 2 #02",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Aquaman Vol. 2 #02 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1sTF09qOEnlWhWQMXItpMHNrXlPbcSMG4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1sTF09qOEnlWhWQMXItpMHNrXlPbcSMG4",
+  "readerUrl": "https://drive.google.com/file/d/15PfXRSglvV23dsnWZ8Q6wkac-svvJ1vp/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-3-aquaman-vol-2-02",
+  "title": "Aquaman Vol. 2 #02",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Aquaman Vol. 2 #02 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1k4q79aJK07GE9ifPdd3G2qIdDNXOBxEb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1k4q79aJK07GE9ifPdd3G2qIdDNXOBxEb",
+  "readerUrl": "https://drive.google.com/file/d/1ukBnuzJWyUk-6_alcDRVaMS0bS3_PfAM/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-4-aquaman-vol-2-02",
+  "title": "Aquaman Vol. 2 #02",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Aquaman Vol. 2 #02 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Xw3e--qZmGaaVaBv8c1FZ9OKCb0hkJrd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Xw3e--qZmGaaVaBv8c1FZ9OKCb0hkJrd",
+  "readerUrl": "https://drive.google.com/file/d/1MIJzzhDR8O9MpU4DtDMOuNkZDMxB4ho6/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-5-arlequina-hera-venenosa-paix-es-violentas",
+  "title": "Arlequina & Hera Venenosa: Paixões Violentas",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Arlequina & Hera Venenosa: Paixões Violentas da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Kknigc95Xh9Ri66QOjZDwaNDU5ZwyUE_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Kknigc95Xh9Ri66QOjZDwaNDU5ZwyUE_",
+  "readerUrl": "https://drive.google.com/file/d/1vqOyGXWttviHESDdRS5KJrZXkLE9d4gJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-6-corpora-o-batman-o-ataque-do-leviat",
+  "title": "Corporação Batman: O Ataque do Leviatã",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Corporação Batman: O Ataque do Leviatã da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1SEHUMJV3QBFt6JKVqwL6tYbUFlCvaV4I",
+  "backdrop": "https://lh3.googleusercontent.com/d/1SEHUMJV3QBFt6JKVqwL6tYbUFlCvaV4I",
+  "readerUrl": "https://drive.google.com/file/d/1S_uyYfpGp9tcBtr9jFkpbfqIBICWsUFN/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-7-corpora-o-batman-vol-1-01",
+  "title": "Corporação Batman Vol. 1 #01",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Corporação Batman Vol. 1 #01 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17gVMKLefBFS88U5d0SaNNORFs60SH9JE",
+  "backdrop": "https://lh3.googleusercontent.com/d/17gVMKLefBFS88U5d0SaNNORFs60SH9JE",
+  "readerUrl": "https://drive.google.com/file/d/1bvymV9cELwXub45teWQCS7fQQNHOKI6R/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-8-corpora-o-batman-vol-1-01",
+  "title": "Corporação Batman Vol. 1 #01",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Corporação Batman Vol. 1 #01 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mOrxy0B8VOyFZR3TlgVNjarwzIeO6kC1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mOrxy0B8VOyFZR3TlgVNjarwzIeO6kC1",
+  "readerUrl": "https://drive.google.com/file/d/1TgcmgLhPeap5t10DWRD3pVYeFvHXoveD/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-9-corpora-o-batman-vol-1-01",
+  "title": "Corporação Batman Vol. 1 #01",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Corporação Batman Vol. 1 #01 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19yKWBTJAMiWb_QubAF3QebymhEvLGGFg",
+  "backdrop": "https://lh3.googleusercontent.com/d/19yKWBTJAMiWb_QubAF3QebymhEvLGGFg",
+  "readerUrl": "https://drive.google.com/file/d/187NTAgjnd8kavllyh9CuDnwPM4j1s4JP/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-10-corpora-o-batman-vol-1-01",
+  "title": "Corporação Batman Vol. 1 #01",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Corporação Batman Vol. 1 #01 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/161mDwNKzEY1bGOgCoUEatO_GZjrywXBe",
+  "backdrop": "https://lh3.googleusercontent.com/d/161mDwNKzEY1bGOgCoUEatO_GZjrywXBe",
+  "readerUrl": "https://drive.google.com/file/d/13WL3ehcnqnFmtQ7E6TkR-0RlUhUn1ItD/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-11-corpora-o-batman-vol-1-01",
+  "title": "Corporação Batman Vol. 1 #01",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Corporação Batman Vol. 1 #01 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ytjucdeGkLr22r8iTx2laQYqcepDnUbl",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ytjucdeGkLr22r8iTx2laQYqcepDnUbl",
+  "readerUrl": "https://drive.google.com/file/d/1UNh9AgcpSI2Ef9fhnCBsIbVJSBJf__Kn/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-12-corpora-o-batman-vol-1-01",
+  "title": "Corporação Batman Vol. 1 #01",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Corporação Batman Vol. 1 #01 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GHTPBiYVAa095hd60NVuRnbd_k8ckVgO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GHTPBiYVAa095hd60NVuRnbd_k8ckVgO",
+  "readerUrl": "https://drive.google.com/file/d/1L72QEEaNBNONk1SXnvUfcJ7h4Nazfod_/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-13-corpora-o-batman-vol-1-01",
+  "title": "Corporação Batman Vol. 1 #01",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Corporação Batman Vol. 1 #01 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16r7xmKsZIoXq1MdqJsW5L0dxEHZ13NVF",
+  "backdrop": "https://lh3.googleusercontent.com/d/16r7xmKsZIoXq1MdqJsW5L0dxEHZ13NVF",
+  "readerUrl": "https://drive.google.com/file/d/1RKvirk87oWmZOIGMhd_eyx--K-P8r1ls/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-14-corpora-o-batman-vol-1-01",
+  "title": "Corporação Batman Vol. 1 #01",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Corporação Batman Vol. 1 #01 da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1D53OqN4ZbQu2XfdhfVERpKIbgB0E1lKj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1D53OqN4ZbQu2XfdhfVERpKIbgB0E1lKj",
+  "readerUrl": "https://drive.google.com/file/d/1gNTVGA10cPtkQeF4upWnC0Pi0u0WaKoI/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-15-the-flash-de-dois-mundos",
+  "title": "The Flash: de dois Mundos",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição The Flash: de dois Mundos da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13rdYmvd0F2EY8Z6nE9XebtGj0iiMX0wl",
+  "backdrop": "https://lh3.googleusercontent.com/d/13rdYmvd0F2EY8Z6nE9XebtGj0iiMX0wl",
+  "readerUrl": "https://drive.google.com/file/d/18y7ZQsvtBzmCHDCT69cjkdmssFOfB4Q9/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-16-the-flash-e-os-novos-deuses",
+  "title": "The Flash: e os Novos Deuses",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição The Flash: e os Novos Deuses da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cqHWdyl-klbcm4WNe1QHHCJMcTfoUj-J",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cqHWdyl-klbcm4WNe1QHHCJMcTfoUj-J",
+  "readerUrl": "https://drive.google.com/file/d/1JN4fIm4o1LNsQM71rJAcGnn28wwd0Mmk/view?usp=drive_link"
+},
+  {
+  "id": "hq-dc-17-the-flash-epidemia",
+  "title": "The Flash: Epidemia",
+  "author": "DC Comics",
+  "publisher": "dc",
+  "year": 2011,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição The Flash: Epidemia da DC Comics em formato PDF. Histórias épicas dos super-heróis da DC Comics. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Lq2_EUxUEIoM-PSxuwgdcgxr2F8Tzfy4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Lq2_EUxUEIoM-PSxuwgdcgxr2F8Tzfy4",
+  "readerUrl": "https://drive.google.com/file/d/1565d3U3Ory1NHrImd0LxnCEqwtmmgpZd/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
