@@ -23399,6 +23399,867 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/1cdUnykF0KAY9Lm18eoKDJNmtITAcq2tf",
   "readerUrl": "https://drive.google.com/file/d/1wE305DfOXXZ1LSWZOP8nj62gpIxLO1fE/view?usp=drive_link"
 }
+,
+  {
+  "id": "hq-marvel-ghostrider-1-motoqueiro-fantasma-vol-7-2011-cap-tulo-01",
+  "title": "Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2011,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 01 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tBx9EWX2Dco9CJEC6cmuKZAYkBLhv3Ua",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tBx9EWX2Dco9CJEC6cmuKZAYkBLhv3Ua",
+  "readerUrl": "https://drive.google.com/file/d/1lqx8PAOtMBtV2aOVDQIjpMDdw68hOa6u/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-2-motoqueiro-fantasma-vol-7-2011-cap-tulo-02",
+  "title": "Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 02",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2011,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 02 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10mnGhNT6tqUsjXqHc_9dqmrl4ZpmNaez",
+  "backdrop": "https://lh3.googleusercontent.com/d/10mnGhNT6tqUsjXqHc_9dqmrl4ZpmNaez",
+  "readerUrl": "https://drive.google.com/file/d/17u0AfmA6yieK6JY-z7-v5xokRIFnjXdB/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-3-motoqueiro-fantasma-vol-7-2011-cap-tulo-03",
+  "title": "Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 03",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2011,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 03 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cWrBTrPvhIhpuB0_zRIgue4XDcsHKWpi",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cWrBTrPvhIhpuB0_zRIgue4XDcsHKWpi",
+  "readerUrl": "https://drive.google.com/file/d/1aeV6v4sM4t2CJp-5YcCqnzTRnpw8Q70M/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-4-motoqueiro-fantasma-vol-7-2011-cap-tulo-04",
+  "title": "Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2011,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 04 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hn3za5hockyf7n0I6Y94nIbQrk_RqDET",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hn3za5hockyf7n0I6Y94nIbQrk_RqDET",
+  "readerUrl": "https://drive.google.com/file/d/1qb21Ns2j3EHIXPmmm_JS5h06_SbobFmr/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-5-motoqueiro-fantasma-vol-7-2011-cap-tulo-05",
+  "title": "Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2011,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 05 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kXfyqD7r0MzVfl7Cq5iRK6WQPek0k5Yw",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kXfyqD7r0MzVfl7Cq5iRK6WQPek0k5Yw",
+  "readerUrl": "https://drive.google.com/file/d/1ta3qyKaVo_UIM74gviPduwIh8MhJ2r_s/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-6-motoqueiro-fantasma-vol-7-2011-cap-tulo-06",
+  "title": "Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 06",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2011,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 06 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EN_D2FLYOk50wDqxnXE8qHkz1QH-qoVL",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EN_D2FLYOk50wDqxnXE8qHkz1QH-qoVL",
+  "readerUrl": "https://drive.google.com/file/d/15ORrGr-efhv2xpRGuWhTw5SZ7PU1dStX/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-7-motoqueiro-fantasma-vol-7-2011-cap-tulo-07",
+  "title": "Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 07",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2011,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 07 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13h0gBHeRy6qGk9z9tvwSIiKKVMh10Kb_",
+  "backdrop": "https://lh3.googleusercontent.com/d/13h0gBHeRy6qGk9z9tvwSIiKKVMh10Kb_",
+  "readerUrl": "https://drive.google.com/file/d/1ZoF4MuTIHWuSi7RQs3zecqnmEq-eQrQy/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-8-motoqueiro-fantasma-vol-7-2011-cap-tulo-08",
+  "title": "Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 08",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2011,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 08 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dB_aXmxkKUREpjTLLRD-mKkkUSi8YaQN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dB_aXmxkKUREpjTLLRD-mKkkUSi8YaQN",
+  "readerUrl": "https://drive.google.com/file/d/1aKKwLsguagFvDaHkXEOenQ2Q_Kq6zp-4/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-9-motoqueiro-fantasma-vol-7-2011-cap-tulo-09",
+  "title": "Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 09",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2011,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 7 (2011) - Capítulo 09 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jZEmJEL7VKI6NSg3EFn8JIpP0Jjbw0ca",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jZEmJEL7VKI6NSg3EFn8JIpP0Jjbw0ca",
+  "readerUrl": "https://drive.google.com/file/d/1jNJy60glGpgzDiZN61-qndZfJ-lIwKyp/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-10-motoqueiro-fantasma-vol-8-2019-cap-tulo-01",
+  "title": "Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 01 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18SW28wjou4eCgTE58o9OjMo1VJZ-skJQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/18SW28wjou4eCgTE58o9OjMo1VJZ-skJQ",
+  "readerUrl": "https://drive.google.com/file/d/1RnUkQHhSPhBK0u6xkfmrF8W7pTehoYad/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-11-motoqueiro-fantasma-vol-8-2019-cap-tulo-02",
+  "title": "Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 02",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 02 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1g8InsM57E4olwAa4gRgZyQBzkRtULuHJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1g8InsM57E4olwAa4gRgZyQBzkRtULuHJ",
+  "readerUrl": "https://drive.google.com/file/d/1IVUNvkqFJaWe-kYr6aEbSP_FjQdbQB5i/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-12-motoqueiro-fantasma-vol-8-2019-cap-tulo-03",
+  "title": "Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 03",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 03 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZeB92aUbN_3yVaCsVfnZRgGP1-0srHEl",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZeB92aUbN_3yVaCsVfnZRgGP1-0srHEl",
+  "readerUrl": "https://drive.google.com/file/d/1-6Z7zj7TqTra8kY1ho5kyQ07_KsGbnLo/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-13-motoqueiro-fantasma-vol-8-2019-cap-tulo-04",
+  "title": "Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 04 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1c8GsKJcVaPNLnKJtmrOIrbGmvYecMFkR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1c8GsKJcVaPNLnKJtmrOIrbGmvYecMFkR",
+  "readerUrl": "https://drive.google.com/file/d/1tOBntKSt3vY0y64wPGgEoyipiI1Pg46f/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-14-motoqueiro-fantasma-vol-8-2019-cap-tulo-05",
+  "title": "Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 05 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GyqwDwgO1z0DAnFjdyN4xZgbjyjuc7LG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GyqwDwgO1z0DAnFjdyN4xZgbjyjuc7LG",
+  "readerUrl": "https://drive.google.com/file/d/17EWtzmxO0FqNyM8LuUjkTfDCI24jyAl2/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-15-motoqueiro-fantasma-vol-8-2019-cap-tulo-06",
+  "title": "Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 06",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 06 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uuU56pODz024F9FXTJlnw9NWhXs9UKa5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uuU56pODz024F9FXTJlnw9NWhXs9UKa5",
+  "readerUrl": "https://drive.google.com/file/d/1iJdlv07oAXm_mRzEL4XnRqHbplo_qX_X/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-16-motoqueiro-fantasma-vol-8-2019-cap-tulo-07",
+  "title": "Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 07",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 8 (2019) - Capítulo 07 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YPN2h6-AR-6vjiT9bWVj7Gefe5I9rYG9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YPN2h6-AR-6vjiT9bWVj7Gefe5I9rYG9",
+  "readerUrl": "https://drive.google.com/file/d/1_9V9GudLh2tV1uoNtQggyuN83U0dDYGK/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-17-motoqueiro-fantasma-vol-8-2019-m-es-do-dem-nio",
+  "title": "Motoqueiro Fantasma Vol. 8 (2019) - Mães do Demônio",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Vol. 8 (2019) - Mães do Demônio do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10T7DBnMmCmlHS97Lc7uhg_k9Or_tfRSz",
+  "backdrop": "https://lh3.googleusercontent.com/d/10T7DBnMmCmlHS97Lc7uhg_k9Or_tfRSz",
+  "readerUrl": "https://drive.google.com/file/d/18fGDy2DNDYz3_zRlctXdRjY08iScDYhO/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-18-motoqueiro-fantasma-2022-cap-tulo-01",
+  "title": "Motoqueiro Fantasma (2022) - Capítulo 01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2022,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma (2022) - Capítulo 01 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1o-LwRUyGqgsztmuXpuLlC9rqj-xtg4_w",
+  "backdrop": "https://lh3.googleusercontent.com/d/1o-LwRUyGqgsztmuXpuLlC9rqj-xtg4_w",
+  "readerUrl": "https://drive.google.com/file/d/12vNi6yziiZhwIopkUxg87TlVMrq1qTXz/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-19-motoqueiro-fantasma-2022-cap-tulo-02",
+  "title": "Motoqueiro Fantasma (2022) - Capítulo 02",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2022,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma (2022) - Capítulo 02 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-NJBDRYRhwq2J8EQGThWhM9G3GdSDAiX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-NJBDRYRhwq2J8EQGThWhM9G3GdSDAiX",
+  "readerUrl": "https://drive.google.com/file/d/1g7I0a6sq8p1Ko0tIaMtQqfFlpaSSnGfG/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-20-motoqueiro-fantasma-2022-cap-tulo-03",
+  "title": "Motoqueiro Fantasma (2022) - Capítulo 03",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2022,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma (2022) - Capítulo 03 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1beAjBx9pcPfhSssyZEA95WuPh9zGsy3M",
+  "backdrop": "https://lh3.googleusercontent.com/d/1beAjBx9pcPfhSssyZEA95WuPh9zGsy3M",
+  "readerUrl": "https://drive.google.com/file/d/1Z_77ocxkkZHvM8IaPE6tY6hvUCp-EwRw/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-21-motoqueiro-fantasma-2022-cap-tulo-04",
+  "title": "Motoqueiro Fantasma (2022) - Capítulo 04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2022,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma (2022) - Capítulo 04 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nlUkdPdasj4VRjMf0r9LU02NX0Vgm-NC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nlUkdPdasj4VRjMf0r9LU02NX0Vgm-NC",
+  "readerUrl": "https://drive.google.com/file/d/1lDmOKliihpMZXOgHeQ0F8u8JDyPfZK8p/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-22-motoqueiro-fantasma-2022-cap-tulo-05",
+  "title": "Motoqueiro Fantasma (2022) - Capítulo 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2022,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma (2022) - Capítulo 05 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16Tt4CamXaQOtuXujCLcrfjDCAQgqMBrt",
+  "backdrop": "https://lh3.googleusercontent.com/d/16Tt4CamXaQOtuXujCLcrfjDCAQgqMBrt",
+  "readerUrl": "https://drive.google.com/file/d/1WkSHm8CsdwTTbHTbXyrSCRgf3j4VrPIs/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-23-motoqueiro-fantasma-2022-cap-tulo-06",
+  "title": "Motoqueiro Fantasma (2022) - Capítulo 06",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2022,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma (2022) - Capítulo 06 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1171fYrNX_8IKCSV6pE2CDnchoguneCib",
+  "backdrop": "https://lh3.googleusercontent.com/d/1171fYrNX_8IKCSV6pE2CDnchoguneCib",
+  "readerUrl": "https://drive.google.com/file/d/1Sz03a_mPYFfYKx8R6iZ4XuTRQHe_6Jt9/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-24-motoqueiro-fantasma-2022-cap-tulo-07",
+  "title": "Motoqueiro Fantasma (2022) - Capítulo 07",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2022,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma (2022) - Capítulo 07 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15TYDdCSg1pYLeMSuKD-Nuckjun9oIUdw",
+  "backdrop": "https://lh3.googleusercontent.com/d/15TYDdCSg1pYLeMSuKD-Nuckjun9oIUdw",
+  "readerUrl": "https://drive.google.com/file/d/1XCdtKLI2ydXIcjGUI4tjbI2vKvki9GU0/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-25-motoqueiro-fantasma-c-us-em-chama-cap-tulo-01",
+  "title": "Motoqueiro Fantasma: Céus em Chama - Capítulo 01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2009,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma: Céus em Chama - Capítulo 01 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uy-4oVnBafjtWJ4qdoam4qOs5DNKHld_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uy-4oVnBafjtWJ4qdoam4qOs5DNKHld_",
+  "readerUrl": "https://drive.google.com/file/d/1eDT6nbuALnq_djQ4lc6ZfZOcJdqhudyL/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-26-motoqueiro-fantasma-c-us-em-chama-cap-tulo-02",
+  "title": "Motoqueiro Fantasma: Céus em Chama - Capítulo 02",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2009,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma: Céus em Chama - Capítulo 02 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZxNM6Mx9TtKZ2zwlWK8EFFTCoJ_28HBH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZxNM6Mx9TtKZ2zwlWK8EFFTCoJ_28HBH",
+  "readerUrl": "https://drive.google.com/file/d/1ejr1qZ5pRsCASQeFj29sdKFJgRUlQc9M/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-27-motoqueiro-fantasma-c-us-em-chama-cap-tulo-03",
+  "title": "Motoqueiro Fantasma: Céus em Chama - Capítulo 03",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2009,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma: Céus em Chama - Capítulo 03 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lZycuufdtk3TBPWTSsTGTQXMNXXD22ZM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lZycuufdtk3TBPWTSsTGTQXMNXXD22ZM",
+  "readerUrl": "https://drive.google.com/file/d/1KWfnVKyI1nGj7XDUxyYbcoQfXcmBGn1c/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-28-motoqueiro-fantasma-c-us-em-chama-cap-tulo-04",
+  "title": "Motoqueiro Fantasma: Céus em Chama - Capítulo 04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2009,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma: Céus em Chama - Capítulo 04 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CKOHb5q4hkO6u2Fc88eL3SJyiZ4Rb_Gy",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CKOHb5q4hkO6u2Fc88eL3SJyiZ4Rb_Gy",
+  "readerUrl": "https://drive.google.com/file/d/1CwxIaCCy-o3n0k0WHsWkak4B7YWbLZBF/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-29-motoqueiro-fantasma-c-us-em-chama-cap-tulo-05",
+  "title": "Motoqueiro Fantasma: Céus em Chama - Capítulo 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2009,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma: Céus em Chama - Capítulo 05 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1J1LYLmP_opRyg052guwDh61NzwdqDPpC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1J1LYLmP_opRyg052guwDh61NzwdqDPpC",
+  "readerUrl": "https://drive.google.com/file/d/1y08fTwLZBED-5-H9ZMayRhuzmLBp8sBc/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-30-motoqueiro-fantasma-c-us-em-chama-cap-tulo-06",
+  "title": "Motoqueiro Fantasma: Céus em Chama - Capítulo 06",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2009,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma: Céus em Chama - Capítulo 06 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UxXLRZedkUixUv8u1eckMsZeqfz8KMdd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UxXLRZedkUixUv8u1eckMsZeqfz8KMdd",
+  "readerUrl": "https://drive.google.com/file/d/1EJl_vS-HmNXrUhGuVpexYmaxYGDeXtTx/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-31-motoqueiro-fantasma-c-smico-2018-cap-tulo-01",
+  "title": "Motoqueiro Fantasma Cósmico (2018) - Capítulo 01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2018,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Cósmico (2018) - Capítulo 01 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1G9xdR1nYasRzpgI54m6fnwfnJvwIsWuw",
+  "backdrop": "https://lh3.googleusercontent.com/d/1G9xdR1nYasRzpgI54m6fnwfnJvwIsWuw",
+  "readerUrl": "https://drive.google.com/file/d/17m3GDG3UPavKDyIln-FPG4JNLyWCgnYl/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-32-motoqueiro-fantasma-c-smico-2018-cap-tulo-02",
+  "title": "Motoqueiro Fantasma Cósmico (2018) - Capítulo 02",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2018,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Cósmico (2018) - Capítulo 02 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_aiYnzmsDgI7xvoLuZRHWQxru8sGMcF4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_aiYnzmsDgI7xvoLuZRHWQxru8sGMcF4",
+  "readerUrl": "https://drive.google.com/file/d/1ZI7KFY4Z1MjsWmgn4pJLNEYMP8eMMxfa/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-33-motoqueiro-fantasma-c-smico-2018-cap-tulo-03",
+  "title": "Motoqueiro Fantasma Cósmico (2018) - Capítulo 03",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2018,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Cósmico (2018) - Capítulo 03 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xWEU6XuVVO8QDAPsvr9id3zsjlAKyfi-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xWEU6XuVVO8QDAPsvr9id3zsjlAKyfi-",
+  "readerUrl": "https://drive.google.com/file/d/1ws_diVfNa9v8FcC-gXnReN1Ro7ysai09/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-34-motoqueiro-fantasma-c-smico-2018-cap-tulo-04",
+  "title": "Motoqueiro Fantasma Cósmico (2018) - Capítulo 04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2018,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Cósmico (2018) - Capítulo 04 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GiBSXuVd69KMseNWDmZ4ygS0P2xBN489",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GiBSXuVd69KMseNWDmZ4ygS0P2xBN489",
+  "readerUrl": "https://drive.google.com/file/d/17K1kfb1Sd7seeTfvmR2zzfMU9oOWCmm-/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-35-motoqueiro-fantasma-c-smico-2018-cap-tulo-05",
+  "title": "Motoqueiro Fantasma Cósmico (2018) - Capítulo 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2018,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Cósmico (2018) - Capítulo 05 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1w02GVzwxsrAnm70TsrllxCHlqpLfotXb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1w02GVzwxsrAnm70TsrllxCHlqpLfotXb",
+  "readerUrl": "https://drive.google.com/file/d/1WjBVzSJKfqfiUv2JX3LiJhcWri8PqGuk/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-36-motoqueiro-fantasma-c-smico-2023-cap-tulo-01",
+  "title": "Motoqueiro Fantasma Cósmico (2023) - Capítulo 01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2023,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Cósmico (2023) - Capítulo 01 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1M-c0KY-7F1NkyQv9-_SjmEODjbJkYsaG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1M-c0KY-7F1NkyQv9-_SjmEODjbJkYsaG",
+  "readerUrl": "https://drive.google.com/file/d/18oJbtO7mbgBqMGPPxmfoCM74yuzkaEI2/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-37-motoqueiro-fantasma-destr-i-a-hist-ria-marvel-cap-tulo-01",
+  "title": "Motoqueiro Fantasma Destrói a História Marvel - Capítulo 01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Destrói a História Marvel - Capítulo 01 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Hi9VMcNpfTWpV_3BYnVlRbuMOSBc8W4t",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Hi9VMcNpfTWpV_3BYnVlRbuMOSBc8W4t",
+  "readerUrl": "https://drive.google.com/file/d/1wkGqw7-U_CK_RrLbNj3mDq-15tT3yyea/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-38-motoqueiro-fantasma-destr-i-a-hist-ria-marvel-cap-tulo-02",
+  "title": "Motoqueiro Fantasma Destrói a História Marvel - Capítulo 02",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Destrói a História Marvel - Capítulo 02 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kn1umwea3tlETmBZ0PAIAEP4p66gZNej",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kn1umwea3tlETmBZ0PAIAEP4p66gZNej",
+  "readerUrl": "https://drive.google.com/file/d/1-LvLEn8458WybenXigb-0FSvufIxtMfJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-39-motoqueiro-fantasma-destr-i-a-hist-ria-marvel-cap-tulo-03",
+  "title": "Motoqueiro Fantasma Destrói a História Marvel - Capítulo 03",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Destrói a História Marvel - Capítulo 03 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zpr4G4ekY6zB9PGoP_BlX3NcwsJVom7t",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zpr4G4ekY6zB9PGoP_BlX3NcwsJVom7t",
+  "readerUrl": "https://drive.google.com/file/d/1uxh54IsuzMtIKd0V4QrU6fe84j9P5FHw/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-40-motoqueiro-fantasma-destr-i-a-hist-ria-marvel-cap-tulo-04",
+  "title": "Motoqueiro Fantasma Destrói a História Marvel - Capítulo 04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Destrói a História Marvel - Capítulo 04 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1D36vQX1bN6ByHAlkM_fdVq1z8ByYsxBV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1D36vQX1bN6ByHAlkM_fdVq1z8ByYsxBV",
+  "readerUrl": "https://drive.google.com/file/d/1fgxWKN_7ES253MPyNfpA1Xm-xp8f8Xwo/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-41-motoqueiro-fantasma-destr-i-a-hist-ria-marvel-cap-tulo-05",
+  "title": "Motoqueiro Fantasma Destrói a História Marvel - Capítulo 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Destrói a História Marvel - Capítulo 05 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1TcMgbdnUVD8JnDdJ_2z1l92b0OOJ0OVp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1TcMgbdnUVD8JnDdJ_2z1l92b0OOJ0OVp",
+  "readerUrl": "https://drive.google.com/file/d/1vV-dbF-3Iq7uwtUD74ES3XHYwbcEXnYq/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-42-motoqueiro-fantasma-destr-i-a-hist-ria-marvel-cap-tulo-06",
+  "title": "Motoqueiro Fantasma Destrói a História Marvel - Capítulo 06",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2019,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma Destrói a História Marvel - Capítulo 06 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DtOXZkp-_cSjXXKl66Mz7VSb8DssQhsa",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DtOXZkp-_cSjXXKl66Mz7VSb8DssQhsa",
+  "readerUrl": "https://drive.google.com/file/d/1ebE--KgIDwWVGLYnyzVrkeUyE1WFN7hq/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-ghostrider-43-motoqueiro-fantasma-vingan-a-eterna-2022-cap-tulo-01",
+  "title": "Motoqueiro Fantasma: Vingança Eterna (2022) - Capítulo 01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2022,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Motoqueiro Fantasma: Vingança Eterna (2022) - Capítulo 01 do Motoqueiro Fantasma (Ghost Rider) da Marvel Comics em formato PDF. Histórias cheias de ação demoníaca, chamas e vingança. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kNNsKH4YROaAdJFrN9mj7zm8SC0C-4ku",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kNNsKH4YROaAdJFrN9mj7zm8SC0C-4ku",
+  "readerUrl": "https://drive.google.com/file/d/1Ouo7LTa3Tu3oxPL3Rc639_psosmlW9Rr/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
