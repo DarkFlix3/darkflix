@@ -2046,6 +2046,12 @@ const STATE = {
           (b.author && b.author.toLowerCase().includes('mauricio')) ||
           (b.genres && b.genres.includes('Turma da Mônica'))
         );
+      } else if (currentPublisher === 'psicologia') {
+        books = books.filter(b => 
+          (b.publisher === 'psicologia') ||
+          (b.genres && (b.genres.includes('Psicologia & Saúde Mental') || b.genres.includes('Psicologia'))) ||
+          (b.author && (b.author.toLowerCase().includes('freud') || b.author.toLowerCase().includes('carlson') || b.author.toLowerCase().includes('pinker') || b.author.toLowerCase().includes('vigotsky') || b.author.toLowerCase().includes('luria') || b.author.toLowerCase().includes('jago') || b.author.toLowerCase().includes('zepeda')))
+        );
       }
 
       // Apply Search Query

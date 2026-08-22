@@ -14124,11 +14124,184 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/1S_crnF0Aby65vvpto-Qv5DpD3CY-Ou_y",
   "readerUrl": "https://drive.google.com/file/d/1LYLf5VyHQar9bmB4tACB_ESGPureoO3z/view?usp=drive_link"
 }
+,
+  {
+  "id": "livro-psicologia-1-fundamentos-de-fisiologia-da-conduta-10-edi-o",
+  "title": "Fundamentos de Fisiologia da Conduta (10ª Edição)",
+  "author": "Neil R. Carlson",
+  "publisher": "psicologia",
+  "year": 2012,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra essencial Fundamentos de Fisiologia da Conduta (10ª Edição) de Neil R. Carlson em formato PDF. Referência indispensável nos estudos de Psicologia, Neurociências e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1SJ0Zn41vidwomrSJyEvJg8q97cvrmwk-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1SJ0Zn41vidwomrSJyEvJg8q97cvrmwk-",
+  "readerUrl": "https://drive.google.com/file/d/12ruYv3T0jT6XB_gMr7WJZnK_JAzp4z84/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-2-dsm-iv-manual-diagn-stico-e-estat-stico-de-transtornos-mentais",
+  "title": "DSM-IV - Manual Diagnóstico e Estatístico de Transtornos Mentais",
+  "author": "APA (American Psychiatric Association)",
+  "publisher": "psicologia",
+  "year": 2012,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra essencial DSM-IV - Manual Diagnóstico e Estatístico de Transtornos Mentais de APA (American Psychiatric Association) em formato PDF. Referência indispensável nos estudos de Psicologia, Neurociências e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ydU0uWpJAFFuA15sLo5gNVxBt8SjV1zg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ydU0uWpJAFFuA15sLo5gNVxBt8SjV1zg",
+  "readerUrl": "https://drive.google.com/file/d/1tjif7IbrehNbUBsFBMdBRltWF2AMX6tW/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-3-sigmund-freud-obras-completas",
+  "title": "Sigmund Freud: Obras Completas",
+  "author": "Sigmund Freud",
+  "publisher": "psicologia",
+  "year": 2012,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra essencial Sigmund Freud: Obras Completas de Sigmund Freud em formato PDF. Referência indispensável nos estudos de Psicologia, Neurociências e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WeyLq93kZ0XU8cErXxp3LOg_kTHN19W7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WeyLq93kZ0XU8cErXxp3LOg_kTHN19W7",
+  "readerUrl": "https://drive.google.com/file/d/1Ee2gIrlDnlVBWiw7BTqMn-s_uDpWaCWQ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-4-the-organism-a-holistic-approach-to-biology",
+  "title": "The Organism: A Holistic Approach to Biology",
+  "author": "Kurt Goldstein",
+  "publisher": "psicologia",
+  "year": 2012,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra essencial The Organism: A Holistic Approach to Biology de Kurt Goldstein em formato PDF. Referência indispensável nos estudos de Psicologia, Neurociências e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1TB7gm55980qFJWzlUsB5m7Yn6SAputJ5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1TB7gm55980qFJWzlUsB5m7Yn6SAputJ5",
+  "readerUrl": "https://drive.google.com/file/d/1D_nG5EjTRLnmwJQz2VWXdoik9V9pM--q/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-5-the-better-angels-of-our-nature",
+  "title": "The Better Angels of Our Nature",
+  "author": "Steven Pinker",
+  "publisher": "psicologia",
+  "year": 2012,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra essencial The Better Angels of Our Nature de Steven Pinker em formato PDF. Referência indispensável nos estudos de Psicologia, Neurociências e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1TTa0dx0U_L-mxVFEq45NSMc_lxKZvp-i",
+  "backdrop": "https://lh3.googleusercontent.com/d/1TTa0dx0U_L-mxVFEq45NSMc_lxKZvp-i",
+  "readerUrl": "https://drive.google.com/file/d/17YMxvkGodF8ZvtMaPf3oWpew9nSordk5/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-6-comportamento-organizacional-15-edi-o",
+  "title": "Comportamento Organizacional (15ª Edição)",
+  "author": "Stephen P. Robbins & Timothy A. Judge",
+  "publisher": "psicologia",
+  "year": 2012,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra essencial Comportamento Organizacional (15ª Edição) de Stephen P. Robbins & Timothy A. Judge em formato PDF. Referência indispensável nos estudos de Psicologia, Neurociências e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dw_eJjrDTKrgSW0Ng-f8abd_wV_KW5SU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dw_eJjrDTKrgSW0Ng-f8abd_wV_KW5SU",
+  "readerUrl": "https://drive.google.com/file/d/1jU_16rUDG8GHaeJUCnz_tv6J3AZ3JxDP/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-7-psicologia-e-pedagogia",
+  "title": "Psicologia e Pedagogia",
+  "author": "Lev Vygotsky, Alexei Leontiev & Alexander Luria",
+  "publisher": "psicologia",
+  "year": 2012,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra essencial Psicologia e Pedagogia de Lev Vygotsky, Alexei Leontiev & Alexander Luria em formato PDF. Referência indispensável nos estudos de Psicologia, Neurociências e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uUpXi7E1bCBs0NTqt03xhPfKAqWYjQ4p",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uUpXi7E1bCBs0NTqt03xhPfKAqWYjQ4p",
+  "readerUrl": "https://drive.google.com/file/d/1vjXLNoW10i5ZUItek12th1uni6oJQ7RV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-8-transforma-tu-cerebro-con-pnl",
+  "title": "Transforma tu Cerebro con PNL",
+  "author": "Wendy Jago",
+  "publisher": "psicologia",
+  "year": 2012,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra essencial Transforma tu Cerebro con PNL de Wendy Jago em formato PDF. Referência indispensável nos estudos de Psicologia, Neurociências e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Y-tORz-SyOyynBXd8alE-sCj_eCGofnO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Y-tORz-SyOyynBXd8alE-sCj_eCGofnO",
+  "readerUrl": "https://drive.google.com/file/d/1H410mrt6_lXALkInHMCnNO2zoppo7Vj6/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-9-introdu-o-psicologia",
+  "title": "Introdução à Psicologia",
+  "author": "Fernando Zepeda Herrera",
+  "publisher": "psicologia",
+  "year": 2012,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra essencial Introdução à Psicologia de Fernando Zepeda Herrera em formato PDF. Referência indispensável nos estudos de Psicologia, Neurociências e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17XK6CtH84V6sai1VzACzA4y8iOzVX16q",
+  "backdrop": "https://lh3.googleusercontent.com/d/17XK6CtH84V6sai1VzACzA4y8iOzVX16q",
+  "readerUrl": "https://drive.google.com/file/d/1ZMntgIZue9hztfFtaJA4xY453oVaoUj5/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
   "Todos",
   "Turma da Mônica",
+  "Psicologia & Saúde Mental",
   "HQs & Quadrinhos",
   "Romance & Drama",
   "Fantasia & Ficção",
