@@ -10701,6 +10701,827 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/1o4TMejUqV2d_MTvaTMr6mEpZDDJndXtp",
   "readerUrl": "https://drive.google.com/file/d/1nO8orJopcKJPhuKPSDhgNpPnDNuRxac4/view?usp=drive_link"
 }
+,
+  {
+  "id": "hq-marvel-zombies-1-ultimate-fantastic-four-21",
+  "title": "Ultimate Fantastic Four #21",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Ultimate Fantastic Four #21 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NWFLzWQ0btY05DAil6Bnt_91Jhw0JNLR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NWFLzWQ0btY05DAil6Bnt_91Jhw0JNLR",
+  "readerUrl": "https://drive.google.com/file/d/1AJ6vOFJakPowFped3HH6FweB3eXb1SI-/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-2-ultimate-fantastic-four-22",
+  "title": "Ultimate Fantastic Four #22",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Ultimate Fantastic Four #22 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ft7rlZlZVCz2230quFF0X0zwwaRXaFZD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ft7rlZlZVCz2230quFF0X0zwwaRXaFZD",
+  "readerUrl": "https://drive.google.com/file/d/1VPJr-AsTtmQi_DCahTmGMEUeUTNkSLFF/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-3-ultimate-fantastic-four-23",
+  "title": "Ultimate Fantastic Four #23",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Ultimate Fantastic Four #23 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1969UwuPkhak4M1JOseIud3XQWx1tuqwo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1969UwuPkhak4M1JOseIud3XQWx1tuqwo",
+  "readerUrl": "https://drive.google.com/file/d/1Xpou4IXIQU5F3p1knlJGqhS04AaNd1Bt/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-4-zumbis-marvel-vol-1-edi-o-01-de-05",
+  "title": "Zumbis Marvel Vol. 1 - Edição 01 de 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 1 - Edição 01 de 05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GNBHdLPJDcoNjt23Vr24Unb6dHJakzn-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GNBHdLPJDcoNjt23Vr24Unb6dHJakzn-",
+  "readerUrl": "https://drive.google.com/file/d/1Z6BL-jcZDIuxk6PTBcRJwJz5slkw7hJW/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-5-zumbis-marvel-vol-1-edi-o-02-de-05",
+  "title": "Zumbis Marvel Vol. 1 - Edição 02 de 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 1 - Edição 02 de 05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HspHza9NwjUgIkGNxyEiZpyY5dFrRbni",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HspHza9NwjUgIkGNxyEiZpyY5dFrRbni",
+  "readerUrl": "https://drive.google.com/file/d/1UDfWhdu2htFiOBGn2IiWgPIwRkhZqGvS/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-6-zumbis-marvel-vol-1-edi-o-03-de-05",
+  "title": "Zumbis Marvel Vol. 1 - Edição 03 de 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 1 - Edição 03 de 05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QIfHG8hSD6t6JAwRJ6Q7mWFxgojItpSr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QIfHG8hSD6t6JAwRJ6Q7mWFxgojItpSr",
+  "readerUrl": "https://drive.google.com/file/d/1MY8oVSyONwaXyRWTbrHccFxkwsIaXrHc/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-7-zumbis-marvel-vol-1-edi-o-04-de-05",
+  "title": "Zumbis Marvel Vol. 1 - Edição 04 de 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 1 - Edição 04 de 05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rw8eRB5gOetWJJ0kw_KJf74neqPkBUgm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rw8eRB5gOetWJJ0kw_KJf74neqPkBUgm",
+  "readerUrl": "https://drive.google.com/file/d/1Ojfkx2cHGDb7Qr4RkTerjH7ZT7MN28QT/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-8-zumbis-marvel-vol-1-edi-o-05-de-05",
+  "title": "Zumbis Marvel Vol. 1 - Edição 05 de 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 1 - Edição 05 de 05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1f-b9ObigtDconWqHoX17bLiiBnle9TUX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1f-b9ObigtDconWqHoX17bLiiBnle9TUX",
+  "readerUrl": "https://drive.google.com/file/d/1h5wPoYompcghMEu_zBXyjnQrz16IeatD/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-9-ultimate-fantastic-four-30",
+  "title": "Ultimate Fantastic Four #30",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Ultimate Fantastic Four #30 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xHhoEM8J1S0-lhy8Q1-ANTifbSwa-Whs",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xHhoEM8J1S0-lhy8Q1-ANTifbSwa-Whs",
+  "readerUrl": "https://drive.google.com/file/d/11tU_c5KuTgQWGthXQkrTnDoUbnzHP1h2/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-10-ultimate-fantastic-four-31",
+  "title": "Ultimate Fantastic Four #31",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Ultimate Fantastic Four #31 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vQY8brLw70GWBWdCUDB2b66u-C3VNynY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vQY8brLw70GWBWdCUDB2b66u-C3VNynY",
+  "readerUrl": "https://drive.google.com/file/d/1Uq9sWJAQBZ14-_62y0xFXNMpXACxfA_h/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-11-ultimate-fantastic-four-32",
+  "title": "Ultimate Fantastic Four #32",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Ultimate Fantastic Four #32 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IPQA7AwZQDskSgkfzWQbJgz5Ghh9xZSG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IPQA7AwZQDskSgkfzWQbJgz5Ghh9xZSG",
+  "readerUrl": "https://drive.google.com/file/d/1M7KfDEpCM7jyvHQ3g2TzfWuYsD1KqFXk/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-12-zumbis-marvel-dias-mortos-dead-days",
+  "title": "Zumbis Marvel: Dias Mortos (Dead Days)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel: Dias Mortos (Dead Days) da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Vtq5vik8UE3Q64U8cvK2MU3jSTlPiTuJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Vtq5vik8UE3Q64U8cvK2MU3jSTlPiTuJ",
+  "readerUrl": "https://drive.google.com/file/d/1JpKmi2UmLbDcC0ddtv6ftDW6aH8dqeVZ/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-13-zumbis-marvel-vol-2-edi-o-01-de-05",
+  "title": "Zumbis Marvel Vol. 2 - Edição 01 de 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 2 - Edição 01 de 05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Fr_Ig-WPL-4mJrVTL9KWM48KDVxlPPnt",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Fr_Ig-WPL-4mJrVTL9KWM48KDVxlPPnt",
+  "readerUrl": "https://drive.google.com/file/d/1hjl-0wEs5THlE5_rJZ8_U37aie3YxBNu/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-14-zumbis-marvel-vol-2-edi-o-02-de-05",
+  "title": "Zumbis Marvel Vol. 2 - Edição 02 de 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 2 - Edição 02 de 05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10sNhIZCvZBTqQvlceziPMqxE_BBcTuhB",
+  "backdrop": "https://lh3.googleusercontent.com/d/10sNhIZCvZBTqQvlceziPMqxE_BBcTuhB",
+  "readerUrl": "https://drive.google.com/file/d/1fMy-uCErumIdmoWcYYRHG70wBxntLGGM/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-15-zumbis-marvel-vol-2-edi-o-03-de-05",
+  "title": "Zumbis Marvel Vol. 2 - Edição 03 de 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 2 - Edição 03 de 05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uF9bpQoN47yzQSqPEK-kwkiT4T3giKut",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uF9bpQoN47yzQSqPEK-kwkiT4T3giKut",
+  "readerUrl": "https://drive.google.com/file/d/16MO8zlvWbksUUBr7GAzYvJ8F6U3iqBN5/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-16-zumbis-marvel-vol-2-edi-o-04-de-05",
+  "title": "Zumbis Marvel Vol. 2 - Edição 04 de 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 2 - Edição 04 de 05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1L3qqXzhCzDaRyGWxzIOl9X7Z7gFuRWgE",
+  "backdrop": "https://lh3.googleusercontent.com/d/1L3qqXzhCzDaRyGWxzIOl9X7Z7gFuRWgE",
+  "readerUrl": "https://drive.google.com/file/d/1EAPrWOLu2U77YlhbcPZS8ISkxFW91suH/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-17-zumbis-marvel-vol-2-edi-o-05-de-05",
+  "title": "Zumbis Marvel Vol. 2 - Edição 05 de 05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 2 - Edição 05 de 05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hHJ7f7vUeSN21F1YeqxzhoJ372043h35",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hHJ7f7vUeSN21F1YeqxzhoJ372043h35",
+  "readerUrl": "https://drive.google.com/file/d/1pP6EUzyTXCJqU1E_WBI3OVXJSj7RINdh/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-18-marvel-zombies-vs-army-of-darkness-00",
+  "title": "Marvel Zombies vs. Army of Darkness #00",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies vs. Army of Darkness #00 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Avd-a1hWiETH9r7D7gFNeqEeCEtXyUo-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Avd-a1hWiETH9r7D7gFNeqEeCEtXyUo-",
+  "readerUrl": "https://drive.google.com/file/d/1xtJ7QskFeMpH1g_9edPVaMcM5vZg-zop/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-19-marvel-zombies-vs-army-of-darkness-01",
+  "title": "Marvel Zombies vs. Army of Darkness #01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies vs. Army of Darkness #01 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uddb4C6QKNMb5bKPTVNvcz0Xb6wkgi78",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uddb4C6QKNMb5bKPTVNvcz0Xb6wkgi78",
+  "readerUrl": "https://drive.google.com/file/d/1E0P8uickA_qkQMHgBRTFsGot6kKQv_hi/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-20-marvel-zombies-vs-army-of-darkness-02",
+  "title": "Marvel Zombies vs. Army of Darkness #02",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies vs. Army of Darkness #02 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1f-1PI-dSJDsRURvWXuer1qqZVSg_JxwP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1f-1PI-dSJDsRURvWXuer1qqZVSg_JxwP",
+  "readerUrl": "https://drive.google.com/file/d/1dEIUOaS7BFVks8l_NDco9WZfgE6oWgzC/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-21-marvel-zombies-vs-army-of-darkness-03",
+  "title": "Marvel Zombies vs. Army of Darkness #03",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies vs. Army of Darkness #03 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1yik2B4asf7L_g6L7XLTmlHZGwEogJj56",
+  "backdrop": "https://lh3.googleusercontent.com/d/1yik2B4asf7L_g6L7XLTmlHZGwEogJj56",
+  "readerUrl": "https://drive.google.com/file/d/1uOKLOvMFo6rwPXSBZTYpEqysNUzhG2Ln/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-22-marvel-zombies-vs-army-of-darkness-04",
+  "title": "Marvel Zombies vs. Army of Darkness #04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies vs. Army of Darkness #04 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Chk8ySEd7XDaWv7lqr7mGFPlZRdGvP1O",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Chk8ySEd7XDaWv7lqr7mGFPlZRdGvP1O",
+  "readerUrl": "https://drive.google.com/file/d/1zqhz4CqHOwNXPal_Bk0LMoEzh8K8y_3S/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-23-marvel-zombies-vs-army-of-darkness-05",
+  "title": "Marvel Zombies vs. Army of Darkness #05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies vs. Army of Darkness #05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1l4IDj3878jr9cyMrQxU71U4nAWNCqCho",
+  "backdrop": "https://lh3.googleusercontent.com/d/1l4IDj3878jr9cyMrQxU71U4nAWNCqCho",
+  "readerUrl": "https://drive.google.com/file/d/1RRifdzjYkef5x3D9lH0ouFlmgHSfJBkJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-24-pantera-negra-28-zumbis-marvel",
+  "title": "Pantera Negra #28 (Zumbis Marvel)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Pantera Negra #28 (Zumbis Marvel) da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qKEAjYi17ZdytddKvVxVJg8zETz5TtBZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qKEAjYi17ZdytddKvVxVJg8zETz5TtBZ",
+  "readerUrl": "https://drive.google.com/file/d/1yVPd96nxlSD5ndq0kWZsCncTxAxuge87/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-25-pantera-negra-29-zumbis-marvel",
+  "title": "Pantera Negra #29 (Zumbis Marvel)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Pantera Negra #29 (Zumbis Marvel) da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17OI0lS0XFhQdbCDPN_MSWbGv0GWXJ-p8",
+  "backdrop": "https://lh3.googleusercontent.com/d/17OI0lS0XFhQdbCDPN_MSWbGv0GWXJ-p8",
+  "readerUrl": "https://drive.google.com/file/d/1kyyXldvn_kB5kaCdKZN4zPZFQrZXvRmi/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-26-pantera-negra-30-zumbis-marvel",
+  "title": "Pantera Negra #30 (Zumbis Marvel)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Pantera Negra #30 (Zumbis Marvel) da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zX5pV28gRKuytqQr-CxKN3Ya_1a4sOhU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zX5pV28gRKuytqQr-CxKN3Ya_1a4sOhU",
+  "readerUrl": "https://drive.google.com/file/d/1OytxYdtFMWLSQBZZzKGSk_d1cN5sCyJc/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-27-zumbis-marvel-vol-3-edi-o-01-de-04",
+  "title": "Zumbis Marvel Vol. 3 - Edição 01 de 04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 3 - Edição 01 de 04 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ACCRQX35-OoKURsTtC3wurGoHgVRJgcb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ACCRQX35-OoKURsTtC3wurGoHgVRJgcb",
+  "readerUrl": "https://drive.google.com/file/d/1l_I3YoTqPcXDQ1HPIp2h8C40gpt60Ug_/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-28-zumbis-marvel-vol-3-edi-o-02-de-04",
+  "title": "Zumbis Marvel Vol. 3 - Edição 02 de 04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 3 - Edição 02 de 04 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UWBGZtWWvLTTmqLO-xL_V8dC1x-j-FRo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UWBGZtWWvLTTmqLO-xL_V8dC1x-j-FRo",
+  "readerUrl": "https://drive.google.com/file/d/1sG6VHfhRZ6GRSBzBVDlRgE2Yn1lZykTw/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-29-zumbis-marvel-vol-3-edi-o-03-de-04",
+  "title": "Zumbis Marvel Vol. 3 - Edição 03 de 04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 3 - Edição 03 de 04 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1t6uJVQ5TP3XpNAkWmSF64PLnwojC0bLJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1t6uJVQ5TP3XpNAkWmSF64PLnwojC0bLJ",
+  "readerUrl": "https://drive.google.com/file/d/1CrwXmkh7hyT-jWeOBcbXvh4E7dmvUUod/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-30-zumbis-marvel-vol-3-edi-o-04-de-04",
+  "title": "Zumbis Marvel Vol. 3 - Edição 04 de 04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel Vol. 3 - Edição 04 de 04 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FFjDI04DhEBZ_7X69OTk44HVc49wXZ6h",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FFjDI04DhEBZ_7X69OTk44HVc49wXZ6h",
+  "readerUrl": "https://drive.google.com/file/d/1Dc8O6ASU4X6dNXEucltZ2lX1nWn8pbdV/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-31-marvel-zombies-o-retorno-01",
+  "title": "Marvel Zombies: O Retorno #01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies: O Retorno #01 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1g-EtMzBm4QYmqG8Ct0YyszCT2-wKlVyQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1g-EtMzBm4QYmqG8Ct0YyszCT2-wKlVyQ",
+  "readerUrl": "https://drive.google.com/file/d/1iVWEcZFn8_z-dLj1BLjTXj-eP_LdYSlv/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-32-marvel-zombies-o-retorno-02",
+  "title": "Marvel Zombies: O Retorno #02",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies: O Retorno #02 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uhx13l-Z7o89QtflJlrA70djcROGg0WB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uhx13l-Z7o89QtflJlrA70djcROGg0WB",
+  "readerUrl": "https://drive.google.com/file/d/18C-wXU9EIpwLXrgHSE8trsMaR4XSviAN/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-33-marvel-zombies-o-retorno-03",
+  "title": "Marvel Zombies: O Retorno #03",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies: O Retorno #03 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YVX4dWOxTDoDIX-Shu79h81JnKbBkPh8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YVX4dWOxTDoDIX-Shu79h81JnKbBkPh8",
+  "readerUrl": "https://drive.google.com/file/d/1WQIbEpQmzjhU9LDhlaJxqUmH0h1lqUL_/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-34-marvel-zombies-o-retorno-04",
+  "title": "Marvel Zombies: O Retorno #04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies: O Retorno #04 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zzbTaHahXcZZ41RmnBfjZDZRSoxSXFkn",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zzbTaHahXcZZ41RmnBfjZDZRSoxSXFkn",
+  "readerUrl": "https://drive.google.com/file/d/1WBAc57nMrH8Rfj_LBQNOcWSTScGBhyJx/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-35-marvel-zombies-o-retorno-05",
+  "title": "Marvel Zombies: O Retorno #05",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies: O Retorno #05 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Fnp4RZlcZlrNCBGoFfLXKWWNJRU47VtS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Fnp4RZlcZlrNCBGoFfLXKWWNJRU47VtS",
+  "readerUrl": "https://drive.google.com/file/d/1ubjn5S4-CX-MvgGBtc3HprmtHKJ8ZjUL/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-36-marvel-zombies-o-retorno-01",
+  "title": "Marvel Zombies: O Retorno #01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies: O Retorno #01 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PLxLr3nbaIGdcI17jkocJ2TTg_Wntyjp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PLxLr3nbaIGdcI17jkocJ2TTg_Wntyjp",
+  "readerUrl": "https://drive.google.com/file/d/17Ws6aP6IqPIDnNxsXGrNM5WNlzFylam2/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-37-marvel-zombies-4-edi-o-01",
+  "title": "Marvel Zombies 4 - Edição #01",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies 4 - Edição #01 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18uV9sl06FfBJ3iE-_EN6OxWiwBb5r2BG",
+  "backdrop": "https://lh3.googleusercontent.com/d/18uV9sl06FfBJ3iE-_EN6OxWiwBb5r2BG",
+  "readerUrl": "https://drive.google.com/file/d/1R5E6SpZ4s3d6hV6dxXMgiE870rx3bzIQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-38-marvel-zombies-4-edi-o-02",
+  "title": "Marvel Zombies 4 - Edição #02",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies 4 - Edição #02 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tZ8i0HNj9C_JAhxP1M6COAqyEpSQm7BG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tZ8i0HNj9C_JAhxP1M6COAqyEpSQm7BG",
+  "readerUrl": "https://drive.google.com/file/d/1KMDY8NBQTU9lM77FV3PZBoggzNgswUB2/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-39-marvel-zombies-4-edi-o-03",
+  "title": "Marvel Zombies 4 - Edição #03",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies 4 - Edição #03 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1N1KT2I0lS0O4ZMVm1glxEF2wcEOKM5Cr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1N1KT2I0lS0O4ZMVm1glxEF2wcEOKM5Cr",
+  "readerUrl": "https://drive.google.com/file/d/1OF59KzHi8TNgRH39w5p1_k0yWhszvvhY/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-40-marvel-zombies-4-edi-o-04",
+  "title": "Marvel Zombies 4 - Edição #04",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Marvel Zombies 4 - Edição #04 da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gDLbqepbzUoGHDe0uEAQL1SL236vwzv_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gDLbqepbzUoGHDe0uEAQL1SL236vwzv_",
+  "readerUrl": "https://drive.google.com/file/d/1KTTUkw2aym56g-_DVdwB8CPtgDizt2wE/view?usp=drive_link"
+},
+  {
+  "id": "hq-marvel-zombies-41-zumbis-marvel-halloween",
+  "title": "Zumbis Marvel: Halloween",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Terror & Mistério"
+  ],
+  "description": "Edição Zumbis Marvel: Halloween da Marvel Comics em formato PDF. A aterrorizante saga dos heróis zumbificados da Marvel. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1yQbDxbhlBdVPoOOfjc8dtjMHj023MWEN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1yQbDxbhlBdVPoOOfjc8dtjMHj023MWEN",
+  "readerUrl": "https://drive.google.com/file/d/1hxMXWi0iP0xtOs6jWYTncVM6XSMMJv67/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
