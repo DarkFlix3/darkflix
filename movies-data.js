@@ -9320,6 +9320,1387 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/1THoZNh9cR-9Bp6ZXTp48wKPs_uG5A3Gr",
   "readerUrl": "https://drive.google.com/file/d/1wntBcoFYwFtzYIqamI5jqcTdugrouLuK/view?usp=drive_link"
 }
+,
+  {
+  "id": "hq-surfista-prateado-1-amargo-regresso-her-is-da-tv-n-70-abril-de-1985-publica-o-original-silver-surfer-volume-2-n-1-em-1982",
+  "title": "AMARGO REGRESSO - HERÓIS DA TV Nº 70 - ABRIL DE 1985 (PUBLICAÇÃO ORIGINAL - SILVER SURFER VOLUME 2 Nº 1 EM 1982)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição AMARGO REGRESSO - HERÓIS DA TV Nº 70 - ABRIL DE 1985 (PUBLICAÇÃO ORIGINAL - SILVER SURFER VOLUME 2 Nº 1 EM 1982) da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19bSi_5qHTMrrXyxgkHd_dmNIe-kmf7n_",
+  "backdrop": "https://lh3.googleusercontent.com/d/19bSi_5qHTMrrXyxgkHd_dmNIe-kmf7n_",
+  "readerUrl": "https://drive.google.com/file/d/147tEqTY9b6M1T-C9Eym_vv0RhQvpQsZE/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-2-surfista-prateado-dualidade-c-smica-bw",
+  "title": "Surfista Prateado: DUALIDADE CÓSMICA (BW)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: DUALIDADE CÓSMICA (BW) da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1iZISXpxPXvDUrPDaJDgaMhjXG-j3XP3F",
+  "backdrop": "https://lh3.googleusercontent.com/d/1iZISXpxPXvDUrPDaJDgaMhjXG-j3XP3F",
+  "readerUrl": "https://drive.google.com/file/d/181-WWU2NwLLeKo9cTc1nQYxwgaOK3ram/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-3-surfista-prateado-experiencia-c-smica-final",
+  "title": "Surfista Prateado: EXPERIENCIA CÓSMICA FINAL",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: EXPERIENCIA CÓSMICA FINAL da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1fQAPwuupBLbjzHo3SfgK--1aTW2frGY2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1fQAPwuupBLbjzHo3SfgK--1aTW2frGY2",
+  "readerUrl": "https://drive.google.com/file/d/1mhrHikmYeDuKDjmNtq4v3mPpXJPlT-oG/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-4-grandes-her-is-marvel-v1-016",
+  "title": "GRANDES HERÓIS MARVEL V1 016",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição GRANDES HERÓIS MARVEL V1 016 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1h0oHq6a1tDvvgdYgqzFOQMRKP8r9KYPD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1h0oHq6a1tDvvgdYgqzFOQMRKP8r9KYPD",
+  "readerUrl": "https://drive.google.com/file/d/1_TCsVKKa8FS9hHTKdwzS50KV8v_sZeXv/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-5-grandes-her-is-marvel-v1-033",
+  "title": "GRANDES HERÓIS MARVEL V1 033",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição GRANDES HERÓIS MARVEL V1 033 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ycC0DGhIwZiWP-G4zto4-SjOja7RbKYR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ycC0DGhIwZiWP-G4zto4-SjOja7RbKYR",
+  "readerUrl": "https://drive.google.com/file/d/1-WUvC-WIocOPHROg5OeYWZ2NL2imeMhw/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-6-grandes-her-is-marvel-v1-066",
+  "title": "GRANDES HERÓIS MARVEL V1 066",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição GRANDES HERÓIS MARVEL V1 066 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ai4MYli--WjdtGqqFzXUrq7YYAbODCJY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ai4MYli--WjdtGqqFzXUrq7YYAbODCJY",
+  "readerUrl": "https://drive.google.com/file/d/1lswJmniNMZrJRPhAGooRCY182qPdnMhh/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-7-surfista-prateado-ju-zo-final",
+  "title": "Surfista Prateado: JUÍZO FINAL",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: JUÍZO FINAL da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HnClQD2xaxRTn1N4inUWnJp_dCpBOf7p",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HnClQD2xaxRTn1N4inUWnJp_dCpBOf7p",
+  "readerUrl": "https://drive.google.com/file/d/1sjjrODrDWHvjWB2inPLWdFBcpCpTPKY_/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-8-lanterna-verde-surfista-prateado-alian-as-profanas",
+  "title": "LANTERNA VERDE & SURFISTA PRATEADO ALIANÇAS PROFANAS",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição LANTERNA VERDE & SURFISTA PRATEADO ALIANÇAS PROFANAS da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zndZTFQ1Z1Kg22HGyIx3-uXZXDftEHyg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zndZTFQ1Z1Kg22HGyIx3-uXZXDftEHyg",
+  "readerUrl": "https://drive.google.com/file/d/1Vw-Ux3R1k1IfIQWayuyt2O-3X0sUQAcZ/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-9-marvel-especial-4",
+  "title": "MARVEL ESPECIAL 4",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição MARVEL ESPECIAL 4 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1x5y6nh-YdZF-orjuAx9AYVfPdT4WwZdl",
+  "backdrop": "https://lh3.googleusercontent.com/d/1x5y6nh-YdZF-orjuAx9AYVfPdT4WwZdl",
+  "readerUrl": "https://drive.google.com/file/d/1uV8tc7kGbik4I7UwFmevpFa8ZOx6x-fP/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-10-marvel-especial-5",
+  "title": "MARVEL ESPECIAL 5",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição MARVEL ESPECIAL 5 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1H24qswp8ljUS0U1vqgHNHwmh8_iqnUa3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1H24qswp8ljUS0U1vqgHNHwmh8_iqnUa3",
+  "readerUrl": "https://drive.google.com/file/d/1hKcZv0HwWUmT84Puj2H7vBeQzaFUvflJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-11-surfista-prateado-os-escravistas",
+  "title": "Surfista Prateado: OS ESCRAVISTAS",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: OS ESCRAVISTAS da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YM6PYfCGbaRt6AI3BeDzXhr-gR2uwkDS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YM6PYfCGbaRt6AI3BeDzXhr-gR2uwkDS",
+  "readerUrl": "https://drive.google.com/file/d/1Hlc1Oa2V-cJ8sXpbLbeAw1vb7EjcJyPF/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-12-surfista-prateado-par-bola",
+  "title": "Surfista Prateado: PARÁBOLA",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: PARÁBOLA da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1X6I3g0CcAJk3Dvjy5F5KOoXlIPI8zU5b",
+  "backdrop": "https://lh3.googleusercontent.com/d/1X6I3g0CcAJk3Dvjy5F5KOoXlIPI8zU5b",
+  "readerUrl": "https://drive.google.com/file/d/1n6juD65UJiq2kPZ-WGQYJQmFzoQ1G8Rx/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-13-surfista-prateado-requiem",
+  "title": "Surfista Prateado: REQUIEM",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: REQUIEM da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1MMDOL3RRxKDUuy5ZHrYlX0np161aZSiy",
+  "backdrop": "https://lh3.googleusercontent.com/d/1MMDOL3RRxKDUuy5ZHrYlX0np161aZSiy",
+  "readerUrl": "https://drive.google.com/file/d/11BBO13xx8frxWDvnZOpthHzWAGK1lU9j/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-14-surfista-prateado-superman",
+  "title": "SURFISTA PRATEADO & SUPERMAN",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição SURFISTA PRATEADO & SUPERMAN da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1drJNy1fOYLbCujPo8cTqJDJ4u5upGKoO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1drJNy1fOYLbCujPo8cTqJDJ4u5upGKoO",
+  "readerUrl": "https://drive.google.com/file/d/14g6bqVBKiTo8fuvIrXknUWyaUSeZ7QKa/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-15-surfista-prateado-miniss-rie-01-de-04",
+  "title": "Surfista Prateado: Minissérie (01 de 04)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: Minissérie (01 de 04) da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14l34HtV2vQPH8_EDSjsp32uaT9I29Le8",
+  "backdrop": "https://lh3.googleusercontent.com/d/14l34HtV2vQPH8_EDSjsp32uaT9I29Le8",
+  "readerUrl": "https://drive.google.com/file/d/1-NCTW4QMrSndq_FKk8fnu1MMoIi1kts9/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-16-surfista-prateado-miniss-rie-02-de-04",
+  "title": "Surfista Prateado: Minissérie (02 de 04)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: Minissérie (02 de 04) da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xZGNccUelZrwudP8F90g24Ddf4h7-Iwg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xZGNccUelZrwudP8F90g24Ddf4h7-Iwg",
+  "readerUrl": "https://drive.google.com/file/d/1RMSyVWAfFbRlXf2LMJXKnHuBdjUvIzFt/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-17-surfista-prateado-miniss-rie-03-de-04",
+  "title": "Surfista Prateado: Minissérie (03 de 04)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: Minissérie (03 de 04) da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1JdITZlVh6ONBlVLG5t1i6ENOhq4Ecm9L",
+  "backdrop": "https://lh3.googleusercontent.com/d/1JdITZlVh6ONBlVLG5t1i6ENOhq4Ecm9L",
+  "readerUrl": "https://drive.google.com/file/d/1klyHO3_5o4KpVKyr-opRsED21Qb4y6dG/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-18-surfista-prateado-miniss-rie-04-de-04",
+  "title": "Surfista Prateado: Minissérie (04 de 04)",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: Minissérie (04 de 04) da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1aGSmQtkxO3UK0mQqNLDioGp5PYB5alMM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1aGSmQtkxO3UK0mQqNLDioGp5PYB5alMM",
+  "readerUrl": "https://drive.google.com/file/d/1R3wORPM4m9PIDuXiVG7sWUDdzxaU3L-t/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-19-surfista-prateado-volta-ao-lar",
+  "title": "Surfista Prateado: VOLTA AO LAR",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado: VOLTA AO LAR da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IJsVTHtIW6AnuWlCKGh6c-2luuHO-10N",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IJsVTHtIW6AnuWlCKGh6c-2luuHO-10N",
+  "readerUrl": "https://drive.google.com/file/d/1eq4a3XEPz2lgeJuEKW5pIRs1PIWw3Y9R/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-20-surfista-prateado-mini-s-rie-em-5-edi-es",
+  "title": "SURFISTA PRATEADO MINI-SÉRIE EM 5 EDIÇÕES",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição SURFISTA PRATEADO MINI-SÉRIE EM 5 EDIÇÕES da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LwsivWKTTZa8G5iMh-up5AQHXwkLZu_s",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LwsivWKTTZa8G5iMh-up5AQHXwkLZu_s",
+  "readerUrl": "https://drive.google.com/file/d/13_R3Z0ZdfFjzU_7AtMxJQST7KA7wYCXJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-21-surfista-prateado-v1-01-a-origem-do-surfista",
+  "title": "Surfista Prateado v1 01 A Origem do Surfista",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 01 A Origem do Surfista da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1x3pZmTphw2Cf37fT5AAA9cpsH3SMpIRx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1x3pZmTphw2Cf37fT5AAA9cpsH3SMpIRx",
+  "readerUrl": "https://drive.google.com/file/d/1Ghe9Bb6pJDMULlSG3_FDi-gU1Z0scDzq/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-22-surfista-prateado-v1-02-a-invasao-dos-monstros-invisiveis",
+  "title": "Surfista Prateado v1 02 A Invasao dos Monstros Invisiveis",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 02 A Invasao dos Monstros Invisiveis da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Zt0c1juKO7Krhesllm3dHLk87PDK8WLE",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Zt0c1juKO7Krhesllm3dHLk87PDK8WLE",
+  "readerUrl": "https://drive.google.com/file/d/1GJ3yXzQHknMrtZ7M-xOxaxQjt3Dcki-z/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-23-surfista-prateado-v1-03-mefisto-o-senhor-do-mal-mk-sq",
+  "title": "Surfista Prateado v1 03 Mefisto O Senhor do Mal MK - SQ",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 03 Mefisto O Senhor do Mal MK - SQ da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UXzeOwBnq6ZeBJI_TAH6Wp2YvpDXfuG3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UXzeOwBnq6ZeBJI_TAH6Wp2YvpDXfuG3",
+  "readerUrl": "https://drive.google.com/file/d/1Ev1T0NLJYl1qrwC66J94MdXiYTJABg1z/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-24-surfista-prateado-v1-04-combate-no-reino-eterno-sq",
+  "title": "Surfista Prateado v1 04 Combate no Reino Eterno - SQ",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 04 Combate no Reino Eterno - SQ da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gU-lIekerqOT6-v1QHTIw23dRNZhpkAn",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gU-lIekerqOT6-v1QHTIw23dRNZhpkAn",
+  "readerUrl": "https://drive.google.com/file/d/1t65rDC9DA6YtLtdFomfuysMFvliOt14q/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-25-surfista-prateado-v1-05-para-salvar-a-humanidade",
+  "title": "Surfista Prateado v1 05 Para Salvar a Humanidade ()",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 05 Para Salvar a Humanidade () da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YnVs1BCQVVbcRSojVeNfmxSdaXf3jvvH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YnVs1BCQVVbcRSojVeNfmxSdaXf3jvvH",
+  "readerUrl": "https://drive.google.com/file/d/1Kkt-AT5Ir4ZvW9AMzH3vM-CcG7RWABxL/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-26-surfista-prateado-v1-06-em-algium-lugar-do-futuro-sq",
+  "title": "Surfista Prateado v1 06 Em Algium Lugar do Futuro - SQ",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 06 Em Algium Lugar do Futuro - SQ da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XnEdsMEVBxd2tEL41LP74dtNPWQZTCW4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XnEdsMEVBxd2tEL41LP74dtNPWQZTCW4",
+  "readerUrl": "https://drive.google.com/file/d/14wsB9DB74-anziDhO7DejhwnMlcwQuPA/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-27-surfista-prateado-v1-07-o-herdeiro-de-frankenstein",
+  "title": "Surfista Prateado v1 07 O Herdeiro de Frankenstein ()",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 07 O Herdeiro de Frankenstein () da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17hyIBr6ogGJsKEP5kVn0pWHMsUFgtUDE",
+  "backdrop": "https://lh3.googleusercontent.com/d/17hyIBr6ogGJsKEP5kVn0pWHMsUFgtUDE",
+  "readerUrl": "https://drive.google.com/file/d/1FGkHYS-YL9Q44uVIxj5uXwV-yIFohhgz/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-28-surfista-prateado-v1-08-liberdade-para-um-fantasma-sq",
+  "title": "Surfista Prateado v1 08 Liberdade para Um Fantasma - SQ",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 08 Liberdade para Um Fantasma - SQ da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vdOQ68j8bODuEjxgfetr2xv9X1gvCm8k",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vdOQ68j8bODuEjxgfetr2xv9X1gvCm8k",
+  "readerUrl": "https://drive.google.com/file/d/1DgAYkpThEAeUFrjOX7AnYhGkbYX9e-MQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-29-surfista-prateado-v1-09-em-defesa-de-minha-alma-mk-sq",
+  "title": "Surfista Prateado v1 09 Em Defesa de Minha Alma MK - SQ",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 09 Em Defesa de Minha Alma MK - SQ da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1MeOkPF1WiKMHKi7_lYppWlofc_-qFlHg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1MeOkPF1WiKMHKi7_lYppWlofc_-qFlHg",
+  "readerUrl": "https://drive.google.com/file/d/11fmsuU-ZEBDXwPQTEkh7o63mfXl1lkKx/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-30-surfista-prateado-v1-10-um-tiro-na-alma",
+  "title": "Surfista Prateado v1 10 Um Tiro na Alma",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 10 Um Tiro na Alma da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tkS8jCiXkY7iFTQKIkN1vCLrYneen_CA",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tkS8jCiXkY7iFTQKIkN1vCLrYneen_CA",
+  "readerUrl": "https://drive.google.com/file/d/1QxvhBLz3Viwi7n6ONBfLf7JQQCOmsVvh/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-31-surfista-prateado-v1-11-oh-amarga-vitoria",
+  "title": "Surfista Prateado v1 11 Oh Amarga Vitoria ()",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 11 Oh Amarga Vitoria () da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jNxUvfgoaCJpeVDI7pF9KMKShBQMgtRJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jNxUvfgoaCJpeVDI7pF9KMKShBQMgtRJ",
+  "readerUrl": "https://drive.google.com/file/d/1rNh9bAoh52snX95K33DMWzewH59qMcdN/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-32-surfista-prateado-v1-12-trama-macabra-mk-sq",
+  "title": "Surfista Prateado v1 12 Trama Macabra MK - SQ",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 12 Trama Macabra MK - SQ da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ym1OBzqlP3ihbQfJky4ZyjcGVoo0u7Ga",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ym1OBzqlP3ihbQfJky4ZyjcGVoo0u7Ga",
+  "readerUrl": "https://drive.google.com/file/d/17OBTJEcg8SNLuD1SijHr_92-ahya5oKM/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-33-surfista-prateado-v1-13",
+  "title": "Surfista Prateado v1 13",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 13 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kdk86e6rxXUy6l33qHr3YvwBuYO2t-ax",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kdk86e6rxXUy6l33qHr3YvwBuYO2t-ax",
+  "readerUrl": "https://drive.google.com/file/d/1qVgnMfpNm6E75vCcDQCaBx83l2ymx2RF/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-34-surfista-prateado-v1-14-contra-o-homem-aranha",
+  "title": "Surfista Prateado v1 14 Contra o Homem Aranha",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 14 Contra o Homem Aranha da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_lV5bnmXgyTgr8GrP-3wcIa47wEPdZNo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_lV5bnmXgyTgr8GrP-3wcIa47wEPdZNo",
+  "readerUrl": "https://drive.google.com/file/d/1YQzAiDwbqvCgBVEdeDGJdZS3F8xD-Cgy/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-35-surfista-prateado-v1-15-a-chama-e-a-furia",
+  "title": "Surfista Prateado v1 15 A Chama e a Furia ()",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 15 A Chama e a Furia () da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1w-ScAIXknYHylsxabj4VPZrscJd4NZe-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1w-ScAIXknYHylsxabj4VPZrscJd4NZe-",
+  "readerUrl": "https://drive.google.com/file/d/1vCmCJabwboCGs8Fw2pE-gyNZ9CVt4yQb/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-36-surfista-prateado-v1-16-nas-garras-de-mefisto",
+  "title": "Surfista Prateado v1 16 Nas Garras de Mefisto",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 16 Nas Garras de Mefisto da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1D00vEen-xgKsrtxZ981Iyg905owz26EK",
+  "backdrop": "https://lh3.googleusercontent.com/d/1D00vEen-xgKsrtxZ981Iyg905owz26EK",
+  "readerUrl": "https://drive.google.com/file/d/1fdR4pe1QNsAWrIfVtU-vGs9Bhms-O23Q/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-37-surfista-prateado-v1-17-o-surfista-deve-matar",
+  "title": "Surfista Prateado v1 17 O Surfista deve Matar",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 17 O Surfista deve Matar da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1urOSepY9tB75LROamjz2GrKTvKDt2BFW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1urOSepY9tB75LROamjz2GrKTvKDt2BFW",
+  "readerUrl": "https://drive.google.com/file/d/19xvYdLmczaxcc5dVXiLdFr74s0AtzJ4v/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-38-surfista-prateado-v1-18-sq-bau-da-marvel",
+  "title": "Surfista Prateado v1 18 - SQ Bau da Marvel",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado v1 18 - SQ Bau da Marvel da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_MJ5yNbtvdDoT9F6FCCDhZ-GfDiuabWs",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_MJ5yNbtvdDoT9F6FCCDhZ-GfDiuabWs",
+  "readerUrl": "https://drive.google.com/file/d/1a5vrnUC_ejOKxbg3qZNlgkVhnz4hYfdi/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-39-surfista-prateado-001",
+  "title": "Surfista Prateado #001",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #001 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13LUuZXeWnmFMjzdtpR5BKkke4JMiAj55",
+  "backdrop": "https://lh3.googleusercontent.com/d/13LUuZXeWnmFMjzdtpR5BKkke4JMiAj55",
+  "readerUrl": "https://drive.google.com/file/d/1Ycl7s7zYlC3e9nQmw5FUcwSWK0DB1YYI/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-40-surfista-prateado-002",
+  "title": "Surfista Prateado #002",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #002 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XWPgMn8O3LKjzxlfdrj7s7Ej3HRMPq6I",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XWPgMn8O3LKjzxlfdrj7s7Ej3HRMPq6I",
+  "readerUrl": "https://drive.google.com/file/d/1E3atLfbjbvIj--hkI_fGYnWNBup1qUM3/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-41-surfista-prateado-015",
+  "title": "Surfista Prateado #015",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #015 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YpQB8kbwIQ2sMNevVbkGcWuBcaAVhBu7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YpQB8kbwIQ2sMNevVbkGcWuBcaAVhBu7",
+  "readerUrl": "https://drive.google.com/file/d/1YUp_0sPQmFfjn6bIJbs4Ou4dOKuQj37l/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-42-surfista-prateado-024",
+  "title": "Surfista Prateado #024",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #024 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vmReir3CLmGldwmIBYXgCeoRCOW9A_wl",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vmReir3CLmGldwmIBYXgCeoRCOW9A_wl",
+  "readerUrl": "https://drive.google.com/file/d/1F47ynHvUg2xt_r6IeMAM6m4gsCVnlooZ/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-43-surfista-prateado-032",
+  "title": "Surfista Prateado #032",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #032 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oIzXXk2mAEgc0XaB34VD1TIFY8XXJHdV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oIzXXk2mAEgc0XaB34VD1TIFY8XXJHdV",
+  "readerUrl": "https://drive.google.com/file/d/1DWJPdZ55L7SfyYF2Y7DA-m8dm2ZYjs4U/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-44-surfista-prateado-033",
+  "title": "Surfista Prateado #033",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #033 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qozzae_Kr8u0-L695i9Nfrxu_wmL6d4A",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qozzae_Kr8u0-L695i9Nfrxu_wmL6d4A",
+  "readerUrl": "https://drive.google.com/file/d/1IQreqw4Ysxk_TwgzLwWErzzV-iWOrpou/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-45-surfista-prateado-034",
+  "title": "Surfista Prateado #034",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #034 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GFDH44W9QMBEon_YWkzG5A8LeDt_qtFa",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GFDH44W9QMBEon_YWkzG5A8LeDt_qtFa",
+  "readerUrl": "https://drive.google.com/file/d/1eBSnbsPfighnp7cClhAkKMrRXF1gqO1O/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-46-surfista-prateado-035",
+  "title": "Surfista Prateado #035",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #035 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PMGYy44a3U11CLYG5RuPqm-oIrhvhufF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PMGYy44a3U11CLYG5RuPqm-oIrhvhufF",
+  "readerUrl": "https://drive.google.com/file/d/18kXwsuH_dcGPHUWC8XJhIZWoz7KAQqgf/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-47-surfista-prateado-036",
+  "title": "Surfista Prateado #036",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #036 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DFZuMhmddy2kxbGq3MWbguruYKAKbm_E",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DFZuMhmddy2kxbGq3MWbguruYKAKbm_E",
+  "readerUrl": "https://drive.google.com/file/d/1PIffjG2Fa8C0hSwJ09D5S6urITOjKba0/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-48-surfista-prateado-037",
+  "title": "Surfista Prateado #037",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #037 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HRCtrWk_5R7krAtY3E6TPgIqnbfgLzEC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HRCtrWk_5R7krAtY3E6TPgIqnbfgLzEC",
+  "readerUrl": "https://drive.google.com/file/d/1mgb05XmQBcFt82UVvQKtrAfUdI6XJEFR/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-49-surfista-prateado-038",
+  "title": "Surfista Prateado #038",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #038 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bxGTkUfsNmEYCoG6eSTqOjqjFMZk6C_B",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bxGTkUfsNmEYCoG6eSTqOjqjFMZk6C_B",
+  "readerUrl": "https://drive.google.com/file/d/1OxBROYWM7C_syfiQds3tV4GSvWQVgorG/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-50-surfista-prateado-040",
+  "title": "Surfista Prateado #040",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #040 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lHZhVHQjkOwkXh5a7Yppi1nfkM1csIJF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lHZhVHQjkOwkXh5a7Yppi1nfkM1csIJF",
+  "readerUrl": "https://drive.google.com/file/d/18HHcVcaapv_NOlrH2Tjh614Wd1j4ef5Q/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-51-surfista-prateado-041",
+  "title": "Surfista Prateado #041",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #041 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1akBn1Ds4Als_lrIL_B3f5sNvDtNleGxM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1akBn1Ds4Als_lrIL_B3f5sNvDtNleGxM",
+  "readerUrl": "https://drive.google.com/file/d/11mT1z-73lTTmYqQ69iOKMo5alB-OZF98/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-52-surfista-prateado-042",
+  "title": "Surfista Prateado #042",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #042 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15vuF27J05kptM8oMNYoJm7vRhYyprflV",
+  "backdrop": "https://lh3.googleusercontent.com/d/15vuF27J05kptM8oMNYoJm7vRhYyprflV",
+  "readerUrl": "https://drive.google.com/file/d/1AgcjqAKNWXlIBEbwgHg7hwBXSeOetOLg/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-53-surfista-prateado-043",
+  "title": "Surfista Prateado #043",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #043 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hSGJPp4NtDVUertHn5GHrpj_xmkRw9t4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hSGJPp4NtDVUertHn5GHrpj_xmkRw9t4",
+  "readerUrl": "https://drive.google.com/file/d/1B-d1JYiWqkCmnJu-LwBp78nwOHb0_KeN/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-54-surfista-prateado-044",
+  "title": "Surfista Prateado #044",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #044 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1V6B4yxskDRk8k4-TeoA0zPcN8nb--quG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1V6B4yxskDRk8k4-TeoA0zPcN8nb--quG",
+  "readerUrl": "https://drive.google.com/file/d/1t6OqQOggakOpZ7oWkuxLalSRdqEkMkw4/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-55-surfista-prateado-045",
+  "title": "Surfista Prateado #045",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #045 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1k55rS41sBQ6iH0kKGGklZ8t57L9jmcJf",
+  "backdrop": "https://lh3.googleusercontent.com/d/1k55rS41sBQ6iH0kKGGklZ8t57L9jmcJf",
+  "readerUrl": "https://drive.google.com/file/d/1PG_siUD04smpO5Mqwz_uZ17RlTT9Nb8F/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-56-surfista-prateado-046",
+  "title": "Surfista Prateado #046",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #046 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/118p1oiddGpWLihZK6UsHlVoT0YsatLLn",
+  "backdrop": "https://lh3.googleusercontent.com/d/118p1oiddGpWLihZK6UsHlVoT0YsatLLn",
+  "readerUrl": "https://drive.google.com/file/d/19MXI9WQrKwUNTayCriKCoKp-bmGkJLWG/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-57-surfista-prateado-047",
+  "title": "Surfista Prateado #047",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #047 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vo4wXqnK_zNLcOus0r38N5_H9bo6qs1n",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vo4wXqnK_zNLcOus0r38N5_H9bo6qs1n",
+  "readerUrl": "https://drive.google.com/file/d/1_KNYMkt9wuJNwwsWLsn87RUpB4Iy0Olr/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-58-surfista-prateado-048",
+  "title": "Surfista Prateado #048",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #048 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ipQNRmLwvJhJWfb5_qBrykM8li7t0SY3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ipQNRmLwvJhJWfb5_qBrykM8li7t0SY3",
+  "readerUrl": "https://drive.google.com/file/d/1MmZlyXRYb2Y3gneWa6oFtehasUtULX-g/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-59-surfista-prateado-049",
+  "title": "Surfista Prateado #049",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #049 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19cpEesche2C9cO6k4arIKg5URGVE0G0c",
+  "backdrop": "https://lh3.googleusercontent.com/d/19cpEesche2C9cO6k4arIKg5URGVE0G0c",
+  "readerUrl": "https://drive.google.com/file/d/1TvLdKMRWTmeYtk6yU2xrZPdiIYWQG_ek/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-60-surfista-prateado-050",
+  "title": "Surfista Prateado #050",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #050 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1iMoAJ-9dQ0GGhDrNVgLjIJzPniwi2_XR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1iMoAJ-9dQ0GGhDrNVgLjIJzPniwi2_XR",
+  "readerUrl": "https://drive.google.com/file/d/1YUK0t8l5Z30K_EoxDPHobTUHu4YZrK7J/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-61-surfista-prateado-067",
+  "title": "Surfista Prateado #067",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #067 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XdPWDmMnCBSkPOMWMfJ_Y7hOMHHSSBC1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XdPWDmMnCBSkPOMWMfJ_Y7hOMHHSSBC1",
+  "readerUrl": "https://drive.google.com/file/d/1d65cbcJHAsm-XdF-RJD4TfDFfhzSZZCY/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-62-surfista-prateado-068",
+  "title": "Surfista Prateado #068",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #068 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/11MGNoYnFtaMOA3V6S3te6oN9BqtrNmsp",
+  "backdrop": "https://lh3.googleusercontent.com/d/11MGNoYnFtaMOA3V6S3te6oN9BqtrNmsp",
+  "readerUrl": "https://drive.google.com/file/d/1cC8WbJvhLRhCrD1nCgagvboGQg_dtW6I/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-63-surfista-prateado-069",
+  "title": "Surfista Prateado #069",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #069 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1C58pw0GPcCUoEXr-UPwmzYkZy24gIxeF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1C58pw0GPcCUoEXr-UPwmzYkZy24gIxeF",
+  "readerUrl": "https://drive.google.com/file/d/1sdlVWi-3vNY4ryPN94LJYEspLzqZcRbQ/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-64-surfista-prateado-079",
+  "title": "Surfista Prateado #079",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #079 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BfPW44lm1k2qtqCary4Bs2pCx4cVDCAb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BfPW44lm1k2qtqCary4Bs2pCx4cVDCAb",
+  "readerUrl": "https://drive.google.com/file/d/1vhe_ADRi7ZIDX8AC_SEMcG6LJWvEBtVZ/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-65-surfista-prateado-080",
+  "title": "Surfista Prateado #080",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #080 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mqxg8kB07Z9-5GodQFPQsEjPywvmjr-A",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mqxg8kB07Z9-5GodQFPQsEjPywvmjr-A",
+  "readerUrl": "https://drive.google.com/file/d/1Ti14KneCBvfd7i8v7DU9Smkhkb-luIGs/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-66-surfista-prateado-081",
+  "title": "Surfista Prateado #081",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #081 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gWHztOAFik2ZlFjCvzxJkec3PlZWc3yY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gWHztOAFik2ZlFjCvzxJkec3PlZWc3yY",
+  "readerUrl": "https://drive.google.com/file/d/1MtcM-nDFhMJE9gZDljHs3_pZqTi85xyn/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-67-surfista-prateado-123",
+  "title": "Surfista Prateado #123",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #123 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EgNy9CKtR6-_I1IUIY6Fc1Kl9Wce2sfa",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EgNy9CKtR6-_I1IUIY6Fc1Kl9Wce2sfa",
+  "readerUrl": "https://drive.google.com/file/d/1XQXy38pvTW0r4Xrg9N37yAeyYakZiBaT/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-68-surfista-prateado-125",
+  "title": "Surfista Prateado #125",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #125 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1L3dXQDrMIcvVlU5WgdgUlGR7tB_1nqYx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1L3dXQDrMIcvVlU5WgdgUlGR7tB_1nqYx",
+  "readerUrl": "https://drive.google.com/file/d/17CAZgLGsjrJhOMWFLW-vb-lPoBvE0_V3/view?usp=drive_link"
+},
+  {
+  "id": "hq-surfista-prateado-69-surfista-prateado-126",
+  "title": "Surfista Prateado #126",
+  "author": "Marvel Comics",
+  "publisher": "marvel",
+  "year": 1988,
+  "duration": "HQ Completa (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação",
+    "Fantasia & Ficção"
+  ],
+  "description": "Edição Surfista Prateado #126 da Marvel Comics em formato PDF. As aventuras cósmicas de Norrin Radd, o Surfista Prateado. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1o4TMejUqV2d_MTvaTMr6mEpZDDJndXtp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1o4TMejUqV2d_MTvaTMr6mEpZDDJndXtp",
+  "readerUrl": "https://drive.google.com/file/d/1nO8orJopcKJPhuKPSDhgNpPnDNuRxac4/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
