@@ -14296,6 +14296,7550 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/17XK6CtH84V6sai1VzACzA4y8iOzVX16q",
   "readerUrl": "https://drive.google.com/file/d/1ZMntgIZue9hztfFtaJA4xY453oVaoUj5/view?usp=drive_link"
 }
+,
+  {
+  "id": "livro-psicologia-batch2-1-00-algunos-datos-sobre-la-presente-edicion",
+  "title": "00 Algunos Datos Sobre La Presente Edicion",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental 00 Algunos Datos Sobre La Presente Edicion de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WfTgmphopGEnOHgjFahyknjFdzcSxQxc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WfTgmphopGEnOHgjFahyknjFdzcSxQxc",
+  "readerUrl": "https://drive.google.com/file/d/13gOa9gDPoOQm_KaQoRYeuqtisK3ayMt9/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-2-01seminario-1",
+  "title": "01seminario -1",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental 01seminario -1 de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1OgeFDSx9ESA7-4s0CjTSH0wrwVS--JvF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1OgeFDSx9ESA7-4s0CjTSH0wrwVS--JvF",
+  "readerUrl": "https://drive.google.com/file/d/1kYU3cYSJxjm_dlvSXYlo60VfVju4X6xd/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-3-jacques-lacan-semin-rio-0",
+  "title": "Jacques Lacan: SemináRio 0",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 0 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PwMwrxvj8qwwvVVV93IPZ8v1DYKW7yed",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PwMwrxvj8qwwvVVV93IPZ8v1DYKW7yed",
+  "readerUrl": "https://drive.google.com/file/d/1asnZI1EgNWaw3KiPHr7QZmg8qguNSvGQ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-4-jacques-lacan-semin-rio-1",
+  "title": "Jacques Lacan: SemináRio 1",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 1 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hLCw4a2bxuC-qiNP-YMBzThSWDe_DyZ8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hLCw4a2bxuC-qiNP-YMBzThSWDe_DyZ8",
+  "readerUrl": "https://drive.google.com/file/d/18ZIYffyC9_lxu3BTkIVF9lVDVhPiuozv/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-5-jacques-lacan-semin-rio-2",
+  "title": "Jacques Lacan: SemináRio 2",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 2 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1o17mOm9Ili9HYviuaMlUett4woSp8jeJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1o17mOm9Ili9HYviuaMlUett4woSp8jeJ",
+  "readerUrl": "https://drive.google.com/file/d/1oTuW5YOCHpseisU9BeBMkVHRUMn1N4tf/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-6-jacques-lacan-semin-rio-3",
+  "title": "Jacques Lacan: SemináRio 3",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 3 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1H5Ez8DxTJG2jvc-AXTFcypR87CJEf_m2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1H5Ez8DxTJG2jvc-AXTFcypR87CJEf_m2",
+  "readerUrl": "https://drive.google.com/file/d/1U8JicYUBKCptPbTcLAfFxECfzdFZL1Cm/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-7-jacques-lacan-semin-rio-4",
+  "title": "Jacques Lacan: SemináRio 4",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 4 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1esqUKVnPioPTIyTNSxFxrWSlVF_no9rN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1esqUKVnPioPTIyTNSxFxrWSlVF_no9rN",
+  "readerUrl": "https://drive.google.com/file/d/1ZUbJLEyE9yOCZTQxGaO6vdJJ_-VRS44M/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-8-jacques-lacan-semin-rio-5",
+  "title": "Jacques Lacan: SemináRio 5",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 5 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qAVvRflD2_EfzWCWOqe_UdCAj9CkIGl2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qAVvRflD2_EfzWCWOqe_UdCAj9CkIGl2",
+  "readerUrl": "https://drive.google.com/file/d/19qClIMZZvo3Sz6Vmix5mSo0mroaGCJcV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-9-jacques-lacan-semin-rio-6",
+  "title": "Jacques Lacan: SemináRio 6",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 6 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17WsXcUvPv2KMNHdY70oBzUpJgot_wnGj",
+  "backdrop": "https://lh3.googleusercontent.com/d/17WsXcUvPv2KMNHdY70oBzUpJgot_wnGj",
+  "readerUrl": "https://drive.google.com/file/d/1Ell2dglmhDbAHU8Iub1vuzkQGtdlAvKw/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-10-jacques-lacan-semin-rio-7",
+  "title": "Jacques Lacan: SemináRio 7",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 7 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zvs5CjztRfrHmdg0WA2BUB5x8nINF5-G",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zvs5CjztRfrHmdg0WA2BUB5x8nINF5-G",
+  "readerUrl": "https://drive.google.com/file/d/166QlfdHmrlOBOSKGNJgFYTmj_SdZLbaN/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-11-jacques-lacan-semin-rio-8",
+  "title": "Jacques Lacan: SemináRio 8",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 8 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/11RdlKT8kLahVI-66hNWP1xiYeVKg9JQX",
+  "backdrop": "https://lh3.googleusercontent.com/d/11RdlKT8kLahVI-66hNWP1xiYeVKg9JQX",
+  "readerUrl": "https://drive.google.com/file/d/1CrdaUASSg9kt6T7QL7JtY4J1ZRITdrzS/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-12-jacques-lacan-semin-rio-9",
+  "title": "Jacques Lacan: SemináRio 9",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 9 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1X0XYXNqbc7ro1W2j_SYFEqTN9-wKQyOc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1X0XYXNqbc7ro1W2j_SYFEqTN9-wKQyOc",
+  "readerUrl": "https://drive.google.com/file/d/1utpWwzqZRL17ixJM4xqYAGOP8CIZmjxr/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-13-jacques-lacan-semin-rio-10",
+  "title": "Jacques Lacan: SemináRio 10",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 10 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EgPM_DlQxYbqJkDwGf0uSOhDXGXWDP2W",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EgPM_DlQxYbqJkDwGf0uSOhDXGXWDP2W",
+  "readerUrl": "https://drive.google.com/file/d/1-Ypgikc2vbLx4eWoM3qLlum_mC-tVXgj/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-14-jacques-lacan-semin-rio-10",
+  "title": "Jacques Lacan: SemináRio 10",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 10 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1isrzhAWdbh0P9mCLJAIG6UnjxGOXDHc4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1isrzhAWdbh0P9mCLJAIG6UnjxGOXDHc4",
+  "readerUrl": "https://drive.google.com/file/d/1WeICsDfeMhmW3yClOmPAM7usXVIUF-Lo/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-15-jacques-lacan-semin-rio-11",
+  "title": "Jacques Lacan: SemináRio 11",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 11 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QLRrxFANyyimUkY72sN3uklojISpMpU1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QLRrxFANyyimUkY72sN3uklojISpMpU1",
+  "readerUrl": "https://drive.google.com/file/d/11YOGrM_pd1r8LAPBqUakvGID1EoQWhvF/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-16-jacques-lacan-semin-rio-12",
+  "title": "Jacques Lacan: SemináRio 12",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 12 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1olxNFUKwSWzCMJulmXPHIPA_PnziZvvN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1olxNFUKwSWzCMJulmXPHIPA_PnziZvvN",
+  "readerUrl": "https://drive.google.com/file/d/1vF1ohS174vI8RP1JRYdXBIpmNGWBmEhT/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-17-ellis-albert-controle-su-ira-antes-que-ella-le-controle-a-usted",
+  "title": "Ellis-Albert-Controle-Su-Ira-Antes-Que-Ella-Le-Controle-A-Usted",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Ellis-Albert-Controle-Su-Ira-Antes-Que-Ella-Le-Controle-A-Usted de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Il0VknVpkLO1ikfKwg6zKyzkeQJojpxy",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Il0VknVpkLO1ikfKwg6zKyzkeQJojpxy",
+  "readerUrl": "https://drive.google.com/file/d/150GMujYF-y9hTGHfcvQsxMNzgdNtVQsV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-18-jacques-lacan-semin-rio-13",
+  "title": "Jacques Lacan: SemináRio 13",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 13 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Tltj6A2ePEkst2xJvN4oRZzre6I6RFXu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Tltj6A2ePEkst2xJvN4oRZzre6I6RFXu",
+  "readerUrl": "https://drive.google.com/file/d/1KVovn3Kz_QPRLpE-034bYspRy45g-OVC/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-19-jacques-lacan-semin-rio-14",
+  "title": "Jacques Lacan: SemináRio 14",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 14 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UL_ZuolaSnhySug50C6gxCg0MXTDMrHE",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UL_ZuolaSnhySug50C6gxCg0MXTDMrHE",
+  "readerUrl": "https://drive.google.com/file/d/1COZ1oLrnP2Ylr66sLfApC9yV6Ji2skT3/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-20-psicologia-de-los-grupos",
+  "title": "Psicologia-De-Los-Grupos",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicologia-De-Los-Grupos de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16XOuLl1Gl8osYhEHnUrYWXUbj2EFme2B",
+  "backdrop": "https://lh3.googleusercontent.com/d/16XOuLl1Gl8osYhEHnUrYWXUbj2EFme2B",
+  "readerUrl": "https://drive.google.com/file/d/1dNWUyYOYGCdRn0QUk4Pr8CF3OU8GU-pw/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-21-jacques-lacan-semin-rio-15",
+  "title": "Jacques Lacan: SemináRio 15",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 15 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1z5PY_PEu-6anfxZtV5T4F0exu7UEzhY3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1z5PY_PEu-6anfxZtV5T4F0exu7UEzhY3",
+  "readerUrl": "https://drive.google.com/file/d/1kjvJErSJd8ifPL-TkJ24ZmeFwg2L7f1X/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-22-jacques-lacan-semin-rio-16",
+  "title": "Jacques Lacan: SemináRio 16",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 16 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/11sJ4Isl-9Gx3sGfbbhu5HsN0HtZ2BOA4",
+  "backdrop": "https://lh3.googleusercontent.com/d/11sJ4Isl-9Gx3sGfbbhu5HsN0HtZ2BOA4",
+  "readerUrl": "https://drive.google.com/file/d/1sB9ClZ5CrNX2vEX5hJlpCmQBHuL64EKF/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-23-ellis-albert-usted-puede-ser-feliz",
+  "title": "Ellis-Albert-Usted-Puede-Ser-Feliz",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Ellis-Albert-Usted-Puede-Ser-Feliz de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NBS0NrnBRMbG8QnqRi4akrXORMfI0nrd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NBS0NrnBRMbG8QnqRi4akrXORMfI0nrd",
+  "readerUrl": "https://drive.google.com/file/d/1oR5-0VqyzuMVbKSY10ik9EuhEGDdp3Ve/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-24-historia-y-formaci-n-del-psic-logo-en-bolivia",
+  "title": "Historia Y FormacióN Del PsicóLogo En Bolivia",
+  "author": "orellana, felix",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Historia Y FormacióN Del PsicóLogo En Bolivia de orellana, felix em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PVY5-tzCx0Ana3d1g7EwsguQZgmFReCB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PVY5-tzCx0Ana3d1g7EwsguQZgmFReCB",
+  "readerUrl": "https://drive.google.com/file/d/1Pc41SLi4xbOxXhdOnpbZAanW_-4Cs5h-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-25-building-a-better-brain",
+  "title": "Building A Better Brain",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Building A Better Brain de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PvmQ7aAx9ajjgNkrZhwvLYY-cBGkEQ1L",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PvmQ7aAx9ajjgNkrZhwvLYY-cBGkEQ1L",
+  "readerUrl": "https://drive.google.com/file/d/1iRUMs8VNy5QpBv04CQFv2hX5SBiF6jRL/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-26-towards-a-cognitive-neuroscience-of-consciousness",
+  "title": "Towards A Cognitive Neuroscience Of Consciousness",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Towards A Cognitive Neuroscience Of Consciousness de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xMzdtnSV1XR9zdELcfeJGYiNIRqjzbph",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xMzdtnSV1XR9zdELcfeJGYiNIRqjzbph",
+  "readerUrl": "https://drive.google.com/file/d/1YqlmRGbTM8T3S0IvCjIyadu54lhVOAol/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-27-efectos-del-alcohol-et-lico-sobre-el-sn",
+  "title": "Efectos Del Alcohol EtíLico Sobre El Sn",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Efectos Del Alcohol EtíLico Sobre El Sn de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1r-hser_8KSL0dNeyKrGbU2HGMhBnk51n",
+  "backdrop": "https://lh3.googleusercontent.com/d/1r-hser_8KSL0dNeyKrGbU2HGMhBnk51n",
+  "readerUrl": "https://drive.google.com/file/d/13Svc8H0i-3Vmkj9LRGR9UMuycLUHsLRF/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-28-saborear-formas",
+  "title": "Saborear Formas",
+  "author": "oir colores",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Saborear Formas de oir colores em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ylqVQmh4nPiDKqgtva64PLHkq6mk_KpS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ylqVQmh4nPiDKqgtva64PLHkq6mk_KpS",
+  "readerUrl": "https://drive.google.com/file/d/15kvIVYhdbxQgKlEH0H89F_DhfyPgY6qg/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-29-psicolog-a-y-neuropsicolog-a",
+  "title": "PsicologíA Y NeuropsicologíA",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental PsicologíA Y NeuropsicologíA de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZfWP2fSkH_KJTFnodF1iDRcxe6hIbOjL",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZfWP2fSkH_KJTFnodF1iDRcxe6hIbOjL",
+  "readerUrl": "https://drive.google.com/file/d/1LTGUDVEAE2f7ZfNCu5Mu97UaU8s7JlQv/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-30-deterioro-cognitivo-en-epilepsia",
+  "title": "Deterioro Cognitivo En Epilepsia",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Deterioro Cognitivo En Epilepsia de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jd0r3lrdl9sdNa9OdmbxeGXjh_Q_0sPj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jd0r3lrdl9sdNa9OdmbxeGXjh_Q_0sPj",
+  "readerUrl": "https://drive.google.com/file/d/1aC-njERDSN6U5sagxItrGWx05G0ATb3u/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-31-el-uso-de-pruebas-proyectivas-y-de-entrevistas-como-descriptores-de-la-con",
+  "title": "El Uso De Pruebas Proyectivas Y De Entrevistas Como Descriptores De La Con",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Uso De Pruebas Proyectivas Y De Entrevistas Como Descriptores De La Con de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LHFZf3N_pV8wAJNqnWRyS2c6WkmS2WRX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LHFZf3N_pV8wAJNqnWRyS2c6WkmS2WRX",
+  "readerUrl": "https://drive.google.com/file/d/1LcuWsvWC_Fyp9kJwgdMZIvFeARJnUeDE/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-32-el-uso-de-tecnicas-proyectivas-y-de-entrevistas-como-descriptores-de-la-tendencia-de-la-conducta-antisocial",
+  "title": "El Uso De Tecnicas Proyectivas Y De Entrevistas Como Descriptores De La Tendencia De La Conducta Antisocial",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Uso De Tecnicas Proyectivas Y De Entrevistas Como Descriptores De La Tendencia De La Conducta Antisocial de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/148kcwDuvUKHKpHKlgWkEMLeQYJnFduyF",
+  "backdrop": "https://lh3.googleusercontent.com/d/148kcwDuvUKHKpHKlgWkEMLeQYJnFduyF",
+  "readerUrl": "https://drive.google.com/file/d/10Jcw7idJJ-l-G_okC2tZModQ1LE0EZLt/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-33-grafolog-a-cient-fica-la-muestra-de-escritura-como-test",
+  "title": "GrafologíA CientíFica La Muestra De Escritura Como Test",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental GrafologíA CientíFica La Muestra De Escritura Como Test de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1auIv_Jxq3-Rt19l8f3f1efJxv6jiOhZY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1auIv_Jxq3-Rt19l8f3f1efJxv6jiOhZY",
+  "readerUrl": "https://drive.google.com/file/d/1rWXKqmxsN-nbn4QbhvHIOY6fbasVmlwK/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-34-exercise-impacts-functional-plasticity",
+  "title": "Exercise Impacts Functional Plasticity",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Exercise Impacts Functional Plasticity de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14yAYUW8UE-2CRNHoqy63WlUjBDbM1FBA",
+  "backdrop": "https://lh3.googleusercontent.com/d/14yAYUW8UE-2CRNHoqy63WlUjBDbM1FBA",
+  "readerUrl": "https://drive.google.com/file/d/1eck75QY2mVt_pMhL87K4-_fuJgvrH3Xr/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-35-diagn-stico-estructural-a-trav-s-de-la-prueba-persona-bajo-la-lluvia-en-ni-s-de-9-11-a-os-de-edad-v-ctimas-de-agresiones-sexuales",
+  "title": "DiagnóStico Estructural A TravéS De La Prueba Persona Bajo La Lluvia En Niñ@S De 9-11 AñOs De Edad VíCtimas De Agresiones Sexuales",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental DiagnóStico Estructural A TravéS De La Prueba Persona Bajo La Lluvia En Niñ@S De 9-11 AñOs De Edad VíCtimas De Agresiones Sexuales de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XPRNDS8Ye6KQECr7-ZXf8WGGZX-6jaem",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XPRNDS8Ye6KQECr7-ZXf8WGGZX-6jaem",
+  "readerUrl": "https://drive.google.com/file/d/1J9m6AYcyMmC5SSSUprjH_ZMqVb1wIF0B/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-36-programa-de-intervenci-n-multimodal-en-tda",
+  "title": "Programa De IntervencióN Multimodal En Tda",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Programa De IntervencióN Multimodal En Tda de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12BkaN6kH3jXR00SVZy6LWc_9YKGPYkmE",
+  "backdrop": "https://lh3.googleusercontent.com/d/12BkaN6kH3jXR00SVZy6LWc_9YKGPYkmE",
+  "readerUrl": "https://drive.google.com/file/d/1oLiFbVR1qYUjOsAN7sCPZFSe2rCctEXF/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-37-la-neuropsicolog-a-en-bolivia",
+  "title": "La NeuropsicologíA En Bolivia",
+  "author": "ocampo, ninoska",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La NeuropsicologíA En Bolivia de ocampo, ninoska em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UvudMcfuy9nLxsBnpBeEDUpAVLCrhupx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UvudMcfuy9nLxsBnpBeEDUpAVLCrhupx",
+  "readerUrl": "https://drive.google.com/file/d/1mQcI9U6yeySHxrfH-8Bs_bu5sxFDcLbM/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-38-heredabilidad-y-medioambiente",
+  "title": "Heredabilidad Y Medioambiente",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Heredabilidad Y Medioambiente de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Sf1Ad5BcJ5iQ5WH7INpgRhM_mTxvi1Wy",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Sf1Ad5BcJ5iQ5WH7INpgRhM_mTxvi1Wy",
+  "readerUrl": "https://drive.google.com/file/d/1cPynglX1EYEluorn2uBDfjCL_nrMLbQj/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-39-musica-y-cerebro",
+  "title": "Musica Y Cerebro",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Musica Y Cerebro de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1R0vLiUvn1-Foxaz-Qz7aicEOEgVG0o2U",
+  "backdrop": "https://lh3.googleusercontent.com/d/1R0vLiUvn1-Foxaz-Qz7aicEOEgVG0o2U",
+  "readerUrl": "https://drive.google.com/file/d/1082vlUznwnUmobWNJYVY0TUOtepk3XhZ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-40-musicoterapia-en-ni-os-con-tadh",
+  "title": "Musicoterapia En NiñOs Con Tadh",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Musicoterapia En NiñOs Con Tadh de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qejfLC33Wcbm5EGrerhTZb88fvcZNyu9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qejfLC33Wcbm5EGrerhTZb88fvcZNyu9",
+  "readerUrl": "https://drive.google.com/file/d/1gN4VzCMHbJ_qCApGq-GWUfeQhiHAaLp2/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-41-gender-inequality-in-science",
+  "title": "Gender Inequality In Science",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Gender Inequality In Science de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WzA8kNwfe4DNCxOGBMXgyJM_ypcCDJLB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WzA8kNwfe4DNCxOGBMXgyJM_ypcCDJLB",
+  "readerUrl": "https://drive.google.com/file/d/1V19ECmt1srZjDFLjlKssjWg2sf7wlHPg/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-42-jacques-lacan-semin-rio-18",
+  "title": "Jacques Lacan: SemináRio 18",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 18 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UfrT9cim8bZgXsvG3JKRvLF7RWjG3hTe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UfrT9cim8bZgXsvG3JKRvLF7RWjG3hTe",
+  "readerUrl": "https://drive.google.com/file/d/1h4tIeZcBeM9NByvlISaT5pkVJKViffJI/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-43-jacques-lacan-semin-rio-19",
+  "title": "Jacques Lacan: SemináRio 19",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 19 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BhsLLJi6HdMg-pJryeMhfSwiXqD82KYK",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BhsLLJi6HdMg-pJryeMhfSwiXqD82KYK",
+  "readerUrl": "https://drive.google.com/file/d/1KdEGA1D9ZlkS9WQ22cVLaISoxjeQb9Kp/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-44-jacques-lacan-semin-rio-19",
+  "title": "Jacques Lacan: SemináRio 19",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 19 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1fB5n3Q9vmX_8xO4HiC0o-AEhpdXp-s84",
+  "backdrop": "https://lh3.googleusercontent.com/d/1fB5n3Q9vmX_8xO4HiC0o-AEhpdXp-s84",
+  "readerUrl": "https://drive.google.com/file/d/1tKBeAh7WJCiCAzFBJekucqR69U-Tv-OB/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-45-jacques-lacan-semin-rio-20",
+  "title": "Jacques Lacan: SemináRio 20",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 20 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-Tmo7agZx3Cl6pCZASpMls-m7JfoD5WT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-Tmo7agZx3Cl6pCZASpMls-m7JfoD5WT",
+  "readerUrl": "https://drive.google.com/file/d/1JlQ9OSg8mLvMNf1IFjtX5tTwwgvGPH8U/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-46-jacques-lacan-semin-rio-21",
+  "title": "Jacques Lacan: SemináRio 21",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 21 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PGgU7R7TeI9e0kPyLrL2zx3lDHPEEWn0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PGgU7R7TeI9e0kPyLrL2zx3lDHPEEWn0",
+  "readerUrl": "https://drive.google.com/file/d/1wA2YTg1nBChS8UrVuQTCNVKqk9FN7AKV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-47-jacques-lacan-semin-rio-22",
+  "title": "Jacques Lacan: SemináRio 22",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 22 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mgTdtJ-Gs9NHyuVMEqhVxqTRoxl-Tznk",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mgTdtJ-Gs9NHyuVMEqhVxqTRoxl-Tznk",
+  "readerUrl": "https://drive.google.com/file/d/1m9I5dyOPKWaB84Cd894z_pAXW9fSfwcE/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-48-jacques-lacan-semin-rio-23",
+  "title": "Jacques Lacan: SemináRio 23",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 23 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZT2c29f20XQUU-uB3PcOZPwrivpMk2Vg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZT2c29f20XQUU-uB3PcOZPwrivpMk2Vg",
+  "readerUrl": "https://drive.google.com/file/d/1r6aYmsR_VHDDcreAW7A4jS8eJcAcq2RS/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-49-jacques-lacan-semin-rio-25",
+  "title": "Jacques Lacan: SemináRio 25",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 25 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1z7JGJKqub7l_1wGBcRdEyrCwVe41NIU1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1z7JGJKqub7l_1wGBcRdEyrCwVe41NIU1",
+  "readerUrl": "https://drive.google.com/file/d/1UcNMnGsWy_jYjmYwanQFfJ--Mo-AnKHn/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-50-jacques-lacan-semin-rio-26",
+  "title": "Jacques Lacan: SemináRio 26",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 26 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Xj7sXBpZdcS-nq9Gzf__nEWxw_W3F3Hv",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Xj7sXBpZdcS-nq9Gzf__nEWxw_W3F3Hv",
+  "readerUrl": "https://drive.google.com/file/d/1pHy0mPrabNxiQLZzhr6C9AkaMvMX5EAb/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-51-jacques-lacan-semin-rio-27",
+  "title": "Jacques Lacan: SemináRio 27",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: SemináRio 27 de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mVRnoJLffSXkSeh1h3L0514Lz_qal_E1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mVRnoJLffSXkSeh1h3L0514Lz_qal_E1",
+  "readerUrl": "https://drive.google.com/file/d/1A-Aqy1H5l5W7GzTwfU2Bt45ubrAZbOtH/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-52-jacques-lacan-los-escritos-de-jacques-lacan",
+  "title": "Jacques Lacan: Los Escritos De Jacques Lacan",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: Los Escritos De Jacques Lacan de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rkR6KUU3QqB08gLKleHXBp4A7YZ4cLC1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rkR6KUU3QqB08gLKleHXBp4A7YZ4cLC1",
+  "readerUrl": "https://drive.google.com/file/d/1ypqrEJSPKsK_KDzC16M6D62Y_q4qo--U/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-53-jacques-lacan-otros-trabajos-de-jacques-lacan",
+  "title": "Jacques Lacan: Otros Trabajos De Jacques Lacan",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: Otros Trabajos De Jacques Lacan de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YmIXBrReA_HZHR3__KiLoS7dx2FMBqP6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YmIXBrReA_HZHR3__KiLoS7dx2FMBqP6",
+  "readerUrl": "https://drive.google.com/file/d/1phSZKYCrZimMbB83Nh80mv3TRJ3Z1nxJ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-54-jacques-lacan-diccionario-de-topologia-lacaniana",
+  "title": "Jacques Lacan: Diccionario De Topologia Lacaniana",
+  "author": "Jacques Lacan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques Lacan: Diccionario De Topologia Lacaniana de Jacques Lacan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1v4puaCQAstDEwYLUqFWPuxHX7MxjuRyo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1v4puaCQAstDEwYLUqFWPuxHX7MxjuRyo",
+  "readerUrl": "https://drive.google.com/file/d/1uqs6GxOZ0fmRJs-anvVbv1mT7UQdDlQ9/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-55-71683286-los-problemas-de-la-psicologia-popular-wilhelm-wundt-cast",
+  "title": "71683286-Los-Problemas-De-La-Psicologia-Popular-Wilhelm-Wundt-Cast",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental 71683286-Los-Problemas-De-La-Psicologia-Popular-Wilhelm-Wundt-Cast de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1e11ho5Ngx2dkvXUKd8kU_CkClRy5RlSj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1e11ho5Ngx2dkvXUKd8kU_CkClRy5RlSj",
+  "readerUrl": "https://drive.google.com/file/d/1Yi1axrlD1C0WWLybeVPcackWmSITwmKt/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-56-89398012-counselling-with-religious-persons-albert-ellis",
+  "title": "89398012-Counselling-With-Religious-Persons-Albert-Ellis",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental 89398012-Counselling-With-Religious-Persons-Albert-Ellis de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jwsqPHrcbAIYp_LdWnzbeD_x_DrnxuzD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jwsqPHrcbAIYp_LdWnzbeD_x_DrnxuzD",
+  "readerUrl": "https://drive.google.com/file/d/1poFg8BqaEepOkVUplVBbJiws4Gi166_d/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-57-como-leer-un-libro",
+  "title": "Como Leer Un Libro",
+  "author": "Adler y Van Doren",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Como Leer Un Libro de Adler y Van Doren em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1arBtKZfOivh_dy7EB7whR9GiSsaWPB7V",
+  "backdrop": "https://lh3.googleusercontent.com/d/1arBtKZfOivh_dy7EB7whR9GiSsaWPB7V",
+  "readerUrl": "https://drive.google.com/file/d/1YZ8wkwnE4Q6EPNhjyGs3DnKhDBarmgbl/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-58-chris-gratis",
+  "title": "Chris- Gratis",
+  "author": "Anderson",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Chris- Gratis de Anderson em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rQfMNuDPU3UbJESBPRbXjE_nrahUBAcz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rQfMNuDPU3UbJESBPRbXjE_nrahUBAcz",
+  "readerUrl": "https://drive.google.com/file/d/1N9E1KkcVAlXU57SYFGX12xIKtZfVbrXi/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-59-why-we-believe-in-gods",
+  "title": "Why We Believe In Gods",
+  "author": "Anderson, Thomsom",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Why We Believe In Gods de Anderson, Thomsom em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15rv4L7VKMrljHSY0ciJiseCSkC7QZIYj",
+  "backdrop": "https://lh3.googleusercontent.com/d/15rv4L7VKMrljHSY0ciJiseCSkC7QZIYj",
+  "readerUrl": "https://drive.google.com/file/d/17W6YVS6YwTemYf7lb-wDqZoG7-RP30Xy/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-60-las-trampas-del-deseo",
+  "title": "Las Trampas Del Deseo",
+  "author": "Ariely, Dan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Las Trampas Del Deseo de Ariely, Dan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10LLhZ7EqSFWtcagPUeLhkeioufV98rLe",
+  "backdrop": "https://lh3.googleusercontent.com/d/10LLhZ7EqSFWtcagPUeLhkeioufV98rLe",
+  "readerUrl": "https://drive.google.com/file/d/1zPKKT0nld9aGx54y8syFaDwQQ6lBOmLW/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-61-the-honest-truth-about-dishonesty",
+  "title": "The (Honest) Truth About Dishonesty",
+  "author": "Ariely, Dan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The (Honest) Truth About Dishonesty de Ariely, Dan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1txo-RJ4KquFvD7DU-vrkXNs06ZAfvZJb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1txo-RJ4KquFvD7DU-vrkXNs06ZAfvZJb",
+  "readerUrl": "https://drive.google.com/file/d/1959gSdbOkqVNxRskOaq_y43irntErg4y/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-62-the-upside-of-irrationality",
+  "title": "The Upside Of Irrationality -",
+  "author": "Ariely, Dan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Upside Of Irrationality - de Ariely, Dan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1J95XSqEevEXtq3b4s5TXpAynxP8CSi68",
+  "backdrop": "https://lh3.googleusercontent.com/d/1J95XSqEevEXtq3b4s5TXpAynxP8CSi68",
+  "readerUrl": "https://drive.google.com/file/d/1Cp2sELJoSfXaGv0PWTLaXIqm9ttDFuxF/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-63-terapia-de-juego",
+  "title": "Terapia De Juego",
+  "author": "Axline, Virginia M",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Terapia De Juego de Axline, Virginia M em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zZXvMK6RVre0Uw0TIzkKSnafjH7Flw-7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zZXvMK6RVre0Uw0TIzkKSnafjH7Flw-7",
+  "readerUrl": "https://drive.google.com/file/d/19a0gBAoemPFzdKDB42wBk3HL_TzKHHJk/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-64-the-gifts-of-imperfection",
+  "title": "The Gifts Of Imperfection",
+  "author": "Brown, Brene",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Gifts Of Imperfection de Brown, Brene em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1JQVlYaT8-E2ZEBwlFTeUR3dC47s7gVor",
+  "backdrop": "https://lh3.googleusercontent.com/d/1JQVlYaT8-E2ZEBwlFTeUR3dC47s7gVor",
+  "readerUrl": "https://drive.google.com/file/d/1byiRv86VQnmNXnWUNnmad2_8U9QvzBsK/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-65-test-de-la-figura-humana-s-ntesis-bibliogr-fica",
+  "title": "Test De La Figura Humana(SíNtesis BibliográFica)",
+  "author": "Cabrera Vistoso, Victor",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Test De La Figura Humana(SíNtesis BibliográFica) de Cabrera Vistoso, Victor em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1aq8ewsR6AEkQ3XCGVAGeKRWLxS66lJAT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1aq8ewsR6AEkQ3XCGVAGeKRWLxS66lJAT",
+  "readerUrl": "https://drive.google.com/file/d/1Q4_N1_4YgJjSMv1uluX6IPQMbIhVM-Vd/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-66-moral-origins-the-evolution-of-virtue-altruism-and-shame",
+  "title": "Moral Origins--The Evolution Of Virtue, Altruism, And Shame",
+  "author": "Christopher Boehm",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Moral Origins--The Evolution Of Virtue, Altruism, And Shame de Christopher Boehm em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GAAcNJNDTkteHFvUe3A4IHTdof2ftp9Q",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GAAcNJNDTkteHFvUe3A4IHTdof2ftp9Q",
+  "readerUrl": "https://drive.google.com/file/d/1MDDZ8rjmLfkfzlSbgxmHrDXIZChFIXXk/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-67-la-muerte-de-la-familia",
+  "title": "La Muerte De La Familia",
+  "author": "Cooper, David",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Muerte De La Familia de Cooper, David em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1j2R8ZhEzF4jlxYqg8I2Uf9g-dbN3wD-J",
+  "backdrop": "https://lh3.googleusercontent.com/d/1j2R8ZhEzF4jlxYqg8I2Uf9g-dbN3wD-J",
+  "readerUrl": "https://drive.google.com/file/d/1bAmcVQqTGl5aWR_PspQFI5gaYgReeqgs/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-68-las-t-cnicas-proyectivas-gr-ficas-consideraciones-te-ricas-y-cl-nicas-de-los-aspectos-formales",
+  "title": "Las TéCnicas Proyectivas GráFicas. Consideraciones TeóRicas Y ClíNicas De Los Aspectos Formales",
+  "author": "Coronel y Gronda",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Las TéCnicas Proyectivas GráFicas. Consideraciones TeóRicas Y ClíNicas De Los Aspectos Formales de Coronel y Gronda em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zyjQ9BtxuaZv9OIOfUuREztlLXrozct3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zyjQ9BtxuaZv9OIOfUuREztlLXrozct3",
+  "readerUrl": "https://drive.google.com/file/d/1XG79gha6S5I87nr_NJ-n7GBAe6XAjC6l/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-69-el-arte-de-la-felicidad",
+  "title": "El Arte De La Felicidad",
+  "author": "Dalai Lama & Cutler, Howard C.",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Arte De La Felicidad de Dalai Lama & Cutler, Howard C. em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ETtI0h1tQApvAuuVl90TFdLk5LwGKEyd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ETtI0h1tQApvAuuVl90TFdLk5LwGKEyd",
+  "readerUrl": "https://drive.google.com/file/d/1N1uJUxiFjGxx-MLudUWmJmsIvQ4GQXc4/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-70-el-gen-egoista",
+  "title": "El Gen Egoista",
+  "author": "Dawkins, Richard",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Gen Egoista de Dawkins, Richard em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vdopn5DB5BodEjuIifLym0xGTO16M4Cs",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vdopn5DB5BodEjuIifLym0xGTO16M4Cs",
+  "readerUrl": "https://drive.google.com/file/d/1n97QU5T8YTgQ1Qi5mHq4yQ8oXcsxou37/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-71-evoluci-n-el-mayor-espectaculo-sobre-la-tierra",
+  "title": "EvolucióN, El Mayor Espectaculo Sobre La Tierra",
+  "author": "Dawkins, Richard",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental EvolucióN, El Mayor Espectaculo Sobre La Tierra de Dawkins, Richard em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1b0vTOGYm_adSzMC4S5ybec7qlVNU08EG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1b0vTOGYm_adSzMC4S5ybec7qlVNU08EG",
+  "readerUrl": "https://drive.google.com/file/d/16oMVV3XHwF44SuLa52QDttU1ao0h2fYK/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-72-la-conciencia-explicada",
+  "title": "La Conciencia Explicada",
+  "author": "Dennett, Daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Conciencia Explicada de Dennett, Daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1z6Y9QfZu5l0muXPsuiECp3vgBLuLpfQ7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1z6Y9QfZu5l0muXPsuiECp3vgBLuLpfQ7",
+  "readerUrl": "https://drive.google.com/file/d/1CJBRK065CFX8gZEs9EvYrjRjq0BnIJxt/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-73-porqu-es-tan-divertido-el-sexo",
+  "title": "Porqué Es Tan Divertido El Sexo",
+  "author": "Diamond Jared",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Porqué Es Tan Divertido El Sexo de Diamond Jared em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zENlkOM-dDtI7U1crIJQCxBxiAdaKae8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zENlkOM-dDtI7U1crIJQCxBxiAdaKae8",
+  "readerUrl": "https://drive.google.com/file/d/1RTeXbmOT-q2pDv7A9SyKyB6mqDCYjAjM/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-74-the-brain-that-changes-itself",
+  "title": "The Brain That Changes Itself",
+  "author": "Doidge, Norman",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Brain That Changes Itself de Doidge, Norman em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Kq8Ek6M_drYAPuNRQ9wamLagKf-lf9R_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Kq8Ek6M_drYAPuNRQ9wamLagKf-lf9R_",
+  "readerUrl": "https://drive.google.com/file/d/1NrihwqgnhbvbM3aRo5ySpblVQ7FxZtAc/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-75-el-arte-de-estudiar",
+  "title": "El Arte De Estudiar",
+  "author": "Dunois & Adams",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Arte De Estudiar de Dunois & Adams em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QGp4OvYy7UCpvLMk4RS22yxixX81304k",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QGp4OvYy7UCpvLMk4RS22yxixX81304k",
+  "readerUrl": "https://drive.google.com/file/d/1CS2an1LIC_SYnfNuT9p09f-h4Etfmqab/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-76-incognito-the-secrets-lives-of-the-brain",
+  "title": "Incognito ,The Secrets Lives Of The Brain",
+  "author": "Eagleman, Daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Incognito ,The Secrets Lives Of The Brain de Eagleman, Daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1f7hkRu4N1XIjFymdB3A3JXvL8m8olflh",
+  "backdrop": "https://lh3.googleusercontent.com/d/1f7hkRu4N1XIjFymdB3A3JXvL8m8olflh",
+  "readerUrl": "https://drive.google.com/file/d/1fsOcKSUJ5MJ48EcrrbfCv4BPpXSlP5Nb/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-77-inc-gnito",
+  "title": "IncóGnito",
+  "author": "Eagleman, David",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental IncóGnito de Eagleman, David em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1o9uAORodgOdj5oC4Qny10HbNHTkn9RAo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1o9uAORodgOdj5oC4Qny10HbNHTkn9RAo",
+  "readerUrl": "https://drive.google.com/file/d/1ZsA_mP6Z1pX4nJYom24jkEnNh9r9Ow6r/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-78-rafael-santandreu",
+  "title": "Rafael Santandreu",
+  "author": "El arte de no amargarse la vida",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Rafael Santandreu de El arte de no amargarse la vida em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bhnyqpV1Va1NzQar5fx6Glog-0p81XCo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bhnyqpV1Va1NzQar5fx6Glog-0p81XCo",
+  "readerUrl": "https://drive.google.com/file/d/16O0EFAijVCWG6vDgdXdA90xqCLotMKpg/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-79-blue-brain-pink-brain",
+  "title": "Blue Brain, Pink Brain",
+  "author": "Elliot, Lise",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Blue Brain, Pink Brain de Elliot, Lise em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CvcboOGDFh6ceaLmDNOXSBhbYDgSBubZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CvcboOGDFh6ceaLmDNOXSBhbYDgSBubZ",
+  "readerUrl": "https://drive.google.com/file/d/1CT_lHHHRs9M8td5-b9uqhO5Whiy4Gt-N/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-80-como-conocer-a-las-personas-por-su-lenguaje-corporal",
+  "title": "Como Conocer A Las Personas Por Su Lenguaje Corporal",
+  "author": "Ferrari, Leonardo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Como Conocer A Las Personas Por Su Lenguaje Corporal de Ferrari, Leonardo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1fxLo7VssdcId_SLCy7kRopIn2SZDeeoc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1fxLo7VssdcId_SLCy7kRopIn2SZDeeoc",
+  "readerUrl": "https://drive.google.com/file/d/1ayPFNX9jjeEGElhxRFk495xAv5j9_Nqw/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-81-el-arte-de-amar",
+  "title": "El Arte De Amar",
+  "author": "Fromm, Erich",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Arte De Amar de Fromm, Erich em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1c07mLJSxXe4WqV_71Wo2AH44M2F05ENA",
+  "backdrop": "https://lh3.googleusercontent.com/d/1c07mLJSxXe4WqV_71Wo2AH44M2F05ENA",
+  "readerUrl": "https://drive.google.com/file/d/1e2xWS6wMir40RlT97CTS4AqPqRqr4Zuv/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-82-el-arte-de-amar",
+  "title": "El Arte De Amar",
+  "author": "Fromm, Erich",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Arte De Amar de Fromm, Erich em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BtztgzdybnUqDM1Jay0Oy_OUDQa_RCeC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BtztgzdybnUqDM1Jay0Oy_OUDQa_RCeC",
+  "readerUrl": "https://drive.google.com/file/d/1vKV4nmV2vTzFXpDeHakrzzGAh2C0709u/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-83-el-dogma-de-cristo",
+  "title": "El Dogma De Cristo",
+  "author": "Fromm, Erich",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Dogma De Cristo de Fromm, Erich em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1sZlSGNjeJK8BembRxcSV-vCsSL4nmMjo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1sZlSGNjeJK8BembRxcSV-vCsSL4nmMjo",
+  "readerUrl": "https://drive.google.com/file/d/1uFH1d42EKgBSdZmOypSB1sVZcUX8VCPV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-84-el-psicoanalisis-vaya-timo",
+  "title": "El Psicoanalisis !Vaya Timo!",
+  "author": "Fumero y Santamaría",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Psicoanalisis !Vaya Timo! de Fumero y Santamaría em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qS5bQvq5vRiTeZ9pQPJY4X6k2zksyPCU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qS5bQvq5vRiTeZ9pQPJY4X6k2zksyPCU",
+  "readerUrl": "https://drive.google.com/file/d/1TPACk2VEbXupecron28SnrihDiJKxuOR/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-85-el-sexo-de-las-lagartijas",
+  "title": "El Sexo De Las Lagartijas",
+  "author": "Garcia Leal, Ambrosio",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Sexo De Las Lagartijas de Garcia Leal, Ambrosio em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FPSGrWS3gi7YJQAUyAEUHZzLfpe9opi0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FPSGrWS3gi7YJQAUyAEUHZzLfpe9opi0",
+  "readerUrl": "https://drive.google.com/file/d/1SEyXeOjZ4FhVK4qePYBksxZtoMhf8MFX/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-86-verdad-belleza-y-bondad-reformuladas",
+  "title": "Verdad, Belleza Y Bondad Reformuladas",
+  "author": "Gardner, Howard",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Verdad, Belleza Y Bondad Reformuladas de Gardner, Howard em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12PkyFBxDLW5uDGa9dRPfKaKt9lbUh0Pp",
+  "backdrop": "https://lh3.googleusercontent.com/d/12PkyFBxDLW5uDGa9dRPfKaKt9lbUh0Pp",
+  "readerUrl": "https://drive.google.com/file/d/10_oubF8AFZUBfK0D5w4QFivofKDUqkps/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-87-stumbling-on-happiness",
+  "title": "Stumbling On Happiness",
+  "author": "Gilbert, Daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Stumbling On Happiness de Gilbert, Daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15CFk7T-bq9kz12CFu_aEnZptWiQNunw3",
+  "backdrop": "https://lh3.googleusercontent.com/d/15CFk7T-bq9kz12CFu_aEnZptWiQNunw3",
+  "readerUrl": "https://drive.google.com/file/d/1ndIZj3kQSbzwvqITwX-ULEzhKyjHK8Fc/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-88-inteligencia-social",
+  "title": "Inteligencia Social",
+  "author": "Goleman, Daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Inteligencia Social de Goleman, Daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1weBkoGFs7mvm5r9Ta2aIgdPCLXzZAHug",
+  "backdrop": "https://lh3.googleusercontent.com/d/1weBkoGFs7mvm5r9Ta2aIgdPCLXzZAHug",
+  "readerUrl": "https://drive.google.com/file/d/12TQ6QEklmMmZ1ulCm1ym2u6Lj8p1UA_n/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-89-the-happiness-hypothesis",
+  "title": "The Happiness Hypothesis",
+  "author": "Haidth, Jhonatan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Happiness Hypothesis de Haidth, Jhonatan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1d0fFumBSRnxWbDBLspZuaFLTI-ODBirX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1d0fFumBSRnxWbDBLspZuaFLTI-ODBirX",
+  "readerUrl": "https://drive.google.com/file/d/1KVWWrODV_5AFzc9enIRM6hN5ZuerdAEJ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-90-supersense-why-we-believe-in-the-unbelievable",
+  "title": "SuperSense--Why We Believe In The Unbelievable",
+  "author": "Hood",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental SuperSense--Why We Believe In The Unbelievable de Hood em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1F2zyiPsokmCOCA3XydFugnwSgdZCzkZR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1F2zyiPsokmCOCA3XydFugnwSgdZCzkZR",
+  "readerUrl": "https://drive.google.com/file/d/1Op6GlGQ9_FeBmqv9lV6a9Q2lpcpPwb3w/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-91-los-complejos-y-el-inconsciente",
+  "title": "Los Complejos Y El Inconsciente",
+  "author": "Jung, Carl",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Los Complejos Y El Inconsciente de Jung, Carl em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1F3-U9bAWOvrFtb5Se6vPtEn_GSxn3IxL",
+  "backdrop": "https://lh3.googleusercontent.com/d/1F3-U9bAWOvrFtb5Se6vPtEn_GSxn3IxL",
+  "readerUrl": "https://drive.google.com/file/d/1F-6aYANbcG9Jn-76AIKoJ015XrJGJXmP/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-92-psicologia-y-religion",
+  "title": "Psicologia Y Religion",
+  "author": "Jung, Carl Gustav",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicologia Y Religion de Jung, Carl Gustav em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qmGwf_ii9sqbCfAlrucoo3kVBPF2UtBd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qmGwf_ii9sqbCfAlrucoo3kVBPF2UtBd",
+  "readerUrl": "https://drive.google.com/file/d/1Uf0flWa8YFuufGFxJrYA8VWW0yOebZSY/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-93-pensar-rapido-pensar-despacio",
+  "title": "Pensar Rapido, Pensar Despacio",
+  "author": "Kahneman, Daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Pensar Rapido, Pensar Despacio de Kahneman, Daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1endtvqRTSBRR8j0jGDCrMDb3vwGBxiYz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1endtvqRTSBRR8j0jGDCrMDb3vwGBxiYz",
+  "readerUrl": "https://drive.google.com/file/d/1uFLPLzR-eHtunqKKbwNXvnOik6QAC0Yr/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-94-buyology",
+  "title": "Buyology",
+  "author": "Lindstrom, Martin",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Buyology de Lindstrom, Martin em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dq34l5aI1FnIezHF062HuikKJaH2Ic00",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dq34l5aI1FnIezHF062HuikKJaH2Ic00",
+  "readerUrl": "https://drive.google.com/file/d/1SBVfJpxRzmjRJVpinnqmVtUV9bHfxZt7/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-95-qu-es-el-sexo",
+  "title": "¿Qué Es El Sexo",
+  "author": "Margullis, Lynn Sagan, Dorion",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental ¿Qué Es El Sexo de Margullis, Lynn Sagan, Dorion em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mRKbZLBgwA3mkuDwH4Ra8cXD3B57-Fc-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mRKbZLBgwA3mkuDwH4Ra8cXD3B57-Fc-",
+  "readerUrl": "https://drive.google.com/file/d/1SvemNFpWEx7ZyJSidl0lMW_H_vTOu5Su/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-96-el-laberinto-sentimental",
+  "title": "El Laberinto Sentimental",
+  "author": "Marina Torres, Jose Antonio",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Laberinto Sentimental de Marina Torres, Jose Antonio em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1V9CVTzsAcOmb7NQq-QH3E_5roOjwGtyP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1V9CVTzsAcOmb7NQq-QH3E_5roOjwGtyP",
+  "readerUrl": "https://drive.google.com/file/d/1jijTFifkyh1RyAF7Kn6KDdOeFXd9rEXn/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-97-why-people-believe-weird-things-pseudoscience-superstition-and-other-confusions-of-our-time",
+  "title": "Why People Believe Weird Things--Pseudoscience, Superstition, And Other Confusions Of Our Time",
+  "author": "Michael Shermer",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Why People Believe Weird Things--Pseudoscience, Superstition, And Other Confusions Of Our Time de Michael Shermer em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10LjQEdOfjjKnRk-E-bYovH4oXE0t5SZ2",
+  "backdrop": "https://lh3.googleusercontent.com/d/10LjQEdOfjjKnRk-E-bYovH4oXE0t5SZ2",
+  "readerUrl": "https://drive.google.com/file/d/1fKwfHVgz2ArEKmPOxf0fmZZ_TL0NftCS/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-98-c-mo-morimos",
+  "title": "CóMo Morimos",
+  "author": "Nuland, Sherwin",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental CóMo Morimos de Nuland, Sherwin em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xb8nxE_mjdIynMWK6ldn320M4zt7hDxx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xb8nxE_mjdIynMWK6ldn320M4zt7hDxx",
+  "readerUrl": "https://drive.google.com/file/d/1FXfZ4fg_nyIVXaRE3V_iE4McbQUOdmwO/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-99-nueve-meses-de-espera",
+  "title": "Nueve Meses De Espera",
+  "author": "Nylander, Gro",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Nueve Meses De Espera de Nylander, Gro em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IDsTCJeiGp_M8p2Vlp3Il6avJ3BnPZjg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IDsTCJeiGp_M8p2Vlp3Il6avJ3BnPZjg",
+  "readerUrl": "https://drive.google.com/file/d/1_0oWYnW_u2XTzEE6g1GzrFv6-1QgIG9v/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-100-la-nueva-mente-del-emperador",
+  "title": "La Nueva Mente Del Emperador",
+  "author": "Penrose, Roger",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Nueva Mente Del Emperador de Penrose, Roger em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gChkOlGO7uZhTD8cR_bMnoCT-vfdLttz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gChkOlGO7uZhTD8cR_bMnoCT-vfdLttz",
+  "readerUrl": "https://drive.google.com/file/d/1Tfpb9mso2Ol6V7NAj5_sMZqGtlGVIeJ0/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-101-psicologia-y-epistemologia",
+  "title": "Psicologia Y Epistemologia",
+  "author": "Piaget Jean",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicologia Y Epistemologia de Piaget Jean em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1t55fzg6Lmrnpca9WG1P0T7aItSobtTWD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1t55fzg6Lmrnpca9WG1P0T7aItSobtTWD",
+  "readerUrl": "https://drive.google.com/file/d/1b4zP13sEuBDpPJyTVL2fnPVbBsqJ36t-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-102-biopsicologia",
+  "title": "Biopsicologia",
+  "author": "Pinel John",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Biopsicologia de Pinel John em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Yl0We-TWpS7G_UnO9rwSiai-iOfV9wgm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Yl0We-TWpS7G_UnO9rwSiai-iOfV9wgm",
+  "readerUrl": "https://drive.google.com/file/d/1p86gC5AlskR-LB9ubJ8DJ9y39-6MbtKs/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-103-how-the-mind-works",
+  "title": "How The Mind Works",
+  "author": "Pinker",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental How The Mind Works de Pinker em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/180dhyL1F-R2M9yhJCSOa-wEl6MavtIqC",
+  "backdrop": "https://lh3.googleusercontent.com/d/180dhyL1F-R2M9yhJCSOa-wEl6MavtIqC",
+  "readerUrl": "https://drive.google.com/file/d/1oBxwvUdy5VeC7kbGu2m_ACkHT21qtGAO/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-104-la-tabla-rasa",
+  "title": "La Tabla Rasa",
+  "author": "Pinker, Steven",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Tabla Rasa de Pinker, Steven em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13rTqi5ZH4XXsM-6eax9_WlerR5NrieNN",
+  "backdrop": "https://lh3.googleusercontent.com/d/13rTqi5ZH4XXsM-6eax9_WlerR5NrieNN",
+  "readerUrl": "https://drive.google.com/file/d/10KAtnutVUTB5IlXi1pHymobW0sK0KjOn/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-105-the-better-angels-of-our-nature",
+  "title": "The Better Angels Of Our Nature",
+  "author": "Pinker, Steven",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Better Angels Of Our Nature de Pinker, Steven em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1w8C5_iTDTrt6cQUwjId8iiGKgoE4rFB-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1w8C5_iTDTrt6cQUwjId8iiGKgoE4rFB-",
+  "readerUrl": "https://drive.google.com/file/d/1hIx9Ogggwjsb1Jg-v2E0Xjezh0o3onkH/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-106-the-better-angels-of-our-nature",
+  "title": "The Better Angels Of Our Nature",
+  "author": "Pinker, Steven",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Better Angels Of Our Nature de Pinker, Steven em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1TTa0dx0U_L-mxVFEq45NSMc_lxKZvp-i",
+  "backdrop": "https://lh3.googleusercontent.com/d/1TTa0dx0U_L-mxVFEq45NSMc_lxKZvp-i",
+  "readerUrl": "https://drive.google.com/file/d/17YMxvkGodF8ZvtMaPf3oWpew9nSordk5/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-107-lo-que-nos-pasa-por-dentro",
+  "title": "Lo Que Nos Pasa Por Dentro",
+  "author": "Punset, Eduard",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Lo Que Nos Pasa Por Dentro de Punset, Eduard em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kedPcegayoRdSWD5qI6edD0R2D7fPl8_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kedPcegayoRdSWD5qI6edD0R2D7fPl8_",
+  "readerUrl": "https://drive.google.com/file/d/1J6U8O4kGxCkfv-2tCyW4EdG4ZNzYmnJs/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-108-el-alma-esta-en-el-cerebro",
+  "title": "El Alma Esta En El Cerebro",
+  "author": "Punset, Eduardo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Alma Esta En El Cerebro de Punset, Eduardo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18yVhnNsTEhPmqszELhZbSfnmX6FUBAx0",
+  "backdrop": "https://lh3.googleusercontent.com/d/18yVhnNsTEhPmqszELhZbSfnmX6FUBAx0",
+  "readerUrl": "https://drive.google.com/file/d/1qU_63eFNVUqRChxY8o-jPqnmXX9Oe3gz/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-109-el-viaje-al-amor",
+  "title": "El Viaje Al Amor",
+  "author": "Punset, Eduardo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Viaje Al Amor de Punset, Eduardo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ahqdjJFdRYaEnr7sUcPZGlRKEm4OMmlZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ahqdjJFdRYaEnr7sUcPZGlRKEm4OMmlZ",
+  "readerUrl": "https://drive.google.com/file/d/1acPFatlDPTdtI8Uezm_6qehztHNlqcYV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-110-el-viaje-al-optimismo",
+  "title": "El Viaje Al Optimismo",
+  "author": "Punset, Eduardo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Viaje Al Optimismo de Punset, Eduardo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19af7N6UMN8H2PLmepdWBE81A6DhJhBKy",
+  "backdrop": "https://lh3.googleusercontent.com/d/19af7N6UMN8H2PLmepdWBE81A6DhJhBKy",
+  "readerUrl": "https://drive.google.com/file/d/1lFomxlRBoh757orsuQ5Q15lC9iBLVGKK/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-111-brujula-para-navegantes-emocionales",
+  "title": "Brujula Para Navegantes Emocionales",
+  "author": "Punset, Elsa",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Brujula Para Navegantes Emocionales de Punset, Elsa em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1AkYEH2ssgN54x4gWHcGDz-3YaJYJVGnd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1AkYEH2ssgN54x4gWHcGDz-3YaJYJVGnd",
+  "readerUrl": "https://drive.google.com/file/d/1CPaHC5vpGfLQYr-uiv26p3e873ktGq4L/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-112-inocencia-radical",
+  "title": "Inocencia Radical",
+  "author": "Punset, Elsa",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Inocencia Radical de Punset, Elsa em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wfHGdzfytPnAFmPCJ3A16Ruv8_u6RdEN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wfHGdzfytPnAFmPCJ3A16Ruv8_u6RdEN",
+  "readerUrl": "https://drive.google.com/file/d/1lo4Bs9yOD7Km2Wm2No2XUK2Ibm5bB34W/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-113-una-mochila-para-el-universo",
+  "title": "Una Mochila Para El Universo",
+  "author": "Punset, Elsa",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Una Mochila Para El Universo de Punset, Elsa em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dxNgN17yIJC1uzTLumcoOHrjZrIubEax",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dxNgN17yIJC1uzTLumcoOHrjZrIubEax",
+  "readerUrl": "https://drive.google.com/file/d/1Qw65dZCi6LJ_-lcjS-KKhrNtlxn-aa7B/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-114-el-cerebro-manual-de-instrucciones",
+  "title": "El Cerebro Manual De Instrucciones",
+  "author": "Ratey, John",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Cerebro Manual De Instrucciones de Ratey, John em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FyG8eec1L1ovQEzv3q_jMYz9OrQ_Q-Ch",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FyG8eec1L1ovQEzv3q_jMYz9OrQ_Q-Ch",
+  "readerUrl": "https://drive.google.com/file/d/1HLssgMor1P-k8TDcqEnC1_WNQTdbGZtb/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-115-los-limites-del-amor",
+  "title": "Los Limites Del Amor",
+  "author": "Riso, Walter",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Los Limites Del Amor de Riso, Walter em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1H8xxx6u4PCEQOIkrmdnWpXlKIGDb1MQw",
+  "backdrop": "https://lh3.googleusercontent.com/d/1H8xxx6u4PCEQOIkrmdnWpXlKIGDb1MQw",
+  "readerUrl": "https://drive.google.com/file/d/1tFPbqzwyfXOcFAXMFSWxRrvicywrqWVO/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-116-el-hombre-light",
+  "title": "El Hombre Light",
+  "author": "Rojas, Enrique",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Hombre Light de Rojas, Enrique em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13K-XMmSy8BQK53rpk4itQEDyhy2Cl4kQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/13K-XMmSy8BQK53rpk4itQEDyhy2Cl4kQ",
+  "readerUrl": "https://drive.google.com/file/d/1y-14EBj7RVzdCcXCfIsWyKyp2LL923Hp/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-117-the-happiness-project",
+  "title": "The Happiness Project",
+  "author": "Rubin, Gretchen",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Happiness Project de Rubin, Gretchen em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rboOsN6GeuIRSv17A9FNEpGqFo10TfEd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rboOsN6GeuIRSv17A9FNEpGqFo10TfEd",
+  "readerUrl": "https://drive.google.com/file/d/1ZyJQWq1IQB-nT2cYbp8_bYSieGBOI5rd/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-118-veo-una-voz-viaje-al-mundo-de-los-sordos",
+  "title": "Veo Una Voz Viaje Al Mundo De Los Sordos",
+  "author": "Sacks Oliver",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Veo Una Voz Viaje Al Mundo De Los Sordos de Sacks Oliver em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KWS3jXKMCDvV3S623ue9YIwn8R7pSfVW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KWS3jXKMCDvV3S623ue9YIwn8R7pSfVW",
+  "readerUrl": "https://drive.google.com/file/d/1cmWS8_px0rZKoGUDj0pNVSQcbEIBvjRh/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-119-el-hombre-que-confundi-a-su-esposa-con-un-sombrero",
+  "title": "El Hombre Que Confundió A Su Esposa Con Un Sombrero",
+  "author": "Sacks, Oliver",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Hombre Que Confundió A Su Esposa Con Un Sombrero de Sacks, Oliver em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1OfJUOLYd4icR2LoIhqtJotscEh9EoMzD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1OfJUOLYd4icR2LoIhqtJotscEh9EoMzD",
+  "readerUrl": "https://drive.google.com/file/d/1SGGTw-icdWDWwuW9ANZL7ZgJdahNFBYx/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-120-un-antropologo-en-marte",
+  "title": "Un Antropologo En Marte",
+  "author": "Sacks, Oliver",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Un Antropologo En Marte de Sacks, Oliver em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bIV_aNJJMr6SiNVksNP3cQrasaRv8dzg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bIV_aNJJMr6SiNVksNP3cQrasaRv8dzg",
+  "readerUrl": "https://drive.google.com/file/d/1vCbNckL9X-SuE1lD5I-W1N-Ke_9Eo-E9/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-121-sombras-de-antepasados-olvidados",
+  "title": "Sombras De Antepasados Olvidados",
+  "author": "Sagan & Druyan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Sombras De Antepasados Olvidados de Sagan & Druyan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QPUjTfa-N2t8C9KAztGceNeIhUEnHBPH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QPUjTfa-N2t8C9KAztGceNeIhUEnHBPH",
+  "readerUrl": "https://drive.google.com/file/d/1m9_hFj4QtXEVAvVdaupNiXMKHhSy99k4/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-122-the-moral-landscape",
+  "title": "The Moral Landscape",
+  "author": "Sam Harris",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Moral Landscape de Sam Harris em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bnh3Ct6B5Xb9_eYMLiyXLE2zpkkHcc1i",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bnh3Ct6B5Xb9_eYMLiyXLE2zpkkHcc1i",
+  "readerUrl": "https://drive.google.com/file/d/1178bPCXToA4saeo3mfP1P5GzDRahiC4v/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-123-el-psicoanalisis-vaya-timo",
+  "title": "El Psicoanalisis - Vaya Timo",
+  "author": "Santamaria Carlos",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Psicoanalisis - Vaya Timo de Santamaria Carlos em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rdp1ys_EvyPfgKC93poheEYvldSqsBCV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rdp1ys_EvyPfgKC93poheEYvldSqsBCV",
+  "readerUrl": "https://drive.google.com/file/d/1me2Q1473lRDDmDx7A6Q2UoIq91XvmHV1/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-124-how-we-believe",
+  "title": "How We Believe",
+  "author": "Shermer",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental How We Believe de Shermer em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LA5fEHBYb8OkxKmEnqgf6kJ48-WWA2IV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LA5fEHBYb8OkxKmEnqgf6kJ48-WWA2IV",
+  "readerUrl": "https://drive.google.com/file/d/1CIUvYo6l7B83UbWU-ybYOj3G4HPxINHw/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-125-the-believing-brain",
+  "title": "The Believing Brain",
+  "author": "Shermer",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Believing Brain de Shermer em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FkwKDPkPkML0zYF-H8EKfCun2fHWw5Pa",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FkwKDPkPkML0zYF-H8EKfCun2fHWw5Pa",
+  "readerUrl": "https://drive.google.com/file/d/1I1s7Pv7BKOYHOW6tJzEmr1i8TqNCZ7oM/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-126-50-cosas-que-debes-saber-sobre-un-recien-nacido",
+  "title": "50 Cosas Que Debes Saber Sobre Un Recien Nacido",
+  "author": "Silveira, Manuel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental 50 Cosas Que Debes Saber Sobre Un Recien Nacido de Silveira, Manuel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IZ2nGfXSnbZn6K1TMVkdejGhtLtnmvu2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IZ2nGfXSnbZn6K1TMVkdejGhtLtnmvu2",
+  "readerUrl": "https://drive.google.com/file/d/19qZaBA9oSlXYAJ-sEY1w1Mi2kYGaWAth/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-127-walden-dos",
+  "title": "Walden Dos",
+  "author": "Skinner, B. F",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Walden Dos de Skinner, B. F em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_2QlmbKj5rup1WuO9XzULKvuF7k6BUt3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_2QlmbKj5rup1WuO9XzULKvuF7k6BUt3",
+  "readerUrl": "https://drive.google.com/file/d/1q80cs6q48z_q_fn2XtO68d_c0_keX5Cp/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-128-intellectual-impostures",
+  "title": "Intellectual Impostures",
+  "author": "Sokal & Bricmont",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Intellectual Impostures de Sokal & Bricmont em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YiviQ1Uo31WsuIT3lhDnSVrdqKFCb78g",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YiviQ1Uo31WsuIT3lhDnSVrdqKFCb78g",
+  "readerUrl": "https://drive.google.com/file/d/15l_ODdPcM_KbHxpyJBi-w5Zz1NXkMEAa/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-129-el-hombre-y-la-edad",
+  "title": "El Hombre Y La Edad",
+  "author": "Tolstij, Alexander",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Hombre Y La Edad de Tolstij, Alexander em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1l2gWCyoJyKiKBqXOo-wuDQiWuvIFsDHj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1l2gWCyoJyKiKBqXOo-wuDQiWuvIFsDHj",
+  "readerUrl": "https://drive.google.com/file/d/1rpHWbJwKXTWIjbxPDqNX_2QwivCu-4_z/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-130-mama-por-qu-las-mujeres-son-tan-complicadas",
+  "title": "Mama, Por Qué Las Mujeres Son Tan Complicadas",
+  "author": "Vaccari, Jovanka",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Mama, Por Qué Las Mujeres Son Tan Complicadas de Vaccari, Jovanka em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GjldvGW3FITbMOf0BZJ1ZnqO9UrDeopR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GjldvGW3FITbMOf0BZJ1ZnqO9UrDeopR",
+  "readerUrl": "https://drive.google.com/file/d/17wuSH_TPBbt6ZNubXIXkoiTHkjla5VYm/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-131-jacques-las-ilusiones-del-psicoanalisis",
+  "title": "Jacques- Las Ilusiones Del Psicoanalisis",
+  "author": "Van Rillaer",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jacques- Las Ilusiones Del Psicoanalisis de Van Rillaer em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1aHUMuL9ywgDyGgQfXlBKADwyOVUTfSMw",
+  "backdrop": "https://lh3.googleusercontent.com/d/1aHUMuL9ywgDyGgQfXlBKADwyOVUTfSMw",
+  "readerUrl": "https://drive.google.com/file/d/1EdS8shNg4_doR-GKHi2b28lHlrNNVnMf/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-132-el-desarrollo-de-los-procesos-psicol-gicos-superiores-de-vigotsky",
+  "title": "El Desarrollo De Los Procesos PsicolóGicos Superiores De Vigotsky",
+  "author": "Vargas, Jaime",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Desarrollo De Los Procesos PsicolóGicos Superiores De Vigotsky de Vargas, Jaime em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XzZC9L07Nx9fDSDZgkaOn6P2wtf90D27",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XzZC9L07Nx9fDSDZgkaOn6P2wtf90D27",
+  "readerUrl": "https://drive.google.com/file/d/1Rrm1jSfJq1QCEhlqGK5HUeLeme20duMi/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-133-dibujo-y-personalidad",
+  "title": "Dibujo Y Personalidad",
+  "author": "Vels, Augusto",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Dibujo Y Personalidad de Vels, Augusto em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12BXjq9hH7TLInibh1o94Tku4bGhnnBYt",
+  "backdrop": "https://lh3.googleusercontent.com/d/12BXjq9hH7TLInibh1o94Tku4bGhnnBYt",
+  "readerUrl": "https://drive.google.com/file/d/1q0IJYYHqO8k-aB30Q0NRZMikwOg7KHot/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-134-pensamiento-y-lenguaje-1934",
+  "title": "Pensamiento Y Lenguaje (1934)",
+  "author": "Vigotsky Lev Semenevich",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Pensamiento Y Lenguaje (1934) de Vigotsky Lev Semenevich em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Zuf4-mkKH8jcLwjYrIIG7vPZgyHUmXcy",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Zuf4-mkKH8jcLwjYrIIG7vPZgyHUmXcy",
+  "readerUrl": "https://drive.google.com/file/d/1rStImpR0r7EPtcXCjYuWJIZR60hnnnGO/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-135-psicologia-y-pedagogia",
+  "title": "Psicologia Y Pedagogia",
+  "author": "Vigotsky Leontiev Luria",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicologia Y Pedagogia de Vigotsky Leontiev Luria em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uUpXi7E1bCBs0NTqt03xhPfKAqWYjQ4p",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uUpXi7E1bCBs0NTqt03xhPfKAqWYjQ4p",
+  "readerUrl": "https://drive.google.com/file/d/1vjXLNoW10i5ZUItek12th1uni6oJQ7RV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-136-el-cerebro-del-rey",
+  "title": "El Cerebro Del Rey",
+  "author": "acarin, nolasc",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Cerebro Del Rey de acarin, nolasc em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IkHTn5Xx1Q4s_qfP-MiLTmw-GHjeQ5Px",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IkHTn5Xx1Q4s_qfP-MiLTmw-GHjeQ5Px",
+  "readerUrl": "https://drive.google.com/file/d/1XpZkXN-JUKeQXGWzX4unIPbN4NEIljB3/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-137-el-sentido-de-la-vida",
+  "title": "El Sentido De La Vida",
+  "author": "adler, alfred",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Sentido De La Vida de adler, alfred em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1H3-eyerC6MpjZvFuyAr3gkTa-4PjVkeV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1H3-eyerC6MpjZvFuyAr3gkTa-4PjVkeV",
+  "readerUrl": "https://drive.google.com/file/d/1Ua-poWuOPSLP7A89imGNyw-n3v88tFin/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-138-comportamiento-del-consumidor",
+  "title": "Comportamiento Del Consumidor",
+  "author": "aguero, leon",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Comportamiento Del Consumidor de aguero, leon em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14iZB9R6Et5WsmyPB5RXgypyyfUPUKWhx",
+  "backdrop": "https://lh3.googleusercontent.com/d/14iZB9R6Et5WsmyPB5RXgypyyfUPUKWhx",
+  "readerUrl": "https://drive.google.com/file/d/1VY0yiQ46cvwt8dh7KONh8HIGRpPBOC1I/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-139-dios-esta-en-el-cerebro",
+  "title": "Dios Esta En El Cerebro",
+  "author": "alper, mathew",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Dios Esta En El Cerebro de alper, mathew em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hI22IBzcoMg_aC0EmoN1SxHHkt1r6xjf",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hI22IBzcoMg_aC0EmoN1SxHHkt1r6xjf",
+  "readerUrl": "https://drive.google.com/file/d/15eYhbLsfVtr7XGKnyvMA9HyO6fjsIKkD/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-140-gu-a-para-el-diagn-stico-neuropsicol-gico",
+  "title": "GuíA Para El DiagnóStico NeuropsicolóGico",
+  "author": "ardila y ostrosky",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental GuíA Para El DiagnóStico NeuropsicolóGico de ardila y ostrosky em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BqML4cRKIDj-SgIhrOHaqqWZ5wqRepjW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BqML4cRKIDj-SgIhrOHaqqWZ5wqRepjW",
+  "readerUrl": "https://drive.google.com/file/d/1IJeChSOoDZZjWqO4jZRgxiAOBaVtTWjX/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-141-teor-a-del-caos-y-sus-posibles-implicaciones-en-psicolog-a",
+  "title": "TeoríA Del Caos Y Sus Posibles Implicaciones En PsicologíA",
+  "author": "artículo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental TeoríA Del Caos Y Sus Posibles Implicaciones En PsicologíA de artículo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1R9tt_679MLIkSPbslMBS5iR90JIgQw05",
+  "backdrop": "https://lh3.googleusercontent.com/d/1R9tt_679MLIkSPbslMBS5iR90JIgQw05",
+  "readerUrl": "https://drive.google.com/file/d/1mh9O0ChM_AIgKYWL4YjIh2tVRovv6-4Z/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-142-la-ciencia-del-cerebro",
+  "title": "La Ciencia Del Cerebro",
+  "author": "b.n.a.",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Ciencia Del Cerebro de b.n.a. em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GE8WFtcM5to3kcI5bSYlg31Kctm2sBq-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GE8WFtcM5to3kcI5bSYlg31Kctm2sBq-",
+  "readerUrl": "https://drive.google.com/file/d/1QDUWRIgfEOz9D7SWBoGSxzR19AYU-TY_/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-143-atenci-n-aqui-y-ahora-terapia-gestalt",
+  "title": "AtencióN Aqui Y Ahora - Terapia Gestalt",
+  "author": "baranchuc, julia",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental AtencióN Aqui Y Ahora - Terapia Gestalt de baranchuc, julia em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eFE1lsttuku0OjKTAF6cJ_uQ-FLDr7PI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eFE1lsttuku0OjKTAF6cJ_uQ-FLDr7PI",
+  "readerUrl": "https://drive.google.com/file/d/1FvW2in7kitBJcJK0ofPKtzh0g3Xk_GL9/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-144-psicolog-a-social",
+  "title": "PsicologíA Social",
+  "author": "baron, robert",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental PsicologíA Social de baron, robert em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10qwkHYP-Pw0XHl0XKw5zZA2WOLy-gQYn",
+  "backdrop": "https://lh3.googleusercontent.com/d/10qwkHYP-Pw0XHl0XKw5zZA2WOLy-gQYn",
+  "readerUrl": "https://drive.google.com/file/d/14UkPo6Fm0w_EBr9_0q-luYodpn9Fb6NT/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-145-antropolog-a-del-cerebro",
+  "title": "AntropologíA Del Cerebro",
+  "author": "bartra, roger",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental AntropologíA Del Cerebro de bartra, roger em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vf1VIZadWdhoae7RkS7mYCXDksMn3vRo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vf1VIZadWdhoae7RkS7mYCXDksMn3vRo",
+  "readerUrl": "https://drive.google.com/file/d/123m5RKaZBoIdOjzxfNbx8VrSeNPrYOnV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-146-psicolog-a",
+  "title": "PsicologíA",
+  "author": "basconcelo, juan carlos",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental PsicologíA de basconcelo, juan carlos em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qjMlyNRGsJw2rnTFD6LF27ho7gOFrUWe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qjMlyNRGsJw2rnTFD6LF27ho7gOFrUWe",
+  "readerUrl": "https://drive.google.com/file/d/1crURAkewjxOhazevOj8mRid0HmnJ4zmn/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-147-evaluaci-n-neuropiscologica-en-poblaci-n-adulta",
+  "title": "EvaluacióN Neuropiscologica En PoblacióN Adulta",
+  "author": "bausela herrera, esperanza",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental EvaluacióN Neuropiscologica En PoblacióN Adulta de bausela herrera, esperanza em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17dLMmq9RM6kvz-FJo1MXXX4EGo46NMhC",
+  "backdrop": "https://lh3.googleusercontent.com/d/17dLMmq9RM6kvz-FJo1MXXX4EGo46NMhC",
+  "readerUrl": "https://drive.google.com/file/d/1lfInF3-OFSiNUNfRQdbgBdAtejgz45wI/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-148-evaluaci-n-neuropsicol-gica-atenci-n-memoria-y-planificaci-n",
+  "title": "EvaluacióN NeuropsicolóGica AtencióN, Memoria Y PlanificacióN",
+  "author": "bausela herrera, esperanza",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental EvaluacióN NeuropsicolóGica AtencióN, Memoria Y PlanificacióN de bausela herrera, esperanza em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1AzSI1WLqY-XfrVzcU2lW7JMPPu6P_EsH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1AzSI1WLqY-XfrVzcU2lW7JMPPu6P_EsH",
+  "readerUrl": "https://drive.google.com/file/d/1E4ddKr7fuThIrUtGEjShi0yb5V6H7Yiv/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-149-neuroscience-exploring-the-brain",
+  "title": "Neuroscience - Exploring The Brain",
+  "author": "bear et al",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Neuroscience - Exploring The Brain de bear et al em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BCYkGfOBaESUZIz1NHX3doJaJjb4Mqyg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BCYkGfOBaESUZIz1NHX3doJaJjb4Mqyg",
+  "readerUrl": "https://drive.google.com/file/d/1X9_I2jz6Jg5oo9sgvc3eXiGk6AbM772A/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-150-terapia-cognitiva-de-la-depresi-n",
+  "title": "Terapia Cognitiva De La DepresióN",
+  "author": "beck, aaron et al",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Terapia Cognitiva De La DepresióN de beck, aaron et al em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13191vq3_42Pe5wkyy2EKIOY1L438z13J",
+  "backdrop": "https://lh3.googleusercontent.com/d/13191vq3_42Pe5wkyy2EKIOY1L438z13J",
+  "readerUrl": "https://drive.google.com/file/d/1WAkwD3QLUiPmiQH8VkgW8MxrVLzpgS0M/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-151-la-negaci-n-de-la-muerte",
+  "title": "La NegacióN De La Muerte",
+  "author": "becker, ernest",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La NegacióN De La Muerte de becker, ernest em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Kl6A6AcNsPGV9rl-a-HNwqWkz6PCqUZC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Kl6A6AcNsPGV9rl-a-HNwqWkz6PCqUZC",
+  "readerUrl": "https://drive.google.com/file/d/1S1HoXqvyMtDYSbnsHbxyNRYqGpIiKpfI/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-152-test-de-apercepci-n-infantil-con-figuras-humanas",
+  "title": "Test De ApercepcióN Infantil Con Figuras Humanas",
+  "author": "bellack & bellack",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Test De ApercepcióN Infantil Con Figuras Humanas de bellack & bellack em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13S0XKh3g215Mc_xleHAsKaH3sLHNGSg_",
+  "backdrop": "https://lh3.googleusercontent.com/d/13S0XKh3g215Mc_xleHAsKaH3sLHNGSg_",
+  "readerUrl": "https://drive.google.com/file/d/1vdbV9m2QwbI4fyp2pQ5d2tN6WmjsP1OM/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-153-neuropsicologia-cognitiva",
+  "title": "Neuropsicologia Cognitiva",
+  "author": "benedet, maría jesús",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Neuropsicologia Cognitiva de benedet, maría jesús em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1JWy7ocnsDppGIO_S5eG_BYBNbuwmzQwm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1JWy7ocnsDppGIO_S5eG_BYBNbuwmzQwm",
+  "readerUrl": "https://drive.google.com/file/d/1ViWEtGvpbHnCrJ29NMtNzNB1Jjiap2fU/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-154-bennet-seashore-wesman-dat-forma-t",
+  "title": "Bennet Seashore & Wesman- Dat Forma T",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Bennet Seashore & Wesman- Dat Forma T de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FWJVkKK7cg4HGmgNg2GonG_QXQbnj2jb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FWJVkKK7cg4HGmgNg2GonG_QXQbnj2jb",
+  "readerUrl": "https://drive.google.com/file/d/16ZzGbf7c3y3zzCEHXWGY1bQOavKjjEl2/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-155-la-naturaleza-de-la-conciencia",
+  "title": "La Naturaleza De La Conciencia",
+  "author": "bennnet dennet hacket serle",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Naturaleza De La Conciencia de bennnet dennet hacket serle em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-wEbrQUzBd0nipEdTaqU1LWlkKI9pX9z",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-wEbrQUzBd0nipEdTaqU1LWlkKI9pX9z",
+  "readerUrl": "https://drive.google.com/file/d/1v4tlrGrdx1JfUbPWpJ-_TAHcmBcabbxm/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-156-what-do-women-want",
+  "title": "What Do Women Want",
+  "author": "berngberg, daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental What Do Women Want de berngberg, daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wSBdOCv5O25tUS3PgBQS8vm-AUSQJm67",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wSBdOCv5O25tUS3PgBQS8vm-AUSQJm67",
+  "readerUrl": "https://drive.google.com/file/d/11hhnT5K0dYDbs7UNMqZEESSBC-VOGZPd/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-157-alfred-la-psicologia-del-razonamiento",
+  "title": "Alfred- La Psicologia Del Razonamiento",
+  "author": "binet",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Alfred- La Psicologia Del Razonamiento de binet em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BJmtsREWKBO8w1IQBwZC6IJx-bQ71csr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BJmtsREWKBO8w1IQBwZC6IJx-bQ71csr",
+  "readerUrl": "https://drive.google.com/file/d/1RSi6bUYeqyxBkOaLaaacHn67fdbgQQy6/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-158-herramientas-de-la-mente",
+  "title": "Herramientas De La Mente",
+  "author": "bodrova leong",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Herramientas De La Mente de bodrova leong em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1na8W9JYYyxpHYbdtkMDZ8YZrIxvCi6o4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1na8W9JYYyxpHYbdtkMDZ8YZrIxvCi6o4",
+  "readerUrl": "https://drive.google.com/file/d/1QeYFVZhRarAUSwStt52T5LvNbNZc-zt0/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-159-el-arte-de-la-terapia",
+  "title": "El Arte De La Terapia",
+  "author": "bourquin, peter",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Arte De La Terapia de bourquin, peter em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13psRqxjeA9BcjibEwB9GaQ2N1xI1dlkD",
+  "backdrop": "https://lh3.googleusercontent.com/d/13psRqxjeA9BcjibEwB9GaQ2N1xI1dlkD",
+  "readerUrl": "https://drive.google.com/file/d/1f_OmswfwjT1kCuigBnnvIVoB-jkJ3nwp/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-160-neuromanagement",
+  "title": "Neuromanagement",
+  "author": "braidot, nestor",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Neuromanagement de braidot, nestor em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Y2BFKVeoH4-luhqMh6-llIbefywtAb3m",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Y2BFKVeoH4-luhqMh6-llIbefywtAb3m",
+  "readerUrl": "https://drive.google.com/file/d/1S_JSR_hT0TVuDL-9EpLUGTTYJFTOGc-m/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-161-historia-y-sistemas-de-la-psicologia",
+  "title": "Historia Y Sistemas De La Psicologia",
+  "author": "brennan, james",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Historia Y Sistemas De La Psicologia de brennan, james em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1McC8yvBE2GLuKzDPmCNXq68pa-vNdiAv",
+  "backdrop": "https://lh3.googleusercontent.com/d/1McC8yvBE2GLuKzDPmCNXq68pa-vNdiAv",
+  "readerUrl": "https://drive.google.com/file/d/1Oe2UvjBmqOrFZSrSNJl8anFjp8a6GhQE/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-162-tat-apuntes",
+  "title": "Tat (Apuntes)",
+  "author": "brinkmann, hellmut",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Tat (Apuntes) de brinkmann, hellmut em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_1vV1q6RZWvP4kGJQ7sEOnjl1Ejk9bSu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_1vV1q6RZWvP4kGJQ7sEOnjl1Ejk9bSu",
+  "readerUrl": "https://drive.google.com/file/d/1dUlFERYVEMobz0PuQ5rwxBoYUIp6RRWR/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-163-el-cerebro-femenino",
+  "title": "El Cerebro Femenino",
+  "author": "brizendine, louann",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Cerebro Femenino de brizendine, louann em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13JfevDySNnIOX-AlRV99DdFVoyi2BC-r",
+  "backdrop": "https://lh3.googleusercontent.com/d/13JfevDySNnIOX-AlRV99DdFVoyi2BC-r",
+  "readerUrl": "https://drive.google.com/file/d/1riL4rMpcFldN-l2lfkUVloybV2nxesn2/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-164-psicologia-para-principiantes",
+  "title": "Psicologia Para Principiantes",
+  "author": "bur, ricardo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicologia Para Principiantes de bur, ricardo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nrC1ZtWK-B8iqg0R2vdZi_p6X_wxHQg6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nrC1ZtWK-B8iqg0R2vdZi_p6X_wxHQg6",
+  "readerUrl": "https://drive.google.com/file/d/16MHOqJjkVwPTN8lZsIHIpMP4uvx7qBpZ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-165-mecanismos-ps-quicos-del-poder-teor-as-sobre-la-sujeci-n-judith-butler",
+  "title": "Mecanismos PsíQuicos Del Poder, TeoríAs Sobre La SujecióN, Judith Butler",
+  "author": "butler, judith",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Mecanismos PsíQuicos Del Poder, TeoríAs Sobre La SujecióN, Judith Butler de butler, judith em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1d8IGvCG-lKEuP1PRF2mbD_-UwUi9v-f_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1d8IGvCG-lKEuP1PRF2mbD_-UwUi9v-f_",
+  "readerUrl": "https://drive.google.com/file/d/1_zRZo_4eW7PcQX-VyhH0eGHbm_JXb_zh/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-166-50-psychology-classics",
+  "title": "50 Psychology Classics",
+  "author": "butler-bowdown, tom",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental 50 Psychology Classics de butler-bowdown, tom em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CTg94rrG_ZkPFwNvPXrl_tDq6DzruL3E",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CTg94rrG_ZkPFwNvPXrl_tDq6DzruL3E",
+  "readerUrl": "https://drive.google.com/file/d/1EEVn9epAjnE6AXv3JyYXXyJtdYK1RyMZ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-167-la-psicolog-a-en-bolivia",
+  "title": "La PsicologíA En Bolivia",
+  "author": "calderón jemio, rene",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La PsicologíA En Bolivia de calderón jemio, rene em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-UK2PIiseO33DgnJLM_PLiG3SWO8Xm1w",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-UK2PIiseO33DgnJLM_PLiG3SWO8Xm1w",
+  "readerUrl": "https://drive.google.com/file/d/1PYF4dLR4Iz39vwTWPvL_m6MUPxXlQcIN/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-168-el-efecto-mozart",
+  "title": "El Efecto Mozart",
+  "author": "campbell, don",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Efecto Mozart de campbell, don em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1AKWgHjB8qs90wLf_Yufc0ousTzQ-WgTv",
+  "backdrop": "https://lh3.googleusercontent.com/d/1AKWgHjB8qs90wLf_Yufc0ousTzQ-WgTv",
+  "readerUrl": "https://drive.google.com/file/d/1Tzr_wChjnpMkQXD7wXDZsVoOaqGmN0pT/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-169-fisiologia-de-la-conducta-8va-ed",
+  "title": "Fisiologia De La Conducta 8va Ed",
+  "author": "carlson, neil",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Fisiologia De La Conducta 8va Ed de carlson, neil em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gFLDAqWYhzZilqqdEC0lZ7urjME1pSm7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gFLDAqWYhzZilqqdEC0lZ7urjME1pSm7",
+  "readerUrl": "https://drive.google.com/file/d/1jL02wMOdU76CulEBQzbLZHrR55NqYWsF/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-170-fundamentos-de-fisiolog-a-de-la-conducta-colores-10ma-ed",
+  "title": "Fundamentos De FisiologíA De La Conducta Colores 10ma Ed",
+  "author": "carlson, neil",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Fundamentos De FisiologíA De La Conducta Colores 10ma Ed de carlson, neil em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WrqBu1fjF_OoUQOalhpMvy17gqasV3l0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WrqBu1fjF_OoUQOalhpMvy17gqasV3l0",
+  "readerUrl": "https://drive.google.com/file/d/1tP17vZoEQLq4leIhaoLYt45qEkPubJrO/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-171-maximize-your-brainpower",
+  "title": "Maximize Your Brainpower",
+  "author": "carter & russell",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Maximize Your Brainpower de carter & russell em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eWm6oxlsEKRYuQkHDffua2WCjGEZxAa9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eWm6oxlsEKRYuQkHDffua2WCjGEZxAa9",
+  "readerUrl": "https://drive.google.com/file/d/10JdIKqXdZGL6vD3nY-YRKf9xOL6YPHOw/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-172-informe-psicol-gico",
+  "title": "Informe PsicolóGico",
+  "author": "cattaneo, beatriz",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Informe PsicolóGico de cattaneo, beatriz em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1d5CavIbG1c8dL0AjQc-c4xSE9B0jNiOT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1d5CavIbG1c8dL0AjQc-c4xSE9B0jNiOT",
+  "readerUrl": "https://drive.google.com/file/d/1wabrEyRzTOg7PToFaeFwGRbNAOsO7OLv/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-173-taller-de-valoraci-n-neuropsicol-gica",
+  "title": "Taller De ValoracióN NeuropsicolóGica",
+  "author": "cevallos c., flora",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Taller De ValoracióN NeuropsicolóGica de cevallos c., flora em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NfR-WenhmNdLqpj5AhXhE0aY7eH4XchV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NfR-WenhmNdLqpj5AhXhE0aY7eH4XchV",
+  "readerUrl": "https://drive.google.com/file/d/18PwQqbgcxxzCDh16DbbUVSJ1VRj7Jo2D/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-174-lurias-theory-of-higher-cortical-functions",
+  "title": "Lurias Theory Of Higher Cortical Functions",
+  "author": "christensen, anne lise",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Lurias Theory Of Higher Cortical Functions de christensen, anne lise em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1C8rZPOEO75rCMrm5OcScAwnRCPqnMGTU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1C8rZPOEO75rCMrm5OcScAwnRCPqnMGTU",
+  "readerUrl": "https://drive.google.com/file/d/11csDEJ3hq-7B4dma05mgr7Rgz0R7uLe8/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-175-influencia",
+  "title": "Influencia",
+  "author": "cialdini, robert",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Influencia de cialdini, robert em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Uo9toNanq02CAwDSs7FDGAPYtPLZoHo0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Uo9toNanq02CAwDSs7FDGAPYtPLZoHo0",
+  "readerUrl": "https://drive.google.com/file/d/1PjUj9srBZ9M7VMeVDLPpKpHXMgUi93Te/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-176-terapia-cognitiva-para-trastornos-de-ansiedad",
+  "title": "Terapia Cognitiva Para Trastornos De Ansiedad",
+  "author": "clark & beck",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Terapia Cognitiva Para Trastornos De Ansiedad de clark & beck em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eHVjDqmSP9uFA6puud-njXaSfjAhbqb_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eHVjDqmSP9uFA6puud-njXaSfjAhbqb_",
+  "readerUrl": "https://drive.google.com/file/d/10tcBTi2_gy35xOcY3G5lSbjaiBv-IE8-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-177-teoria-y-tecnica-de-la-psicoterapia-psicoanalitica",
+  "title": "Teoria Y Tecnica De La Psicoterapia Psicoanalitica",
+  "author": "coderch, joan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Teoria Y Tecnica De La Psicoterapia Psicoanalitica de coderch, joan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RAP1MZwMf6UpJ-vBqchomvwGx6BL3aYB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RAP1MZwMf6UpJ-vBqchomvwGx6BL3aYB",
+  "readerUrl": "https://drive.google.com/file/d/1vTOPv-tHbpyGrunVFgcWNdz-EDayuWIA/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-178-autores-varios",
+  "title": "Autores Varios",
+  "author": "como educar en las emociones",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Autores Varios de como educar en las emociones em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12hGoXTykvXiGEoWrqkZqfBOge3s3ku3n",
+  "backdrop": "https://lh3.googleusercontent.com/d/12hGoXTykvXiGEoWrqkZqfBOge3s3ku3n",
+  "readerUrl": "https://drive.google.com/file/d/1AE7rGGD7lrbL_EahuDV7qLgNq-UUwTc_/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-179-naps-and-placebo-on-verbal-motor-habilities",
+  "title": "Naps And Placebo On Verbal Motor Habilities",
+  "author": "comparing the benefits of caffeine",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Naps And Placebo On Verbal Motor Habilities de comparing the benefits of caffeine em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KA8aLLTaRF_jq-XL60JsPgGf8siIKsOg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KA8aLLTaRF_jq-XL60JsPgGf8siIKsOg",
+  "readerUrl": "https://drive.google.com/file/d/1xSUhgnkJ6Tc4YS6hUq536dqhB4I_vUSe/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-180-diccionario-de-psicolog-a",
+  "title": "Diccionario De PsicologíA",
+  "author": "consuegra a., natalia",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Diccionario De PsicologíA de consuegra a., natalia em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YqQgRuaTQCfZpkSECD9oh2ZZan_F5qM9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YqQgRuaTQCfZpkSECD9oh2ZZan_F5qM9",
+  "readerUrl": "https://drive.google.com/file/d/1AFsp36XBDslj8jXrD8ATkIjuUoqDdTw8/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-181-psychology-of-thinking",
+  "title": "Psychology Of Thinking",
+  "author": "contreras, david",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psychology Of Thinking de contreras, david em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BNp31zoTepDM6llqo5cWyrc9lFemfCNM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BNp31zoTepDM6llqo5cWyrc9lFemfCNM",
+  "readerUrl": "https://drive.google.com/file/d/1ZLn23Nu2v6X6CVBS2_gAqw-r70_9wRJz/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-182-psicologia-biologica",
+  "title": "Psicologia Biologica",
+  "author": "corr, philip",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicologia Biologica de corr, philip em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Pb3TpClYhfP7MwWM1VKRTQOYfmlhFHuG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Pb3TpClYhfP7MwWM1VKRTQOYfmlhFHuG",
+  "readerUrl": "https://drive.google.com/file/d/1dceRDPAj40_cAmSA8BGzViC5kHlAZ2_H/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-183-escalas-para-evaluar-la-personalidad-y-trastornos-de-la-personalidad",
+  "title": "Escalas Para Evaluar La Personalidad Y Trastornos De La Personalidad",
+  "author": "corrales lerena, robert",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Escalas Para Evaluar La Personalidad Y Trastornos De La Personalidad de corrales lerena, robert em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17be7zuXiuOQqfMc3dMpr6jRDrvdzyKQe",
+  "backdrop": "https://lh3.googleusercontent.com/d/17be7zuXiuOQqfMc3dMpr6jRDrvdzyKQe",
+  "readerUrl": "https://drive.google.com/file/d/1nz6o8vmBh22whAxGOOFJmiqZ7P3KOEc-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-184-introducci-n-a-la-psicolog-a-6a-ed",
+  "title": "IntroduccióN A La PsicologíA (6a. Ed.)",
+  "author": "cosacov, eduardo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental IntroduccióN A La PsicologíA (6a. Ed.) de cosacov, eduardo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZLPlNnLsJ6Ffn5Lp_DsFdeoeMNM5CT5C",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZLPlNnLsJ6Ffn5Lp_DsFdeoeMNM5CT5C",
+  "readerUrl": "https://drive.google.com/file/d/137vT3ln-s6njem7tnQyquL9bY6GGtSYw/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-185-fluir-una-psicolog-a-de-la-felicidad",
+  "title": "Fluir, Una PsicologíA De La Felicidad",
+  "author": "csikszentmihalyi, mihaly",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Fluir, Una PsicologíA De La Felicidad de csikszentmihalyi, mihaly em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1psUMrDkjrMyblRyeYkwgkTB-foNYPX6n",
+  "backdrop": "https://lh3.googleusercontent.com/d/1psUMrDkjrMyblRyeYkwgkTB-foNYPX6n",
+  "readerUrl": "https://drive.google.com/file/d/1F6cWO9Oaw9XENeboUMdCsN0YJE9cKbM4/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-186-cuadernillo-maci",
+  "title": "Cuadernillo Maci",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Cuadernillo Maci de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dW2j9uEbmUgRtc_HooRQ3g44kVC6G5sI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dW2j9uEbmUgRtc_HooRQ3g44kVC6G5sI",
+  "readerUrl": "https://drive.google.com/file/d/1WN1ar3Zv39V87IyAcfPvO6N_2F34jA4w/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-187-en-busca-de-espinoza",
+  "title": "En Busca De Espinoza",
+  "author": "damasio, antonio",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental En Busca De Espinoza de damasio, antonio em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-8zExHm49Eagd3J3iHHwnHpaoEbXpDMQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-8zExHm49Eagd3J3iHHwnHpaoEbXpDMQ",
+  "readerUrl": "https://drive.google.com/file/d/1jXqOJjZ1tNJqO7ppRo3midLlfDTlYLPh/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-188-looking-for-espinoza",
+  "title": "Looking For Espinoza",
+  "author": "damasio, antonio",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Looking For Espinoza de damasio, antonio em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18KKevF0UKS-s8ORwCQwcE22ZblHEVoeZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/18KKevF0UKS-s8ORwCQwcE22ZblHEVoeZ",
+  "readerUrl": "https://drive.google.com/file/d/1Uj3hkX2A6eXG-4tDMR2ESzVpIwH8OwKt/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-189-y-el-cerebro-creo-al-hombre",
+  "title": "Y El Cerebro Creo Al Hombre",
+  "author": "damasio, antonio",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Y El Cerebro Creo Al Hombre de damasio, antonio em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Kafy5eI6Cqwt94gmR5gLqdmFakBJOHKO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Kafy5eI6Cqwt94gmR5gLqdmFakBJOHKO",
+  "readerUrl": "https://drive.google.com/file/d/16WIiNDT2JhDKoSFQedXH1Qi9m9X4eana/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-190-brainchildren-essays-on-designing-minds",
+  "title": "Brainchildren - Essays On Designing Minds",
+  "author": "daniel c. dennett",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Brainchildren - Essays On Designing Minds de daniel c. dennett em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PqmMLC5h2_qp8De_kfVVCtRXK4c3R8bx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PqmMLC5h2_qp8De_kfVVCtRXK4c3R8bx",
+  "readerUrl": "https://drive.google.com/file/d/1kaettNfRQQyLThD-RdskqjBAi34ccVzV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-191-breaking-the-spell-religion-as-a-natural-phenomenon",
+  "title": "Breaking The Spell - Religion As A Natural Phenomenon",
+  "author": "daniel c. dennett",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Breaking The Spell - Religion As A Natural Phenomenon de daniel c. dennett em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EwZl80PxTTOXHNmlt8DtzXpyKraDgHq3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EwZl80PxTTOXHNmlt8DtzXpyKraDgHq3",
+  "readerUrl": "https://drive.google.com/file/d/1QCm78QZ37aN7UiqZjQlX7XxSg3ctQaI8/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-192-consciousness-explained",
+  "title": "Consciousness Explained",
+  "author": "daniel c. dennett",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Consciousness Explained de daniel c. dennett em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/170B5PQWgCn_CExQ2c924wMNZS9glS1MS",
+  "backdrop": "https://lh3.googleusercontent.com/d/170B5PQWgCn_CExQ2c924wMNZS9glS1MS",
+  "readerUrl": "https://drive.google.com/file/d/1i3UJQK2WOU9gHUuyFOzRNRhyoLzxS8Mi/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-193-content-and-consciousness",
+  "title": "Content And Consciousness",
+  "author": "daniel c. dennett",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Content And Consciousness de daniel c. dennett em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_5k_6h7_3oooQq08cUliSh9x7o0jc_bT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_5k_6h7_3oooQq08cUliSh9x7o0jc_bT",
+  "readerUrl": "https://drive.google.com/file/d/1NxRPi3rLDMl4GB9PTaVOQCAmHJ3FZ-Xs/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-194-the-mind-s-i",
+  "title": "The Mind S I",
+  "author": "daniel c. dennett, douglas r. hofstadter",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Mind S I de daniel c. dennett, douglas r. hofstadter em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GJ-fMCcLLeDCVl-5LFnvMLRRarBkxLmK",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GJ-fMCcLLeDCVl-5LFnvMLRRarBkxLmK",
+  "readerUrl": "https://drive.google.com/file/d/1m2PMepeaK0zHvlVGldo35GiKzFbZjBO7/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-195-el-pensamiento-lateral",
+  "title": "El Pensamiento Lateral",
+  "author": "de bono, edward",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Pensamiento Lateral de de bono, edward em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10kFaH6n99ux2tjCCoh_SjCQvxs-qRD-z",
+  "backdrop": "https://lh3.googleusercontent.com/d/10kFaH6n99ux2tjCCoh_SjCQvxs-qRD-z",
+  "readerUrl": "https://drive.google.com/file/d/12olCHdviDdwQWSdZKwJcgPA1gA6cSbFH/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-196-la-conciencia-explicada",
+  "title": "La Conciencia Explicada",
+  "author": "dennet, daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Conciencia Explicada de dennet, daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tNJBq3TOcFE6Pfkh1A3A1Um8RvZernuz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tNJBq3TOcFE6Pfkh1A3A1Um8RvZernuz",
+  "readerUrl": "https://drive.google.com/file/d/1ZIJy95Rum3YWmojEwCqCfaJ_lfMCxfVH/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-197-la-evolucion-de-la-libertad",
+  "title": "La Evolucion De La Libertad",
+  "author": "dennett daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Evolucion De La Libertad de dennett daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_BXu2tBXqI7ICAgIaYZeGKeL4frx_fuR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_BXu2tBXqI7ICAgIaYZeGKeL4frx_fuR",
+  "readerUrl": "https://drive.google.com/file/d/1TJPTAXmHst2kl0ezBdF4s1-GPl2XJcJC/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-198-descripci-n-y-correcci-n-maci",
+  "title": "DescripcióN Y CorreccióN Maci",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental DescripcióN Y CorreccióN Maci de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_jwGEc6QJZMj2aZIQcgnv98FUlyBE7EU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_jwGEc6QJZMj2aZIQcgnv98FUlyBE7EU",
+  "readerUrl": "https://drive.google.com/file/d/1uc37Ccs1c1jZSZI2PfMoYqGMQZrzClAP/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-199-why-is-sex-fun-the-evolution-of-human-sexuality",
+  "title": "Why Is Sex Fun--The Evolution Of Human Sexuality",
+  "author": "diamond, jared",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Why Is Sex Fun--The Evolution Of Human Sexuality de diamond, jared em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1R-aEONpTzXcjaB_gYvFFac4LOB-ISJN1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1R-aEONpTzXcjaB_gYvFFac4LOB-ISJN1",
+  "readerUrl": "https://drive.google.com/file/d/1tOiUehHKPNNfryVIujfXFpIXw9ym84gG/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-200-el-cerebro-que-se-cambia-a-si-mismo-sample",
+  "title": "El Cerebro Que Se Cambia A Si Mismo (Sample)",
+  "author": "doidge, norman",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Cerebro Que Se Cambia A Si Mismo (Sample) de doidge, norman em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nsy3MPlC1I7EK6qgsDznEsYsUXcJpwBc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nsy3MPlC1I7EK6qgsDznEsYsUXcJpwBc",
+  "readerUrl": "https://drive.google.com/file/d/11iLZxzI1ZGu9boYMSzla8VCf-Obtkra7/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-201-dsm-iv",
+  "title": "Dsm Iv",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Dsm Iv de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FIHZPiVLvU1DNerfGAK9fFOFrgs_x-lg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FIHZPiVLvU1DNerfGAK9fFOFrgs_x-lg",
+  "readerUrl": "https://drive.google.com/file/d/12ttmR4Z76kulCkhMvr6fuP8ODAnhB3w5/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-202-incognito-las-vidas-secretas-del-cerebro",
+  "title": "Incognito - Las Vidas Secretas Del Cerebro",
+  "author": "eagleman, daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Incognito - Las Vidas Secretas Del Cerebro de eagleman, daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16wEyoXkWm_HmsdFTJPKy2N8_rO0GXoVA",
+  "backdrop": "https://lh3.googleusercontent.com/d/16wEyoXkWm_HmsdFTJPKy2N8_rO0GXoVA",
+  "readerUrl": "https://drive.google.com/file/d/1anncDlq5pxqAk-QGnVewvmUsqvqCE157/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-203-progreso-de-la-investigaci-n-del-cerebro",
+  "title": "Progreso De La InvestigacióN Del Cerebro",
+  "author": "edab",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Progreso De La InvestigacióN Del Cerebro de edab em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ARaaqIKDD3jkqmEgJO3H17HoGeaHjJM_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ARaaqIKDD3jkqmEgJO3H17HoGeaHjJM_",
+  "readerUrl": "https://drive.google.com/file/d/1ATFNnWoLKa0Ls2qoutBLieWG2LdymBvn/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-204-el-universo-de-la-conciencia",
+  "title": "El Universo De La Conciencia",
+  "author": "edelman & tononi",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Universo De La Conciencia de edelman & tononi em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1seXfqm2dAbBvwA2pEJ1Fz3YzcjXZFr5t",
+  "backdrop": "https://lh3.googleusercontent.com/d/1seXfqm2dAbBvwA2pEJ1Fz3YzcjXZFr5t",
+  "readerUrl": "https://drive.google.com/file/d/1WGlMX89jRPz1wqCTFPwcmuClAhms6XZ0/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-205-manual-de-terapia-racional-emotiva-vol-ii",
+  "title": "Manual De Terapia Racional Emotiva. Vol. Ii",
+  "author": "ellis & grieger",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Manual De Terapia Racional Emotiva. Vol. Ii de ellis & grieger em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rwrdXmR7etUGOGBqdcIxcmop-gXt41sl",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rwrdXmR7etUGOGBqdcIxcmop-gXt41sl",
+  "readerUrl": "https://drive.google.com/file/d/1wI4wVkR2oZ6DsXla6DqBSnnf6yYSZVCi/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-206-psicoterapia-infantil-con-juego-casos-cl-nicos",
+  "title": "Psicoterapia.Infantil.Con.Juego.Casos.ClíNicos",
+  "author": "esquivel y ancona",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicoterapia.Infantil.Con.Juego.Casos.ClíNicos de esquivel y ancona em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jEcGcErVhE8gsMWLCYLjFRv6WqO4Cqgg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jEcGcErVhE8gsMWLCYLjFRv6WqO4Cqgg",
+  "readerUrl": "https://drive.google.com/file/d/19oX38WXBBBWScZZOuAKh1MSnUozqU6qS/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-207-manual-para-elaborar-informes-psicologicos",
+  "title": "Manual Para Elaborar Informes Psicologicos",
+  "author": "facultad de psicología unam",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Manual Para Elaborar Informes Psicologicos de facultad de psicología unam em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GwEiwsdVHxf-bZHzxjzRh1RwyuoeSidZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GwEiwsdVHxf-bZHzxjzRh1RwyuoeSidZ",
+  "readerUrl": "https://drive.google.com/file/d/1U9830d3z9VV6Uy5jv6AztCz4S0816SeD/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-208-feigl-scriven-los-fundamentos-de-la-ciencia-y-los-conceptos-de-la-psicologia-y-el-psicoanalisis",
+  "title": "Feigl & Scriven- Los Fundamentos De La Ciencia Y Los Conceptos De La Psicologia Y El Psicoanalisis",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Feigl & Scriven- Los Fundamentos De La Ciencia Y Los Conceptos De La Psicologia Y El Psicoanalisis de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13iUCjxNWWMht570x2I1A-CeREzoj0owh",
+  "backdrop": "https://lh3.googleusercontent.com/d/13iUCjxNWWMht570x2I1A-CeREzoj0owh",
+  "readerUrl": "https://drive.google.com/file/d/19ym5CXgAqmJ2KX3hQ8IwrIbBfZMfIosY/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-209-el-cerebro-estudia-al-cerebro",
+  "title": "El Cerebro Estudia Al Cerebro",
+  "author": "fernandez de miguel, francisco",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Cerebro Estudia Al Cerebro de fernandez de miguel, francisco em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EdmrpUrYJzyePD7RPZQuLl2lGWa3aKdT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EdmrpUrYJzyePD7RPZQuLl2lGWa3aKdT",
+  "readerUrl": "https://drive.google.com/file/d/1FaCJLUKGq-xyfhZWjp-uy63lJJlRik_X/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-210-la-revoluci-n-del-nacimiento",
+  "title": "La RevolucióN Del Nacimiento",
+  "author": "fernández del castillo, isabel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La RevolucióN Del Nacimiento de fernández del castillo, isabel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kOTxn4p8TeZALiUdC8nu9r-aF9GSPBwq",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kOTxn4p8TeZALiUdC8nu9r-aF9GSPBwq",
+  "readerUrl": "https://drive.google.com/file/d/1FO5A7BKo5evcwdG6j57ELqFJ_4RCCPQ-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-211-manual-de-psicolog-a-social-y-salud-instrumentos-de-pr-cticas-de-investigaci-n",
+  "title": "Manual De PsicologíA Social Y Salud - Instrumentos De PráCticas De InvestigacióN",
+  "author": "fernández et al",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Manual De PsicologíA Social Y Salud - Instrumentos De PráCticas De InvestigacióN de fernández et al em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1H-eXdOGYcYuhjTcX4VpornRztow5OFc9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1H-eXdOGYcYuhjTcX4VpornRztow5OFc9",
+  "readerUrl": "https://drive.google.com/file/d/1KipwSQDydVLDTtVsrCltphQ7o3o8Q0p0/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-212-cuestion-de-sexos",
+  "title": "Cuestion De Sexos",
+  "author": "fine, cordelia",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Cuestion De Sexos de fine, cordelia em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1AF2fUB6QuBDzYdEQFplOx1HweX4rVU1c",
+  "backdrop": "https://lh3.googleusercontent.com/d/1AF2fUB6QuBDzYdEQFplOx1HweX4rVU1c",
+  "readerUrl": "https://drive.google.com/file/d/1cEtjmk-fTS519l0gAkNnO92x9CHHHNmA/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-213-the-neuroscience-of-psychological-therapies",
+  "title": "The Neuroscience Of Psychological Therapies",
+  "author": "folensbee, rowland",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Neuroscience Of Psychological Therapies de folensbee, rowland em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GaHXJhg_tJ8EB83zI8TmH85UXIj_BOe8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GaHXJhg_tJ8EB83zI8TmH85UXIj_BOe8",
+  "readerUrl": "https://drive.google.com/file/d/1HHvs6H3q78_ymVno0FMjY7H66fquUjsQ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-214-padres-que-odian",
+  "title": "Padres Que Odian",
+  "author": "forward, susan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Padres Que Odian de forward, susan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10GKJXCPxVBnIwuHdiqdDlt_sFduPEKuT",
+  "backdrop": "https://lh3.googleusercontent.com/d/10GKJXCPxVBnIwuHdiqdDlt_sFduPEKuT",
+  "readerUrl": "https://drive.google.com/file/d/1yMkgRzTBJ-ywDt8SnWcTU-pDPY8ZRUHd/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-215-the-neuroscience-of-psychological-therapies",
+  "title": "The Neuroscience Of Psychological Therapies",
+  "author": "fowlensbee, rowland",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Neuroscience Of Psychological Therapies de fowlensbee, rowland em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hQqTVI02BCEx5SfiE1Tlw3r4S_VLr-Wh",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hQqTVI02BCEx5SfiE1Tlw3r4S_VLr-Wh",
+  "readerUrl": "https://drive.google.com/file/d/1LdqTV81j67Vqf2CCNW675BxwMSqIn_DQ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-216-la-psicoterapia-al-alacance-de-todos",
+  "title": "La Psicoterapia Al Alacance De Todos",
+  "author": "frankl, victor",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Psicoterapia Al Alacance De Todos de frankl, victor em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ru9vzTKJJeI5HfFQtdAfQNhPhhSK6VQr",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ru9vzTKJJeI5HfFQtdAfQNhPhhSK6VQr",
+  "readerUrl": "https://drive.google.com/file/d/1GzCY7OhXtisCoUJXqduc6z4uL7NIUEZ4/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-217-obras-completas",
+  "title": "Obras Completas",
+  "author": "freud sigmund",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Obras Completas de freud sigmund em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1JKETjIOFShCHANhWoDchoop4B8-hQcfe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1JKETjIOFShCHANhWoDchoop4B8-hQcfe",
+  "readerUrl": "https://drive.google.com/file/d/1ofGq3r42_ZuGF1vbqg4dmlAxbI8H-aIB/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-218-miedo-a-la-libertad",
+  "title": "Miedo A La Libertad",
+  "author": "fromm, erich",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Miedo A La Libertad de fromm, erich em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1naIfl3oRjUAnanIf5h5do5J7pc0QZ35p",
+  "backdrop": "https://lh3.googleusercontent.com/d/1naIfl3oRjUAnanIf5h5do5J7pc0QZ35p",
+  "readerUrl": "https://drive.google.com/file/d/1mv-cRFhra1JY3go8I_8qk3JjkB00IyaO/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-219-el-corazon-del-hombre",
+  "title": "El Corazon Del Hombre",
+  "author": "fromm, erich",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Corazon Del Hombre de fromm, erich em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cbgb5s65iY2TjsXqm1uYeKWc9jmx5r2O",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cbgb5s65iY2TjsXqm1uYeKWc9jmx5r2O",
+  "readerUrl": "https://drive.google.com/file/d/1Nb1fNTbbimOqpRykFiXodCdHKANa0KL9/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-220-psicoanalisis-y-religion",
+  "title": "Psicoanalisis Y Religion",
+  "author": "fromm, erich",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicoanalisis Y Religion de fromm, erich em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Fzti8WeCQVIlaVleZN-L1h3nuS9Hb0mn",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Fzti8WeCQVIlaVleZN-L1h3nuS9Hb0mn",
+  "readerUrl": "https://drive.google.com/file/d/1mlo8lSCXs0-ppZe5vBnnZOntz5Uo-sdt/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-221-la-revolucion-de-la-esperanza",
+  "title": "La Revolucion De La Esperanza",
+  "author": "fromm, erich",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Revolucion De La Esperanza de fromm, erich em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1M-bmxVdRhMbCyDNo9hQ3iJgaDSxpjOqj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1M-bmxVdRhMbCyDNo9hQ3iJgaDSxpjOqj",
+  "readerUrl": "https://drive.google.com/file/d/1UJh1SSFYyY6_0G5YIOUbBMD5CRTFZ42U/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-222-la-nueva-ciencia-de-la-mente",
+  "title": "La Nueva Ciencia De La Mente",
+  "author": "gardner howard",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Nueva Ciencia De La Mente de gardner howard em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XYwjAPq9lm_2gFd_yj2Q9XUTXMeqK5Dv",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XYwjAPq9lm_2gFd_yj2Q9XUTXMeqK5Dv",
+  "readerUrl": "https://drive.google.com/file/d/1G4fjdm4IniSIXhtMoSaObeHeCPUltZZD/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-223-teoria-de-las-inteligencias-multiples",
+  "title": "Teoria De Las Inteligencias Multiples",
+  "author": "gardner howard",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Teoria De Las Inteligencias Multiples de gardner howard em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uBRtmm1Lh5jaJf9BZ4Ou9_cBSXeiPLJE",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uBRtmm1Lh5jaJf9BZ4Ou9_cBSXeiPLJE",
+  "readerUrl": "https://drive.google.com/file/d/1ghACs_og3_4-2wfHq9qsjk_idD_OsAWX/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-224-arte-mente-y-cerebro",
+  "title": "Arte, Mente Y Cerebro",
+  "author": "gardner, howard",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Arte, Mente Y Cerebro de gardner, howard em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NLz37LNOQ-yzC12MelAoKAa-2u-__8zp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NLz37LNOQ-yzC12MelAoKAa-2u-__8zp",
+  "readerUrl": "https://drive.google.com/file/d/1LS9vknM0SpRQ2EiOj1Xbi57YTOmiM1Ul/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-225-psicologia-social",
+  "title": "Psicologia Social",
+  "author": "garrido & álvaro",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicologia Social de garrido & álvaro em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-s_w4PacwM9Z4Nef4YPHzOQwIRY5GS53",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-s_w4PacwM9Z4Nef4YPHzOQwIRY5GS53",
+  "readerUrl": "https://drive.google.com/file/d/1Xrp484XVq5IagIgDCTaVVWxi5z7iUvzg/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-226-leer-y-comprender",
+  "title": "Leer Y Comprender",
+  "author": "gaunel y galoac'h",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Leer Y Comprender de gaunel y galoac'h em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EWA85vn6Zyy-C4MwaD_7lh7-iZlffuoy",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EWA85vn6Zyy-C4MwaD_7lh7-iZlffuoy",
+  "readerUrl": "https://drive.google.com/file/d/1x5QTZckAjvyIHtx-OBKEnHMYamTjfFrx/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-227-human",
+  "title": "Human",
+  "author": "gazzaniga, michael",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Human de gazzaniga, michael em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KQNIypfSqiHPseLqS0BJg2hgFqy8_XgE",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KQNIypfSqiHPseLqS0BJg2hgFqy8_XgE",
+  "readerUrl": "https://drive.google.com/file/d/1_a10kCUawdf9DASr8R0oAPS1BRGpqXMG/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-228-valoracion-cuantitativa-de-los-datos-de-la-evaluaci-n-de-luria",
+  "title": "Valoracion Cuantitativa De Los Datos De La EvaluacióN De Luria",
+  "author": "glozman, hana",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Valoracion Cuantitativa De Los Datos De La EvaluacióN De Luria de glozman, hana em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1m0Z5uaVRa8Nt2L_wHFWcL_jaz-xDw4m8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1m0Z5uaVRa8Nt2L_wHFWcL_jaz-xDw4m8",
+  "readerUrl": "https://drive.google.com/file/d/1in9LpudBeD_Mao4acZXsZGU6yXFvmL0V/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-229-aprendizaje-y-memoria",
+  "title": "Aprendizaje Y Memoria",
+  "author": "gluck et al",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Aprendizaje Y Memoria de gluck et al em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lfb0JVeCu-hbNasI2QJe0AzDiIf__7aN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lfb0JVeCu-hbNasI2QJe0AzDiIf__7aN",
+  "readerUrl": "https://drive.google.com/file/d/1IzmSujtQQzA5yQpsxS7S4R57Y6zAdph9/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-230-estigma",
+  "title": "Estigma",
+  "author": "goffman, erving",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Estigma de goffman, erving em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1pfoOiBIoXraxVUxrqKTZ0XXU1yomnl3E",
+  "backdrop": "https://lh3.googleusercontent.com/d/1pfoOiBIoXraxVUxrqKTZ0XXU1yomnl3E",
+  "readerUrl": "https://drive.google.com/file/d/1D2BxbkCLKUs4VL30QQXS_XXHMoUozsQf/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-231-the-genetics-of-cognitive-neurosciences",
+  "title": "The Genetics Of Cognitive Neurosciences",
+  "author": "goldberg weinberger",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Genetics Of Cognitive Neurosciences de goldberg weinberger em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18iBoh0-HeW5q38m7xOoOK1kN8kyRVwfR",
+  "backdrop": "https://lh3.googleusercontent.com/d/18iBoh0-HeW5q38m7xOoOK1kN8kyRVwfR",
+  "readerUrl": "https://drive.google.com/file/d/1pgU2BxBpuCula1NH1Yn_s-ncP2R-4-8j/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-232-the-organism",
+  "title": "The Organism",
+  "author": "goldstein, kurt",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Organism de goldstein, kurt em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ru4CQ4Mq-x7aHaXOTctIILI9LutofLNO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ru4CQ4Mq-x7aHaXOTctIILI9LutofLNO",
+  "readerUrl": "https://drive.google.com/file/d/1_CpDtlTk8-JhH1S2YmmNVehucGtg7SUg/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-233-emociones-destructivas",
+  "title": "Emociones Destructivas",
+  "author": "goleman daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Emociones Destructivas de goleman daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WZSALj5BQ8GygBacJlBtJprzDHah0ImN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WZSALj5BQ8GygBacJlBtJprzDHah0ImN",
+  "readerUrl": "https://drive.google.com/file/d/1niq5u4zdSSPZO9miFayPLEortOQzp6g0/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-234-la-pr-ctica-de-la-inteligencia-emocional",
+  "title": "La PráCtica De La Inteligencia Emocional",
+  "author": "goleman, daniel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La PráCtica De La Inteligencia Emocional de goleman, daniel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14GtlKG4CIraG6OQR69rA9XYLedZKNS-C",
+  "backdrop": "https://lh3.googleusercontent.com/d/14GtlKG4CIraG6OQR69rA9XYLedZKNS-C",
+  "readerUrl": "https://drive.google.com/file/d/1m_sxDl_PULae6mGrbsSJalH7OzFZDGzz/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-235-daniel-inteligencia-emocional",
+  "title": "Daniel- Inteligencia Emocional",
+  "author": "goleman",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Daniel- Inteligencia Emocional de goleman em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1BnyZlsp6gCKwRVTkwY2UXZxjbiI7J8IY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1BnyZlsp6gCKwRVTkwY2UXZxjbiI7J8IY",
+  "readerUrl": "https://drive.google.com/file/d/1YywhM950LQfOi8V5GNRStIRHL3RbeQne/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-236-neurociencia-cognitiva-y-educacion",
+  "title": "Neurociencia Cognitiva Y Educacion",
+  "author": "gomez cumpa, jose",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Neurociencia Cognitiva Y Educacion de gomez cumpa, jose em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xnCu1dLdD8VFvZWmvBC8zyMJ0Ty7Hgji",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xnCu1dLdD8VFvZWmvBC8zyMJ0Ty7Hgji",
+  "readerUrl": "https://drive.google.com/file/d/13WafkTzRMQEuIRl3M-mm6WhfUL4SJsNw/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-237-psicologia-de-la-motivacion",
+  "title": "Psicologia De La Motivacion",
+  "author": "gonzales, diego",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicologia De La Motivacion de gonzales, diego em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1auaxbB-2Y39LF4PC3AsD9L-7RVlgt0rW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1auaxbB-2Y39LF4PC3AsD9L-7RVlgt0rW",
+  "readerUrl": "https://drive.google.com/file/d/1oOmOrgjN4OPME1V-eQPx0Kwoh_OHN5ET/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-238-la-invenci-n-de-trastornos-mentales-escuchando-al-f-rmaco-o-al-paciente",
+  "title": "La InvencióN De Trastornos Mentales ¿Escuchando Al FáRmaco O Al Paciente",
+  "author": "gonzáles y álvarez",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La InvencióN De Trastornos Mentales ¿Escuchando Al FáRmaco O Al Paciente de gonzáles y álvarez em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VCU-A5oUFaAr4eMYh0yp_33wP3nA7ICD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VCU-A5oUFaAr4eMYh0yp_33wP3nA7ICD",
+  "readerUrl": "https://drive.google.com/file/d/1nzkBk5HasaBb1viELTuVPRU4wWyoR1Uo/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-239-instrumentos-de-evaluaci-n-psicol-gica",
+  "title": "Instrumentos De EvaluacióN PsicolóGica",
+  "author": "gonzáles, felicia",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Instrumentos De EvaluacióN PsicolóGica de gonzáles, felicia em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16FI2paqhS7CeQt4w-PJFlX-e67bberFd",
+  "backdrop": "https://lh3.googleusercontent.com/d/16FI2paqhS7CeQt4w-PJFlX-e67bberFd",
+  "readerUrl": "https://drive.google.com/file/d/1dxmLFmsRxITcYfsxPTYMjs9-Zxm7om3e/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-240-the-scientist-on-the-crib",
+  "title": "The Scientist On The Crib",
+  "author": "gopnik, alison et al",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Scientist On The Crib de gopnik, alison et al em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/142LFjhzDOGXb5hmbjOaSflBVLrQ2R-DC",
+  "backdrop": "https://lh3.googleusercontent.com/d/142LFjhzDOGXb5hmbjOaSflBVLrQ2R-DC",
+  "readerUrl": "https://drive.google.com/file/d/1yxLfCJ_yh85r74OiCdUHTf_B5k7QAGvN/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-241-anatom-a-de-la-creatividad",
+  "title": "AnatomíA De La Creatividad",
+  "author": "guliera, llorenc",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental AnatomíA De La Creatividad de guliera, llorenc em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hg3QSTTAivebFIgX9XWPN72N7iT-Va-n",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hg3QSTTAivebFIgX9XWPN72N7iT-Va-n",
+  "readerUrl": "https://drive.google.com/file/d/1l00e5Gujj7PG92RNy3PR2gLLJREB9pZ_/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-242-tepsi",
+  "title": "Tepsi",
+  "author": "haeussler & marchant",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Tepsi de haeussler & marchant em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GUAJtASLIDX4kg8Lmg4REIzu3Y_Kr6Dc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GUAJtASLIDX4kg8Lmg4REIzu3Y_Kr6Dc",
+  "readerUrl": "https://drive.google.com/file/d/1F5ebBGxxPTNfDYp0M0f_u7_6ir4egJLZ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-243-la-gesti-n-y-la-administraci-n-para-el-ma-ana",
+  "title": "La GestióN Y La AdministracióN Para El MañAna",
+  "author": "harvard bussines review",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La GestióN Y La AdministracióN Para El MañAna de harvard bussines review em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1sg1YKoBFkkW352iuIhwyq94uFQq4tn4Q",
+  "backdrop": "https://lh3.googleusercontent.com/d/1sg1YKoBFkkW352iuIhwyq94uFQq4tn4Q",
+  "readerUrl": "https://drive.google.com/file/d/1zmBHS8j_pEV4wsUZijfEH20KHyeO03qS/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-244-moral-minds",
+  "title": "Moral Minds",
+  "author": "hauser, marc",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Moral Minds de hauser, marc em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/11aeT--R7hURLlV9nxGf37FYWtHdynF1C",
+  "backdrop": "https://lh3.googleusercontent.com/d/11aeT--R7hURLlV9nxGf37FYWtHdynF1C",
+  "readerUrl": "https://drive.google.com/file/d/1ELLFsf58Iz5ZuSJeYMOPz0Ty70vKSOt_/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-245-on-intelligence",
+  "title": "On Intelligence",
+  "author": "hawkins, jeff",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental On Intelligence de hawkins, jeff em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Jx3jVjmFnBZ2RpsZVBZWoVAbMGcTiNcD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Jx3jVjmFnBZ2RpsZVBZWoVAbMGcTiNcD",
+  "readerUrl": "https://drive.google.com/file/d/1_SNRQyyKi75hlDJK-V85KDxoz2d5QfQU/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-246-trauma-and-recovery",
+  "title": "Trauma And Recovery",
+  "author": "herman, judith",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Trauma And Recovery de herman, judith em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1T8r2Vs7fG5OD5u54eU_QgVE0E03455_K",
+  "backdrop": "https://lh3.googleusercontent.com/d/1T8r2Vs7fG5OD5u54eU_QgVE0E03455_K",
+  "readerUrl": "https://drive.google.com/file/d/14QIxWSZSZeUZ8WA5qoespQO-RFilgK0j/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-247-introduction-to-clinical-psychology",
+  "title": "Introduction To Clinical Psychology",
+  "author": "hunsley lee",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Introduction To Clinical Psychology de hunsley lee em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10G9R0YCMhBmH8ADg9dE6-_QIPBZZhkYf",
+  "backdrop": "https://lh3.googleusercontent.com/d/10G9R0YCMhBmH8ADg9dE6-_QIPBZZhkYf",
+  "readerUrl": "https://drive.google.com/file/d/1PVIlRyNGo0T8uto-11aN2kIG2eU6MoGD/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-248-hypnotherapy-for-dummies",
+  "title": "Hypnotherapy For Dummies",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Hypnotherapy For Dummies de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gDv-CgLiKPE1_0mgTIJ-9aoOQwSzMvnc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gDv-CgLiKPE1_0mgTIJ-9aoOQwSzMvnc",
+  "readerUrl": "https://drive.google.com/file/d/1nAg-gArjrlxYSm6ASfPbRjoOOp0DCPGd/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-249-gimnasia-cerebral",
+  "title": "Gimnasia Cerebral",
+  "author": "ibarra, luz maría",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Gimnasia Cerebral de ibarra, luz maría em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xIdk2J3HVOh4Sx5W4jH6o2tUdUb8RV3X",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xIdk2J3HVOh4Sx5W4jH6o2tUdUb8RV3X",
+  "readerUrl": "https://drive.google.com/file/d/177k47Xyn01S6CPwgJCP2IpymbnpAWisP/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-250-imprimir-neuropsi",
+  "title": "Imprimir Neuropsi",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Imprimir Neuropsi de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1A2n7O1hLSXGPuWpZYBa-nL2VQLIYSInR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1A2n7O1hLSXGPuWpZYBa-nL2VQLIYSInR",
+  "readerUrl": "https://drive.google.com/file/d/1Wo_yFDFO-nr46kVjCuIWytvhgeeQ6NMZ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-251-imprimir-ok-boston",
+  "title": "Imprimir Ok Boston",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Imprimir Ok Boston de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uks3GUoPS4PvEPnL0kNg5bH90m1lGIOg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uks3GUoPS4PvEPnL0kNg5bH90m1lGIOg",
+  "readerUrl": "https://drive.google.com/file/d/1F4GU7lwdenAK3hcdWHfa6hNrUPjbbyG-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-252-imprimirboston",
+  "title": "Imprimirboston",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Imprimirboston de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dPhwX2RECg7ltdM7t6W86CPVUUmAyD73",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dPhwX2RECg7ltdM7t6W86CPVUUmAyD73",
+  "readerUrl": "https://drive.google.com/file/d/10Jass9uU85ogJWaLVZE3mvTWIXnUc15B/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-253-teaching-children-with-attention-deficit-hyperactivity-disorder",
+  "title": "Teaching Children With Attention Deficit Hyperactivity Disorder",
+  "author": "instructional strategies and practices",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Teaching Children With Attention Deficit Hyperactivity Disorder de instructional strategies and practices em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lKh1Sh58Cfnz72_GB3SbSpGi-JYCqGIX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lKh1Sh58Cfnz72_GB3SbSpGi-JYCqGIX",
+  "readerUrl": "https://drive.google.com/file/d/1yJA5kBtbd0gPBat40XCULfoO9-HBaZyU/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-254-inventario-de-ansiedad-de-beck",
+  "title": "Inventario De Ansiedad De Beck",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Inventario De Ansiedad De Beck de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15x7oSzbzUiE7vUGdka6Ez0fVF9se6Hsd",
+  "backdrop": "https://lh3.googleusercontent.com/d/15x7oSzbzUiE7vUGdka6Ez0fVF9se6Hsd",
+  "readerUrl": "https://drive.google.com/file/d/1meJyfPLbYlHPAE94c5ob9XglURGh4TO-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-255-inventario-de-ansiedad-de-beck-instrucciones",
+  "title": "Inventario De Ansiedad De Beck. Instrucciones",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Inventario De Ansiedad De Beck. Instrucciones de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13lKvK_Ua_eNbwXIpxMpwG_tgsMVOlyg8",
+  "backdrop": "https://lh3.googleusercontent.com/d/13lKvK_Ua_eNbwXIpxMpwG_tgsMVOlyg8",
+  "readerUrl": "https://drive.google.com/file/d/1LqpV95WO0PIOFAULD_Lcb_GLtcC6u8ES/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-256-why-is-sex-fun-the-evolution-of-human-sexuality",
+  "title": "Why Is Sex Fun--The Evolution Of Human Sexuality",
+  "author": "jared diamond",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Why Is Sex Fun--The Evolution Of Human Sexuality de jared diamond em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UssaUU_iEeAxuAoYOWZVFu-FmFTbZ5py",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UssaUU_iEeAxuAoYOWZVFu-FmFTbZ5py",
+  "readerUrl": "https://drive.google.com/file/d/1SeHPvh87C8N-xg2eaMekeWRKP3wkLHHc/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-257-jay-gould-stephen-the-mismeasure-of-man",
+  "title": "Jay Gould Stephen- The Mismeasure Of Man",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Jay Gould Stephen- The Mismeasure Of Man de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ac9LGa9XifjWH9uvtCS6IIQ8psgo6TQz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ac9LGa9XifjWH9uvtCS6IIQ8psgo6TQz",
+  "readerUrl": "https://drive.google.com/file/d/1B_KzR9w22t86w-ybt85cSUhgziIk6iVw/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-258-evaluaci-n-psicol-gica-forense",
+  "title": "EvaluacióN PsicolóGica Forense",
+  "author": "jiménez gomez, fernanda",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental EvaluacióN PsicolóGica Forense de jiménez gomez, fernanda em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1y8JGzKFIAgqXAmitvkS7aPD1Gte6HXaJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1y8JGzKFIAgqXAmitvkS7aPD1Gte6HXaJ",
+  "readerUrl": "https://drive.google.com/file/d/1eprQgG5De98q4bkUdFX_tAdRr6P99guX/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-259-cabaret-m-stico",
+  "title": "Cabaret MíStico",
+  "author": "jodorowsky, alejandro",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Cabaret MíStico de jodorowsky, alejandro em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gWpEXnS4CTTmzYZ-nTnK74zvNy0Z13PZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gWpEXnS4CTTmzYZ-nTnK74zvNy0Z13PZ",
+  "readerUrl": "https://drive.google.com/file/d/1ghYJOB6RMnW7Qzy-vxsZ7RHjbSh5rpQM/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-260-manual-de-psicomagia",
+  "title": "Manual De Psicomagia",
+  "author": "jodorowsky, alejandro",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Manual De Psicomagia de jodorowsky, alejandro em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YDcfHG2tOqf60tsIKmkHaCRuagf_I32u",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YDcfHG2tOqf60tsIKmkHaCRuagf_I32u",
+  "readerUrl": "https://drive.google.com/file/d/1A-rvumP4Pu-awX_z_1nqJiDaa2o3mtK5/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-261-metagenealog-a",
+  "title": "MetagenealogíA",
+  "author": "jodorowsky, alejandro",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental MetagenealogíA de jodorowsky, alejandro em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ceGKPDq1L24C59psG0uEvmDqec2yhSIG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ceGKPDq1L24C59psG0uEvmDqec2yhSIG",
+  "readerUrl": "https://drive.google.com/file/d/10CqnviHmrZ-yUQ1gwoxkdE0ph47-sUMH/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-262-psicomagia",
+  "title": "Psicomagia",
+  "author": "jodorowsky, alejandro",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicomagia de jodorowsky, alejandro em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WppzGMxPccshazNFC9LWeGiBAlBtORz9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WppzGMxPccshazNFC9LWeGiBAlBtORz9",
+  "readerUrl": "https://drive.google.com/file/d/1m6q5G7fkvLvG8pyVkVp0jP44wnipKotw/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-263-los-complejos-y-el-inconsciente",
+  "title": "Los Complejos Y El Inconsciente",
+  "author": "jung, carl gustav",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Los Complejos Y El Inconsciente de jung, carl gustav em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12SzDDueu_DmgyhPhvjPXLe4qoIORitfx",
+  "backdrop": "https://lh3.googleusercontent.com/d/12SzDDueu_DmgyhPhvjPXLe4qoIORitfx",
+  "readerUrl": "https://drive.google.com/file/d/1iM8yxZ-LMtEzuGepX5NA09C46HR_E-Br/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-264-presente-y-futuro",
+  "title": "Presente Y Futuro",
+  "author": "jung, carl gustav",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Presente Y Futuro de jung, carl gustav em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1utZXi-gzTQV5Rb9dum6D19qw-2xzLDWd",
+  "backdrop": "https://lh3.googleusercontent.com/d/1utZXi-gzTQV5Rb9dum6D19qw-2xzLDWd",
+  "readerUrl": "https://drive.google.com/file/d/193e4ocSz87fUPlKnK31MvbBS48R_uLEN/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-265-c-mo-realizar-y-redactar-una-evaluaci-n-neuropsicol-gica",
+  "title": "CóMo Realizar Y Redactar Una EvaluacióN NeuropsicolóGica",
+  "author": "jurado y pueyo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental CóMo Realizar Y Redactar Una EvaluacióN NeuropsicolóGica de jurado y pueyo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cFE0vS0DKWpVQVJexkjlvcwjFe3P91ro",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cFE0vS0DKWpVQVJexkjlvcwjFe3P91ro",
+  "readerUrl": "https://drive.google.com/file/d/1rZSDJg8ASpgECSf__64ThRiLSkPwOZKi/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-266-freud-b-sico",
+  "title": "Freud BáSico",
+  "author": "kahn, michael",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Freud BáSico de kahn, michael em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1F1dQXCLelMKFodTXgqU0S65UcpBxQx9v",
+  "backdrop": "https://lh3.googleusercontent.com/d/1F1dQXCLelMKFodTXgqU0S65UcpBxQx9v",
+  "readerUrl": "https://drive.google.com/file/d/1XEXKVPe2hk19nQXe92eAaCl16gVLWHU5/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-267-keep-your-brain-alive",
+  "title": "Keep Your Brain Alive",
+  "author": "katz & rubin",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Keep Your Brain Alive de katz & rubin em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QvVB0Z_SPSy8l0AT5zwgva0kBCsi-2EX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QvVB0Z_SPSy8l0AT5zwgva0kBCsi-2EX",
+  "readerUrl": "https://drive.google.com/file/d/1yFNcGWv6QVkiSBwnMwann2wgEqhYyqUI/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-268-proceso-corporal-un-enfoque-gestalt-para-el-trabajo-corporal-en-psicoterapia",
+  "title": "Proceso Corporal, Un Enfoque Gestalt Para El Trabajo Corporal En Psicoterapia",
+  "author": "kepner, james",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Proceso Corporal, Un Enfoque Gestalt Para El Trabajo Corporal En Psicoterapia de kepner, james em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EKZFk3q84ZzWMjG9WcyYgTfxYlDMIygU",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EKZFk3q84ZzWMjG9WcyYgTfxYlDMIygU",
+  "readerUrl": "https://drive.google.com/file/d/1_CAR1ThGpcLx9B172T5NxcbGT3-k9hkv/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-269-transtornos-graves-de-la-personalidad-cap-1",
+  "title": "Transtornos Graves De La Personalidad Cap 1",
+  "author": "kernberg, otto",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Transtornos Graves De La Personalidad Cap 1 de kernberg, otto em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1J8CX61QuWSrH90BqoZqLl1TAzjPQgG1l",
+  "backdrop": "https://lh3.googleusercontent.com/d/1J8CX61QuWSrH90BqoZqLl1TAzjPQgG1l",
+  "readerUrl": "https://drive.google.com/file/d/1uR2e47VmZnV42VgRZEQ3fMXuV3urY5ny/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-270-conducta-sexual-del-var-n",
+  "title": "Conducta Sexual Del VaróN",
+  "author": "kinsey, alfred",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Conducta Sexual Del VaróN de kinsey, alfred em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1UiJs7H3fbwaAx3DfPC2E9k7W1Qi1LOAn",
+  "backdrop": "https://lh3.googleusercontent.com/d/1UiJs7H3fbwaAx3DfPC2E9k7W1Qi1LOAn",
+  "readerUrl": "https://drive.google.com/file/d/16hYK6EkW1P596GbEFj210MQ48EbEIFnv/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-271-sobre-la-muerte-y-los-moribundos",
+  "title": "Sobre La Muerte Y Los Moribundos",
+  "author": "kubler ross, elisabeth",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Sobre La Muerte Y Los Moribundos de kubler ross, elisabeth em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1T4-TdJcRWxvUpWYxn2kNmUwFmQd26x9d",
+  "backdrop": "https://lh3.googleusercontent.com/d/1T4-TdJcRWxvUpWYxn2kNmUwFmQd26x9d",
+  "readerUrl": "https://drive.google.com/file/d/1xIaJzBWmUwgGnumqDASWPGbBqqGx-mJw/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-272-the-art-of-happiness",
+  "title": "The Art Of Happiness",
+  "author": "lama, dalai cutter, howard",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Art Of Happiness de lama, dalai cutter, howard em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XJzUDBpObVI6YQnfSWq8m3Yvk5PcEsRo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XJzUDBpObVI6YQnfSWq8m3Yvk5PcEsRo",
+  "readerUrl": "https://drive.google.com/file/d/1FkE5NIGclMfNXP1Pvc3s2iY0EqglQeWW/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-273-laminas-neuropsi",
+  "title": "Laminas Neuropsi",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Laminas Neuropsi de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Fi8y57v9QQxYrsCcl75AW4SHNElDrgwW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Fi8y57v9QQxYrsCcl75AW4SHNElDrgwW",
+  "readerUrl": "https://drive.google.com/file/d/1OxlDzmzpDiefVpLmC0MZryyvo7slrHFq/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-274-test-de-matrices-progresivas-coloreadas-de-raven",
+  "title": "Test De Matrices Progresivas Coloreadas De Raven",
+  "author": "laplace, veronica",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Test De Matrices Progresivas Coloreadas De Raven de laplace, veronica em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1V_L18CHHH4eOLf_wKBy-8pCcET7qzFe1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1V_L18CHHH4eOLf_wKBy-8pCcET7qzFe1",
+  "readerUrl": "https://drive.google.com/file/d/1eb-v7e5F4QLYYh3fsIjiO4k5MIUr_xBD/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-275-martin-de-lucenay",
+  "title": "Martin De Lucenay",
+  "author": "las perversiones sexuales",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Martin De Lucenay de las perversiones sexuales em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZZDPwhXPJeZzGOfdDCtcg7vI7837oaPP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZZDPwhXPJeZzGOfdDCtcg7vI7837oaPP",
+  "readerUrl": "https://drive.google.com/file/d/16EyEcKqlug9m5dZzewnuS2gU0cNomxV1/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-276-el-cerebro-y-la-educacion",
+  "title": "El Cerebro Y La Educacion",
+  "author": "lavados montes, jaime",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Cerebro Y La Educacion de lavados montes, jaime em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vPWX9N42K2D7NBYbWjK6aLKuNzCJyf9X",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vPWX9N42K2D7NBYbWjK6aLKuNzCJyf9X",
+  "readerUrl": "https://drive.google.com/file/d/1XaEBRZZ8CiMXWb61UrLcdYVmzQpEkvtC/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-277-thomas-historia-de-la-psicologia",
+  "title": "Thomas- Historia De La Psicologia",
+  "author": "leahey",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Thomas- Historia De La Psicologia de leahey em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mpqII-qQnpMB3H-wvxixiF9mO0uOKJvP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mpqII-qQnpMB3H-wvxixiF9mO0uOKJvP",
+  "readerUrl": "https://drive.google.com/file/d/1xwJkyNyVodpBNI5q8J3S4xRTtM-UQis2/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-278-c-mo-decidimos",
+  "title": "CóMo Decidimos",
+  "author": "lehrer, jonah",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental CóMo Decidimos de lehrer, jonah em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WR-5jOn9HJffprb-OiVynaen7t_2dpJQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WR-5jOn9HJffprb-OiVynaen7t_2dpJQ",
+  "readerUrl": "https://drive.google.com/file/d/1tzjArsuunYGuBWflXfv6v6bwnQ5VkT4p/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-279-heredabilidad-y-medioambiente-en-el-desarrollo-del-ni-o",
+  "title": "Heredabilidad Y Medioambiente En El Desarrollo Del NiñO",
+  "author": "lejarragaa, horacio",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Heredabilidad Y Medioambiente En El Desarrollo Del NiñO de lejarragaa, horacio em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1I6E1w1gQbmQiEhxTt4i24zKLhMHMZ6c_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1I6E1w1gQbmQiEhxTt4i24zKLhMHMZ6c_",
+  "readerUrl": "https://drive.google.com/file/d/1lUC-AXm3z-mozEr-POEwk4FiKOQHQquS/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-280-historia-de-la-psicologia-y-sus-aplicaciones",
+  "title": "Historia De La Psicologia Y Sus Aplicaciones",
+  "author": "limon ruiz, ramon",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Historia De La Psicologia Y Sus Aplicaciones de limon ruiz, ramon em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1iY-WklOizmosVgicwpc29k6n5gX5810K",
+  "backdrop": "https://lh3.googleusercontent.com/d/1iY-WklOizmosVgicwpc29k6n5gX5810K",
+  "readerUrl": "https://drive.google.com/file/d/1Pt81LiC7tMAWJtPNKKy9768hBn2WO3st/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-281-positive-psychology-in-practice",
+  "title": "Positive Psychology In Practice",
+  "author": "linley & joseph",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Positive Psychology In Practice de linley & joseph em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/198_V8apDHp8Dl3pv0oF52CZWTEs69nrL",
+  "backdrop": "https://lh3.googleusercontent.com/d/198_V8apDHp8Dl3pv0oF52CZWTEs69nrL",
+  "readerUrl": "https://drive.google.com/file/d/1IJsfMyRSmuUZXbZ-dBukCKD5wViMyPuL/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-282-neuropsychology-in-the-local-diagnosis-of-brain-damage",
+  "title": "Neuropsychology In The Local Diagnosis Of Brain Damage",
+  "author": "luria r., alexander",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Neuropsychology In The Local Diagnosis Of Brain Damage de luria r., alexander em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KBtaGVt0iHf_VeNh4On0ea8ceN6ur9oc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KBtaGVt0iHf_VeNh4On0ea8ceN6ur9oc",
+  "readerUrl": "https://drive.google.com/file/d/1K1gq4-DqVi9DIU__o3PQmbUtbeN2o8nG/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-283-the-mind-of-a-mnemonist",
+  "title": "The Mind Of A Mnemonist",
+  "author": "luria r., alexander",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Mind Of A Mnemonist de luria r., alexander em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qhEE6aMsTeTUXSmJjHnBSWF-TRD-qwXR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qhEE6aMsTeTUXSmJjHnBSWF-TRD-qwXR",
+  "readerUrl": "https://drive.google.com/file/d/1BIVWKNynp7FU-V90lyBDvv6nfW9-5Pao/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-284-alexander-neuropsychology-in-the-local-diagnosis-of-brain-damage",
+  "title": "Alexander Neuropsychology In The Local Diagnosis Of Brain Damage",
+  "author": "luria",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Alexander Neuropsychology In The Local Diagnosis Of Brain Damage de luria em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FyMhoTsk0R3wk7t2aSDee3L3XQJ_mLcY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FyMhoTsk0R3wk7t2aSDee3L3XQJ_mLcY",
+  "readerUrl": "https://drive.google.com/file/d/1l6N4ghohn3E6KnRmEq_3xUZr2cTmqXg9/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-285-50-actividades-para-desarrollar-la-inteligencia-emocional",
+  "title": "50 Actividades Para Desarrollar La Inteligencia Emocional",
+  "author": "lynn adele",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental 50 Actividades Para Desarrollar La Inteligencia Emocional de lynn adele em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-0szXTX1RwmiIK1oXWE3uqhDk9dcrqR5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-0szXTX1RwmiIK1oXWE3uqhDk9dcrqR5",
+  "readerUrl": "https://drive.google.com/file/d/1YQPMKRcRgTKDGj_yLkbf9IEnsRAXh_7q/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-286-l-minas-test-de-raven-escala-especial",
+  "title": "LáMinas Test De Raven Escala Especial",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental LáMinas Test De Raven Escala Especial de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1x8-HMYyJOBktlyGcg1Euncb1pArcrRDu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1x8-HMYyJOBktlyGcg1Euncb1pArcrRDu",
+  "readerUrl": "https://drive.google.com/file/d/1wqTvidnhJCWdbVAgng1fHYrNxvs70A1S/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-287-maci-pdf",
+  "title": "Maci-Pdf",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Maci-Pdf de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17nI9wN9sHZ-9Y8pjBRS8HvB4Oau0bmds",
+  "backdrop": "https://lh3.googleusercontent.com/d/17nI9wN9sHZ-9Y8pjBRS8HvB4Oau0bmds",
+  "readerUrl": "https://drive.google.com/file/d/16WJYyIFKs5Qm5FRbIiiTSKflQLAL9xoK/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-288-handbook-of-art-therapy",
+  "title": "Handbook Of Art Therapy",
+  "author": "malchiodi, cathy",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Handbook Of Art Therapy de malchiodi, cathy em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1APrd8W6g98SFmE0JXa__PFejhXGaSyMG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1APrd8W6g98SFmE0JXa__PFejhXGaSyMG",
+  "readerUrl": "https://drive.google.com/file/d/1LAQIV4LuYZsZktYF7RKkGOZJ5Hp9UXt_/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-289-test-de-la-persona-bajo-la-lluvia",
+  "title": "Test De La Persona Bajo La Lluvia",
+  "author": "maldonado maría",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Test De La Persona Bajo La Lluvia de maldonado maría em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FE7aNanII8pFjX4FZis8fd9qVjjTHE0j",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FE7aNanII8pFjX4FZis8fd9qVjjTHE0j",
+  "readerUrl": "https://drive.google.com/file/d/1LrpkU9u3OGoGPYFrTCLwc-TLd2uvb3jU/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-290-test-psicom-trico-del-dibujo-del-arbol",
+  "title": "Test PsicoméTrico Del Dibujo Del Arbol",
+  "author": "maldonado, maría",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Test PsicoméTrico Del Dibujo Del Arbol de maldonado, maría em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EcPrto5vyAlpSRbQc_wDH1VK-NSnJ5dv",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EcPrto5vyAlpSRbQc_wDH1VK-NSnJ5dv",
+  "readerUrl": "https://drive.google.com/file/d/10WBzLkcps2v1EivNm_A_7a8KI0uEfO9J/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-291-manual-extenso-ev-neuropsic",
+  "title": "Manual Extenso Ev. Neuropsic.",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Manual Extenso Ev. Neuropsic. de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oRmzuD1i1-vRZqDGamMJkpuirgZG8zFA",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oRmzuD1i1-vRZqDGamMJkpuirgZG8zFA",
+  "readerUrl": "https://drive.google.com/file/d/1pkgvuSOTznlKzlw4M-vk7K-wRV8sOntB/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-292-modificaci-n-de-conducta",
+  "title": "ModificacióN De Conducta",
+  "author": "martin & pear",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental ModificacióN De Conducta de martin & pear em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ts7nDvBcei_nlM-behr5ss06eiiduFV1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ts7nDvBcei_nlM-behr5ss06eiiduFV1",
+  "readerUrl": "https://drive.google.com/file/d/1udRhXCJKAZ6P4SywuFRGT3HEqDymPZzl/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-293-el-hombre-autorrealizado",
+  "title": "El Hombre Autorrealizado",
+  "author": "maslow, abraham",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Hombre Autorrealizado de maslow, abraham em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/141X1zVI31hbt-neFixTXctMzTYxph2Bh",
+  "backdrop": "https://lh3.googleusercontent.com/d/141X1zVI31hbt-neFixTXctMzTYxph2Bh",
+  "readerUrl": "https://drive.google.com/file/d/18QY0FQnJden84bYK3i4SQT7BGLr-dbLL/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-294-la-personalidad-creadora",
+  "title": "La Personalidad Creadora",
+  "author": "maslow, abraham",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Personalidad Creadora de maslow, abraham em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Zi9caj63IOrS89YYs-KUeDWNZ4Fu80KR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Zi9caj63IOrS89YYs-KUeDWNZ4Fu80KR",
+  "readerUrl": "https://drive.google.com/file/d/1S0mb3azlIomYBrQxwWtQFdPP9DY9tOcG/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-295-test-del-rbol",
+  "title": "Test Del áRbol",
+  "author": "masuello, adriana",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Test Del áRbol de masuello, adriana em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1MjBw5qEYVhmIJxg7ecQ1X0XVQACrppZ_",
+  "backdrop": "https://lh3.googleusercontent.com/d/1MjBw5qEYVhmIJxg7ecQ1X0XVQACrppZ_",
+  "readerUrl": "https://drive.google.com/file/d/1bW5QT7dKoE385WvXs2FEUuA6Fnari4BD/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-296-biologia-de-la-cognicion-y-epistemologia",
+  "title": "Biologia De La Cognicion Y Epistemologia",
+  "author": "maturana, humberto",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Biologia De La Cognicion Y Epistemologia de maturana, humberto em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DEYSLEcyjr-60m2oxRk3YmmNr9NoADDa",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DEYSLEcyjr-60m2oxRk3YmmNr9NoADDa",
+  "readerUrl": "https://drive.google.com/file/d/1ldHlhg5uspXEDD1GTSJK4bkvp7ER30Qi/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-297-desde-la-biolog-a-a-la-psicolog-a",
+  "title": "Desde La BiologíA A La PsicologíA",
+  "author": "maturana, humberto",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Desde La BiologíA A La PsicologíA de maturana, humberto em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KdUIGjqEyuv6lHPtRjUmQQpG6GFHVDTu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KdUIGjqEyuv6lHPtRjUmQQpG6GFHVDTu",
+  "readerUrl": "https://drive.google.com/file/d/15d5eNJVJfL7Shvdy9CRUiMKCH3ljfFhI/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-298-por-tu-propio-bien",
+  "title": "Por Tu Propio Bien",
+  "author": "miller, alice",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Por Tu Propio Bien de miller, alice em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YX5bGQp_ZFsQSuFthAkoowP9saA49U4X",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YX5bGQp_ZFsQSuFthAkoowP9saA49U4X",
+  "readerUrl": "https://drive.google.com/file/d/1tPaHvdhdI4bAflX9AYjsZD49Wusxm6Ly/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-299-monserrat-cognitiva-1",
+  "title": "Monserrat (Cognitiva)[1]",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Monserrat (Cognitiva)[1] de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1e3phFKlpqQfieN5y0FzaZZodvmd1BKCT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1e3phFKlpqQfieN5y0FzaZZodvmd1BKCT",
+  "readerUrl": "https://drive.google.com/file/d/15vpvjlXxw0ZPvPSgw74RvTVwBHKuIJ_9/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-300-neuropsicologia-cl-nica-y-cognoscitiva",
+  "title": "Neuropsicologia ClíNica Y Cognoscitiva",
+  "author": "montañés, francisca",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Neuropsicologia ClíNica Y Cognoscitiva de montañés, francisca em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10CBvaO55ZO7053UlgLwTORDlBpF8VcLu",
+  "backdrop": "https://lh3.googleusercontent.com/d/10CBvaO55ZO7053UlgLwTORDlBpF8VcLu",
+  "readerUrl": "https://drive.google.com/file/d/1FlfDTD9Kq8ykMrLQde-YZv2zvgL3sQUV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-301-el-cerebro-sintiente",
+  "title": "El Cerebro Sintiente",
+  "author": "mora, francisco",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Cerebro Sintiente de mora, francisco em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VysHlSs1CDMvFE7Y9gkrdc6sY0TKvE5o",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VysHlSs1CDMvFE7Y9gkrdc6sY0TKvE5o",
+  "readerUrl": "https://drive.google.com/file/d/1o3kFXfG1i48LtiqHdIwwC4YiwfsF0kgH/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-302-teor-a-y-t-cnica-de-la-entrevista",
+  "title": "TeoríA Y TéCnica De La Entrevista",
+  "author": "morga r., luis",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental TeoríA Y TéCnica De La Entrevista de morga r., luis em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dy5P32Gz6S5xylSzaV-fGTKp3vlDO5aP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dy5P32Gz6S5xylSzaV-fGTKp3vlDO5aP",
+  "readerUrl": "https://drive.google.com/file/d/1B3M5sHFgOhr02DA2aB9eExjsauAkAUGq/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-303-psicolog-a",
+  "title": "PsicologíA",
+  "author": "morris & maisto",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental PsicologíA de morris & maisto em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Z7Aaj-5kC904M2SFTzjhZrpn8WzdCVM8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Z7Aaj-5kC904M2SFTzjhZrpn8WzdCVM8",
+  "readerUrl": "https://drive.google.com/file/d/1xoORUkoSo2D2mJlPdx8pTCVT3VZtV0na/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-304-comportamiento-ntimo",
+  "title": "Comportamiento íNtimo",
+  "author": "morris desmond",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Comportamiento íNtimo de morris desmond em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uytYHZZxiAoPYf-UsBockeUXDNNNTLgV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uytYHZZxiAoPYf-UsBockeUXDNNNTLgV",
+  "readerUrl": "https://drive.google.com/file/d/16SdTQ0u5ZGnjWG0SYJ7NbehdP6QrGDGk/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-305-conceptos-y-herramientas-orientacion-vocacional",
+  "title": "Conceptos Y Herramientas Orientacion Vocacional",
+  "author": "mosca santiviago",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Conceptos Y Herramientas Orientacion Vocacional de mosca santiviago em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RQA4PbjUqaJUFKydBbCyZ4cRkPqkEKk2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RQA4PbjUqaJUFKydBbCyZ4cRkPqkEKk2",
+  "readerUrl": "https://drive.google.com/file/d/155bsNj3a7mk3u80Jpx3oAYqDkpQqqj4N/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-306-7-conceptos-cruciales-del-psicoanalisis",
+  "title": "7 Conceptos Cruciales Del Psicoanalisis",
+  "author": "nasio, juan david",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental 7 Conceptos Cruciales Del Psicoanalisis de nasio, juan david em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QFKFDsgAUbKd-A8OwVnW1e3-WwC1wa7Z",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QFKFDsgAUbKd-A8OwVnW1e3-WwC1wa7Z",
+  "readerUrl": "https://drive.google.com/file/d/1K2R7w0WQR1MScHtVPGEjBmLRUQksJkI-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-307-anatomia-y-fisiologia-del-sn",
+  "title": "Anatomia Y Fisiologia Del Sn",
+  "author": "negrete ramosm john",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Anatomia Y Fisiologia Del Sn de negrete ramosm john em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16kp_QpmIV_7-4IQGlQ5eewH7GP6nWB5a",
+  "backdrop": "https://lh3.googleusercontent.com/d/16kp_QpmIV_7-4IQGlQ5eewH7GP6nWB5a",
+  "readerUrl": "https://drive.google.com/file/d/128CmIMjdGY9HtYH_XN-9DyTyX8E8nrgt/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-308-summerhill-un-punto-de-vista-radical-sobre-la-educacion-de-los-ni-os",
+  "title": "Summerhill, Un Punto De Vista Radical Sobre La Educacion De Los NiñOs",
+  "author": "neill, alexander sutherland",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Summerhill, Un Punto De Vista Radical Sobre La Educacion De Los NiñOs de neill, alexander sutherland em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mrjqPhdL8Mj-40pAwm67dD8kHlaBhe4p",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mrjqPhdL8Mj-40pAwm67dD8kHlaBhe4p",
+  "readerUrl": "https://drive.google.com/file/d/166-MOHamJ7rlVlcga1yNJ3FVmeea3v8-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-309-neurohealth-2011",
+  "title": "Neurohealth 2011",
+  "author": "neuro-psi",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Neurohealth 2011 de neuro-psi em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1iaXtnZx7INxQ_kDZ-uTgPIeztaZfJG1K",
+  "backdrop": "https://lh3.googleusercontent.com/d/1iaXtnZx7INxQ_kDZ-uTgPIeztaZfJG1K",
+  "readerUrl": "https://drive.google.com/file/d/1pT6g-tkL_ZfwgNlnYEQ9Us_XIb788Wxo/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-310-conocer-el-cerebro-para-la-excelencia-en-la-educaci-n",
+  "title": "Conocer El Cerebro Para La Excelencia En La EducacióN",
+  "author": "nieves maya elcarte, santiago rivero rodrigo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Conocer El Cerebro Para La Excelencia En La EducacióN de nieves maya elcarte, santiago rivero rodrigo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Po5VWPLFxfLM-wCbOfc7wXqizsNA3K-2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Po5VWPLFxfLM-wCbOfc7wXqizsNA3K-2",
+  "readerUrl": "https://drive.google.com/file/d/1u6UwejUU4-8tdjDnQ6I6hsdwf7yw2ydo/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-311-normas-del-test-de-matrices-progresivas-de-raven-buenos-aires-2003",
+  "title": "Normas Del Test De Matrices Progresivas De Raven Buenos Aires 2003",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Normas Del Test De Matrices Progresivas De Raven Buenos Aires 2003 de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1sb-HFInvRs7XwlR27wkvPXWKdaOaOXhc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1sb-HFInvRs7XwlR27wkvPXWKdaOaOXhc",
+  "readerUrl": "https://drive.google.com/file/d/1k8lFk-d0TlRkiEU1Hw5hW5ft58ENR9B_/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-312-como-hacer-psicoterapia-exitosa",
+  "title": "Como Hacer Psicoterapia Exitosa",
+  "author": "oblitas, luis",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Como Hacer Psicoterapia Exitosa de oblitas, luis em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ko3Ze5RY_7OxITXS8s9681rC20hto3dP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ko3Ze5RY_7OxITXS8s9681rC20hto3dP",
+  "readerUrl": "https://drive.google.com/file/d/14T3CltY5WhO3fXTRmOTObXMZ_DqWJAuO/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-313-enfoques-en-terapia-familiar-sist-mica",
+  "title": "Enfoques En Terapia Familiar SistéMica.",
+  "author": "ochoa de alda, inmaculada",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Enfoques En Terapia Familiar SistéMica. de ochoa de alda, inmaculada em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tyNtzGIGSEodgBLX-DC7IC1CgQRBDrcq",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tyNtzGIGSEodgBLX-DC7IC1CgQRBDrcq",
+  "readerUrl": "https://drive.google.com/file/d/1cef9jZqKJtsrHvSWbyq5iHYehzCnXKat/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-314-nacimiento-renacido",
+  "title": "Nacimiento Renacido",
+  "author": "odent, michel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Nacimiento Renacido de odent, michel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ok3icKOSctglCmv5rhErMa1t3iJjWu0v",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ok3icKOSctglCmv5rhErMa1t3iJjWu0v",
+  "readerUrl": "https://drive.google.com/file/d/11Z7OzrLX4DmLCrf59AAwaaMr_fdbsgDK/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-315-mentes-asesinas",
+  "title": "Mentes Asesinas",
+  "author": "ostrosky solíz, feggy",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Mentes Asesinas de ostrosky solíz, feggy em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18G2M_WyGJAgyTV3ncVqq8TUat1AcFdck",
+  "backdrop": "https://lh3.googleusercontent.com/d/18G2M_WyGJAgyTV3ncVqq8TUat1AcFdck",
+  "readerUrl": "https://drive.google.com/file/d/1M0iloQkOpHbm17pr0JVt61GEiqgcleOk/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-316-the-science-of-human-innovation",
+  "title": "The Science Of Human Innovation",
+  "author": "oxford university press,.explaining creativity",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Science Of Human Innovation de oxford university press,.explaining creativity em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RFRF8xnWAJJhSUAuCnR4hpXwyVCMiHJN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RFRF8xnWAJJhSUAuCnR4hpXwyVCMiHJN",
+  "readerUrl": "https://drive.google.com/file/d/1N72srhJtlVNnXK4UgEgwdYQSG1-BFea3/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-317-sistema-exner-para-rorschach-manual-didactico",
+  "title": "Sistema Exner Para Rorschach Manual Didactico",
+  "author": "paladines, fernando",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Sistema Exner Para Rorschach Manual Didactico de paladines, fernando em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bpyfiVg5QdTF9k6ZUIyu7E_BkX0MRmoO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bpyfiVg5QdTF9k6ZUIyu7E_BkX0MRmoO",
+  "readerUrl": "https://drive.google.com/file/d/1TtOKshn_C59XSUKGopJnYwIkfGo_bV92/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-318-diane-psicolog-a",
+  "title": "Diane -PsicologíA",
+  "author": "papalia",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Diane -PsicologíA de papalia em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19x3dZgeJa6x9X7oDTUeYmXe1SMFfKaPs",
+  "backdrop": "https://lh3.googleusercontent.com/d/19x3dZgeJa6x9X7oDTUeYmXe1SMFfKaPs",
+  "readerUrl": "https://drive.google.com/file/d/1kVx75aYwJFggmhJmbzctVANdxoFp07F0/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-319-desarrollo-humano",
+  "title": "Desarrollo Humano",
+  "author": "papalia wendkos duskin",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Desarrollo Humano de papalia wendkos duskin em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1y7C3-590g_IxeRaAl9oqwmTrRIT2p9m3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1y7C3-590g_IxeRaAl9oqwmTrRIT2p9m3",
+  "readerUrl": "https://drive.google.com/file/d/1GUEbDEOVZjKuUoNgAe1zbtI0DdbXcvU3/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-320-psicodiagnostico-de-rorschach",
+  "title": "Psicodiagnostico De Rorschach",
+  "author": "pardillo & fernández",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicodiagnostico De Rorschach de pardillo & fernández em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19cvqFuLBW3w0uSwtTbAFseG5OuRcYVmX",
+  "backdrop": "https://lh3.googleusercontent.com/d/19cvqFuLBW3w0uSwtTbAFseG5OuRcYVmX",
+  "readerUrl": "https://drive.google.com/file/d/1QGVNGfEN0buLJdqxGq2FrU9NTCboC8Qv/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-321-el-lenguaje-del-cuerpo",
+  "title": "El Lenguaje Del Cuerpo",
+  "author": "pease, allan",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Lenguaje Del Cuerpo de pease, allan em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-HtpwHOF8v9e98IULteFfSiCkNMqBbUt",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-HtpwHOF8v9e98IULteFfSiCkNMqBbUt",
+  "readerUrl": "https://drive.google.com/file/d/1JSuBfmeCkfKpzBLPlbm9ibzBIukZam5X/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-322-mecanismos-de-defensa-resumen",
+  "title": "Mecanismos De Defensa (Resumen)",
+  "author": "petra, ileana",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Mecanismos De Defensa (Resumen) de petra, ileana em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DL0vGOelYxhEfXt-Y_yzQJSJnARuhG6v",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DL0vGOelYxhEfXt-Y_yzQJSJnARuhG6v",
+  "readerUrl": "https://drive.google.com/file/d/1SmS78432JFIHkmCQAJCI_D7K-LNgZzsc/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-323-estudios-de-psicologia-genetica",
+  "title": "Estudios De Psicologia Genetica",
+  "author": "piaget jean",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Estudios De Psicologia Genetica de piaget jean em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gPVYz2W-SQ-2bbx0_jIZiyoZ1wFNXcjB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gPVYz2W-SQ-2bbx0_jIZiyoZ1wFNXcjB",
+  "readerUrl": "https://drive.google.com/file/d/1QH8ILj8pvdTnKBxs2nopizkY4qlJ278d/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-324-inteligencia-y-afectividad",
+  "title": "Inteligencia Y Afectividad",
+  "author": "piaget jean",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Inteligencia Y Afectividad de piaget jean em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18Lg3_BW70-GxGNF-F7VBSi_bIc2wJui5",
+  "backdrop": "https://lh3.googleusercontent.com/d/18Lg3_BW70-GxGNF-F7VBSi_bIc2wJui5",
+  "readerUrl": "https://drive.google.com/file/d/1E-_u-V9xrC_jkFv-J9VWh2sNyxp_1U7t/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-325-psicologia-y-pedagogia",
+  "title": "Psicologia Y Pedagogia",
+  "author": "piaget, jean",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psicologia Y Pedagogia de piaget, jean em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bs2jfJgRKPk-xTVBH4D0CZ3xo_RohwzC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bs2jfJgRKPk-xTVBH4D0CZ3xo_RohwzC",
+  "readerUrl": "https://drive.google.com/file/d/1Pcn4yzfsT4pROOXhRouf7fOz_83ux7IU/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-326-el-proceso-grupal",
+  "title": "El Proceso Grupal",
+  "author": "pichon reviere, enrique",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Proceso Grupal de pichon reviere, enrique em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1pA_17Xe0AdZJvK0uHadIPKyanIjlkH6K",
+  "backdrop": "https://lh3.googleusercontent.com/d/1pA_17Xe0AdZJvK0uHadIPKyanIjlkH6K",
+  "readerUrl": "https://drive.google.com/file/d/1Nz9oYM3BWXmr42YwFBmkY2SwIFpKmn4a/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-327-why-nature-and-nurture-dont-go-away",
+  "title": "Why Nature And Nurture Dont Go Away",
+  "author": "pinker",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Why Nature And Nurture Dont Go Away de pinker em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1t1JieerMZvAWZy-0mhEu8KCiWz7lZsOz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1t1JieerMZvAWZy-0mhEu8KCiWz7lZsOz",
+  "readerUrl": "https://drive.google.com/file/d/1GrFzr0qRO-Z1B_PKvi7TuCCQ5JuBWdOl/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-328-como-funciona-la-mente",
+  "title": "Como Funciona La Mente",
+  "author": "pinker steven",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Como Funciona La Mente de pinker steven em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VIKkyx9-TSlNOx4oSYU1oq88FqZtxRVV",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VIKkyx9-TSlNOx4oSYU1oq88FqZtxRVV",
+  "readerUrl": "https://drive.google.com/file/d/1pEK7ZU1AwwU0E41maKNMVtigHYgAF7C7/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-329-el-instinto-del-lenguaje-como-crea-el-lenguaje-la-mente",
+  "title": "El Instinto Del Lenguaje Como Crea El Lenguaje La Mente",
+  "author": "pinker steven",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Instinto Del Lenguaje Como Crea El Lenguaje La Mente de pinker steven em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1hlcxQHnLDF_fsVTcxT3huiXQS_lh_fnl",
+  "backdrop": "https://lh3.googleusercontent.com/d/1hlcxQHnLDF_fsVTcxT3huiXQS_lh_fnl",
+  "readerUrl": "https://drive.google.com/file/d/1I482qIVE0C65QlFVtlmUH-7lVzCgud_7/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-330-how-the-mind-works",
+  "title": "How The Mind Works",
+  "author": "pinker, steven",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental How The Mind Works de pinker, steven em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1PDQsu96J4e-c9ciXIeW9_GPN_J4RcOU6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1PDQsu96J4e-c9ciXIeW9_GPN_J4RcOU6",
+  "readerUrl": "https://drive.google.com/file/d/1u2gYNuQ0vB1sWtEvbUEO4n_TTs2QvBn7/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-331-introduccion-a-la-neuropsicologia",
+  "title": "Introduccion A La Neuropsicologia",
+  "author": "portellano jose antonio",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Introduccion A La Neuropsicologia de portellano jose antonio em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HBNehQc928qhSnep1tIZWPFeA7twlWbp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HBNehQc928qhSnep1tIZWPFeA7twlWbp",
+  "readerUrl": "https://drive.google.com/file/d/1mEQ0sC5iGn0HH8ZWQxoG23RQISfsaUxl/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-332-cerebro-y-conciencia",
+  "title": "Cerebro Y Conciencia",
+  "author": "pribram ramirez",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Cerebro Y Conciencia de pribram ramirez em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1D8lETtfer4CKo6uQsuJMMJHE_oeRZub9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1D8lETtfer4CKo6uQsuJMMJHE_oeRZub9",
+  "readerUrl": "https://drive.google.com/file/d/17ENiVO_0piyLrTGmyxou6pEQt6qJjbY3/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-333-protocolo",
+  "title": "Protocolo",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Protocolo de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IF7U6nLsEHiUe6GpsITj_6O4Nw2BT2J3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IF7U6nLsEHiUe6GpsITj_6O4Nw2BT2J3",
+  "readerUrl": "https://drive.google.com/file/d/1LCoziH4ql2W2QGvmBjqGyz1h1LqBLrKp/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-334-protocolo-de-evaluaci-n-neuropsicol-gica-en-pacientes-epil-pticos",
+  "title": "Protocolo De EvaluacióN NeuropsicolóGica En Pacientes EpiléPticos",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Protocolo De EvaluacióN NeuropsicolóGica En Pacientes EpiléPticos de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1X4qjcKF5Pm3WhMsF_JcC3cxK8ZM4lPKo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1X4qjcKF5Pm3WhMsF_JcC3cxK8ZM4lPKo",
+  "readerUrl": "https://drive.google.com/file/d/1m7XCIjVQa5d-4zm28-zAAGtxI_jv4FxG/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-335-psicoan-lisis-para-principiantes",
+  "title": "PsicoanáLisis Para Principiantes",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental PsicoanáLisis Para Principiantes de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jeQAi6KgldIGFCjlocttKmz_wssHtAAA",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jeQAi6KgldIGFCjlocttKmz_wssHtAAA",
+  "readerUrl": "https://drive.google.com/file/d/18PK44-xzq0TnWRmfkXW10Y_MIZbpTRRT/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-336-el-alma-est-en-el-cerebro",
+  "title": "El Alma Está En El Cerebro",
+  "author": "punset, eduardo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Alma Está En El Cerebro de punset, eduardo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1k6OUK9W-WQoVs2ROnRea_Lh2ZrnHixqM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1k6OUK9W-WQoVs2ROnRea_Lh2ZrnHixqM",
+  "readerUrl": "https://drive.google.com/file/d/1nKr8SmsLv5sEG3cHCUOjfKGPsZ-dRMl3/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-337-manual-para-sobrevvir-en-el-siglo-xxi",
+  "title": "Manual Para Sobrevvir En El Siglo Xxi",
+  "author": "punset, eduardo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Manual Para Sobrevvir En El Siglo Xxi de punset, eduardo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-44-9D16o5xjGCMDN4m1-jyb1CQZLqD7",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-44-9D16o5xjGCMDN4m1-jyb1CQZLqD7",
+  "readerUrl": "https://drive.google.com/file/d/1wFfDnRMUKerD2ITzh79x-ykfWmiCSotL/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-338-viaje-al-optimismo",
+  "title": "Viaje Al Optimismo",
+  "author": "punset, eduardo",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Viaje Al Optimismo de punset, eduardo em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1fJv6nztR90OtCE1vZAqSM6NMHkyRzYG1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1fJv6nztR90OtCE1vZAqSM6NMHkyRzYG1",
+  "readerUrl": "https://drive.google.com/file/d/1qh6M0T-7GHWLncNHQwSVOGB2IiL_uyoN/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-339-neurociencia",
+  "title": "Neurociencia",
+  "author": "purves, dale",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Neurociencia de purves, dale em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RMRcmnGbipdWCe5YpqTui6NJgEVAGPNZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RMRcmnGbipdWCe5YpqTui6NJgEVAGPNZ",
+  "readerUrl": "https://drive.google.com/file/d/1g3mRJfLKOSF3VxxeB5ErI0bkc5bL41Cz/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-340-test-de-la-persona-bajo-la-lluvia-adaptaci-n-y-aplicaci-n",
+  "title": "Test De La Persona Bajo La Lluvia, AdaptacióN Y AplicacióN",
+  "author": "querol y chaves",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Test De La Persona Bajo La Lluvia, AdaptacióN Y AplicacióN de querol y chaves em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18WERUfjE9TuxVDNdHLkrqx6vHy-sapKJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/18WERUfjE9TuxVDNdHLkrqx6vHy-sapKJ",
+  "readerUrl": "https://drive.google.com/file/d/1ZwzTSOTu0BWuj_B6clRdlviwVRvcRowt/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-341-analisis-neuropsicol-gico-de-las-alteraciones-del-lenguaje",
+  "title": "Analisis NeuropsicolóGico De Las Alteraciones Del Lenguaje",
+  "author": "quintanar y solovieva",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Analisis NeuropsicolóGico De Las Alteraciones Del Lenguaje de quintanar y solovieva em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1E_yQ-c1FiYn0P2RJUuESWY6GRKAckdbN",
+  "backdrop": "https://lh3.googleusercontent.com/d/1E_yQ-c1FiYn0P2RJUuESWY6GRKAckdbN",
+  "readerUrl": "https://drive.google.com/file/d/101KZZHzQGFpeUWpzwPI50jZE5KhUO_PQ/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-342-diagnostico-neuropsicologico-de-la-afasia-motora-aferente",
+  "title": "Diagnostico Neuropsicologico De La Afasia Motora Aferente",
+  "author": "quintanar soloieva y lázaro",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Diagnostico Neuropsicologico De La Afasia Motora Aferente de quintanar soloieva y lázaro em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZKKT50NdJHb9C-YSK9NJYNC9bssCh2Y9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZKKT50NdJHb9C-YSK9NJYNC9bssCh2Y9",
+  "readerUrl": "https://drive.google.com/file/d/1pxf59ZzfX9O_265IGYuuUw6w2qsVaMQ8/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-343-fantasmas-en-el-cerebro",
+  "title": "Fantasmas En El Cerebro",
+  "author": "ramachandran, vilayanur",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Fantasmas En El Cerebro de ramachandran, vilayanur em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1-Bm0-k5jfBqWvQPcl_f5VVspa6JLDPqx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1-Bm0-k5jfBqWvQPcl_f5VVspa6JLDPqx",
+  "readerUrl": "https://drive.google.com/file/d/1-ISA27UFCFsakrBordLYJSj3vgMZoEZk/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-344-test-de-apercepci-n-tem-tica-de-murray-morgan-manual-resumido",
+  "title": "Test De ApercepcióN TemáTica De Murray Morgan (Manual Resumido)",
+  "author": "ramirez, alma",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Test De ApercepcióN TemáTica De Murray Morgan (Manual Resumido) de ramirez, alma em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mpG_qcsTTOWevaZirE-Zsu3PiQzNNQRS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mpG_qcsTTOWevaZirE-Zsu3PiQzNNQRS",
+  "readerUrl": "https://drive.google.com/file/d/11qSEH7RH0w-_OSw_9v-Caq_La8bgDHqM/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-345-the-cognitive-neuroscience-of-mind",
+  "title": "The Cognitive Neuroscience Of Mind",
+  "author": "reuter-lourenz baynes mangun phelps",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Cognitive Neuroscience Of Mind de reuter-lourenz baynes mangun phelps em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_C1Mg_zShzpEJsBsr2qwLb3-4unLlu15",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_C1Mg_zShzpEJsBsr2qwLb3-4unLlu15",
+  "readerUrl": "https://drive.google.com/file/d/1-9YDqIdXpVf2_3fVSG-vzovtMC7P3HWF/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-346-revista-terapia-psicol-gica",
+  "title": "Revista Terapia PsicolóGica",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Revista Terapia PsicolóGica de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xvPkIgp1uuIvxmmg9Pp1OYNsgKzGh8Iv",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xvPkIgp1uuIvxmmg9Pp1OYNsgKzGh8Iv",
+  "readerUrl": "https://drive.google.com/file/d/1ZSXIYcqiLyG-jxV7mVvaYj8tXuM-oWvP/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-347-happiness",
+  "title": "Happiness",
+  "author": "ricard, matthieu",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Happiness de ricard, matthieu em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zik8SgKipWmxMGpLs7STCSqUJo7cbvRP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zik8SgKipWmxMGpLs7STCSqUJo7cbvRP",
+  "readerUrl": "https://drive.google.com/file/d/1gE3HbydMQImqIw1ArJuBgk7adO_Da9SF/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-348-evolutionary-psychology-a-beginner-s-guide",
+  "title": "Evolutionary Psychology--A Beginner S Guide",
+  "author": "robin dunbar, louise barrett, john lycett",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Evolutionary Psychology--A Beginner S Guide de robin dunbar, louise barrett, john lycett em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14ZhuVajqKeohXw8d5ccfg8LFx24t-5q_",
+  "backdrop": "https://lh3.googleusercontent.com/d/14ZhuVajqKeohXw8d5ccfg8LFx24t-5q_",
+  "readerUrl": "https://drive.google.com/file/d/1-DJOkHXt96QOR-AJA35kqf4tWmvp5eF3/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-349-manual-de-estimulaci-n-en-tero",
+  "title": "Manual De EstimulacióN En úTero",
+  "author": "rodriguez & vélez",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Manual De EstimulacióN En úTero de rodriguez & vélez em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1E1e1m4pNladC2f8gjuuVoLtDrpr99Nvb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1E1e1m4pNladC2f8gjuuVoLtDrpr99Nvb",
+  "readerUrl": "https://drive.google.com/file/d/1Aqn0akPxjsPJ-yoE0aHetie1HwCW5G50/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-350-el-proceso-de-convertirse-en-persona",
+  "title": "El Proceso De Convertirse En Persona",
+  "author": "rogers, carl",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Proceso De Convertirse En Persona de rogers, carl em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Eg4DBl4h-yGwRv_77bBIwxY3WpeZi8-Z",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Eg4DBl4h-yGwRv_77bBIwxY3WpeZi8-Z",
+  "readerUrl": "https://drive.google.com/file/d/1hPSa77gRJKFuD74DKJWEhZqFumswxbNG/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-351-encuentros-el-lado-b-del-amor",
+  "title": "Encuentros - El Lado B Del Amor",
+  "author": "rolon, gabriel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Encuentros - El Lado B Del Amor de rolon, gabriel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1p6NvXX8QMFDU-RXOHcSbetQuPWQWkj8z",
+  "backdrop": "https://lh3.googleusercontent.com/d/1p6NvXX8QMFDU-RXOHcSbetQuPWQWkj8z",
+  "readerUrl": "https://drive.google.com/file/d/1H9oie4568yxoO9JGkqxeiKKJWEj6_y1C/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-352-el-cerebro-nos-enga-a",
+  "title": "El Cerebro Nos EngañA",
+  "author": "rubia, francisco",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Cerebro Nos EngañA de rubia, francisco em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19fvKywaIS5zwS8VjA3tzKamn-ZoU30tz",
+  "backdrop": "https://lh3.googleusercontent.com/d/19fvKywaIS5zwS8VjA3tzKamn-ZoU30tz",
+  "readerUrl": "https://drive.google.com/file/d/1NcUMWjZLHZEVmsWpmzx3-UXuUwaFimqq/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-353-la-conexi-n-divina",
+  "title": "La ConexióN Divina",
+  "author": "rubia, francisco",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La ConexióN Divina de rubia, francisco em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10nGGqEWIjn_xpnUFAhw1ieDrLowHVR1e",
+  "backdrop": "https://lh3.googleusercontent.com/d/10nGGqEWIjn_xpnUFAhw1ieDrLowHVR1e",
+  "readerUrl": "https://drive.google.com/file/d/1lgVUsSEEFmDxutWr-QM9mZ656oBijgSx/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-354-qu-sabes-de-tu-cerebro",
+  "title": "Qué Sabes De Tu Cerebro",
+  "author": "rubia, francisco",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Qué Sabes De Tu Cerebro de rubia, francisco em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eS-CNrB4-IHQaAvdthx7bUy_gv0sg3fj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eS-CNrB4-IHQaAvdthx7bUy_gv0sg3fj",
+  "readerUrl": "https://drive.google.com/file/d/1a_Ob8Hyvyzpa065lwzfNMJWqb9KQEe6c/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-355-evaluaci-n-neuropsicologica-en-demencias",
+  "title": "EvaluacióN Neuropsicologica En Demencias",
+  "author": "ruiz valverde, sandra",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental EvaluacióN Neuropsicologica En Demencias de ruiz valverde, sandra em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1AjmJUkQ01T0p2oNRcyzRm8znWN7Yypd0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1AjmJUkQ01T0p2oNRcyzRm8znWN7Yypd0",
+  "readerUrl": "https://drive.google.com/file/d/1Q0MIrKUAgYBUJEFKPhF_QJFs8YPFAsWL/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-356-manual-de-psicoterapia-cognitiva",
+  "title": "Manual De Psicoterapia Cognitiva",
+  "author": "ruíz & cano",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Manual De Psicoterapia Cognitiva de ruíz & cano em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Z2aHv3cOGiCtEoOcogUDHvWKLaN21TFu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Z2aHv3cOGiCtEoOcogUDHvWKLaN21TFu",
+  "readerUrl": "https://drive.google.com/file/d/1l3vZWDRoIRC4M2p_lDBTjXzUVv39LhbX/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-357-los-dragones-del-eden",
+  "title": "Los Dragones Del Eden",
+  "author": "sagan, carl",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Los Dragones Del Eden de sagan, carl em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1EtqOzBK4WU2Mzc1ZndPdl2XiQQaPs9iR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1EtqOzBK4WU2Mzc1ZndPdl2XiQQaPs9iR",
+  "readerUrl": "https://drive.google.com/file/d/1P10ZxF53MToImD6D7kV_CWjgrV5YvbWx/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-358-los-dragones-del-eden-evolucion-inteligencia-humana",
+  "title": "Los Dragones Del Eden Evolucion Inteligencia Humana",
+  "author": "sagan carl",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Los Dragones Del Eden Evolucion Inteligencia Humana de sagan carl em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ql-nwXNdIhdpzrwlMoszLnRBk1jHNAmY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ql-nwXNdIhdpzrwlMoszLnRBk1jHNAmY",
+  "readerUrl": "https://drive.google.com/file/d/13pfh8ZMNZNU1E7uFR6GfzaNlK2uDTAig/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-359-psicolog-a-cl-nica",
+  "title": "PsicologíA ClíNica",
+  "author": "sahili gonzáles, luis felipe",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental PsicologíA ClíNica de sahili gonzáles, luis felipe em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IjAfEMd80shdnrXBI_fwG8ExpsQZ6HYc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IjAfEMd80shdnrXBI_fwG8ExpsQZ6HYc",
+  "readerUrl": "https://drive.google.com/file/d/1RFy26c_K5fM4cw4pRjMLbgqUUAEB4kn3/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-360-psicolog-a-clinica",
+  "title": "PsicologíA Clinica",
+  "author": "sanchez escobedo, pedro",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental PsicologíA Clinica de sanchez escobedo, pedro em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DrrMbaabhcr1uYG-rlO2Oa8DNitTglFY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DrrMbaabhcr1uYG-rlO2Oa8DNitTglFY",
+  "readerUrl": "https://drive.google.com/file/d/18M9Utl4iXlrEWMI6F1H9kQUuHRKoQNRo/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-361-psicopatolog-a-psicolog-a-anormal",
+  "title": "PsicopatologíA - PsicologíA Anormal",
+  "author": "sarason y sarason",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental PsicopatologíA - PsicologíA Anormal de sarason y sarason em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_rRR70K23jhexSXEE7emdSMP4sVOY_Bo",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_rRR70K23jhexSXEE7emdSMP4sVOY_Bo",
+  "readerUrl": "https://drive.google.com/file/d/1E3Xpu3rnA4ve4x0b2-RksTiTVKMkqKW3/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-362-guia-basica-estimulacion-cognitiva-para-adultos",
+  "title": "Guia Basica Estimulacion Cognitiva Para Adultos",
+  "author": "sardinero p., andrés",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Guia Basica Estimulacion Cognitiva Para Adultos de sardinero p., andrés em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1rGNUMx4GWpTdBEpfeirsf_Uwm1pbkwt-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1rGNUMx4GWpTdBEpfeirsf_Uwm1pbkwt-",
+  "readerUrl": "https://drive.google.com/file/d/1sw_CLQGZvAkkrOAFXXfWAWuXMgcECl6Z/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-363-authentic-happiness",
+  "title": "Authentic Happiness",
+  "author": "seligman, martin",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Authentic Happiness de seligman, martin em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_Ju_dIGQaK0AGXDVbjRNYfGuVUxRSIf2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_Ju_dIGQaK0AGXDVbjRNYfGuVUxRSIf2",
+  "readerUrl": "https://drive.google.com/file/d/1OIkvBW9In0vFyJrnCK4dfxkuA6mqL_Ol/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-364-la-aut-ntica-felicidad",
+  "title": "La AutéNtica Felicidad",
+  "author": "seligman, martin",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La AutéNtica Felicidad de seligman, martin em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1OPdF2zgsp45jgLKPKgJahKQM7UcsRR8T",
+  "backdrop": "https://lh3.googleusercontent.com/d/1OPdF2zgsp45jgLKPKgJahKQM7UcsRR8T",
+  "readerUrl": "https://drive.google.com/file/d/1mD9pB2jVIN7R0noSFHDxH2ocoHUWRVNK/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-365-sobre-el-conductismo",
+  "title": "Sobre El Conductismo",
+  "author": "skinner, b.f.",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Sobre El Conductismo de skinner, b.f. em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1R6IS-J5Tb99504-xZZq7q3N-RekYMpzS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1R6IS-J5Tb99504-xZZq7q3N-RekYMpzS",
+  "readerUrl": "https://drive.google.com/file/d/17V3H0qNJfzE6vtF7PRbAFeW24cah4QEg/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-366-imposturas-intelectuales",
+  "title": "Imposturas Intelectuales",
+  "author": "sokal & bricmont",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Imposturas Intelectuales de sokal & bricmont em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1p_l2QoCRjxYPE0T3GgzQN6_YzXf_3aQn",
+  "backdrop": "https://lh3.googleusercontent.com/d/1p_l2QoCRjxYPE0T3GgzQN6_YzXf_3aQn",
+  "readerUrl": "https://drive.google.com/file/d/1bvBSMMK-hPeQEJiiGn6FzxhA2oHrl4lS/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-367-comportamiento-organizacional-15-edicion",
+  "title": "Comportamiento Organizacional (15 Edicion)",
+  "author": "stephen p. robbins y timothy a. judge",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Comportamiento Organizacional (15 Edicion) de stephen p. robbins y timothy a. judge em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cKpKN0ttWnUJHmkVjQdE6Y45dvwujmd6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cKpKN0ttWnUJHmkVjQdE6Y45dvwujmd6",
+  "readerUrl": "https://drive.google.com/file/d/1ScMRbF9ch8XtrlQ2yMkknMpEwovE3bGu/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-368-the-brain-supremacy",
+  "title": "The Brain Supremacy",
+  "author": "taylor, kathleen",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental The Brain Supremacy de taylor, kathleen em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XoQdtAmV1_EYG8UVRQ-wKdvhb-ay0BrX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XoQdtAmV1_EYG8UVRQ-wKdvhb-ay0BrX",
+  "readerUrl": "https://drive.google.com/file/d/1tNQGQ5oqRlBektSuP5NezktLFxRTIyju/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-369-manual-00",
+  "title": "Manual 00",
+  "author": "test de la figura humana machover",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Manual 00 de test de la figura humana machover em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kAWGXUxwz-27aEHY_3Od7EmjhFmjkjBe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kAWGXUxwz-27aEHY_3Od7EmjhFmjkjBe",
+  "readerUrl": "https://drive.google.com/file/d/15ztZjnxzorvDGKlD5SXfrnWXW_3McwZ8/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-370-test-rio-cualitativo",
+  "title": "Test Rio Cualitativo",
+  "author": "Psicologia & Saúde Mental",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Test Rio Cualitativo de Psicologia & Saúde Mental em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1H0M_MiiIS_8-V2b_6-vMzS6ZbYeI8VSF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1H0M_MiiIS_8-V2b_6-vMzS6ZbYeI8VSF",
+  "readerUrl": "https://drive.google.com/file/d/17AptVRB91ZzhwOjrxUSRb_5iu6McXlS5/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-371-las-torturas-mentales-de-la-cia",
+  "title": "Las Torturas Mentales De La Cia",
+  "author": "thomas, gordon",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Las Torturas Mentales De La Cia de thomas, gordon em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1OGpDpvC2yYY6RKFEiBHb0xKq33YDwoPc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1OGpDpvC2yYY6RKFEiBHb0xKq33YDwoPc",
+  "readerUrl": "https://drive.google.com/file/d/1k9TmF2_TGGcmJMEDXNnQJWhhRl4JdnQt/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-372-biograf-a-del-cerebro",
+  "title": "BiografíA Del Cerebro",
+  "author": "tilney, frederick",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental BiografíA Del Cerebro de tilney, frederick em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1yBKXmXydiaMH3eo0C_sZDouqca5CrnWe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1yBKXmXydiaMH3eo0C_sZDouqca5CrnWe",
+  "readerUrl": "https://drive.google.com/file/d/1zYoOOnx28ka_DRy6PKWSRHD6hLgQEBa2/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-373-entrevista-y-terapia-psicologica",
+  "title": "Entrevista Y Terapia Psicologica",
+  "author": "torrez, richard",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Entrevista Y Terapia Psicologica de torrez, richard em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1u4o-gOJ5VtNPyiy81lXi83Meq8NVcubH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1u4o-gOJ5VtNPyiy81lXi83Meq8NVcubH",
+  "readerUrl": "https://drive.google.com/file/d/1yoVHHyDY6-jXU5YVsKM3FlquGZU9eVjD/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-374-historia-de-la-psicologia",
+  "title": "Historia De La Psicologia",
+  "author": "tortosa civera",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Historia De La Psicologia de tortosa civera em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1k8RZHC-09389XWlv5mITsjdPiNtz66gz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1k8RZHC-09389XWlv5mITsjdPiNtz66gz",
+  "readerUrl": "https://drive.google.com/file/d/1k8YiUzrisC5pOwXXWQ_eudxP1kfW7d4q/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-375-estudio-de-la-personalidad-tests-proyectivos",
+  "title": "Estudio De La Personalidad Tests Proyectivos",
+  "author": "uab",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Estudio De La Personalidad Tests Proyectivos de uab em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zFyYT8bGUReQOQ6OfrTvXOJu995WuZWg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zFyYT8bGUReQOQ6OfrTvXOJu995WuZWg",
+  "readerUrl": "https://drive.google.com/file/d/1GFdBYvNJ6nyNBvsqoKqMJBZZwetyoxyL/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-376-brain-fitness-la-ciencia-de-los-cerebros-en-forma",
+  "title": "Brain Fitness, La Ciencia De Los Cerebros En Forma",
+  "author": "unobrain",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Brain Fitness, La Ciencia De Los Cerebros En Forma de unobrain em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1m3qGCTPSIn6U6OQjAN2uoIt1M5RDjh-k",
+  "backdrop": "https://lh3.googleusercontent.com/d/1m3qGCTPSIn6U6OQjAN2uoIt1M5RDjh-k",
+  "readerUrl": "https://drive.google.com/file/d/1hPVB9909GbmzmdVhHn-LOQdvwJOSeg97/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-377-familia-y-desarrollo-intervenciones-en-terapia-familiar",
+  "title": "Familia Y Desarrollo . Intervenciones En Terapia Familiar",
+  "author": "valdés, angel",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Familia Y Desarrollo . Intervenciones En Terapia Familiar de valdés, angel em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19fSA1nuuAD68SA3tLgkZX-2mGedbPCwk",
+  "backdrop": "https://lh3.googleusercontent.com/d/19fSA1nuuAD68SA3tLgkZX-2mGedbPCwk",
+  "readerUrl": "https://drive.google.com/file/d/1PdM0ls_qX8xsgo0twvBge4Qcu1LCU98h/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-378-de-cuerpo-presente-las-ciencias-cognitivas-y-la-experiencia-humana",
+  "title": "De Cuerpo Presente Las Ciencias Cognitivas Y La Experiencia Humana",
+  "author": "varela francisco",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental De Cuerpo Presente Las Ciencias Cognitivas Y La Experiencia Humana de varela francisco em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Shc1dSqknjpDHMyPWeT86U5YlsyuX0Eq",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Shc1dSqknjpDHMyPWeT86U5YlsyuX0Eq",
+  "readerUrl": "https://drive.google.com/file/d/1afGAHqgtOuJ5vIjdDbuDdI7WxUnjTvGi/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-379-aplicaciones-educativas-de-la-psicologia-positiva",
+  "title": "Aplicaciones Educativas De La Psicologia Positiva",
+  "author": "varios",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Aplicaciones Educativas De La Psicologia Positiva de varios em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19IYIyFmkXWp6XiQbHKiixySCfphQkLZQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/19IYIyFmkXWp6XiQbHKiixySCfphQkLZQ",
+  "readerUrl": "https://drive.google.com/file/d/1BN_xJbPFjx0UAdyH2M9fo0GkER7bIFvO/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-380-inteligencia-emocional-aplicada-en-dificultades-de-aprendizaje",
+  "title": "Inteligencia-Emocional-Aplicada-En-Dificultades-De-Aprendizaje",
+  "author": "varios",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Inteligencia-Emocional-Aplicada-En-Dificultades-De-Aprendizaje de varios em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1A2QQtlzYCL8KoKCTtr7Vs6LQvw9pc9fD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1A2QQtlzYCL8KoKCTtr7Vs6LQvw9pc9fD",
+  "readerUrl": "https://drive.google.com/file/d/1woI_J9GMfuMkuHBe3HfY2WqQuZ8PskSR/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-381-psicodiagn-stico-cl-nico-del-ni-o",
+  "title": "PsicodiagnóStico ClíNico Del NiñO",
+  "author": "varios",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental PsicodiagnóStico ClíNico Del NiñO de varios em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_K4PJKtIr4GOD7qgxmObtiOka7BA00Gs",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_K4PJKtIr4GOD7qgxmObtiOka7BA00Gs",
+  "readerUrl": "https://drive.google.com/file/d/1zD88RKDl6j-WLSj97jOIzwLb5GlaHJod/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-382-from-monkey-brain-to-human-brain",
+  "title": "From Monkey Brain To Human Brain",
+  "author": "various",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental From Monkey Brain To Human Brain de various em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/141C1fnmf1XmOzEhqeUQor8lBeNBSsUx4",
+  "backdrop": "https://lh3.googleusercontent.com/d/141C1fnmf1XmOzEhqeUQor8lBeNBSsUx4",
+  "readerUrl": "https://drive.google.com/file/d/1geO8_hWMjiB1Mfwulux8xKfI2o_tBgr1/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-383-la-vida-secreta-del-ni-o-antes-de-nacer",
+  "title": "La Vida Secreta Del NiñO Antes De Nacer",
+  "author": "verny, thomas",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Vida Secreta Del NiñO Antes De Nacer de verny, thomas em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WDUIkjhAwjHS_joH48dK69m6AtoN2ZpY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WDUIkjhAwjHS_joH48dK69m6AtoN2ZpY",
+  "readerUrl": "https://drive.google.com/file/d/10FZJQWx1reZt-Z_x0LnI5F7oHsdyq7rx/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-384-teor-a-de-las-emociones",
+  "title": "TeoríA De Las Emociones",
+  "author": "vigotsky, lev",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental TeoríA De Las Emociones de vigotsky, lev em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jfHx4UiyxD5wRcBIVlCw4SrSOy1Yjf3x",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jfHx4UiyxD5wRcBIVlCw4SrSOy1Yjf3x",
+  "readerUrl": "https://drive.google.com/file/d/1JTu7wrgAIunVqes9X8cxkHYlIokJjbMD/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-385-gu-a-breve-de-psicoterapia-de-grupo",
+  "title": "GuíA Breve De Psicoterapia De Grupo",
+  "author": "vinogradov & yaiom",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental GuíA Breve De Psicoterapia De Grupo de vinogradov & yaiom em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KTHiP58fx84zb80WOHaKyX1XanfBJ01r",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KTHiP58fx84zb80WOHaKyX1XanfBJ01r",
+  "readerUrl": "https://drive.google.com/file/d/1P45-J782JduiUqJkKHTRqbCLPqrEJwaV/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-386-lev-vygotsky-obras-escogidas",
+  "title": "Lev Vygotsky: Obras Escogidas ",
+  "author": "Lev Vygotsky",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Lev Vygotsky: Obras Escogidas  de Lev Vygotsky em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tnnaPLHm-u2rmfqykRn8sHkA8by2g_kH",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tnnaPLHm-u2rmfqykRn8sHkA8by2g_kH",
+  "readerUrl": "https://drive.google.com/file/d/1rJkCNe1yLWB1awZzbYnAwrvH8zt-7pq0/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-387-lev-vygotsky-obras-escogidas",
+  "title": "Lev Vygotsky: Obras Escogidas ",
+  "author": "Lev Vygotsky",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Lev Vygotsky: Obras Escogidas  de Lev Vygotsky em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Lv37B5tJ1CORsRgs9Qb4-mb-eUMYw-_C",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Lv37B5tJ1CORsRgs9Qb4-mb-eUMYw-_C",
+  "readerUrl": "https://drive.google.com/file/d/15JXIHrKAHbQPvyiQl163HvxzFLT3i_f-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-388-lev-vygotsky-obras-escogidas",
+  "title": "Lev Vygotsky: Obras Escogidas ",
+  "author": "Lev Vygotsky",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Lev Vygotsky: Obras Escogidas  de Lev Vygotsky em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1A1NZjyQ-wmwDrhMUMHrh5eIwvfjsJkra",
+  "backdrop": "https://lh3.googleusercontent.com/d/1A1NZjyQ-wmwDrhMUMHrh5eIwvfjsJkra",
+  "readerUrl": "https://drive.google.com/file/d/1wCY502bvhjpOWju61jwHgEK-lLPXY16a/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-389-lev-vygotsky-obras-escogidas",
+  "title": "Lev Vygotsky: Obras Escogidas ",
+  "author": "Lev Vygotsky",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Lev Vygotsky: Obras Escogidas  de Lev Vygotsky em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1idkAXmPdxkJxSWkn9a8UZvXmjJbklXxQ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1idkAXmPdxkJxSWkn9a8UZvXmjJbklXxQ",
+  "readerUrl": "https://drive.google.com/file/d/1Lbs7WoC8nhlHt11UqCegY-n6ocUQLiL0/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-390-la-realidad-inventada",
+  "title": "La Realidad Inventada",
+  "author": "watzlawick paul",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Realidad Inventada de watzlawick paul em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12BTfRy_juEVjGj_zAy3fFOQb3pyg0ffz",
+  "backdrop": "https://lh3.googleusercontent.com/d/12BTfRy_juEVjGj_zAy3fFOQb3pyg0ffz",
+  "readerUrl": "https://drive.google.com/file/d/17crVWuX6v--EsM1l8RVEbKJJKKLt1Dl4/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-391-teoria-de-la-comunicacion-humana",
+  "title": "Teoria De La Comunicacion Humana",
+  "author": "watzlawick, paul",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Teoria De La Comunicacion Humana de watzlawick, paul em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_7AuQrjzSuY0f_Wp_oFnblYSOvqOoZ5p",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_7AuQrjzSuY0f_Wp_oFnblYSOvqOoZ5p",
+  "readerUrl": "https://drive.google.com/file/d/1v1YwadULG89ZTq6Av8DDVfb9O7mMf2n-/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-392-transforma-tu-cerebro-con-pnl",
+  "title": "Transforma Tu Cerebro Con Pnl",
+  "author": "wendy jago",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Transforma Tu Cerebro Con Pnl de wendy jago em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1R41lEeZ6M-NC7toJEWuhkyW11W7y1DQk",
+  "backdrop": "https://lh3.googleusercontent.com/d/1R41lEeZ6M-NC7toJEWuhkyW11W7y1DQk",
+  "readerUrl": "https://drive.google.com/file/d/1FmJxoeto8Nwy_B95X0u10KMB1rBvFzld/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-393-psychology",
+  "title": "Psychology",
+  "author": "woodworth, robert",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Psychology de woodworth, robert em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1D8NmzqYk8fbe3taPuI4SWYaMgS6J5o4E",
+  "backdrop": "https://lh3.googleusercontent.com/d/1D8NmzqYk8fbe3taPuI4SWYaMgS6J5o4E",
+  "readerUrl": "https://drive.google.com/file/d/18hM2sPSmDVTPwO8aJmkNQ-sJgiQhvZdg/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-394-grafologia-superior",
+  "title": "Grafologia Superior",
+  "author": "xandro, mauricio",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Grafologia Superior de xandro, mauricio em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1WA2ELOVL2bhQD4DADwa7Vfmekkwtb5Q3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1WA2ELOVL2bhQD4DADwa7Vfmekkwtb5Q3",
+  "readerUrl": "https://drive.google.com/file/d/1zVdcJcXV0NgM0ihbPqFMwLokGlg8KAe1/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-395-la-escuela-neuropsicologica-de-luria",
+  "title": "La Escuela Neuropsicologica De Luria",
+  "author": "xomskaya",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental La Escuela Neuropsicologica De Luria de xomskaya em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bgZXVRwE5dQus2UVzKt7QXlWvfoxKVob",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bgZXVRwE5dQus2UVzKt7QXlWvfoxKVob",
+  "readerUrl": "https://drive.google.com/file/d/1VxVrzgfgbUDbC4SQq9qChCGpbYmzA8Q4/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-396-introduccion-a-la-psicolog-a",
+  "title": "Introduccion A La PsicologíA",
+  "author": "zepeda herrera, fernando",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental Introduccion A La PsicologíA de zepeda herrera, fernando em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1aVGUcG5DCFexEYY3uSHmGT0IH2W-tyak",
+  "backdrop": "https://lh3.googleusercontent.com/d/1aVGUcG5DCFexEYY3uSHmGT0IH2W-tyak",
+  "readerUrl": "https://drive.google.com/file/d/133qb5aU6eiYhTMIqRUoTIFdmNSu3-Dyp/view?usp=drive_link"
+},
+  {
+  "id": "livro-psicologia-batch2-397-el-efecto-l-cifer",
+  "title": "El Efecto LúCifer",
+  "author": "zimbardo, philip",
+  "publisher": "psicologia",
+  "year": 2005,
+  "duration": "Livro Completo (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Psicologia & Saúde Mental",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Obra fundamental El Efecto LúCifer de zimbardo, philip em formato PDF. Conteúdo acadêmico essencial em Psicologia, Psicanálise e Saúde Mental. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18VvxN7YjLgCqHXad27vRmJH7FDMjkDQw",
+  "backdrop": "https://lh3.googleusercontent.com/d/18VvxN7YjLgCqHXad27vRmJH7FDMjkDQw",
+  "readerUrl": "https://drive.google.com/file/d/1DVGMTm7nh_GZWGl-dewAQ_1IjJFQjPD1/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
