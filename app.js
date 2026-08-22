@@ -2052,6 +2052,11 @@ const STATE = {
           (b.genres && (b.genres.includes('Psicologia & Saúde Mental') || b.genres.includes('Psicologia'))) ||
           (b.author && (b.author.toLowerCase().includes('freud') || b.author.toLowerCase().includes('carlson') || b.author.toLowerCase().includes('pinker') || b.author.toLowerCase().includes('vigotsky') || b.author.toLowerCase().includes('luria') || b.author.toLowerCase().includes('jago') || b.author.toLowerCase().includes('zepeda')))
         );
+      } else if (currentPublisher === 'infantil') {
+        books = books.filter(b => 
+          (b.publisher === 'infantil') ||
+          (b.genres && (b.genres.includes('Infantil & Família') || b.genres.includes('Infantil')))
+        );
       }
 
       // Apply Search Query

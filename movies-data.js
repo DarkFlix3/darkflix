@@ -21840,12 +21840,1572 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/18VvxN7YjLgCqHXad27vRmJH7FDMjkDQw",
   "readerUrl": "https://drive.google.com/file/d/1DVGMTm7nh_GZWGl-dewAQ_1IjJFQjPD1/view?usp=drive_link"
 }
+,
+  {
+  "id": "livro-infantil-1-a-rvore-generosa",
+  "title": "A Árvore Generosa",
+  "author": "Shel Silverstein",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A Árvore Generosa de Shel Silverstein em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/17VS2noj6wbWezE3unvwKtze1u72M4SIY",
+  "backdrop": "https://lh3.googleusercontent.com/d/17VS2noj6wbWezE3unvwKtze1u72M4SIY",
+  "readerUrl": "https://drive.google.com/file/d/1biYPRt_hjCRBcJ0JPPoFtzIyKuekfYmi/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-2-a-bela-e-a-fera",
+  "title": "A BELA E A FERA",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A BELA E A FERA de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gt8NExIgqH9ZFQQkfZTNoZAwUi3V3ww4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gt8NExIgqH9ZFQQkfZTNoZAwUi3V3ww4",
+  "readerUrl": "https://drive.google.com/file/d/1Hde2OUT1oLagk-od4Q7l_Ix3IlN3k821/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-3-a-bruxa-zanaga",
+  "title": "A bruxa Zanaga",
+  "author": "Monteiro Lobato",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A bruxa Zanaga de Monteiro Lobato em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FWwnZCZS-Ovq_pDaoD81KAKG5VEmufPP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FWwnZCZS-Ovq_pDaoD81KAKG5VEmufPP",
+  "readerUrl": "https://drive.google.com/file/d/102LqzYxYzqoyVkENBF0RpSOXtcYAaiNw/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-4-a-casa-amarela",
+  "title": "A CASA AMARELA",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A CASA AMARELA de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YbKTwnl9lARpvfhlnLS-cM8TuZXHhXw8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YbKTwnl9lARpvfhlnLS-cM8TuZXHhXw8",
+  "readerUrl": "https://drive.google.com/file/d/1F6LOPDEWk58sMSAWG2_ikIRRw2ZLzchw/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-5-a-centopeia-que-sonhava",
+  "title": "A CENTOPEIA QUE SONHAVA",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A CENTOPEIA QUE SONHAVA de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1YFfHmV5akP54EQtFJqhDOyZxPcDTXNHP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1YFfHmV5akP54EQtFJqhDOyZxPcDTXNHP",
+  "readerUrl": "https://drive.google.com/file/d/12Cpi73zF1vr_j5HN-9IDLeeEMwPT_3gt/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-6-a-cesta-da-dona-maricota",
+  "title": "A CESTA DA DONA MARICOTA",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A CESTA DA DONA MARICOTA de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KtSyS8H3ZYBetcr5tRgHovJ5O9kJ0aCh",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KtSyS8H3ZYBetcr5tRgHovJ5O9kJ0aCh",
+  "readerUrl": "https://drive.google.com/file/d/1Pcws-c1rFMkeqZHPqLWfLSwIjPs4hs_4/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-7-a-cor-de-caroline",
+  "title": "A COR DE CAROLINE",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A COR DE CAROLINE de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Om7ca36Cl6Lj8u2FhTwGp-H7-19X3N19",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Om7ca36Cl6Lj8u2FhTwGp-H7-19X3N19",
+  "readerUrl": "https://drive.google.com/file/d/1ZSW3F1WBoX5Z-UiJgvui9a8t6Onb2J-s/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-8-a-esquisita-aranha-rita",
+  "title": "A esquisita aranha rita",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A esquisita aranha rita de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tV4Kw2-hDrpeaas_xTef4GtDKen2VSdI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tV4Kw2-hDrpeaas_xTef4GtDKen2VSdI",
+  "readerUrl": "https://drive.google.com/file/d/12Sut_atbgHeBMeOY5nU__SUibZKmrIdG/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-9-a-estrela-de-laura",
+  "title": "A ESTRELA DE LAURA",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A ESTRELA DE LAURA de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tcIyrjF5-KA_0BplIFRkwm3Hwr1gikcw",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tcIyrjF5-KA_0BplIFRkwm3Hwr1gikcw",
+  "readerUrl": "https://drive.google.com/file/d/1mylAqbjNdB_-YqEOxgAs39RhLw7DR9mj/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-10-a-fada-palavrinha-e-a-gigante-das-bibliotecas",
+  "title": "A fada palavrinha e a gigante das bibliotecas",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A fada palavrinha e a gigante das bibliotecas de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14p0j3gvNfz6sfDXBJXOKfGFgZy9hiVP5",
+  "backdrop": "https://lh3.googleusercontent.com/d/14p0j3gvNfz6sfDXBJXOKfGFgZy9hiVP5",
+  "readerUrl": "https://drive.google.com/file/d/1x2tom0FJaZhPKSqNpwDW6iqRBSsX3WIq/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-11-a-galinha-avarenta",
+  "title": "A galinha avarenta",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A galinha avarenta de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1erSGImgTTlMlYtpMofvCKSfPggRaSiEO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1erSGImgTTlMlYtpMofvCKSfPggRaSiEO",
+  "readerUrl": "https://drive.google.com/file/d/1lh3eD8M3NscxsZnKoYSM9QsSrrIP8Z88/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-12-a-honestidade-sempre-vence-pq-li-es-grupo-materiais-pedag-gicos",
+  "title": "A HONESTIDADE SEMPRE VENCE - PQ LIÇÕES - GRUPO MATERIAIS PEDAGÓGICOS",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A HONESTIDADE SEMPRE VENCE - PQ LIÇÕES - GRUPO MATERIAIS PEDAGÓGICOS de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cD6iJmPVhCU0z-S-PM4Vu7t2eFH-fD7W",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cD6iJmPVhCU0z-S-PM4Vu7t2eFH-fD7W",
+  "readerUrl": "https://drive.google.com/file/d/1V8D8kuojj9uEYpAZIPS2Y_5jAMyVMZiv/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-13-a-pequena-bruxa",
+  "title": "A pequena bruxa",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A pequena bruxa de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1feZOgWErsgw51HDuLd2ylp7uA6qTa-ug",
+  "backdrop": "https://lh3.googleusercontent.com/d/1feZOgWErsgw51HDuLd2ylp7uA6qTa-ug",
+  "readerUrl": "https://drive.google.com/file/d/1N9KW1SZwZfuIoQZOkZHBxoILBOY4FtET/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-14-a-pipa-e-a-flor",
+  "title": "A Pipa e a Flor",
+  "author": "Rubem Alves",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A Pipa e a Flor de Rubem Alves em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1pHPHJfhSIYQV5F4d7Cow9Nar06JES3Gb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1pHPHJfhSIYQV5F4d7Cow9Nar06JES3Gb",
+  "readerUrl": "https://drive.google.com/file/d/1YW55Rzl4BQj_ajPu6N1SocKoX5FYQL3T/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-15-a-sabi-que-n-o-sabia-voar",
+  "title": "A sabiá que não sabia voar",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A sabiá que não sabia voar de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19_7jm8o784OZWjycDNgXTdSEfOrrZJri",
+  "backdrop": "https://lh3.googleusercontent.com/d/19_7jm8o784OZWjycDNgXTdSEfOrrZJri",
+  "readerUrl": "https://drive.google.com/file/d/1eBP026wALRvyCr-nxEHcnC4745ets3MR/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-16-abelhas-borboletas-e-jardins",
+  "title": "Abelhas,borboletas e jardins",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Abelhas,borboletas e jardins de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1dmAGfdQq50hMnCcRd2j2lTt5dD3j8xue",
+  "backdrop": "https://lh3.googleusercontent.com/d/1dmAGfdQq50hMnCcRd2j2lTt5dD3j8xue",
+  "readerUrl": "https://drive.google.com/file/d/17zaD2WPeIsheF01Ww20EhWPRjRoE2z-d/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-17-ab-bora-gigante",
+  "title": "Abóbora Gigante",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Abóbora Gigante de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FuvpzTrLbGV66JYG4GXkJmCWau_tEngv",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FuvpzTrLbGV66JYG4GXkJmCWau_tEngv",
+  "readerUrl": "https://drive.google.com/file/d/1i-I-_Loz4jlEBBao1uGXWC4IYvh_d2wN/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-18-aconteceu-com-margarida",
+  "title": "Aconteceu com Margarida",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Aconteceu com Margarida de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15cUQHQ6F-iKN52cktoAGMkuYrh-FJ-T1",
+  "backdrop": "https://lh3.googleusercontent.com/d/15cUQHQ6F-iKN52cktoAGMkuYrh-FJ-T1",
+  "readerUrl": "https://drive.google.com/file/d/1Ug-ZQ9Sij_4Ob9rsuutFdIMM0koXom4Y/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-19-adeus-chupeta",
+  "title": "ADEUS CHUPETA",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado ADEUS CHUPETA de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1VPj89IATdC76VbuSV2G5HwQBiLnz9xpS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1VPj89IATdC76VbuSV2G5HwQBiLnz9xpS",
+  "readerUrl": "https://drive.google.com/file/d/1Zb2oej7WehPMfh_1Tg_mjCN-9xyo-X2s/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-20-adoro-chocolate",
+  "title": "Adoro chocolate",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Adoro chocolate de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CRGuTRYbhjJqVs1KpfmW_BBJw8benOAM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CRGuTRYbhjJqVs1KpfmW_BBJw8benOAM",
+  "readerUrl": "https://drive.google.com/file/d/1j7vEXtIWmC1rdPfDz8Nw3WqxjRpBqfpG/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-21-amigo-do-rei",
+  "title": "AMIGO DO REI",
+  "author": "Ruth Rocha",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado AMIGO DO REI de Ruth Rocha em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10MbK3Yu3cPs7qlmKSZwDBgPn3WxEKSEf",
+  "backdrop": "https://lh3.googleusercontent.com/d/10MbK3Yu3cPs7qlmKSZwDBgPn3WxEKSEf",
+  "readerUrl": "https://drive.google.com/file/d/1Serm4M8chbh2M_RhsvMD7gmxbwVsRp6I/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-22-ansiedade-f-bio-gon-alves-ferreira",
+  "title": "Ansiedade Fábio Gonçalves Ferreira",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Ansiedade Fábio Gonçalves Ferreira de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16RYNwvKIGfOAFLTqfYa5ol9RfUMhkkUk",
+  "backdrop": "https://lh3.googleusercontent.com/d/16RYNwvKIGfOAFLTqfYa5ol9RfUMhkkUk",
+  "readerUrl": "https://drive.google.com/file/d/1FPJp-CXCKOPkkbWjW-0kWKUzrFqzA-vy/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-23-as-aventuras-de-xex-u-e-fuxico",
+  "title": "As aventuras de Xexéu e Fuxico",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado As aventuras de Xexéu e Fuxico de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/151DMpg98nEXMX7L7JuprY9gzk7yfVVmp",
+  "backdrop": "https://lh3.googleusercontent.com/d/151DMpg98nEXMX7L7JuprY9gzk7yfVVmp",
+  "readerUrl": "https://drive.google.com/file/d/1mK00Bccq_y84V6ZDqhDBMLwvmghjlb6h/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-24-as-aventuras-do-peixinho-cor",
+  "title": "As aventuras do peixinho Coró",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado As aventuras do peixinho Coró de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZWYimYBvYhxgsevM3a5LvrtJtXr_zXiL",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZWYimYBvYhxgsevM3a5LvrtJtXr_zXiL",
+  "readerUrl": "https://drive.google.com/file/d/1_l7mUqPBxV87TW-o_9FUrQ8rykTRwlAA/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-25-as-m-o-que-n-o-param-de-bater",
+  "title": "AS MÃO QUE NÃO PARAM DE BATER",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado AS MÃO QUE NÃO PARAM DE BATER de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1peCojEAVtgY4woTh-i4FvZr3mg_Enn5H",
+  "backdrop": "https://lh3.googleusercontent.com/d/1peCojEAVtgY4woTh-i4FvZr3mg_Enn5H",
+  "readerUrl": "https://drive.google.com/file/d/1B31f5FlkxSz67cXRXS3PZkVKGZmWHhbG/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-26-azuleta",
+  "title": "Azuleta",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Azuleta de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12XX3fY9ymkUcs4JNT6_9wXWvtNIiTtAZ",
+  "backdrop": "https://lh3.googleusercontent.com/d/12XX3fY9ymkUcs4JNT6_9wXWvtNIiTtAZ",
+  "readerUrl": "https://drive.google.com/file/d/1MWvLlZ2_8JvQlnRuURS6laxGB8T9YfqJ/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-27-borboletas-bailarinas",
+  "title": "Borboletas bailarinas",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Borboletas bailarinas de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lAx-q0k6q1xIMe7GGzVK7JUPEWlYgpOB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lAx-q0k6q1xIMe7GGzVK7JUPEWlYgpOB",
+  "readerUrl": "https://drive.google.com/file/d/1ydR6iWwO4iWdaUnDxtFoNYnDIr4FW2Cs/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-28-brincadeiras-quarentena-estefi-machado",
+  "title": "Brincadeiras quarentena estefi machado",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Brincadeiras quarentena estefi machado de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Vh8cOzt4pvpvlu1Y_gW4dMcWTybyqykW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Vh8cOzt4pvpvlu1Y_gW4dMcWTybyqykW",
+  "readerUrl": "https://drive.google.com/file/d/1Q-dFQotTTM9xNMh-9wQOtvGW8lmwua-Y/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-29-cachinhos-conchinhas-flores-e-ninhos",
+  "title": "CACHINHOS, CONCHINHAS, FLORES E NINHOS",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado CACHINHOS, CONCHINHAS, FLORES E NINHOS de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KGyX67nSDtpA3A53PvOkA5FjwK-CrVL9",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KGyX67nSDtpA3A53PvOkA5FjwK-CrVL9",
+  "readerUrl": "https://drive.google.com/file/d/18mpiPXssPWr7tc8ccUDIBHHJRtNEjPen/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-30-cada-um-mora-onde-pode",
+  "title": "Cada um mora onde pode",
+  "author": "Ziraldo",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Cada um mora onde pode de Ziraldo em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/10GXz1c8FMOeDfjW1wckIUlua9oivBOGL",
+  "backdrop": "https://lh3.googleusercontent.com/d/10GXz1c8FMOeDfjW1wckIUlua9oivBOGL",
+  "readerUrl": "https://drive.google.com/file/d/16jzkqF467wfuW5lON6eYLfjAvWQnaCqK/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-31-chico-bento",
+  "title": "CHICO BENTO",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado CHICO BENTO de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RSCnCCNrBmkPBdlydemWU58JcBwFWm-a",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RSCnCCNrBmkPBdlydemWU58JcBwFWm-a",
+  "readerUrl": "https://drive.google.com/file/d/1zOPlJVjqvsS9N5DOH89_4G_CzOxaZmfz/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-32-colorindo-com-romero-britto",
+  "title": "COLORINDO COM ROMERO BRITTO",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado COLORINDO COM ROMERO BRITTO de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1l5ugH3dS2qZyGAx1kyvGkqR3kX9UCzwR",
+  "backdrop": "https://lh3.googleusercontent.com/d/1l5ugH3dS2qZyGAx1kyvGkqR3kX9UCzwR",
+  "readerUrl": "https://drive.google.com/file/d/1uzuzU55ThvdCd2m41lOyjscP4GrTh4vB/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-33-como-reconhecer-um-monstro",
+  "title": "COMO RECONHECER UM MONSTRO",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado COMO RECONHECER UM MONSTRO de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kEoMo5CHRb1BIdG5NwNzZeq1nhIzCkZj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kEoMo5CHRb1BIdG5NwNzZeq1nhIzCkZj",
+  "readerUrl": "https://drive.google.com/file/d/11Vs9dKDTYcnBzbUZJgyfsqKMO1454nAU/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-34-cores-de-corina",
+  "title": "CORES DE CORINA",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado CORES DE CORINA de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bTSfSrucY33KnvFr8qM3TW-CEEoe-F5n",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bTSfSrucY33KnvFr8qM3TW-CEEoe-F5n",
+  "readerUrl": "https://drive.google.com/file/d/124XgDGU1YyZ0KE64hYnwMan8PRsCjRj0/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-35-dez-numa-cama",
+  "title": "Dez numa cama",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Dez numa cama de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/161iCx6uSPxqbhd75Zc9MyaOP2r4bJpa8",
+  "backdrop": "https://lh3.googleusercontent.com/d/161iCx6uSPxqbhd75Zc9MyaOP2r4bJpa8",
+  "readerUrl": "https://drive.google.com/file/d/1neQjvUEXY5azFf5sMT8rrUAHzukTtcrM/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-36-dez-patinhos",
+  "title": "DEZ PATINHOS",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado DEZ PATINHOS de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1COXm-9HXWHkFV54I86_tqevf3tWDXmir",
+  "backdrop": "https://lh3.googleusercontent.com/d/1COXm-9HXWHkFV54I86_tqevf3tWDXmir",
+  "readerUrl": "https://drive.google.com/file/d/1LyIvfo-sDbLL2v2yRIXbNRWEnimwfuk_/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-37-di-rio-de-um-banana-vol-5",
+  "title": "Diário de um Banana (Vol. 5)",
+  "author": "Jeff Kinney",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Diário de um Banana (Vol. 5) de Jeff Kinney em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1o0u4tDGTCsdfrsoXvIRlXWTKukf0cw99",
+  "backdrop": "https://lh3.googleusercontent.com/d/1o0u4tDGTCsdfrsoXvIRlXWTKukf0cw99",
+  "readerUrl": "https://drive.google.com/file/d/1jNjRuzG-h9hkafj35gqCI9wRhwg_1UFn/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-38-era-uma-vez-um-gato-xadrez",
+  "title": "Era uma vez um gato xadrez",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Era uma vez um gato xadrez de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1W86aOKLew-Q4ew2lciNLIEzFzKkVjwzW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1W86aOKLew-Q4ew2lciNLIEzFzKkVjwzW",
+  "readerUrl": "https://drive.google.com/file/d/1sWvgII_6BIyKsnubAo6QwhhaLTBsxwb7/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-39-era-uma-vez-um-lobo-mingau",
+  "title": "ERA UMA VEZ UM LOBO MINGAU",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado ERA UMA VEZ UM LOBO MINGAU de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tZaX1IzvHTqFI5_ScH__JdutCdf3OWvP",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tZaX1IzvHTqFI5_ScH__JdutCdf3OWvP",
+  "readerUrl": "https://drive.google.com/file/d/1gLhNtnA0evTFj9qrAknZ779YEv7Kk7mQ/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-40-a-escova-de-dente-azul",
+  "title": "A Escova de Dente Azul",
+  "author": "Marcos Mion",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A Escova de Dente Azul de Marcos Mion em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DgMHK-UJApKuAF85vGxVaSkzYVEY71uE",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DgMHK-UJApKuAF85vGxVaSkzYVEY71uE",
+  "readerUrl": "https://drive.google.com/file/d/1T0hq5TXxfk62IFRNHHQ0sgl7A3E8KIZK/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-41-eu-me-mexo",
+  "title": "EU ME MEXO",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado EU ME MEXO de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1iyG-iTiUTEyvnO7u6swRuqyt5Sg-Mjp0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1iyG-iTiUTEyvnO7u6swRuqyt5Sg-Mjp0",
+  "readerUrl": "https://drive.google.com/file/d/1hchAAS8hLUEpUiWVfdPzvXMMUkAVvXyA/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-42-familia-do-mundinho",
+  "title": "FAMILIA DO MUNDINHO",
+  "author": "Ingrid Biesemeyer Bellinghausen",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado FAMILIA DO MUNDINHO de Ingrid Biesemeyer Bellinghausen em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1u4lnw3njnc3uWsBDlEjQF1K4gcsuCRHM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1u4lnw3njnc3uWsBDlEjQF1K4gcsuCRHM",
+  "readerUrl": "https://drive.google.com/file/d/1uvctGkUp3WZMA5o_IwybrRWUv6VnvB95/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-43-filha-do-grufalo",
+  "title": "FILHA DO GRUFALO",
+  "author": "Julia Donaldson",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado FILHA DO GRUFALO de Julia Donaldson em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RdV-DZctcyURdyTTe5BK2non2mJbpNoe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RdV-DZctcyURdyTTe5BK2non2mJbpNoe",
+  "readerUrl": "https://drive.google.com/file/d/1Vksex5grjHaElXjmzFfJe5bc0MKOO1sZ/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-44-gabriel-e-a-fraldinha",
+  "title": "GABRIEL E A FRALDINHA",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado GABRIEL E A FRALDINHA de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1u8Q5rfbt0233rVUFsNNxsLvZwcxTbwh5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1u8Q5rfbt0233rVUFsNNxsLvZwcxTbwh5",
+  "readerUrl": "https://drive.google.com/file/d/1T6vcj9v3x0DEBxB0Cay0Y9H7vpHPqY9V/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-45-gibizinho-do-astronauta",
+  "title": "Gibizinho do Astronauta",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Gibizinho do Astronauta de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oXlKKOqPzduFl3XlkMEQdflDKnxVujZg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oXlKKOqPzduFl3XlkMEQdflDKnxVujZg",
+  "readerUrl": "https://drive.google.com/file/d/1HkiUhkdG38ZaiBNveifqwcueMLohO_Y3/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-46-historias-infantis-lider",
+  "title": "Historias Infantis Lider",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Historias Infantis Lider de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KqU8vQU9XBNh7BMPA87YL2ee32IOInn8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KqU8vQU9XBNh7BMPA87YL2ee32IOInn8",
+  "readerUrl": "https://drive.google.com/file/d/1EKnFLRbrVQLJWUUczfUYNjFjuId1SGZC/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-47-hist-ria-das-cinco-vogais",
+  "title": "História das cinco vogais",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado História das cinco vogais de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RArPrVFKwCBF77t5ClGvejM4hAQUxj9z",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RArPrVFKwCBF77t5ClGvejM4hAQUxj9z",
+  "readerUrl": "https://drive.google.com/file/d/1TjITWI_HC2gv_xQmKuQiMR9i_nmuAwV1/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-48-hist-ria-de-circo-1-ao-3",
+  "title": "HISTÓRIA DE CIRCO 1º AO 3º",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado HISTÓRIA DE CIRCO 1º AO 3º de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZUs9fmc3IVboiGAmJl-VPXG7aQVpsYKz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZUs9fmc3IVboiGAmJl-VPXG7aQVpsYKz",
+  "readerUrl": "https://drive.google.com/file/d/1_qOxRBtdhyElX7celJ-8xc3NfAnBjHkC/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-49-iguais-mais-diferentes",
+  "title": "Iguais Mais Diferentes",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Iguais Mais Diferentes de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1bwNcEmwA5Srlm4qqmYDLw_-gNFYkv5Bb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1bwNcEmwA5Srlm4qqmYDLw_-gNFYkv5Bb",
+  "readerUrl": "https://drive.google.com/file/d/19cAsJyS6RrLjM4disUkhaeD6_qJsH-es/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-50-corona-o-virus-para-crian-as",
+  "title": "Corona, o virus para Crianças",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Corona, o virus para Crianças de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/11S30fVQIQdaBcH5hN5KdQ1gOrfJZvQDB",
+  "backdrop": "https://lh3.googleusercontent.com/d/11S30fVQIQdaBcH5hN5KdQ1gOrfJZvQDB",
+  "readerUrl": "https://drive.google.com/file/d/13gkL5oP1fm58vMa1llLVYXVbE2YVHKut/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-51-carona-na-vassoura",
+  "title": "CARONA NA VASSOURA",
+  "author": "Julia Donaldson",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado CARONA NA VASSOURA de Julia Donaldson em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1RE6z9LnO0dn-ds5cOKewASmUNuwKwz6l",
+  "backdrop": "https://lh3.googleusercontent.com/d/1RE6z9LnO0dn-ds5cOKewASmUNuwKwz6l",
+  "readerUrl": "https://drive.google.com/file/d/12--oLJrx8lFmAaBkySZ1MCnG5TpOyj7i/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-52-l-pis-cor-de-pele-2",
+  "title": "Lápis Cor de pele-2",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Lápis Cor de pele-2 de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Klr44iZKJ3nWoK0uDGYvdGvbDq6iPAxz",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Klr44iZKJ3nWoK0uDGYvdGvbDq6iPAxz",
+  "readerUrl": "https://drive.google.com/file/d/1sC7IHBgjAQigtfbvqCyhuuKhff0snkIi/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-53-a-gotinha-plim-plim",
+  "title": "A GOTINHA PLIM PLIM",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado A GOTINHA PLIM PLIM de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ClgAqU1j2dJAYZmZ2u1Uzc8U_rtAwQiF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ClgAqU1j2dJAYZmZ2u1Uzc8U_rtAwQiF",
+  "readerUrl": "https://drive.google.com/file/d/1WCeQTlht7KryGlkws8bI1TNtZ3bcumwB/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-54-dos-medos",
+  "title": "Dos Medos",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Dos Medos de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1QwIpDV3cuyEQc30aEVIR6atyyemK_BLg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1QwIpDV3cuyEQc30aEVIR6atyyemK_BLg",
+  "readerUrl": "https://drive.google.com/file/d/1tKGsZM0iq19gWfB7UvA2BExjLfzIeqVI/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-55-os-3-porquinhos-malcriados",
+  "title": "Os-3-Porquinhos-Malcriados",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Os-3-Porquinhos-Malcriados de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kqd8bRG2B3tmSLUOBWje7H_mToUX2x1e",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kqd8bRG2B3tmSLUOBWje7H_mToUX2x1e",
+  "readerUrl": "https://drive.google.com/file/d/1pKC5SrD8i-XGJrK4BX6d49B5GlX9s-ac/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-56-mam-maravilha",
+  "title": "Mamã Maravilha",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Mamã Maravilha de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ebWWbjRvj1dUm7AxsTOWMGtY4kZ-L9HD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ebWWbjRvj1dUm7AxsTOWMGtY4kZ-L9HD",
+  "readerUrl": "https://drive.google.com/file/d/1txgRE-Rb5xBmjuEr-_jl0K__RNdBri5t/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-57-menina-bonita-do-la-o-de-fita",
+  "title": "Menina Bonita do Laço de Fita",
+  "author": "Ana Maria Machado",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Menina Bonita do Laço de Fita de Ana Maria Machado em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wthYym08l1cAb8SCgppWYXdBE6BX50O1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wthYym08l1cAb8SCgppWYXdBE6BX50O1",
+  "readerUrl": "https://drive.google.com/file/d/1WOg3-RVnRCj6FqMdDJCqpZv7UklaFFuV/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-58-mentes-nicas",
+  "title": "Mentes úNicas",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Mentes úNicas de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ygMytqRj5Sqjc9xAy4U_ySWkfW1m4IJ4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ygMytqRj5Sqjc9xAy4U_ySWkfW1m4IJ4",
+  "readerUrl": "https://drive.google.com/file/d/17dUNHzJWPYoHlC8xG5T2O_cSdE0XzE66/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-59-meu-amigo-faz-iiiiiii",
+  "title": "Meu amigo faz iiiiiii",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Meu amigo faz iiiiiii de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1524vjVhaw9Dmgpo5dMM8dY-v51QsCu-l",
+  "backdrop": "https://lh3.googleusercontent.com/d/1524vjVhaw9Dmgpo5dMM8dY-v51QsCu-l",
+  "readerUrl": "https://drive.google.com/file/d/1khvuDnOIKCmUZlrHAiF9vy22xZi3NTbs/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-60-minha-me-negra-sim",
+  "title": "Minha me negra sim!",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Minha me negra sim! de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1SdDccWJozyAvw8u8d5lWZzum5C1_aN0x",
+  "backdrop": "https://lh3.googleusercontent.com/d/1SdDccWJozyAvw8u8d5lWZzum5C1_aN0x",
+  "readerUrl": "https://drive.google.com/file/d/1JP78-8A_7YuCleEzGl6_Agk3QqsJVx2v/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-61-n-o-faz-mal-ser-diferente",
+  "title": "Não faz mal ser diferente",
+  "author": "Todd Parr",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Não faz mal ser diferente de Todd Parr em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16DgV6fhpd42-uaBnweB56eJwm-CZVSeR",
+  "backdrop": "https://lh3.googleusercontent.com/d/16DgV6fhpd42-uaBnweB56eJwm-CZVSeR",
+  "readerUrl": "https://drive.google.com/file/d/1765NsjxsCDkLMSIZXy5QbanHTp-S1avI/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-62-o-circo",
+  "title": "O CIRCO",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado O CIRCO de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DX3JtMhfi0_Y_QYztXghGeeLkraIvILC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DX3JtMhfi0_Y_QYztXghGeeLkraIvILC",
+  "readerUrl": "https://drive.google.com/file/d/1D5baqsQC889y9kyeN-LAWtb-2QAbPrRd/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-63-o-leao-e-o-rato",
+  "title": "o Leao e o rato",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado o Leao e o rato de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1E5gB5VBtyOYJDXktexpTjJJj9h7otem6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1E5gB5VBtyOYJDXktexpTjJJj9h7otem6",
+  "readerUrl": "https://drive.google.com/file/d/1Th8kuce3B8CsyOKXAjUTPZGFJ6J_E2iI/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-64-o-livro-da-fam-lia",
+  "title": "O livro da família",
+  "author": "Todd Parr",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado O livro da família de Todd Parr em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1u36qZKrYjZTXFhKrMKARO4SdSY-l1un6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1u36qZKrYjZTXFhKrMKARO4SdSY-l1un6",
+  "readerUrl": "https://drive.google.com/file/d/1c1zI2VB9mQL728p86gOwHVmUCfiepbv1/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-65-o-lobo-voltou",
+  "title": "O lobo voltou",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado O lobo voltou de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DgnmatbraY9OKYjBefe5wCo5J41Ua7sy",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DgnmatbraY9OKYjBefe5wCo5J41Ua7sy",
+  "readerUrl": "https://drive.google.com/file/d/1T_n82_eM6x67VVyMqoKxJyiEfZ4iIZht/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-66-o-monstro-das-cores",
+  "title": "O Monstro das Cores",
+  "author": "Anna Llenas",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado O Monstro das Cores de Anna Llenas em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1skt9MCsDIaWy0i_h3ZijJuzBJxrMYMKx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1skt9MCsDIaWy0i_h3ZijJuzBJxrMYMKx",
+  "readerUrl": "https://drive.google.com/file/d/11jl9ADb0uX8KMQm9GsU8zL_qI_jHRZh8/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-67-o-sof-estampado",
+  "title": "O Sofá Estampado",
+  "author": "Lygia Bojunga",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado O Sofá Estampado de Lygia Bojunga em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NeR4kxG8j1Z20SJVva9Tkdg2M9hlBXVj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NeR4kxG8j1Z20SJVva9Tkdg2M9hlBXVj",
+  "readerUrl": "https://drive.google.com/file/d/1saWLoXCVOENM3n78vBL1G6NSFP8gnAHv/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-68-o-sapato-que-miava",
+  "title": "O Sapato que Miava",
+  "author": "Sylvia Orthof",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado O Sapato que Miava de Sylvia Orthof em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wce2ohH8TmU92B_FjgJqqUJ1L69mAxPx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wce2ohH8TmU92B_FjgJqqUJ1L69mAxPx",
+  "readerUrl": "https://drive.google.com/file/d/1RYohDxCtNUvDdtCrRE6vTn5WQVIXTYN0/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-69-pipo-fifi",
+  "title": "Pipo Fifi",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Pipo Fifi de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1IODKHk9mZqf00d2BV9y_ZuDpwZ9YBlc1",
+  "backdrop": "https://lh3.googleusercontent.com/d/1IODKHk9mZqf00d2BV9y_ZuDpwZ9YBlc1",
+  "readerUrl": "https://drive.google.com/file/d/19ceSL2Sbk_B-BZ5cfNCxsl14AbEKABAc/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-70-quando-me-sinto-assustado",
+  "title": "Quando Me Sinto Assustado",
+  "author": "Trace Moroney",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Quando Me Sinto Assustado de Trace Moroney em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1JdoDrm2mFGbYgvx4PFGIgpjbcBuhAtW6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1JdoDrm2mFGbYgvx4PFGIgpjbcBuhAtW6",
+  "readerUrl": "https://drive.google.com/file/d/1p6KCqdKEPNA1G5K_h4laDPsS2YcwySgC/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-71-quando-me-sinto-zangado",
+  "title": "Quando me sinto zangado",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Quando me sinto zangado de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jrcHytdjsKmjvzHY-2ZyiK8L_yiZ15gM",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jrcHytdjsKmjvzHY-2ZyiK8L_yiZ15gM",
+  "readerUrl": "https://drive.google.com/file/d/14TJiGYq-GHINhPqK-68Qx5cPXBwxWYHK/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-72-quando-me-sinto-feliz",
+  "title": "Quando-Me-Sinto-Feliz",
+  "author": "Trace Moroney",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Quando-Me-Sinto-Feliz de Trace Moroney em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19WwKaJ0IhKx1xWWFL0KgsPxlhIJQvZJr",
+  "backdrop": "https://lh3.googleusercontent.com/d/19WwKaJ0IhKx1xWWFL0KgsPxlhIJQvZJr",
+  "readerUrl": "https://drive.google.com/file/d/1MJpMicA1PE6hh1-LOkca5Fjb6kD6ua7x/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-73-quando-me-sinto-triste",
+  "title": "Quando-Me-Sinto-Triste",
+  "author": "Trace Moroney",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Quando-Me-Sinto-Triste de Trace Moroney em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1JXdiMG-8nWr_H5OLjQGJwtFFvReNRiCL",
+  "backdrop": "https://lh3.googleusercontent.com/d/1JXdiMG-8nWr_H5OLjQGJwtFFvReNRiCL",
+  "readerUrl": "https://drive.google.com/file/d/1TeR2zO6XGro94HW_WkW2C7bqBOff-LTB/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-74-quem-gosta-de-ser-diferente",
+  "title": "Quem Gosta De Ser Diferente",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Quem Gosta De Ser Diferente de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FIqr7co4NJNa2A6iv2SXz1oRW3ynB0si",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FIqr7co4NJNa2A6iv2SXz1oRW3ynB0si",
+  "readerUrl": "https://drive.google.com/file/d/1z3fZBRVpocXjnQQMnLTSDSiIpTwcF1jM/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-75-quem-tem-medo-de-monstro",
+  "title": "QUEM TEM MEDO DE MONSTRO",
+  "author": "Ruth Rocha",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado QUEM TEM MEDO DE MONSTRO de Ruth Rocha em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Lvq9E-Dpotoq5W16jjwhMu8Ih84YBNFB",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Lvq9E-Dpotoq5W16jjwhMu8Ih84YBNFB",
+  "readerUrl": "https://drive.google.com/file/d/1K2ba-eePoPfzaFPFW1bisNXBnL75dzM-/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-76-quero-casa-com-janela",
+  "title": "Quero Casa com Janela",
+  "author": "Elias José",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Quero Casa com Janela de Elias José em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1uKUih3PPLITFgXNZ71apfOx8gQdMaWpc",
+  "backdrop": "https://lh3.googleusercontent.com/d/1uKUih3PPLITFgXNZ71apfOx8gQdMaWpc",
+  "readerUrl": "https://drive.google.com/file/d/1aUWpqxALFS0OQPc1jcL9gZGshScNfUxR/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-77-tem-bicho-no-circo",
+  "title": "TEM BICHO NO CIRCO",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado TEM BICHO NO CIRCO de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eEHr34KB0V3-ydasLw8xs3LAkGvQTDsi",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eEHr34KB0V3-ydasLw8xs3LAkGvQTDsi",
+  "readerUrl": "https://drive.google.com/file/d/1-d-7Jsl_QTwA6jRcpBK9h3nSIUrVff5O/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-78-tenho-medo-mas-dou-um-jeito",
+  "title": "Tenho medo mas dou um jeito",
+  "author": "Ruth Rocha",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Tenho medo mas dou um jeito de Ruth Rocha em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CxGN8l349AGSAJ8L1shdSOI-G9n_HLOb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CxGN8l349AGSAJ8L1shdSOI-G9n_HLOb",
+  "readerUrl": "https://drive.google.com/file/d/1i2ztZ6kRZK1hWiZlTpFioTl-pGTMESnG/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-79-tr-s-lobinhos-e-o-porco-mau",
+  "title": "TrêS Lobinhos E O Porco Mau",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado TrêS Lobinhos E O Porco Mau de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1APug8Xg6Na8A_Xj1rp0sBvXM4TYGLxSI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1APug8Xg6Na8A_Xj1rp0sBvXM4TYGLxSI",
+  "readerUrl": "https://drive.google.com/file/d/1_z9SfvadqQ4KaJSGtpvomsWa1s5R32uj/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-80-um-mundinho-para-todos",
+  "title": "Um mundinho para todos",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Um mundinho para todos de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ROtl2bYc1OBvhaOBWwoCWnnOMZCEwpeh",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ROtl2bYc1OBvhaOBWwoCWnnOMZCEwpeh",
+  "readerUrl": "https://drive.google.com/file/d/1MbfxrzwtSFFIOBuOTVSkQVfqHfxFBJrw/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-81-uma-hist-ria-sobre-respeito",
+  "title": "UMA HISTÓRIA SOBRE RESPEITO",
+  "author": "Literatura Infantil",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado UMA HISTÓRIA SOBRE RESPEITO de Literatura Infantil em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1mHy3siYTUmT2quQ7ceS_V5ReVLU_HrWJ",
+  "backdrop": "https://lh3.googleusercontent.com/d/1mHy3siYTUmT2quQ7ceS_V5ReVLU_HrWJ",
+  "readerUrl": "https://drive.google.com/file/d/1gpx9ExtQDr_8v49_1WxhtgOFedQgPXRd/view?usp=drive_link"
+},
+  {
+  "id": "livro-infantil-82-voc-troca",
+  "title": "Você Troca?",
+  "author": "Eva Furnari",
+  "publisher": "infantil",
+  "year": 2018,
+  "duration": "Livro Infantil (PDF)",
+  "rating": 9.8,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Infantil & Família",
+    "Desenvolvimento & Educação"
+  ],
+  "description": "Livro infantil ilustrado Você Troca? de Eva Furnari em formato PDF. Uma história mágica e educativa perfeita para leitura em família. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1cdUnykF0KAY9Lm18eoKDJNmtITAcq2tf",
+  "backdrop": "https://lh3.googleusercontent.com/d/1cdUnykF0KAY9Lm18eoKDJNmtITAcq2tf",
+  "readerUrl": "https://drive.google.com/file/d/1wE305DfOXXZ1LSWZOP8nj62gpIxLO1fE/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
   "Todos",
   "Turma da Mônica",
   "Psicologia & Saúde Mental",
+  "Infantil & Família",
   "HQs & Quadrinhos",
   "Romance & Drama",
   "Fantasia & Ficção",
