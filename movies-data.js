@@ -24260,6 +24260,1787 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/1kNNsKH4YROaAdJFrN9mj7zm8SC0C-4ku",
   "readerUrl": "https://drive.google.com/file/d/1Ouo7LTa3Tu3oxPL3Rc639_psosmlW9Rr/view?usp=drive_link"
 }
+,
+  {
+  "id": "hq-the-boys-1-the-boys-herogasm-01",
+  "title": "The Boys: Herogasm #01",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Herogasm #01 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19JKKy-tBUxAKeOt9DU4Nwd1ywU97_3la",
+  "backdrop": "https://lh3.googleusercontent.com/d/19JKKy-tBUxAKeOt9DU4Nwd1ywU97_3la",
+  "readerUrl": "https://drive.google.com/file/d/1zOfmJdct1EcdLl7kc81jE9A1NNqmYuiy/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-2-the-boys-herogasm-03",
+  "title": "The Boys: Herogasm #03",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Herogasm #03 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1fmQoyYtFMVQOYECKW6NiSkdrgzegmQ61",
+  "backdrop": "https://lh3.googleusercontent.com/d/1fmQoyYtFMVQOYECKW6NiSkdrgzegmQ61",
+  "readerUrl": "https://drive.google.com/file/d/12aieqXsjdCxpFuzOIJoL_RzEI4YBO8Kv/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-3-the-boys-herogasm-04",
+  "title": "The Boys: Herogasm #04",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Herogasm #04 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zMXeUnbm6_6Y0HwCRDfmEB6eSVhIUTqD",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zMXeUnbm6_6Y0HwCRDfmEB6eSVhIUTqD",
+  "readerUrl": "https://drive.google.com/file/d/1aMucGibzetGO7buvZiOLSlgMltWbfZlS/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-4-the-boys-herogasm-05",
+  "title": "The Boys: Herogasm #05",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Herogasm #05 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Uhzt5iuq7Q1OM0DBkA1hamL951xuQOI2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Uhzt5iuq7Q1OM0DBkA1hamL951xuQOI2",
+  "readerUrl": "https://drive.google.com/file/d/1MXfspx8TSlkwPKBLlzgQDlaIbixhtX7R/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-5-the-boys-herogasm-06",
+  "title": "The Boys: Herogasm #06",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Herogasm #06 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1gqNNyVp1AzKvRXKYqH87U315Lf-RWcai",
+  "backdrop": "https://lh3.googleusercontent.com/d/1gqNNyVp1AzKvRXKYqH87U315Lf-RWcai",
+  "readerUrl": "https://drive.google.com/file/d/1CWm9I2s190cD534BJYD6l9BozTnqUzDj/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-6-the-boys-rapazinho-das-montanhas-01",
+  "title": "The Boys: Rapazinho das Montanhas #01",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Rapazinho das Montanhas #01 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1kGOt0Kzx_uR1e8m9jTOUMYjEf2oUIhTC",
+  "backdrop": "https://lh3.googleusercontent.com/d/1kGOt0Kzx_uR1e8m9jTOUMYjEf2oUIhTC",
+  "readerUrl": "https://drive.google.com/file/d/1XwupAzWH_yCgTW7rwtHcKgqpj3vOOFTA/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-7-the-boys-rapazinho-das-montanhas-02",
+  "title": "The Boys: Rapazinho das Montanhas #02",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Rapazinho das Montanhas #02 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Jz5-JCtZiPJypa4fprmHAqqSYVssrg8x",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Jz5-JCtZiPJypa4fprmHAqqSYVssrg8x",
+  "readerUrl": "https://drive.google.com/file/d/1CWhVn7FyKXesIVHvi3MJqA9ll4d7xfGV/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-8-the-boys-rapazinho-das-montanhas-03",
+  "title": "The Boys: Rapazinho das Montanhas #03",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Rapazinho das Montanhas #03 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1GxVyAflUfuQj4FVDg35NW1X5Ydv9OrW2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1GxVyAflUfuQj4FVDg35NW1X5Ydv9OrW2",
+  "readerUrl": "https://drive.google.com/file/d/19cITpQrGGFTMFVB6dD0t56HDLl6aei9K/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-9-the-boys-rapazinho-das-montanhas-04",
+  "title": "The Boys: Rapazinho das Montanhas #04",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Rapazinho das Montanhas #04 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1JYH0K98vd-tZzQ7GnEfeWEiTUAv5t3Ew",
+  "backdrop": "https://lh3.googleusercontent.com/d/1JYH0K98vd-tZzQ7GnEfeWEiTUAv5t3Ew",
+  "readerUrl": "https://drive.google.com/file/d/1kKElqt0d1oUFLhEvWaSo4t6rwqdLbM-F/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-10-the-boys-rapazinho-das-montanhas-05",
+  "title": "The Boys: Rapazinho das Montanhas #05",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Rapazinho das Montanhas #05 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1y-d0hhUjVL--W0_TItVhxB-pmk-nn3It",
+  "backdrop": "https://lh3.googleusercontent.com/d/1y-d0hhUjVL--W0_TItVhxB-pmk-nn3It",
+  "readerUrl": "https://drive.google.com/file/d/1hCMEAXJL0iw3XAFaCql8Fb8Bc4AgOUKf/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-11-the-boys-rapazinho-das-montanhas-06",
+  "title": "The Boys: Rapazinho das Montanhas #06",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Rapazinho das Montanhas #06 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ZMflqaLLctStuRUf9df7lIFDNgekwuod",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ZMflqaLLctStuRUf9df7lIFDNgekwuod",
+  "readerUrl": "https://drive.google.com/file/d/1441hzbt_sh6pe7k7BuumG-emrR4b6QRh/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-12-the-boys-os-rapazes-01",
+  "title": "The Boys - Os Rapazes #01",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #01 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_upX4NWOdTnOCWnP_TrHNqRLpr8TlqNe",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_upX4NWOdTnOCWnP_TrHNqRLpr8TlqNe",
+  "readerUrl": "https://drive.google.com/file/d/1trBCuW4C3HWezCcjRHtn7aQBYU4NBLMp/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-13-the-boys-os-rapazes-02",
+  "title": "The Boys - Os Rapazes #02",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #02 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Fa--o__-mjA8D3oEUpkDepLAywyOPrzm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Fa--o__-mjA8D3oEUpkDepLAywyOPrzm",
+  "readerUrl": "https://drive.google.com/file/d/1jK20QsZdGINxUpWGyLCJ5OKSZOSqEV_A/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-14-the-boys-os-rapazes-03",
+  "title": "The Boys - Os Rapazes #03",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #03 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1h0g9IlcI4oa0NXbXY8NlDVH-5aNfJmxp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1h0g9IlcI4oa0NXbXY8NlDVH-5aNfJmxp",
+  "readerUrl": "https://drive.google.com/file/d/1U5bkRoljuLSFhvwkayhPvSfh7m-pCADz/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-15-the-boys-os-rapazes-04",
+  "title": "The Boys - Os Rapazes #04",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #04 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Jqks_Euq_hHt_LWzGe7HJ4VOFTYDKm5t",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Jqks_Euq_hHt_LWzGe7HJ4VOFTYDKm5t",
+  "readerUrl": "https://drive.google.com/file/d/1oQqRYowaI7O9h-YhQr1YEHgB4CES9qaN/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-16-the-boys-os-rapazes-05",
+  "title": "The Boys - Os Rapazes #05",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #05 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vwpJnTaC8X_3iOpXqdN36KnIXLPVvaKj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vwpJnTaC8X_3iOpXqdN36KnIXLPVvaKj",
+  "readerUrl": "https://drive.google.com/file/d/1qNluskdFJkE6JSU5DAVCKXYo5GDO3DK1/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-17-the-boys-os-rapazes-06",
+  "title": "The Boys - Os Rapazes #06",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #06 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Ehfw_REeTJhcr3FPj5qnS3ILDEUEvi7K",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Ehfw_REeTJhcr3FPj5qnS3ILDEUEvi7K",
+  "readerUrl": "https://drive.google.com/file/d/1meuwdeEzakeZT87Hmx8ssIFKzyi3TcYV/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-18-the-boys-os-rapazes-07",
+  "title": "The Boys - Os Rapazes #07",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #07 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HNhQ684kKALR1-YApbyTBj4RWdk29MYp",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HNhQ684kKALR1-YApbyTBj4RWdk29MYp",
+  "readerUrl": "https://drive.google.com/file/d/19h_EWqTO-ANOvYzhkqy3Yq20RQ6N_Qjp/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-19-the-boys-os-rapazes-08",
+  "title": "The Boys - Os Rapazes #08",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #08 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DrkNM6K8wsyC9KKOrZX66HhgViqHVfja",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DrkNM6K8wsyC9KKOrZX66HhgViqHVfja",
+  "readerUrl": "https://drive.google.com/file/d/16SsvYQ_5Z3EXwOqrKtBir-7nNG1p68jb/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-20-the-boys-os-rapazes-09",
+  "title": "The Boys - Os Rapazes #09",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #09 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CBmSP1jYRmIS3DZ9t5ctZ2KSPMqRkA64",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CBmSP1jYRmIS3DZ9t5ctZ2KSPMqRkA64",
+  "readerUrl": "https://drive.google.com/file/d/1fORqYo6pXP8cfmtINcq9rdjcKiVWD5Xh/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-21-the-boys-os-rapazes-10",
+  "title": "The Boys - Os Rapazes #10",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #10 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Fg3HtZDuSwlnIj1wBfVZd_L0QYW9Hah5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Fg3HtZDuSwlnIj1wBfVZd_L0QYW9Hah5",
+  "readerUrl": "https://drive.google.com/file/d/1pLJEshkIw9auQK8ieISI0dPJpvq5isdy/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-22-the-boys-os-rapazes-11",
+  "title": "The Boys - Os Rapazes #11",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #11 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19zPvSk7FHjLdhTlnq-X-U_QPYUOIXiKk",
+  "backdrop": "https://lh3.googleusercontent.com/d/19zPvSk7FHjLdhTlnq-X-U_QPYUOIXiKk",
+  "readerUrl": "https://drive.google.com/file/d/1LERxjVDkiS7XHFbc_ILCIo-0XZ4zWpUa/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-23-the-boys-os-rapazes-12",
+  "title": "The Boys - Os Rapazes #12",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #12 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xdEkD7xTgMFSNs-WnsrFd6fyT12z909u",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xdEkD7xTgMFSNs-WnsrFd6fyT12z909u",
+  "readerUrl": "https://drive.google.com/file/d/1Ed-0qpmDIP3Jhgduv-GtAWr4Pxon1cVU/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-24-the-boys-os-rapazes-13",
+  "title": "The Boys - Os Rapazes #13",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #13 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xX6BF6gU3RdFV5dYKRndNpGsJYbBqB3L",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xX6BF6gU3RdFV5dYKRndNpGsJYbBqB3L",
+  "readerUrl": "https://drive.google.com/file/d/1VSHfi65c3lONgXe8XuxlBROf8Vk4FHDY/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-25-the-boys-os-rapazes-14",
+  "title": "The Boys - Os Rapazes #14",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #14 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1c2ztPnrWwmTbS5khDkVKj9fKZk2IiE_8",
+  "backdrop": "https://lh3.googleusercontent.com/d/1c2ztPnrWwmTbS5khDkVKj9fKZk2IiE_8",
+  "readerUrl": "https://drive.google.com/file/d/1_9evrQ8sUDeB0yQxQoWW8i1MMvWgA0XJ/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-26-the-boys-os-rapazes-15",
+  "title": "The Boys - Os Rapazes #15",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #15 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13yN6eizLKL5_jjWpWXK88ZzE6__1Uac4",
+  "backdrop": "https://lh3.googleusercontent.com/d/13yN6eizLKL5_jjWpWXK88ZzE6__1Uac4",
+  "readerUrl": "https://drive.google.com/file/d/1Or0z-HWcZff8_HrgMJ_kheN1eixSmo43/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-27-the-boys-os-rapazes-16",
+  "title": "The Boys - Os Rapazes #16",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #16 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1zTNxPaMnJP3dE1qDCXJihP9TZqw0NP44",
+  "backdrop": "https://lh3.googleusercontent.com/d/1zTNxPaMnJP3dE1qDCXJihP9TZqw0NP44",
+  "readerUrl": "https://drive.google.com/file/d/1tJsHLbNate2IRcYZSD-VvYKGCUjj25CD/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-28-the-boys-os-rapazes-17",
+  "title": "The Boys - Os Rapazes #17",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #17 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1HEx31qgP_IZj7AQpPNknmOPUJmnNuhh2",
+  "backdrop": "https://lh3.googleusercontent.com/d/1HEx31qgP_IZj7AQpPNknmOPUJmnNuhh2",
+  "readerUrl": "https://drive.google.com/file/d/1Ec-yEgD10JfHa8bhp_j_MBzLgc5p_xBM/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-29-the-boys-os-rapazes-18",
+  "title": "The Boys - Os Rapazes #18",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #18 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1E88-IzOsDLH560MbCAvc8gmc8fipQ0_4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1E88-IzOsDLH560MbCAvc8gmc8fipQ0_4",
+  "readerUrl": "https://drive.google.com/file/d/1TQrIgq57haSxp6kpqH98NOdFpIhENNG4/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-30-the-boys-os-rapazes-19",
+  "title": "The Boys - Os Rapazes #19",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #19 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/19TPG5kCYsBQMbISxa0cAoorJ3QbKiTCC",
+  "backdrop": "https://lh3.googleusercontent.com/d/19TPG5kCYsBQMbISxa0cAoorJ3QbKiTCC",
+  "readerUrl": "https://drive.google.com/file/d/1tLZkpBICV3vRxRQh6fTxIzQV7aiFiZo0/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-31-the-boys-os-rapazes-20",
+  "title": "The Boys - Os Rapazes #20",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #20 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/11dpisHzenwlj-qO3t3ILhBPpGtoPvpEb",
+  "backdrop": "https://lh3.googleusercontent.com/d/11dpisHzenwlj-qO3t3ILhBPpGtoPvpEb",
+  "readerUrl": "https://drive.google.com/file/d/1VX8igB3WaPaX4XrIa6gwvN3GexTY4r9j/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-32-the-boys-os-rapazes-21",
+  "title": "The Boys - Os Rapazes #21",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #21 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1CeP6tbpoAm8jMSMOazmSSu_r9qK4p99J",
+  "backdrop": "https://lh3.googleusercontent.com/d/1CeP6tbpoAm8jMSMOazmSSu_r9qK4p99J",
+  "readerUrl": "https://drive.google.com/file/d/1Hi9UuooQsKQIlYYmRD1emYQL63KvDfP5/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-33-the-boys-os-rapazes-22",
+  "title": "The Boys - Os Rapazes #22",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #22 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/12JqjK2aRcxU9OhIPGHzkwbZA4mNXOB6a",
+  "backdrop": "https://lh3.googleusercontent.com/d/12JqjK2aRcxU9OhIPGHzkwbZA4mNXOB6a",
+  "readerUrl": "https://drive.google.com/file/d/1V_YkqtG8iC5fEk0hhlqNhya2Y4V-ICY9/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-34-the-boys-os-rapazes-23",
+  "title": "The Boys - Os Rapazes #23",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #23 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1L65KdWbWmfi7YgdmdIs_eJXwJ0H0pdNO",
+  "backdrop": "https://lh3.googleusercontent.com/d/1L65KdWbWmfi7YgdmdIs_eJXwJ0H0pdNO",
+  "readerUrl": "https://drive.google.com/file/d/1MQHYeK7CjTKJ2ioQ53agRD0Osde9OUS-/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-35-the-boys-os-rapazes-24",
+  "title": "The Boys - Os Rapazes #24",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #24 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/18DMUWdr_HBu3G07c8Czhbz1SJPWipJjp",
+  "backdrop": "https://lh3.googleusercontent.com/d/18DMUWdr_HBu3G07c8Czhbz1SJPWipJjp",
+  "readerUrl": "https://drive.google.com/file/d/1mpvdfNFrJ9xjBHVXoOhgSjagE76HGlcb/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-36-the-boys-os-rapazes-25",
+  "title": "The Boys - Os Rapazes #25",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #25 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16BtE1DezvN84flxiZKKuekzUtMG3hOiD",
+  "backdrop": "https://lh3.googleusercontent.com/d/16BtE1DezvN84flxiZKKuekzUtMG3hOiD",
+  "readerUrl": "https://drive.google.com/file/d/1TER9JmW6THX_CDtTsWJheAW4hyl2sHAl/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-37-the-boys-os-rapazes-26",
+  "title": "The Boys - Os Rapazes #26",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #26 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16-k_HhQNdPJSH0ZtBV59ZMIqnFat0Twa",
+  "backdrop": "https://lh3.googleusercontent.com/d/16-k_HhQNdPJSH0ZtBV59ZMIqnFat0Twa",
+  "readerUrl": "https://drive.google.com/file/d/1fKUfBeZO84ppyYHPURqZu4gehjC0N7UG/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-38-the-boys-os-rapazes-27",
+  "title": "The Boys - Os Rapazes #27",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #27 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1_bpGiifoUEmMI_6lW8MsK2NBNki3ukd4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1_bpGiifoUEmMI_6lW8MsK2NBNki3ukd4",
+  "readerUrl": "https://drive.google.com/file/d/1Em-rS7KeClhRiFtRwjpAL0iyqjOIfMBL/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-39-the-boys-os-rapazes-28",
+  "title": "The Boys - Os Rapazes #28",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #28 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wlV9P4_E_wCo8BIyl6IEwzA7ZxzsJ9WW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wlV9P4_E_wCo8BIyl6IEwzA7ZxzsJ9WW",
+  "readerUrl": "https://drive.google.com/file/d/166i80pMua-9Nk98IYMpjEo3YRWj03MEA/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-40-the-boys-os-rapazes-29",
+  "title": "The Boys - Os Rapazes #29",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #29 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1vI0LZ_8h-h5UckjSXUAwMc0Kq3Ou7Wky",
+  "backdrop": "https://lh3.googleusercontent.com/d/1vI0LZ_8h-h5UckjSXUAwMc0Kq3Ou7Wky",
+  "readerUrl": "https://drive.google.com/file/d/1nDlei3KPmxuOpDSJP4J2n0BtRgklR6RV/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-41-the-boys-os-rapazes-30",
+  "title": "The Boys - Os Rapazes #30",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #30 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1USQepHe185xpNCPuylZX-dpq01WU0upb",
+  "backdrop": "https://lh3.googleusercontent.com/d/1USQepHe185xpNCPuylZX-dpq01WU0upb",
+  "readerUrl": "https://drive.google.com/file/d/1O9hwX3_RmZk2QSj-13nMj7-MZ7CmVu2W/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-42-the-boys-os-rapazes-31",
+  "title": "The Boys - Os Rapazes #31",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #31 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1KUA8vM4ziVXPCCOXjOSsLQZxlhwHdnhX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1KUA8vM4ziVXPCCOXjOSsLQZxlhwHdnhX",
+  "readerUrl": "https://drive.google.com/file/d/1abHXaxs1wB1rrRo6yVFY7ar0XC0Rrb1I/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-43-the-boys-os-rapazes-32",
+  "title": "The Boys - Os Rapazes #32",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #32 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1fG0PHWsBNmCAtM_1WVJEWR4kipCapIas",
+  "backdrop": "https://lh3.googleusercontent.com/d/1fG0PHWsBNmCAtM_1WVJEWR4kipCapIas",
+  "readerUrl": "https://drive.google.com/file/d/15tIBNV4M3XrriNwzU_EocTwHHHJ9QwhB/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-44-the-boys-os-rapazes-33",
+  "title": "The Boys - Os Rapazes #33",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #33 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NOZ6ojzasv5kaAJTSY5qnfkvA1E6QbO5",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NOZ6ojzasv5kaAJTSY5qnfkvA1E6QbO5",
+  "readerUrl": "https://drive.google.com/file/d/1ahDpRE6GgrM-F1WvzvwBdtLUXYRdEX_b/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-45-the-boys-os-rapazes-34",
+  "title": "The Boys - Os Rapazes #34",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #34 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1sJMIKkJjbDrTKHb7afc_Me70c0GYFR2l",
+  "backdrop": "https://lh3.googleusercontent.com/d/1sJMIKkJjbDrTKHb7afc_Me70c0GYFR2l",
+  "readerUrl": "https://drive.google.com/file/d/15H6hDabCbtcjNQLowDbIKtCgjMae4VD8/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-46-the-boys-os-rapazes-35",
+  "title": "The Boys - Os Rapazes #35",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #35 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1i2jgnIHtr8fGpTZkq3vcX5LFVETyC_Jf",
+  "backdrop": "https://lh3.googleusercontent.com/d/1i2jgnIHtr8fGpTZkq3vcX5LFVETyC_Jf",
+  "readerUrl": "https://drive.google.com/file/d/13XtZCCIBT7nferk0WQeAx9xuIpUAYV4H/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-47-the-boys-os-rapazes-36",
+  "title": "The Boys - Os Rapazes #36",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #36 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/162yR6Q_7MH01NSyyE7PlNvOSc6HD6VcX",
+  "backdrop": "https://lh3.googleusercontent.com/d/162yR6Q_7MH01NSyyE7PlNvOSc6HD6VcX",
+  "readerUrl": "https://drive.google.com/file/d/1NHompryVRk4H3a02KNkqVVbADIcwuo0s/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-48-the-boys-os-rapazes-37",
+  "title": "The Boys - Os Rapazes #37",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #37 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1FVvRVX4Um4-iI998lsBl7N3cbfGn0qD4",
+  "backdrop": "https://lh3.googleusercontent.com/d/1FVvRVX4Um4-iI998lsBl7N3cbfGn0qD4",
+  "readerUrl": "https://drive.google.com/file/d/1cn_IMQV0AQ0fLR7vfsjsjbplrwCCXkgu/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-49-the-boys-os-rapazes-38",
+  "title": "The Boys - Os Rapazes #38",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #38 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Fa34suhbHdJIgCObh_kz8Kc27EEP9wN-",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Fa34suhbHdJIgCObh_kz8Kc27EEP9wN-",
+  "readerUrl": "https://drive.google.com/file/d/1pN3p7jp0oiC8LKunIIABB28DyoK4-Nii/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-50-the-boys-os-rapazes-39",
+  "title": "The Boys - Os Rapazes #39",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #39 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eUTZjbs1669cZce-mufIWUnrknVEZLMI",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eUTZjbs1669cZce-mufIWUnrknVEZLMI",
+  "readerUrl": "https://drive.google.com/file/d/1S9d8LZkEI1Mneh6rf3V2Q-1cMSCdLa9A/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-51-the-boys-os-rapazes-40",
+  "title": "The Boys - Os Rapazes #40",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #40 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1MlMrGUMSJYoZnL82KyoLmWC02VZClwt0",
+  "backdrop": "https://lh3.googleusercontent.com/d/1MlMrGUMSJYoZnL82KyoLmWC02VZClwt0",
+  "readerUrl": "https://drive.google.com/file/d/1z9yp3_6FH1Y5RneHDsBvXp48Kri3vgOB/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-52-the-boys-os-rapazes-41",
+  "title": "The Boys - Os Rapazes #41",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #41 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/13TrqEsjPM2pkJFPHjV1mBpPDvB7mC2Yr",
+  "backdrop": "https://lh3.googleusercontent.com/d/13TrqEsjPM2pkJFPHjV1mBpPDvB7mC2Yr",
+  "readerUrl": "https://drive.google.com/file/d/1Ii1r08LNBQ9cWCdiFbROEdWaVH1ARC-f/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-53-the-boys-os-rapazes-42",
+  "title": "The Boys - Os Rapazes #42",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #42 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1wt7U4p_HblFYE9jriO1VDqsLq8Yu5Vcg",
+  "backdrop": "https://lh3.googleusercontent.com/d/1wt7U4p_HblFYE9jriO1VDqsLq8Yu5Vcg",
+  "readerUrl": "https://drive.google.com/file/d/1m43jhPS5Nh12bLXlYT7w2ClMTLI_kdSn/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-54-the-boys-os-rapazes-43",
+  "title": "The Boys - Os Rapazes #43",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #43 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1iHuBppoTebrOmdpSfaoovoS1cbfoC-1H",
+  "backdrop": "https://lh3.googleusercontent.com/d/1iHuBppoTebrOmdpSfaoovoS1cbfoC-1H",
+  "readerUrl": "https://drive.google.com/file/d/1w8MdsbXMbIXz_MZsWNP6QdWLCVMyddET/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-55-the-boys-os-rapazes-44",
+  "title": "The Boys - Os Rapazes #44",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #44 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1e6OKuCOnYClGwFsv2ODQAXw3eceg_-rh",
+  "backdrop": "https://lh3.googleusercontent.com/d/1e6OKuCOnYClGwFsv2ODQAXw3eceg_-rh",
+  "readerUrl": "https://drive.google.com/file/d/1b1mlmd5bi6veM9g4PAR1dxDzUFb66E3b/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-56-the-boys-os-rapazes-45",
+  "title": "The Boys - Os Rapazes #45",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #45 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1jFUQNZaN0pPjSwf8--l1SlCTti9Uc0Fl",
+  "backdrop": "https://lh3.googleusercontent.com/d/1jFUQNZaN0pPjSwf8--l1SlCTti9Uc0Fl",
+  "readerUrl": "https://drive.google.com/file/d/1xLjn7RpYCP86n10hMrl13oSfGjwppUwE/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-57-the-boys-os-rapazes-46",
+  "title": "The Boys - Os Rapazes #46",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #46 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/177Anf62DixWGoLuM-0qy8Mc0n7p81xdT",
+  "backdrop": "https://lh3.googleusercontent.com/d/177Anf62DixWGoLuM-0qy8Mc0n7p81xdT",
+  "readerUrl": "https://drive.google.com/file/d/1fiVLGDvO1055YCahRRBsMPCCqPjTb9RF/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-58-the-boys-os-rapazes-47",
+  "title": "The Boys - Os Rapazes #47",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #47 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1roEJK637ap2IOWA0eTqEw8OLmiHprywk",
+  "backdrop": "https://lh3.googleusercontent.com/d/1roEJK637ap2IOWA0eTqEw8OLmiHprywk",
+  "readerUrl": "https://drive.google.com/file/d/1xt6nrjBo6MKY8Ty0EIa_Qe3tooGGFiEr/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-59-the-boys-os-rapazes-48",
+  "title": "The Boys - Os Rapazes #48",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #48 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1b1PFUEmqu35YC7mS-SOU9sEkgRxt21eK",
+  "backdrop": "https://lh3.googleusercontent.com/d/1b1PFUEmqu35YC7mS-SOU9sEkgRxt21eK",
+  "readerUrl": "https://drive.google.com/file/d/1VFJ33R5aGngnK83AUeoQJr9RNKgXx-K6/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-60-the-boys-os-rapazes-49",
+  "title": "The Boys - Os Rapazes #49",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #49 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1NL43CB23YV7bOHl7Kw-H2fjRse-nRkcS",
+  "backdrop": "https://lh3.googleusercontent.com/d/1NL43CB23YV7bOHl7Kw-H2fjRse-nRkcS",
+  "readerUrl": "https://drive.google.com/file/d/1meZ4JkXXFVfcOFL6kUP6FOqQsDZVF6vP/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-61-the-boys-os-rapazes-50",
+  "title": "The Boys - Os Rapazes #50",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #50 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LevcuWd2a1bfjRimN_QQSad4Nbs-mwpu",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LevcuWd2a1bfjRimN_QQSad4Nbs-mwpu",
+  "readerUrl": "https://drive.google.com/file/d/15TxZy5Ka1keSB_7IQWwVrzlRAW8SQewi/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-62-the-boys-os-rapazes-51",
+  "title": "The Boys - Os Rapazes #51",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #51 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1upFOVVAZpO_gKfgbZudH_Ej3fLmfbv9c",
+  "backdrop": "https://lh3.googleusercontent.com/d/1upFOVVAZpO_gKfgbZudH_Ej3fLmfbv9c",
+  "readerUrl": "https://drive.google.com/file/d/19EHQySXUUE9ZGTErtmTvwSscE7WRMQqy/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-63-the-boys-os-rapazes-52",
+  "title": "The Boys - Os Rapazes #52",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #52 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1aKf5sFGSyDLaqiJw5_9vBSsy0Q5HD8MT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1aKf5sFGSyDLaqiJw5_9vBSsy0Q5HD8MT",
+  "readerUrl": "https://drive.google.com/file/d/1OHdJvagorYKP1qNHC21T1mIOb06VFydl/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-64-the-boys-os-rapazes-53",
+  "title": "The Boys - Os Rapazes #53",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #53 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1B-sCPbvSxT73m-o6ZpXWgNmeJHfjgKM6",
+  "backdrop": "https://lh3.googleusercontent.com/d/1B-sCPbvSxT73m-o6ZpXWgNmeJHfjgKM6",
+  "readerUrl": "https://drive.google.com/file/d/1Gx4jv5ffClR8-cZMjrHkSFEotHTr9wgm/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-65-the-boys-os-rapazes-54",
+  "title": "The Boys - Os Rapazes #54",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #54 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14En1tUVj_DQv-Qzlb5TdMmRu0derxSD6",
+  "backdrop": "https://lh3.googleusercontent.com/d/14En1tUVj_DQv-Qzlb5TdMmRu0derxSD6",
+  "readerUrl": "https://drive.google.com/file/d/1bF8pOC_pZmU_cD61MmfDWR1IE12vlZ9e/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-66-the-boys-os-rapazes-55",
+  "title": "The Boys - Os Rapazes #55",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #55 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1XsxePlShQfLXCE2bwlkM3B7GzPBr8ZmW",
+  "backdrop": "https://lh3.googleusercontent.com/d/1XsxePlShQfLXCE2bwlkM3B7GzPBr8ZmW",
+  "readerUrl": "https://drive.google.com/file/d/1mvvkRq4T2sHK7YobiIJnDMJ2fEa8SU3R/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-67-the-boys-os-rapazes-56",
+  "title": "The Boys - Os Rapazes #56",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #56 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1nfPmez1osKHF-rPUSdOCfnqhSb17NnrT",
+  "backdrop": "https://lh3.googleusercontent.com/d/1nfPmez1osKHF-rPUSdOCfnqhSb17NnrT",
+  "readerUrl": "https://drive.google.com/file/d/1cP80qdD61Ird6jEAoISh2UCALNDw4KrM/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-68-the-boys-os-rapazes-57",
+  "title": "The Boys - Os Rapazes #57",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #57 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1LZdxMYAlYoRKmEB5F7g9Qe8Piv3pOpLt",
+  "backdrop": "https://lh3.googleusercontent.com/d/1LZdxMYAlYoRKmEB5F7g9Qe8Piv3pOpLt",
+  "readerUrl": "https://drive.google.com/file/d/1WNBJNytRYmg_R3auPJcx8D4YuK8KUK-M/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-69-the-boys-os-rapazes-58",
+  "title": "The Boys - Os Rapazes #58",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #58 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/149Hku1UkTdlI6avqzOLwcS0p20aRsEWz",
+  "backdrop": "https://lh3.googleusercontent.com/d/149Hku1UkTdlI6avqzOLwcS0p20aRsEWz",
+  "readerUrl": "https://drive.google.com/file/d/15mbgIVLbUEebRVMMG0O1_pvcWCEV73cs/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-70-the-boys-os-rapazes-59",
+  "title": "The Boys - Os Rapazes #59",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #59 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Bh1n7HyoC5TSjuLQtcVrIp8sVNOfc2yh",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Bh1n7HyoC5TSjuLQtcVrIp8sVNOfc2yh",
+  "readerUrl": "https://drive.google.com/file/d/1rrsMJ2jFEIGYcgQ7GTEoHe_W2XGjrp0G/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-71-the-boys-os-rapazes-60",
+  "title": "The Boys - Os Rapazes #60",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #60 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15gNw_hLE7ivmMGTxQNniqxN6P4s2qPhX",
+  "backdrop": "https://lh3.googleusercontent.com/d/15gNw_hLE7ivmMGTxQNniqxN6P4s2qPhX",
+  "readerUrl": "https://drive.google.com/file/d/1hHXLuJAx8jTWVVs5toy3ngzItCz7aiuS/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-72-the-boys-os-rapazes-61",
+  "title": "The Boys - Os Rapazes #61",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #61 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/15UdUTEYQubUdpr1-JW_1mCtbrRjfCsKy",
+  "backdrop": "https://lh3.googleusercontent.com/d/15UdUTEYQubUdpr1-JW_1mCtbrRjfCsKy",
+  "readerUrl": "https://drive.google.com/file/d/1IE_wLPyY1SiCPh1-pzQhoKKEsGlKAeKz/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-73-the-boys-os-rapazes-62",
+  "title": "The Boys - Os Rapazes #62",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #62 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1pE6vFqmDVbkl7p_JwfNtaC78rV4k2rwy",
+  "backdrop": "https://lh3.googleusercontent.com/d/1pE6vFqmDVbkl7p_JwfNtaC78rV4k2rwy",
+  "readerUrl": "https://drive.google.com/file/d/1B8CGq-sKKchLLC3gcjs7T9CoB-CUcLQP/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-74-the-boys-os-rapazes-63",
+  "title": "The Boys - Os Rapazes #63",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #63 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xCkC-yaeLO4Xr-IkebnNio2TvEqVdh7v",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xCkC-yaeLO4Xr-IkebnNio2TvEqVdh7v",
+  "readerUrl": "https://drive.google.com/file/d/1F9GhLv7CiUObzoRiwSikYC5rWMOCqw6H/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-75-the-boys-os-rapazes-64",
+  "title": "The Boys - Os Rapazes #64",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #64 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1a96QY7K0bttiZoReGT3bp7d8D1pfeTc3",
+  "backdrop": "https://lh3.googleusercontent.com/d/1a96QY7K0bttiZoReGT3bp7d8D1pfeTc3",
+  "readerUrl": "https://drive.google.com/file/d/1qrqt_JIwCyeroynT1NobgtBhiIaBWDpf/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-76-the-boys-os-rapazes-65",
+  "title": "The Boys - Os Rapazes #65",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #65 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/16lPDydaa304pxJUKPZYM7ZeKipx-7ues",
+  "backdrop": "https://lh3.googleusercontent.com/d/16lPDydaa304pxJUKPZYM7ZeKipx-7ues",
+  "readerUrl": "https://drive.google.com/file/d/1eUhc-g5zEkuK9QDMYfYWCL6uhK6eBORI/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-77-the-boys-os-rapazes-66",
+  "title": "The Boys - Os Rapazes #66",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #66 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1qpv-EhvIhKhAzC6kJoiZruzTdZXtGs7f",
+  "backdrop": "https://lh3.googleusercontent.com/d/1qpv-EhvIhKhAzC6kJoiZruzTdZXtGs7f",
+  "readerUrl": "https://drive.google.com/file/d/1EB0h2SxA5iIsg3AjGdVvi-6Rb99jz-jN/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-78-the-boys-os-rapazes-67",
+  "title": "The Boys - Os Rapazes #67",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #67 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1a_iUc992elL2D2WLcGFHlX00H0KkIPRF",
+  "backdrop": "https://lh3.googleusercontent.com/d/1a_iUc992elL2D2WLcGFHlX00H0KkIPRF",
+  "readerUrl": "https://drive.google.com/file/d/1TTF00qgDIo_QAdMwCCZp5DK-ohHVTI8C/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-79-the-boys-os-rapazes-68",
+  "title": "The Boys - Os Rapazes #68",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #68 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1xl-ej4dD5S5nJCHNvvKw2Gj6KpCBswPY",
+  "backdrop": "https://lh3.googleusercontent.com/d/1xl-ej4dD5S5nJCHNvvKw2Gj6KpCBswPY",
+  "readerUrl": "https://drive.google.com/file/d/1z6hGBJyLtnRRFahbMD-pVaNhIiiuXu5c/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-80-the-boys-os-rapazes-69",
+  "title": "The Boys - Os Rapazes #69",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #69 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1ApOtuAYip6KqApwtQOeDT0pyWI1Z8pmj",
+  "backdrop": "https://lh3.googleusercontent.com/d/1ApOtuAYip6KqApwtQOeDT0pyWI1Z8pmj",
+  "readerUrl": "https://drive.google.com/file/d/14RVVhvgExNI4DA4PUKp9Bod38tgsD02L/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-81-the-boys-os-rapazes-70",
+  "title": "The Boys - Os Rapazes #70",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #70 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1lMKoqZTQJPLZjIdAW0FdHAXrXF3XuEPw",
+  "backdrop": "https://lh3.googleusercontent.com/d/1lMKoqZTQJPLZjIdAW0FdHAXrXF3XuEPw",
+  "readerUrl": "https://drive.google.com/file/d/16VMPSyjV5lfnLBbppzyLsiduychM7T1-/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-82-the-boys-os-rapazes-71",
+  "title": "The Boys - Os Rapazes #71",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #71 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1h0K9hEb-w04MULBNlGapufeA6riaF6Go",
+  "backdrop": "https://lh3.googleusercontent.com/d/1h0K9hEb-w04MULBNlGapufeA6riaF6Go",
+  "readerUrl": "https://drive.google.com/file/d/1VcDV2X3CekLgWBfdWKM8Nk7GAVkZgSi4/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-83-the-boys-os-rapazes-72",
+  "title": "The Boys - Os Rapazes #72",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys - Os Rapazes #72 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/14BCHzRCdduLMEyPSPhyLrDPm6aDyw3jA",
+  "backdrop": "https://lh3.googleusercontent.com/d/14BCHzRCdduLMEyPSPhyLrDPm6aDyw3jA",
+  "readerUrl": "https://drive.google.com/file/d/1iVmgOVFVuXG56VxeWxnfj1ZGqjndDzV9/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-84-the-boys-a-ougueiro-padeiro-fabricante-de-casti-ais-01",
+  "title": "The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #01",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #01 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/173acPbjv2RkR9mh9SvVVgaxpFPxvFYTu",
+  "backdrop": "https://lh3.googleusercontent.com/d/173acPbjv2RkR9mh9SvVVgaxpFPxvFYTu",
+  "readerUrl": "https://drive.google.com/file/d/13zl1_9CrOXhH__6eNWgGZjJu9qhLV2rH/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-85-the-boys-a-ougueiro-padeiro-fabricante-de-casti-ais-02",
+  "title": "The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #02",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #02 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oCStBDLK5EZ5crcydl93Pq48EojjQj98",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oCStBDLK5EZ5crcydl93Pq48EojjQj98",
+  "readerUrl": "https://drive.google.com/file/d/1ANInHzBF9_CwouLtORu2kXgZTgVaW70j/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-86-the-boys-a-ougueiro-padeiro-fabricante-de-casti-ais-03",
+  "title": "The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #03",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #03 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1M9-pm8fqsOexxpqrmsJrw5J9DuQnoQUx",
+  "backdrop": "https://lh3.googleusercontent.com/d/1M9-pm8fqsOexxpqrmsJrw5J9DuQnoQUx",
+  "readerUrl": "https://drive.google.com/file/d/1Wbtx7BP3ibABg5zm27gW89bJ19LGkVCl/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-87-the-boys-a-ougueiro-padeiro-fabricante-de-casti-ais-04",
+  "title": "The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #04",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #04 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1DJ2VsAKLA_4pamxw2SO5vWWlaCZMjoZm",
+  "backdrop": "https://lh3.googleusercontent.com/d/1DJ2VsAKLA_4pamxw2SO5vWWlaCZMjoZm",
+  "readerUrl": "https://drive.google.com/file/d/1qGPixy8gqrmQgMTgEmEsVAI4Hztlmxpg/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-88-the-boys-a-ougueiro-padeiro-fabricante-de-casti-ais-05",
+  "title": "The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #05",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #05 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1eYkqjkeLVZ0UCwt162lY0zWRToc9V30j",
+  "backdrop": "https://lh3.googleusercontent.com/d/1eYkqjkeLVZ0UCwt162lY0zWRToc9V30j",
+  "readerUrl": "https://drive.google.com/file/d/1ZzvEwP0Dt_cVYw66zm9QWjinybhy-vPS/view?usp=drive_link"
+},
+  {
+  "id": "hq-the-boys-89-the-boys-a-ougueiro-padeiro-fabricante-de-casti-ais-06",
+  "title": "The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #06",
+  "author": "Garth Ennis & Darick Robertson",
+  "publisher": "marvel",
+  "year": 2006,
+  "duration": "HQ / Quadrinho (PDF)",
+  "rating": 9.9,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "HQs & Quadrinhos",
+    "Ação & Aventura",
+    "Marvel"
+  ],
+  "description": "Edição The Boys: Açougueiro, Padeiro, Fabricante de Castiçais #06 de Garth Ennis e Darick Robertson em formato PDF. A aclamada e chocante saga de anti-heróis de The Boys. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1Q6hI3E06c_f62f-1bRpMfh0QfaANXaNG",
+  "backdrop": "https://lh3.googleusercontent.com/d/1Q6hI3E06c_f62f-1bRpMfh0QfaANXaNG",
+  "readerUrl": "https://drive.google.com/file/d/1kZwtVaPRvzY3KuCBLEA9OyEEc9AsloIS/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [

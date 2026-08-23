@@ -2026,7 +2026,7 @@ const STATE = {
           (b.publisher === 'marvel') ||
           (b.author && b.author.toLowerCase().includes('marvel')) ||
           (b.genres && b.genres.includes('Marvel')) ||
-          (b.title && b.title.toLowerCase().includes('deadpool'))
+          (b.title && (b.title.toLowerCase().includes('deadpool') || b.title.toLowerCase().includes('the boys')))
         );
       } else if (currentPublisher === 'dc') {
         books = books.filter(b => 
