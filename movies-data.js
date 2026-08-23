@@ -26041,6 +26041,47 @@ const DEFAULT_BOOKS = [
   "backdrop": "https://lh3.googleusercontent.com/d/1Q6hI3E06c_f62f-1bRpMfh0QfaANXaNG",
   "readerUrl": "https://drive.google.com/file/d/1kZwtVaPRvzY3KuCBLEA9OyEEc9AsloIS/view?usp=drive_link"
 }
+,
+  {
+  "id": "manga-saint-seiya-18",
+  "title": "Saint Seiya - Os Cavaleiros do Zodíaco (Volume 18)",
+  "author": "Masami Kurumada",
+  "publisher": "saint_seiya",
+  "year": 1986,
+  "duration": "Mangá (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Mangás & Anime",
+    "Ação & Aventura",
+    "Fantasia & Ficção"
+  ],
+  "description": "Mangá Saint Seiya - Os Cavaleiros do Zodíaco (Volume 18) de Masami Kurumada em formato PDF. A lendária saga dos Cavaleiros de Atena contra as forças do mal. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1tAB4EO4rb4wJtZOyPPPNVtw8shBr7fCA",
+  "backdrop": "https://lh3.googleusercontent.com/d/1tAB4EO4rb4wJtZOyPPPNVtw8shBr7fCA",
+  "readerUrl": "https://drive.google.com/file/d/1KmNoZ0IKHFNKpSR3QitgUV5m_ZRHvRqZ/view?usp=drive_link"
+},
+  {
+  "id": "manga-saint-seiya-20",
+  "title": "Saint Seiya - Os Cavaleiros do Zodíaco (Volume 20)",
+  "author": "Masami Kurumada",
+  "publisher": "saint_seiya",
+  "year": 1986,
+  "duration": "Mangá (PDF)",
+  "rating": 10,
+  "type": "book",
+  "featured": true,
+  "genres": [
+    "Mangás & Anime",
+    "Ação & Aventura",
+    "Fantasia & Ficção"
+  ],
+  "description": "Mangá Saint Seiya - Os Cavaleiros do Zodíaco (Volume 20) de Masami Kurumada em formato PDF. A lendária saga dos Cavaleiros de Atena contra as forças do mal. Clique para ler!",
+  "poster": "https://lh3.googleusercontent.com/d/1oGVu9yW4Z-12IH6NyG5Jkq0ELGjbKtkX",
+  "backdrop": "https://lh3.googleusercontent.com/d/1oGVu9yW4Z-12IH6NyG5Jkq0ELGjbKtkX",
+  "readerUrl": "https://drive.google.com/file/d/1Mi1IUKpwsPfrG1HBTnk3Q4hc3y-45mcQ/view?usp=drive_link"
+}
 ];
 
 const BOOK_GENRES = [
@@ -26048,6 +26089,7 @@ const BOOK_GENRES = [
   "Turma da Mônica",
   "Psicologia & Saúde Mental",
   "Infantil & Família",
+  "Mangás & Anime",
   "HQs & Quadrinhos",
   "Romance & Drama",
   "Fantasia & Ficção",

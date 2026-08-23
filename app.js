@@ -2057,6 +2057,12 @@ const STATE = {
           (b.publisher === 'infantil') ||
           (b.genres && (b.genres.includes('Infantil & Família') || b.genres.includes('Infantil')))
         );
+      } else if (currentPublisher === 'saint_seiya') {
+        books = books.filter(b => 
+          (b.publisher === 'saint_seiya') ||
+          (b.title && (b.title.toLowerCase().includes('saint seiya') || b.title.toLowerCase().includes('cavaleiros do zodiaco') || b.title.toLowerCase().includes('cavaleiros do zodíaco'))) ||
+          (b.genres && (b.genres.includes('Saint Seiya') || b.genres.includes('Mangás & Anime')))
+        );
       }
 
       // Apply Search Query
