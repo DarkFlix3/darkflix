@@ -263,6 +263,10 @@ const STATE = {
   watchStart: null,
   watchInterval: null,
   currentWatchItem: null,
+  nextEpisodeInfo: null,
+  nextEpCountdownInterval: null,
+  nextEpCardVisible: false,
+  nextEpCardDismissed: false,
   devicesListenerRef: null,
   adminVisitsListener: null,
   adminUniqueDevicesListener: null,
@@ -465,6 +469,17 @@ const STATE = {
       cinemaRewindBtn: $('#cinema-rewind-btn'),
       cinemaForwardBtn: $('#cinema-forward-btn'),
       cinemaFullscreenBtn: $('#cinema-fullscreen-btn'),
+      cinemaNextEpBtn: $('#cinema-next-ep-btn'),
+      cinemaFloatingNextEpBtn: $('#cinema-floating-next-ep-btn'),
+      cinemaNextEpCard: $('#cinema-next-ep-card'),
+      nextEpDismissBtn: $('#next-ep-dismiss-btn'),
+      nextEpCardThumb: $('#next-ep-card-thumb'),
+      nextEpCardTitle: $('#next-ep-card-title'),
+      nextEpCardOverview: $('#next-ep-card-overview'),
+      nextEpPlayNowBtn: $('#next-ep-play-now-btn'),
+      nextEpTimerText: $('#next-ep-timer-text'),
+      nextEpCountdown: $('#next-ep-countdown'),
+      nextEpProgressBar: $('#next-ep-progress-bar'),
       
       // Watch Party sidebar elements
       cinemaGuestBlocker: $('#cinema-guest-blocker'),
@@ -5120,6 +5135,175 @@ const STATE = {
     }
   });
 
+  // ---------- Netflix-Style Next Episode Feature ----------
+  function resetNextEpisodeUI() {
+    STATE.nextEpCardVisible = false;
+    STATE.nextEpCardDismissed = false;
+    if (STATE.nextEpCountdownInterval) {
+      clearInterval(STATE.nextEpCountdownInterval);
+      STATE.nextEpCountdownInterval = null;
+    }
+    if (DOM.cinemaNextEpCard) DOM.cinemaNextEpCard.style.display = 'none';
+    if (DOM.cinemaFloatingNextEpBtn) DOM.cinemaFloatingNextEpBtn.style.display = 'none';
+    if (DOM.cinemaNextEpBtn) DOM.cinemaNextEpBtn.style.display = 'none';
+  }
+
+  function dismissNextEpisodeCard() {
+    STATE.nextEpCardDismissed = true;
+    STATE.nextEpCardVisible = false;
+    if (STATE.nextEpCountdownInterval) {
+      clearInterval(STATE.nextEpCountdownInterval);
+      STATE.nextEpCountdownInterval = null;
+    }
+    if (DOM.cinemaNextEpCard) {
+      DOM.cinemaNextEpCard.style.display = 'none';
+    }
+  }
+
+  function showNetflixNextEpisodeCard() {
+    if (!STATE.nextEpisodeInfo || STATE.nextEpCardDismissed || STATE.nextEpCardVisible) return;
+    STATE.nextEpCardVisible = true;
+
+    if (DOM.cinemaNextEpCard) {
+      DOM.cinemaNextEpCard.style.display = 'flex';
+    }
+
+    let countdownSecs = 15;
+    const totalCountdown = 15;
+    
+    if (DOM.nextEpCountdown) DOM.nextEpCountdown.textContent = `(${countdownSecs}s)`;
+    if (DOM.nextEpProgressBar) DOM.nextEpProgressBar.style.width = '100%';
+
+    if (STATE.nextEpCountdownInterval) {
+      clearInterval(STATE.nextEpCountdownInterval);
+    }
+
+    STATE.nextEpCountdownInterval = setInterval(() => {
+      countdownSecs--;
+      if (DOM.nextEpCountdown) DOM.nextEpCountdown.textContent = `(${countdownSecs}s)`;
+      if (DOM.nextEpProgressBar) {
+        const pct = (countdownSecs / totalCountdown) * 100;
+        DOM.nextEpProgressBar.style.width = `${Math.max(0, pct)}%`;
+      }
+
+      if (countdownSecs <= 0) {
+        clearInterval(STATE.nextEpCountdownInterval);
+        STATE.nextEpCountdownInterval = null;
+        playNextEpisode();
+      }
+    }, 1000);
+  }
+
+  function playNextEpisode() {
+    if (!STATE.nextEpisodeInfo) return;
+    const next = STATE.nextEpisodeInfo;
+    resetNextEpisodeUI();
+
+    showToast(`🍿 Iniciando: T${next.season}:E${next.episode} — ${next.title}`, 'info');
+
+    const newTitle = `${next.seriesName} — T${next.season}:E${next.episode}`;
+    openCinema(next.tmdbId, newTitle, 'tv', next.season, next.episode);
+  }
+
+  async function setupNextEpisodeTracker(tmdbId, currentTitle, seasonNum, episodeNum) {
+    if (!seasonNum || !episodeNum) return;
+    const sNum = parseInt(seasonNum);
+    const epNum = parseInt(episodeNum);
+    STATE.nextEpisodeInfo = null;
+    STATE.nextEpCardDismissed = false;
+
+    try {
+      // 1. Fetch current season data to find next episode and current episode runtime
+      const currentSeasonData = await tmdbFetch(`/tv/${tmdbId}/season/${sNum}`);
+      const episodes = currentSeasonData.episodes || [];
+      
+      // Update runtime if available
+      const currEpObj = episodes.find(e => parseInt(e.episode_number) === epNum);
+      if (currEpObj && currEpObj.runtime && STATE.currentWatchItem) {
+        STATE.currentWatchItem.runtimeSeconds = currEpObj.runtime * 60;
+      }
+
+      // Check if next episode exists in the current season
+      const nextEpObj = episodes.find(e => parseInt(e.episode_number) === epNum + 1);
+      
+      let seriesName = '';
+      if (currentTitle.includes('—')) {
+        seriesName = currentTitle.split('—')[0].trim();
+      } else if (currentTitle.includes('-')) {
+        seriesName = currentTitle.split('-')[0].trim();
+      } else if (STATE.currentMovieDetail) {
+        seriesName = STATE.currentMovieDetail.name || STATE.currentMovieDetail.title || 'Série';
+      } else {
+        seriesName = 'Série';
+      }
+
+      if (nextEpObj) {
+        // Next episode in the same season
+        const stillPath = nextEpObj.still_path 
+          ? `https://image.tmdb.org/t/p/w300${nextEpObj.still_path}`
+          : (STATE.currentMovieDetail && STATE.currentMovieDetail.backdrop_path ? `https://image.tmdb.org/t/p/w300${STATE.currentMovieDetail.backdrop_path}` : '');
+
+        STATE.nextEpisodeInfo = {
+          tmdbId: tmdbId,
+          seriesName: seriesName,
+          season: sNum,
+          episode: epNum + 1,
+          title: nextEpObj.name || `Episódio ${epNum + 1}`,
+          overview: nextEpObj.overview || 'Clique para assistir ao próximo capítulo.',
+          still: stillPath
+        };
+      } else {
+        // Last episode of the season! Check if next season (sNum + 1) exists
+        try {
+          const nextSeasonData = await tmdbFetch(`/tv/${tmdbId}/season/${sNum + 1}`);
+          const nextSeasonEpisodes = nextSeasonData.episodes || [];
+          if (nextSeasonEpisodes.length > 0) {
+            const firstEpNextSeason = nextSeasonEpisodes[0];
+            const stillPath = firstEpNextSeason.still_path 
+              ? `https://image.tmdb.org/t/p/w300${firstEpNextSeason.still_path}`
+              : (STATE.currentMovieDetail && STATE.currentMovieDetail.backdrop_path ? `https://image.tmdb.org/t/p/w300${STATE.currentMovieDetail.backdrop_path}` : '');
+
+            STATE.nextEpisodeInfo = {
+              tmdbId: tmdbId,
+              seriesName: seriesName,
+              season: sNum + 1,
+              episode: 1,
+              title: firstEpNextSeason.name || `Episódio 1`,
+              overview: firstEpNextSeason.overview || 'Início da nova temporada.',
+              still: stillPath
+            };
+          }
+        } catch (err) {
+          // Season sNum + 1 does not exist (series finale)
+          STATE.nextEpisodeInfo = null;
+        }
+      }
+
+      // If next episode is found, show the quick buttons and populate card preview!
+      if (STATE.nextEpisodeInfo && DOM.cinemaMode.classList.contains('active')) {
+        if (DOM.cinemaNextEpBtn) DOM.cinemaNextEpBtn.style.display = 'inline-flex';
+        if (DOM.cinemaFloatingNextEpBtn) DOM.cinemaFloatingNextEpBtn.style.display = 'flex';
+        
+        if (DOM.nextEpCardTitle) {
+          DOM.nextEpCardTitle.textContent = `T${STATE.nextEpisodeInfo.season}:E${STATE.nextEpisodeInfo.episode} — ${STATE.nextEpisodeInfo.title}`;
+        }
+        if (DOM.nextEpCardOverview) {
+          DOM.nextEpCardOverview.textContent = STATE.nextEpisodeInfo.overview;
+        }
+        if (DOM.nextEpCardThumb) {
+          if (STATE.nextEpisodeInfo.still) {
+            DOM.nextEpCardThumb.src = STATE.nextEpisodeInfo.still;
+            DOM.nextEpCardThumb.style.display = 'block';
+          } else {
+            DOM.nextEpCardThumb.style.display = 'none';
+          }
+        }
+      }
+    } catch (e) {
+      console.warn("Erro ao buscar próximo episódio:", e);
+    }
+  }
+
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
     // Remover foco de elementos anteriores para não carregar iframe focado
@@ -5145,6 +5329,9 @@ const STATE = {
       clearInterval(STATE.watchInterval);
       STATE.watchInterval = null;
     }
+
+    // Reset next episode UI
+    resetNextEpisodeUI();
 
     // Load existing progress from memory
     const existingProgress = STATE.inProgress.find(x => Number(x.id) === Number(tmdbId));
@@ -5178,7 +5365,7 @@ const STATE = {
         elapsedTime: initialElapsedTime,
         percent: initialPercent || 5,
         season: season ? parseInt(season) : null,
-        episode: episode ? parseInt(season) : null
+        episode: episode ? parseInt(episode) : null
       });
     }
 
@@ -5212,8 +5399,22 @@ const STATE = {
             episode: STATE.currentWatchItem.episode
           });
         }
+
+        // Trigger Netflix-style Next Episode card when near the end of runtime
+        if (STATE.currentWatchItem.type === 'tv' && STATE.nextEpisodeInfo && !STATE.nextEpCardDismissed && !STATE.nextEpCardVisible) {
+          const runtime = STATE.currentWatchItem.runtimeSeconds || 2700;
+          const triggerThreshold = Math.max(runtime * 0.85, runtime - 90);
+          if (totalElapsed >= triggerThreshold && totalElapsed >= 60) {
+            showNetflixNextEpisodeCard();
+          }
+        }
       }
     }, 15000);
+
+    // If TV series episode, prepare next episode detection
+    if (type === 'tv' && season && episode) {
+      setupNextEpisodeTracker(tmdbId, title, season, episode);
+    }
 
     const tempMovieDetail = STATE.currentMovieDetail;
     stopMainHeroTrailer();
@@ -5447,6 +5648,9 @@ const STATE = {
       }
       STATE.currentWatchItem = null;
     }
+
+    resetNextEpisodeUI();
+    STATE.nextEpisodeInfo = null;
 
     DOM.cinemaMode.classList.remove('active');
     DOM.cinemaIframe.src = '';
@@ -8185,6 +8389,16 @@ const STATE = {
     // Close buttons modal & cinema
     DOM.modalCloseBtn.onclick = () => closeDetail();
     DOM.cinemaCloseBtn.onclick = () => closeCinema();
+
+    // Netflix-Style Next Episode event listeners
+    if (DOM.nextEpPlayNowBtn) DOM.nextEpPlayNowBtn.onclick = () => playNextEpisode();
+    if (DOM.nextEpDismissBtn) DOM.nextEpDismissBtn.onclick = () => dismissNextEpisodeCard();
+    if (DOM.cinemaNextEpBtn) DOM.cinemaNextEpBtn.onclick = () => playNextEpisode();
+    if (DOM.cinemaFloatingNextEpBtn) DOM.cinemaFloatingNextEpBtn.onclick = () => playNextEpisode();
+    if (DOM.nextEpCardThumb) {
+      const thumbWrapper = DOM.nextEpCardThumb.closest('.next-ep-card-thumb-wrapper');
+      if (thumbWrapper) thumbWrapper.onclick = () => playNextEpisode();
+    }
 
 
     // Modals backdrop clicks to close

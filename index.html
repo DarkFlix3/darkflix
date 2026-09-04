@@ -18,7 +18,7 @@
   <meta name="description" content="DarkFlix - Sua plataforma de streaming premium. Assista filmes e séries sem cadastro, com qualidade cinematográfica.">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>DarkFlix — Filmes & Séries</title>
-  <link rel="stylesheet" href="style.css?v=3.0.0">
+  <link rel="stylesheet" href="style.css?v=3.1.0">
   <link rel="icon" href="assets/favicon1.jpg">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 </head>
@@ -697,6 +697,40 @@
           <div id="cinema-top-right-mask" class="cinema-top-right-mask" style="display: none;">
             <span style="color: #e50914; font-weight: 800; letter-spacing: 1.5px; font-family: 'Montserrat', sans-serif; text-transform: uppercase;">DARKFLIX</span>
           </div>
+
+          <!-- Netflix-Style Next Episode Floating Quick Button -->
+          <button id="cinema-floating-next-ep-btn" class="cinema-floating-next-ep-btn" style="display: none;" title="Pular para o próximo episódio">
+            <span>Próximo Episódio</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+
+          <!-- Netflix-Style Next Episode Floating Card Overlay -->
+          <div id="cinema-next-ep-card" class="cinema-next-ep-card" style="display: none;">
+            <button id="next-ep-dismiss-btn" class="next-ep-dismiss-btn" title="Dispensar e continuar assistindo">✕</button>
+            <div class="next-ep-card-thumb-wrapper">
+              <img id="next-ep-card-thumb" src="" alt="Próximo Episódio">
+              <div class="next-ep-card-play-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+            <div class="next-ep-card-content">
+              <div class="next-ep-badge-row">
+                <span class="next-ep-badge">PRÓXIMO EPISÓDIO</span>
+              </div>
+              <h4 id="next-ep-card-title" class="next-ep-card-title">T1:E2 — Título</h4>
+              <p id="next-ep-card-overview" class="next-ep-card-overview"></p>
+              <div class="next-ep-card-actions">
+                <button id="next-ep-play-now-btn" class="btn-next-ep-play">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span id="next-ep-timer-text">Assistir Agora</span>
+                  <span id="next-ep-countdown" class="next-ep-countdown">(15s)</span>
+                </button>
+              </div>
+              <div class="next-ep-progress-bar-container">
+                <div id="next-ep-progress-bar" class="next-ep-progress-bar"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -799,6 +833,10 @@
       📱 <strong>Dica Mobile:</strong> Gire o celular na <strong>horizontal (deitado)</strong> para entrar automaticamente no modo tela cheia e ocultar os botões.
     </p>
     <div class="cinema-actions" style="margin-top: 15px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <button id="cinema-next-ep-btn" class="btn btn-primary btn-small" style="display: none; align-items: center; gap: 8px; padding: 10px 20px; background: #e50914; border-color: #e50914; color: #fff; font-weight: 700; box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Próximo Episódio
+      </button>
       <button id="cinema-pip-btn" class="btn btn-secondary btn-small btn-pip" style="display: none; align-items: center; gap: 6px; padding: 10px 20px;">
         📺 Minimizar (PiP)
       </button>
@@ -1153,6 +1191,6 @@
 
   <!-- Scripts -->
   <script src="movies-data.js?v=11.7.0"></script>
-  <script type="module" src="app.js?v=11.7.0"></script>
+  <script type="module" src="app.js?v=11.8.0"></script>
 </body>
 </html>
