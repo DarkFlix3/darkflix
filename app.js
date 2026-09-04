@@ -264,12 +264,6 @@ const STATE = {
   watchInterval: null,
   currentWatchItem: null,
   nextEpisodeInfo: null,
-  nextEpCountdownInterval: null,
-  nextEpCardVisible: false,
-  nextEpCardDismissed: false,
-  playerDuration: null,
-  lastPlayerTime: 0,
-  iframePingInterval: null,
   devicesListenerRef: null,
   adminVisitsListener: null,
   adminUniqueDevicesListener: null,
@@ -473,16 +467,6 @@ const STATE = {
       cinemaForwardBtn: $('#cinema-forward-btn'),
       cinemaFullscreenBtn: $('#cinema-fullscreen-btn'),
       cinemaNextEpBtn: $('#cinema-next-ep-btn'),
-      cinemaFloatingNextEpBtn: $('#cinema-floating-next-ep-btn'),
-      cinemaNextEpCard: $('#cinema-next-ep-card'),
-      nextEpDismissBtn: $('#next-ep-dismiss-btn'),
-      nextEpCardThumb: $('#next-ep-card-thumb'),
-      nextEpCardTitle: $('#next-ep-card-title'),
-      nextEpCardOverview: $('#next-ep-card-overview'),
-      nextEpPlayNowBtn: $('#next-ep-play-now-btn'),
-      nextEpTimerText: $('#next-ep-timer-text'),
-      nextEpCountdown: $('#next-ep-countdown'),
-      nextEpProgressBar: $('#next-ep-progress-bar'),
       
       // Watch Party sidebar elements
       cinemaGuestBlocker: $('#cinema-guest-blocker'),
@@ -5136,231 +5120,15 @@ const STATE = {
   window.addEventListener('message', (e) => {
     if (!e || !e.data) return;
     esconderMascarasCinema();
-    handlePlayerProgressMessage(e.data);
   });
 
-  function handlePlayerProgressMessage(raw) {
-    if (!raw) return;
-
-    let data = raw;
-    if (typeof data === 'string') {
-      try {
-        data = JSON.parse(data);
-      } catch (err) {
-        const str = raw.toLowerCase().trim();
-        if (str.includes('ended') || str.includes('finish') || str.includes('complete')) {
-          checkAndTriggerNextEpisode(true);
-          return;
-        }
-        const timeMatch = str.match(/(?:time|position|seek(?:ed)?|currenttime|value)[:=,\s]+(\d+(?:\.\d+)?)/i);
-        const durMatch = str.match(/(?:duration|total|length)[:=,\s]+(\d+(?:\.\d+)?)/i);
-        if (timeMatch || durMatch) {
-          data = {};
-          if (timeMatch) data.time = parseFloat(timeMatch[1]);
-          if (durMatch) data.duration = parseFloat(durMatch[1]);
-        }
-      }
-    }
-
-    if (!data || typeof data !== 'object') return;
-
-    if (data.data && typeof data.data === 'string') {
-      try {
-        const nested = JSON.parse(data.data);
-        if (nested && typeof nested === 'object') {
-          data = Object.assign({}, data, nested);
-        }
-      } catch(e) {}
-    }
-
-    const eventName = (data.event || data.type || data.action || data.status || data.name || '').toString().toLowerCase();
-
-    // 1. Direct completion events
-    if (['ended', 'finish', 'finished', 'complete', 'completed', 'playback_ended', 'oncomplete'].some(ev => eventName.includes(ev))) {
-      checkAndTriggerNextEpisode(true);
-      return;
-    }
-
-    // 2. Extract Duration
-    const rawDur = Number(
-      data.duration ||
-      data.total ||
-      data.length ||
-      (data.data && data.data.duration) ||
-      (data.info && data.info.duration) ||
-      (eventName === 'duration' ? (data.value || data.time) : 0) ||
-      0
-    );
-    if (rawDur > 60) {
-      STATE.playerDuration = rawDur;
-      if (STATE.currentWatchItem) {
-        STATE.currentWatchItem.runtimeSeconds = rawDur;
-      }
-    }
-
-    // 3. Extract Current Time (PlayerJS uses value, JWPlayer uses position, others use time/currentTime)
-    let curTime = 0;
-    if (data.time !== undefined && !isNaN(Number(data.time))) curTime = Number(data.time);
-    else if (data.currentTime !== undefined && !isNaN(Number(data.currentTime))) curTime = Number(data.currentTime);
-    else if (data.position !== undefined && !isNaN(Number(data.position))) curTime = Number(data.position);
-    else if (data.seconds !== undefined && !isNaN(Number(data.seconds))) curTime = Number(data.seconds);
-    else if (data.val !== undefined && !isNaN(Number(data.val))) curTime = Number(data.val);
-    else if (data.offset !== undefined && !isNaN(Number(data.offset))) curTime = Number(data.offset);
-    else if (data.data && typeof data.data === 'object') {
-      curTime = Number(data.data.time || data.data.currentTime || data.data.position || data.data.value || 0);
-    } else if (typeof data.data === 'number') {
-      curTime = data.data;
-    } else if (data.info && typeof data.info === 'object') {
-      curTime = Number(data.info.currentTime || 0);
-    } else if ((eventName === 'time' || eventName === 'seek' || eventName === 'seeked' || eventName === 'timeupdate' || !eventName) && data.value !== undefined && !isNaN(Number(data.value))) {
-      curTime = Number(data.value);
-    }
-
-    if (isNaN(curTime) || curTime < 0) curTime = 0;
-
-    // 4. Extract Percentage
-    let percent = 0;
-    if (data.percentage !== undefined && !isNaN(Number(data.percentage))) percent = Number(data.percentage);
-    else if (data.percent !== undefined && !isNaN(Number(data.percent))) percent = Number(data.percent);
-    else if (data.progress !== undefined && !isNaN(Number(data.progress))) {
-      const p = Number(data.progress);
-      percent = p <= 1 ? p * 100 : p;
-    }
-
-    const effectiveDuration = Number(
-      STATE.playerDuration ||
-      (STATE.currentWatchItem && STATE.currentWatchItem.runtimeSeconds) ||
-      2700
-    );
-
-    if (curTime > 0) {
-      STATE.lastPlayerTime = curTime;
-      if (STATE.currentWatchItem) {
-        STATE.currentWatchItem.initialElapsedTime = curTime;
-        STATE.watchStart = Date.now();
-      }
-    }
-
-    // Determine if near the end (90s before end or >= 88% into the episode)
-    const isNearEndByTime = (curTime > 60 && effectiveDuration > 60 && (
-      (effectiveDuration - curTime <= 90) || (curTime / effectiveDuration >= 0.88)
-    ));
-    const isNearEndByPercent = (percent >= 88);
-
-    if (isNearEndByTime || isNearEndByPercent) {
-      checkAndTriggerNextEpisode(false);
-    } else if (curTime > 0 && curTime < effectiveDuration * 0.75) {
-      // If the user seeked backwards before the end, reset dismiss state so it can trigger again at the end
-      if (STATE.nextEpCardDismissed) {
-        STATE.nextEpCardDismissed = false;
-      }
-    }
-  }
-
-  function checkAndTriggerNextEpisode(isFinished = false) {
-    if (!DOM.cinemaMode || !DOM.cinemaMode.classList.contains('active')) return;
-    if (!STATE.currentWatchItem || STATE.currentWatchItem.type !== 'tv') return;
-    if (!STATE.nextEpisodeInfo) return;
-    if (STATE.nextEpCardVisible) return;
-    if (STATE.nextEpCardDismissed && !isFinished) return;
-
-    showNetflixNextEpisodeCard();
-  }
-
-  function startIframePing() {
-    if (STATE.iframePingInterval) clearInterval(STATE.iframePingInterval);
-    STATE.iframePingInterval = setInterval(() => {
-      if (!DOM.cinemaMode || !DOM.cinemaMode.classList.contains('active')) return;
-      if (!STATE.nextEpisodeInfo || STATE.nextEpCardVisible) return;
-      if (!DOM.cinemaIframe || !DOM.cinemaIframe.contentWindow) return;
-      try {
-        const win = DOM.cinemaIframe.contentWindow;
-        // PlayerJS API queries
-        win.postMessage('{"api":"time"}', '*');
-        win.postMessage('{"api":"duration"}', '*');
-        win.postMessage('{"api":"get_time"}', '*');
-        win.postMessage('api:time', '*');
-        // JWPlayer API queries
-        win.postMessage(JSON.stringify({ method: 'getPosition' }), '*');
-        win.postMessage(JSON.stringify({ method: 'getDuration' }), '*');
-        // Generic / Video.js / HTML5 queries
-        win.postMessage('{"type":"getCurrentTime"}', '*');
-        win.postMessage('{"action":"getTime"}', '*');
-      } catch(e) {}
-    }, 1200);
-  }
-
-  function stopIframePing() {
-    if (STATE.iframePingInterval) {
-      clearInterval(STATE.iframePingInterval);
-      STATE.iframePingInterval = null;
-    }
-  }
-
-  // ---------- Netflix-Style Next Episode Feature ----------
+  // ---------- Next Episode Feature (Button below Player) ----------
   function resetNextEpisodeUI() {
-    STATE.nextEpCardVisible = false;
-    STATE.nextEpCardDismissed = false;
-    STATE.playerDuration = null;
-    STATE.lastPlayerTime = 0;
-    if (STATE.nextEpCountdownInterval) {
-      clearInterval(STATE.nextEpCountdownInterval);
-      STATE.nextEpCountdownInterval = null;
+    STATE.nextEpisodeInfo = null;
+    if (DOM.cinemaNextEpBtn) {
+      DOM.cinemaNextEpBtn.style.display = 'none';
+      DOM.cinemaNextEpBtn.title = '';
     }
-    stopIframePing();
-    if (DOM.cinemaNextEpCard) DOM.cinemaNextEpCard.style.display = 'none';
-    if (DOM.cinemaFloatingNextEpBtn) DOM.cinemaFloatingNextEpBtn.style.display = 'none';
-    if (DOM.cinemaNextEpBtn) DOM.cinemaNextEpBtn.style.display = 'none';
-  }
-
-  function dismissNextEpisodeCard() {
-    STATE.nextEpCardDismissed = true;
-    STATE.nextEpCardVisible = false;
-    if (STATE.nextEpCountdownInterval) {
-      clearInterval(STATE.nextEpCountdownInterval);
-      STATE.nextEpCountdownInterval = null;
-    }
-    if (DOM.cinemaNextEpCard) {
-      DOM.cinemaNextEpCard.style.display = 'none';
-    }
-    // If card was dismissed during credits, show small floating button in corner
-    if (DOM.cinemaFloatingNextEpBtn && STATE.nextEpisodeInfo) {
-      DOM.cinemaFloatingNextEpBtn.style.display = 'flex';
-    }
-  }
-
-  function showNetflixNextEpisodeCard() {
-    if (!STATE.nextEpisodeInfo || STATE.nextEpCardDismissed || STATE.nextEpCardVisible) return;
-    STATE.nextEpCardVisible = true;
-
-    if (DOM.cinemaNextEpCard) {
-      DOM.cinemaNextEpCard.style.display = 'flex';
-    }
-
-    let countdownSecs = 15;
-    const totalCountdown = 15;
-    
-    if (DOM.nextEpCountdown) DOM.nextEpCountdown.textContent = `(${countdownSecs}s)`;
-    if (DOM.nextEpProgressBar) DOM.nextEpProgressBar.style.width = '100%';
-
-    if (STATE.nextEpCountdownInterval) {
-      clearInterval(STATE.nextEpCountdownInterval);
-    }
-
-    STATE.nextEpCountdownInterval = setInterval(() => {
-      countdownSecs--;
-      if (DOM.nextEpCountdown) DOM.nextEpCountdown.textContent = `(${countdownSecs}s)`;
-      if (DOM.nextEpProgressBar) {
-        const pct = (countdownSecs / totalCountdown) * 100;
-        DOM.nextEpProgressBar.style.width = `${Math.max(0, pct)}%`;
-      }
-
-      if (countdownSecs <= 0) {
-        clearInterval(STATE.nextEpCountdownInterval);
-        STATE.nextEpCountdownInterval = null;
-        playNextEpisode();
-      }
-    }, 1000);
   }
 
   function playNextEpisode() {
@@ -5379,26 +5147,13 @@ const STATE = {
     const sNum = parseInt(seasonNum);
     const epNum = parseInt(episodeNum);
     STATE.nextEpisodeInfo = null;
-    STATE.nextEpCardDismissed = false;
 
     try {
-      // 1. Fetch current season data to find next episode and current episode runtime
+      // 1. Fetch current season data to find next episode
       const currentSeasonData = await tmdbFetch(`/tv/${tmdbId}/season/${sNum}`);
       const episodes = currentSeasonData.episodes || [];
-      
-      // Update runtime if available
-      let epRuntimeMinutes = 45;
-      const currEpObj = episodes.find(e => parseInt(e.episode_number) === epNum);
-      if (currEpObj && currEpObj.runtime) {
-        epRuntimeMinutes = currEpObj.runtime;
-      } else if (STATE.currentMovieDetail && Array.isArray(STATE.currentMovieDetail.episode_run_time) && STATE.currentMovieDetail.episode_run_time.length > 0) {
-        epRuntimeMinutes = STATE.currentMovieDetail.episode_run_time[0];
-      }
-      if (STATE.currentWatchItem) {
-        STATE.currentWatchItem.runtimeSeconds = epRuntimeMinutes * 60;
-      }
 
-      // Check if next episode exists in the current season
+      // Check if next episode exists in current season
       const nextEpObj = episodes.find(e => parseInt(e.episode_number) === epNum + 1);
       
       let seriesName = '';
@@ -5414,69 +5169,44 @@ const STATE = {
 
       if (nextEpObj) {
         // Next episode in the same season
-        const stillPath = nextEpObj.still_path 
-          ? `https://image.tmdb.org/t/p/w300${nextEpObj.still_path}`
-          : (STATE.currentMovieDetail && STATE.currentMovieDetail.backdrop_path ? `https://image.tmdb.org/t/p/w300${STATE.currentMovieDetail.backdrop_path}` : '');
-
         STATE.nextEpisodeInfo = {
           tmdbId: tmdbId,
           seriesName: seriesName,
           season: sNum,
           episode: epNum + 1,
-          title: nextEpObj.name || `Episódio ${epNum + 1}`,
-          overview: nextEpObj.overview || 'Clique para assistir ao próximo capítulo.',
-          still: stillPath
+          title: nextEpObj.name || `Episódio ${epNum + 1}`
         };
       } else {
-        // Last episode of the season! Check if next season (sNum + 1) exists
+        // Last episode of the season! Check if next season exists
         try {
           const nextSeasonData = await tmdbFetch(`/tv/${tmdbId}/season/${sNum + 1}`);
           const nextSeasonEpisodes = nextSeasonData.episodes || [];
           if (nextSeasonEpisodes.length > 0) {
             const firstEpNextSeason = nextSeasonEpisodes[0];
-            const stillPath = firstEpNextSeason.still_path 
-              ? `https://image.tmdb.org/t/p/w300${firstEpNextSeason.still_path}`
-              : (STATE.currentMovieDetail && STATE.currentMovieDetail.backdrop_path ? `https://image.tmdb.org/t/p/w300${STATE.currentMovieDetail.backdrop_path}` : '');
-
             STATE.nextEpisodeInfo = {
               tmdbId: tmdbId,
               seriesName: seriesName,
               season: sNum + 1,
               episode: 1,
-              title: firstEpNextSeason.name || `Episódio 1`,
-              overview: firstEpNextSeason.overview || 'Início da nova temporada.',
-              still: stillPath
+              title: firstEpNextSeason.name || `Episódio 1`
             };
           }
         } catch (err) {
-          // Season sNum + 1 does not exist (series finale)
           STATE.nextEpisodeInfo = null;
         }
       }
 
-      // If next episode is found, enable bottom action button and prepare card preview (on-video overlay stays hidden until near-end!)
-      if (STATE.nextEpisodeInfo && DOM.cinemaMode.classList.contains('active')) {
-        if (DOM.cinemaNextEpBtn) DOM.cinemaNextEpBtn.style.display = 'inline-flex';
-        if (DOM.cinemaFloatingNextEpBtn) DOM.cinemaFloatingNextEpBtn.style.display = 'none';
-        if (DOM.cinemaNextEpCard) DOM.cinemaNextEpCard.style.display = 'none';
-        
-        if (DOM.nextEpCardTitle) {
-          DOM.nextEpCardTitle.textContent = `T${STATE.nextEpisodeInfo.season}:E${STATE.nextEpisodeInfo.episode} — ${STATE.nextEpisodeInfo.title}`;
+      // If next episode is available, display the "Próximo Episódio" button below the embed
+      if (STATE.nextEpisodeInfo && DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
+        if (DOM.cinemaNextEpBtn) {
+          DOM.cinemaNextEpBtn.style.display = 'inline-flex';
+          DOM.cinemaNextEpBtn.title = `Próximo: T${STATE.nextEpisodeInfo.season}:E${STATE.nextEpisodeInfo.episode} — ${STATE.nextEpisodeInfo.title}`;
         }
-        if (DOM.nextEpCardOverview) {
-          DOM.nextEpCardOverview.textContent = STATE.nextEpisodeInfo.overview;
-        }
-        if (DOM.nextEpCardThumb) {
-          if (STATE.nextEpisodeInfo.still) {
-            DOM.nextEpCardThumb.src = STATE.nextEpisodeInfo.still;
-            DOM.nextEpCardThumb.style.display = 'block';
-          } else {
-            DOM.nextEpCardThumb.style.display = 'none';
-          }
-        }
-        startIframePing();
       }
     } catch (e) {
+      console.warn("Erro ao buscar próximo episódio:", e);
+    }
+  }
       console.warn("Erro ao buscar próximo episódio:", e);
     }
   }
@@ -5548,7 +5278,6 @@ const STATE = {
 
     // Start watch tracker state
     STATE.watchStart = Date.now();
-    STATE.lastPlayerTime = initialElapsedTime || 0;
     STATE.currentWatchItem = {
       id: tmdbId,
       title: title,
@@ -5559,14 +5288,12 @@ const STATE = {
       runtimeSeconds: runtimeSeconds
     };
 
-    // Track progress every 5 seconds
+    // Track progress every 15 seconds
     STATE.watchInterval = setInterval(() => {
       if (DOM.cinemaMode.classList.contains('active') && STATE.currentWatchItem) {
         const elapsedSeconds = Math.round((Date.now() - STATE.watchStart) / 1000);
-        const currentPos = (STATE.lastPlayerTime > 0)
-          ? STATE.lastPlayerTime
-          : (STATE.currentWatchItem.initialElapsedTime + elapsedSeconds);
-        const cappedElapsed = Math.min(STATE.currentWatchItem.runtimeSeconds - 10, currentPos);
+        const totalElapsed = STATE.currentWatchItem.initialElapsedTime + elapsedSeconds;
+        const cappedElapsed = Math.min(STATE.currentWatchItem.runtimeSeconds - 10, totalElapsed);
         const percent = Math.min(95, Math.round((cappedElapsed / STATE.currentWatchItem.runtimeSeconds) * 100));
 
         if (STATE.currentWatchItem.type !== 'canal') {
@@ -5579,24 +5306,8 @@ const STATE = {
             episode: STATE.currentWatchItem.episode
           });
         }
-
-        // Trigger Netflix-style Next Episode card when near the end of runtime
-        if (STATE.currentWatchItem.type === 'tv' && STATE.nextEpisodeInfo && !STATE.nextEpCardDismissed && !STATE.nextEpCardVisible) {
-          const runtime = STATE.currentWatchItem.runtimeSeconds || 2700;
-          const isNearEnd = (currentPos >= runtime - 90 || currentPos >= runtime * 0.88);
-
-          // If the player reported a time near the end (user seeked or naturally reached near end), trigger immediately!
-          // If no player time was ever reported, fallback to wall-clock with safety threshold
-          const shouldTrigger = (STATE.lastPlayerTime > 0 && isNearEnd)
-            ? true
-            : (isNearEnd && elapsedSeconds >= 180);
-
-          if (shouldTrigger) {
-            showNetflixNextEpisodeCard();
-          }
-        }
       }
-    }, 5000);
+    }, 15000);
 
     // If TV series episode, prepare next episode detection
     if (type === 'tv' && season && episode) {
@@ -8577,15 +8288,8 @@ const STATE = {
     DOM.modalCloseBtn.onclick = () => closeDetail();
     DOM.cinemaCloseBtn.onclick = () => closeCinema();
 
-    // Netflix-Style Next Episode event listeners
-    if (DOM.nextEpPlayNowBtn) DOM.nextEpPlayNowBtn.onclick = () => playNextEpisode();
-    if (DOM.nextEpDismissBtn) DOM.nextEpDismissBtn.onclick = () => dismissNextEpisodeCard();
+    // Next Episode button listener (below the embed player)
     if (DOM.cinemaNextEpBtn) DOM.cinemaNextEpBtn.onclick = () => playNextEpisode();
-    if (DOM.cinemaFloatingNextEpBtn) DOM.cinemaFloatingNextEpBtn.onclick = () => playNextEpisode();
-    if (DOM.nextEpCardThumb) {
-      const thumbWrapper = DOM.nextEpCardThumb.closest('.next-ep-card-thumb-wrapper');
-      if (thumbWrapper) thumbWrapper.onclick = () => playNextEpisode();
-    }
 
 
     // Modals backdrop clicks to close
