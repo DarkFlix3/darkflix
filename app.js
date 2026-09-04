@@ -5207,9 +5207,6 @@ const STATE = {
       console.warn("Erro ao buscar próximo episódio:", e);
     }
   }
-      console.warn("Erro ao buscar próximo episódio:", e);
-    }
-  }
 
   // ---------- Cinema Player Mode ----------
   function openCinema(tmdbId, title, type, season = null, episode = null) {
