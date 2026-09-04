@@ -5130,9 +5130,38 @@ const STATE = {
   });
 
   window.addEventListener('message', (e) => {
-    if (e && e.data) {
-      esconderMascarasCinema();
-    }
+    if (!e || !e.data) return;
+    esconderMascarasCinema();
+
+    try {
+      let data = e.data;
+      if (typeof data === 'string') {
+        try { data = JSON.parse(data); } catch(err) {}
+      }
+
+      if (data && typeof data === 'object') {
+        const eventName = (data.event || data.type || data.action || data.status || '').toString().toLowerCase();
+        
+        // Exact video end event from player (PlayerJS, JWPlayer, HTML5, etc.)
+        if (eventName === 'ended' || eventName === 'finish' || eventName === 'finished' || eventName === 'complete' || eventName === 'completed') {
+          if (STATE.currentWatchItem && STATE.currentWatchItem.type === 'tv' && STATE.nextEpisodeInfo) {
+            showNetflixNextEpisodeCard();
+          }
+        }
+
+        // Time progress event: check if reaching end of video
+        const curTime = Number(data.time || data.currentTime || data.position || 0);
+        const duration = Number(data.duration || 0);
+        if (duration > 60 && curTime > 0) {
+          // If within the last 60 seconds of the actual video, or >= 92% of the video
+          if ((duration - curTime <= 60 || curTime / duration >= 0.92) && curTime > 60) {
+            if (STATE.currentWatchItem && STATE.currentWatchItem.type === 'tv' && STATE.nextEpisodeInfo) {
+              showNetflixNextEpisodeCard();
+            }
+          }
+        }
+      }
+    } catch(err) {}
   });
 
   // ---------- Netflix-Style Next Episode Feature ----------
@@ -5157,6 +5186,10 @@ const STATE = {
     }
     if (DOM.cinemaNextEpCard) {
       DOM.cinemaNextEpCard.style.display = 'none';
+    }
+    // If card was dismissed during credits, show small floating button in corner
+    if (DOM.cinemaFloatingNextEpBtn && STATE.nextEpisodeInfo) {
+      DOM.cinemaFloatingNextEpBtn.style.display = 'flex';
     }
   }
 
@@ -5218,9 +5251,15 @@ const STATE = {
       const episodes = currentSeasonData.episodes || [];
       
       // Update runtime if available
+      let epRuntimeMinutes = 45;
       const currEpObj = episodes.find(e => parseInt(e.episode_number) === epNum);
-      if (currEpObj && currEpObj.runtime && STATE.currentWatchItem) {
-        STATE.currentWatchItem.runtimeSeconds = currEpObj.runtime * 60;
+      if (currEpObj && currEpObj.runtime) {
+        epRuntimeMinutes = currEpObj.runtime;
+      } else if (STATE.currentMovieDetail && Array.isArray(STATE.currentMovieDetail.episode_run_time) && STATE.currentMovieDetail.episode_run_time.length > 0) {
+        epRuntimeMinutes = STATE.currentMovieDetail.episode_run_time[0];
+      }
+      if (STATE.currentWatchItem) {
+        STATE.currentWatchItem.runtimeSeconds = epRuntimeMinutes * 60;
       }
 
       // Check if next episode exists in the current season
@@ -5279,10 +5318,11 @@ const STATE = {
         }
       }
 
-      // If next episode is found, show the quick buttons and populate card preview!
+      // If next episode is found, enable bottom action button and prepare card preview (on-video overlay stays hidden until near-end!)
       if (STATE.nextEpisodeInfo && DOM.cinemaMode.classList.contains('active')) {
         if (DOM.cinemaNextEpBtn) DOM.cinemaNextEpBtn.style.display = 'inline-flex';
-        if (DOM.cinemaFloatingNextEpBtn) DOM.cinemaFloatingNextEpBtn.style.display = 'flex';
+        if (DOM.cinemaFloatingNextEpBtn) DOM.cinemaFloatingNextEpBtn.style.display = 'none';
+        if (DOM.cinemaNextEpCard) DOM.cinemaNextEpCard.style.display = 'none';
         
         if (DOM.nextEpCardTitle) {
           DOM.nextEpCardTitle.textContent = `T${STATE.nextEpisodeInfo.season}:E${STATE.nextEpisodeInfo.episode} — ${STATE.nextEpisodeInfo.title}`;
@@ -5403,8 +5443,15 @@ const STATE = {
         // Trigger Netflix-style Next Episode card when near the end of runtime
         if (STATE.currentWatchItem.type === 'tv' && STATE.nextEpisodeInfo && !STATE.nextEpCardDismissed && !STATE.nextEpCardVisible) {
           const runtime = STATE.currentWatchItem.runtimeSeconds || 2700;
-          const triggerThreshold = Math.max(runtime * 0.85, runtime - 90);
-          if (totalElapsed >= triggerThreshold && totalElapsed >= 60) {
+          const isNearEnd = (totalElapsed >= runtime - 90 || totalElapsed >= runtime * 0.90);
+
+          // Safeguard: Never trigger in the first few minutes unless the user actually reached near the end during this session,
+          // or resumed an episode that was already >= 85% and watched continuously for at least 45 seconds in this session.
+          const hasSufficientWatchTime = (STATE.currentWatchItem.initialElapsedTime >= runtime * 0.85)
+            ? (elapsedSeconds >= 45)
+            : (elapsedSeconds >= 180 && isNearEnd);
+
+          if (isNearEnd && hasSufficientWatchTime) {
             showNetflixNextEpisodeCard();
           }
         }
