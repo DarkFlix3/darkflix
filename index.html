@@ -862,7 +862,7 @@
         </div>
         <div class="achievements-stats-card">
           <div class="achievements-stat-item">
-            <span class="stat-num" id="achievements-unlocked-count">0 / 5</span>
+            <span class="stat-num" id="achievements-unlocked-count">0 / 10</span>
             <span class="stat-label">Desbloqueadas</span>
           </div>
           <div class="achievements-stat-divider"></div>
@@ -891,17 +891,22 @@
       </div>
 
       <!-- Barra de Testes para o Desenvolvedor / Usuário -->
-      <div class="achievements-dev-toolbar">
-        <div class="dev-toolbar-title">
-          <span style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: #fbbf24;">🧪 Modo de Teste Interativo</span>
-          <small style="color: var(--text-muted);">(Simule o visual e teste o pop-up sem precisar assistir a filmes)</small>
+      <details class="achievements-dev-details" style="margin: 0; background: rgba(0, 0, 0, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.08);">
+        <summary style="padding: 10px 32px; font-size: 0.72rem; color: var(--text-muted); cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between;">
+          <span style="display: inline-flex; align-items: center; gap: 6px; color: #fbbf24; font-weight: 600;">🧪 Modo de Teste Interativo (Clique para abrir/fechar)</span>
+          <span style="font-size: 0.68rem; opacity: 0.7;">⚙️ Ferramentas</span>
+        </summary>
+        <div class="achievements-dev-toolbar" style="border-top: 1px dashed rgba(255, 255, 255, 0.06); padding: 12px 32px;">
+          <div class="dev-toolbar-title">
+            <span style="font-size: 0.75rem; color: #fff;">Simule e teste desbloqueios sem precisar assistir:</span>
+          </div>
+          <div class="dev-toolbar-actions">
+            <button type="button" class="btn-dev-action" id="btn-dev-test-popup">⚡ Testar Pop-up (PS5 Style)</button>
+            <button type="button" class="btn-dev-action" id="btn-dev-unlock-all">✨ Desbloquear Todas</button>
+            <button type="button" class="btn-dev-action" id="btn-dev-reset-all">🔒 Bloquear Todas</button>
+          </div>
         </div>
-        <div class="dev-toolbar-actions">
-          <button type="button" class="btn-dev-action" id="btn-dev-test-popup">⚡ Testar Pop-up (PS5 Style)</button>
-          <button type="button" class="btn-dev-action" id="btn-dev-unlock-all">✨ Desbloquear Todas</button>
-          <button type="button" class="btn-dev-action" id="btn-dev-reset-all">🔒 Bloquear Todas</button>
-        </div>
-      </div>
+      </details>
     </div>
   </div>
 

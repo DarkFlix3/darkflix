@@ -5319,15 +5319,47 @@ const STATE = {
               desbloquearConquista('coruja_noturna');
             }
 
+            const currentWatchId = Number(STATE.currentWatchItem.id);
+            const currentTitleLower = (STATE.currentWatchItem.title || '').toLowerCase();
+
             // 2. Stranger Things: Detetive de Hawkins (TMDB 66732)
-            if (Number(STATE.currentWatchItem.id) === 66732) {
+            if (currentWatchId === 66732) {
               desbloquearConquista('stranger_phone');
             }
 
-            // 3. Túnel do Tempo: filmes lançados antes de 1980
+            // 3. The Boys: Composto V (TMDB 76479)
+            if (currentWatchId === 76479 || currentTitleLower.includes('the boys')) {
+              desbloquearConquista('composto_v');
+            }
+
+            // 4. Breaking Bad: O Químico Lendário (TMDB 1396)
+            if (currentWatchId === 1396 || currentTitleLower.includes('breaking bad')) {
+              desbloquearConquista('heisenberg');
+            }
+
+            // 5. Cavaleiros do Zodíaco: Armadura de Ouro (TMDB 128456 ou 46261)
+            if (currentWatchId === 128456 || currentWatchId === 46261 || currentTitleLower.includes('saint seiya') || currentTitleLower.includes('cavaleiros do zod')) {
+              desbloquearConquista('armadura_ouro');
+            }
+
+            // 6. Desenhos & Animes: Guerreiro Z Lendário
+            const isAnimeOrAnimation = STATE.currentPage === 'animes' ||
+              (STATE.currentMovieDetail && STATE.currentMovieDetail.genres && STATE.currentMovieDetail.genres.some(g => g.id === 16)) ||
+              currentTitleLower.includes('dragon ball') || currentTitleLower.includes('naruto') ||
+              currentTitleLower.includes('one piece') || currentTitleLower.includes('mônica') ||
+              currentTitleLower.includes('demon slayer') || currentTitleLower.includes('jujutsu') ||
+              currentTitleLower.includes('aranhaverso') || currentTitleLower.includes('mario');
+
+            if (isAnimeOrAnimation) {
+              desbloquearConquista('esfera_dragao');
+            }
+
+            // 7. Lançamentos Recentes (a partir de 2024) ou Clássicos (< 1980)
             if (STATE.currentMovieDetail && STATE.currentMovieDetail.release_date) {
               const relYear = parseInt(STATE.currentMovieDetail.release_date.substring(0, 4));
-              if (relYear && relYear < 1980) {
+              if (relYear && relYear >= 2024) {
+                desbloquearConquista('estreia_cinema');
+              } else if (relYear && relYear < 1980) {
                 desbloquearConquista('tunel_tempo');
               }
             }
@@ -7937,6 +7969,58 @@ const STATE = {
       descricao: 'O sofá virou seu trono e a pipoca nunca acaba! Maratonista de elite.',
       dica: 'Assista a 5 episódios consecutivos sem sair do player.',
       imagem: 'assets/badges/maratona.jpg',
+      raridade: 'ouro',
+      xp: 50
+    },
+    {
+      id: 'composto_v',
+      nome: 'Composto V',
+      categoria: 'The Boys',
+      descricao: 'Você sobreviveu à dose do soro azul neon mais perigoso da Vought!',
+      dica: 'Assista à série The Boys no catálogo.',
+      imagem: 'assets/badges/composto_v.jpg',
+      raridade: 'platina',
+      xp: 100,
+      tmdbId: 76479
+    },
+    {
+      id: 'heisenberg',
+      nome: 'O Químico Lendário',
+      categoria: 'Breaking Bad',
+      descricao: 'Diga meu nome! Você testemunhou a ascensão do maior império do deserto.',
+      dica: 'Assista à série Breaking Bad no catálogo.',
+      imagem: 'assets/badges/heisenberg.jpg',
+      raridade: 'platina',
+      xp: 100,
+      tmdbId: 1396
+    },
+    {
+      id: 'armadura_ouro',
+      nome: 'Cavaleiro de Ouro',
+      categoria: 'Saint Seiya',
+      descricao: 'Eleve seu cosmo até o infinito e vista a sagrada Armadura de Ouro!',
+      dica: 'Assista ou leia Saint Seiya (Cavaleiros do Zodíaco).',
+      imagem: 'assets/badges/armadura_ouro.jpg',
+      raridade: 'ouro',
+      xp: 75
+    },
+    {
+      id: 'esfera_dragao',
+      nome: 'Guerreiro Z Lendário',
+      categoria: 'Desenhos & Animes',
+      descricao: 'Reúna as 7 Esferas e desperte o poder dos maiores animes e desenhos da galáxia!',
+      dica: 'Assista a qualquer anime ou desenho animado do catálogo.',
+      imagem: 'assets/badges/esfera_dragao.jpg',
+      raridade: 'ouro',
+      xp: 50
+    },
+    {
+      id: 'estreia_cinema',
+      nome: 'Na Crista da Onda',
+      categoria: 'Lançamentos',
+      descricao: 'Sempre na frente! Você assistiu a uma das grandes estreias e lançamentos do ano.',
+      dica: 'Assista a qualquer filme lançamento recente (a partir de 2024).',
+      imagem: 'assets/badges/estreia_cinema.jpg',
       raridade: 'ouro',
       xp: 50
     }
