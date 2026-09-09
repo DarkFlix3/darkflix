@@ -3287,8 +3287,11 @@ ul, ol {
   transform: scale(1.05);
 }
 
-.pin-key:active {
-  background: rgba(255, 255, 255, 0.22);
+.pin-key:active,
+.pin-key.active {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: var(--text-primary);
+  transform: scale(0.95);
 }
 
 .pin-key.btn-clear, .pin-key.btn-backspace {
@@ -3304,6 +3307,12 @@ ul, ol {
   color: var(--text-primary);
   background: transparent;
   border-color: transparent;
+}
+
+.pin-key.btn-clear.active, .pin-key.btn-backspace.active {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(0.95);
 }
 
 /* Responsiveness overrides */

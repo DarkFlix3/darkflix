@@ -8322,8 +8322,42 @@ const STATE = {
       };
     }
 
-    // Keyboard ESC to close active overlays
+    // Keyboard shortcuts: Profile PIN typing and ESC to close overlays
     document.addEventListener('keydown', (e) => {
+      // 1. Profile PIN Modal: Support physical keyboard input (digits 0-9, Backspace, Delete)
+      if (DOM.pinModal && DOM.pinModal.classList.contains('active')) {
+        if (/^[0-9]$/.test(e.key)) {
+          e.preventDefault();
+          handlePinInput(e.key);
+          const btn = DOM.pinModal.querySelector(`.pin-key[data-key="${e.key}"]`);
+          if (btn) {
+            btn.classList.add('active');
+            setTimeout(() => btn.classList.remove('active'), 120);
+          }
+          return;
+        }
+        if (e.key === 'Backspace') {
+          e.preventDefault();
+          handlePinBackspace();
+          const btn = document.getElementById('pin-backspace');
+          if (btn) {
+            btn.classList.add('active');
+            setTimeout(() => btn.classList.remove('active'), 120);
+          }
+          return;
+        }
+        if (e.key === 'Delete') {
+          e.preventDefault();
+          handlePinClear();
+          const btn = document.getElementById('pin-clear');
+          if (btn) {
+            btn.classList.add('active');
+            setTimeout(() => btn.classList.remove('active'), 120);
+          }
+          return;
+        }
+      }
+
       if (e.key === 'Escape') {
         closeDetail();
         closeCinema();
@@ -9167,6 +9201,9 @@ const STATE = {
 
   // ---------- PIN Modal Logic ----------
   function openPinModal(profileId) {
+    if (document.activeElement && document.activeElement.blur) {
+      document.activeElement.blur();
+    }
     STATE.pinTargetProfileId = profileId;
     STATE.pinAccumulator = '';
     updatePinDisplay();
@@ -9831,6 +9868,42 @@ const STATE = {
         });
       };
 
+      const cleanupDonoModal = () => {
+        window.removeEventListener('keydown', keydownHandlerDono);
+        modal.remove();
+        document.body.style.overflow = '';
+      };
+
+      const keydownHandlerDono = (e) => {
+        if (!document.body.contains(modal)) {
+          window.removeEventListener('keydown', keydownHandlerDono);
+          return;
+        }
+        if (/^[0-9]$/.test(e.key)) {
+          e.preventDefault();
+          handleKeyInput(e.key);
+          const btn = modal.querySelector(`.pin-key[data-key="${e.key}"]`);
+          if (btn) {
+            btn.style.background = 'rgba(255, 255, 255, 0.2)';
+            setTimeout(() => { if (btn) btn.style.background = 'rgba(255, 255, 255, 0.03)'; }, 120);
+          }
+        } else if (e.key === 'Backspace') {
+          e.preventDefault();
+          if (pinAccumulator.length > 0) {
+            pinAccumulator = pinAccumulator.slice(0, -1);
+            updatePinDisplayDono();
+          }
+        } else if (e.key === 'Delete') {
+          e.preventDefault();
+          pinAccumulator = '';
+          updatePinDisplayDono();
+        } else if (e.key === 'Escape') {
+          cleanupDonoModal();
+          resolve({ action: 'cancel' });
+        }
+      };
+      window.addEventListener('keydown', keydownHandlerDono);
+
       const handleKeyInput = async (digit) => {
         if (pinAccumulator.length < 4) {
           pinAccumulator += digit;
@@ -9838,8 +9911,7 @@ const STATE = {
 
           if (pinAccumulator.length === 4) {
             setTimeout(() => {
-              modal.remove();
-              document.body.style.overflow = '';
+              cleanupDonoModal();
               resolve({ action: 'submit', pin: pinAccumulator });
             }, 250);
           }
@@ -9866,16 +9938,14 @@ const STATE = {
       };
 
       modal.querySelector('#btn-cancelar-pin-dono').onclick = () => {
-        modal.remove();
-        document.body.style.overflow = '';
+        cleanupDonoModal();
         resolve({ action: 'cancel' });
       };
 
       if (!isCreation) {
         const forgetBtn = modal.querySelector('#btn-esqueci-pin-dono');
         forgetBtn.onclick = () => {
-          modal.remove();
-          document.body.style.overflow = '';
+          cleanupDonoModal();
           resolve({ action: 'forgot' });
         };
         forgetBtn.onmouseenter = () => forgetBtn.style.opacity = '0.8';
