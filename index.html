@@ -119,6 +119,10 @@
             <!-- Populated dynamically by JS -->
           </div>
           <div class="profile-dropdown-actions">
+            <button id="btn-dropdown-achievements" style="color: #fbbf24; font-weight: 700;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Conquistas & Insígnias
+            </button>
             <button id="btn-dropdown-manage">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
               Gerenciar Perfis
@@ -310,6 +314,7 @@
         <!-- Rendered dynamically by JS -->
       </div>
       <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 20px;">
+        <button class="btn-manage-profiles" id="btn-profiles-achievements" style="margin-top: 0; background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.4); color: #fbbf24; font-weight: 700;">🏆 Conquistas & Insígnias</button>
         <button class="btn-manage-profiles" id="btn-manage-profiles" style="margin-top: 0;">Gerenciar Perfis</button>
         <button class="btn-manage-profiles" id="btn-profiles-devices" style="margin-top: 0; background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.15);">Acesso e Aparelhos</button>
         <button class="btn-manage-profiles" id="btn-profiles-rooms" style="margin-top: 0; background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.15);">Salas</button>
@@ -841,6 +846,78 @@
       <div class="book-reader-iframe-wrapper">
         <iframe id="book-reader-iframe" src="" allow="autoplay; fullscreen" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
       </div>
+    </div>
+  </div>
+
+  <!-- ============ ACHIEVEMENTS MODAL ============ -->
+  <div class="modal-backdrop" id="achievements-modal">
+    <div class="achievements-container">
+      <button class="achievements-close" id="achievements-close-btn">✕</button>
+      
+      <div class="achievements-header">
+        <div class="achievements-title-group">
+          <span class="achievements-badge-subtitle">🏆 SISTEMA DE RECOMPENSAS DARKFLIX</span>
+          <h2 class="achievements-title">Sala de Conquistas & Insígnias</h2>
+          <p class="achievements-desc">Desbloqueie relíquias assistindo ao catálogo e equipe a sua favorita no perfil!</p>
+        </div>
+        <div class="achievements-stats-card">
+          <div class="achievements-stat-item">
+            <span class="stat-num" id="achievements-unlocked-count">0 / 5</span>
+            <span class="stat-label">Desbloqueadas</span>
+          </div>
+          <div class="achievements-stat-divider"></div>
+          <div class="achievements-stat-item">
+            <span class="stat-num" id="achievements-xp-total">0 XP</span>
+            <span class="stat-label">Pontuação Total</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vitrine de Insígnia Equipada -->
+      <div class="achievements-equipped-banner" id="achievements-equipped-banner">
+        <div class="equipped-icon-wrap" id="equipped-badge-img-wrap">
+          <img src="assets/badges/stranger_phone.jpg" alt="Equipada" id="equipped-badge-img">
+        </div>
+        <div class="equipped-info">
+          <span class="equipped-tag">INSÍGNIA EQUIPADA NO SEU AVATAR</span>
+          <h3 id="equipped-badge-title">Nenhuma insígnia equipada</h3>
+          <p id="equipped-badge-desc">Escolha uma insígnia desbloqueada abaixo e clique em "Equipar no Avatar" para exibi-la!</p>
+        </div>
+      </div>
+
+      <!-- Grid de Insígnias -->
+      <div class="achievements-grid" id="achievements-grid">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Barra de Testes para o Desenvolvedor / Usuário -->
+      <div class="achievements-dev-toolbar">
+        <div class="dev-toolbar-title">
+          <span style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: #fbbf24;">🧪 Modo de Teste Interativo</span>
+          <small style="color: var(--text-muted);">(Simule o visual e teste o pop-up sem precisar assistir a filmes)</small>
+        </div>
+        <div class="dev-toolbar-actions">
+          <button type="button" class="btn-dev-action" id="btn-dev-test-popup">⚡ Testar Pop-up (PS5 Style)</button>
+          <button type="button" class="btn-dev-action" id="btn-dev-unlock-all">✨ Desbloquear Todas</button>
+          <button type="button" class="btn-dev-action" id="btn-dev-reset-all">🔒 Bloquear Todas</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ACHIEVEMENTS FLOATING NOTIFICATION (PS5 / XBOX STYLE) ============ -->
+  <div id="achievement-toast" class="achievement-toast" style="display: none;">
+    <div class="achievement-toast-glow"></div>
+    <div class="achievement-toast-icon-wrap">
+      <img id="achievement-toast-icon" src="assets/badges/stranger_phone.jpg" alt="Conquista">
+    </div>
+    <div class="achievement-toast-content">
+      <div class="achievement-toast-tag">
+        <span class="trophy-symbol">🏆</span> CONQUISTA DESBLOQUEADA!
+      </div>
+      <h4 class="achievement-toast-title" id="achievement-toast-title">Detetive de Hawkins</h4>
+      <p class="achievement-toast-desc" id="achievement-toast-desc">Você sobreviveu ao Mundo Invertido!</p>
+      <span class="achievement-toast-xp" id="achievement-toast-xp">+50 XP</span>
     </div>
   </div>
 

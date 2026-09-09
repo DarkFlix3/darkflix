@@ -5136,6 +5136,14 @@ const STATE = {
     const next = STATE.nextEpisodeInfo;
     resetNextEpisodeUI();
 
+    STATE.sessionConsecutiveEpisodes = (STATE.sessionConsecutiveEpisodes || 1) + 1;
+    if (STATE.sessionConsecutiveEpisodes >= 5) {
+      desbloquearConquista('maratona');
+    }
+    if (Number(next.tmdbId) === 66732 && STATE.sessionConsecutiveEpisodes >= 3) {
+      desbloquearConquista('demogorgon');
+    }
+
     showToast(`🍿 Iniciando: T${next.season}:E${next.episode} — ${next.title}`, 'info');
 
     const newTitle = `${next.seriesName} — T${next.season}:E${next.episode}`;
@@ -5302,6 +5310,28 @@ const STATE = {
             season: STATE.currentWatchItem.season,
             episode: STATE.currentWatchItem.episode
           });
+
+          // Verificar conquistas automáticas durante a reprodução legítima (a partir de 30s)
+          if (elapsedSeconds >= 30) {
+            // 1. Coruja Noturna: reprodução ativa entre 02h e 05h da madrugada
+            const currentHour = new Date().getHours();
+            if (currentHour >= 2 && currentHour <= 5) {
+              desbloquearConquista('coruja_noturna');
+            }
+
+            // 2. Stranger Things: Detetive de Hawkins (TMDB 66732)
+            if (Number(STATE.currentWatchItem.id) === 66732) {
+              desbloquearConquista('stranger_phone');
+            }
+
+            // 3. Túnel do Tempo: filmes lançados antes de 1980
+            if (STATE.currentMovieDetail && STATE.currentMovieDetail.release_date) {
+              const relYear = parseInt(STATE.currentMovieDetail.release_date.substring(0, 4));
+              if (relYear && relYear < 1980) {
+                desbloquearConquista('tunel_tempo');
+              }
+            }
+          }
         }
       }
     }, 15000);
@@ -7856,6 +7886,401 @@ const STATE = {
     backdrop.innerHTML = gridHtml;
   }
 
+  // ============ SISTEMA DE CONQUISTAS & INSÍGNIAS (TROPHY & BADGES SYSTEM) ============
+  const CONQUISTAS_CATALOGO = [
+    {
+      id: 'stranger_phone',
+      nome: 'Detetive de Hawkins',
+      categoria: 'Stranger Things',
+      descricao: 'Descubra a verdade sobre o desaparecimento e conecte-se com o outro lado.',
+      dica: 'Assista a episódios de Stranger Things no catálogo.',
+      imagem: 'assets/badges/stranger_phone.jpg',
+      raridade: 'ouro',
+      xp: 50,
+      tmdbId: 66732
+    },
+    {
+      id: 'demogorgon',
+      nome: 'Pesadelo do Mundo Invertido',
+      categoria: 'Stranger Things',
+      descricao: 'Encare de frente a criatura mais aterrorizante da dimensão paralela.',
+      dica: 'Maratone episódios de Stranger Things sem fechar o player.',
+      imagem: 'assets/badges/demogorgon.jpg',
+      raridade: 'platina',
+      xp: 100,
+      tmdbId: 66732
+    },
+    {
+      id: 'coruja_noturna',
+      nome: 'Coruja Noturna',
+      categoria: 'Hábitos',
+      descricao: 'Os melhores segredos do cinema são revelados quando a cidade inteira dorme.',
+      dica: 'Assista a um filme ou série entre 02h e 05h da madrugada.',
+      imagem: 'assets/badges/coruja_noturna.jpg',
+      raridade: 'prata',
+      xp: 25
+    },
+    {
+      id: 'tunel_tempo',
+      nome: 'Túnel do Tempo',
+      categoria: 'Exploração',
+      descricao: 'Uma viagem nostálgica à era de ouro do cinema em fita magnética.',
+      dica: 'Assista a uma produção lançada antes de 1980.',
+      imagem: 'assets/badges/tunel_tempo.jpg',
+      raridade: 'ouro',
+      xp: 50
+    },
+    {
+      id: 'maratona',
+      nome: 'Ainda Está Assistindo?',
+      categoria: 'Hábitos',
+      descricao: 'O sofá virou seu trono e a pipoca nunca acaba! Maratonista de elite.',
+      dica: 'Assista a 5 episódios consecutivos sem sair do player.',
+      imagem: 'assets/badges/maratona.jpg',
+      raridade: 'ouro',
+      xp: 50
+    }
+  ];
+
+  // Som suave e elegante sintetizado via Web Audio API (estilo PlayStation 5)
+  function tocarSomConquista() {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctx = new AudioCtx();
+      if (ctx.state === 'suspended') {
+        ctx.resume();
+      }
+
+      const notes = [
+        { f: 523.25, t: 0.0, d: 0.25 }, // C5
+        { f: 659.25, t: 0.08, d: 0.25 }, // E5
+        { f: 783.99, t: 0.16, d: 0.35 }, // G5
+        { f: 1046.50, t: 0.24, d: 0.70 } // C6 (brilho)
+      ];
+
+      notes.forEach(n => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(n.f, ctx.currentTime + n.t);
+
+        gain.gain.setValueAtTime(0, ctx.currentTime + n.t);
+        gain.gain.linearRampToValueAtTime(0.12, ctx.currentTime + n.t + 0.03);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + n.t + n.d);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(ctx.currentTime + n.t);
+        osc.stop(ctx.currentTime + n.t + n.d);
+      });
+    } catch (e) {
+      console.warn("Áudio da conquista não pôde ser reproduzido:", e);
+    }
+  }
+
+  // Notificação flutuante de conquista (estilo PS5 / Xbox)
+  let achievementToastTimeout = null;
+  function dispararNotificacaoConquista(conquistaId) {
+    const c = CONQUISTAS_CATALOGO.find(item => item.id === conquistaId);
+    if (!c) return;
+
+    const toast = document.getElementById('achievement-toast');
+    if (!toast) return;
+
+    const icon = document.getElementById('achievement-toast-icon');
+    const title = document.getElementById('achievement-toast-title');
+    const desc = document.getElementById('achievement-toast-desc');
+    const xp = document.getElementById('achievement-toast-xp');
+
+    if (icon) icon.src = c.imagem;
+    if (title) title.textContent = c.nome;
+    if (desc) desc.textContent = c.descricao;
+    if (xp) xp.textContent = `+${c.xp} XP (${c.raridade.toUpperCase()})`;
+
+    toast.classList.remove('toast-hide');
+    toast.style.display = 'flex';
+
+    tocarSomConquista();
+
+    if (achievementToastTimeout) {
+      clearTimeout(achievementToastTimeout);
+    }
+
+    achievementToastTimeout = setTimeout(() => {
+      toast.classList.add('toast-hide');
+      setTimeout(() => {
+        toast.style.display = 'none';
+        toast.classList.remove('toast-hide');
+      }, 450);
+    }, 6000);
+
+    toast.onclick = () => {
+      toast.style.display = 'none';
+      abrirModalConquistas();
+    };
+  }
+
+  // Obter conquistas do perfil atual
+  function obterConquistasPerfil(profileId) {
+    const p = profileId && STATE.allProfiles ? STATE.allProfiles[profileId] : (STATE.currentProfile || {});
+    const fallbackKey = `darkflix_achievements_${p.id || 'default'}`;
+    let localData = {};
+    try {
+      localData = JSON.parse(localStorage.getItem(fallbackKey)) || {};
+    } catch(e) {}
+
+    return (p.achievements && Object.keys(p.achievements).length > 0) ? p.achievements : localData;
+  }
+
+  // Desbloquear conquista
+  async function desbloquearConquista(conquistaId, profileId = null) {
+    const targetId = profileId || (STATE.currentProfile && STATE.currentProfile.id);
+    if (!targetId) return;
+
+    const c = CONQUISTAS_CATALOGO.find(item => item.id === conquistaId);
+    if (!c) return;
+
+    const currentAchievements = obterConquistasPerfil(targetId);
+    if (currentAchievements[conquistaId]) {
+      // Já desbloqueada anteriormente
+      return;
+    }
+
+    const updated = {
+      ...currentAchievements,
+      [conquistaId]: {
+        desbloqueadoEm: Date.now()
+      }
+    };
+
+    // Salvar localmente
+    localStorage.setItem(`darkflix_achievements_${targetId}`, JSON.stringify(updated));
+
+    // Salvar no perfil ativo em memória
+    if (STATE.allProfiles && STATE.allProfiles[targetId]) {
+      STATE.allProfiles[targetId].achievements = updated;
+    }
+    if (STATE.currentProfile && STATE.currentProfile.id === targetId) {
+      STATE.currentProfile.achievements = updated;
+    }
+
+    // Salvar no Firebase se autenticado
+    if (STATE.currentUser && targetId) {
+      try {
+        const pRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${targetId}/achievements`);
+        await set(pRef, updated);
+      } catch (err) {
+        console.warn("Falha ao salvar conquista no Firebase:", err);
+      }
+    }
+
+    // Notificar na tela com animação e som
+    dispararNotificacaoConquista(conquistaId);
+
+    // Atualizar tela de conquistas se estiver aberta
+    renderizarModalConquistas();
+  }
+
+  // Equipar insígnia no perfil
+  async function equiparInsigniaPerfil(conquistaId, profileId = null) {
+    const targetId = profileId || (STATE.currentProfile && STATE.currentProfile.id);
+    if (!targetId) {
+      showToast("Selecione um perfil primeiro para equipar.", "info");
+      return;
+    }
+
+    const c = CONQUISTAS_CATALOGO.find(item => item.id === conquistaId);
+    if (conquistaId && !c) return;
+
+    // Salvar localmente
+    localStorage.setItem(`darkflix_equipped_badge_${targetId}`, conquistaId || '');
+
+    // Salvar na memória
+    if (STATE.allProfiles && STATE.allProfiles[targetId]) {
+      STATE.allProfiles[targetId].equippedBadge = conquistaId || null;
+    }
+    if (STATE.currentProfile && STATE.currentProfile.id === targetId) {
+      STATE.currentProfile.equippedBadge = conquistaId || null;
+    }
+
+    // Salvar no Firebase
+    if (STATE.currentUser && targetId) {
+      try {
+        const badgeRef = ref(db, `users/${STATE.currentUser.uid}/profiles/${targetId}/equippedBadge`);
+        await set(badgeRef, conquistaId || null);
+      } catch (err) {
+        console.warn("Falha ao salvar insígnia no Firebase:", err);
+      }
+    }
+
+    if (conquistaId) {
+      showToast(`Insígnia "${c.nome}" equipada no seu avatar!`, "success");
+    } else {
+      showToast("Insígnia desequipada.", "info");
+    }
+
+    updateHeaderProfileMenu();
+    renderProfilesPage();
+    renderizarModalConquistas();
+  }
+
+  // Abrir e Fechar Modal de Conquistas
+  function abrirModalConquistas() {
+    renderizarModalConquistas();
+    const modal = document.getElementById('achievements-modal');
+    if (modal) modal.classList.add('active');
+  }
+
+  function fecharModalConquistas() {
+    const modal = document.getElementById('achievements-modal');
+    if (modal) modal.classList.remove('active');
+  }
+
+  // Renderizar o Modal da Sala de Conquistas
+  function renderizarModalConquistas() {
+    const grid = document.getElementById('achievements-grid');
+    if (!grid) return;
+
+    const profileId = (STATE.currentProfile && STATE.currentProfile.id) || localStorage.getItem('darkflix_active_profile_id');
+    const achievements = obterConquistasPerfil(profileId);
+    
+    // Obter insígnia equipada
+    let equippedId = '';
+    if (STATE.currentProfile && STATE.currentProfile.equippedBadge) {
+      equippedId = STATE.currentProfile.equippedBadge;
+    } else if (profileId) {
+      equippedId = localStorage.getItem(`darkflix_equipped_badge_${profileId}`) || '';
+    }
+
+    let unlockedCount = 0;
+    let totalXp = 0;
+
+    let cardsHtml = '';
+    CONQUISTAS_CATALOGO.forEach(c => {
+      const isUnlocked = !!achievements[c.id];
+      const isEquipped = equippedId === c.id;
+
+      if (isUnlocked) {
+        unlockedCount++;
+        totalXp += c.xp;
+      }
+
+      cardsHtml += `
+        <div class="achievement-card ${isUnlocked ? 'unlocked' : 'locked'}">
+          <span class="achievement-rarity ${c.raridade}">${c.raridade}</span>
+          <div class="badge-visual">
+            <img src="${c.imagem}" alt="${c.nome}">
+          </div>
+          <h4 class="achievement-name">${c.nome}</h4>
+          <p class="achievement-description">${c.descricao}</p>
+          
+          ${isUnlocked ? `
+            <button type="button" class="btn-equip-badge ${isEquipped ? 'equipped' : ''}" onclick="window.equiparBadgeClick('${c.id}')">
+              ${isEquipped ? '✓ Equipado no Avatar' : '⭐ Equipar no Avatar'}
+            </button>
+          ` : `
+            <div class="achievement-hint">
+              <strong>Como desbloquear:</strong> ${c.dica}
+            </div>
+          `}
+        </div>
+      `;
+    });
+
+    grid.innerHTML = cardsHtml;
+
+    // Atualizar contadores do topo
+    const countEl = document.getElementById('achievements-unlocked-count');
+    if (countEl) countEl.textContent = `${unlockedCount} / ${CONQUISTAS_CATALOGO.length}`;
+
+    const xpEl = document.getElementById('achievements-xp-total');
+    if (xpEl) xpEl.textContent = `${totalXp} XP`;
+
+    // Atualizar banner de insígnia equipada
+    const bannerTitle = document.getElementById('equipped-badge-title');
+    const bannerDesc = document.getElementById('equipped-badge-desc');
+    const bannerImg = document.getElementById('equipped-badge-img');
+    const bannerWrap = document.getElementById('equipped-badge-img-wrap');
+
+    const equippedObj = CONQUISTAS_CATALOGO.find(c => c.id === equippedId);
+    if (equippedObj && bannerTitle && bannerDesc && bannerImg) {
+      bannerTitle.textContent = `✨ ${equippedObj.nome}`;
+      bannerDesc.textContent = `"${equippedObj.descricao}" (Exibida no seu perfil)`;
+      bannerImg.src = equippedObj.imagem;
+      if (bannerWrap) bannerWrap.style.display = 'block';
+    } else if (bannerTitle && bannerDesc && bannerWrap) {
+      bannerTitle.textContent = "Nenhuma insígnia equipada";
+      bannerDesc.textContent = "Escolha uma insígnia desbloqueada abaixo e clique em 'Equipar no Avatar' para exibi-la!";
+      if (bannerImg) bannerImg.src = 'assets/badges/stranger_phone.jpg';
+      if (bannerWrap) bannerWrap.style.display = 'none';
+    }
+  }
+
+  // Helper global para click nos botões de equipar
+  window.equiparBadgeClick = (id) => {
+    equiparInsigniaPerfil(id);
+  };
+
+  // Funções para teste interativo
+  let devTestIndex = 0;
+  window.testarConquista = (id = null) => {
+    const targetId = id || CONQUISTAS_CATALOGO[devTestIndex % CONQUISTAS_CATALOGO.length].id;
+    devTestIndex++;
+    dispararNotificacaoConquista(targetId);
+  };
+
+  window.desbloquearTodasConquistas = async () => {
+    const targetId = (STATE.currentProfile && STATE.currentProfile.id) || 'demo';
+    const all = {};
+    CONQUISTAS_CATALOGO.forEach(c => {
+      all[c.id] = { desbloqueadoEm: Date.now() };
+    });
+
+    localStorage.setItem(`darkflix_achievements_${targetId}`, JSON.stringify(all));
+    if (STATE.allProfiles && STATE.allProfiles[targetId]) {
+      STATE.allProfiles[targetId].achievements = all;
+    }
+    if (STATE.currentProfile) {
+      STATE.currentProfile.achievements = all;
+    }
+    if (STATE.currentUser && targetId !== 'demo') {
+      try {
+        await set(ref(db, `users/${STATE.currentUser.uid}/profiles/${targetId}/achievements`), all);
+      } catch(e){}
+    }
+
+    renderizarModalConquistas();
+    showToast("✨ Todas as 5 insígnias foram desbloqueadas para teste!", "success");
+    dispararNotificacaoConquista('stranger_phone');
+  };
+
+  window.resetarConquistas = async () => {
+    const targetId = (STATE.currentProfile && STATE.currentProfile.id) || 'demo';
+    localStorage.removeItem(`darkflix_achievements_${targetId}`);
+    localStorage.removeItem(`darkflix_equipped_badge_${targetId}`);
+    if (STATE.allProfiles && STATE.allProfiles[targetId]) {
+      STATE.allProfiles[targetId].achievements = {};
+      STATE.allProfiles[targetId].equippedBadge = null;
+    }
+    if (STATE.currentProfile) {
+      STATE.currentProfile.achievements = {};
+      STATE.currentProfile.equippedBadge = null;
+    }
+    if (STATE.currentUser && targetId !== 'demo') {
+      try {
+        await set(ref(db, `users/${STATE.currentUser.uid}/profiles/${targetId}/achievements`), {});
+        await set(ref(db, `users/${STATE.currentUser.uid}/profiles/${targetId}/equippedBadge`), null);
+      } catch(e){}
+    }
+
+    renderizarModalConquistas();
+    renderProfilesPage();
+    updateHeaderProfileMenu();
+    showToast("🔒 Todas as insígnias foram resetadas para bloqueadas!", "info");
+  };
+
   // ---------- Setup Core Event Bindings ----------
   async function initApp() {
     initDOM();
@@ -8718,6 +9143,57 @@ const STATE = {
       };
     }
 
+    // Bindings de Conquistas & Insígnias
+    const btnDropdownAchievements = document.getElementById('btn-dropdown-achievements');
+    if (btnDropdownAchievements) {
+      btnDropdownAchievements.onclick = (e) => {
+        e.preventDefault();
+        DOM.profileDropdown.classList.remove('active');
+        DOM.headerProfileWrapper.classList.remove('open');
+        abrirModalConquistas();
+      };
+    }
+
+    const btnProfilesAchievements = document.getElementById('btn-profiles-achievements');
+    if (btnProfilesAchievements) {
+      btnProfilesAchievements.onclick = (e) => {
+        e.preventDefault();
+        abrirModalConquistas();
+      };
+    }
+
+    const achievementsCloseBtn = document.getElementById('achievements-close-btn');
+    if (achievementsCloseBtn) {
+      achievementsCloseBtn.onclick = (e) => {
+        e.preventDefault();
+        fecharModalConquistas();
+      };
+    }
+
+    const btnDevTestPopup = document.getElementById('btn-dev-test-popup');
+    if (btnDevTestPopup) {
+      btnDevTestPopup.onclick = (e) => {
+        e.preventDefault();
+        window.testarConquista();
+      };
+    }
+
+    const btnDevUnlockAll = document.getElementById('btn-dev-unlock-all');
+    if (btnDevUnlockAll) {
+      btnDevUnlockAll.onclick = (e) => {
+        e.preventDefault();
+        window.desbloquearTodasConquistas();
+      };
+    }
+
+    const btnDevResetAll = document.getElementById('btn-dev-reset-all');
+    if (btnDevResetAll) {
+      btnDevResetAll.onclick = (e) => {
+        e.preventDefault();
+        window.resetarConquistas();
+      };
+    }
+
     DOM.btnManageProfiles.onclick = (e) => {
       e.preventDefault();
       toggleManageProfilesMode();
@@ -9049,13 +9525,18 @@ const STATE = {
     profileIds.forEach(id => {
       const p = STATE.allProfiles[id];
       const hasPin = p.pin && p.pin.length === 4;
+      const equippedBadgeId = p.equippedBadge || localStorage.getItem(`darkflix_equipped_badge_${id}`);
+      const equippedBadge = equippedBadgeId ? CONQUISTAS_CATALOGO.find(c => c.id === equippedBadgeId) : null;
+
       html += `
         <div class="profile-card" data-id="${id}">
           <div class="profile-avatar-wrapper">
             <img src="${p.avatar || PRESET_AVATARS[0].url}" alt="${p.name}">
             ${hasPin ? `<div class="profile-lock-icon" title="Perfil com PIN"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>` : ''}
+            ${equippedBadge ? `<div class="profile-avatar-badge-emblem" title="Insígnia: ${equippedBadge.nome}"><img src="${equippedBadge.imagem}" alt="${equippedBadge.nome}"></div>` : ''}
           </div>
           <div class="profile-name">${p.name}</div>
+          ${equippedBadge ? `<div class="profile-badge-caption" title="${equippedBadge.nome}">🏆 ${equippedBadge.nome}</div>` : ''}
         </div>
       `;
     });
@@ -9173,7 +9654,13 @@ const STATE = {
 
     const headerProfileName = document.getElementById('header-profile-name');
     if (headerProfileName) {
-      headerProfileName.textContent = STATE.currentProfile.name;
+      const equippedBadgeId = STATE.currentProfile.equippedBadge || localStorage.getItem(`darkflix_equipped_badge_${STATE.currentProfile.id}`);
+      const equippedBadge = equippedBadgeId ? CONQUISTAS_CATALOGO.find(c => c.id === equippedBadgeId) : null;
+      if (equippedBadge) {
+        headerProfileName.innerHTML = `${STATE.currentProfile.name} <img src="${equippedBadge.imagem}" class="header-equipped-badge" title="Insígnia: ${equippedBadge.nome}">`;
+      } else {
+        headerProfileName.textContent = STATE.currentProfile.name;
+      }
     }
 
     let dropdownListHtml = '';
