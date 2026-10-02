@@ -8362,13 +8362,345 @@ const STATE = {
     renderizarModalConquistas();
     renderProfilesPage();
     updateHeaderProfileMenu();
-    showToast("🔒 Todas as insígnias foram resetadas para bloqueadas!", "info");
+  // ============================================================
+  // MOTOR DE NAVEGAÇÃO ESPACIAL & CONTROLE REMOTO (TV BOX / ANDROID TV)
+  // ============================================================
+  const TVNavigation = {
+    active: false,
+    currentFocused: null,
+
+    // Verifica se o dispositivo atual é uma TV Box, Smart TV ou Android TV
+    isTVDevice() {
+      const ua = navigator.userAgent;
+      const isTVUa = /Android.*(TV|Large|SmartTV)|AFT|GoogleTV|AppleTV|HbbTV|NetCast|Tizen|Web0S|Roku|Nexus Player|BRAVIA|MiBOX|TX9|MXQ/i.test(ua);
+      const isAndroidNoTouch = /Android/i.test(ua) && (!('ontouchstart' in window) || navigator.maxTouchPoints === 0) && window.innerWidth >= 960;
+      return isTVUa || isAndroidNoTouch;
+    },
+
+    // Ativa o Modo TV
+    activate() {
+      if (document.body.classList.contains('tv-mode')) return;
+      document.body.classList.add('tv-mode');
+      this.active = true;
+      console.log("📺 Darkflix Modo TV Box ativado com sucesso!");
+      
+      // Focar inicialmente em um elemento inteligente
+      setTimeout(() => {
+        this.focusInitialElement();
+      }, 300);
+    },
+
+    // Foca em um elemento inicial adequado na tela atual
+    focusInitialElement() {
+      if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
+        return;
+      }
+
+      // Se houver modal aberto
+      const activeModal = document.querySelector('.modal-backdrop.active, .modal.active');
+      if (activeModal) {
+        const firstFocusable = activeModal.querySelector('button, a, select, input, .pin-key');
+        if (firstFocusable) {
+          this.setFocus(firstFocusable);
+          return;
+        }
+      }
+
+      // Se estiver na tela de perfis
+      if (STATE.currentPage === 'profiles' || (DOM.pages.profiles && DOM.pages.profiles.classList.contains('active'))) {
+        const firstProfile = document.querySelector('#profiles-grid .profile-card');
+        if (firstProfile) {
+          this.setFocus(firstProfile);
+          return;
+        }
+      }
+
+      // Se estiver na home
+      const heroWatchBtn = document.getElementById('hero-watch-btn');
+      if (heroWatchBtn && heroWatchBtn.offsetParent !== null) {
+        this.setFocus(heroWatchBtn);
+        return;
+      }
+
+      const firstCard = document.querySelector('.movie-card, .btn');
+      if (firstCard) {
+        this.setFocus(firstCard);
+      }
+    },
+
+    // Aplica o foco visual e suave no elemento
+    setFocus(element) {
+      if (!element) return;
+      
+      if (this.currentFocused && this.currentFocused !== element) {
+        this.currentFocused.classList.remove('tv-focused');
+      }
+
+      this.currentFocused = element;
+      element.classList.add('tv-focused');
+      
+      try {
+        if (!element.hasAttribute('tabindex')) {
+          element.setAttribute('tabindex', '0');
+        }
+        element.focus({ preventScroll: true });
+        element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+      } catch (err) {
+        console.warn("Erro ao focar elemento no Modo TV:", err);
+      }
+    },
+
+    // Coleta todos os elementos focáveis válidos e visíveis na tela
+    getFocusableCandidates() {
+      const activeModal = document.querySelector('.modal-backdrop.active, .modal.active');
+      const root = activeModal || document.body;
+
+      const selectors = [
+        'button:not([disabled])',
+        'a[href]',
+        'input:not([type="hidden"]):not([disabled])',
+        'select:not([disabled])',
+        '.movie-card',
+        '.profile-card',
+        '.canal-card',
+        '.achievement-card',
+        '.btn-equip-badge',
+        '.pin-key',
+        '.canal-tab-btn',
+        '.publisher-card'
+      ];
+
+      const elements = Array.from(root.querySelectorAll(selectors.join(', ')));
+
+      return elements.filter(el => {
+        if (el.disabled || el.style.display === 'none' || el.style.visibility === 'hidden') return false;
+        const rect = el.getBoundingClientRect();
+        return rect.width > 0 && rect.height > 0;
+      });
+    },
+
+    // Navegação espacial baseada em coordenadas geométricas
+    navigate(direction) {
+      this.activate();
+
+      // Tratamento especial para o Cinema Player ativo
+      if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
+        if (direction === 'left' && DOM.cinemaRewindBtn) {
+          DOM.cinemaRewindBtn.click();
+          showToast("⏪ Retroceder 10s", "info");
+        } else if (direction === 'right' && DOM.cinemaForwardBtn) {
+          DOM.cinemaForwardBtn.click();
+          showToast("⏩ Avançar 10s", "info");
+        }
+        return;
+      }
+
+      const candidates = this.getFocusableCandidates();
+      if (candidates.length === 0) return;
+
+      let current = this.currentFocused;
+      if (!current || !document.body.contains(current) || current.offsetParent === null) {
+        current = document.activeElement;
+      }
+
+      if (!current || current === document.body || !candidates.includes(current)) {
+        this.focusInitialElement();
+        return;
+      }
+
+      const curRect = current.getBoundingClientRect();
+      const curCenter = {
+        x: curRect.left + curRect.width / 2,
+        y: curRect.top + curRect.height / 2
+      };
+
+      let bestCandidate = null;
+      let minDistance = Infinity;
+
+      candidates.forEach(cand => {
+        if (cand === current) return;
+
+        const candRect = cand.getBoundingClientRect();
+        const candCenter = {
+          x: candRect.left + candRect.width / 2,
+          y: candRect.top + candRect.height / 2
+        };
+
+        const dx = candCenter.x - curCenter.x;
+        const dy = candCenter.y - curCenter.y;
+
+        let isCorrectDirection = false;
+        let primaryDist = 0;
+        let crossDist = 0;
+
+        switch (direction) {
+          case 'right':
+            isCorrectDirection = dx > 8 && Math.abs(dy) <= Math.max(candRect.height * 2.2, 180);
+            primaryDist = dx;
+            crossDist = Math.abs(dy);
+            break;
+          case 'left':
+            isCorrectDirection = dx < -8 && Math.abs(dy) <= Math.max(candRect.height * 2.2, 180);
+            primaryDist = Math.abs(dx);
+            crossDist = Math.abs(dy);
+            break;
+          case 'down':
+            isCorrectDirection = dy > 8;
+            primaryDist = dy;
+            crossDist = Math.abs(dx);
+            break;
+          case 'up':
+            isCorrectDirection = dy < -8;
+            primaryDist = Math.abs(dy);
+            crossDist = Math.abs(dx);
+            break;
+        }
+
+        if (isCorrectDirection) {
+          const score = primaryDist + (crossDist * 2.2);
+          if (score < minDistance) {
+            minDistance = score;
+            bestCandidate = cand;
+          }
+        }
+      });
+
+      if (bestCandidate) {
+        this.setFocus(bestCandidate);
+      }
+    },
+
+    // Mapeamento do Botão Voltar do Controle Remoto
+    handleBack() {
+      // 1. Fechar player se estiver assistindo
+      if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
+        if (DOM.cinemaCloseBtn) {
+          DOM.cinemaCloseBtn.click();
+        }
+        return true;
+      }
+
+      // 2. Fechar modal de detalhes do filme
+      if (DOM.detailModal && DOM.detailModal.classList.contains('active')) {
+        if (DOM.modalCloseBtn) {
+          DOM.modalCloseBtn.click();
+        }
+        return true;
+      }
+
+      // 3. Fechar modal de conquistas
+      const achModal = document.getElementById('achievements-modal');
+      if (achModal && achModal.classList.contains('active')) {
+        const closeBtn = document.getElementById('achievements-close-btn');
+        if (closeBtn) closeBtn.click();
+        return true;
+      }
+
+      // 4. Fechar modal de PIN
+      if (DOM.pinModal && DOM.pinModal.classList.contains('active')) {
+        if (DOM.pinCloseBtn) {
+          DOM.pinCloseBtn.click();
+        }
+        return true;
+      }
+
+      // 5. Fechar modal de edição de perfil ou avatar
+      if (DOM.profileEditModal && DOM.profileEditModal.classList.contains('active')) {
+        if (DOM.btnProfileCancel) DOM.btnProfileCancel.click();
+        return true;
+      }
+      if (DOM.avatarPickerModal && DOM.avatarPickerModal.classList.contains('active')) {
+        if (DOM.avatarPickerCloseBtn) DOM.avatarPickerCloseBtn.click();
+        return true;
+      }
+
+      // 6. Fechar dropdown de categorias ou perfil
+      if (DOM.navCategoriesWrapper && DOM.navCategoriesWrapper.classList.contains('open')) {
+        DOM.navCategoriesWrapper.classList.remove('open');
+        return true;
+      }
+      if (DOM.headerProfileWrapper && DOM.headerProfileWrapper.classList.contains('open')) {
+        DOM.headerProfileWrapper.classList.remove('open');
+        return true;
+      }
+
+      // 7. Se estiver em uma página diferente de home, voltar para home
+      if (STATE.currentUser && STATE.currentProfile && STATE.currentPage !== 'home') {
+        navigateTo('home');
+        return true;
+      }
+
+      return false;
+    },
+
+    // Inicializa os ouvintes de teclado / controle remoto
+    init() {
+      if (this.isTVDevice()) {
+        this.activate();
+      }
+
+      window.addEventListener('keydown', (e) => {
+        const key = e.key;
+        const keyCode = e.keyCode;
+
+        const isUp = key === 'ArrowUp' || keyCode === 38 || keyCode === 19;
+        const isDown = key === 'ArrowDown' || keyCode === 40 || keyCode === 20;
+        const isLeft = key === 'ArrowLeft' || keyCode === 37 || keyCode === 21;
+        const isRight = key === 'ArrowRight' || keyCode === 39 || keyCode === 22;
+        const isOk = key === 'Enter' || keyCode === 13 || keyCode === 23 || keyCode === 66;
+        const isBack = key === 'Escape' || key === 'Back' || keyCode === 27 || keyCode === 4 || (keyCode === 8 && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA');
+
+        if (isUp || isDown || isLeft || isRight || isOk) {
+          this.activate();
+        }
+
+        const isTyping = document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA');
+        if (isTyping && (isLeft || isRight)) {
+          return;
+        }
+
+        if (isUp) {
+          e.preventDefault();
+          this.navigate('up');
+        } else if (isDown) {
+          e.preventDefault();
+          this.navigate('down');
+        } else if (isLeft) {
+          e.preventDefault();
+          this.navigate('left');
+        } else if (isRight) {
+          e.preventDefault();
+          this.navigate('right');
+        } else if (isOk) {
+          if (DOM.cinemaMode && DOM.cinemaMode.classList.contains('active')) {
+            const vid = DOM.cinemaVideo;
+            if (vid && vid.style.display !== 'none') {
+              e.preventDefault();
+              if (vid.paused) vid.play(); else vid.pause();
+              return;
+            }
+          }
+          if (this.currentFocused && typeof this.currentFocused.click === 'function') {
+            this.currentFocused.click();
+          }
+        } else if (isBack) {
+          const handled = this.handleBack();
+          if (handled) {
+            e.preventDefault();
+          }
+        }
+      });
+    }
   };
+
+  // Expor globalmente para testes
+  window.TVNavigation = TVNavigation;
 
   // ---------- Setup Core Event Bindings ----------
   async function initApp() {
     initDOM();
     initPlayerOverlay();
+    TVNavigation.init();
     
     // Verificar se o dispositivo está banido
     const isBanned = await verificarDispositivoBanido();

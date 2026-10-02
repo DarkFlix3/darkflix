@@ -7436,6 +7436,198 @@ ul, ol {
   box-shadow: 0 0 6px rgba(251, 191, 36, 0.4);
 }
 
+/* ==========================================================================
+   MODO TV BOX & ANDROID TV (10-FOOT UI / SAFE AREA & SPATIAL FOCUS)
+   ========================================================================== */
+
+/* Indicador de Ajuda do Controle Remoto no Player */
+.tv-remote-tip {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 10001;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  letter-spacing: 0.5px;
+}
+
+body.tv-mode .tv-remote-tip {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Regras aplicadas quando o Modo TV está ativo (TV Box / Android TV) */
+body.tv-mode {
+  padding: 0 !important;
+  overflow-x: hidden !important;
+}
+
+/* Margem de Segurança contra Overscan da TV */
+body.tv-mode .header {
+  padding: 14px 4vw !important;
+  height: 66px !important;
+}
+
+body.tv-mode .main-content {
+  padding: 0 4vw 60px !important;
+}
+
+/* Hero Banner Calibrado para Proporção 16:9 da TV */
+body.tv-mode .hero {
+  height: 56vh !important;
+  min-height: 360px !important;
+  max-height: 460px !important;
+  padding: 0 4vw 32px !important;
+}
+
+body.tv-mode .hero-content {
+  max-width: 580px !important;
+}
+
+body.tv-mode .hero-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem) !important;
+  line-height: 1.15 !important;
+  margin-bottom: 8px !important;
+}
+
+body.tv-mode .hero-description {
+  font-size: 0.88rem !important;
+  line-height: 1.4 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  margin-bottom: 16px !important;
+}
+
+body.tv-mode .hero-actions {
+  display: flex !important;
+  gap: 12px !important;
+}
+
+body.tv-mode .hero-actions .btn {
+  padding: 10px 22px !important;
+  font-size: 0.88rem !important;
+}
+
+/* Carrosséis & Fileiras de Filmes no Modo TV */
+body.tv-mode .section {
+  margin-bottom: 36px !important;
+}
+
+body.tv-mode .section-header {
+  margin-bottom: 12px !important;
+}
+
+body.tv-mode .section-title {
+  font-size: 1.25rem !important;
+}
+
+body.tv-mode .movies-row {
+  gap: 16px !important;
+  padding: 14px 4px 22px !important;
+}
+
+body.tv-mode .movie-card {
+  flex: 0 0 clamp(160px, 13vw, 195px) !important;
+  border-radius: 12px !important;
+}
+
+/* Modais Proporcionais (Não Estouram a Altura da TV) */
+body.tv-mode .modal {
+  max-width: 880px !important;
+  max-height: 84vh !important;
+  border-radius: 18px !important;
+  margin: auto !important;
+}
+
+body.tv-mode .modal-hero {
+  height: 220px !important;
+}
+
+body.tv-mode .modal-body {
+  padding: 18px 28px 24px !important;
+  max-height: 48vh !important;
+  overflow-y: auto !important;
+}
+
+body.tv-mode .modal-title {
+  font-size: 1.4rem !important;
+}
+
+body.tv-mode .modal-actions {
+  margin: 14px 0 !important;
+}
+
+/* Tela de Perfis no Modo TV */
+body.tv-mode .profiles-container {
+  padding: 30px 4vw !important;
+}
+
+body.tv-mode .profiles-title {
+  font-size: 2rem !important;
+  margin-bottom: 30px !important;
+}
+
+body.tv-mode .profiles-grid {
+  gap: 32px !important;
+}
+
+body.tv-mode .profile-avatar-wrapper {
+  width: 130px !important;
+  height: 130px !important;
+}
+
+/* Destaque Visual Luminoso do Controle Remoto (Efeito Netflix / Android TV) */
+body.tv-mode a:focus,
+body.tv-mode button:focus,
+body.tv-mode .movie-card:focus,
+body.tv-mode .profile-card:focus,
+body.tv-mode .canal-card:focus,
+body.tv-mode .achievement-card:focus,
+body.tv-mode .pin-key:focus,
+body.tv-mode select:focus,
+body.tv-mode input:focus,
+body.tv-mode .publisher-card:focus,
+body.tv-mode .tv-focused {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.95), 0 0 10px #ffffff, 0 10px 30px rgba(0,0,0,0.85) !important;
+  transform: scale(1.08) !important;
+  z-index: 100 !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, outline 0.2s ease !important;
+}
+
+body.tv-mode .btn:focus {
+  transform: scale(1.06) !important;
+}
+
+body.tv-mode .nav-link:focus {
+  transform: scale(1.05) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+}
+
+/* Suporte Nativo a Media Queries de Smart TV */
+@media screen and (min-width: 960px) and (min-height: 540px) and (hover: none) {
+  .hero {
+    height: 56vh;
+    min-height: 360px;
+    max-height: 460px;
+  }
+}
+
+
 
 
 
