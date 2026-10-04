@@ -8362,6 +8362,9 @@ const STATE = {
     renderizarModalConquistas();
     renderProfilesPage();
     updateHeaderProfileMenu();
+    showToast("🔒 Todas as insígnias foram resetadas para bloqueadas!", "info");
+  };
+
   // ============================================================
   // MOTOR DE NAVEGAÇÃO ESPACIAL & CONTROLE REMOTO (TV BOX / ANDROID TV)
   // ============================================================
